@@ -195,11 +195,6 @@ final class UABBBuilderAdminSettings {
 	 */	
 	static public function render_nav_items()
 	{
-		/*$items['uabb-license'] = array(
-			'title' 	=> __( 'License', 'uabb' ),
-			'show'		=>  is_network_admin() || ! FLBuilderAdminSettings::multisite_support(),
-			'priority'	=> 505
-		);*/
 
 		$items['uabb'] = array(
 			'title' 	=> __( 'General Settings', 'uabb' ),
@@ -228,14 +223,6 @@ final class UABBBuilderAdminSettings {
 			'priority'	=> 509
 		);
 
-		/*if ( get_option( 'uabb_hide_branding' ) != true ) {
-			$items['uabb-branding'] = array(
-				'title' 	=> __( 'Branding', 'uabb' ),
-				'show'		=> is_network_admin() || ! FLBuilderAdminSettings::multisite_support(),
-				'priority'	=> 510
-			);
-		}*/
-
 		$item_data = apply_filters( 'uabb_builder_admin_settings_nav_items', $items );
 		
 		$sorted_data = array();
@@ -263,16 +250,9 @@ final class UABBBuilderAdminSettings {
 	 */	   
 	static public function render_forms()
 	{
-		// License
-		if ( is_network_admin() || ! self::multisite_support() )  {
-			self::render_form( 'license' );
-		}
-
 		self::render_form( 'general' );
 		self::render_form( 'modules' );
 		self::render_form( 'icons' );
-		self::render_form( 'branding' );
-
 		self::render_form( 'template-cloud' );
 
 		// Let extensions hook into form rendering.

@@ -68,7 +68,7 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-global-settings-form.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/helper.php';
 
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-extended-row-column.php';
+		//require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-extended-row-column.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-ui-panel.php';
 
 		// Load the appropriate text-domain
