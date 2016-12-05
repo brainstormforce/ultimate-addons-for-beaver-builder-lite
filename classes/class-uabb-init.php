@@ -62,13 +62,8 @@ class UABB_Init {
 		//	fields
 		require_once BB_ULTIMATE_ADDON_DIR . 'fields/_config.php';
 
-		//require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-branding.php';
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-graupi-branding.php';
-
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-global-settings-form.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/helper.php';
-
-		//require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-extended-row-column.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-ui-panel.php';
 
 		// Load the appropriate text-domain

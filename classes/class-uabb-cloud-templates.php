@@ -438,6 +438,7 @@ if( !class_exists('UABB_Cloud_Templates') ) {
 		static function template_html( $type = 'page-templates' ) {
 
 			$templates = self::get_cloud_templates( $type );
+			echo '<pre>'; print_r($templates); echo '</pre>';
 
 			if( is_array( $templates ) && count( $templates ) > 0 ) {
 				?>
@@ -518,7 +519,7 @@ if( !class_exists('UABB_Cloud_Templates') ) {
 							<div id="<?php echo $data['id']; ?>" data-groups='["<?php echo $tags; ?>"]' class="uabb-template-block uabb-single-<?php echo $type; ?> <?php echo $template_class; ?>" data-is-downloaded="<?php echo $data['status']; ?>">
 								<div class="uabb-template">
 
-								    <div class="uabb-template-screenshot" data-template-name="<?php echo $data['name']; ?>" data-preview-url="<?php echo $data['preview_url']; ?>" data-template-id='<?php echo $data['id']; ?>' data-template-type='<?php echo $type; ?>' data-template-dat-url='<?php echo $data['dat_url']; ?>'>
+								    <div class="uabb-template-screenshot" data-template-name="<?php echo $data['name']; ?>" data-template-id='<?php echo $data['id']; ?>' data-template-type='<?php echo $type; ?>' >
 
 										<?php if( $type == 'page-templates' ) { ?>
 									    	<img data-original="<?php echo $data['image']; ?>" alt="">
@@ -535,44 +536,10 @@ if( !class_exists('UABB_Cloud_Templates') ) {
 								    <div class="uabb-template-info">
 									    <h2 class="uabb-template-name"> <?php echo $data['name']; ?> </h2>
 									    <div class="uabb-template-actions">
-
-									        <?php if( 'true' == $data['status'] ) { ?>
-
-										        <span class="button button-primary uabb-cloud-process" data-operation="remove">
-										        	<i class="dashicons dashicons-no" style="padding: 3px;"></i>
-										        	<span class="msg"> <?php _e('Remove', 'uabb'); ?> </span>
-										       		<input type="hidden" class="template-dat-meta-id" value='<?php echo $data['id']; ?>' />
-										       		<input type="hidden" class="template-dat-meta-type" value='<?php echo $type; ?>' />
-										       		<input type="hidden" class="template-dat-meta-dat_url_local" value='<?php echo $data['dat_url_local']; ?>' />
-										       	</span>
-										       	<span class="button button-sucess uabb-installed-btn">
-										        	<i class="dashicons dashicons-yes" style="padding: 3px;"></i>
-										        	<span class="msg"> <?php _e('Installed', 'uabb'); ?> </span>
-										       	</span>
-
-										    <?php } else { ?>
-
-									        	<?php if( empty( $data['dat_url'] ) ) { ?>
-
-									        		<span class="button button-disabled button-secondary button-disabled">
-											        	<i class="dashicons dashicons-no" style="padding: 3px;"></i>
-											        	<span class="msg"> <?php _e('Not .dat found', 'uabb'); ?> </span>
-											       	</span>
-
-												<?php } else { ?>
-
-											        <span class="button button-primary uabb-cloud-process" data-operation="download">
-											        	<i class="dashicons dashicons-update " style="padding: 3px;"></i>
-											        	<span class="msg"> <?php _e('Install', 'uabb'); ?> </span>
-											       		<input type="hidden" class="template-dat-meta-id" value='<?php echo $data['id']; ?>' />
-											       		<input type="hidden" class="template-dat-meta-type" value='<?php echo $type; ?>' />
-											       		<input type="hidden" class="template-dat-meta-dat_url" value='<?php echo $data['dat_url']; ?>' />
-											       	</span>
-
-												<?php } ?>
-
-										    <?php } ?>
-
+									    	<span class="button button-sucess uabb-installed-btn">
+									        	<i class="dashicons dashicons-yes" style="padding: 3px;"></i>
+									        	<span class="msg"> <?php _e('Upgrade', 'uabb'); ?> </span>
+									       	</span>
 									    </div>
 								    </div>
 								</div>
