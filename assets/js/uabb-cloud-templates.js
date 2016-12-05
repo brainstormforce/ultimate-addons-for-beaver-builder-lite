@@ -131,92 +131,11 @@ jQuery( function( $ ) {
 	 * Templates Preview
 	 */
 	jQuery('body').on('click', '.uabb-template-screenshot', function (event) {
+		window.open( 'https://www.ultimatebeaver.com/pricing/', '_blank' )
+	});
 
-		var template_preview_url = jQuery(this).attr( 'data-preview-url' ) || '',
-			template_name        = jQuery(this).attr( 'data-template-name' ) || '',
-			is_downlaoded        = jQuery(this).parents( '.uabb-template-block' ).attr('data-is-downloaded') || '',
-			template_id          = jQuery(this).attr( 'data-template-id' ),
-			template_type        = jQuery(this).attr( 'data-template-type' ),
-			template_dat_url     = jQuery(this).attr( 'data-template-dat-url' );
-
-		if( '' != template_preview_url ) {
-
-			/**
-			 * Thickbox options
-			 */
-			template_preview_url = template_preview_url + '?TB_iframe=true'; // Required
-
-			/**
-			 * Open ThickBox
-			 */
-			tb_show( template_name , template_preview_url );
-
-			// jQuery('#TB_title').addClass('UABB_TB_title');
-			jQuery('#TB_window').addClass('UABB_TB_window');
-			jQuery("#TB_window").append("<div class='UABB_TB_loader spinner is-active'></div>");
-			jQuery('#TB_iframeContent').addClass('UABB_TB_iframeContent');
-
-			/**
-			 * Add Download Button
-			 */
-			if( is_downlaoded != 'true' ) {
-
-				var output   = '<span class="button button-primary button-small uabb-cloud-process" data-operation="download">'
-							 + '<i class="dashicons dashicons-update"></i>'
-							 + '<span class="msg"> '+UABBCloudTemplates.btnTextDownload+' </span>'
-							 + '<input type="hidden" class="template-dat-meta-id" value="'+ template_id +'" />'
-							 + '<input type="hidden" class="template-dat-meta-type" value="'+ template_type +'" />'
-							 + '<input type="hidden" class="template-dat-meta-dat_url" value="'+ template_dat_url +'" />';
-							 + '</span>';
-
-				jQuery('#TB_title').append( output );
-
-				/**
-				 * Popup download template process
-				 */
-				jQuery( window ).on( 'uabb-template-downloaded', function( event, template_dat_url_local, template_id ) {
-
-					jQuery('#TB_title .uabb-cloud-process').remove();
-					var output  = '<span class="uabb-cloud-process">'
-								 + '<i class="dashicons dashicons-yes"></i>'
-								 + '<span class="msg"> '+UABBCloudTemplates.btnTextInstall+' </span>'
-								 + '</span>';
-					jQuery('#TB_title').append( output );
-
-					jQuery('#' + template_id ).addClass( 'uabb-downloaded' );
-					jQuery('#' + template_id ).attr('data-is-downloaded', true );
-					jQuery('#' + template_id ).attr('data-groups', '' );
-
-					var output   = '<span class="button button-primary uabb-cloud-process" data-operation="remove">'
-								 + '	<i class="dashicons dashicons-no" style="padding: 3px;"></i>'
-								 + '	<span class="msg"> '+UABBCloudTemplates.btnTextRemove+' </span>'
-								 + '	<input type="hidden" class="template-dat-meta-id" value="'+ template_id +'" />'
-								 + '	<input type="hidden" class="template-dat-meta-type" value="'+ template_type +'" />'
-								 + '	<input type="hidden" class="template-dat-meta-dat_url_local" value="'+ template_dat_url_local +'" />'
-								 + '</span>'
-								 + '<span class="button button-sucess uabb-installed-btn">'
-								 + '	<i class="dashicons dashicons-yes" style="padding: 3px;"></i>'
-								 + '	<span class="msg">'+UABBCloudTemplates.btnTextInstall+'</span>'
-								 + '</span>';
-
-					jQuery('#' + template_id ).find('.uabb-template-actions').html( output );
-
-				});
-			} else {
-
-				var output  = '<span class="uabb-cloud-process installed"><i class="dashicons dashicons-yes"></i>'
-							+ '<span class="msg"> '+UABBCloudTemplates.btnTextInstall+' </span></span>';
-				jQuery('#TB_title').append( output );
-			}
-	
-			//	hide iframe until complete load and show loader
-			//	once complete iframe loaded then disable loader
-			jQuery('#TB_iframeContent').hide();
-			jQuery('#TB_iframeContent').bind('load', function(){
-		        jQuery("#TB_window").find(".spinner").remove();
-		        jQuery('#TB_iframeContent').show();
-		    });
-		}
+	jQuery('body').on('click', '.uabb-template-actions', function (event) {
+		window.open( 'https://www.ultimatebeaver.com/pricing/', '_blank' )
 	});
 
 
@@ -271,45 +190,12 @@ jQuery( function( $ ) {
 
 			switch( btn_operation ) {
 				case 'fetch':
-									jQuery('.wp-filter').find('.uabb-cloud-process i').addClass('uabb-reloading-iconfonts');
-									btn.parents('.uabb-cloud-templates-not-found').find('.uabb-cloud-process i').show();
-									var dataAJAX 		=  	{
-																action: 'uabb_cloud_dat_file_fetch',
-															};
+					jQuery('.wp-filter').find('.uabb-cloud-process i').addClass('uabb-reloading-iconfonts');
+					btn.parents('.uabb-cloud-templates-not-found').find('.uabb-cloud-process i').show();
+					var dataAJAX	=  	{
+											action: 'uabb_cloud_dat_file_fetch',
+										};
 
-					break;
-
-				case 'download':
-									var meta_dat_url   = btn.find('.template-dat-meta-dat_url').val() || '',
-										successMessage = UABBCloudTemplates.successMessageDownload,
-										dataAJAX       = {
-															action: 'uabb_cloud_dat_file',
-															dat_file: meta_dat_url,
-															dat_file_id: meta_id,
-															// dat_file_name: meta_name,
-															// dat_file_image: meta_image,
-															dat_file_type: meta_type,
-															// dat_file_dat_url: meta_dat_url,
-														};
-
-										if( meta_dat_url === '' ) {
-											processAJAX = false;
-										}
-					break;
-
-				case 'remove':
-								var meta_url_local = btn.find('.template-dat-meta-dat_url_local').val() || '',
-									successMessage = UABBCloudTemplates.successMessageRemove,
-									dataAJAX       = {
-														action: 'uabb_cloud_dat_file_remove',
-														dat_file_id: meta_id,
-														dat_file_type: meta_type,
-														dat_file_url_local: meta_url_local,
-													};
-
-									if( meta_id === '' ) {
-										processAJAX = false;
-									}
 					break;
 			}
 			
@@ -342,77 +228,17 @@ jQuery( function( $ ) {
 							}
 
 							switch( btn_operation ) {
-								case 'remove':
-													jQuery( window ).trigger( 'uabb-template-removed' );
-
-													btn.removeClass('button-secondary');
-													btn.addClass('button-primary');
-													btn.find('i').removeClass('uabb-reloading-iconfonts dashicons-no dashicons-update');
-													btn.find('i').addClass('dashicons-yes');
-
-													btn.find('.msg').html( UABBCloudTemplates.successMessageRemove );
-													setTimeout(function() {
-
-														btn_template.attr('data-is-downloaded', '');
-														btn_template.removeClass( 'uabb-downloaded' );
-														btn.attr('data-operation', 'download');
-
-														var output   = '<i class="dashicons dashicons-update" style="padding: 3px;"></i>'
-																	 + '<span class="msg"> '+UABBCloudTemplates.btnTextDownload+' </span>'
-																	 + '<input type="hidden" class="template-dat-meta-id" value="'+ template_id +'" />'
-																	 + '<input type="hidden" class="template-dat-meta-type" value="'+ template_type +'" />'
-																	 + '<input type="hidden" class="template-dat-meta-dat_url" value="'+ template_dat_url +'" />';
-
-														btn.html( output );
-														btn.parents('.uabb-template-actions').find('.uabb-installed-btn').remove();
-
-													}, 1000);
-
-									break;
-								case 'download':
-													jQuery( window ).trigger( 'uabb-template-downloaded', [ template_dat_url_local, template_id ] );
-
-													btn.removeClass('button-secondary');
-													btn.addClass('button-primary');
-													btn.find('i').removeClass('uabb-reloading-iconfonts dashicons-no dashicons-update');
-													btn.find('i').addClass('dashicons-yes');
-
-													btn.find('.msg').html( UABBCloudTemplates.successMessageDownload );
-													setTimeout(function() {
-
-														btn.attr('data-operation', 'remove');
-														btn_template.attr('data-is-downloaded', 'true');
-														btn_template.addClass( 'uabb-downloaded' );
-
-														var output   = '<i class="dashicons dashicons-no" style="padding: 3px;"></i>'
-																	 + '<span class="msg"> '+UABBCloudTemplates.btnTextRemove+' </span>'
-																	 + '<input type="hidden" class="template-dat-meta-id" value="'+ template_id +'" />'
-																	 + '<input type="hidden" class="template-dat-meta-type" value="'+ template_type +'" />'
-																	 + '<input type="hidden" class="template-dat-meta-dat_url_local" value="'+ template_dat_url_local +'" />';
-
-														var outputInstalled = '<span class="button button-sucess uabb-installed-btn">'
-																			+ '<i class="dashicons dashicons-yes" style="padding: 3px;"></i>'
-																			+ '<span class="msg">'+UABBCloudTemplates.btnTextInstall+'</span>'
-																			+ '</span>';
-
-														btn.html( output );
-														btn.parents('.uabb-template-actions').append( outputInstalled );
-
-													}, 1000);
-
-													return;
-									break;
 
 								case 'fetch':
-													jQuery( window ).trigger( 'uabb-template-fetched' );
+									jQuery( window ).trigger( 'uabb-template-fetched' );
 
-													btn.parents('.wp-filter').find('.uabb-cloud-process').removeClass('button-secondary');
-													btn.parents('.wp-filter').find('.uabb-cloud-process').addClass('button-primary');
-													btn.parents('.wp-filter').find('.uabb-cloud-process i').removeClass('uabb-reloading-iconfonts dashicons-no dashicons-update');
-													btn.parents('.wp-filter').find('.uabb-cloud-process i').addClass('dashicons-yes');
+									btn.parents('.wp-filter').find('.uabb-cloud-process').removeClass('button-secondary');
+									btn.parents('.wp-filter').find('.uabb-cloud-process').addClass('button-primary');
+									btn.parents('.wp-filter').find('.uabb-cloud-process i').removeClass('uabb-reloading-iconfonts dashicons-no dashicons-update');
+									btn.parents('.wp-filter').find('.uabb-cloud-process i').addClass('dashicons-yes');
 
-													btn.parents('.wp-filter').find('.uabb-cloud-process .msg').html( UABBCloudTemplates.successMessageFetch );
-													location.reload();
+									btn.parents('.wp-filter').find('.uabb-cloud-process .msg').html( UABBCloudTemplates.successMessageFetch );
+									location.reload();
 
 									break;
 							}
@@ -431,14 +257,12 @@ jQuery( function( $ ) {
 								btn_template_image.append( message );
 
 							} else {
-								btn.find('.msg').html( status );								
+								btn.find('.msg').html( status );
 							}
 						}
 					}
 				});
 			}
 		}
-
 	});
-
-} );
+});

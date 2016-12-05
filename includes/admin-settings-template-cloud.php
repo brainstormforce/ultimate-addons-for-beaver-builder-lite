@@ -24,11 +24,7 @@
 					<ul class="uabb-filter-links">
 						<li><a href="#uabb-cloud-templates-page-templates" data-count="<?php echo UABB_Cloud_Templates::get_cloud_templates_count('page-templates'); ?>"> <?php _e('Page Templates', 'uabb'); ?> </a></li>
 						<li><a href="#uabb-cloud-templates-sections" data-count="<?php echo UABB_Cloud_Templates::get_cloud_templates_count('sections'); ?>"> <?php _e('Sections', 'uabb'); ?> </a></li>
-						<!-- <li><a href="#uabb-cloud-templates-presets" data-count="<?php // echo UABB_Cloud_Templates::get_cloud_templates_count('presets'); ?>"> <?php // _e('Presets', 'uabb'); ?> </a></li> -->
 					</ul>
-					<!-- <a class="drawer-toggle" href="#">Feature Filter</a>
-					<input type="text" value="Search templates" style="width: 100px;" /> -->
-
 					<div class="uabb-fetch-templates">
 						<span class="button button-secondary uabb-cloud-process" data-operation="fetch">
 					    	<i class="dashicons dashicons-update " style="padding: 3px;"></i>
