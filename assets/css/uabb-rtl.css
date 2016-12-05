@@ -1,0 +1,238 @@
+/* RTL CSS */
+/* Info Box */
+.infobox-left .uabb-infobox-left-right-wrap {
+    text-align: right;
+}
+.infobox-right .uabb-infobox-left-right-wrap {
+    text-align: left;
+}
+.infobox-icon-right .uabb-imgicon-wrap {
+    margin-right: 20px;
+    margin-left: 0;
+}
+.infobox-icon-left .uabb-imgicon-wrap {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.infobox-icon-right-title .uabb-imgicon-wrap {
+    margin-left: 0px;
+    margin-right: 20px;
+}
+.infobox-icon-left-title .uabb-imgicon-wrap {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+.infobox-photo-right .uabb-imgicon-wrap {
+    margin-left: 0px;
+    margin-right: 20px;
+}
+.infobox-photo-left .uabb-imgicon-wrap {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+.infobox-photo-right-title .uabb-imgicon-wrap {
+    margin-left: 0px;
+    margin-right: 20px;
+}
+.infobox-photo-left-title .uabb-imgicon-wrap {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+/* Info Box end here */
+
+/* Info List */
+.uabb-info-list-wrapper.top li:first-child .uabb-info-list-connector {
+    display: none;
+}
+.uabb-info-list-wrapper.top li:last-child .uabb-info-list-connector {
+    display: block;
+}
+.uabb-info-list-content-wrapper.right {
+    text-align: left;
+    direction: ltr;
+}
+.uabb-info-list-content-wrapper.right * {
+    direction: rtl;
+}
+.uabb-info-list-content-wrapper.right .uabb-info-list-icon {
+    margin-left: 0px;
+    margin-right: 20px;
+}
+.uabb-info-list-content-wrapper.left .uabb-info-list-icon {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+/* Info List end here */
+
+/* Progress Bar */
+.uabb-progress-bar {
+    right: 0;
+}
+.uabb-progress-title {
+    text-align: right;
+}
+.uabb-progress-bar-style-style4 .uabb-progress-value {
+    text-align: left;
+}
+.uabb-progress-bar-style-style2 .uabb-progress-value,
+.uabb-progress-bar-style-style1 .uabb-progress-value {
+    padding-left: 0;
+    padding-right: .5em;
+}
+/* Progress Bar end here */
+
+/* Slide Box */
+.uabb-slide-face.uabb-slide-front.uabb-slide-icon-right-title {
+    text-align: left;
+}
+.uabb-slide-face.uabb-slide-front.uabb-slide-icon-left-title {
+    text-align: right;
+}
+.uabb-slide-face.uabb-slide-front.uabb-slide-icon-right {
+    text-align: left;
+}
+.uabb-slide-face.uabb-slide-front.uabb-slide-icon-left {
+    text-align: right;
+}
+.uabb-slide-front-right-title-img {
+    padding-left: 0px;
+    padding-right: 15px;
+}
+.uabb-slide-front-left-title-img {
+    padding-right: 0;
+    padding-left: 15px;
+}
+.uabb-slide-front-right-img {
+    padding-left: 0px;
+    padding-right: 15px;
+}
+.uabb-slide-front-left-img {
+    padding-right: 0px;
+    padding-left: 15px;
+}
+.uabb-slide-face.uabb-slide-front.uabb-slide-photo-right-title {
+    text-align: left;
+}
+.uabb-slide-face.uabb-slide-front.uabb-slide-photo-left-title {
+    text-align: right;
+}
+.uabb-slide-face.uabb-slide-front.uabb-slide-photo-right {
+    text-align: left;
+}
+.uabb-slide-face.uabb-slide-front.uabb-slide-photo-left {
+    text-align: right;
+}
+/* Slide Box end here */
+
+/*-- Advanced Accordion Start --*/
+.uabb-adv-accordion-button.uabb-adv-before-text {
+    padding-left: 0;
+    padding-right: 22px;
+}
+
+.uabb-adv-before-text .uabb-adv-accordion-button-label {
+    padding-right: 20px;
+}
+
+.uabb-adv-after-text .uabb-adv-accordion-button-label {
+    padding-right: 0;
+    padding-left: 20px;
+}
+/*-- Advanced Accordion End --*/
+
+/*-- Advanced Tabs Start --*/
+.uabb-tabs-nav .uabb-tabs-icon {
+    margin-left: 0.4em;
+    margin-right: 0;
+}
+/*-- Advanced Tabs End --*/
+
+/*-- Button Start --*/
+.uabb-creative-button-wrap .uabb-creative-button .uabb-creative-button-icon-before {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+.uabb-creative-button-wrap .uabb-creative-button .uabb-creative-button-icon-after {
+    margin-left: 0;
+    margin-right: 8px;
+}
+/*-- Button End --*/
+
+/*-- CTA Start --*/
+.uabb-cta-inline .uabb-module-content.uabb-button-wrap.uabb-creative-button-wrap.uabb-button-width-auto.uabb-creative-button-width-auto {
+    text-align: left;
+}
+
+.uabb-cta-inline .uabb-cta-button {
+    padding-right: 30px;
+    text-align: center;
+}
+/*-- CTA End --*/
+
+/*-- Contact Form Start --*/
+.uabb-contact-form .uabb-io-padding-right {
+    padding-left: 5px;
+    padding-right: 0px;
+}
+.uabb-contact-form .uabb-io-padding-left {
+    padding-left: 0;
+    padding-right: 5px;
+}
+
+.uabb-contact-form .uabb-input-group-wrap input[type="text"], 
+.uabb-contact-form .uabb-input-group-wrap input[type=tel], 
+.uabb-contact-form .uabb-input-group-wrap input[type=email],
+.uabb-contact-form .uabb-input-group-wrap textarea {
+    text-align: right;
+}
+
+.uabb-form-style2 .uabb-io-padding-right {
+    padding-left: 15px;
+    padding-right: 0;
+}
+
+.uabb-form-style2 .uabb-io-padding-left {
+    padding-left: 0;
+    padding-right: 15px;
+}
+/*-- Contact Form End --*/
+
+/*-- Creative link Start --*/
+.uabb-cl-style1 a:before {
+    margin-left: 10px;
+}
+
+.uabb-cl-style1 a::after {
+    margin-right: 10px;
+}
+/*-- Creative link End --*/
+
+/*-- Dual Buttons Start --*/
+.uabb-dual-button .uabb-middle-text {
+    right: auto;
+    left: -32px;
+}
+.uabb-horizontal .uabb-btn.uabb-btn-two {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.uabb-horizontal .uabb-btn.uabb-btn-two {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.uabb-horizontal .uabb-btn.uabb-btn-one {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.uabb-horizontal .uabb-btn.uabb-btn-one {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+} 
+/*-- Dual Buttons End --*/
+
+/*-- Testimonials Start --*/
+.uabb-testimonials.left .uabb-testimonial-photo.left .uabb-imgicon-wrap {
+    margin-left: 20px;
+}
+/*-- Testimonials End --*/

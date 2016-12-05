@@ -1,0 +1,42 @@
+
+.uabb-toggle-switch {
+  font-family: Helvetica, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.uabb-toggle-switch input {
+  display: none;
+}
+.uabb-toggle-switch label {
+  float: left;
+}
+.uabb-toggle-switch label {
+  display: inline-block;
+  width: 60px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: none;
+  padding: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition:    all 0.1s ease-in-out;
+  -ms-transition:     all 0.1s ease-in-out;
+  -o-transition:      all 0.1s ease-in-out;
+  transition:         all 0.1s ease-in-out;
+}
+.uabb-toggle-switch label:hover {
+    cursor: pointer;
+}
+.uabb-toggle-switch input:checked + label {
+/*  background-color: #A5DC86;*/
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.uabb-toggle-switch label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+.uabb-toggle-switch label:last-of-type {
+  border-radius: 0 4px 4px 0;
+}

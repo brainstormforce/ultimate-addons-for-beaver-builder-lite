@@ -1,0 +1,93 @@
+.uabb-gradient-wrapper {
+    position: relative;
+   /* height: 132px;*/
+}
+
+.uabb-gradient-wrapper .uabb-gradient-item {
+    margin-bottom: 10px;
+}
+
+.uabb-gradient-wrapper .uabb-gradient-item:last-child {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.uabb-gradient-wrapper.bb-colorpick .uabb-gradient-item:last-child {
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+.uabb-gradient-wrapper .wp-color-result {
+    margin-bottom: 0;
+}
+
+.uabb-gradient-wrapper .uabb-gradient-label {
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    margin-right: 15px;
+    padding-top: 5px;
+}
+
+.uabb-gradient-wrapper .wp-picker-container,
+.uabb-gradient-wrapper .fl-color-picker {
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 0;
+    left: 55px;
+}
+
+.uabb-gradient-wrapper .uabb-gradient-angle-input {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 4px 0 0 !important;
+    padding: 4px !important;
+}
+
+.uabb-gradient-wrapper .uabb-gradient-direction-select {
+    margin: 0;
+    padding: 0;
+    height: 24px;
+    box-sizing: border-box;
+}
+
+.uabb-gradient-wrapper .uabb-gradient-angle .fl-field-description {
+    display: inline-block;
+    padding-top: 5px;
+}
+
+
+.uabb-gradient-wrapper .uabb-gradient-color-one.uabb-color,
+.uabb-gradient-wrapper .uabb-gradient-color-two.uabb-color{
+    min-height: 32px;
+}
+
+.uabb-gradient-wrapper .uabb-gradient-direction{
+    margin-right: 0px;
+    margin-bottom: 0;
+}
+
+.uabb-gradient-wrapper .uabb-gradient-direction,
+.uabb-gradient-wrapper .uabb-gradient-angle {
+    /*display: inline-block;
+    vertical-align: top;*/
+    min-height: 32px;
+}
+
+.uabb-gradient-wrapper .uabb-gradient-color-one.bb-color,
+.uabb-gradient-wrapper .uabb-gradient-color-two.bb-color {
+    min-height: 32px;
+}
+.uabb-gradient-wrapper .uabb-gradient-color-one {
+    position: relative;
+    z-index: 3;
+}
+.uabb-gradient-wrapper .uabb-gradient-color-two {
+    position: relative;
+    z-index: 2;
+}
+
+.uabb-gradient-wrapper .uabb-gradient-angle {
+    position: relative;
+    z-index: 1;
+}

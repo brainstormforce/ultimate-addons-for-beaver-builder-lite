@@ -1,0 +1,44 @@
+/* Photo */
+
+
+.uabb-imgicon-wrap .uabb-image {
+	line-height: 0;
+	position: relative;
+}
+.uabb-imgicon-wrap .uabb-image-align-left {
+	text-align: left;
+}
+.uabb-imgicon-wrap .uabb-image-align-center {
+	text-align: center;
+}
+.uabb-imgicon-wrap .uabb-image-align-right {
+	text-align: right;
+}
+.uabb-imgicon-wrap .uabb-image-content {
+	border-radius: 0;
+	display: inline-block;
+	line-height: 0;
+	position: relative;
+	max-width: 100%;
+	overflow: hidden;
+}
+.uabb-imgicon-wrap .uabb-image-content img {
+	display: inline;
+	height: auto !important;
+	max-width: 100%;
+	width: auto;
+	box-sizing: content-box;
+	border-radius: inherit;
+}
+.fl-builder-content .uabb-imgicon-wrap .uabb-image-crop-circle img {
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+}
+.fl-builder-content .uabb-imgicon-wrap .uabb-image-crop-square img {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+

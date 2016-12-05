@@ -1,0 +1,6 @@
+# Ignore node.js Modules #
+node_modules/
+convertplug.zip
+bcore.sh
+push.sh
+npm-debug.log

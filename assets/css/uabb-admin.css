@@ -1,0 +1,638 @@
+/*
+* CSS for wp-admin backend only
+* This CSS will not load on frontend / fl builder editor screen.
+*/
+
+.uabb-reloading-iconfonts {
+    -webkit-animation: cssAnimation .72s ease infinite;
+    -moz-animation: cssAnimation .72s ease infinite;
+    -o-animation: cssAnimation .72s ease infinite;
+ }
+ @-webkit-keyframes cssAnimation {
+    from { -webkit-transform: rotate(0); }
+    to { -webkit-transform: rotate(360deg); }
+ }
+ @-moz-keyframes cssAnimation {
+    from { -moz-transform: rotate(0); }
+    to { -moz-transform: rotate(360deg); }
+ }
+ @-o-keyframes cssAnimation {
+    from { -o-transform: rotate(0); }
+    to { -o-transform: rotate(360deg); }
+}
+
+
+.uabb-help-info {
+	display: block;
+	width: 100%;
+    background: #ddd;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+
+/* Tooltip Css */
+.uabb-help-tooltip {
+	display: inline-block;
+	position: relative;
+	margin-left: 8px;
+	vertical-align: top;
+}
+.uabb-help-tooltip-icon {
+	color: #999 !important;
+	cursor: pointer;
+	font-size: 16px !important;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+.uabb-help-tooltip-text {
+	background: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 5px #ccc;
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	display: none;
+	font-weight: normal;
+	left: 23px;
+	padding: 10px 13px;
+	position: absolute;
+	top: -6px;
+	width: 250px;
+	z-index: 1000;
+	-webkit-transition: all 0.2s ease-in;
+       -moz-transition: all 0.2s ease-in;
+         -o-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;
+}
+
+.uabb-help-tooltip .uabb-help-tooltip-icon:hover,
+.uabb-help-tooltip:hover i {
+	padding-right: 20px;
+}
+
+.uabb-help-tooltip .uabb-help-tooltip-icon:hover ~ .uabb-help-tooltip-text,
+.uabb-help-tooltip-text:hover {
+	display: block;
+}
+
+
+/*
+ * Graupi License Design */
+
+ /* Updates Available */
+.uabb-license-error {
+	display: block;
+	padding: 10px 20px;
+	background: #d54e21;
+	color: #fff;
+}
+
+/* Active/ Not Active */
+.uabb-heading-message span,
+.active-uabb.uabb-heading-message span {
+	font-style: italic;
+}
+
+/* Error Msg */
+.uabb-heading-message span {
+	color: #ae5842;
+}
+
+/* Button */
+.button.uabb-button-space {
+    margin-top: 20px;
+}
+
+/* Active Case */
+.bsf-current-license-success-uabb {
+	display: none;
+}
+
+
+/*
+ * Form Submited */
+
+/* Success Msg */
+.uabb-form-submited .uabb-heading-message span {
+    color: #3cb341;
+}
+
+/* Button  Space */
+.uabb-form-submited .uabb-button-space {
+	margin: 0;
+}
+
+.uabb-form-submited .regular-text,
+.uabb-form-submited .uabb-button-space,
+.uabb-form-submited .uabb-button-space:active {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.uabb-form-submited .regular-text {
+    padding: 0;
+    margin: 0;
+}
+
+.uabb-form-submited .uabb-success-message {
+    border: 0;
+	box-shadow: none;
+    margin-right: 10px;
+    width: auto;
+    background: transparent;
+}
+
+.uabb-form-submited .uabb-success-message:focus {
+    box-shadow: none;
+}
+
+/*================== Cloud Template - Page Design ============= */
+
+
+/* Clearing Floats */
+#uabb-cloud-templates-available:after {
+	clear: both;
+}
+#uabb-cloud-templates-available:before,
+#uabb-cloud-templates-available:after {
+	display: table;
+	content: "";
+}
+
+/* Common */
+div#fl-uabb-cloud-templates-form {
+    max-width: 100%;
+}
+
+/* Templates not found msg */
+.uabb-cloud-templates-not-found {
+    padding-left: 1em;
+    text-align: left;
+    font-size: 1.2em;
+}
+.uabb-cloud-templates-not-found p {
+    max-width: 450px;
+}
+.uabb-cloud-templates-not-found .uabb-cloud-process {
+    display: block;
+    margin-top: 25px;
+    width: 185px;
+    font-size: 14px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/* Tabs */
+.uabb-cloud-filter {
+    padding: 0 20px;
+}
+.uabb-filter-links,
+.uabb-filter-links li {
+    display: inline-block;
+    margin: 0;
+}
+#uabb-cloud-templates-inner .uabb-filter-links .current,
+#uabb-cloud-templates-inner .uabb-filter-links .ui-tabs-active a {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 4px solid #666;
+    color: #23282d;
+}
+#uabb-cloud-templates-inner .uabb-filter-links li > a,
+.uabb-filter-links li > a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-bottom: 4px solid #fff;
+    color: #666;
+    cursor: pointer;
+}
+.uabb-cloud-filter a {
+    text-decoration: none;
+}
+
+/* Template */
+#uabb-cloud-templates-page-templates,
+#uabb-cloud-templates-presets,
+#uabb-cloud-templates-sections {
+    overflow: hidden;
+    margin: 0 -15px;
+}
+#uabb-cloud-templates-page-templates .uabb-cloud-templates-not-found,
+#uabb-cloud-templates-presets .uabb-cloud-templates-not-found,
+#uabb-cloud-templates-sections .uabb-cloud-templates-not-found {
+    margin: 0 15px;
+}
+.uabb-template-block {
+    display: inline-block;
+    float: left;
+    width: 100%;
+	margin: 0;
+	text-align: center;
+	min-width: 200px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.uabb-template {
+	padding: 0;
+	margin: 15px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 5px 1px rgba(204, 204, 204, 0.3);
+}
+.uabb-template-screenshot {
+	background: #c5c5c5;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	-webkit-backface-visibility: hidden;
+}
+.uabb-template-screenshot img {
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
+.uabb-template .uabb-template-screenshot:after {
+    content: "";
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    content: "";
+    display: block;
+    padding-top: 66.66666%;
+    -webkit-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+}
+.uabb-template:hover .uabb-template-screenshot:after {
+	opacity: 0.3;
+}
+.uabb-downloaded .uabb-template-screenshot:after {
+    opacity: 0.25;
+}
+.uabb-downloaded .uabb-template-screenshot:after {
+    background: #232323;
+}
+.uabb-template-info {
+    font-size: 15px;
+    font-weight: 600;
+    height: 18px;
+    margin: 0;
+    padding: 15px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: #fff;
+    background: rgba(255,255,255,0.65);
+    position: relative;
+}
+.uabb-template-info h2 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.uabb-template-actions {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    -webkit-transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 38px;
+    padding: 9px 10px 0 10px;
+    background: rgba(244, 244, 244, 0.7);
+    border-left: 1px solid rgba(0,0,0,0.05);
+}
+.uabb-template:hover .uabb-template-actions,
+.uabb-template-processing[data-is-downloaded=""] .uabb-template-actions {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+}
+.uabb-template-actions .button-secondary {
+    float: none;
+    margin-left: 3px;
+}
+.uabb-template-actions .button-primary {
+    margin-right: 3px;
+    min-width: 101.55px;
+}
+.uabb-template-actions .button-sucess {
+    color: #fff;
+    background: #27ae60;
+    border-color: #27ae60;
+    box-shadow: 0 1px 0 #24a259;
+    margin-right: 3px;
+}
+.uabb-template-actions .button-sucess:hover,
+.uabb-template-actions .button-sucess:focus {
+    color: #fff;
+    background: #1ea256;
+    border-color: #27ae60;
+}
+.uabb-cloud-process[data-operation="remove"],
+.uabb-cloud-process[data-operation="remove"]:hover {
+    background: #d54e21;
+    border-color: #cc4518;
+    -webkit-box-shadow: 0 1px 0 #d54e21;
+    box-shadow: 0 1px 0 #a73510;
+    text-shadow: 0 -1px 1px #ec5e2e,1px 0 1px #9e3613,0 1px 1px #d54e21,-1px 0 1px #b9461f;
+}
+.uabb-fetch-templates {
+    float: right;
+    margin: 12px 0;
+}
+/* Button And Overlay */
+.uabb-downloaded .uabb-template-actions {
+    opacity: 1;
+}
+.uabb-downloaded .uabb-template-actions .uabb-cloud-process {
+    display: none;
+}
+.uabb-downloaded:hover .uabb-installed-btn,
+.uabb-template-processing .uabb-installed-btn {
+    display: none;
+}
+.uabb-downloaded:hover .uabb-cloud-process,
+.uabb-template-processing .uabb-cloud-process[data-operation="remove"] {
+    display: block;
+}
+.uabb-downloaded .uabb-template:hover .uabb-template-info:after {
+    opacity: 0;
+}
+
+/* Responsive Grid */
+@media all and (min-width: 768px) and (max-width: 1599px) {
+    .uabb-template-block {
+        width: 50%;
+    }
+
+    .uabb-template-block:nth-child(2n+1) {
+        clear: left;
+    }
+
+    .uabb-template-block:nth-child(2n+0) {
+         clear: right;
+    }
+}
+
+@media all and (min-width: 1600px) {
+    .uabb-template-block {
+        width: 33.33%;
+    }
+
+    .uabb-template-block:nth-child(3n+1) {
+        clear: left;
+    }
+
+    .uabb-template-block:nth-child(3n+0) {
+         clear: right;
+    }
+}
+
+/* Filter Bar */
+.uabb-template-search-form {
+	width: 200px;
+}
+
+/* Cloud templates - Sections & Presets */
+.uabb-template-block-sections .uabb-cloud-process .button,
+.uabb-template-block-presets .uabb-cloud-process .button {
+    margin-left: 18px;
+}
+.uabb-template-block-sections .uabb-cloud-process,
+.uabb-template-block-presets .uabb-cloud-process,
+.uabb-template-block-sections .uabb-cloud-process:hover,
+.uabb-template-block-presets .uabb-cloud-process:hover {
+    margin-left: 10px;
+    transition: all ease-in-out 0.3s;
+    color: #fff;
+}
+/* Cloud Template - Live Preview */
+.UABB_TB_window {
+    width: 90% !important;
+    height: 90vh !important;
+    left: 50% !important;
+    top: 50% !important;
+    margin: 0 !important;
+    transform: translate( -50%, -50% );
+}
+.UABB_TB_iframeContent {
+    clear: both;
+    border: none;
+    width: 100% !important;
+    height: 90vh !important;
+}
+.UABB_TB_title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.UABB_TB_loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#TB_title .uabb-cloud-process {
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    right: 60px;
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+}
+#TB_title .uabb-cloud-process i {
+    font-size: 14px;
+    height: 22px;
+    line-height: 22px;
+    width: 16px;
+}
+#TB_title .uabb-cloud-process.installed {
+    top: 5px;
+}
+/* Cloud Template - More Details */
+.uabb-template .more-details {
+    text-decoration: none;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 27%;
+    left: 27%;
+    background: #23282d;
+    background: rgba(0,0,0,.7);
+    color: #fff;
+    font-size: 15px;
+    text-shadow: 0 1px 0 rgba(0,0,0,.6);
+    -webkit-font-smoothing: antialiased;
+    font-weight: 600;
+    padding: 15px 12px;
+    text-align: center;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: opacity .1s ease-in-out;
+    transition: opacity .1s ease-in-out;
+}
+.uabb-template:hover .more-details {
+    opacity: 1;
+    z-index: 1;
+}
+.uabb-template:hover .uabb-template-screenshot {
+    background: #fff;
+    cursor: pointer;
+}
+
+/**
+ * Template Count
+ */
+.uabb-count {
+    font-size: 150px;
+    color: #e0e0e0;
+    display: block;
+    font-weight: 600;
+    font-family: Questrial;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#uabb-cloud-templates-sections .uabb-template-screenshot h2,
+#uabb-cloud-templates-presets .uabb-template-screenshot h2 {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    line-height: 1.3em;
+    top: 50%;
+    left: 50%;
+    color: #23282d;
+    font-size: 30px;
+    margin: 0;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+}
+#uabb-cloud-templates-sections .uabb-template-screenshot,
+#uabb-cloud-templates-presets .uabb-template-screenshot {
+    background: #ffffff;
+}
+
+/**
+ * Cloud Templates - Filter
+ */
+.uabb-templates-filter {
+    display: flex;
+    align-items: center;
+    margin: 0 15px 10px 15px;
+    padding-left: 10px;
+}
+.uabb-templates-filter li {
+    margin: 0;
+    flex: 1;
+    flex-basis: inherit;
+    align-items: center;
+}
+.uabb-templates-filter li a {
+    background: transparent;
+    font-weight: 400;
+    padding: 0;
+    font-size: 13px;
+    text-decoration: none !important;
+    text-transform: capitalize !important;
+    text-align: left;
+    outline: none !important;
+    box-shadow: none;
+    display: block;
+}
+.uabb-templates-filter li a.faq {
+    text-transform: uppercase !important;
+}
+.uabb-templates-filter li a.installed,
+.uabb-templates-filter li a.installed.active {
+    text-align: center !important;
+    background: #27ae60 !important;
+    color: #fff !important;
+    padding: 5px 2px !important;
+}
+.uabb-templates-filter li a.active {
+    color: #124964;
+}
+
+/* Tab Override */
+#uabb-cloud-templates-tabs.ui-widget-content,
+#uabb-cloud-templates-tabs .ui-widget-content,
+#uabb-cloud-templates-inner .ui-state-active,
+#uabb-cloud-templates-inner .ui-widget-content .ui-state-active,
+#uabb-cloud-templates-inner .ui-widget-header .ui-state-active,
+#uabb-cloud-templates-inner .ui-state-default,
+#uabb-cloud-templates-inner .ui-widget-content .ui-state-default,
+#uabb-cloud-templates-inner .ui-widget-header .ui-state-default,
+#uabb-cloud-templates-inner .ui-widget-header {
+    border: 0;
+    background: none;
+    font-weight: initial;
+    color: initial;
+}
+#uabb-cloud-templates-inner .ui-tabs-nav {
+    padding: 0;
+    border-radius: 0;
+    line-height: inherit;
+}
+#uabb-cloud-templates-tabs.ui-widget {
+    font-family: inherit;
+    font-size: inherit;
+}
+#uabb-cloud-templates-tabs.ui-widget-content,
+#uabb-cloud-templates-tabs.ui-tabs .ui-tabs-panel {
+    padding: 0;
+}
+#uabb-cloud-templates-inner .ui-tabs-nav .ui-tabs-anchor {
+    float: none;
+    padding: 15px 0;
+    text-decoration: none;
+}
+#uabb-cloud-templates-tabs.ui-tabs .ui-tabs-nav li {
+    float: none;
+    border-radius: 0;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+}
+
+/**
+ * Template Cloud - error messages
+ */
+.uabb-template-screenshot .notice.is-dismissible {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+.uabb-template-screenshot .notice.is-dismissible p {
+    padding: 0 1em;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

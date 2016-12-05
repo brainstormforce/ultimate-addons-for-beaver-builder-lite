@@ -1,0 +1,120 @@
+.uabb-simplify-wrapper .uabb-simplify {
+    width: 20%;
+    display: inline-block;
+}
+
+.uabb-simplify-wrapper .uabb-simplify-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.uabb-simplify-wrapper .uabb-simplify-items .simplify{
+	position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.uabb-simplify-wrapper .uabb-simplify-items i.dashicons {
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    line-height: 23px;
+    /* border: 1px solid; */
+}
+
+.uabb-simplify-wrapper .uabb-simplify-item.desktop {
+    margin: 0;
+}
+
+.uabb-simplify-wrapper span.uabb-icon {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+
+.uabb-simplify-wrapper .uabb-icon .uabb-tooltip,
+.uabb-simplify-wrapper .simplify .uabb-tooltip {
+    display: none;
+    position: absolute;
+    content: '';
+    color: #fff;
+    top: -35px;
+    left: -5px;
+    text-shadow: none;
+    white-space: nowrap;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 11px;
+}
+.uabb-simplify-wrapper .uabb-icon .uabb-tooltip{
+	background: #444;
+}
+.uabb-simplify-wrapper .simplify .uabb-tooltip{
+	background: #00aef0;
+}
+
+.uabb-simplify-wrapper .uabb-icon .uabb-tooltip:before,
+.uabb-simplify-wrapper .simplify .uabb-tooltip:before {
+    content: "";
+    position: absolute;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    top: 100%;
+    left: 10px;
+}
+
+.uabb-simplify-wrapper .uabb-icon .uabb-tooltip:before{
+	border-top: 5px solid #444;
+}
+.uabb-simplify-wrapper .simplify .uabb-tooltip:before{
+    border-top: 5px solid #00aef0;
+}
+
+
+
+/*************
+New
+*/
+
+.uabb-simplify-wrapper .uabb-simplify-item.optional {
+    display: inline-block;
+    /* vertical-align: text-top; */
+}
+
+.uabb-simplify-wrapper .uabb-simplify-size-wrap {
+    display: inline-block;
+    width: 65%;
+}
+
+.uabb-simplify-wrapper .uabb-size-wrap {
+    display: inline-block;
+    vertical-align: top;
+    /*margin-right: 5px;*/
+}
+
+.uabb-simplify-wrapper .uabb-simplify-item input.uabb-simplify-input {
+    box-sizing: border-box!important;
+    margin: 0 0 0 -0.4em !important;
+    height: 25px !important;
+    padding-left: 5px !important;
+    width: 40px;
+    vertical-align: middle;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Hover Css */
+
+.uabb-simplify-wrapper i.uabb-help-tooltip:hover ~ div.uabb-tooltip {
+    display: block;
+}

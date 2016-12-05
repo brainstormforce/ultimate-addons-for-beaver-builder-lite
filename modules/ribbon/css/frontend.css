@@ -1,0 +1,91 @@
+/* For Alignment */
+.uabb-ribbon-wrap { 
+  text-align:center;
+}
+
+.uabb-ribbon-wrap .uabb-ribbon {
+    position: relative;
+    padding: 0;
+    margin: 1.5em 0;
+    border-radius: 2px;
+    text-align: center;   
+    display: inline-block; 
+    z-index: 0;
+}
+
+
+/*  Icon Code 
+*================ */
+.uabb-ribbon .uabb-ribbon-text {
+    position: relative;
+    padding: 0.5em 1.75em;
+    z-index: 3;
+    display: block;
+}
+
+.uabb-ribbon .uabb-left-ribb i, 
+.uabb-ribbon .uabb-right-ribb i {
+    position: absolute;
+    font-family: FontAwesome;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+}
+
+.uabb-ribbon .uabb-left-ribb i {
+    left: 0.5em;
+}
+
+.uabb-ribbon .uabb-right-ribb i {
+    right: 0.5em;
+}   
+
+/* Snitch Code 
+*=============*/
+
+/* Top Snitch */
+.uabb-ribbon .uabb-ribbon-stitches-top,
+.uabb-ribbon .uabb-ribbon-stitches-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;    
+}
+.uabb-ribbon .uabb-ribbon-stitches-top {  
+    top: 0;
+    margin-top: 2px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+/* Bottom Snich */
+.uabb-ribbon .uabb-ribbon-stitches-bottom {
+    bottom: 0;
+    margin-bottom: 2px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+}
+
+.uabb-ribbon-stitches-top {
+    margin-top: 2px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+
+.uabb-ribbon-stitches-bottom {
+    margin-bottom: 2px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+}
+
+.uabb-ribbon-wrap .flips i {
+    text-shadow: none;
+}
+
+
