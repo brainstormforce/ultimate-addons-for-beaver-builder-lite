@@ -13,7 +13,9 @@
 			$enabled_modules = BB_Ultimate_Addon_Helper::get_builder_uabb_modules();
 			$checked     	 = in_array('all', $enabled_modules) ? 'checked' : '';
 
-			//var_dump( $enabled_modules );
+			unset( $modules_array['image-icon'] );
+			unset( $modules_array['uabb-separator' ] );
+			unset( $modules_array['uabb-button' ] );
 			
 			?>
 			<label>

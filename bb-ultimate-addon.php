@@ -85,7 +85,8 @@ if( !class_exists( "BB_Ultimate_Addon" ) ) {
 	function admin_notices() {
 
 		echo '<div class="notice notice-error">';
-	    echo "<p>The <strong>Ultimate Addon for Beaver Builder</strong> is already activated.</p>";
+	    echo "<p>You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='" . admin_url( 'plugins.php' ) . "'>deactivate one</a> before continuing.</p>";
 	    echo '</div>';
+
   	}
 }

@@ -7,11 +7,6 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 	
 	class BB_Ultimate_Addon_Helper {
 
-		//Class variables
-		// public static $uabb_field;
-		// public static $uabb_param;
-		// public static $uabb_object;
-
 		/*
 		* Constructor function that initializes required actions and hooks
 		* @Since 1.0
@@ -19,8 +14,6 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 		function __construct() {
 
 			$this->set_constants();
-			/* Remove after 2 update */
-			$this->update_enable_modules_db();
 		}
 
 		function set_constants() {
@@ -46,8 +39,7 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 			define( 'UABB_CAT', $branding_modules );			
 		}
 		
-		static public function get_builder_uabb()
-		{
+		static public function get_builder_uabb() {
 			$uabb = UABB_Init::$uabb_options['fl_builder_uabb'];
 
 			$defaults = array(
@@ -77,8 +69,7 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 			return apply_filters( 'uabb_get_builder_uabb', $uabb );
 		}
 
-		static public function get_builder_uabb_branding( $request_key = '' )
-		{
+		static public function get_builder_uabb_branding( $request_key = '' ) {
 			$uabb = UABB_Init::$uabb_options['fl_builder_uabb_branding'];
 
 			$defaults = array(
@@ -115,27 +106,7 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 			return $uabb;
 		}
 
-		/* Enable Disbale Modules function */
-		/* Remove it after 2 update */
-		function update_enable_modules_db()
-		{
-			//$is_updated = false;
-			$is_updated = get_option( 'uabb_old_modules' );
-			if ( $is_updated != 'updated' ) {
-				
-				$uabb 				= UABB_Init::$uabb_options['fl_builder_uabb_modules'];
-
-				FLBuilderModel::update_admin_settings_option( '_fl_builder_uabb_modules', $uabb, false );
-
-				UABB_Init::set_uabb_options();
-
-				add_option( 'uabb_old_modules', 'updated' );
-			}
-
-		}
-
-		static public function get_all_modules()
-		{
+		static public function get_all_modules() {
 			$modules_array = array(
 				'spacer-gap'               	=> 'Spacer / Gap',
 				'ribbon'                   	=> 'Ribbon',
@@ -145,13 +116,14 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 				'info-list'                	=> 'Info List',
 				'slide-box'                	=> 'Slide Box',
 				'flip-box'                 	=> 'Flip Box',
+				'image-icon'               	=> 'Image / Icon',
+				'uabb-button'              	=> 'Button',
 			);
 			
 			return $modules_array;
 		}
 
-		static public function get_builder_uabb_modules()
-		{
+		static public function get_builder_uabb_modules() {
 			$uabb 			= UABB_Init::$uabb_options['fl_builder_uabb_modules'];
 			$all_modules 	= self::get_all_modules();
 			$is_all_modules = true;
@@ -180,6 +152,10 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 			if ( $is_all_modules == false && isset( $uabb['all'] ) ) {
 				unset( $uabb['all'] );
 			}
+
+			$uabb['image-icon'] 			= 'image-icon';
+			$uabb['uabb-separator' ] 		= 'uabb-separator';
+			$uabb['uabb-button' ] 			= 'uabb-button';
 
 			return apply_filters( 'uabb_get_builder_uabb_modules', $uabb );
 		}

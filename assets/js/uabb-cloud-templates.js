@@ -131,11 +131,63 @@ jQuery( function( $ ) {
 	 * Templates Preview
 	 */
 	jQuery('body').on('click', '.uabb-template-screenshot', function (event) {
-		window.open( 'https://www.ultimatebeaver.com/pricing/', '_blank' )
+
+		var template_preview_url = jQuery(this).attr( 'data-preview-url' ) || '',
+			template_name        = jQuery(this).attr( 'data-template-name' ) || '',
+			is_downlaoded        = jQuery(this).parents( '.uabb-template-block' ).attr('data-is-downloaded') || '',
+			template_id          = jQuery(this).attr( 'data-template-id' ),
+			template_type        = jQuery(this).attr( 'data-template-type' ),
+			template_dat_url     = jQuery(this).attr( 'data-template-dat-url' );
+
+		if( '' != template_preview_url ) {
+
+			/**
+			 * Thickbox options
+			 */
+			template_preview_url = template_preview_url + '?TB_iframe=true'; // Required
+
+			/**
+			 * Open ThickBox
+			 */
+			tb_show( template_name , template_preview_url );
+
+			// jQuery('#TB_title').addClass('UABB_TB_title');
+			jQuery('#TB_window').addClass('UABB_TB_window');
+			jQuery("#TB_window").append("<div class='UABB_TB_loader spinner is-active'></div>");
+			jQuery('#TB_iframeContent').addClass('UABB_TB_iframeContent');
+
+			/**
+			 * Add Download Button
+			 */
+			console.log(is_downlaoded != 'true');
+			//if( is_downlaoded != 'true' ) {
+
+			var output   = '<span class="button button-primary button-small uabb-cloud-process" data-operation="upgrade">'
+						 + '<i class="dashicons dashicons-update"></i>'
+						 + '<span class="msg"> Upgrade </span>'
+						 + '</span>';
+
+			jQuery('#TB_title').append( output );
+
+			/*} else {
+
+				var output  = '<span class="uabb-cloud-process installed"><i class="dashicons dashicons-yes"></i>'
+							+ '<span class="msg"> '+UABBCloudTemplates.btnTextInstall+' </span></span>';
+				jQuery('#TB_title').append( output );
+			}*/
+	
+			//	hide iframe until complete load and show loader
+			//	once complete iframe loaded then disable loader
+			jQuery('#TB_iframeContent').hide();
+			jQuery('#TB_iframeContent').bind('load', function(){
+		        jQuery("#TB_window").find(".spinner").remove();
+		        jQuery('#TB_iframeContent').show();
+		    });
+		}
 	});
 
 	jQuery('body').on('click', '.uabb-template-actions', function (event) {
-		window.open( 'https://www.ultimatebeaver.com/pricing/', '_blank' )
+		window.open( 'https://www.ultimatebeaver.com/pricing/', '_blank' );
 	});
 
 
@@ -162,7 +214,6 @@ jQuery( function( $ ) {
 
 	jQuery('body').on('click', '.uabb-cloud-process', function (event) {
 		event.preventDefault();
-
 		var btn             	= jQuery(this),
 			meta_id             = btn.find('.template-dat-meta-id').val() || '',
 			meta_type           = btn.find('.template-dat-meta-type').val() || '',
@@ -186,16 +237,19 @@ jQuery( function( $ ) {
 
 		if( '' != btn_operation ) {
 
-			btn.find('i').addClass('uabb-reloading-iconfonts');
-
 			switch( btn_operation ) {
 				case 'fetch':
+					btn.find('i').addClass('uabb-reloading-iconfonts');
 					jQuery('.wp-filter').find('.uabb-cloud-process i').addClass('uabb-reloading-iconfonts');
 					btn.parents('.uabb-cloud-templates-not-found').find('.uabb-cloud-process i').show();
 					var dataAJAX	=  	{
 											action: 'uabb_cloud_dat_file_fetch',
 										};
 
+					break;
+				case 'upgrade' :
+					window.open( 'https://www.ultimatebeaver.com/pricing/', '_blank' );
+					return true;
 					break;
 			}
 			

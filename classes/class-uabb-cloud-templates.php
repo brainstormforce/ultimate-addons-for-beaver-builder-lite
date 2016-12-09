@@ -324,8 +324,6 @@ if( !class_exists('UABB_Cloud_Templates') ) {
 									}
 								}
 
-								$tags[] = 'installed';
-
 								foreach ($tags as $tag) {
 									$tag_title = strtolower( str_replace(' ', '-', $tag) ); ?>
 									<li><a href="#" data-group='<?php echo $tag_title; ?>' class="<?php echo $tag_title; ?>"><?php echo $tag; ?></a></li>
@@ -344,6 +342,7 @@ if( !class_exists('UABB_Cloud_Templates') ) {
 							$data['type']          = ( isset($single_post['type']) ) ? $single_post['type'] : '';
 							$data['status']        = ( isset($single_post['status']) ) ? $single_post['status'] : '';
 							$data['dat_url']       = ( isset($single_post['dat_url']) ) ? $single_post['dat_url'] : '';
+							$data['preview_url']   = ( isset($single_post['preview_url']) ) ? $single_post['preview_url'] : '';
 							$data['count']         = ( isset($single_post['count']) ) ? $single_post['count'] : '';
 							$data['dat_url_local'] = ( isset($single_post['dat_url_local']) ) ? $single_post['dat_url_local'] : '';
 							$data['tags']          = ( isset($single_post['tags']) ) ? $single_post['tags'] : '';
@@ -370,14 +369,14 @@ if( !class_exists('UABB_Cloud_Templates') ) {
 							<div id="<?php echo $data['id']; ?>" data-groups='["<?php echo $tags; ?>"]' class="uabb-template-block uabb-single-<?php echo $type; ?> <?php echo $template_class; ?>" data-is-downloaded="<?php echo $data['status']; ?>">
 								<div class="uabb-template">
 
-								    <div class="uabb-template-screenshot" data-template-name="<?php echo $data['name']; ?>" data-template-id='<?php echo $data['id']; ?>' data-template-type='<?php echo $type; ?>' >
+								    <div class="uabb-template-screenshot" data-template-name="<?php echo $data['name']; ?>" data-preview-url="<?php echo $data['preview_url']; ?>" data-template-id='<?php echo $data['id']; ?>' data-template-type='<?php echo $type; ?>' data-template-dat-url='<?php echo $data['dat_url']; ?>'>
 
 										<?php if( $type == 'page-templates' ) { ?>
 									    	<img data-original="<?php echo $data['image']; ?>" alt="">
 									    	<noscript>
 											    <img src="<?php echo $data['image']; ?>" alt="">
 											</noscript>
-											<span class="more-details"> <?php _e('Upgrade', 'uabb'); ?> </span>
+											<span class="more-details"> <?php _e('Preview', 'uabb'); ?> </span>
 										<?php } else { ?>
 											<h2 class="uabb-template-name"> <?php echo $data['name']; ?> </h2>
 											<div class="uabb-count"><?php echo $data['count']; ?></div>
