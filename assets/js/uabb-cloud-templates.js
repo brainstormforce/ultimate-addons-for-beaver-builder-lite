@@ -136,8 +136,7 @@ jQuery( function( $ ) {
 			template_name        = jQuery(this).attr( 'data-template-name' ) || '',
 			is_downlaoded        = jQuery(this).parents( '.uabb-template-block' ).attr('data-is-downloaded') || '',
 			template_id          = jQuery(this).attr( 'data-template-id' ),
-			template_type        = jQuery(this).attr( 'data-template-type' ),
-			template_dat_url     = jQuery(this).attr( 'data-template-dat-url' );
+			template_type        = jQuery(this).attr( 'data-template-type' );
 
 		if( '' != template_preview_url ) {
 
@@ -151,7 +150,6 @@ jQuery( function( $ ) {
 			 */
 			tb_show( template_name , template_preview_url );
 
-			// jQuery('#TB_title').addClass('UABB_TB_title');
 			jQuery('#TB_window').addClass('UABB_TB_window');
 			jQuery("#TB_window").append("<div class='UABB_TB_loader spinner is-active'></div>");
 			jQuery('#TB_iframeContent').addClass('UABB_TB_iframeContent');
@@ -160,7 +158,6 @@ jQuery( function( $ ) {
 			 * Add Download Button
 			 */
 			console.log(is_downlaoded != 'true');
-			//if( is_downlaoded != 'true' ) {
 
 			var output   = '<span class="button button-primary button-small uabb-cloud-process" data-operation="upgrade">'
 						 + '<i class="dashicons dashicons-update"></i>'
@@ -168,13 +165,6 @@ jQuery( function( $ ) {
 						 + '</span>';
 
 			jQuery('#TB_title').append( output );
-
-			/*} else {
-
-				var output  = '<span class="uabb-cloud-process installed"><i class="dashicons dashicons-yes"></i>'
-							+ '<span class="msg"> '+UABBCloudTemplates.btnTextInstall+' </span></span>';
-				jQuery('#TB_title').append( output );
-			}*/
 	
 			//	hide iframe until complete load and show loader
 			//	once complete iframe loaded then disable loader
@@ -271,8 +261,6 @@ jQuery( function( $ ) {
 						var msg                    = ( data.hasOwnProperty('msg') ) ? data['msg'] : '';
 						var template_id            = ( data.hasOwnProperty('id') ) ? data['id'] : '';
 						var template_type          = ( data.hasOwnProperty('type') ) ? data['type'] : '';
-						var template_dat_url       = ( data.hasOwnProperty('dat_url') ) ? decodeURIComponent( data['dat_url'] ) : '';
-						var template_dat_url_local = ( data.hasOwnProperty('dat_url_local') ) ? decodeURIComponent( data['dat_url_local'] ) : '';
 
 						if( status == 'success' ) {
 

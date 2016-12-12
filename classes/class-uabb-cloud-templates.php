@@ -34,15 +34,11 @@ if( !class_exists('UABB_Cloud_Templates') ) {
 		function __construct() {
 
 			self::$cloud_url = array(
-				'page-templates' => 'http://templates.ultimatebeaver.com/wp-json/uabb/v1/template/layouts/',
-				'sections'       => 'http://templates.ultimatebeaver.com/wp-json/uabb/v1/template/sections/',
-				'presets'        => 'http://templates.ultimatebeaver.com/wp-json/uabb/v1/template/presets/',
+				'page-templates' => 'http://templates.ultimatebeaver.com/wp-json/uabb-light/v1/template/layouts/',
+				'sections'       => 'http://templates.ultimatebeaver.com/wp-json/uabb-light/v1/template/sections/',
+				'presets'        => 'http://templates.ultimatebeaver.com/wp-json/uabb-light/v1/template/presets/',
 			);
 
-			self::$cloud_url = apply_filters( 'uabb_template_cloud_api', self::$cloud_url );
-
-			//add_action( 'wp_ajax_uabb_cloud_dat_file', array( $this, 'download_cloud_templates' ) );
-			//add_action( 'wp_ajax_uabb_cloud_dat_file_remove', array( $this, 'remove_local_dat_file' ) );
 			add_action( 'wp_ajax_uabb_cloud_dat_file_fetch', array( $this, 'fetch_cloud_templates' ) );
 		}
 
@@ -341,10 +337,8 @@ if( !class_exists('UABB_Cloud_Templates') ) {
 							$data['image']         = ( isset($single_post['image']) ) ? $single_post['image'] : '';
 							$data['type']          = ( isset($single_post['type']) ) ? $single_post['type'] : '';
 							$data['status']        = ( isset($single_post['status']) ) ? $single_post['status'] : '';
-							$data['dat_url']       = ( isset($single_post['dat_url']) ) ? $single_post['dat_url'] : '';
 							$data['preview_url']   = ( isset($single_post['preview_url']) ) ? $single_post['preview_url'] : '';
 							$data['count']         = ( isset($single_post['count']) ) ? $single_post['count'] : '';
-							$data['dat_url_local'] = ( isset($single_post['dat_url_local']) ) ? $single_post['dat_url_local'] : '';
 							$data['tags']          = ( isset($single_post['tags']) ) ? $single_post['tags'] : '';
 
 							$template_class        = ( $data['status'] == 'true' ) ? 'uabb-downloaded' : '';
@@ -369,7 +363,7 @@ if( !class_exists('UABB_Cloud_Templates') ) {
 							<div id="<?php echo $data['id']; ?>" data-groups='["<?php echo $tags; ?>"]' class="uabb-template-block uabb-single-<?php echo $type; ?> <?php echo $template_class; ?>" data-is-downloaded="<?php echo $data['status']; ?>">
 								<div class="uabb-template">
 
-								    <div class="uabb-template-screenshot" data-template-name="<?php echo $data['name']; ?>" data-preview-url="<?php echo $data['preview_url']; ?>" data-template-id='<?php echo $data['id']; ?>' data-template-type='<?php echo $type; ?>' data-template-dat-url='<?php echo $data['dat_url']; ?>'>
+								    <div class="uabb-template-screenshot" data-template-name="<?php echo $data['name']; ?>" data-preview-url="<?php echo $data['preview_url']; ?>" data-template-id='<?php echo $data['id']; ?>' data-template-type='<?php echo $type; ?>'>
 
 										<?php if( $type == 'page-templates' ) { ?>
 									    	<img data-original="<?php echo $data['image']; ?>" alt="">

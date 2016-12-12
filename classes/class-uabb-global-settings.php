@@ -5,7 +5,7 @@
  *
  * @since 1.8
  */
-final class UABBBranding {
+final class UABBGlobalSetting {
 
 	/**
 	 * @return void
@@ -54,4 +54,4 @@ final class UABBBranding {
 	}
 }
 
-UABBBranding::init();
+UABBGlobalSetting::init();
