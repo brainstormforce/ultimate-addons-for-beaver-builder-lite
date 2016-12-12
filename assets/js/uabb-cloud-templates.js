@@ -136,8 +136,7 @@ jQuery( function( $ ) {
 			template_name        = jQuery(this).attr( 'data-template-name' ) || '',
 			is_downlaoded        = jQuery(this).parents( '.uabb-template-block' ).attr('data-is-downloaded') || '',
 			template_id          = jQuery(this).attr( 'data-template-id' ),
-			template_type        = jQuery(this).attr( 'data-template-type' ),
-			template_dat_url     = jQuery(this).attr( 'data-template-dat-url' );
+			template_type        = jQuery(this).attr( 'data-template-type' );
 
 		if( '' != template_preview_url ) {
 
@@ -271,8 +270,8 @@ jQuery( function( $ ) {
 						var msg                    = ( data.hasOwnProperty('msg') ) ? data['msg'] : '';
 						var template_id            = ( data.hasOwnProperty('id') ) ? data['id'] : '';
 						var template_type          = ( data.hasOwnProperty('type') ) ? data['type'] : '';
-						var template_dat_url       = ( data.hasOwnProperty('dat_url') ) ? decodeURIComponent( data['dat_url'] ) : '';
-						var template_dat_url_local = ( data.hasOwnProperty('dat_url_local') ) ? decodeURIComponent( data['dat_url_local'] ) : '';
+						//var template_dat_url       = ( data.hasOwnProperty('dat_url') ) ? decodeURIComponent( data['dat_url'] ) : '';
+						//var template_dat_url_local = ( data.hasOwnProperty('dat_url_local') ) ? decodeURIComponent( data['dat_url_local'] ) : '';
 
 						if( status == 'success' ) {
 
