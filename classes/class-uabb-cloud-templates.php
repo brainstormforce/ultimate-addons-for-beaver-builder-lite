@@ -41,8 +41,6 @@ if( !class_exists('UABB_Cloud_Templates') ) {
 
 			self::$cloud_url = apply_filters( 'uabb_template_cloud_api', self::$cloud_url );
 
-			//add_action( 'wp_ajax_uabb_cloud_dat_file', array( $this, 'download_cloud_templates' ) );
-			//add_action( 'wp_ajax_uabb_cloud_dat_file_remove', array( $this, 'remove_local_dat_file' ) );
 			add_action( 'wp_ajax_uabb_cloud_dat_file_fetch', array( $this, 'fetch_cloud_templates' ) );
 		}
 
