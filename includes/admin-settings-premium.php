@@ -23,7 +23,7 @@
 		</div>
 
 		<p class="submit">
-			<input type="button" name="fl-save-uabb" class="button-primary" value="<?php esc_attr_e( 'Upgrade', 'uabb' ); ?>" />
+			<a class="button-primary" href="https://www.ultimatebeaver.com/pricing/"><?php esc_attr_e( 'Upgrade', 'uabb' ); ?></a>
 		</p>
 
 	</form>
