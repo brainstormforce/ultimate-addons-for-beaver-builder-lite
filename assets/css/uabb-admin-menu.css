@@ -50,6 +50,24 @@
     width: 100%;
 }
 
+.fl-settings-nav a[href="#uabb-premium"]:after {
+    color: #fff;
+    font-size: 0.7em;
+    font-weight: 600;
+    position: relative;
+    content: attr(title);
+    padding: 0.3em 0.6em;
+    top: -2px;
+    left: 12px;
+    letter-spacing: 0.5px;
+    line-height: 1em;
+    text-transform: none;
+    background-color: #f7b91a;
+    text-transform: uppercase !important;
+    border-radius: 2px;
+    content: "Upgrade";
+}
+
 /* Content
 ----------------------------------------------------------- */
 

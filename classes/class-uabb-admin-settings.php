@@ -223,6 +223,12 @@ final class UABBBuilderAdminSettings {
 			'priority'	=> 509
 		);
 
+		$items['uabb-premium'] = array(
+			'title' 	=> __( 'Go Premium', 'uabb' ),
+			'show'		=>  is_network_admin() || ! FLBuilderAdminSettings::multisite_support(),
+			'priority'	=> 510
+		);
+
 		$item_data = apply_filters( 'uabb_builder_admin_settings_nav_items', $items );
 		
 		$sorted_data = array();
@@ -254,6 +260,7 @@ final class UABBBuilderAdminSettings {
 		self::render_form( 'modules' );
 		self::render_form( 'icons' );
 		self::render_form( 'template-cloud' );
+		self::render_form( 'premium' );
 
 		// Let extensions hook into form rendering.
 		do_action( 'uabb_builder_admin_settings_render_forms' );
