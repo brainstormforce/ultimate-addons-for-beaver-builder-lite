@@ -38,10 +38,7 @@ if( !class_exists( "BB_Ultimate_Addon" ) ) {
 
 				if( $no_memory == true && ! defined( 'WP_CLI' ) ) {
 
-					$msg  = __('Unfortunately, plugin could not be activated as the memory allocated by your host has almost exhausted. UABB plugin recommends that your site should have 15M PHP memory remaining. ', 'uabb');
-					$msg .= '<br/><br/>' . __('Please check ', 'uabb') . '<a target="_blank" href="https://www.ultimatebeaver.com/docs/increase-memory-limit-site/">' . __('this article', 'uabb') . '</a> ';
-					$msg .= __(' for solution or contact ', 'uabb') . '<a target="_blank" href="http://store.brainstormforce.com/support">' . __(' support', 'uabb') . '</a>.';
-					$msg .= '<br/><br/><a class="button button-primary" href="'.network_admin_url( 'plugins.php' ). '">' . __('Return to Plugins Page', 'uabb') . '</a>';
+					$msg  = sprintf( __('Unfortunately, plugin could not be activated as the memory allocated by your host has almost exhausted. UABB plugin recommends that your site should have 15M PHP memory remaining. <br/><br/>Please check <a target="_blank" href="https://www.ultimatebeaver.com/docs/increase-memory-limit-site/">this</a> article for solution or contact <a target="_blank" href="http://store.brainstormforce.com/support">support</a>.<br/><br/><a class="button button-primary" href="%s">Return to Plugins Page</a>', 'uabb'), network_admin_url( 'plugins.php' ) );
 
 					deactivate_plugins( plugin_basename( __FILE__ ) );
 					wp_die( $msg );
@@ -84,9 +81,11 @@ if( !class_exists( "BB_Ultimate_Addon" ) ) {
 
 	function admin_notices() {
 
-		echo '<div class="notice notice-error">';
-	    echo "<p>You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='" . admin_url( 'plugins.php' ) . "'>deactivate one</a> before continuing.</p>";
-	    echo '</div>';
+		$url = admin_url( 'plugins.php' );
+
+		echo '<div class="notice notice-error"><p>';
+		echo sprintf( __( "You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='%s'>deactivate one</a> before continuing.", 'uabb' ), $url );
+	    echo '</p></div>';
 
   	}
 }
