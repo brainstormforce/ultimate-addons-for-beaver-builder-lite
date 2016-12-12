@@ -1,0 +1,10 @@
+#don't version template files
+*.dat binary
+
+# don't version i18n files
+*.pot binary
+*.mo binary
+*.po binary
+
+# Declare files that will always have CRLF line endings on checkout.
+*.dat eol=lf

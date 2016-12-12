@@ -1,0 +1,95 @@
+.info-table-wrap .info-table .info-table-heading h1,
+.info-table-wrap .info-table .info-table-heading h2,
+.info-table-wrap .info-table .info-table-heading h3,
+.info-table-wrap .info-table .info-table-heading h4,
+.info-table-wrap .info-table .info-table-heading h5,
+.info-table-wrap .info-table .info-table-heading h6 {
+	margin: 0;
+	padding: 0;
+}
+
+.info-table-wrap .info-table .info-table-heading {
+	padding: 20px;
+}
+.info-table-wrap .info-table .info-table-icon {
+	padding: 20px;	
+}
+.info-table-wrap .info-table .info-table-description {
+	padding: 15px;
+}
+.info-table-wrap .info-table .info-table-description p {
+	margin: 0;
+	padding: 0;
+}
+
+.info-table-wrap.info-table-design02 .info-table .info-table-button {
+	padding: 0;
+}
+.info-table-wrap .info-table .info-table-button {
+	/*padding: 15px 0 15px;*/
+	position: relative;
+}
+
+.info-table-wrap .info-table-button a {
+	display: inline-block;
+	-webkit-transition: all 200ms ease-in-out;
+       -moz-transition: all 200ms ease-in-out;
+    		transition: all 200ms ease-in-out
+}
+
+.info-table-wrap .info-table-button a,
+.info-table-wrap .info-table-button a:hover,
+.info-table-wrap .info-table-button a:active,
+.info-table-wrap .info-table-button a:focus {
+	text-decoration: none;
+}
+
+.fl-module-info-table a,
+.fl-module-info-table a:hover,
+.fl-module-info-table a:focus,
+.fl-module-info-table a:active {
+	text-decoration: none;
+}
+
+
+.info-table-wrap .info-table {
+    transition: all linear 250ms;
+}
+
+/* Design 1 Csss */
+.info-table-wrap {
+	width: 100%;
+	text-align: center;
+}
+
+/* Design 6 */
+
+.info-table-design06 .info-table .info-table-icon {
+	padding: 0;	
+	position: relative;
+}
+
+.info-table-design06 .info-table .uabb-imgicon-wrap { 
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%) translateY(50%);
+    -ms-transform: translateX(-50%) translateY(50%);
+    transform: translateX(-50%) translateY(50%);
+}
+
+/* Text editor support */
+
+.uabb-module-content .uabb-text-editor *:not(a) {
+    color: inherit;
+}
+.uabb-module-content .uabb-text-editor *:not(i) {
+    font-family: inherit;
+}
+.uabb-module-content .uabb-text-editor *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-size: inherit;
+    line-height: inherit;	
+}
+.uabb-module-content .uabb-text-editor *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(strong):not(b) {
+	font-weight: inherit;
+}

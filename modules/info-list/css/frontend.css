@@ -1,0 +1,178 @@
+.uabb-info-list .uabb-info-list-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.uabb-info-list .uabb-info-list-left,
+.uabb-info-list .uabb-info-list-right {
+    float:none;
+}
+
+.uabb-info-list-content-wrapper .uabb-info-list-content h2,
+.uabb-info-list-content-wrapper .uabb-info-list-content h3,
+.uabb-info-list-content-wrapper .uabb-info-list-content h4,
+.uabb-info-list-content-wrapper .uabb-info-list-content h5,
+.uabb-info-list-content-wrapper .uabb-info-list-content h6 {
+	margin: 0;
+	padding: 0;
+}
+.uabb-info-list .uabb-info-list-wrapper > li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+    position: relative;
+}
+.uabb-info-list-content-wrapper {
+	position: relative;
+	z-index: 5;
+}
+.uabb-info-list-icon {
+	position: relative;
+	z-index: 5;	
+}
+
+/* Text editor support */
+
+.uabb-module-content .uabb-text-editor *:not(a) {
+    color: inherit;
+}
+.uabb-module-content .uabb-text-editor *:not(i) {
+    font-family: inherit;
+}
+.uabb-module-content .uabb-text-editor *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-size: inherit;
+    line-height: inherit;   
+}
+.uabb-module-content .uabb-text-editor *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(strong):not(b) {
+    font-weight: inherit;
+}
+
+.uabb-info-list-content .uabb-info-list-description p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Connector Classes */
+.uabb-info-list-connector,
+.uabb-info-list-connector-top {
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    border-width: 0 0 0 1px;
+}
+
+.uabb-info-list-connector-top {
+    top: 0;
+}
+
+.uabb-info-list-item:first-child .uabb-info-list-connector-top {
+    display: none;
+}
+
+.uabb-info-list-wrapper li:last-child .uabb-info-list-connector {
+    display: none;
+}
+
+
+.uabb-info-list-content-wrapper.uabb-info-list-left .uabb-info-list-icon,
+.uabb-info-list-content-wrapper.uabb-info-list-right .uabb-info-list-icon {
+	display: inline-block;
+    vertical-align: top;
+}
+.uabb-info-list-content-wrapper.uabb-info-list-left .uabb-info-list-content,
+.uabb-info-list-content-wrapper.uabb-info-list-right .uabb-info-list-content {
+	display: inline-block;
+}   
+
+
+/* Classe For Top Styles */
+.uabb-info-list-content-wrapper.uabb-info-list-top .uabb-info-list-icon,
+.uabb-info-list-content-wrapper.uabb-info-list-top .uabb-info-list-content {
+	display: block;
+}
+
+
+/* Alignment Left */
+.uabb-info-list-content-wrapper.uabb-info-list-left .uabb-info-list-icon {
+	margin-right: 20px;
+}
+    
+
+/* Alignment Right */
+.uabb-info-list-content-wrapper.uabb-info-list-right{
+	text-align: right;
+	direction: rtl;
+}
+.uabb-info-list-content-wrapper.uabb-info-list-right * {
+    direction: ltr;
+}
+
+.uabb-info-list-content-wrapper.uabb-info-list-right .uabb-info-list-icon {
+	margin-left: 20px;
+}
+
+/* Alignment Top */
+/* Icon Position to Top*/
+.uabb-info-list-wrapper.uabb-info-list-top {
+    display: block;
+}
+
+.uabb-info-list-wrapper.uabb-info-list-top li {
+    display: inline-block;
+}
+
+.uabb-info-list-wrapper.uabb-info-list-top li .uabb-info-list-icon {
+    float: none;
+    margin: 0 auto;
+}
+
+.uabb-info-list-wrapper.uabb-info-list-top li .uabb-info-list-content {
+    margin: 15px;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.uabb-info-list-wrapper.uabb-info-list-top li .uabb-info-list-connector {
+    height: 0;
+    left: 50%;
+    margin-left: 0;
+    position: absolute;
+    width: 100%;
+}
+.uabb-info-list-content.uabb-info-list-top {
+    margin-right: 1em;
+    padding: 0px;
+}
+
+.uabb-info-list-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+}
+
+.uabb-info-list-item .uabb-info-list-icon .uabb-icon-wrap {
+    vertical-align: middle;
+}
+
+.uabb-info-list-icon .icon{
+    display: inline-block;
+}
+
+.uabb-info-list-item .uabb-info-list-icon a {
+    box-shadow: none;
+}
+
+.uabb-info-list-wrapper.uabb-info-list-top .uabb-info-list-item {
+    width: 100%;
+    vertical-align: top;
+}
+
+@media only screen and (max-width:767px) {
+    .uabb-info-list-wrapper.uabb-info-list-top .uabb-info-list-item .uabb-info-list-connector {
+        display:none;
+    }
+}

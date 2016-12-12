@@ -1,0 +1,288 @@
+
+.uabb-slide-box-wrap {
+    display: block;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: z-index .25s ease-out;
+    -o-transition: z-index .25s ease-out;
+    transition: z-index .25s ease-out;
+}
+
+.uabb-slide-box{
+    width: 100%;
+}
+
+.uabb-slide-box-wrap.set-z-index {
+    z-index: 5;
+    -webkit-transition: z-index .15s ease-out;
+    -o-transition: z-index .15s ease-out;
+    transition: z-index .15s ease-out;
+}
+
+.uabb-slide-box-wrap .uabb-slide-box .uabb-slide-down { 
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+    width: 100%;
+    left: 0;
+    top: 0px;
+    -webkit-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    overflow: visible;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.uabb-slide-box-wrap .uabb-slide-front,
+.uabb-slide-box-wrap .uabb-slide-down {
+    text-align: left;
+}
+
+.uabb-slide-box-wrap .uabb-slide-box .uabb-slide-front {
+    -webkit-transition-property: box-shadow,-webkit-transform,background-color;
+    transition: .300s linear transform;
+    transition-property: box-shadow,transform,background-color;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.uabb-slide-box-wrap .uabb-slide-icon-left,
+.uabb-slide-box-wrap .uabb-slide-icon-left-title,
+.uabb-slide-box-wrap .uabb-slide-photo-left,
+.uabb-slide-box-wrap .uabb-slide-photo-left-title { 
+    text-align: left;
+}
+
+.uabb-slide-box-wrap .uabb-slide-icon-right,
+.uabb-slide-box-wrap .uabb-slide-icon-right-title,
+.uabb-slide-box-wrap .uabb-slide-photo-right,
+.uabb-slide-box-wrap .uabb-slide-photo-right-title { 
+    text-align: right;
+}
+
+
+/* Left of Title and Right of title */
+.uabb-slide-front-left-title-img {
+    padding-right: 15px;
+}
+
+.uabb-slide-front-right-title-img {
+    padding-left: 15px;
+}
+
+.uabb-slide-front-left-title-img,
+.uabb-slide-front-right-title-img,
+.uabb-slide-icon-left-title .uabb-slide-face-text-title,
+.uabb-slide-icon-right-title .uabb-slide-face-text-title,
+.uabb-slide-photo-left-title .uabb-slide-face-text-title,
+.uabb-slide-photo-right-title .uabb-slide-face-text-title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Top Image */
+.uabb-slide-front-above-img {
+    padding-bottom: 15px;
+}
+
+
+/* Left Side Image */
+.uabb-slide-front-left-img {
+    padding-right: 15px;
+}
+
+.uabb-slide-front-left-text,
+.uabb-slide-front-left-img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Right Side Image */
+.uabb-slide-front-right-img {
+    padding-left: 15px;
+}
+
+.uabb-slide-front-right-text,
+.uabb-slide-front-right-img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.uabb-slide-front-left-img ~ .uabb-slide-front-right-text {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+/* Margin Reset */
+.uabb-slide-box-wrap .uabb-slide-face h1,
+.uabb-slide-box-wrap .uabb-slide-face h2,
+.uabb-slide-box-wrap .uabb-slide-face h3,
+.uabb-slide-box-wrap .uabb-slide-face h4,
+.uabb-slide-box-wrap .uabb-slide-face h5,
+.uabb-slide-box-wrap .uabb-slide-face h6 {
+    margin: 0;
+    transition: all linear 300ms;
+}
+
+/* Content Transition */
+.uabb-slide-box-section-content {
+    transition: all linear 300ms;
+}
+
+.uabb-slide-box-wrap .uabb-slide-face p:last-of-type {
+    margin: 0;
+}
+
+.uabb-slide-box-wrap .uabb-slide-face {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    flex-shrink: 1;
+    justify-content: center;
+}
+ 
+
+/* Overlay for Style1 */
+.uabb-slide-box-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: all 200ms linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.uabb-slide-box-overlay .uabb-icon-wrap {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.uabb-slide-box-wrap .uabb-style1.open-slidedown .uabb-slide-box-overlay {
+    opacity: 1;
+}
+
+/* Dropdown Style for Style-2 */
+.uabb-slide-box-wrap .uabb-style2 .uabb-slide-dropdown {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+
+.uabb-slide-box-wrap .uabb-style2 .uabb-slide-dropdown .uabb-icon-wrap {
+    display: table-cell;
+    cursor: pointer;
+}
+
+.uabb-slide-box-wrap .open-slidedown .uabb-slide-down {
+    opacity: 1;
+    top: 100%;
+    height: auto;
+    -webkit-box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.07);
+            box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.07);
+    pointer-events: visible;
+}
+
+.uabb-slide-box-wrap .uabb-style2 .uabb-slide-dropdown .uabb-icon i {
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.2);    
+}
+
+.uabb-style2 .uabb-slide-front-right-text {
+    padding-bottom: 10px;
+}
+
+/* Dropdown Style for Style-3 */
+.uabb-slide-box-wrap .uabb-style3 .uabb-slide-dropdown {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.uabb-slide-box-wrap .uabb-style3 .uabb-slide-dropdown .uabb-icon-wrap {
+    cursor: pointer;
+}
+
+.uabb-slide-box-wrap .uabb-style2.open-slidedown,
+.uabb-slide-box-wrap .uabb-style3.open-slidedown {
+    z-index: 5;
+    -webkit-transition: z-index .15s ease-out;
+    -o-transition: z-index .15s ease-out;
+    transition: z-index .15s ease-out;
+}
+
+.uabb-style3 .uabb-slide-front-right-text {
+    padding-bottom: 40px;
+}
+
+/* Default Image Properties */
+.uabb-slide-box-wrap .uabb-callout-photo .uabb-photo-content img {
+    box-shadow: none;
+}
+
+.uabb-callout-button {
+    margin-top: 20px;
+}
+
+.uabb-slide-box-section-content ul,
+.uabb-slide-down-box-section-content ul {
+      margin: 0;
+      padding-left: 20px;
+}
+
+/* Pointer for Style 2 */
+.uabb-style2 .uabb-slide-front,
+.uabb-style3 .uabb-slide-front {
+    cursor: pointer;
+}
+
+@media only screen and ( max-device-width: 1024px ) { 
+    .uabb-style2 .uabb-slide-front,
+    .uabb-style3 .uabb-slide-front {
+        cursor: default;
+    } 
+}
+
+/* Text editor support */
+
+.uabb-module-content .uabb-text-editor *:not(a) {
+    color: inherit;
+}
+.uabb-module-content .uabb-text-editor *:not(i) {
+    font-family: inherit;
+}
+.uabb-module-content .uabb-text-editor *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-size: inherit;
+    line-height: inherit;   
+}
+.uabb-module-content .uabb-text-editor *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(strong):not(b) {
+    font-weight: inherit;
+}

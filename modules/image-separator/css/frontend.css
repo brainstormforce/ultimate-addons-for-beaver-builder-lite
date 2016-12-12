@@ -1,0 +1,45 @@
+/* Photo */
+.fl-module-image-separator {
+	position: absolute;
+	z-index: 3;
+	left: 50%;
+	-webkit-transform: translateX( 50% );
+	-moz-transform: translateX( 50% );
+	transform: translateX( 50% );
+	display: inline-block !important;
+}
+
+.uabb-imgseparator-wrap {
+	position: relative;
+	text-align: center;
+}
+
+.uabb-imgseparator-wrap .uabb-image {
+	line-height: 0;
+	position: relative;
+}
+.uabb-imgseparator-wrap a {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+
+}
+
+.uabb-imgseparator-wrap img {
+	display: inline;
+	height: auto !important;
+	max-width: 100%;
+	width: auto;
+	box-sizing: content-box;
+}
+.fl-builder-content .uabb-imgseparator-wrap .uabb-image-crop-circle img {
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	        border-radius: 100%;
+}
+.fl-builder-content .uabb-imgseparator-wrap .uabb-image-crop-square img {
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+	        border-radius: 0;
+}
