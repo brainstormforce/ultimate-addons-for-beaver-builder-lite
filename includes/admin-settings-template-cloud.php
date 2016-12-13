@@ -2,6 +2,8 @@
 
 	<h3 class="fl-settings-form-header"><?php _e( 'Template Cloud', 'uabb' ); ?></h3>
 
+	<div class="uabb-go-premium"><?php _e( '<a href="https://www.ultimatebeaver.com/pricing/" target="_blank">Go Premium</a> and get access to all Page Templates and Sections.', 'uabb' ); ?></div>
+
 	<form id="uabb-cloud-templates-form" action="<?php UABBBuilderAdminSettings::render_form_action( 'uabb-cloud-templates' ); ?>" method="post">
 
 		<?php if ( FLBuilderAdminSettings::multisite_support() && ! is_network_admin() ) : ?>
@@ -46,12 +48,6 @@
 							UABB_Cloud_Templates::template_html( 'sections' );
 						?>
 					</div>
-					<!-- <div id="uabb-cloud-templates-presets">
-						<?php
-							//	Print Templates HTML
-							// UABB_Cloud_Templates::template_html( 'presets' );
-						?>
-					</div> -->
 				</div>
 			</div>
 
