@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: brainstormforce
+Contributors: brainstormforce, vrundakansara
 Donate link: http://www.brainstormforce.com
 Tags: ultimate-addons, uabb,
 Requires at least: 4.6
@@ -7,7 +7,7 @@ Tested up to: 4.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Ultimate Addons is a premium extension for Beaver Builder that adds 30+ modules, 100+ templates and works on top of any Beaver Builder Package. (Free, Standard, Pro & Agency) You can use it with on any WordPress theme.
+Ultimate Addons is a free extension for Beaver Builder that adds 7 modules, and works on top of any Beaver Builder Package. (Free, Standard, Pro & Agency) You can use it with on any WordPress theme.
 
 == Description ==
 
@@ -53,17 +53,3 @@ Not at all! Ultimate Addons is built with ease and performance in mind. Furtherm
 
 = 1.0 =
 * Initial release
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
