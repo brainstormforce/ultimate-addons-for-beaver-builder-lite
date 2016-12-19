@@ -368,42 +368,12 @@ final class UABBBuilderAdminSettings {
 			$uabb['load_templates']     = false;
 			/*$uabb['uabb-colorpicker']   = false;*/
 			$uabb['uabb-live-preview']  = false;
-			$uabb['uabb-row-separator'] = false;
 
 			if( isset( $_POST['uabb-enabled-panels'] ) ) {	$uabb['load_panels'] = true;	}
 			if( isset( $_POST['uabb-live-preview'] ) ) 	 {	$uabb['uabb-live-preview'] = true;	}
 			if( isset( $_POST['uabb-load-templates'] ) ) {	$uabb['load_templates'] = true;	}
-			if( isset( $_POST['uabb-google-map-api'] ) ) {	$uabb['uabb-google-map-api'] = $_POST['uabb-google-map-api']; }
-			/*if( isset( $_POST['uabb-colorpicker'] ) ) {		$uabb['uabb-colorpicker'] = true;	}*/
-			if( isset( $_POST['uabb-row-separator'] ) ) {	$uabb['uabb-row-separator'] = true;	}
 
 			FLBuilderModel::update_admin_settings_option( '_fl_builder_uabb', $uabb, false );
-		}
-
-		if ( isset( $_POST['fl-uabb-branding-nonce'] ) && wp_verify_nonce( $_POST['fl-uabb-branding-nonce'], 'uabb-branding' ) ) {
-
-			if( isset( $_POST['uabb-plugin-name'] ) ) 			{	$uabb['uabb-plugin-name']         = wp_kses_post( $_POST['uabb-plugin-name'] );	}
-			if( isset( $_POST['uabb-plugin-short-name'] ) ) 	{	$uabb['uabb-plugin-short-name']   = wp_kses_post( $_POST['uabb-plugin-short-name'] );	}
-			if( isset( $_POST['uabb-plugin-desc'] ) ) 			{	$uabb['uabb-plugin-desc']         = wp_kses_post( $_POST['uabb-plugin-desc'] );	}
-			if( isset( $_POST['uabb-author-name'] ) ) 			{	$uabb['uabb-author-name']         = wp_kses_post( $_POST['uabb-author-name'] );	}
-			if( isset( $_POST['uabb-author-url'] ) ) 			{	$uabb['uabb-author-url']          = sanitize_text_field( $_POST['uabb-author-url'] );	}
-			if( isset( $_POST['uabb-knowledge-base-url'] ) ) 	{	$uabb['uabb-knowledge-base-url']  = sanitize_text_field( $_POST['uabb-knowledge-base-url'] );	}
-			if( isset( $_POST['uabb-contact-support-url'] ) ) 	{	$uabb['uabb-contact-support-url'] = sanitize_text_field( $_POST['uabb-contact-support-url'] );	}
-
-			/* Enable / Disable Template Cloud */
- 			$uabb['uabb-enable-template-cloud'] = false;
- 			if( isset( $_POST['uabb-enable-template-cloud'] ) ) {
- 				$uabb['uabb-enable-template-cloud'] = true;	
- 			}
-
-			if( isset( $_POST['uabb-hide-branding'] ) ) {
-				update_option( 'uabb_hide_branding', true );
-			} else {
-			    update_option( 'uabb_hide_branding', false );
-			}
-
-			//update_site_option( '_fl_builder_uabb_branding', $uabb, false );
-			FLBuilderModel::update_admin_settings_option( '_fl_builder_uabb_branding', $uabb, false );
 		}
 
 		if ( isset( $_POST['fl-uabb-modules-nonce'] ) && wp_verify_nonce( $_POST['fl-uabb-modules-nonce'], 'uabb-modules' ) ) {

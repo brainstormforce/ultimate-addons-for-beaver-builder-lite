@@ -12,13 +12,10 @@
 				$branding_name       = BB_Ultimate_Addon_Helper::get_builder_uabb_branding( 'uabb-plugin-name' );
 				$branding_short_name = BB_Ultimate_Addon_Helper::get_builder_uabb_branding( 'uabb-plugin-short-name' );
 
-				$is_load_templates = $is_load_panels = $uabb_live_preview = $uabb_google_map_api = $uabb_colorpicker = $uabb_row_separator = '';
+				$is_load_templates = $is_load_panels = $uabb_live_preview = '';
 				if( is_array($uabb) ) {
 					$is_load_panels      = ( array_key_exists( 'load_panels', $uabb ) && $uabb['load_panels'] == 1 )  ? ' checked' : '';
 					$uabb_live_preview   = ( array_key_exists( 'uabb-live-preview', $uabb ) && $uabb['uabb-live-preview'] == 1 )  ? ' checked' : '';
-					$uabb_google_map_api = ( array_key_exists( 'uabb-google-map-api', $uabb ) )  ? $uabb['uabb-google-map-api'] : '';
-					/*$uabb_colorpicker    = ( array_key_exists( 'uabb-colorpicker', $uabb ) && $uabb['uabb-colorpicker'] == 1 )  ? ' checked' : '';*/
-					$uabb_row_separator  = ( array_key_exists( 'uabb-row-separator', $uabb ) && $uabb['uabb-row-separator'] == 1 )  ? ' checked' : '';
 				} ?>
 
 			<!-- Load Panels -->
