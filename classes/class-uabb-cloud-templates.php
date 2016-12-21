@@ -34,9 +34,9 @@ if( !class_exists('UABB_Cloud_Templates') ) {
 		function __construct() {
 
 			self::$cloud_url = array(
-				'page-templates' => 'http://templates.ultimatebeaver.com/wp-json/uabb-light/v1/template/layouts/',
-				'sections'       => 'http://templates.ultimatebeaver.com/wp-json/uabb-light/v1/template/sections/',
-				'presets'        => 'http://templates.ultimatebeaver.com/wp-json/uabb-light/v1/template/presets/',
+				'page-templates' => 'https://templates.ultimatebeaver.com/wp-json/uabb-lite/v1/template/layouts/',
+				'sections'       => 'http://templates.ultimatebeaver.com/wp-json/uabb-lite/v1/template/sections/',
+				'presets'        => 'http://templates.ultimatebeaver.com/wp-json/uabb-lite/v1/template/presets/',
 			);
 
 			add_action( 'wp_ajax_uabb_cloud_dat_file_fetch', array( $this, 'fetch_cloud_templates' ) );

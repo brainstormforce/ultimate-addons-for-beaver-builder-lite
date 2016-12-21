@@ -33,6 +33,10 @@ class UABB_Init {
 			// Enqueue scripts
 			add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ), 100 );
 
+			$basename = plugin_basename( BB_ULTIMATE_ADDON_FILE );
+			// Filters
+			add_filter( 'plugin_action_links_' . $basename, array( $this, 'uabb_render_plugin_action_links' ) );
+
 		} else {
 
 			// disable UABB activation ntices in admin panel
@@ -43,6 +47,13 @@ class UABB_Init {
 			add_action( 'network_admin_notices', array( $this, 'admin_notices' ) );
 		}
 
+	}
+
+	function uabb_render_plugin_action_links( $actions ) {
+
+		$actions[] = '<a href="' . BB_ULTIMATE_ADDON_UPGRADE_URL . '" style="color:#3db634;" target="_blank">' . _x( 'Upgrade', 'Plugin action link label.', 'uabb' ) . '</a>';
+
+		return $actions;
 	}
 
 	function includes() {

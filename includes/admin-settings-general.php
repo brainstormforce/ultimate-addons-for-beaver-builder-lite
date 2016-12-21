@@ -1,6 +1,6 @@
 <div id="fl-uabb-form" class="fl-settings-form uabb-fl-settings-form">
 
-	<h3 class="fl-settings-form-header"><?php _e( 'General Settings', 'uabb' ); ?></h3>
+	<h3 class="fl-settings-form-header"><?php _e( 'General Settings', 'uabb' ); ?><span class="uabb-builder-upgrade-button fl-builder-button"><a href="<?php echo BB_ULTIMATE_ADDON_UPGRADE_URL; ?>" target="_blank"><?php _e( 'Upgrade Today', 'uabb' ); ?><span class="dashicons dashicons-share-alt2"></span></a></span></h3>
 
 	<form id="uabb-form" action="<?php UABBBuilderAdminSettings::render_form_action( 'uabb' ); ?>" method="post">
 

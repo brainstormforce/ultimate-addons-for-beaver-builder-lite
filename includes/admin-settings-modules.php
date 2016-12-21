@@ -1,48 +1,40 @@
 <div id="fl-uabb-modules-form" class="fl-settings-form uabb-modules-fl-settings-form">
 
-	<h3 class="fl-settings-form-header"><?php _e('Enabled Modules', 'uabb'); ?></h3>
+	<h3 class="fl-settings-form-header"><?php echo sprintf( __( '%s Modules', 'uabb' ), UABB_PREFIX ); ?><span class="uabb-builder-upgrade-button fl-builder-button"><a href="<?php echo BB_ULTIMATE_ADDON_UPGRADE_URL; ?>" target="_blank"><?php _e( 'Unlock All Modules', 'uabb' ); ?><span class="dashicons dashicons-share-alt2"></span></a></span></h3>
 
-	<form id="uabb-modules-form" action="<?php UABBBuilderAdminSettings::render_form_action( 'uabb-modules' ); ?>" method="post">
-
+	<div id="uabb-modules-form" class="uabb-lite-modules" action="<?php UABBBuilderAdminSettings::render_form_action( 'uabb-modules' ); ?>" method="post">
 		<div class="fl-settings-form-content">
-
-			<p><?php _e('Check or uncheck modules below to enable or disable them.', 'uabb'); ?></p>
-			<?php
-
-			$modules_array   = BB_Ultimate_Addon_Helper::get_all_modules();
-			$enabled_modules = BB_Ultimate_Addon_Helper::get_builder_uabb_modules();
-			$checked     	 = in_array('all', $enabled_modules) ? 'checked' : '';
-
-			unset( $modules_array['image-icon'] );
-			unset( $modules_array['uabb-separator' ] );
-			unset( $modules_array['uabb-button' ] );
-			
-			?>
-			<label>
-				<input class="uabb-module-all-cb" type="checkbox" name="uabb-modules[all]" value="all" <?php echo $checked; ?> />
-				<?php _ex( 'All', 'Plugin setup page: Modules.', 'uabb' ); ?>
-			</label>
-			
-			<h3><?php echo sprintf( __( '%s Modules', 'uabb' ), UABB_PREFIX ); ?></h3>
+			<?php $modules_array   = BB_Ultimate_Addon_Helper::get_all_modules(); ?>
 			<?php foreach ( $modules_array as $slug => $name ) : ?>
-					
-					<?php 
-						$checked = '';
-						if ( array_key_exists( $slug, $enabled_modules ) && $enabled_modules[$slug] != 'false' ){
-							$checked = 'checked';
-						}
-					?>
-					<p>
-						<label>
-							<input class="uabb-module-cb" type="checkbox" name="uabb-modules[<?php echo $slug; ?>]" value="<?php echo $slug; ?>" <?php echo $checked; ?> />
-							<?php echo $name; ?>
-						</label>
-					</p>
+					<p><label><?php echo $name; ?></label></p>
 			<?php endforeach; ?>
 		</div>
-		<p class="submit">
-			<input type="submit" name="update" class="button-primary" value="<?php esc_attr_e( 'Save Module Settings', 'uabb' ); ?>" />
-			<?php wp_nonce_field('uabb-modules', 'fl-uabb-modules-nonce'); ?>
-		</p>
-	</form>
+	</div>
+	<div class="uabb-premium-modules">
+		<p><label>Spacer / Gap</label></p>
+        <p><label>Ribbon</label></p>
+        <p><label>Image Separator</label></p>
+        <p><label>Simple Separator</label></p>
+        <p><label>Info Table</label></p>
+        <p><label>Info List</label></p>
+        <p><label>Slide Box</label></p>
+        <p><label>Flip Box</label></p>
+        <p><label>Image / Icon</label></p>
+        <p><label>Button</label></p>
+        <p><label>Spacer / Gap</label></p>
+        <p><label>Ribbon</label></p>
+        <p><label>Image Separator</label></p>
+        <p><label>Simple Separator</label></p>
+        <p><label>Info Table</label></p>
+        <p><label>Info List</label></p>
+        <p><label>Slide Box</label></p>
+        <p><label>Flip Box</label></p>
+        <p><label>Image / Icon</label></p>
+        <p><label>Button</label></p>
+        <p><label>Spacer / Gap</label></p>
+        <p><label>Ribbon</label></p>
+        <p><label>Image Separator</label></p>
+        <p><label>Simple Separator</label></p>
+        <p><label>Info Table</label></p>
+	</div>
 </div>

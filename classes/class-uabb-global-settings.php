@@ -43,12 +43,12 @@ final class UABBGlobalSetting {
 		$uabb = BB_Ultimate_Addon_Helper::get_builder_uabb_branding();
 		if ( is_array( $uabb ) ) {
 			$uabb_knowledge_base_url             = ( array_key_exists( 'uabb-knowledge-base-url' , $uabb ) && $uabb['uabb-knowledge-base-url' ] != ''  ) ? $uabb['uabb-knowledge-base-url' ] : 'https://www.ultimatebeaver.com/docs/';
-			$uabb_contact_support_url            = ( array_key_exists( 'uabb-contact-support-url' , $uabb ) && $uabb['uabb-contact-support-url' ] != '' ) ? $uabb['uabb-contact-support-url' ] : 'https://store.brainstormforce.com/support/';
+			$uabb_contact_support_url            = ( array_key_exists( 'uabb-contact-support-url' , $uabb ) && $uabb['uabb-contact-support-url' ] != '' ) ? $uabb['uabb-contact-support-url' ] : 'https://www.ultimatebeaver.com/contact/';
 			$js_strings['uabbKnowledgeBaseUrl']  = $uabb_knowledge_base_url;
 			$js_strings['uabbContactSupportUrl'] = $uabb_contact_support_url;
 		}else{
 			$js_strings['uabbKnowledgeBaseUrl']  = 'https://www.ultimatebeaver.com/docs/';
-			$js_strings['uabbContactSupportUrl'] = 'https://store.brainstormforce.com/support/';
+			$js_strings['uabbContactSupportUrl'] = 'https://www.ultimatebeaver.com/contact/';
 		}
 		return $js_strings;
 	}
