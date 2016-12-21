@@ -75,27 +75,27 @@
     -webkit-box-shadow: inset 0 1px 0 rgba(255,177,82,.5), 0 1px 0 rgba(0,0,0,.15);
     box-shadow: inset 0 1px 0 rgba(255,177,82,.5), 0 1px 0 rgba(0,0,0,.15);
     color: #fff!important;
-    vertical-align: top;
     display: inline-block;
     text-decoration: none;
-    font-size: 13px!important;
-    line-height: 13px!important;
+    font-size: 13px;
+    line-height: 26px;
     height: 28px;
-    padding: 7px 10px;
+    padding: 0 10px 1px;
     cursor: pointer;
     border-width: 1px;
     border-style: solid;
-    -webkit-border-radius: 3px;
     -webkit-appearance: none;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     white-space: nowrap;
-    -webkit-box-sizing: border-box!important;
-    -moz-box-sizing: border-box!important;
-    box-sizing: border-box!important;
-    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
 }
 
-.fl-settings-form-header .uabb-builder-upgrade-button span {
+.fl-settings-form-header .uabb-builder-upgrade-button i {
     color: #f4d1a7;
     margin: 0 0 0 6px;
 }
@@ -178,20 +178,23 @@
     width: 25%;
 }
 
+.uabb-premium-modules p label {
+    display: block;
+    padding: 7px 15px;
+}
+.uabb-premium-modules p {
+    width: 31.33%;
+    float: left;
+    margin: 10px 2% 0 0;
+    box-sizing: border-box;
+    background: #f7f7f7;
+}
+
 .uabb-premium-modules {
     float: left;
     width: 75%;
 }
 
-.uabb-premium-modules ul li {
-    width: 33.33%;
-    float: left;
-}
-
-.uabb-premium-modules p {
-    width: 33.33%;
-    float: left;
-}
 
 /* Settings Forms
 ----------------------------------------------------------- */
