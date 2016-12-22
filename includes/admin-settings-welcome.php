@@ -53,43 +53,7 @@ $docs_url          = 'http://kb.wpbeaverbuilder.com/';
 			</div>
 
 			<div class="fl-welcome-col">
-				<img class="fl-welcome-img" src="<?php echo FL_BUILDER_URL; ?>img/screenshot-getting-started.jpg" alt="">
-			</div>
-
-		</div>
-
-		<hr>
-
-		<div class="fl-welcome-col-wrap">
-
-			<div class="fl-welcome-col">
-
-				<h4><?php _e('What\'s New in Ultimate Addon for Beaver Builder 1.9 Shasta', 'fl-builder'); ?></h4>
-
-				<p><?php _e('Ultimate Addon for Beaver Builder 1.9 is out and it has some epic new features:', 'fl-builder'); ?></p>
-
-				<ul>
-					<li><?php _e('The ability to drag, drop and nest columns.', 'fl-builder'); ?></li>
-					<li><?php _e('A revamped editor with more accurate dragging and dropping.', 'fl-builder'); ?></li>
-					<li><?php _e('Responsive settings for margins, paddings and borders.', 'fl-builder'); ?></li>
-					<li><?php _e('New content page templates available in the template selector.', 'fl-builder'); ?></li>
-				</ul>
-
-				<p><?php printf( __('There\'s a whole lot more, too! Read about everything else on our <a href="%s" target="_blank">update post</a> or <a href="%s" target="_blank">change logs</a>.', 'fl-builder'), $blog_post_url, $change_logs_url ); ?></p>
-
-			</div>
-
-			<div class="fl-welcome-col">
-
-				<h4><?php _e('Need Some Help?', 'fl-builder');  ?></h4>
-
-				<p><?php _e('We take pride in offering outstanding support.', 'fl-builder');  ?></p>
-
-				<p><?php _e('The fastest way to find an answer to a question is to see if someone\'s already answered it!', 'fl-builder');  ?></p>
-
-				<p><?php printf( __('For that, check our <a href="%s" target="_blank">Knowledge Base</a>, <a href="%s" target="_blank">FAQ page</a>, or search our legacy <a href="%s" target="_blank">support forum.</a>', 'fl-builder'), $docs_url, $faqs_url, $forums_url );  ?></p>
-
-				<p><?php printf( __('If you can\'t find an answer, consider upgrading to a premium version of Ultimate Addon for Beaver Builder. Our expert support team is waiting to answer your questions and help you build your website. <a href="%s" target="_blank">Learn More</a>.', 'fl-builder'), $upgrade_url ); ?></p>
+				<img class="fl-welcome-img" src="<?php echo BB_ULTIMATE_ADDON_URL; ?>/assets/images/welcome-uabb.png" alt="">
 			</div>
 
 		</div>
