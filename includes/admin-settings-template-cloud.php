@@ -1,6 +1,6 @@
 <div id="fl-uabb-cloud-templates-form" class="fl-settings-form uabb-cloud-templates-fl-settings-form">
 
-	<h3 class="fl-settings-form-header"><?php _e( 'Template Cloud', 'uabb' ); ?><span class="uabb-builder-upgrade-button fl-builder-button"><a href="<?php echo BB_ULTIMATE_ADDON_UPGRADE_URL; ?>" target="_blank"><?php _e( 'Unlock All Templates', 'uabb' ); ?><i class="dashicons dashicons-share-alt2"></i></a></span></h3>
+	<h3 class="fl-settings-form-header"><?php _e( 'Template Cloud', 'uabb' ); ?></h3>
 
 	<div class="uabb-go-premium"><?php _e( '<a href="' . BB_ULTIMATE_ADDON_UPGRADE_URL . '" target="_blank">Go Premium</a> and get access to all Page Templates and Sections.', 'uabb' ); ?></div>
 
