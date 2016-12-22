@@ -51,7 +51,7 @@ class UABB_Init {
 
 	function uabb_render_plugin_action_links( $actions ) {
 
-		$actions[] = '<a href="' . BB_ULTIMATE_ADDON_UPGRADE_URL . '" style="color:#3db634;" target="_blank">' . _x( 'Upgrade', 'Plugin action link label.', 'uabb' ) . '</a>';
+		$actions[] = '<a href="' . BB_ULTIMATE_ADDON_UPGRADE_URL . '" style="color:#3db634;" title="Upgrade" target="_blank">' . _x( 'Upgrade', 'Plugin action link label.', 'uabb' ) . '</a>';
 
 		return $actions;
 	}

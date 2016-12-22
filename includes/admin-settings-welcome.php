@@ -44,11 +44,11 @@ $docs_url          = 'http://kb.wpbeaverbuilder.com/';
 				<p><?php _e('There\'s a wonderful community of "Ultimate Addon for Beaver Builders" out there and we\'d love it if <em>you</em> joined us!', 'fl-builder'); ?></p>
 
 				<ul>
-					<li><?php _e( '<a href="https://www.wpbeaverbuilder.com/go/bb-facebook" target="_blank">Join the Ultimate Addon for Beaver Builder\'s Group on Facebook</a>', 'fl-builder' ); ?></li>
+					<li><?php _e( '<a href="' . BB_ULTIMATE_ADDON_FB_URL . '" target="_blank">Join the Ultimate Addon for Beaver Builder\'s Group on Facebook</a>', 'fl-builder' ); ?></li>
 					<li><?php _e( '<a href="https://www.wpbeaverbuilder.com/go/bb-slack" target="_blank">Join the Ultimate Addon for Beaver Builder\'s Group on Slack</a>', 'fl-builder'); ?></li>
 				</ul>
 
-				<p><?php _e('Come by and share a project, ask a question, or just say hi! For news about new features and updates, like our <a href="https://www.facebook.com/wpbeaverbuilder/" target="_blank">Facebook Page</a> or follow us <a href="https://twitter.com/beaverbuilder" target="_blank">on Twitter</a>.', 'fl-builder'); ?></p>
+				<p><?php _e('Come by and share a project, ask a question, or just say hi! For news about new features and updates, like our <a href="' . BB_ULTIMATE_ADDON_FB_URL . '" target="_blank">Facebook Page</a> or follow us <a href="' . BB_ULTIMATE_ADDON_TWITTER_URL . '" target="_blank">on Twitter</a>.', 'fl-builder'); ?></p>
 
 			</div>
 

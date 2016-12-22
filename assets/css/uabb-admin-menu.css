@@ -50,7 +50,10 @@
     width: 100%;
 }
 
-.fl-settings-nav a[href="#uabb-premium"]:after {
+.fl-settings-nav a[href="#uabb-premium"]:after,
+.uabb-premium-modules .uabb-premium-flyout-red label:after,
+.uabb-premium-modules .uabb-premium-flyout-purple label:after,
+.uabb-premium-modules .uabb-premium-flyout-green label:after {
     color: #fff;
     font-size: 0.7em;
     font-weight: 600;
@@ -65,6 +68,18 @@
     background-color: #f7951e;
     text-transform: uppercase !important;
     border-radius: 2px;
+    content: attr(title);
+}
+
+.uabb-premium-modules a,
+.uabb-premium-modules a:active,
+.uabb-premium-modules a:hover,
+.uabb-premium-modules a:focus {
+    text-decoration: none;
+    /*color: #444;*/
+}
+
+.fl-settings-nav a[href="#uabb-premium"]:after {
     content: "Upgrade";
 }
 
@@ -174,8 +189,7 @@
 }
 
 .uabb-lite-modules {
-    float: left;
-    width: 25%;
+    margin-bottom: 25px;
 }
 
 .uabb-premium-modules p label {
@@ -191,8 +205,20 @@
 }
 
 .uabb-premium-modules {
-    float: left;
-    width: 75%;
+    /*float: left;
+    width: 100%;*/
+}
+
+.uabb-premium-modules .uabb-premium-flyout-red label:after {
+    background: #e74c3c;
+}
+
+.uabb-premium-modules .uabb-premium-flyout-purple label:after {
+    background: #9b59b6;
+}
+
+.uabb-premium-modules .uabb-premium-flyout-green label:after {
+    background: #2ecc71;
 }
 
 

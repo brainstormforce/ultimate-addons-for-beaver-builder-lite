@@ -20,6 +20,9 @@ if( !class_exists( "BB_Ultimate_Addon" ) ) {
 	define('BB_ULTIMATE_ADDON_FILE', trailingslashit(dirname(__FILE__)) . 'bb-ultimate-addon.php');
 	define('BB_ULTIMATE_ADDON_LITE', true);
 	define('BB_ULTIMATE_ADDON_UPGRADE_URL', 'https://www.ultimatebeaver.com/pricing/');
+	define('BB_ULTIMATE_ADDON_FB_URL', 'https://www.facebook.com/groups/1229431503736174/');
+	define('BB_ULTIMATE_ADDON_TWITTER_URL', 'https://twitter.com/WeBrainstorm');
+	
 
 	class BB_Ultimate_Addon {
 
@@ -51,8 +54,14 @@ if( !class_exists( "BB_Ultimate_Addon" ) ) {
 
 			// Force check graupi bundled products
 			update_site_option( 'bsf_force_check_extensions', true );
+			update_option( 'uabb_lite_redirect', true );
 		}
 
+		/*
+		* Checks website memory limit
+		*
+		* @Since 1.0
+		*/
 		function check_memory_limit() {
 
 			$memory_limit  = ini_get('memory_limit'); 		//	Total Memory
