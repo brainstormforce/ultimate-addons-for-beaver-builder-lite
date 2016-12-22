@@ -17,11 +17,11 @@ if( !class_exists( "BB_Ultimate_Addon" ) ) {
 	define( 'BB_ULTIMATE_ADDON_URL', plugins_url( '/', __FILE__ ) );
 	define( 'BB_ULTIMATE_ADDON_LITE_VERSION', '1.0.0' );
 	define( 'BSF_REMOVE_uabb_FROM_REGISTRATION_LISTING', true );
-	define('BB_ULTIMATE_ADDON_FILE', trailingslashit(dirname(__FILE__)) . 'bb-ultimate-addon.php');
-	define('BB_ULTIMATE_ADDON_LITE', true);
-	define('BB_ULTIMATE_ADDON_UPGRADE_URL', 'https://www.ultimatebeaver.com/pricing/');
-	define('BB_ULTIMATE_ADDON_FB_URL', 'https://www.facebook.com/groups/1229431503736174/');
-	define('BB_ULTIMATE_ADDON_TWITTER_URL', 'https://twitter.com/WeBrainstorm');
+	define( 'BB_ULTIMATE_ADDON_FILE', trailingslashit( dirname( __FILE__ ) ) . 'bb-ultimate-addon.php' );
+	define( 'BB_ULTIMATE_ADDON_LITE', true );
+	define( 'BB_ULTIMATE_ADDON_UPGRADE_URL', 'https://www.ultimatebeaver.com/pricing/' );
+	define( 'BB_ULTIMATE_ADDON_FB_URL', 'https://www.facebook.com/groups/1229431503736174/' );
+	define( 'BB_ULTIMATE_ADDON_TWITTER_URL', 'https://twitter.com/WeBrainstorm' );
 	
 
 	class BB_Ultimate_Addon {
