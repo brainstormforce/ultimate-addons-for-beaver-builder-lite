@@ -10,15 +10,25 @@
 
 		</p>
 
-		<p><?php _e('The Ultimate Addon for Beaver Builder comes with a number of custom modules to enhance your experience of website creation with Beaver Builder. Inheriting the drag & drop functionality and the performance oriented objective of Beaver Builder, the Ultimate Addons are now the best addons to be used with the page builder.', 'uabb'); ?>
+		<div class="fl-welcome-col-wrap">
 
-		</p>
+			<div class="fl-welcome-col">
 
-		<p><?php printf( __('With <a href="%s" target="_blank">regular updates</a>, <a href="%s" target="_blank">helpful tutorials</a>, we promise to make website building an ultimate journey for you!', 'uabb' ), 'https://www.ultimatebeaver.com/blog/?utm_source=uabb-dashboard&amp;utm_campaign=Lite&amp;utm_medium=welcome-page', 'https://www.ultimatebeaver.com/docs/?utm_source=uabb-dashboard&amp;utm_campaign=Lite&amp;utm_medium=welcome-page' ); ?></p>
+				<p><?php _e('The Ultimate Addon for Beaver Builder comes with a number of custom modules to enhance your experience of website creation with Beaver Builder. Inheriting the drag & drop functionality and the performance oriented objective of Beaver Builder, the Ultimate Addons are now the best addons to be used with the page builder.', 'uabb'); ?>
+				</p>
 
-		<p><?php _e( 'Join our Community!', 'uabb' ); ?>
+				<p><?php printf( __('With <a href="%s" target="_blank">regular updates</a>, <a href="%s" target="_blank">helpful tutorials</a>, we promise to make website building an ultimate journey for you!', 'uabb' ), 'https://www.ultimatebeaver.com/blog/?utm_source=uabb-dashboard&amp;utm_campaign=Lite&amp;utm_medium=welcome-page', 'https://www.ultimatebeaver.com/docs/?utm_source=uabb-dashboard&amp;utm_campaign=Lite&amp;utm_medium=welcome-page' ); ?></p>
 
-		<p><?php printf( __('Want to connect with us to know more? Or have some suggestions we can take forward? <a href="%s" target="_blank">Join our Facebook community</a>, where a number of professional and newbie Beavers share their views and suggestions for the Ultimate Addons.', 'uabb'), BB_ULTIMATE_ADDON_FB_URL ); ?></p>
+				<p><?php _e( 'Join our Community!', 'uabb' ); ?></p>
+
+				<p><?php printf( __('Want to connect with us to know more? Or have some suggestions we can take forward? <a href="%s" target="_blank">Join our Facebook community</a>, where a number of professional and newbie Beavers share their views and suggestions for the Ultimate Addons.', 'uabb'), BB_ULTIMATE_ADDON_FB_URL ); ?></p>
+
+			</div>
+
+			<div class="fl-welcome-col">
+				<img class="fl-welcome-img" src="<?php echo BB_ULTIMATE_ADDON_URL; ?>/assets/images/welcome-uabb.jpg" alt="">
+			</div>
+		</div>
 
 	</div>
 </div>
