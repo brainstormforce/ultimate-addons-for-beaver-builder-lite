@@ -1,98 +1,24 @@
-<?php
-	
-function fl_welcome_utm( $campaign ) {
-	return array(
-		'utm_medium'   => true === BB_ULTIMATE_ADDON_LITE ? 'bb-lite' : 'bb-pro',
-		'utm_source'   => 'welcome-settings-page',
-		'utm_campaign' => $campaign
-	);
-}
-
-$blog_post_url     = FLBuilderModel::get_store_url( 'beaver-builder-1-9-shasta', fl_welcome_utm('settings-welcome-blog-post' ) );
-$change_logs_url   = FLBuilderModel::get_store_url( 'change-logs', fl_welcome_utm( 'settings-welcome-change-logs' ) );
-$upgrade_url       = FLBuilderModel::get_store_url( '', fl_welcome_utm( 'settings-welcome-upgrade' ) );
-$support_url       = FLBuilderModel::get_store_url( 'beaver-builder-support', fl_welcome_utm( 'settings-welcome-support' ) );
-$faqs_url          = FLBuilderModel::get_store_url( 'frequently-asked-questions', fl_welcome_utm( 'settings-welcome-faqs' ) );
-$forums_url        = FLBuilderModel::get_store_url( 'support', fl_welcome_utm( 'settings-welcome-forums' ) );
-$docs_url          = 'http://kb.wpbeaverbuilder.com/';
-	
-?>
 <div id="fl-uabb-welcome-form" class="fl-settings-form">
 
-	<h3 class="fl-settings-form-header"><?php _e('Welcome to Ultimate Addon for Beaver Builder!', 'fl-builder'); ?></h3>
+	<h3 class="fl-settings-form-header"><?php _e('Welcome to the Ultimate Addon for Beaver Builder!', 'uabb'); ?></h3>
 
 	<div class="fl-settings-form-content fl-welcome-page-content">
 
-		<p><?php _e('Thank you for choosing Ultimate Addon for Beaver Builder and welcome to the colony! Find some helpful information below. Also, to the left are the Page Builder settings options.', 'fl-builder'); ?>
+		<p><?php _e('Thank you for choosing the Ultimate Addons for Beaver Builder and welcome on board! We promise to take you through an ultimate journey of website building. You’ll find a few settings in the column on the left. Need some more time-saving and advanced modules to play with? You can avail all of them with 200+ page & section templates and dedicated support from our team.', 'uabb'); ?></p>
 
-			<?php printf( __('For more time-saving features and access to our expert support team, <a href="%s" target="_blank">upgrade today</a>.', 'fl-builder'), $upgrade_url ); ?>
+		<p><?php printf( __('For more time-saving features and access to our expert support team, <a href="%s" target="_blank">upgrade now!</a>.With regular updates, helpful tutorials, we promise to make website building an ultimate journey for you!', 'uabb'), BB_ULTIMATE_ADDON_UPGRADE_URL ); ?>
 
 		</p>
 
-		<h4><?php _e('Getting Started - Building your first page.', 'fl-builder'); ?></h4>
+		<p><?php _e('The Ultimate Addon for Beaver Builder comes with a number of custom modules to enhance your experience of website creation with Beaver Builder. Inheriting the drag & drop functionality and the performance oriented objective of Beaver Builder, the Ultimate Addons are now the best addons to be used with the page builder.', 'uabb'); ?>
 
-		<div class="fl-welcome-col-wrap">
+		</p>
 
-			<div class="fl-welcome-col">
+		<p><?php printf( __('With <a href="%s" target="_blank">regular updates</a>, <a href="%s" target="_blank">helpful tutorials</a>, we promise to make website building an ultimate journey for you!', 'uabb' ), 'https://www.ultimatebeaver.com/blog/?utm_source=uabb-dashboard&amp;utm_campaign=Lite&amp;utm_medium=welcome-page', 'https://www.ultimatebeaver.com/docs/?utm_source=uabb-dashboard&amp;utm_campaign=Lite&amp;utm_medium=welcome-page' ); ?></p>
 
-				<p><a href="<?php echo admin_url(); ?>post-new.php?post_type=page" class="fl-welcome-big-link"><?php _e('Pages → Add New', 'fl-builder'); ?></a></p>
+		<p><?php _e( 'Join our Community!', 'uabb' ); ?>
 
-				<p><?php _e('Ready to start building? Add a new page and jump into Ultimate Addon for Beaver Builder by clicking the Page Builder tab shown on the image.', 'fl-builder'); ?></p>
-
-				<h4><?php _e('Join the Community', 'fl-builder'); ?></h4>
-
-				<p><?php _e('There\'s a wonderful community of "Ultimate Addon for Beaver Builders" out there and we\'d love it if <em>you</em> joined us!', 'fl-builder'); ?></p>
-
-				<ul>
-					<li><?php _e( '<a href="' . BB_ULTIMATE_ADDON_FB_URL . '" target="_blank">Join the Ultimate Addon for Beaver Builder\'s Group on Facebook</a>', 'fl-builder' ); ?></li>
-					<li><?php _e( '<a href="https://www.wpbeaverbuilder.com/go/bb-slack" target="_blank">Join the Ultimate Addon for Beaver Builder\'s Group on Slack</a>', 'fl-builder'); ?></li>
-				</ul>
-
-				<p><?php _e('Come by and share a project, ask a question, or just say hi! For news about new features and updates, like our <a href="' . BB_ULTIMATE_ADDON_FB_URL . '" target="_blank">Facebook Page</a> or follow us <a href="' . BB_ULTIMATE_ADDON_TWITTER_URL . '" target="_blank">on Twitter</a>.', 'fl-builder'); ?></p>
-
-			</div>
-
-			<div class="fl-welcome-col">
-				<img class="fl-welcome-img" src="<?php echo FL_BUILDER_URL; ?>img/screenshot-getting-started.jpg" alt="">
-			</div>
-
-		</div>
-
-		<hr>
-
-		<div class="fl-welcome-col-wrap">
-
-			<div class="fl-welcome-col">
-
-				<h4><?php _e('What\'s New in Ultimate Addon for Beaver Builder 1.9 Shasta', 'fl-builder'); ?></h4>
-
-				<p><?php _e('Ultimate Addon for Beaver Builder 1.9 is out and it has some epic new features:', 'fl-builder'); ?></p>
-
-				<ul>
-					<li><?php _e('The ability to drag, drop and nest columns.', 'fl-builder'); ?></li>
-					<li><?php _e('A revamped editor with more accurate dragging and dropping.', 'fl-builder'); ?></li>
-					<li><?php _e('Responsive settings for margins, paddings and borders.', 'fl-builder'); ?></li>
-					<li><?php _e('New content page templates available in the template selector.', 'fl-builder'); ?></li>
-				</ul>
-
-				<p><?php printf( __('There\'s a whole lot more, too! Read about everything else on our <a href="%s" target="_blank">update post</a> or <a href="%s" target="_blank">change logs</a>.', 'fl-builder'), $blog_post_url, $change_logs_url ); ?></p>
-
-			</div>
-
-			<div class="fl-welcome-col">
-
-				<h4><?php _e('Need Some Help?', 'fl-builder');  ?></h4>
-
-				<p><?php _e('We take pride in offering outstanding support.', 'fl-builder');  ?></p>
-
-				<p><?php _e('The fastest way to find an answer to a question is to see if someone\'s already answered it!', 'fl-builder');  ?></p>
-
-				<p><?php printf( __('For that, check our <a href="%s" target="_blank">Knowledge Base</a>, <a href="%s" target="_blank">FAQ page</a>, or search our legacy <a href="%s" target="_blank">support forum.</a>', 'fl-builder'), $docs_url, $faqs_url, $forums_url );  ?></p>
-
-				<p><?php printf( __('If you can\'t find an answer, consider upgrading to a premium version of Ultimate Addon for Beaver Builder. Our expert support team is waiting to answer your questions and help you build your website. <a href="%s" target="_blank">Learn More</a>.', 'fl-builder'), $upgrade_url ); ?></p>
-			</div>
-
-		</div>
+		<p><?php printf( __('Want to connect with us to know more? Or have some suggestions we can take forward? <a href="%s" target="_blank">Join our Facebook community</a>, where a number of professional and newbie Beavers share their views and suggestions for the Ultimate Addons.', 'uabb'), BB_ULTIMATE_ADDON_FB_URL ); ?></p>
 
 	</div>
 </div>
