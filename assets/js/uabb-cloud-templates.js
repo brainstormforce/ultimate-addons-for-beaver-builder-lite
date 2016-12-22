@@ -177,7 +177,7 @@ jQuery( function( $ ) {
 	});
 
 	jQuery('body').on('click', '.uabb-template-actions', function (event) {
-		window.open( 'https://www.ultimatebeaver.com/pricing/', '_blank' );
+		window.open( 'https://www.ultimatebeaver.com/pricing/?utm_source=uabb-dashboard&utm_campaign=uabblite_upgrade&utm_medium=upgrade-button', '_blank' );
 	});
 
 
@@ -238,7 +238,7 @@ jQuery( function( $ ) {
 
 					break;
 				case 'upgrade' :
-					window.open( 'https://www.ultimatebeaver.com/pricing/', '_blank' );
+					window.open( 'https://www.ultimatebeaver.com/pricing/?utm_source=uabb-dashboard&utm_campaign=uabblite_upgrade&utm_medium=upgrade-button', '_blank' );
 					return true;
 					break;
 			}
