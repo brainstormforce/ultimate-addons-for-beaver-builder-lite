@@ -20,7 +20,7 @@ if( !class_exists( "BB_Ultimate_Addon" ) ) {
 	define( 'BB_ULTIMATE_ADDON_FILE', trailingslashit( dirname( __FILE__ ) ) . 'bb-ultimate-addon.php' );
 	define( 'BB_ULTIMATE_ADDON_LITE', true );
 	define( 'BB_ULTIMATE_ADDON_UPGRADE_URL', 'https://www.ultimatebeaver.com/pricing/' );
-	define( 'BB_ULTIMATE_ADDON_FB_URL', 'https://www.facebook.com/groups/1229431503736174/' );
+	define( 'BB_ULTIMATE_ADDON_FB_URL', 'https://www.brainstormforce.com/go/uabb-facebook-group/?utm_source=uabb-dashboard&utm_campaign=Lite&utm_medium=FB' );
 	define( 'BB_ULTIMATE_ADDON_TWITTER_URL', 'https://twitter.com/WeBrainstorm' );
 	
 

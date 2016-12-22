@@ -10,7 +10,7 @@
 
 			<div class="fl-welcome-col">
 
-				<p><?php printf( __('For more time-saving features and access to our expert support team, <a href="%s" target="_blank">upgrade now!</a>.With regular updates, helpful tutorials, we promise to make website building an ultimate journey for you!', 'uabb'), BB_ULTIMATE_ADDON_UPGRADE_URL ); ?>
+				<p><?php printf( __('For more time-saving features and access to our expert support team, <a href="%s" target="_blank">upgrade now!</a> With regular updates, helpful tutorials, we promise to make website building an ultimate journey for you!', 'uabb'), BB_ULTIMATE_ADDON_UPGRADE_URL ); ?>
 
 				</p>
 
@@ -26,6 +26,7 @@
 			<div class="fl-welcome-col">
 				<img class="fl-welcome-img" src="<?php echo BB_ULTIMATE_ADDON_URL; ?>/assets/images/welcome-uabb.jpg" alt="">
 			</div>
+		</div>
 
 		<h4><?php _e( 'Join our Community!', 'uabb' ); ?></h4>
 		<p><?php printf( __('Want to connect with us to know more? Or have some suggestions we can take forward? <a href="%s" target="_blank">Join our Facebook community</a>, where a number of professional and newbie Beavers share their views and suggestions for the Ultimate Addons.', 'uabb'), BB_ULTIMATE_ADDON_FB_URL ); ?></p>
