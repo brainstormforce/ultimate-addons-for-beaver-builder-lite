@@ -53,7 +53,7 @@ $docs_url          = 'http://kb.wpbeaverbuilder.com/';
 			</div>
 
 			<div class="fl-welcome-col">
-				<img class="fl-welcome-img" src="<?php echo BB_ULTIMATE_ADDON_URL; ?>/assets/images/welcome-uabb.png" alt="">
+				<img class="fl-welcome-img" src="<?php echo BB_ULTIMATE_ADDON_URL; ?>/assets/images/welcome-uabb.jpg" alt="">
 			</div>
 
 		</div>
