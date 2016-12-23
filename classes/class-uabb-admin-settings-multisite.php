@@ -15,24 +15,26 @@ final class UABBBuilderMultisiteSettings {
 	 */
 	static public function init()
 	{
-		add_action( 'admin_init',                        __CLASS__ . '::admin_init' );
+		add_action( 'admin_init', __CLASS__ . '::admin_init' );
+		add_action( 'admin_init', __CLASS__ . '::uabb_lite_redirect_on_activation' );
 		add_action( 'network_admin_menu',                __CLASS__ . '::menu' );
-		// add_filter( 'fl_builder_activate_redirect_url',  __CLASS__ . '::activate_redirect_url' );
 	}
 
 	/**
-	 * Sets the activate redirect url to the network admin settings.
+	 * Redirects to UABB Lite Welcome page on activation
 	 *
-	 * @since 1.8
-	 * @return string
+	 * @since 1.0
+	 * @return null
 	 */
-	static public function activate_redirect_url( $url )
+	static public function uabb_lite_redirect_on_activation( $url )
 	{
-		if ( current_user_can( 'manage_network_plugins' ) ) {
-			return network_admin_url( '/settings.php?page=uabb-builder-multisite-settings#license' );
+		if( get_option( 'uabb_lite_redirect' ) == true ) {
+			update_option( 'uabb_lite_redirect', false );
+			if( !is_multisite() ) :
+				wp_redirect( admin_url( 'options-general.php?page=uabb-builder-settings#uabb-welcome' ) );
+				exit();
+			endif;
 		}
-		
-		return $url;
 	}
 
 	/**

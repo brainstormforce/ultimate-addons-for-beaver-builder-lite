@@ -196,6 +196,12 @@ final class UABBBuilderAdminSettings {
 	static public function render_nav_items()
 	{
 
+		$items['uabb-welcome'] = array(
+			'title' 	=> __( 'Welcome', 'uabb' ),
+			'show'		=>  !is_network_admin() || ! FLBuilderAdminSettings::multisite_support(),
+			'priority'	=> 504
+		);
+
 		$items['uabb'] = array(
 			'title' 	=> __( 'General Settings', 'uabb' ),
 			'show'		=>  !is_network_admin() || ! FLBuilderAdminSettings::multisite_support(),
@@ -224,7 +230,7 @@ final class UABBBuilderAdminSettings {
 		);
 
 		$items['uabb-premium'] = array(
-			'title' 	=> __( 'Go Premium', 'uabb' ),
+			'title' 	=> __( 'Premium Features', 'uabb' ),
 			'show'		=>  is_network_admin() || ! FLBuilderAdminSettings::multisite_support(),
 			'priority'	=> 510
 		);
@@ -256,6 +262,7 @@ final class UABBBuilderAdminSettings {
 	 */	   
 	static public function render_forms()
 	{
+		self::render_form( 'welcome' );
 		self::render_form( 'general' );
 		self::render_form( 'modules' );
 		self::render_form( 'icons' );
