@@ -1,5 +1,5 @@
 === Ultimate Addons Lite for Beaver Builder ===
-Contributors: brainstormforce, vrundakansara-1
+Contributors: brainstormforce
 Donate link: http://www.brainstormforce.com
 Tags: beaver builder, beaver builder addon, beaver builder modules, beaver builder add ons, beaver addons, beaver builder addons, beaver builder plugin, beaver builder ultimate, beaver builder templates, beaver builder page templates, beaver builder template, beaver builder layouts, beaver builder custom modules, beaver addon, beaver builder extensions, beaver builder popup, beaver builder lite, beaver builder wordpress free, beaver builder free, page builder addons, ultimate addons for beaver builder, beaver builder pro
 Requires at least: 4.6
@@ -24,7 +24,7 @@ See the Ultimate Addons for Beaver Builder in action! - <a href="https://www.ult
 
 <strong>Ultimate Addons Pro &amp; Premium Support</strong>
 
-This plugin is the lite version of the Ultimate Addons for Beaver Builder. If you wish to avail all the time-saving features you’ll ever need, including premium support, white label branding, 30+ modules &amp; 200+ page &amp; section templates and more, upgrade the Ultimate Addons to the pro version. <a href="https://www.ultimatebeaver.com/pricing/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Support" target="_blank">[Click Here to Get Pro Copy now</a>!.
+This plugin is the lite version of the Ultimate Addons for Beaver Builder. If you wish to avail all the time-saving features you’ll ever need, including premium support, white label branding, 30+ modules &amp; 200+ page &amp; section templates and more, upgrade the Ultimate Addons to the pro version. <a href="https://www.ultimatebeaver.com/pricing/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Support" target="_blank">Click Here to Get Pro Copy now</a>!.
 
 <strong>Learn From Tutorials</strong>
 
@@ -64,11 +64,11 @@ Want to connect with us to know more? Or have some suggestions we can take forwa
 Visit the Ultimate Addons for Beaver Builder website to see how you can get the best value at <a href="https://www.ultimatebeaver.com/pricing/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Pricing" target="_blank">flexible pricing packages</a>
 
 <b>See what the Beaver Builder experts have to say about the Ultimate Addons!</b>
-<blockquote><em>The amazing thing is that it comes with squeaky clean code and super hero support. What more can a website building geek ask for? Nothing.” - COLIN CARTWRIGHT - dynamikbeaver.com</em></blockquote>
-<blockquote><em>What I like most about Ultimate Addons is the fast response from the team. They seem to be online 24/7 to support their customers.” - PETER LUIT - luit.nl</em></blockquote>
-<blockquote><em>The new additional modules from Ultimate Addons provide a fantastic boot to Beaver Builder. This is a polished product and a real time-saver.” - ANDREW MCBRIDE - amvisualworks.com</em></blockquote>
+<blockquote><em>The amazing thing is that it comes with squeaky clean code and super hero support. What more can a website building geek ask for? Nothing.” - COLIN CARTWRIGHT - dynamikbeaver.com</em><p></p></blockquote>
+<blockquote><em>What I like most about Ultimate Addons is the fast response from the team. They seem to be online 24/7 to support their customers.” - PETER LUIT - luit.nl</em><p></p></blockquote>
+<blockquote><em>The new additional modules from Ultimate Addons provide a fantastic boot to Beaver Builder. This is a polished product and a real time-saver.” - ANDREW MCBRIDE - amvisualworks.com</em><p></p></blockquote>
 
-<blockquote>Ultimate Addons makes it possible for those of us that are “designed challenged” to build a complete website, extremely fast, and have it look stunning.” - ADAM PREISER - adampreiser.com</blockquote>
+<blockquote>Ultimate Addons makes it possible for those of us that are “designed challenged” to build a complete website, extremely fast, and have it look stunning.” - ADAM PREISER - adampreiser.com<p></p></blockquote>
 &nbsp;
 
 With regular updates, helpful tutorials, and a dedicated support from experts, we promise to make website building an ultimate journey for you!
