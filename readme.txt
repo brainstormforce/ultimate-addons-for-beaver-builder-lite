@@ -1,4 +1,4 @@
-=== Ultimate Addons for Beaver Builder Lite ===
+=== Ultimate Addons for Beaver Builder - Lite ===
 Contributors: brainstormforce
 Donate link: http://www.brainstormforce.com
 Tags: beaver builder, beaver builder addon, beaver builder modules, beaver builder add ons, beaver addons, beaver builder addons, beaver builder plugin, beaver builder ultimate, beaver builder templates, beaver builder page templates, beaver builder template, beaver builder layouts, beaver builder custom modules, beaver addon, beaver builder extensions, beaver builder popup, beaver builder lite, beaver builder wordpress free, beaver builder free, page builder addons, ultimate addons for beaver builder, beaver builder pro
@@ -74,7 +74,7 @@ Visit the Ultimate Addons for Beaver Builder website to see how you can get the 
 
 Barge ahead and <a href="https://www.ultimatebeaver.com/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Testimonial" target="_blank">try the Ultimate Addons now</a>!<p></p></blockquote>
 
-<strong>UABB ProCustom Modules</strong>
+<strong>UABB Pro Custom Modules</strong>
 
 With the Ultimate Addons for Beaver Builder you get a collection of over 35+ custom modules that include:
 <ul>
@@ -187,6 +187,10 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 == Screenshots ==
 
+1. /assets/screenshots/1.png
+2. /assets/screenshots/2.png
+3. /assets/screenshots/3.png
+4. /assets/screenshots/4.png
 
 == Changelog ==
 
