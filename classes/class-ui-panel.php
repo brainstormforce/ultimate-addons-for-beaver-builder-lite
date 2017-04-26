@@ -257,15 +257,10 @@ class UABB_UI_Panels {
 	 */
 	function builder_ui_bar_buttons( $buttons ) {
 
-		if( defined( 'FL_BUILDER_VERSION' ) ) {
-			$p = '#(\.0+)+($|-)#';
-			$ver1 = preg_replace($p, '', FL_BUILDER_VERSION);
-		    $ver2 = preg_replace($p, '', '1.10');
-			if( version_compare( $ver1, $ver2 ) < 0 ) {
-				$simple_ui    = ! FLBuilderModel::current_user_has_editing_capability();
-			} else {
-				$simple_ui    = ! FLBuilderUserAccess::current_user_can( 'administrator' );
-			}
+		if( is_callable('FLBuilderUserAccess::current_user_can') ) {
+			$simple_ui    = ! FLBuilderUserAccess::current_user_can( 'administrator' );
+		} else {
+			$simple_ui    = ! FLBuilderModel::current_user_has_editing_capability();
 		}
 
 		$has_presets  = BB_Ultimate_Addon_Helper::is_templates_exist( 'presets' );
@@ -299,21 +294,17 @@ class UABB_UI_Panels {
 
 		global $wp_the_query;
 
+		
 		if ( FLBuilderModel::is_builder_active() ) {
 
-			if( defined( 'FL_BUILDER_VERSION' ) ) {
-				$p = '#(\.0+)+($|-)#';
-				$ver1 = preg_replace($p, '', FL_BUILDER_VERSION);
-			    $ver2 = preg_replace($p, '', '1.10');
-				if( version_compare( $ver1, $ver2 ) < 0 ) {
-					$has_editing_cap 	= FLBuilderModel::current_user_has_editing_capability();
-					$simple_ui    		= ! $has_editing_cap;
-				} else {
-					$has_editing_cap 	= FLBuilderUserAccess::current_user_can( 'administrator' ); 
-					$simple_ui    		= ! $has_editing_cap;
-				}
+			if( is_callable('FLBuilderUserAccess::current_user_can') ) {
+				$has_editing_cap 	= FLBuilderUserAccess::current_user_can( 'administrator' ); 
+				$simple_ui    		= ! $has_editing_cap;
+			} else {
+				$has_editing_cap 	= FLBuilderModel::current_user_has_editing_capability();
+				$simple_ui    		= ! $has_editing_cap;
 			}
-						
+			
 			//	Panel
 			$post_id            = $wp_the_query->post->ID;
 			$categories         = FLBuilderModel::get_categorized_modules();
