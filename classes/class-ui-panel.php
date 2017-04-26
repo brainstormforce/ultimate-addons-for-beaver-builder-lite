@@ -257,7 +257,17 @@ class UABB_UI_Panels {
 	 */
 	function builder_ui_bar_buttons( $buttons ) {
 
-		$simple_ui    = ! FLBuilderModel::current_user_has_editing_capability();
+		if( defined( 'FL_BUILDER_VERSION' ) ) {
+			$p = '#(\.0+)+($|-)#';
+			$ver1 = preg_replace($p, '', FL_BUILDER_VERSION);
+		    $ver2 = preg_replace($p, '', '1.10');
+			if( version_compare( $ver1, $ver2 ) < 0 ) {
+				$simple_ui    = ! FLBuilderModel::current_user_has_editing_capability();
+			} else {
+				$simple_ui    = ! FLBuilderUserAccess::current_user_can( 'administrator' );
+			}
+		}
+
 		$has_presets  = BB_Ultimate_Addon_Helper::is_templates_exist( 'presets' );
 		$has_sections = BB_Ultimate_Addon_Helper::is_templates_exist( 'sections' );
 
@@ -291,9 +301,21 @@ class UABB_UI_Panels {
 
 		if ( FLBuilderModel::is_builder_active() ) {
 
+			if( defined( 'FL_BUILDER_VERSION' ) ) {
+				$p = '#(\.0+)+($|-)#';
+				$ver1 = preg_replace($p, '', FL_BUILDER_VERSION);
+			    $ver2 = preg_replace($p, '', '1.10');
+				if( version_compare( $ver1, $ver2 ) < 0 ) {
+					$has_editing_cap 	= FLBuilderModel::current_user_has_editing_capability();
+					$simple_ui    		= ! $has_editing_cap;
+				} else {
+					$has_editing_cap 	= FLBuilderUserAccess::current_user_can( 'administrator' ); 
+					$simple_ui    		= ! $has_editing_cap;
+				}
+			}
+						
 			//	Panel
 			$post_id            = $wp_the_query->post->ID;
-			$simple_ui          = ! FLBuilderModel::current_user_has_editing_capability();
 			$categories         = FLBuilderModel::get_categorized_modules();
 
 			/** 
@@ -301,7 +323,6 @@ class UABB_UI_Panels {
 			 **/
 			$is_row_template    = FLBuilderModel::is_post_user_template( 'row' );
 			$is_module_template = FLBuilderModel::is_post_user_template( 'module' );
-			$has_editing_cap    = FLBuilderModel::current_user_has_editing_capability();
 			$row_templates      = FLBuilderModel::get_template_selector_data( 'row' );
 			$module_templates   = FLBuilderModel::get_template_selector_data( 'module' );
 
