@@ -257,7 +257,12 @@ class UABB_UI_Panels {
 	 */
 	function builder_ui_bar_buttons( $buttons ) {
 
-		$simple_ui    = ! FLBuilderModel::current_user_has_editing_capability();
+		if( is_callable('FLBuilderUserAccess::current_user_can') ) {
+			$simple_ui    = ! FLBuilderUserAccess::current_user_can( 'administrator' );
+		} else {
+			$simple_ui    = ! FLBuilderModel::current_user_has_editing_capability();
+		}
+
 		$has_presets  = BB_Ultimate_Addon_Helper::is_templates_exist( 'presets' );
 		$has_sections = BB_Ultimate_Addon_Helper::is_templates_exist( 'sections' );
 
@@ -289,11 +294,19 @@ class UABB_UI_Panels {
 
 		global $wp_the_query;
 
+		
 		if ( FLBuilderModel::is_builder_active() ) {
 
+			if( is_callable('FLBuilderUserAccess::current_user_can') ) {
+				$has_editing_cap 	= FLBuilderUserAccess::current_user_can( 'administrator' ); 
+				$simple_ui    		= ! $has_editing_cap;
+			} else {
+				$has_editing_cap 	= FLBuilderModel::current_user_has_editing_capability();
+				$simple_ui    		= ! $has_editing_cap;
+			}
+			
 			//	Panel
 			$post_id            = $wp_the_query->post->ID;
-			$simple_ui          = ! FLBuilderModel::current_user_has_editing_capability();
 			$categories         = FLBuilderModel::get_categorized_modules();
 
 			/** 
@@ -301,7 +314,6 @@ class UABB_UI_Panels {
 			 **/
 			$is_row_template    = FLBuilderModel::is_post_user_template( 'row' );
 			$is_module_template = FLBuilderModel::is_post_user_template( 'module' );
-			$has_editing_cap    = FLBuilderModel::current_user_has_editing_capability();
 			$row_templates      = FLBuilderModel::get_template_selector_data( 'row' );
 			$module_templates   = FLBuilderModel::get_template_selector_data( 'module' );
 

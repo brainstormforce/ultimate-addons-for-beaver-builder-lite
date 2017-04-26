@@ -41,9 +41,6 @@ if( !class_exists('UABB_Custom_Field_Scripts') ) {
 		        /* uabb-blank-spacer field */
 		   		wp_enqueue_style( 'blank_spacer-styles', BB_ULTIMATE_ADDON_URL . 'fields/uabb-blank-spacer/css/uabb-blank-spacer.css' );
 
-		        /* uabb-hide-field field */
-			    wp_enqueue_style( 'hide_field-styles', BB_ULTIMATE_ADDON_URL . 'fields/uabb-hide-field/css/uabb-hide-field.css' );
-
 		        /* uabb-msgbox field */
 		   		wp_enqueue_style( 'msg_field-styles', BB_ULTIMATE_ADDON_URL . 'fields/uabb-msg-box/css/uabb-msg-field.css' );
 
