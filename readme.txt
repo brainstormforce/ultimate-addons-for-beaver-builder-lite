@@ -198,6 +198,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 = 1.0.1 =
 * Fixed: BB v1.10 compatibility issue
+* Fixed: Image Separator - Fixed scroll bar issue on small devices
 
 = 1.0 =
 * Initial release
