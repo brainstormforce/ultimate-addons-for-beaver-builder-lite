@@ -15,7 +15,7 @@ if( !class_exists( "BB_Ultimate_Addon" ) ) {
 
 	define( 'BB_ULTIMATE_ADDON_DIR', plugin_dir_path( __FILE__ ) );
 	define( 'BB_ULTIMATE_ADDON_URL', plugins_url( '/', __FILE__ ) );
-	define( 'BB_ULTIMATE_ADDON_LITE_VERSION', '1.0.0' );
+	define( 'BB_ULTIMATE_ADDON_LITE_VERSION', '1.0.1' );
 	define( 'BSF_REMOVE_uabb_FROM_REGISTRATION_LISTING', true );
 	define( 'BB_ULTIMATE_ADDON_FILE', trailingslashit( dirname( __FILE__ ) ) . 'bb-ultimate-addon.php' );
 	define( 'BB_ULTIMATE_ADDON_LITE', true );
