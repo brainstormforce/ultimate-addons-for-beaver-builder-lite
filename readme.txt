@@ -14,7 +14,7 @@ The Ultimate Addons for Beaver Builder extends the Beaver Builder functionality 
 
 <strong>The Ultimate Addons for Beaver Builder</strong>
 
-Supercharge Beaver Builder with 35+ powerful modules &amp; 200+ templates to build WordPress websites in record time!
+Supercharge Beaver Builder with 35+ powerful modules & 200+ templates to build WordPress websites in record time! This <a href=" https://www.ultimatebeaver.com/?utm_source=wprepo&utm_campaign=Lite&utm_medium=description">Beaver Builder Addon</a> is here to make website building an ultimate journey for you all.
 
 Simply drag &amp; drop custom modules and pre-designed row &amp; page templates to reduce your website development time by around 30%!
 
