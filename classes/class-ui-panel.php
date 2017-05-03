@@ -258,7 +258,7 @@ class UABB_UI_Panels {
 	function builder_ui_bar_buttons( $buttons ) {
 
 		if( is_callable('FLBuilderUserAccess::current_user_can') ) {
-			$simple_ui    = ! FLBuilderUserAccess::current_user_can( 'administrator' );
+			$simple_ui    = ! FLBuilderUserAccess::current_user_can( 'unrestricted_editing' );
 		} else {
 			$simple_ui    = ! FLBuilderModel::current_user_has_editing_capability();
 		}
@@ -298,7 +298,7 @@ class UABB_UI_Panels {
 		if ( FLBuilderModel::is_builder_active() ) {
 
 			if( is_callable('FLBuilderUserAccess::current_user_can') ) {
-				$has_editing_cap 	= FLBuilderUserAccess::current_user_can( 'administrator' ); 
+				$has_editing_cap 	= FLBuilderUserAccess::current_user_can( 'unrestricted_editing' ); 
 				$simple_ui    		= ! $has_editing_cap;
 			} else {
 				$has_editing_cap 	= FLBuilderModel::current_user_has_editing_capability();
