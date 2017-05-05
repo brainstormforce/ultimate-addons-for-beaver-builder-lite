@@ -107,7 +107,8 @@ FLBuilder::register_module('UABBButtonModule', array(
 						'preview'         => array(
 							'type'            => 'text',
 							'selector'        => '.uabb-creative-button-text'
-						)
+						),
+						'connections'	=> array( 'string', 'html' )
 					),
 
 				)
@@ -122,7 +123,8 @@ FLBuilder::register_module('UABBButtonModule', array(
 						'default'		=> '#',
 						'preview'       => array(
 							'type'          => 'none'
-						)
+						),
+						'connections'	=> array( 'url' )
 					),
 					'link_target'   => array(
 						'type'          => 'select',

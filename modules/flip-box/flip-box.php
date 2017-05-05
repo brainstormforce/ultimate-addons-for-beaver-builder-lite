@@ -248,6 +248,7 @@ FLBuilder::register_module('FlipBoxModule', array(
                         'label'         => __('Title on Front', 'uabb'),
                         'default'       => __( "Let's Flip!", "uabb"),
                         'help'          => __('Perhaps, this is the most highlighted text.','uabb'),
+                        'connections'   => array( 'string', 'html' )
                     ),
                     'desc_front'     => array(
                         'type'          => 'editor',
@@ -255,6 +256,7 @@ FLBuilder::register_module('FlipBoxModule', array(
                         'rows'          => 10,
                         'label'         => '',
                         'default'       => __('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.','uabb'),
+                        'connections'   => array( 'string', 'html' )
                     ),
                 )
             ),     

@@ -374,6 +374,7 @@ FLBuilder::register_module('UABBImageSeparatorModule', array(
 						'type'          => 'photo',
 						'label'         => __('Separator Image', 'uabb'),
 						'show_remove'	=> true,
+						'connections'   => array( 'photo' )
 					),
 					'img_size'     => array(
 						'type'          => 'text',

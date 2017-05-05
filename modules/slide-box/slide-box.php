@@ -15,7 +15,7 @@ class SlideBoxModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Slide Box', 'uabb'),
             'description'   => __('Slide Box', 'uabb'),
-            'category'		=> UABB_CAT,
+            'category'      => UABB_CAT,
             'dir'           => BB_ULTIMATE_ADDON_DIR . 'modules/slide-box/',
             'url'           => BB_ULTIMATE_ADDON_URL . 'modules/slide-box/',
             'editor_export' => true, // Defaults to true and can be omitted.
@@ -181,7 +181,8 @@ FLBuilder::register_module('SlideBoxModule', array(
                         'preview'         => array(
                             'type'             => 'text',
                             'selector'         => '.uabb-slide-face-text-title',
-                        )
+                        ),
+                        'connections'   => array( 'string', 'html' )
                     ),
                     'desc_front'     => array(
                         'type'          => 'editor',
@@ -189,6 +190,7 @@ FLBuilder::register_module('SlideBoxModule', array(
                         'rows'          => 10,
                         'label'         => '',
                         'default'       => __('Add description text here. Lorem Ipsum is a dummy content.', 'uabb'),
+                        'connections'   => array( 'string', 'html' )
                     ),
                 )
             ),
@@ -257,6 +259,7 @@ FLBuilder::register_module('SlideBoxModule', array(
                         'type'          => 'photo',
                         'label'         => __('Photo', 'uabb'),
                         'show_remove'   => true,
+                        'connections'   => array( 'photo' )
                     ),
                     'image_style'         => array(
                         'type'          => 'select',
@@ -1149,4 +1152,3 @@ FLBuilder::register_module('SlideBoxModule', array(
         )
     ),
 ));
-

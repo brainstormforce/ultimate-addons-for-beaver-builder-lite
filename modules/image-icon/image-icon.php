@@ -460,11 +460,13 @@ FLBuilder::register_module('ImageIconModule', array(
 						'type'          => 'photo',
 						'label'         => __('Photo', 'uabb'),
 						'show_remove'	=> true,
+						'connections'   => array( 'photo' )
 					),
 					'photo_url'     => array(
 						'type'          => 'text',
 						'label'         => __('Photo URL', 'uabb'),
 						'placeholder'   => 'http://www.example.com/my-photo.jpg',
+						'connections'	=> array( 'url' )
 					),
 					'img_size'     => array(
 						'type'          => 'text',

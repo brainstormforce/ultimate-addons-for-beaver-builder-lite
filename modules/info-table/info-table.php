@@ -39,16 +39,19 @@ FLBuilder::register_module('UABBInfoTableModule', array(
                         'label'         => __( 'Heading', 'uabb' ),
                         'default'       => __( 'Heading', 'uabb' ),
                         'help'          => __('Enter Info-Table Title','uabb'),
+                        'connections'   => array( 'string', 'html' )
                     ),
                     'sub_heading'     => array(
                         'type'          => 'text',
                         'label'         => __( 'Sub Heading', 'uabb' ),
                         'default'       => __( 'Sub Heading', 'uabb' ),
+                        'connections'   => array( 'string', 'html' )
                     ),
                     'it_long_desc'     => array(
                         'type'          => 'editor',
                         'label'         => '',
                         'default'       => __('Enter description text here.','uabb'),
+                        'connections'   => array( 'string', 'html' )
                     ),
                     'it_link_type'          => array(
                         'type'          => 'select',
@@ -72,10 +75,12 @@ FLBuilder::register_module('UABBInfoTableModule', array(
                     'button_text'   => array(
                         'type'      => 'text',
                         'label'     => __( 'Call to action button text', 'uabb' ),
+                        'connections'   => array( 'string', 'html' )
                     ),
                     'it_link'       => array(
                         'type'      => 'link',
-                        'label'     => __( 'Select URL', 'uabb' )
+                        'label'     => __( 'Select URL', 'uabb' ),
+                        'connections'   => array( 'url' )
                     ),
                     'it_link_target'   => array(
                         'type'          => 'select',
@@ -352,6 +357,7 @@ FLBuilder::register_module('UABBInfoTableModule', array(
                         'type'          => 'photo',
                         'label'         => __('Photo', 'uabb'),
                         'show_remove'   => true,
+                        'connections'         => array( 'photo' )
                     ),
                     'photo_url'     => array(
                         'type'          => 'text',
