@@ -1,6 +1,6 @@
 {
   "name": "ultimate-addons-for-beaver-builder-lite",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Ultimate Addons is a free extension for Beaver Builder that adds 10 modules, and works on top of any Beaver Builder Package. (Free, Standard, Pro & Agency) You can use it with on any WordPress theme.",
   "main": "Gruntfile.js",
   "repository": {
