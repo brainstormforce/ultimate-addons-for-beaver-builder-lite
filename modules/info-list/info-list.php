@@ -509,11 +509,13 @@ FLBuilder::register_settings_form('info_list_item_form', array(
                             'default'       => __('Name of the element','uabb'),
                             'help'          => __( 'Provide a title for this icon list item.', 'uabb' ),
                             'placeholder'         => __('Title','uabb'),
-                            'class'         => 'uabb-list-item-title'
+                            'class'         => 'uabb-list-item-title',
+                            'connections'   => array( 'string', 'html' )
                         ),
                         'list_item_url'          => array(
                             'type'          => 'link',
-                            'label'         => __('Link', 'uabb')
+                            'label'         => __('Link', 'uabb'),
+                            'connections'   => array( 'url' )
                         ),
                         'list_item_link'          => array(
                             'type'          => 'select',
@@ -540,7 +542,8 @@ FLBuilder::register_settings_form('info_list_item_form', array(
                             'type'          => 'editor',
                             'default'       => __('Enter description text here.','uabb'),
                             'label'         => '',
-                            'rows'          => 13
+                            'rows'          => 13,
+                            'connections'   => array( 'string', 'html' )
                         )
                     ),
                 ),
@@ -615,6 +618,7 @@ FLBuilder::register_settings_form('info_list_item_form', array(
                             'type'          => 'photo',
                             'label'         => __('Photo', 'uabb'),
                             'show_remove'   => true,
+                            'connections'   => array( 'photo' )
                         ),
                         'photo_url'     => array(
                             'type'          => 'text',

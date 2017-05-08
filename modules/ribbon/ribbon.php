@@ -15,7 +15,7 @@ class RibbonModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Ribbon', 'uabb'),
             'description'   => __('Ribbon', 'uabb'),
-            'category'		=> UABB_CAT,
+            'category'      => UABB_CAT,
             'dir'           => BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/',
             'url'           => BB_ULTIMATE_ADDON_URL . 'modules/ribbon/',
             'editor_export' => true, // Defaults to true and can be omitted.
