@@ -1,0 +1,20 @@
+{
+  "name": "ultimate-addons-for-beaver-builder-lite",
+  "version": "1.0.2",
+  "description": "Ultimate Addons is a free extension for Beaver Builder that adds 10 modules, and works on top of any Beaver Builder Package. (Free, Standard, Pro & Agency) You can use it with on any WordPress theme.",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brainstormforce/ultimate-addons-for-beaver-builder-lite.git"
+  },
+  "author": "Brainstorm Force",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/brainstormforce/ultimate-addons-for-beaver-builder-lite/issues"
+  },
+  "homepage": "https://github.com/brainstormforce/ultimate-addons-for-beaver-builder-lite#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-wp-readme-to-markdown": "^2.0.1"
+  }
+}
