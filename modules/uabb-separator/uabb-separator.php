@@ -13,7 +13,7 @@ class UABBSeparatorModule extends FLBuilderModule {
 		parent::__construct(array(
 			'name'          	=> __('Simple Separator', 'uabb'),
 			'description'   	=> __('A divider line to separate content.', 'uabb'),
-			'category'      => UABB_CAT,//BB_Ultimate_Addon_Helper::module_cat(''),
+			'category'      => BB_Ultimate_Addon_Helper::module_cat(''),
             'group'         => UABB_CAT,
 			'dir'           	=> BB_ULTIMATE_ADDON_DIR . 'modules/uabb-separator/',
             'url'           	=> BB_ULTIMATE_ADDON_URL . 'modules/uabb-separator/',
