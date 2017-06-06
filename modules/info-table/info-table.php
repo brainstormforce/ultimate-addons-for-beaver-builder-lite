@@ -14,7 +14,8 @@ class UABBInfoTableModule extends FLBuilderModule {
         parent::__construct(array(
             'name'              => __('Info Table', 'uabb'),
             'description'       => __('A basic info table.', 'uabb'),
-            'category'          => UABB_CAT,
+            'category'      => BB_Ultimate_Addon_Helper::module_cat(''),
+            'group'         => UABB_CAT,
             'dir'               => BB_ULTIMATE_ADDON_DIR . 'modules/info-table/',
             'url'               => BB_ULTIMATE_ADDON_URL . 'modules/info-table/',
             'editor_export'     => true, // Defaults to true and can be omitted.

@@ -39,6 +39,10 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 			define( 'UABB_CAT', $branding_modules );			
 		}
 		
+		static public function module_cat( $cat ) {
+		    return class_exists( 'FLBuilderUIContentPanel' ) ? $cat : UABB_CAT;
+		}
+
 		static public function get_builder_uabb() {
 			$uabb = UABB_Init::$uabb_options['fl_builder_uabb'];
 
