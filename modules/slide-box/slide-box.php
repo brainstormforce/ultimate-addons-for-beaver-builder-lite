@@ -15,7 +15,8 @@ class SlideBoxModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Slide Box', 'uabb'),
             'description'   => __('Slide Box', 'uabb'),
-            'category'      => UABB_CAT,
+            'category'      => BB_Ultimate_Addon_Helper::module_cat(''),
+            'group'         => UABB_CAT,
             'dir'           => BB_ULTIMATE_ADDON_DIR . 'modules/slide-box/',
             'url'           => BB_ULTIMATE_ADDON_URL . 'modules/slide-box/',
             'editor_export' => true, // Defaults to true and can be omitted.

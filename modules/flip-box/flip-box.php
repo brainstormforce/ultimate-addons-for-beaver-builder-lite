@@ -14,7 +14,8 @@ class FlipBoxModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Flip Box', 'uabb'),
             'description'   => __('Flip Box', 'uabb'),
-            'category'      => UABB_CAT,
+            'category'      => BB_Ultimate_Addon_Helper::module_cat(''),
+            'group'         => UABB_CAT,
             'dir'           => BB_ULTIMATE_ADDON_DIR . 'modules/flip-box/',
             'url'           => BB_ULTIMATE_ADDON_URL . 'modules/flip-box/',
             'editor_export' => true, // Defaults to true and can be omitted.

@@ -202,11 +202,13 @@ final class UABBBuilderAdminSettings {
 			'priority'	=> 504
 		);
 
-		$items['uabb'] = array(
-			'title' 	=> __( 'General Settings', 'uabb' ),
-			'show'		=>  !is_network_admin() || ! FLBuilderAdminSettings::multisite_support(),
-			'priority'	=> 506
-		);
+		if ( !class_exists( 'FLBuilderUIContentPanel' ) ) {
+			$items['uabb'] = array(
+				'title' 	=> __( 'General Settings', 'uabb' ),
+				'show'		=>  !is_network_admin() || ! FLBuilderAdminSettings::multisite_support(),
+				'priority'	=> 506
+			);
+		} 
 
 		$items['uabb-modules'] = array(
 			'title' 	=> __( 'Modules', 'uabb' ),
