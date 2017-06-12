@@ -196,6 +196,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ## Changelog ##
 
+### 1.2.0 ###
+* New: Beaver Builder 2.0 support.
+
 ### 1.1.0 ###
 * New: Added Beaver Themer support, Use modules from ultimate beaver to create dynamic page layouts with Beaver Themer.
 
@@ -208,7 +211,3 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ### 1.0 ###
 * Initial release
-
-## Upgrade Notice ##
-
-### 1.0 ###
