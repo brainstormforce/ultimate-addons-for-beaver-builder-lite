@@ -83,7 +83,7 @@ function uabb_theme_base_color( $default ) {
 		$color = apply_filters( 'uabb/global/theme_color', $default );
 		
 		if ( $color == '' ) {
-			$color = apply_filters( 'uabb/theme/theme_color', $default );
+			$color = apply_filters( 'uabb_theme_theme_color', $default );
 		}
 	} else {
 		$color = $default;
@@ -107,7 +107,7 @@ function uabb_theme_text_color( $default ) {
 		$color = apply_filters( 'uabb/global/text_color', $default );
 		
 		if ( $color == '' ) {
-			$color = apply_filters( 'uabb/theme/text_color', $default );
+			$color = apply_filters( 'uabb_theme_text_color', $default );
 		}
 	} else {
 		$color = $default;
@@ -131,7 +131,7 @@ function uabb_theme_link_color( $default ) {
 		$color = apply_filters( 'uabb/global/link_color', $default );
 				
 		if ( $color == '' ) {
-			$color = apply_filters( 'uabb/theme/link_color', $default );
+			$color = apply_filters( 'uabb_theme_link_color', $default );
 		}
 	} else {
 		$color = $default;
@@ -155,7 +155,7 @@ function uabb_theme_link_hover_color( $default ) {
 		$color = apply_filters( 'uabb/global/link_hover_color', $default );
 				
 		if ( $color == '' ) {
-			$color = apply_filters( 'uabb/theme/link_hover_color', $default );
+			$color = apply_filters( 'uabb_theme_link_hover_color', $default );
 		}
 	} else {
 		$color = $default;
@@ -176,7 +176,7 @@ function uabb_theme_button_font_family( $default ) {
 
 	if ( $default['family'] == '' ||  $default['family'] == 'Default' ) {
 
-		$btn_font_family = apply_filters( 'uabb/theme/button_font_family', $default );
+		$btn_font_family = apply_filters( 'uabb_theme_button_font_family', $default );
 
 	} else {
 		$btn_font_family = $default;
@@ -196,7 +196,7 @@ function uabb_theme_button_font_size( $default ) {
 		$font_size = apply_filters( 'uabb/global/button_font_size', $default );
 				
 		if ( $font_size == '' ) {
-			$font_size = apply_filters( 'uabb/theme/button_font_size', $default );
+			$font_size = apply_filters( 'uabb_theme_button_font_size', $default );
 		}else{
 			$font_size = $font_size.'px';
 		}
@@ -218,7 +218,7 @@ function uabb_theme_button_line_height( $default ) {
 		$line_height = apply_filters( 'uabb/global/button_line_height', $default );
 				
 		if ( $line_height == '' ) {
-			$line_height = apply_filters( 'uabb/theme/button_line_height', $default );
+			$line_height = apply_filters( 'uabb_theme_button_line_height', $default );
 		}else{
 			$line_height = $line_height.'px';
 		}
@@ -240,7 +240,7 @@ function uabb_theme_button_letter_spacing( $default ) {
 		$letter_spacing = apply_filters( 'uabb/global/button_letter_spacing', $default );
 				
 		if ( $letter_spacing == '' ) {
-			$letter_spacing = apply_filters( 'uabb/theme/button_letter_spacing', $default );
+			$letter_spacing = apply_filters( 'uabb_theme_button_letter_spacing', $default );
 		}else{
 			$letter_spacing = $letter_spacing.'px';
 		}
@@ -262,7 +262,7 @@ function uabb_theme_button_text_transform( $default ) {
 		$text_transform = apply_filters( 'uabb/global/button_text_transform', $default );
 				
 		if ( $text_transform == '' ) {
-			$text_transform = apply_filters( 'uabb/theme/button_text_transform', $default );
+			$text_transform = apply_filters( 'uabb_theme_button_text_transform', $default );
 		}
 	} else {
 		$text_transform = $default;
@@ -286,7 +286,7 @@ function uabb_theme_button_bg_color( $default ) {
 		$color = apply_filters( 'uabb/global/button_bg_color', $default );
 				
 		if ( $color == '' ) {
-			$color = apply_filters( 'uabb/theme/button_bg_color', $default );
+			$color = apply_filters( 'uabb_theme_button_bg_color', $default );
 		}
 	} else {
 		$color = $default;
@@ -310,7 +310,7 @@ function uabb_theme_button_bg_hover_color( $default ) {
 		$color = apply_filters( 'uabb/global/button_bg_hover_color', $default );
 				
 		if ( $color == '' ) {
-			$color = apply_filters( 'uabb/theme/button_bg_hover_color', $default );
+			$color = apply_filters( 'uabb_theme_button_bg_hover_color', $default );
 		}
 	} else {
 		$color = $default;
@@ -334,7 +334,7 @@ function uabb_theme_button_text_color( $default ) {
 		$color = apply_filters( 'uabb/global/button_text_color', $default );
 				
 		if ( $color == '' ) {
-			$color = apply_filters( 'uabb/theme/button_text_color', $default );
+			$color = apply_filters( 'uabb_theme_button_text_color', $default );
 		}
 	} else {
 		$color = $default;
@@ -358,7 +358,7 @@ function uabb_theme_button_text_hover_color( $default ) {
 		$color = apply_filters( 'uabb/global/button_text_hover_color', $default );
 				
 		if ( $color == '' ) {
-			$color = apply_filters( 'uabb/theme/button_text_hover_color', $default );
+			$color = apply_filters( 'uabb_theme_button_text_hover_color', $default );
 		}
 	} else {
 		$color = $default;
@@ -382,7 +382,7 @@ function uabb_theme_button_padding( $default ) {
 		$padding = apply_filters( 'uabb/global/button_padding', $default );
 							
 		if ( $padding == '' ) {
-			$padding = apply_filters( 'uabb/theme/button_padding', $default );
+			$padding = apply_filters( 'uabb_theme_button_padding', $default );
 			if ( $padding == '' ) {
 				$padding = '12px 24px';
 			}
@@ -402,7 +402,7 @@ function uabb_theme_button_vertical_padding( $default ) {
 		$padding = apply_filters( 'uabb/global/button_vertical_padding', $default );
 							
 		if ( $padding == '' ) {
-			$padding = apply_filters( 'uabb/theme/button_vertical_padding', $default );
+			$padding = apply_filters( 'uabb_theme_button_vertical_padding', $default );
 			if ( $padding == '' ) {
 				$padding = '12';
 			}
@@ -422,7 +422,7 @@ function uabb_theme_button_horizontal_padding( $default ) {
 		$padding = apply_filters( 'uabb/global/button_horizontal_padding', $default );
 							
 		if ( $padding == '' ) {
-			$padding = apply_filters( 'uabb/theme/button_horizontal_padding', $default );
+			$padding = apply_filters( 'uabb_theme_button_horizontal_padding', $default );
 			if ( $padding == '' ) {
 				$padding = '24';
 			}
@@ -449,7 +449,7 @@ function uabb_theme_button_border_radius( $default ) {
 		$radius = apply_filters( 'uabb/global/button_border_radius', $default );
 
 		if ( $radius == '' ) {
-			$radius = apply_filters( 'uabb/theme/button_border_radius', $default );
+			$radius = apply_filters( 'uabb_theme_button_border_radius', $default );
 			if ( $radius == '' ) {
 				$radius = '4';
 			}
