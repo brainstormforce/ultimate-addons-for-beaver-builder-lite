@@ -1,3 +1,6 @@
 # Don't commit this
 .DS_Store
 node_modules/
+
+# Ignore NPM log | lock files
+package-lock.json
