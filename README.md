@@ -196,6 +196,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ## Changelog ##
 
+### 1.2.1 ###
+* Fixed: Global settings compatibility with Astra theme.
+
 ### 1.2.0 ###
 * New: Beaver Builder 2.0 support.
 
