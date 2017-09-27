@@ -46,7 +46,10 @@ if ( $settings->list_connector_option == "yes" ) {
 		}
 	?>
 	.fl-node-<?php echo $id;?> .uabb-info-list-connector {
-		
+		<?php
+			$settings->icon_image_size = (int)$settings->icon_image_size; 
+			$icon_extra_padding_top = (int)$icon_extra_padding_top;
+		?>
 		<?php if( $settings->align_items == 'center' ) : ?>
 		top: calc( 50% + <?php echo ( $settings->icon_image_size / 2 ) + $icon_extra_padding - $space_element; ?>px );
 		height: calc( 50% - <?php echo ( $settings->icon_image_size / 2 ) + $icon_extra_padding - $space_element; ?>px );
