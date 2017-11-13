@@ -6,7 +6,11 @@
  */
 
 if( !class_exists( 'UABBLite_WPML_Translatable' ) ) {
-
+/**
+ * Class UABBLite_WPML_Translatable.
+ *
+ * @since 1.2.2
+ */
 final class UABBLite_WPML_Translatable {
 
 	/** 
@@ -21,6 +25,12 @@ final class UABBLite_WPML_Translatable {
 		UABBLite_WPML_Translatable::load_files();
 	}
 
+	/**
+	 * include files for modules which has form loop.
+	 *
+	 * @since 1.2.2
+	 * @return void
+	 */
 	static public function load_files()
 	{
 
