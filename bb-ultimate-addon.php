@@ -84,20 +84,7 @@ if( !class_exists( "BB_Ultimate_Addon" ) ) {
 			}
 		}
 	}
-
 	new BB_Ultimate_Addon();
 } else {
-	// Display admin notice for activating beaver builder
-	add_action( 'admin_notices', 'admin_notices' );
-	add_action( 'network_admin_notices', 'admin_notices' );
-
-	function admin_notices() {
-
-		$url = admin_url( 'plugins.php' );
-
-		echo '<div class="notice notice-error"><p>';
-		echo sprintf( __( "You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='%s'>deactivate one</a> before continuing.", 'uabb' ), $url );
-	    echo '</p></div>';
-
-  	}
+	deactivate_plugins( plugin_basename( __FILE__ ) );
 }
