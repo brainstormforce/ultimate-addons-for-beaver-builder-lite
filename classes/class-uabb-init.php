@@ -79,6 +79,9 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/helper.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-ui-panel.php';
 
+		// wpml
+		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-wpml.php';
+
 		// Load the appropriate text-domain
 		$this->load_plugin_textdomain();
 
