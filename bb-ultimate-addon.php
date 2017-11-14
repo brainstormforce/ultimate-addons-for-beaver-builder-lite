@@ -4,7 +4,7 @@
  * Plugin Name: Ultimate Addons for Beaver Builder - Lite
  * Plugin URI: http://www.ultimatebeaver.com/
  * Description: Ultimate Addons is a free extension for Beaver Builder that adds 10 modules, and works on top of any Beaver Builder Package. (Free, Standard, Pro & Agency) You can use it with on any WordPress theme.
- * Version: 1.2.1
+ * Version: 1.2.2
  * Author: Brainstorm Force
  * Author URI: http://www.brainstormforce.com
  * Text Domain: uabb
@@ -15,14 +15,14 @@ if( !class_exists( "BB_Ultimate_Addon" ) ) {
 
 	define( 'BB_ULTIMATE_ADDON_DIR', plugin_dir_path( __FILE__ ) );
 	define( 'BB_ULTIMATE_ADDON_URL', plugins_url( '/', __FILE__ ) );
-	define( 'BB_ULTIMATE_ADDON_LITE_VERSION', '1.2.1' );
+	define( 'BB_ULTIMATE_ADDON_LITE_VERSION', '1.2.2' );
 	define( 'BSF_REMOVE_uabb_FROM_REGISTRATION_LISTING', true );
 	define( 'BB_ULTIMATE_ADDON_FILE', trailingslashit( dirname( __FILE__ ) ) . 'bb-ultimate-addon.php' );
 	define( 'BB_ULTIMATE_ADDON_LITE', true );
 	define( 'BB_ULTIMATE_ADDON_UPGRADE_URL', 'https://www.ultimatebeaver.com/pricing/?utm_source=uabb-dashboard&utm_campaign=uabblite_upgrade&utm_medium=upgrade-button' );
 	define( 'BB_ULTIMATE_ADDON_FB_URL', 'https://www.brainstormforce.com/go/uabb-facebook-group/?utm_source=uabb-dashboard&utm_campaign=Lite&utm_medium=FB' );
 	define( 'BB_ULTIMATE_ADDON_TWITTER_URL', 'https://twitter.com/WeBrainstorm' );
-	
+
 
 	class BB_Ultimate_Addon {
 
@@ -90,14 +90,24 @@ if( !class_exists( "BB_Ultimate_Addon" ) ) {
 	// Display admin notice for activating beaver builder
 	add_action( 'admin_notices', 'admin_notices' );
 	add_action( 'network_admin_notices', 'admin_notices' );
-
 	function admin_notices() {
-
-		$url = admin_url( 'plugins.php' );
-
+		$deactivate_url = admin_url( 'plugins.php' );
+		if ( is_plugin_active_for_network( 'ultimate-addons-for-beaver-builder-lite/bb-ultimate-addon.php' ) ) {
+			$deactivate_url = network_admin_url( 'plugins.php' );
+		}
+		$slug = 'bb-ultimate-addon';
+		$deactivate_url = add_query_arg(
+			array(
+				'action'        => 'deactivate',
+				'plugin'        => rawurlencode( 'ultimate-addons-for-beaver-builder-lite/' . $slug . '.php' ),
+				'plugin_status' => 'all',
+				'paged'         => '1',
+				'_wpnonce'      => wp_create_nonce( 'deactivate-plugin_ultimate-addons-for-beaver-builder-lite/' . $slug . '.php' ),
+			), $deactivate_url
+		);
 		echo '<div class="notice notice-error"><p>';
-		echo sprintf( __( "You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='%s'>deactivate one</a> before continuing.", 'uabb' ), $url );
-	    echo '</p></div>';
+		echo sprintf( __( "You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='%s'>deactivate one</a> before continuing.", 'uabb' ), $deactivate_url );
+		echo '</p></div>';
 
-  	}
+	}
 }

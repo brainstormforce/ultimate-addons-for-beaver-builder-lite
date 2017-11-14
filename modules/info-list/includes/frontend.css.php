@@ -46,7 +46,10 @@ if ( $settings->list_connector_option == "yes" ) {
 		}
 	?>
 	.fl-node-<?php echo $id;?> .uabb-info-list-connector {
-		
+		<?php
+			$settings->icon_image_size = (int)$settings->icon_image_size; 
+			$icon_extra_padding_top = (int)$icon_extra_padding_top;
+		?>
 		<?php if( $settings->align_items == 'center' ) : ?>
 		top: calc( 50% + <?php echo ( $settings->icon_image_size / 2 ) + $icon_extra_padding - $space_element; ?>px );
 		height: calc( 50% - <?php echo ( $settings->icon_image_size / 2 ) + $icon_extra_padding - $space_element; ?>px );
@@ -365,29 +368,28 @@ if( $settings->icon_position == "left" ){ ?>
 	 	if( $item->image_type == "none" && $settings->icon_position != 'top' ) {
 	 	?>
 	 		.fl-node-<?php echo $id;?> .uabb-info-list-content-wrapper.<?php echo $settings->icon_position; ?> .info-list-content-dynamic<?php echo $list_item_counter;?> {
-	 			width: 100%;
-	 		}
- 		<?php
- 		}
+				width: 100%;
+			}
+		<?php
+		}
 
- 		
 		if( $item->image_type == 'photo' && ( $settings->list_icon_style === "custom" || $settings->list_icon_style === "simple" ) ) :
 			$img_size = array();
 			if( $item->photo_source == 'library' && $item->photo != '' ) :
-				$img_size = ( isset( FLBuilderPhoto::get_attachment_data($item->photo)->url ) ) ? getimagesize( FLBuilderPhoto::get_attachment_data($item->photo)->url ) : '';
+				$img_size[0] = ( isset( FLBuilderPhoto::get_attachment_data($item->photo)->width ) ) ? FLBuilderPhoto::get_attachment_data($item->photo)->width : '';
+				$img_size[1] = ( isset( FLBuilderPhoto::get_attachment_data($item->photo)->height ) ) ? FLBuilderPhoto::get_attachment_data($item->photo)->height : '';
 			elseif( trim($item->photo_url) != '' ) :
 				$img_size = getimagesize( $item->photo_url );
 			endif;
 
 			if( isset($img_size[0]) && isset($img_size[1]) ) :
 				$actual_height = ( $settings->icon_image_size * $img_size[1] ) / $img_size[0];
-				
+
 				if( $actual_height > $settings->icon_image_size ) :
 					$need_to_add = $actual_height - $settings->icon_image_size;
 				else :
 					$need_to_add = $settings->icon_image_size - $actual_height;
 				endif; 
-
 
 				if ( $settings->list_connector_option == "yes" ) : ?>
 
@@ -536,7 +538,7 @@ if ( $settings->description_font_family['family'] != "Default" || $settings->des
 			.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-content,
 			.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-icon {
 				display: block;
-				width: 100%;
+				width: calc( 100% - 30px );
 				text-align: center;
 			}
 
