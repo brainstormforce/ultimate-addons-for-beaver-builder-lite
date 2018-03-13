@@ -1,0 +1,52 @@
+.uabb-heading-wrapper .uabb-heading {
+	padding: 0;
+	margin: 0;
+}
+
+.uabb-heading-wrapper .uabb-heading a {
+	text-decoration: none;
+}
+
+.uabb-heading-wrapper .uabb-subheading * {
+	margin: 0;
+}
+
+.uabb-heading-align-left .uabb-heading,
+.uabb-heading-align-left .uabb-subheading,
+.uabb-heading-align-left .uabb-subheading * {
+	text-align: left;
+}
+
+.uabb-heading-align-center .uabb-heading,
+.uabb-heading-align-center .uabb-subheading,
+.uabb-heading-align-center .uabb-subheading * {
+	text-align: center;
+}
+
+.uabb-heading-align-right .uabb-heading,
+.uabb-heading-align-right .uabb-subheading,
+.uabb-heading-align-right .uabb-subheading * {
+	text-align: right;
+}
+
+/* Text editor support */
+.uabb-module-content .uabb-text-editor *:not(a) {
+    color: inherit;
+}
+.uabb-module-content .uabb-text-editor *:not(i) {
+    font-family: inherit;
+}
+.uabb-module-content .uabb-text-editor *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-size: inherit;
+    line-height: inherit;	
+}
+.uabb-module-content .uabb-text-editor *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(strong):not(b) {
+	font-weight: inherit;
+}
+
+.uabb-heading a,
+.uabb-heading a:hover,
+.uabb-heading a:focus,
+.uabb-heading a:active {
+	text-decoration: none;
+}

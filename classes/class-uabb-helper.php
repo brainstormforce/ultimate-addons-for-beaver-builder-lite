@@ -122,6 +122,7 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 				'flip-box'                 	=> 'Flip Box',
 				'image-icon'               	=> 'Image / Icon',
 				'uabb-button'              	=> 'Button',
+				'uabb-heading'              => 'Heading'
 			);
 			
 			return $modules_array;
@@ -438,6 +439,34 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 			}
 
 			return $_templates_exist;
+		}
+
+		/**
+		 *	Get link rel attribute
+		 *
+	 	 *  @since 1.6.1
+		 *	@return string
+		 */
+		static public function get_link_rel( $target, $is_nofollow = 0, $echo = 0 )  {
+
+			$attr = '';
+			if( '_blank' == $target ) {
+				$attr.= 'noopener';
+			}
+
+			if( 1 == $is_nofollow ) {
+				$attr.= ' nofollow';
+			}
+
+			if( '' == $attr ) {
+				return;
+			}
+
+			$attr = trim($attr);
+			if ( ! $echo  ) {
+				return 'rel="'.$attr.'"';
+			}
+			echo 'rel="'.$attr.'"';
 		}
 		
 	}
