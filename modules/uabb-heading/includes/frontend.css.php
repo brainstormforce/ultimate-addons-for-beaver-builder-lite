@@ -248,7 +248,7 @@
 			'photo_src' => ( isset( $settings->photo_src ) ) ? $settings->photo_src : '' ,
 			
 			/* Preset Color variable new */
-			'icon_color_preset' => $settings->icon_color_preset, 
+			// 'icon_color_preset' => $settings->icon_color_preset, 
 		);
 		 
 		/* CSS Render Function */ 
