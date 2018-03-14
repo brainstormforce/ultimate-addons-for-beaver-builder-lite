@@ -1,5 +1,5 @@
 <?php 
-    $settings->color = UABB_Helper::uabb_colorpicker( $settings, 'color' );
+    $settings->title_color = UABB_Helper::uabb_colorpicker( $settings, 'color' );
     $settings->desc_color = UABB_Helper::uabb_colorpicker( $settings, 'desc_color' );
 
     $settings->heading_margin_top = ( trim($settings->heading_margin_top) !== '' ) ? $settings->heading_margin_top : '0';
@@ -16,53 +16,8 @@
 		} elseif( $settings->alignment == 'right' ) {
 			$position = '100';
 		}
-
-		$line_color = uabb_theme_base_color( $settings->separator_line_color );
-
-		$separator_array = array(
-			/* General Section */
-			'separator' => $settings->separator_style,
-			'style'		=> $settings->separator_line_style,
-			'color'		=> $line_color,
-			'height'	=> $settings->separator_line_height,
-			'width'		=> ($settings->separator_line_width != '') ? $settings->separator_line_width : '30',
-			'alignment'	=> $settings->alignment,
-			'icon_photo_position'	=> $position,
-			'icon_spacing'			=> '5',
-
-			/* Icon Basics */
-			'icon' => $settings->icon,
-			'icon_size' => $settings->icon_size,
-			'icon_align' => $settings->alignment,
-			'icon_color' => $settings->separator_icon_color,
-
-
-			/* Image Style */
-			/*'image_style' => $settings->image_style,
-			'img_bg_size' => $settings->img_bg_size,
-			'img_border_style' => $settings->img_border_style,
-			'img_border_width' => $settings->img_border_width,
-			'img_bg_border_radius' => $settings->img_bg_border_radius,*/
-			'responsive_img_size' => $settings->responsive_img_size,
-			
-			/* Image Basics */
-			'img_size' => $settings->img_size,
-
-			/* Text */
-			'text_inline' => $settings->text_inline,
-			'text_tag_selection' => $settings->separator_text_tag_selection,
-			'text_font_family' => $settings->separator_text_font_family,
-			'text_font_size' => $settings->separator_text_font_size,
-			'text_line_height' => $settings->separator_text_line_height,
-			'text_color' => $settings->separator_text_color,
-
-		); 
-		
-		/* CSS Render Function */ 
-    	// FLBuilder::render_module_css( 'advanced-separator', $id , $separator_array );
 	}
 ?>
-
 .fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.uabb-heading {
 	margin-top: <?php echo $settings->heading_margin_top; ?>px;
 	margin-bottom: <?php echo $settings->heading_margin_bottom; ?>px;
@@ -77,9 +32,8 @@
 .fl-node-<?php echo $id; ?> .fl-module-content.fl-node-content .uabb-heading,
 .fl-node-<?php echo $id; ?> .fl-module-content.fl-node-content .uabb-heading .uabb-heading-text,
 .fl-node-<?php echo $id; ?> .fl-module-content.fl-node-content .uabb-heading * {
-	
-	<?php if(!empty($settings->color)) : ?>
-		color: <?php echo $settings->color; ?>;
+	<?php if(!empty($settings->title_color)) : ?>
+		color: <?php echo $settings->title_color; ?>;
 	<?php endif; ?>
 }
 
@@ -97,7 +51,7 @@
 	<?php endif; ?>
 
 	<?php if( $settings->line_height['desktop'] != '' ) : ?>
-	line-height: <?php echo $settings->line_height['desktop']; ?>px;
+		line-height: <?php echo $settings->line_height['desktop']; ?>px;
 	<?php endif; ?>
 }
 
@@ -239,3 +193,221 @@
         }
     <?php
 }
+
+	$settings->separator_line_color = UABB_Helper::uabb_colorpicker( $settings, 'separator_line_color' );
+	//remaining
+	$settings->color = UABB_Helper::uabb_colorpicker( $settings, 'color' );
+   //remaining
+	$settings->img_size = ( trim( $settings->img_size ) !== '' ) ? $settings->img_size : '50';
+	/*$settings->icon_photo_position = ( trim( $settings->icon_photo_position ) !== '' ) ? $settings->icon_photo_position : '50';*/
+	/*$settings->icon_spacing = ( trim( $settings->icon_spacing ) !== '' ) ? $settings->icon_spacing : '10';*/                  
+	$settings->separator_line_height = ( trim( $settings->separator_line_height ) !== '' ) ? $settings->separator_line_height : '1';
+	$settings->separator_line_width = ( trim( $settings->separator_line_width ) !== '' ) ? $settings->separator_line_width : '100';
+?>
+.fl-node-<?php echo $id; ?> .uabb-separator-parent {
+	line-height: 0;
+	text-align: <?php echo ( $settings->separator_line_width != 100 ) ? $settings->alignment : 'center'; ?>;
+}
+<!-- remining - no need  -->
+.fl-node-<?php echo $id; ?> .uabb-image-outter-wrap {
+	width: <?php echo /*( 2 * ( (int)$settings->img_border_width ) )*/ + ( 2 * ( (int)$settings->img_size ) ) + ( (int)$settings->img_size ); ?>px;
+}
+<?php if( $settings->separator_style == 'line' ) { ?> 
+.fl-node-<?php echo $id; ?> .uabb-separator {
+	border-top:<?php echo $settings->separator_line_height; ?>px <?php echo $settings->separator_line_style; ?> <?php echo uabb_theme_base_color( $settings->separator_line_color ); ?>;
+	width: <?php echo $settings->separator_line_width; ?>%;
+	display: inline-block;
+}
+<?php } ?>
+
+<?php if( $settings->separator_style == 'line_icon' ||  $settings->separator_style == 'line_image' || $settings->separator_style == 'line_text') { ?>
+
+<?php if( $settings->separator_style == 'line_image' || $settings->separator_style == 'line_icon' ){
+	
+	/* Render CSS */
+	 
+	/* CSS "$settings" Array */
+	 
+	 $imageicon_array = array(
+	      
+		/* General Section */
+		'image_type' => ( $settings->separator_style == 'line_image' ) ? 'photo' : ( ( $settings->separator_style == 'line_icon' ) ? 'icon' : '' ),
+		/* Icon Basics */
+		'icon' => $settings->icon,
+		'icon_size' => $settings->icon_size,
+		'icon_align' => 'center',
+
+		/* Image Basics */
+		'photo_source' => $settings->photo_source,
+		'photo' => $settings->photo,
+		'photo_url' => $settings->photo_url,
+		'img_size' => $settings->img_size,
+      	'responsive_img_size' => $settings->responsive_img_size,
+		'img_align' => 'center',//$settings->img_align,
+		'photo_src' => ( isset( $settings->photo_src ) ) ? $settings->photo_src : '' ,
+		
+		/* Preset Color variable new */
+		'icon_color_preset' => $settings->icon_color_preset, 
+	);
+	 
+	/* CSS Render Function */ 
+	FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
+
+	//FLBuilder::render_module_css( 'uabb-photo', $id, $settings->photo );
+?>
+<?php } ?>
+
+
+<?php if( $settings->separator_style == 'line_icon') {?>
+	.fl-node-<?php echo $id; ?> .uabb-imgicon-wrap .uabb-icon i,
+	.fl-node-<?php echo $id; ?> .uabb-imgicon-wrap .uabb-icon i:before {
+		width: 1.3em;
+		height: 1.3em;
+		line-height: 1.3em;
+	}
+<?php } ?>
+
+
+<?php if( $settings->separator_style == 'line_text'  ){ ?>
+	.fl-node-<?php echo $id; ?> <?php echo $settings->separator_text_tag_selection; ?>.uabb-divider-text{
+		white-space: nowrap;
+		margin: 0;
+		<?php echo (!empty( $settings->color) ) ? 'color: '.$settings->color.';' : ''; ?>
+		<?php if( $settings->text_font_family['family'] != 'Default' ) { ?>
+			<?php UABB_Helper::uabb_font_css( $settings->text_font_family ); ?>
+		 <?php } ?>
+		<?php echo ( $settings->separator_text_font_size['desktop'] != '' ) ? 'font-size: ' . $settings->separator_text_font_size['desktop'] . 'px;' : ''; ?>
+		<?php echo ( $settings->separator_text_line_height['desktop'] != '' ) ? 'line-height: ' . $settings->separator_text_line_height['desktop'] . 'px;' : ''; ?>
+	}
+<?php } ?>
+
+
+
+.fl-node-<?php echo $id; ?> .uabb-separator-wrap {
+	width: <?php echo $settings->separator_line_width; ?>%;
+	display: table;
+}
+
+<?php if( $settings->alignment == 'center' ) { ?>
+.fl-node-<?php echo $id; ?> .uabb-separator-wrap.uabb-separator-center {
+	margin-left: auto;
+    margin-right: auto;
+}
+<?php } ?>
+
+<?php if( $settings->alignment == 'left' ) { ?>
+.fl-node-<?php echo $id; ?> .uabb-separator-wrap.uabb-separator-left {
+	margin-left: 0;
+    margin-right: auto;
+}
+<?php } ?>
+
+<?php if( $settings->alignment == 'right' ) { ?>
+.fl-node-<?php echo $id; ?> .uabb-separator-wrap.uabb-separator-right {
+	margin-left: auto;
+    margin-right: 0;
+}
+<?php } ?>
+
+.fl-node-<?php echo $id; ?> .uabb-separator-line {
+	display: table-cell;
+	vertical-align:middle;
+}
+
+.fl-node-<?php echo $id; ?> .uabb-separator-line > span {
+	border-top:<?php echo $settings->separator_line_height; ?>px <?php echo $settings->separator_line_style; ?> <?php echo uabb_theme_base_color( $settings->separator_line_color ); ?>;
+	/*filter: alpha(opacity = <?php //echo $settings->opacity; ?>);
+	opacity: <?php //echo $settings->opacity/100; ?>;*/
+	display: block;
+    margin-top: 0 !important;
+}
+
+.fl-node-<?php echo $id; ?> .uabb-divider-content{
+		
+}
+
+.fl-node-<?php echo $id; ?> .uabb-side-left{
+	width: <?php echo $position; ?>%;
+}
+.fl-node-<?php echo $id; ?> .uabb-side-right{
+	width: <?php echo ( 100 - $position ); ?>%;
+}
+
+.fl-node-<?php echo $id; ?> .uabb-divider-content {
+	display: table-cell;
+}
+.fl-node-<?php echo $id; ?> .uabb-divider-content .uabb-icon-wrap{
+	display: block;
+}
+
+<?php }
+
+if( $settings->separator_style == 'line_text' || $settings->separator_style == 'line_image' ) {
+
+	if( $global_settings->responsive_enabled ) { // Global Setting If started
+?>
+	    @media ( max-width: <?php echo $global_settings->medium_breakpoint; ?>px ) {
+	    	
+	    	<?php
+	    	if( $settings->separator_text_font_size['medium'] != '' || $settings->separator_text_line_height['medium'] != '' ) {
+	    	?>
+	     	.fl-node-<?php echo $id; ?> <?php echo $settings->separator_text_tag_selection; ?>.uabb-divider-text {
+	     		<?php echo ( $settings->separator_text_font_size['medium'] != '' ) ? 'font-size: ' . $settings->separator_text_font_size['medium'] . 'px;' : ''; ?>
+				<?php echo ( $settings->separator_text_line_height['medium'] != '' ) ? 'line-height: ' . $settings->separator_text_line_height['medium'] . 'px;' : ''; ?>
+	     	}
+			<?php
+			}
+			?>
+
+			/* For Medium Device */
+			.fl-node-<?php echo $id; ?> .uabb-responsive-medsmall .uabb-side-left {
+				<!-- width: <?php //echo ( $settings->icon_photo_position * 40 /100 ); ?>%; -->
+			}
+			.fl-node-<?php echo $id; ?> .uabb-responsive-medsmall .uabb-side-right {
+				<!-- width: <?php //echo 40 - ( $settings->icon_photo_position * 40 /100 ); ?>%; -->
+			}
+
+			.fl-node-<?php echo $id; ?> .uabb-responsive-medsmall .uabb-divider-content <?php echo $settings->separator_text_tag_selection; ?> {
+			    white-space: normal;
+			}
+
+
+	    }
+	 
+	     @media ( max-width: <?php echo $global_settings->responsive_breakpoint; ?>px ) {
+
+	     	<?php
+	    	if( $settings->separator_text_font_size['small'] != '' || $settings->separator_text_line_height['small'] != '' ) {
+	    	?>
+	     	.fl-node-<?php echo $id; ?> <?php echo $settings->separator_text_tag_selection; ?>.uabb-divider-text {
+	     		<?php echo ( $settings->separator_text_font_size['small'] != '' ) ? 'font-size: ' . $settings->separator_text_font_size['small'] . 'px;' : ''; ?>
+				<?php echo ( $settings->separator_text_line_height['small'] != '' ) ? 'line-height: ' . $settings->separator_text_line_height['small'] . 'px;' : ''; ?>
+	     	}
+			<?php
+			}
+			?>
+
+			<?php if ( $settings->responsive_img_size != '' ) { ?>
+			.fl-node-<?php echo $id; ?> .uabb-image-outter-wrap {
+				width: <?php echo /*( 2 * ( $settings->img_border_width ) ) + */( 2 * ( $settings->img_size ) ) + ( $settings->responsive_img_size ); ?>px;
+			}
+			<?php } ?>
+
+			/* For Small Device */
+			.fl-node-<?php echo $id; ?> .uabb-responsive-mobile .uabb-side-left,
+			.fl-node-<?php echo $id; ?> .uabb-responsive-medsmall .uabb-side-left {
+				<!-- width: <?php //echo ( $settings->icon_photo_position * 20 /100 ); ?>%; -->
+			}
+			.fl-node-<?php echo $id; ?> .uabb-responsive-mobile .uabb-side-right,
+			.fl-node-<?php echo $id; ?> .uabb-responsive-medsmall .uabb-side-right {
+				<!-- width: <?php //echo 20 - ( $settings->icon_photo_position * 20 /100 ); ?>%; -->
+			}
+
+			.fl-node-<?php echo $id; ?> .uabb-responsive-mobile .uabb-divider-content <?php echo $settings->separator_text_tag_selection; ?> {
+			    white-space: normal;
+			}
+	    }
+<?php
+	}
+}
+?>

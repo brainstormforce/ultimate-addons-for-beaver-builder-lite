@@ -37,52 +37,38 @@ class UABBHeadingModule extends FLBuilderModule {
         return $field;
     }
 
-	public function render_separator( $pos ) {
-		if( $this->settings->separator_style != 'none' && $this->settings->separator_position == $pos ) {
-
-			$position = '0';
-			if( $this->settings->alignment == 'center' ) {
-				$position = '50';
-			} elseif( $this->settings->alignment == 'right' ) {
-				$position = '100';
-			}
-			$line_color = uabb_theme_base_color( $this->settings->separator_line_color );
-			$separator_array = array(
+    /**
+	 * @method render_image
+	 */
+	public function render_image()
+	{
+		if( $this->settings->separator_style == 'line_image' || $this->settings->separator_style == 'line_icon' ) {
+			$imageicon_array = array(
+	 
 				/* General Section */
-				'separator' => $this->settings->separator_style,
-				'style'		=> $this->settings->separator_line_style,
-				'color'		=> $line_color,
-				'height'	=> $this->settings->separator_line_height,
-				'width'		=> ($this->settings->separator_line_width != '') ? $this->settings->separator_line_width : '30',
-				'alignment'	=> $this->settings->alignment,
-				'icon_photo_position'	=> $position,
+				'image_type' => ( $this->settings->separator_style == 'line_image' ) ? 'photo' : ( ( $this->settings->separator_style == 'line_icon' ) ? 'icon' : '' ),
 
 				/* Icon Basics */
 				'icon' => $this->settings->icon,
 				'icon_size' => $this->settings->icon_size,
-				'icon_align' => $this->settings->alignment,
-				'icon_color' => $this->settings->separator_icon_color,
-				
+				'icon_align' => 'center',//$this->settings->icon_align,
+
 				/* Image Basics */
 				'photo_source' => $this->settings->photo_source,
 				'photo' => $this->settings->photo,
 				'photo_url' => $this->settings->photo_url,
-				'img_align' => $this->settings->alignment,
-				'image_style' => 'simple',
-				'photo_src' =>  isset($this->settings->photo_src) ? $this->settings->photo_src : '',
-
-				/* Text */
-				'text_inline' => $this->settings->text_inline,
-				'text_tag_selection' => $this->settings->separator_text_tag_selection,
-				'text_font_family' => $this->settings->separator_text_font_family,
-				'text_font_size' => $this->settings->separator_text_font_size,
-				'text_line_height' => $this->settings->separator_text_line_height,
-				'text_color' => $this->settings->separator_text_color,
-
+				'img_size' => $this->settings->img_size,
+				'img_align' => 'center',//$this->settings->img_align,
+				'photo_src' => ( isset( $this->settings->photo_src ) ) ? $this->settings->photo_src : '' ,
 			); 
 			/* Render HTML Function */
-			FLBuilder::render_module_html( 'advanced-separator', $separator_array );
-
+			if( $this->settings->separator_style == 'line_image' ) {
+				echo '<div class="uabb-image-outter-wrap">';
+			}
+			FLBuilder::render_module_html( 'image-icon', $imageicon_array );
+			if( $this->settings->separator_style == 'line_image' ) {
+				echo '</div>';
+			}
 		}
 	}
 }
