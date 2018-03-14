@@ -249,6 +249,9 @@
 			
 			/* Preset Color variable new */
 			// 'icon_color_preset' => $settings->icon_color_preset, 
+
+            /* Icon color */
+			'icon_color' => $settings->separator_icon_color,
 		);
 		 
 		/* CSS Render Function */ 
