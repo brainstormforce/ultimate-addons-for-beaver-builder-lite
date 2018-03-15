@@ -18,7 +18,7 @@
 		}
 	}
 ?>
-.fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.uabb-heading {
+.fl-node-<?php echo $id; ?> .uabb-heading {
 	margin-top: <?php echo $settings->heading_margin_top; ?>px;
 	margin-bottom: <?php echo $settings->heading_margin_bottom; ?>px;
 }
@@ -37,8 +37,8 @@
 	<?php endif; ?>
 }
 
-.fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.uabb-heading,
-.fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.uabb-heading * {
+.fl-node-<?php echo $id; ?> .uabb-heading,
+.fl-node-<?php echo $id; ?> .uabb-heading * {
 	
 	<?php if( !empty($settings->font) && $settings->font['family'] != 'Default' ) : ?>
 		<?php UABB_Helper::uabb_font_css( $settings->font ); ?>
@@ -55,12 +55,12 @@
 	<?php endif; ?>
 }
 
-/* Heading's Description Color */
+<?php /* Heading's Description Color */ ?>
 .fl-node-<?php echo $id; ?> .fl-module-content.fl-node-content .uabb-module-content .uabb-text-editor {
 	color: <?php echo uabb_theme_text_color( $settings->desc_color ); ?>;
 }
 
-/* Heading's Description Typography */
+<?php /* Heading's Description Typography */ ?>
 .fl-node-<?php echo $id; ?> .uabb-text-editor {
 	
 	<?php if( !empty($settings->desc_font_family) && $settings->desc_font_family['family'] != 'Default' ) : ?>
@@ -92,8 +92,8 @@
 			}
 
 
-            .fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.uabb-heading,
-            .fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.uabb-heading * { 
+            .fl-node-<?php echo $id; ?> .uabb-heading,
+            .fl-node-<?php echo $id; ?> .uabb-heading * { 
 				<?php if( $settings->new_font_size['medium'] != '' ) : ?>
 					font-size: <?php echo $settings->new_font_size['medium']; ?>px;
 				<?php endif; ?>
@@ -114,7 +114,7 @@
         <?php /* Small Breakpoint media query */ ?>
         @media ( max-width: <?php echo $global_settings->responsive_breakpoint .'px'; ?> ) {
 
-        	/* For Small Device */
+        	<?php /* For Small Device */ ?>
 			.fl-node-<?php echo $id; ?> .uabb-responsive-mobile .uabb-side-left,
 			.fl-node-<?php echo $id; ?> .uabb-responsive-mobile .uabb-side-right,
 			.fl-node-<?php echo $id; ?> .uabb-responsive-medsmall .uabb-side-left,
@@ -126,8 +126,8 @@
 			    white-space: normal;
 			}
         	
-            .fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.uabb-heading,
-            .fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.uabb-heading * { 
+            .fl-node-<?php echo $id; ?> .uabb-heading,
+            .fl-node-<?php echo $id; ?> .uabb-heading * { 
 				<?php if( $settings->new_font_size['small'] != '' ) : ?>
 					font-size: <?php echo $settings->new_font_size['small']; ?>px;
 				<?php elseif( isset( $settings->r_font_size ) && isset( $settings->r_custom_font_size ) && $settings->r_font_size == 'custom' && $settings->r_custom_font_size != '' ) : ?>
@@ -196,12 +196,8 @@
 
 	$settings->separator_line_color = UABB_Helper::uabb_colorpicker( $settings, 'separator_line_color' );
 	$settings->separator_text_color = UABB_Helper::uabb_colorpicker( $settings, 'separator_text_color' );
-	//remaining
 	$settings->color = UABB_Helper::uabb_colorpicker( $settings, 'color' );
-   //remaining
-	$settings->img_size = ( trim( $settings->img_size ) !== '' ) ? $settings->img_size : '50';
-	/*$settings->icon_photo_position = ( trim( $settings->icon_photo_position ) !== '' ) ? $settings->icon_photo_position : '50';*/
-	/*$settings->icon_spacing = ( trim( $settings->icon_spacing ) !== '' ) ? $settings->icon_spacing : '10';*/                  
+	$settings->img_size = ( trim( $settings->img_size ) !== '' ) ? $settings->img_size : '50';       
 	$settings->separator_line_height = ( trim( $settings->separator_line_height ) !== '' ) ? $settings->separator_line_height : '1';
 	$settings->separator_line_width = ( trim( $settings->separator_line_width ) !== '' ) ? $settings->separator_line_width : '100';
 ?>
@@ -209,10 +205,11 @@
 	line-height: 0;
 	text-align: <?php echo ( $settings->separator_line_width != 100 ) ? $settings->alignment : 'center'; ?>;
 }
-<?php /* remining - no need  */ ?>
+
 .fl-node-<?php echo $id; ?> .uabb-image-outter-wrap {
 	width: <?php echo (int)$settings->img_size; ?>px;
 }
+
 <?php if( $settings->separator_style == 'line' || $settings->separator_style == 'line_text' ) { ?> 
 .fl-node-<?php echo $id; ?> .uabb-separator {
 	border-top:<?php echo $settings->separator_line_height; ?>px <?php echo $settings->separator_line_style; ?> <?php echo uabb_theme_base_color( $settings->separator_line_color ); ?>;
@@ -224,14 +221,9 @@
 <?php if( $settings->separator_style == 'line_icon' ||  $settings->separator_style == 'line_image' || $settings->separator_style == 'line_text') { ?>
 
 	<?php if( $settings->separator_style == 'line_image' || $settings->separator_style == 'line_icon' ){
-		
-		/* Render CSS */
-		 
-		/* CSS "$settings" Array */
-		 
+
 		 $imageicon_array = array(
-		      
-			/* General Section */
+
 			'image_type' => ( $settings->separator_style == 'line_image' ) ? 'photo' : ( ( $settings->separator_style == 'line_icon' ) ? 'icon' : '' ),
 			/* Icon Basics */
 			'icon' => $settings->icon,
@@ -246,9 +238,6 @@
 	      	'responsive_img_size' => $settings->responsive_img_size,
 			'img_align' => 'center',//$settings->img_align,
 			'photo_src' => ( isset( $settings->photo_src ) ) ? $settings->photo_src : '' ,
-			
-			/* Preset Color variable new */
-			// 'icon_color_preset' => $settings->icon_color_preset, 
 
             /* Icon color */
 			'icon_color' => $settings->separator_icon_color,
@@ -257,7 +246,6 @@
 		/* CSS Render Function */ 
 		FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 
-		//FLBuilder::render_module_css( 'uabb-photo', $id, $settings->photo );
 	?>
 	<?php } ?>
 
@@ -396,7 +384,7 @@ if( $settings->separator_style == 'line_text' || $settings->separator_style == '
 			}
 			<?php } ?>
 
-			/* For Small Device */
+			<?php /* For Small Device */ ?>
 			.fl-node-<?php echo $id; ?> .uabb-responsive-mobile .uabb-side-left,
 			.fl-node-<?php echo $id; ?> .uabb-responsive-medsmall .uabb-side-left {
 				width: <?php echo ( $position * 20 /100 ); ?>%; 

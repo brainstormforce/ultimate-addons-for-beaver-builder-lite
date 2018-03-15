@@ -51,14 +51,13 @@ class UABBHeadingModule extends FLBuilderModule {
 				/* Icon Basics */
 				'icon' => $this->settings->icon,
 				'icon_size' => $this->settings->icon_size,
-				'icon_align' => 'center',//$this->settings->icon_align,
-
+				'icon_align' => 'center',
 				/* Image Basics */
 				'photo_source' => $this->settings->photo_source,
 				'photo' => $this->settings->photo,
 				'photo_url' => $this->settings->photo_url,
 				'img_size' => $this->settings->img_size,
-				'img_align' => 'center',//$this->settings->img_align,
+				'img_align' => 'center',
 				'photo_src' => ( isset( $this->settings->photo_src ) ) ? $this->settings->photo_src : '' ,
 			); 
 			/* Render HTML Function */
@@ -212,9 +211,9 @@ FLBuilder::register_module('UABBHeadingModule', array(
 					),
 				)
 			),
-			'separator_icon_basic' 	=> 	array( // Section
-		        'title'         => __('Icon Basics','uabb'), // Section Title
-		        'fields'        => array( // Section Fields
+			'separator_icon_basic' 	=> 	array( 
+		        'title'         => __('Icon Basics','uabb'), 
+		        'fields'        => array( 
 		            'icon'          => array(
 		                'type'          => 'icon',
 		                'label'         => __('Icon', 'uabb'),
@@ -247,9 +246,9 @@ FLBuilder::register_module('UABBHeadingModule', array(
 					),
 		        )
 		    ),
-			'separator_img_basic' 	=> array( // Section
-		        'title'         => __('Image Basics','uabb'), // Section Title
-		        'fields'        => array( // Section Fields
+			'separator_img_basic' 	=> array( 
+		        'title'         => __('Image Basics','uabb'), 
+		        'fields'        => array( 
 		            'photo_source'  => array(
 		                'type'          => 'select',
 		                'label'         => __('Photo Source', 'uabb'),
@@ -325,7 +324,7 @@ FLBuilder::register_module('UABBHeadingModule', array(
 				)
 			),
 			'separator_line'	=> array(
-				'title'		=> __('Line Style', 'uabb'), //tab title
+				'title'		=> __('Line Style', 'uabb'), 
 				'fields'	=> array(
 					'separator_line_style'		=> array(
 						'type'          => 'select',
