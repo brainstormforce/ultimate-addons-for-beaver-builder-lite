@@ -20,28 +20,14 @@ class UABBHeadingModule extends FLBuilderModule {
             'partial_refresh'	=> true,
 			'icon'				=> 'text.svg',
 		));
-	
-		add_filter( 'fl_builder_render_settings_field', array( $this , 'uabb_heading_render_settings_field' ), 10, 3 );
 	}
-
-	function uabb_heading_render_settings_field( $field, $name, $settings ) {
-        
-        if( isset( $settings->new_font_size['desktop'] ) && isset( $settings->font_size ) && isset( $settings->custom_font_size ) && $settings->font_size == 'custom' && $settings->custom_font_size != '' ) {
-            $settings->new_font_size['desktop'] = $settings->custom_font_size;
-        }
-
-        if( isset( $settings->new_font_size['small'] ) && isset( $settings->r_font_size ) && isset( $settings->r_custom_font_size ) && $settings->r_font_size == 'custom' && $settings->r_custom_font_size != '' ) {
-            $settings->new_font_size['small'] = $settings->r_custom_font_size;
-        }
-
-        return $field;
-    }
 
     /**
 	 * @method render_image
 	 */
 	public function render_image()
 	{
+
 		if( $this->settings->separator_style == 'line_image' || $this->settings->separator_style == 'line_icon' ) {
 			$imageicon_array = array(
 	 
@@ -52,6 +38,7 @@ class UABBHeadingModule extends FLBuilderModule {
 				'icon' => $this->settings->icon,
 				'icon_size' => $this->settings->icon_size,
 				'icon_align' => 'center',
+
 				/* Image Basics */
 				'photo_source' => $this->settings->photo_source,
 				'photo' => $this->settings->photo,
@@ -60,11 +47,14 @@ class UABBHeadingModule extends FLBuilderModule {
 				'img_align' => 'center',
 				'photo_src' => ( isset( $this->settings->photo_src ) ) ? $this->settings->photo_src : '' ,
 			); 
+
 			/* Render HTML Function */
 			if( $this->settings->separator_style == 'line_image' ) {
 				echo '<div class="uabb-image-outter-wrap">';
 			}
+
 			FLBuilder::render_module_html( 'image-icon', $imageicon_array );
+			
 			if( $this->settings->separator_style == 'line_image' ) {
 				echo '</div>';
 			}

@@ -7,6 +7,12 @@
     $settings->desc_margin_top = ( trim($settings->desc_margin_top) !== '' ) ? $settings->desc_margin_top : '15';
     $settings->desc_margin_bottom = ( trim($settings->desc_margin_bottom) !== '' ) ? $settings->desc_margin_bottom : '0';
     $settings->img_size = ( trim($settings->img_size) !== '' ) ? $settings->img_size : '50';
+    $settings->separator_line_color = UABB_Helper::uabb_colorpicker( $settings, 'separator_line_color' );
+    $settings->separator_text_color = UABB_Helper::uabb_colorpicker( $settings, 'separator_text_color' );
+    $settings->color = UABB_Helper::uabb_colorpicker( $settings, 'color' );
+    $settings->img_size = ( trim( $settings->img_size ) !== '' ) ? $settings->img_size : '50';       
+    $settings->separator_line_height = ( trim( $settings->separator_line_height ) !== '' ) ? $settings->separator_line_height : '1';
+    $settings->separator_line_width = ( trim( $settings->separator_line_width ) !== '' ) ? $settings->separator_line_width : '100';
 
     if( $settings->separator_style != 'none' ) {
     	
@@ -28,7 +34,6 @@
 	margin-bottom: <?php echo $settings->desc_margin_bottom; ?>px;
 }
 
-/* Heading Color */
 .fl-node-<?php echo $id; ?> .fl-module-content.fl-node-content .uabb-heading,
 .fl-node-<?php echo $id; ?> .fl-module-content.fl-node-content .uabb-heading .uabb-heading-text,
 .fl-node-<?php echo $id; ?> .fl-module-content.fl-node-content .uabb-heading * {
@@ -81,7 +86,7 @@
         <?php /* Medium Breakpoint media query */  ?>
         @media ( max-width: <?php echo $global_settings->medium_breakpoint .'px'; ?> ) {
 
-        	/* For Medium Device */
+        	<?php /* For Medium Device */ ?>
 			.fl-node-<?php echo $id; ?> .uabb-responsive-medsmall .uabb-side-left,
 			.fl-node-<?php echo $id; ?> .uabb-responsive-medsmall .uabb-side-right {
 			    width: 20%;
@@ -90,7 +95,6 @@
 			.fl-node-<?php echo $id; ?> .uabb-responsive-medsmall .uabb-divider-content <?php echo $settings->separator_text_tag_selection; ?> {
 			    white-space: normal;
 			}
-
 
             .fl-node-<?php echo $id; ?> .uabb-heading,
             .fl-node-<?php echo $id; ?> .uabb-heading * { 
@@ -192,15 +196,8 @@
 			<?php endif; ?>
         }
     <?php
-}
+} ?>
 
-	$settings->separator_line_color = UABB_Helper::uabb_colorpicker( $settings, 'separator_line_color' );
-	$settings->separator_text_color = UABB_Helper::uabb_colorpicker( $settings, 'separator_text_color' );
-	$settings->color = UABB_Helper::uabb_colorpicker( $settings, 'color' );
-	$settings->img_size = ( trim( $settings->img_size ) !== '' ) ? $settings->img_size : '50';       
-	$settings->separator_line_height = ( trim( $settings->separator_line_height ) !== '' ) ? $settings->separator_line_height : '1';
-	$settings->separator_line_width = ( trim( $settings->separator_line_width ) !== '' ) ? $settings->separator_line_width : '100';
-?>
 .fl-node-<?php echo $id; ?> .uabb-separator-parent {
 	line-height: 0;
 	text-align: <?php echo ( $settings->separator_line_width != 100 ) ? $settings->alignment : 'center'; ?>;
@@ -211,18 +208,18 @@
 }
 
 <?php if( $settings->separator_style == 'line' || $settings->separator_style == 'line_text' ) { ?> 
-.fl-node-<?php echo $id; ?> .uabb-separator {
-	border-top:<?php echo $settings->separator_line_height; ?>px <?php echo $settings->separator_line_style; ?> <?php echo uabb_theme_base_color( $settings->separator_line_color ); ?>;
-	width: <?php echo $settings->separator_line_width; ?>%;
-	display: inline-block;
-}
+	.fl-node-<?php echo $id; ?> .uabb-separator {
+		border-top:<?php echo $settings->separator_line_height; ?>px <?php echo $settings->separator_line_style; ?> <?php echo uabb_theme_base_color( $settings->separator_line_color ); ?>;
+		width: <?php echo $settings->separator_line_width; ?>%;
+		display: inline-block;
+	}
 <?php } ?>
 
 <?php if( $settings->separator_style == 'line_icon' ||  $settings->separator_style == 'line_image' || $settings->separator_style == 'line_text') { ?>
 
 	<?php if( $settings->separator_style == 'line_image' || $settings->separator_style == 'line_icon' ){
 
-		 $imageicon_array = array(
+		$imageicon_array = array(
 
 			'image_type' => ( $settings->separator_style == 'line_image' ) ? 'photo' : ( ( $settings->separator_style == 'line_icon' ) ? 'icon' : '' ),
 			/* Icon Basics */
@@ -249,7 +246,6 @@
 	?>
 	<?php } ?>
 
-
 	<?php if( $settings->separator_style == 'line_icon') {?>
 		.fl-node-<?php echo $id; ?> .uabb-imgicon-wrap .uabb-icon i,
 		.fl-node-<?php echo $id; ?> .uabb-imgicon-wrap .uabb-icon i:before {
@@ -258,7 +254,6 @@
 			line-height: 1.3em;
 		}
 	<?php } ?>
-
 
 	<?php if( $settings->separator_style == 'line_text'  ){ ?>
 		.fl-node-<?php echo $id; ?> <?php echo $settings->separator_text_tag_selection; ?>.uabb-divider-text{
@@ -272,8 +267,6 @@
 			<?php echo ( $settings->separator_text_line_height['desktop'] != '' ) ? 'line-height: ' . $settings->separator_text_line_height['desktop'] . 'px;' : ''; ?>
 		}
 	<?php } ?>
-
-
 
 	.fl-node-<?php echo $id; ?> .uabb-separator-wrap {
 		width: <?php echo $settings->separator_line_width; ?>%;
@@ -335,8 +328,7 @@
 
 if( $settings->separator_style == 'line_text' || $settings->separator_style == 'line_image' ) {
 
-	if( $global_settings->responsive_enabled ) { // Global Setting If started
-?>
+	if( $global_settings->responsive_enabled ) { // Global Setting If started ?>
 	    @media ( max-width: <?php echo $global_settings->medium_breakpoint; ?>px ) {
 	    	
 	    	<?php
@@ -350,7 +342,7 @@ if( $settings->separator_style == 'line_text' || $settings->separator_style == '
 			}
 			?>
 
-			/* For Medium Device */
+			<?php /* For Medium Device */ ?>
 			.fl-node-<?php echo $id; ?> .uabb-responsive-medsmall .uabb-side-left {
 				  width: <?php echo ( $position * 40 /100 ); ?>%; 
 			}
@@ -361,8 +353,6 @@ if( $settings->separator_style == 'line_text' || $settings->separator_style == '
 			.fl-node-<?php echo $id; ?> .uabb-responsive-medsmall .uabb-divider-content <?php echo $settings->separator_text_tag_selection; ?> {
 			    white-space: normal;
 			}
-
-
 	    }
 	 
 	     @media ( max-width: <?php echo $global_settings->responsive_breakpoint; ?>px ) {
