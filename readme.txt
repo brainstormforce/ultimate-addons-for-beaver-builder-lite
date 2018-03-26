@@ -196,6 +196,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 == Changelog ==
 
+= 1.2.3 =
+* New: Introduced Heading Module
+
 = 1.2.2 =
 * New: WPML Support
 
