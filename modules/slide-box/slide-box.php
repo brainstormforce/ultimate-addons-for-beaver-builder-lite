@@ -21,6 +21,7 @@ class SlideBoxModule extends FLBuilderModule {
             'url'           => BB_ULTIMATE_ADDON_URL . 'modules/slide-box/',
             'editor_export' => true, // Defaults to true and can be omitted.
             'enabled'       => true, // Defaults to true and can be omitted.
+            'icon'          => 'slides.svg',
         ));
         $this->add_css('font-awesome');
     }

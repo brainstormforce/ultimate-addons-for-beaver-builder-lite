@@ -73,7 +73,7 @@ FLBuilder::register_module('UABBHeadingModule', array(
 				'title'         => '',
 				'fields'        => array(
 					'heading'        => array(
-						'type'            => 'text',
+						'type'            => 'icon',
 						'label'           => __('Heading', 'uabb'),
 						'default'         => __('Design is a funny word', 'uabb'),
 						'preview'         => array(
