@@ -12,7 +12,7 @@
     $settings->color = UABB_Helper::uabb_colorpicker( $settings, 'color' );
     $settings->img_size = ( trim( $settings->img_size ) !== '' ) ? $settings->img_size : '50';       
     $settings->separator_line_height = ( trim( $settings->separator_line_height ) !== '' ) ? $settings->separator_line_height : '1';
-    $settings->separator_line_width = ( trim( $settings->separator_line_width ) !== '' ) ? $settings->separator_line_width : '100';
+    $settings->separator_line_width = ( trim( $settings->separator_line_width ) !== '' ) ? $settings->separator_line_width : '30';
 
     if( $settings->separator_style != 'none' ) {
     	
