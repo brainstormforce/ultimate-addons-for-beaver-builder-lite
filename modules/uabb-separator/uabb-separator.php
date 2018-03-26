@@ -18,7 +18,9 @@ class UABBSeparatorModule extends FLBuilderModule {
 			'dir'           	=> BB_ULTIMATE_ADDON_DIR . 'modules/uabb-separator/',
             'url'           	=> BB_ULTIMATE_ADDON_URL . 'modules/uabb-separator/',
             'editor_export' 	=> false,
-			'partial_refresh'	=> true
+			'partial_refresh'	=> true,
+			'icon'				=> 'minus.svg',
+			
 		));
 	}
 }

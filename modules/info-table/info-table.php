@@ -21,6 +21,7 @@ class UABBInfoTableModule extends FLBuilderModule {
             'editor_export'     => true, // Defaults to true and can be omitted.
             'enabled'           => true, // Defaults to true and can be omitted.
             'partial_refresh'   => true, // Defaults to false and can be omitted.
+            'icon'              => 'editor-table.svg',
         ));
     }
 }
