@@ -47,6 +47,7 @@ Want to connect with us to know more? Or have some suggestions we can take forwa
  	<li><a href="https://www.ultimatebeaver.com/modules/button/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Button</a>: A button can act as an effective lead generation module paired with your call-to-action. This module comes with several ways to make it look stylish and trendy.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/image-icon/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Image / Icon</a>: A lively content module that allows you to add an image of your choice and an icon among the hundreds available in the free library that comes with the Ultimate Addons for Beaver Builder.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/image-separator/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Simple Separator</a>: A simple content module that allows you to add a separator between the title and the description of a particular content. You’ll love the styling options given here!</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/heading/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Heading</a>: The Heading module allows you to add a heading anywhere on the page. Next time you want to add a single line, remember, you have the heading module.</li>
  	<li>Spacer: A very simple, yet useful module that allows you to insert extra space between modules or anywhere on a page.</li>
  	<li>100% SEO Friendly and quick loading modules.</li>
  	<li>A translation friendly interface that makes working easy and fun.</li>
@@ -195,6 +196,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 4. /assets/screenshots/4.png
 
 ## Changelog ##
+
+### 1.2.3 ###
+* New: Introduced Heading Module
 
 ### 1.2.2 ###
 * New: WPML Support
