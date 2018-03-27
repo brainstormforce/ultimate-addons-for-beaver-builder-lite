@@ -99,7 +99,7 @@ class UABBInfoTableModule extends FLBuilderModule {
                     $node->settings->btn_font_size_unit_medium = $node->settings->btn_font_size['medium'];
                 }
                 if( isset( $node->settings->btn_font_size['desktop']) && !isset( $node->settings->btn_font_size_unit ) ) {
-                    $node->settings->btn_font_size_unit = $node->settings->sub_heading_font_size['desktop'];
+                    $node->settings->btn_font_size_unit = $node->settings->btn_font_size['desktop'];
                 }
 
                 if ( isset( $node->settings->btn_line_height['small']) && isset( $node->settings->btn_font_size['small']) && $node->settings->btn_font_size['small'] != 0 &&!isset( $node->settings->btn_line_height_unit_responsive ) ) {

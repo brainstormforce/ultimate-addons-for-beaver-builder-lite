@@ -24,6 +24,120 @@ class SlideBoxModule extends FLBuilderModule {
             'icon'          => 'slides.svg',
         ));
         $this->add_css('font-awesome');
+
+        add_filter( 'fl_builder_layout_data', array( $this , 'render_new_data' ), 10, 3 );
+    }
+
+    function render_new_data( $data ) {
+
+        foreach ( $data as &$node ) {
+            
+            if ( isset( $node->settings->type ) && 'slide-box' === $node->settings->type ) {
+
+                if ( isset( $node->settings->front_title_font_size['small']) && !isset( $node->settings->front_title_font_size_unit_responsive ) ) {
+                    $node->settings->front_title_font_size_unit_responsive = $node->settings->front_title_font_size['small'];
+                }
+                if( isset( $node->settings->front_title_font_size['medium']) && !isset( $node->settings->front_title_font_size_unit_medium ) ) {
+                    $node->settings->front_title_font_size_unit_medium = $node->settings->front_title_font_size['medium'];
+                }
+                if( isset( $node->settings->front_title_font_size['desktop']) && !isset( $node->settings->front_title_font_size_unit ) ) {
+                    $node->settings->front_title_font_size_unit = $node->settings->front_title_font_size['desktop'];
+                }
+
+                if ( isset( $node->settings->front_title_line_height['small']) && !isset( $node->settings->front_title_line_height_unit_responsive ) ) {
+                    $node->settings->front_title_line_height_unit_responsive = $node->settings->front_title_line_height['small'];
+                }
+                if( isset( $node->settings->front_title_line_height['medium']) && !isset( $node->settings->front_title_line_height_unit_medium ) ) {
+                    $node->settings->front_title_line_height_unit_medium = $node->settings->front_title_line_height['medium'];
+                }
+                if( isset( $node->settings->front_title_line_height['desktop']) && !isset( $node->settings->front_title_line_height_unit ) ) {
+                    $node->settings->front_title_line_height_unit = $node->settings->front_title_line_height['desktop'];
+                }
+
+                if ( isset( $node->settings->front_desc_font_size['small']) && !isset( $node->settings->front_desc_font_size_unit_responsive ) ) {
+                    $node->settings->front_desc_font_size_unit_responsive = $node->settings->front_desc_font_size['small'];
+                }
+                if( isset( $node->settings->front_desc_font_size['medium']) && !isset( $node->settings->front_desc_font_size_unit_medium ) ) {
+                    $node->settings->front_desc_font_size_unit_medium = $node->settings->front_desc_font_size['medium'];
+                }
+                if( isset( $node->settings->front_desc_font_size['desktop']) && !isset( $node->settings->front_desc_font_size_unit ) ) {
+                    $node->settings->front_desc_font_size_unit = $node->settings->front_desc_font_size['desktop'];
+                }
+
+                if ( isset( $node->settings->front_desc_line_height['small']) && !isset( $node->settings->front_desc_line_height_unit_responsive ) ) {
+                    $node->settings->front_desc_line_height_unit_responsive = $node->settings->front_desc_line_height['small'];
+                }
+                if( isset( $node->settings->front_desc_line_height['medium']) && !isset( $node->settings->front_desc_line_height_unit_medium ) ) {
+                    $node->settings->front_desc_line_height_unit_medium = $node->settings->front_desc_line_height['medium'];
+                }
+                if( isset( $node->settings->front_desc_line_height['desktop']) && !isset( $node->settings->front_desc_line_height_unit ) ) {
+                    $node->settings->front_desc_line_height_unit = $node->settings->front_desc_line_height['desktop'];
+                }
+                
+                if ( isset( $node->settings->back_title_font_size['small']) && !isset( $node->settings->back_title_font_size_unit_responsive ) ) {
+                    $node->settings->back_title_font_size_unit_responsive = $node->settings->back_title_font_size['small'];
+                }
+                if( isset( $node->settings->back_title_font_size['medium']) && !isset( $node->settings->back_title_font_size_unit_medium ) ) {
+                    $node->settings->back_title_font_size_unit_medium = $node->settings->back_title_font_size['medium'];
+                }
+                if( isset( $node->settings->back_title_font_size['desktop']) && !isset( $node->settings->back_title_font_size_unit ) ) {
+                    $node->settings->back_title_font_size_unit = $node->settings->back_title_font_size['desktop'];
+                }
+
+                if ( isset( $node->settings->back_title_line_height['small']) && !isset( $node->settings->back_title_line_height_unit_responsive ) ) {
+                    $node->settings->back_title_line_height_unit_responsive = $node->settings->back_title_line_height['small'];
+                }
+                if( isset( $node->settings->back_title_line_height['medium']) && !isset( $node->settings->back_title_line_height_unit_medium ) ) {
+                    $node->settings->back_title_line_height_unit_medium = $node->settings->back_title_line_height['medium'];
+                }
+                if( isset( $node->settings->back_title_line_height['desktop']) && !isset( $node->settings->back_title_line_height_unit ) ) {
+                    $node->settings->back_title_line_height_unit = $node->settings->back_title_line_height['desktop'];
+                }
+
+                if ( isset( $node->settings->back_desc_font_size['small']) && !isset( $node->settings->back_desc_font_size_unit_responsive ) ) {
+                    $node->settings->back_desc_font_size_unit_responsive = $node->settings->back_desc_font_size['small'];
+                }
+                if( isset( $node->settings->back_desc_font_size['medium']) && !isset( $node->settings->back_desc_font_size_unit_medium ) ) {
+                    $node->settings->back_desc_font_size_unit_medium = $node->settings->back_desc_font_size['medium'];
+                }
+                if( isset( $node->settings->back_desc_font_size['desktop']) && !isset( $node->settings->back_desc_font_size_unit ) ) {
+                    $node->settings->back_desc_font_size_unit = $node->settings->back_desc_font_size['desktop'];
+                }
+
+                if ( isset( $node->settings->back_desc_line_height['small']) && !isset( $node->settings->back_desc_line_height_unit_responsive ) ) {
+                    $node->settings->back_desc_line_height_unit_responsive = $node->settings->back_desc_line_height['small'];
+                }
+                if( isset( $node->settings->back_desc_line_height['medium']) && !isset( $node->settings->back_desc_line_height_unit_medium ) ) {
+                    $node->settings->back_desc_line_height_unit_medium = $node->settings->back_desc_line_height['medium'];
+                }
+                if( isset( $node->settings->back_desc_line_height['desktop']) && !isset( $node->settings->back_desc_line_height_unit ) ) {
+                    $node->settings->back_desc_line_height_unit = $node->settings->back_desc_line_height['desktop'];
+                }
+
+                 if ( isset( $node->settings->link_font_size['small']) && !isset( $node->settings->link_font_size_unit_responsive ) ) {
+                    $node->settings->link_font_size_unit_responsive = $node->settings->link_font_size['small'];
+                }
+                if( isset( $node->settings->link_font_size['medium']) && !isset( $node->settings->link_font_size_unit_medium ) ) {
+                    $node->settings->link_font_size_unit_medium = $node->settings->link_font_size['medium'];
+                }
+                if( isset( $node->settings->link_font_size['desktop']) && !isset( $node->settings->link_font_size_unit ) ) {
+                    $node->settings->link_font_size_unit = $node->settings->link_font_size['desktop'];
+                }
+
+                if ( isset( $node->settings->link_line_height['small']) && !isset( $node->settings->link_line_height_unit_responsive ) ) {
+                    $node->settings->link_line_height_unit_responsive = $node->settings->link_line_height['small'];
+                }
+                if( isset( $node->settings->link_line_height['medium']) && !isset( $node->settings->link_line_height_unit_medium ) ) {
+                    $node->settings->link_line_height_unit_medium = $node->settings->link_line_height['medium'];
+                }
+                if( isset( $node->settings->link_line_height['desktop']) && !isset( $node->settings->link_line_height_unit ) ) {
+                    $node->settings->link_line_height_unit = $node->settings->link_line_height['desktop'];
+                }
+
+            }
+        }
+
+        return $data;
     }
 
     public function render_link()
@@ -873,22 +987,40 @@ FLBuilder::register_module('SlideBoxModule', array(
                             'selector'        => '.uabb-slide-face-text-title'
                         )
                     ),
-                    'front_title_font_size'     => array(
-                        'type'          => 'uabb-simplify',
+                    'front_title_font_size_unit'     => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Font Size', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'px',
+                        'preview'         => array(
+                            'type'            => 'css',
+                            'selector'        => '.uabb-slide-face-text-title',
+                            'property'         => 'font-size',
+                            'unit'             => 'px'
+                        ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
                         ),
                     ),
-                    'front_title_line_height'    => array(
-                        'type'          => 'uabb-simplify',
+                    'front_title_line_height_unit'    => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Line Height', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'em',
+                        'preview'         => array(
+                            'type'            => 'css',
+                            'selector'        => '.uabb-slide-face-text-title',
+                            'property'         => 'line-height',
+                            'unit'             => 'em'
+                        ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
                         ),
                     ),
                     'front_title_color'        => array( 
@@ -933,22 +1065,40 @@ FLBuilder::register_module('SlideBoxModule', array(
                             'selector'        => '.uabb-slide-box-section-content'
                         )
                     ),
-                    'front_desc_font_size'     => array(
-                        'type'          => 'uabb-simplify',
+                    'front_desc_font_size_unit'     => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Font Size', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'px',
+                        'preview'         => array(
+                            'type'            => 'css',
+                            'selector'        => '.uabb-slide-box-section-content',
+                            'property'         => 'font-size',
+                            'unit'          => 'px'
+                        ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
                         ),
                     ),
-                    'front_desc_line_height'    => array(
-                        'type'          => 'uabb-simplify',
+                    'front_desc_line_height_unit'    => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Line Height', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'em',
+                        'preview'         => array(
+                            'type'            => 'css',
+                            'selector'        => '.uabb-slide-box-section-content',
+                            'property'         => 'line-height',
+                            'unit'          => 'em'
+                        ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
                         ),
                     ),
                     'front_desc_color'        => array( 
@@ -1008,22 +1158,40 @@ FLBuilder::register_module('SlideBoxModule', array(
                             'selector'        => '.uabb-slide-back-text-title'
                         )
                     ),
-                    'back_title_font_size'     => array(
-                        'type'          => 'uabb-simplify',
+                    'back_title_font_size_unit'     => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Font Size', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'px',
+                        'preview'         => array(
+                            'type'            => 'css',
+                            'selector'        => '.uabb-slide-back-text-title',
+                            'property'        => 'font-size',
+                            'unit'             => 'px'
+                        ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
                         ),
                     ),
-                    'back_title_line_height'    => array(
-                        'type'          => 'uabb-simplify',
+                    'back_title_line_height_unit'    => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Line Height', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'em',
+                        'preview'         => array(
+                            'type'            => 'css',
+                            'selector'        => '.uabb-slide-back-text-title',
+                            'property'        => 'line-height',
+                            'unit'             => 'em'
+                        ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
                         ),
                     ),
                     'back_title_color'        => array( 
@@ -1066,22 +1234,40 @@ FLBuilder::register_module('SlideBoxModule', array(
                             'selector'        => '.uabb-slide-down-box-section-content'
                         )
                     ),
-                    'back_desc_font_size'     => array(
-                        'type'          => 'uabb-simplify',
+                    'back_desc_font_size_unit'     => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Font Size', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'px',
+                        'preview'         => array(
+                            'type'            => 'css',
+                            'selector'        => '.uabb-slide-down-box-section-content',
+                            'property'         => 'font-size',
+                            'unit'             => 'px'
+                        ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
                         ),
                     ),
-                    'back_desc_line_height'    => array(
-                        'type'          => 'uabb-simplify',
+                    'back_desc_line_height_unit'    => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Line Height', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'em',
+                        'preview'         => array(
+                            'type'            => 'css',
+                            'selector'        => '.uabb-slide-down-box-section-content',
+                            'property'         => 'line-height',
+                            'unit'             => 'em'
+                        ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
                         ),
                     ),
                     'back_desc_color'        => array( 
@@ -1125,22 +1311,40 @@ FLBuilder::register_module('SlideBoxModule', array(
                             'selector'  => '.uabb-callout-cta-link'
                         ),
                     ),
-                    'link_font_size'     => array(
-                        'type'          => 'uabb-simplify',
+                    'link_font_size_unit'     => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Font Size', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'px',
+                        'preview'   => array(
+                            'type'      => 'css',
+                            'selector'  => '.uabb-callout-cta-link',
+                            'property'  => 'font-size',
+                            'unit'      => 'px'
+                        ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
                         ),
                     ),
-                    'link_line_height'    => array(
-                        'type'          => 'uabb-simplify',
+                    'link_line_height_unit'    => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Line Height', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'em',
+                        'preview'   => array(
+                            'type'      => 'css',
+                            'selector'  => '.uabb-callout-cta-link',
+                            'property'  => 'line-height',
+                            'unit'      => 'em'
+                        ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
                         ),
                     ),
                     'link_color'        => array( 
