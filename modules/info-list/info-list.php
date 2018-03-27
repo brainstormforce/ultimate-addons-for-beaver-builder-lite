@@ -38,13 +38,13 @@ class UABBInfoList extends FLBuilderModule {
                     $node->settings->heading_font_size_unit = $node->settings->heading_font_size['desktop'];
                 }
 
-                if ( isset( $node->settings->heading_line_height['small']) && isset( $node->settings->heading_font_size['small']) && $node->settings->heading_font_size['small'] != 0 && isset( $node->settings->heading_line_height_unit_responsive ) ) {
+                if ( isset( $node->settings->heading_line_height['small']) && isset( $node->settings->heading_font_size['small']) && $node->settings->heading_font_size['small'] != 0 && !isset( $node->settings->heading_line_height_unit_responsive ) ) {
                     $node->settings->heading_line_height_unit_responsive = $node->settings->heading_line_height['small'] / $node->settings->heading_font_size['small'];
                 }
-                if( isset( $node->settings->heading_line_height['medium']) && isset( $node->settings->heading_font_size['medium']) && $node->settings->heading_font_size['medium'] != 0 && isset( $node->settings->heading_line_height_unit_medium ) ) {
+                if( isset( $node->settings->heading_line_height['medium']) && isset( $node->settings->heading_font_size['medium']) && $node->settings->heading_font_size['medium'] != 0 && !isset( $node->settings->heading_line_height_unit_medium ) ) {
                     $node->settings->heading_line_height_unit_medium = $node->settings->heading_line_height['medium'] / $node->settings->heading_font_size['medium'];
                 }
-                if( isset( $node->settings->heading_line_height['desktop']) && isset( $node->settings->heading_font_size['desktop']) && $node->settings->heading_font_size['desktop'] != 0 && isset( $node->settings->heading_line_height_unit ) ) {
+                if( isset( $node->settings->heading_line_height['desktop']) && isset( $node->settings->heading_font_size['desktop']) && $node->settings->heading_font_size['desktop'] != 0 && !isset( $node->settings->heading_line_height_unit ) ) {
                     $node->settings->heading_line_height_unit = $node->settings->heading_line_height['desktop'] / $node->settings->heading_font_size['desktop'];
                 }
 
@@ -58,13 +58,13 @@ class UABBInfoList extends FLBuilderModule {
                     $node->settings->description_font_size_unit = $node->settings->description_font_size['desktop'];
                 }
 
-                if ( isset( $node->settings->description_line_height['small']) && isset( $node->settings->description_font_size['small']) && $node->settings->description_font_size['small'] != 0 && isset( $node->settings->description_line_height_unit_responsive ) ) {
+                if ( isset( $node->settings->description_line_height['small']) && isset( $node->settings->description_font_size['small']) && $node->settings->description_font_size['small'] != 0 && !isset( $node->settings->description_line_height_unit_responsive ) ) {
                     $node->settings->description_line_height_unit_responsive = $node->settings->description_line_height['small'] / $node->settings->description_font_size['small'];
                 }
-                if( isset( $node->settings->description_line_height['medium']) && isset( $node->settings->description_font_size['medium']) && $node->settings->description_font_size['medium'] != 0 && isset( $node->settings->description_line_height_unit_medium ) ) {
+                if( isset( $node->settings->description_line_height['medium']) && isset( $node->settings->description_font_size['medium']) && $node->settings->description_font_size['medium'] != 0 && !isset( $node->settings->description_line_height_unit_medium ) ) {
                     $node->settings->description_line_height_unit_medium = $node->settings->description_line_height['medium'] / $node->settings->description_font_size['medium'];
                 }
-                if( isset( $node->settings->description_line_height['desktop']) && isset( $node->settings->description_font_size['desktop']) && $node->settings->description_font_size['desktop'] != 0 && isset( $node->settings->description_line_height_unit ) ) {
+                if( isset( $node->settings->description_line_height['desktop']) && isset( $node->settings->description_font_size['desktop']) && $node->settings->description_font_size['desktop'] != 0 && !isset( $node->settings->description_line_height_unit ) ) {
                     $node->settings->description_line_height_unit = $node->settings->description_line_height['desktop'] / $node->settings->description_font_size['desktop'];
                 }
 
@@ -469,6 +469,7 @@ FLBuilder::register_module('UABBInfoList', array(
                     'heading_font_size_unit'     => array(
                         'type'          => 'unit',
                         'label'         => __( 'Font Size', 'uabb' ),
+                        'description'   => 'px',
                         'responsive' => array(
                             'placeholder' => array(
                                 'default' => '',
@@ -486,6 +487,7 @@ FLBuilder::register_module('UABBInfoList', array(
                     'heading_line_height_unit'    => array(
                         'type'          => 'unit',
                         'label'         => __( 'Line Height', 'uabb' ),
+                        'description'   => 'em',
                         'responsive' => array(
                             'placeholder' => array(
                                 'default' => '',
@@ -497,7 +499,7 @@ FLBuilder::register_module('UABBInfoList', array(
                             'type'          => 'css',
                             'selector'      => '.uabb-info-list-title',
                             'property'      => 'line-height',
-                            'unit'          => 'px'
+                            'unit'          => 'em'
                         ),
                     ),
                     'heading_color'        => array( 
@@ -546,6 +548,7 @@ FLBuilder::register_module('UABBInfoList', array(
                     'description_font_size_unit'     => array(
                         'type'          => 'unit',
                         'label'         => __( 'Font Size', 'uabb' ),
+                        'description'   => 'px',
                         'preview'         => array(
                             'type'            => 'css',
                             'selector'        => '.uabb-info-list-description *',
@@ -563,11 +566,12 @@ FLBuilder::register_module('UABBInfoList', array(
                     'description_line_height_unit'    => array(
                         'type'          => 'unit',
                         'label'         => __( 'Line Height', 'uabb' ),
+                        'description'   => 'em',
                         'preview'         => array(
                             'type'            => 'css',
                             'selector'        => '.uabb-info-list-description *',
                             'property'        => 'line-height',
-                            'unit'            => 'px'
+                            'unit'            => 'em'
                         ),
                         'responsive' => array(
                             'placeholder' => array(
