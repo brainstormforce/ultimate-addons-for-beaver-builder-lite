@@ -14,12 +14,29 @@ class UABBInfoList extends FLBuilderModule {
             'editor_export'   => true, // Defaults to true and can be omitted.
             'enabled'         => true, // Defaults to true and can be omitted.
             'partial_refresh' => false, // Defaults to false and can be omitted.
+            'icon'            => 'info-list.svg'
         ));
         $this->add_js( 'jquery-waypoints' );
         // Register and enqueue your own.
         $this->add_css( 'uabb-animate', $this->url . 'css/animate.css' );
     }
 
+     /**
+     * @method get_icons
+     */
+    public function get_icon( $icon = '' ) {
+
+        // check if $icon is referencing an included icon.
+        if ( '' != $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/info-list/icon/' . $icon ) ) {
+            $path = BB_ULTIMATE_ADDON_DIR . 'modules/info-list/icon/' . $icon;
+        }
+
+        if ( file_exists( $path ) ) {
+            return file_get_contents( $path );
+        } else {
+            return '';
+        }
+    }
 
     /**
      * @method render_image

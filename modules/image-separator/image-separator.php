@@ -28,6 +28,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
             'group'         => UABB_CAT,
 			'dir'           	=> BB_ULTIMATE_ADDON_DIR . 'modules/image-separator/',
             'url'           	=> BB_ULTIMATE_ADDON_URL . 'modules/image-separator/',
+            'icon'				=> 'format-image.svg',
 		));
 
 		$this->add_js('jquery-waypoints');

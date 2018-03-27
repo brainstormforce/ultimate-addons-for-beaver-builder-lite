@@ -538,7 +538,7 @@ if ( $settings->description_font_family['family'] != "Default" || $settings->des
 			.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-content,
 			.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-icon {
 				display: block;
-				width: calc( 100% - 30px );
+				width: 100%;
 				text-align: center;
 			}
 
