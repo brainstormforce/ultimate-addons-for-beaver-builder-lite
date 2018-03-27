@@ -23,7 +23,102 @@ class FlipBoxModule extends FLBuilderModule {
             'icon'          => 'flip-box.svg'
         ));
         $this->add_css('font-awesome');
-    }
+
+                add_filter( 'fl_builder_layout_data', array( $this , 'render_new_data' ), 10, 3 );
+            }
+
+            function render_new_data( $data ) {
+
+                foreach ( $data as &$node ) {
+                    
+                    if ( isset( $node->settings->type ) && 'flip-box' === $node->settings->type ) {
+
+                        if ( isset( $node->settings->front_title_typography_font_size['small']) && !isset( $node->settings->front_title_typography_font_size_unit_responsive ) ) {
+                            $node->settings->front_title_typography_font_size_unit_responsive = $node->settings->front_title_typography_font_size['small'];
+                        }
+                        if( isset( $node->settings->front_title_typography_font_size['medium']) && !isset( $node->settings->front_title_typography_font_size_unit_medium ) ) {
+                            $node->settings->front_title_typography_font_size_unit_medium = $node->settings->front_title_typography_font_size['medium'];
+                        }
+                        if( isset( $node->settings->front_title_typography_font_size['desktop']) && !isset( $node->settings->front_title_typography_font_size_unit ) ) {
+                            $node->settings->front_title_typography_font_size_unit = $node->settings->front_title_typography_font_size['desktop'];
+                        }
+
+                        if ( isset( $node->settings->front_title_typography_line_height['small']) && isset( $node->settings->front_title_typography_font_size['small']) && $node->settings->front_title_typography_font_size['small'] != 0 && !isset( $node->settings->front_title_typography_line_height_unit_responsive ) ) {
+
+                            $node->settings->front_title_typography_line_height_unit_responsive = $node->settings->front_title_typography_line_height['small'] / $node->settings->front_title_typography_font_size['small'];
+                        }
+                        if( isset( $node->settings->front_title_typography_line_height['medium']) && isset( $node->settings->front_title_typography_font_size['medium']) && $node->settings->front_title_typography_font_size['medium'] != 0 && !isset( $node->settings->front_title_typography_line_height_unit_medium ) ) {
+                            $node->settings->front_title_typography_line_height_unit_medium = $node->settings->front_title_typography_line_height['medium'] / $node->settings->front_title_typography_font_size['medium'];
+                        }
+                        if( isset( $node->settings->front_title_typography_line_height['desktop']) && isset( $node->settings->front_title_typography_font_size['desktop']) && $node->settings->front_title_typography_font_size['desktop'] != 0 && !isset( $node->settings->front_title_typography_line_height_unit ) ) {
+                            $node->settings->front_title_typography_line_height_unit = $node->settings->front_title_typography_line_height['desktop'] / $node->settings->front_title_typography_font_size['desktop'];
+                        }
+
+                        if ( isset( $node->settings->front_desc_typography_font_size['small']) && !isset( $node->settings->front_desc_typography_font_size_unit_responsive ) ) {
+                            $node->settings->front_desc_typography_font_size_unit_responsive = $node->settings->front_desc_typography_font_size['small'];
+                        }
+                        if( isset( $node->settings->front_desc_typography_font_size['medium']) && !isset( $node->settings->front_desc_typography_font_size_unit_medium ) ) {
+                            $node->settings->front_desc_typography_font_size_unit_medium = $node->settings->front_desc_typography_font_size['medium'];
+                        }
+                        if( isset( $node->settings->front_desc_typography_font_size['desktop']) && !isset( $node->settings->front_desc_typography_font_size_unit ) ) {
+                            $node->settings->front_desc_typography_font_size_unit = $node->settings->front_desc_typography_font_size['desktop'];
+                        }
+
+                        if ( isset( $node->settings->front_desc_typography_line_height['small']) && isset( $node->settings->front_desc_typography_font_size['small']) && $node->settings->front_desc_typography_font_size['small'] != 0 && !isset( $node->settings->front_desc_typography_line_height_unit_responsive ) ) {
+                            $node->settings->front_desc_typography_line_height_unit_responsive = $node->settings->front_desc_typography_line_height['small'] / $node->settings->front_desc_typography_font_size['small'];
+                        }
+                        if( isset( $node->settings->front_desc_typography_line_height['medium']) && isset( $node->settings->front_desc_typography_font_size['medium']) && $node->settings->front_desc_typography_font_size['medium'] != 0 && !isset( $node->settings->front_desc_typography_line_height_unit_medium ) ) {
+                            $node->settings->front_desc_typography_line_height_unit_medium = $node->settings->front_desc_typography_line_height['medium'] / $node->settings->front_desc_typography_font_size['medium'];
+                        }
+                        if( isset( $node->settings->front_desc_typography_line_height['desktop']) && isset( $node->settings->front_desc_typography_font_size['desktop']) && $node->settings->front_desc_typography_font_size['desktop'] != 0 && !isset( $node->settings->front_desc_typography_line_height_unit ) ) {
+                            $node->settings->front_desc_typography_line_height_unit = $node->settings->front_desc_typography_line_height['desktop'] / $node->settings->front_desc_typography_font_size['desktop'];
+                        }
+                        
+                        if ( isset( $node->settings->back_title_typography_font_size['small']) && !isset( $node->settings->back_title_typography_font_size_unit_responsive ) ) {
+                            $node->settings->back_title_typography_font_size_unit_responsive = $node->settings->back_title_typography_font_size['small'];
+                        }
+                        if( isset( $node->settings->back_title_typography_font_size['medium']) && !isset( $node->settings->back_title_typography_font_size_unit_medium ) ) {
+                            $node->settings->back_title_typography_font_size_unit_medium = $node->settings->back_title_typography_font_size['medium'];
+                        }
+                        if( isset( $node->settings->back_title_typography_font_size['desktop']) && !isset( $node->settings->back_title_typography_font_size_unit ) ) {
+                            $node->settings->back_title_typography_font_size_unit = $node->settings->back_title_typography_font_size['desktop'];
+                        }
+
+                        if ( isset( $node->settings->back_title_typography_line_height['small']) && isset( $node->settings->back_title_typography_font_size['small']) && $node->settings->back_title_typography_font_size['small'] != 0 && !isset( $node->settings->back_title_typography_line_height_unit_responsive ) ) {
+                            $node->settings->back_title_typography_line_height_unit_responsive = $node->settings->back_title_typography_line_height['small'] / $node->settings->back_title_typography_font_size['small'];
+                        }
+                        if( isset( $node->settings->back_title_typography_line_height['medium']) && isset( $node->settings->back_title_typography_font_size['medium']) && $node->settings->back_title_typography_font_size['medium'] != 0 && !isset( $node->settings->back_title_typography_line_height_unit_medium ) ) {
+                            $node->settings->back_title_typography_line_height_unit_medium = $node->settings->back_title_typography_line_height['medium'] / $node->settings->back_title_typography_font_size['medium'];
+                        }
+                        if( isset( $node->settings->back_title_typography_line_height['desktop']) && isset( $node->settings->back_title_typography_font_size['desktop']) && $node->settings->back_title_typography_font_size['desktop'] != 0 && !isset( $node->settings->back_title_typography_line_height_unit ) ) {
+                            $node->settings->back_title_typography_line_height_unit = $node->settings->back_title_typography_line_height['desktop'] / $node->settings->back_title_typography_font_size['desktop'];
+                        }
+
+                        if ( isset( $node->settings->back_desc_typography_font_size['small']) && !isset( $node->settings->back_desc_typography_font_size_unit_responsive ) ) {
+                            $node->settings->back_desc_typography_font_size_unit_responsive = $node->settings->back_desc_typography_font_size['small'];
+                        }
+                        if( isset( $node->settings->back_desc_typography_font_size['medium']) && !isset( $node->settings->back_desc_typography_font_size_unit_medium ) ) {
+                            $node->settings->back_desc_typography_font_size_unit_medium = $node->settings->back_desc_typography_font_size['medium'];
+                        }
+                        if( isset( $node->settings->back_desc_typography_font_size['desktop']) && !isset( $node->settings->back_desc_typography_font_size_unit ) ) {
+                            $node->settings->back_desc_typography_font_size_unit = $node->settings->back_desc_typography_font_size['desktop'];
+                        }
+
+                        if ( isset( $node->settings->back_desc_typography_line_height['small']) && isset( $node->settings->back_desc_typography_font_size['small']) && $node->settings->back_desc_typography_font_size['small'] != 0 && !isset( $node->settings->back_desc_typography_line_height_unit_responsive ) ) {
+                            $node->settings->back_desc_typography_line_height_unit_responsive = $node->settings->back_desc_typography_line_height['small'] / $node->settings->back_desc_typography_font_size['small'];
+                        }
+                        if( isset( $node->settings->back_desc_typography_line_height['medium']) && isset( $node->settings->back_desc_typography_font_size['medium']) && $node->settings->back_desc_typography_font_size['medium'] != 0 && !isset( $node->settings->back_desc_typography_line_height_unit_medium ) ) {
+                            $node->settings->back_desc_typography_line_height_unit_medium = $node->settings->back_desc_typography_line_height['medium'] / $node->settings->back_desc_typography_font_size['medium'];
+                        }
+                        if( isset( $node->settings->back_desc_typography_line_height['desktop']) && isset( $node->settings->back_desc_typography_font_size['desktop']) && $node->settings->back_desc_typography_font_size['desktop'] != 0 && !isset( $node->settings->back_desc_typography_line_height_unit ) ) {
+                            $node->settings->back_desc_typography_line_height_unit = $node->settings->back_desc_typography_line_height['desktop'] / $node->settings->back_desc_typography_font_size['desktop'];
+                        }
+
+                    }
+                }
+
+                return $data;
+            }
 
     /**
      * @method get_icons
@@ -730,23 +825,29 @@ FLBuilder::register_module('FlipBoxModule', array(
                             'selector'  => '.uabb-face-text-title'
                         ),
                     ),
-                    'front_title_typography_font_size'     => array(
-                        'type'          => 'uabb-simplify',
+                    'front_title_typography_font_size_unit'     => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Font Size', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
-                        )
+                        'description'   => 'px',
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ),
                     ),
-                    'front_title_typography_line_height'    => array(
-                        'type'          => 'uabb-simplify',
+                    'front_title_typography_line_height_unit'    => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Line Height', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
-                        )
+                        'description'   => 'em',
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ),
                     ),
                     'front_title_typography_color'        => array( 
                         'type'       => 'color',
@@ -785,23 +886,29 @@ FLBuilder::register_module('FlipBoxModule', array(
                             'selector'  => '.uabb-flip-box-section-content'
                         ),
                     ),
-                    'front_desc_typography_font_size'     => array(
-                        'type'          => 'uabb-simplify',
+                    'front_desc_typography_font_size_unit'     => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Font Size', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
-                        )
+                        'description'   => 'px',
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ),
                     ),
-                    'front_desc_typography_line_height'    => array(
-                        'type'          => 'uabb-simplify',
+                    'front_desc_typography_line_height_unit'    => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Line Height', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
-                        )
+                        'description'   => 'em',
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ),
                     ),
                     'front_desc_typography_color'        => array( 
                         'type'       => 'color',
@@ -856,23 +963,29 @@ FLBuilder::register_module('FlipBoxModule', array(
                             'selector'  => '.uabb-back-text-title'
                         ),
                     ),
-                    'back_title_typography_font_size'     => array(
-                        'type'          => 'uabb-simplify',
+                    'back_title_typography_font_size_unit'     => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Font Size', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
-                        )
+                        'description'   => 'px',
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ),
                     ),
-                    'back_title_typography_line_height'    => array(
-                        'type'          => 'uabb-simplify',
+                    'back_title_typography_line_height_unit'    => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Line Height', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
-                        )
+                        'description'   => 'em',
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ),
                     ),
                     'back_title_typography_color'        => array( 
                         'type'       => 'color',
@@ -911,23 +1024,29 @@ FLBuilder::register_module('FlipBoxModule', array(
                             'selector'  => '.uabb-back-flip-box-section-content'
                         ),
                     ),
-                    'back_desc_typography_font_size'     => array(
-                        'type'          => 'uabb-simplify',
+                    'back_desc_typography_font_size_unit'     => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Font Size', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
-                        )
+                        'description'   => 'px',
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ),
                     ),
-                    'back_desc_typography_line_height'    => array(
-                        'type'          => 'uabb-simplify',
+                    'back_desc_typography_line_height_unit'    => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Line Height', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
-                        )
+                        'description'   => 'em',
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ),
                     ),
                     'back_desc_typography_color'        => array( 
                         'type'       => 'color',
