@@ -43,7 +43,7 @@ class RibbonModule extends FLBuilderModule {
                     $node->settings->text_font_size_unit = $node->settings->text_font_size['desktop'];
                 }
 
-                if ( isset( $node->settings->text_line_height['small']) && isset( $node->settings->font_size['small']) && $node->settings->text_font_size['small'] != 0 && !isset( $node->settings->text_line_height_unit_responsive ) ) {
+                if ( isset( $node->settings->text_line_height['small']) && isset( $node->settings->text_font_size['small']) && $node->settings->text_font_size['small'] != 0 && !isset( $node->settings->text_line_height_unit_responsive ) ) {
 
                     $node->settings->text_line_height_unit_responsive = $node->settings->text_line_height['small'] / $node->settings->text_font_size['small'];
                 }
