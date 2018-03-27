@@ -50,9 +50,9 @@
 	<?php endif; ?>
 
 	<?php if( !isset( $settings->font_size_unit ) ) { ?>
-		<?php if( is_array( $settings->new_font_size ) && $settings->new_font_size['desktop'] != '' ) : ?>
+		<?php if( isset( $settings->new_font_size ) && $settings->new_font_size['desktop'] != '' ) : ?>
 			font-size: <?php echo $settings->new_font_size['desktop']; ?>px;
-		<?php elseif( is_array( $settings->new_font_size ) && isset( $settings->custom_font_size ) && $settings->font_size == 'custom' && $settings->custom_font_size != '' ) : ?>
+		<?php elseif( isset( $settings->new_font_size ) && isset( $settings->custom_font_size ) && $settings->font_size == 'custom' && $settings->custom_font_size != '' ) : ?>
 			font-size: <?php echo $settings->custom_font_size; ?>px;
 		<?php elseif( isset( $settings->new_font_size ) && $settings->new_font_size != '' ) : ?>
 			font-size: <?php echo $settings->new_font_size; ?>px;
