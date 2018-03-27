@@ -30,24 +30,24 @@ class UABBHeadingModule extends FLBuilderModule {
 			
 			if ( isset( $node->settings->type ) && 'uabb-heading' === $node->settings->type ) {
 				
-				if ( isset( $node->settings->new_font_size['small']) && !isset( $node->settings->font_size_unit_responsive ) ) {
-					$node->settings->font_size_unit_responsive = $node->settings->new_font_size['small'];
+				if ( isset( $node->settings->font_size['small']) && !isset( $node->settings->font_size_unit_responsive ) ) {
+					$node->settings->font_size_unit_responsive = $node->settings->font_size['small'];
 				}
-				if( isset( $node->settings->new_font_size['medium']) && !isset( $node->settings->font_size_unit_medium ) ) {
-					$node->settings->font_size_unit_medium = $node->settings->new_font_size['medium'];
+				if( isset( $node->settings->font_size['medium']) && !isset( $node->settings->font_size_unit_medium ) ) {
+					$node->settings->font_size_unit_medium = $node->settings->font_size['medium'];
 				}
-				if( isset( $node->settings->new_font_size['desktop']) && !isset( $node->settings->font_size_unit ) ) {
-					$node->settings->font_size_unit = $node->settings->new_font_size['desktop'];
+				if( isset( $node->settings->font_size['desktop']) && !isset( $node->settings->font_size_unit ) ) {
+					$node->settings->font_size_unit = $node->settings->font_size['desktop'];
 				}
 
-				if ( isset( $node->settings->line_height['small']) && !isset( $node->settings->line_height_unit_responsive ) && $node->settings->new_font_size['small'] != 0 && !isset( $node->settings->line_height_unit_responsive ) ) {
-					$node->settings->line_height_unit_responsive = $node->settings->line_height['small'] / $node->settings->new_font_size['small'];
+				if ( isset( $node->settings->line_height['small']) && !isset( $node->settings->line_height_unit_responsive ) && $node->settings->font_size['small'] != 0 && !isset( $node->settings->line_height_unit_responsive ) ) {
+					$node->settings->line_height_unit_responsive = $node->settings->line_height['small'] / $node->settings->font_size['small'];
 				}
-				if( isset( $node->settings->line_height['medium']) && !isset( $node->settings->line_height_unit_medium ) && $node->settings->new_font_size['medium'] != 0 && !isset( $node->settings->line_height_unit_responsive ) ) {
-					$node->settings->line_height_unit_medium = $node->settings->line_height['medium'] / $node->settings->new_font_size['medium'];
+				if( isset( $node->settings->line_height['medium']) && !isset( $node->settings->line_height_unit_medium ) && $node->settings->font_size['medium'] != 0 && !isset( $node->settings->line_height_unit_responsive ) ) {
+					$node->settings->line_height_unit_medium = $node->settings->line_height['medium'] / $node->settings->font_size['medium'];
 				}
-				if( isset( $node->settings->line_height['desktop']) && !isset( $node->settings->line_height_unit )  && $node->settings->new_font_size['desktop'] != 0 && !isset( $node->settings->line_height_unit_responsive )) {
-					$node->settings->line_height_unit = $node->settings->line_height['desktop'] / $node->settings->new_font_size['desktop'];
+				if( isset( $node->settings->line_height['desktop']) && !isset( $node->settings->line_height_unit )  && $node->settings->font_size['desktop'] != 0 && !isset( $node->settings->line_height_unit_responsive )) {
+					$node->settings->line_height_unit = $node->settings->line_height['desktop'] / $node->settings->font_size['desktop'];
 				}
 
 				if ( isset( $node->settings->desc_font_size['small']) && !isset( $node->settings->desc_font_size_unit_responsive ) ) {
@@ -476,7 +476,7 @@ FLBuilder::register_module('UABBHeadingModule', array(
 							'selector'        => '.uabb-heading .uabb-heading-text'
 						)
 					),
-					'new_font_size_unit'     => array(
+					'font_size_unit'     => array(
 						'type'          => 'unit',
 						'label'         => __( 'Font Size', 'uabb' ),
 						'description'   => 'px',

@@ -50,12 +50,12 @@
 	<?php endif; ?>
 
 	<?php if( !isset( $settings->font_size_unit ) ) { ?>
-		<?php if( isset( $settings->new_font_size ) && $settings->new_font_size['desktop'] != '' ) : ?>
-			font-size: <?php echo $settings->new_font_size['desktop']; ?>px;
-		<?php elseif( isset( $settings->new_font_size ) && isset( $settings->custom_font_size ) && $settings->font_size == 'custom' && $settings->custom_font_size != '' ) : ?>
+		<?php if( is_array( $settings->font_size ) && $settings->font_size['desktop'] != '' ) : ?>
+			font-size: <?php echo $settings->font_size['desktop']; ?>px;
+		<?php elseif( is_array( $settings->font_size ) && isset( $settings->custom_font_size ) && $settings->font_size == 'custom' && $settings->custom_font_size != '' ) : ?>
 			font-size: <?php echo $settings->custom_font_size; ?>px;
-		<?php elseif( isset( $settings->new_font_size ) && $settings->new_font_size != '' ) : ?>
-			font-size: <?php echo $settings->new_font_size; ?>px;
+		<?php elseif( isset( $settings->font_size ) && $settings->font_size != '' ) : ?>
+			font-size: <?php echo $settings->font_size; ?>px;
 		<?php endif; ?>
 	<?php } else { ?>
 		<?php if( isset( $settings->font_size_unit ) && $settings->font_size_unit != '' ) : ?>
@@ -127,8 +127,8 @@
             .fl-node-<?php echo $id; ?> .uabb-heading * { 
 
 				<?php if( !isset( $settings->font_size_unit_medium ) ) { ?>
-					<?php if( isset( $settings->new_font_size['medium'] ) && $settings->new_font_size['medium'] != '' ) : ?>
-	                    font-size: <?php echo $settings->new_font_size['medium']; ?>px;
+					<?php if( isset( $settings->font_size['medium'] ) && $settings->font_size['medium'] != '' ) : ?>
+	                    font-size: <?php echo $settings->font_size['medium']; ?>px;
 	                <?php endif; ?>
 				<?php } else { ?>
 					<?php if( $settings->font_size_unit_medium != '' ) : ?>
@@ -188,8 +188,8 @@
             .fl-node-<?php echo $id; ?> .uabb-heading,
             .fl-node-<?php echo $id; ?> .uabb-heading * { 
 				<?php if( !isset( $settings->font_size_unit_responsible ) ) { ?>
-					<?php if( isset( $settings->new_font_size['small'] ) && $settings->new_font_size['small'] != '' ) : ?>
-	                    font-size: <?php echo $settings->new_font_size['small']; ?>px;
+					<?php if( isset( $settings->font_size['small'] ) && $settings->font_size['small'] != '' ) : ?>
+	                    font-size: <?php echo $settings->font_size['small']; ?>px;
 	                <?php elseif( isset( $settings->r_font_size ) && isset( $settings->r_custom_font_size ) && $settings->r_font_size == 'custom' && $settings->r_custom_font_size != '' ) : ?>
 	                    font-size: <?php echo $settings->r_custom_font_size; ?>px;
 	                    line-height: <?php echo ( isset( $settings->line_height['small'] ) && $settings->line_height['small'] != '' ) ? $settings->line_height['small'] : $settings->r_custom_font_size + 2; ?>em;
