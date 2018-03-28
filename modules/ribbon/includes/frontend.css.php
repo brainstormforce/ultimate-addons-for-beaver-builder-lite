@@ -25,25 +25,18 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 	/*background: <?php echo ( uabb_theme_base_color( $settings->ribbon_color ) != '' ) ? uabb_theme_base_color( $settings->ribbon_color ) : '#f7f7f7'; ?>;*/
     <?php
     echo ( $settings->text_color != '' ) ? 'color: ' . $settings->text_color . ';' : ''; ?>
-     <?php if( !isset( $settings->text_font_size_unit ) ) { ?>
-        <?php if( isset( $settings->text_font_size['desktop'] ) && $settings->text_font_size['desktop'] != '' ) : ?>
-            font-size: <?php echo $settings->text_font_size['desktop']; ?>px;
-        <?php endif; ?>
-    <?php } else { ?>
+
         <?php if( isset( $settings->text_font_size_unit ) && $settings->text_font_size_unit != '' ) : ?>
             font-size: <?php echo $settings->text_font_size_unit; ?>px;
         <?php endif; ?>
-    <?php } ?>
 
-    <?php if( !isset( $settings->text_line_height_unit ) ) { ?>
-        <?php if( isset( $settings->text_line_height['desktop'] ) && $settings->text_line_height['desktop'] != '' ) : ?>
+        <?php if( isset( $settings->text_font_size['desktop'] ) && $settings->text_font_size['desktop'] == '' && isset( $settings->text_line_height['desktop'] ) && $settings->text_line_height['desktop'] != '' && $settings->text_line_height_unit == '' ) { ?>
             line-height: <?php echo $settings->text_line_height['desktop']; ?>px;
-        <?php endif; ?>
-    <?php } else { ?>
+        <?php } ?>
+
         <?php if( isset( $settings->text_line_height_unit ) && $settings->text_line_height_unit != '' ) : ?>
             line-height: <?php echo $settings->text_line_height_unit; ?>em;
         <?php endif; ?>
-    <?php } ?>
 
     <?php
     if( $settings->text_font_family['family'] != 'Default' ) {
@@ -422,25 +415,19 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
         ?>
 
         .fl-node-<?php echo $id;?> .uabb-ribbon-wrap .uabb-ribbon {
-            <?php if( !isset( $settings->text_font_size_unit_medium ) ) { ?>
-                <?php if( isset( $settings->text_font_size['medium'] ) && $settings->text_font_size['medium'] != '' ) : ?>
-                    font-size: <?php echo $settings->text_font_size['medium']; ?>px;
-                <?php endif; ?>
-            <?php } else { ?>
-                <?php if( isset( $settings->text_font_size_unit_medium ) && $settings->text_font_size_unit_medium != '' ) : ?>
-                    font-size: <?php echo $settings->text_font_size_unit_medium; ?>px;
-                <?php endif; ?>
+
+            <?php if( isset( $settings->text_font_size_unit_medium ) && $settings->text_font_size_unit_medium != '' ) : ?>
+                font-size: <?php echo $settings->text_font_size_unit_medium; ?>px;
+            <?php endif; ?>
+
+            <?php if( isset( $settings->text_font_size['medium'] ) && $settings->text_font_size['medium'] == '' && isset( $settings->text_line_height['medium'] ) && $settings->text_line_height['medium'] != '' && $settings->text_line_height_unit_medium == '' ) { ?>
+                line-height: <?php echo $settings->text_line_height['medium']; ?>px;
             <?php } ?>
 
-            <?php if( !isset( $settings->text_line_height_unit_medium ) ) { ?>
-                <?php if( isset( $settings->text_line_height['medium'] ) && $settings->text_line_height['medium'] != '' ) : ?>
-                    line-height: <?php echo $settings->text_line_height['medium']; ?>px;
-                <?php endif; ?>
-            <?php } else { ?>
-                <?php if( isset( $settings->text_line_height_unit_medium ) && $settings->text_line_height_unit_medium != '' ) : ?>
-                    line-height: <?php echo $settings->text_line_height_unit_medium; ?>em;
-                <?php endif; ?>
-            <?php } ?>
+            <?php if( isset( $settings->text_line_height_unit_medium ) && $settings->text_line_height_unit_medium != '' ) : ?>
+                line-height: <?php echo $settings->text_line_height_unit_medium; ?>em;
+            <?php endif; ?>
+
         }
 
         <?php
@@ -450,25 +437,18 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
 
     @media ( max-width: <?php echo $global_settings->responsive_breakpoint; ?>px ) {
         .fl-node-<?php echo $id;?> .uabb-ribbon-wrap .uabb-ribbon {
-             <?php if( !isset( $settings->text_font_size_unit_responsive ) ) { ?>
-                <?php if( isset( $settings->text_font_size['small'] ) && $settings->text_font_size['small'] != '' ) : ?>
-                    font-size: <?php echo $settings->text_font_size['small']; ?>px;
-                <?php endif; ?>
-            <?php } else { ?>
-                <?php if( isset( $settings->text_font_size_unit_responsive ) && $settings->text_font_size_unit_responsive != '' ) : ?>
-                    font-size: <?php echo $settings->text_font_size_unit_responsive; ?>px;
-                <?php endif; ?>
+
+            <?php if( isset( $settings->text_font_size_unit_responsive ) && $settings->text_font_size_unit_responsive != '' ) : ?>
+                font-size: <?php echo $settings->text_font_size_unit_responsive; ?>px;
+            <?php endif; ?>
+
+            <?php if( isset( $settings->text_font_size['small'] ) && $settings->text_font_size['small'] == '' && isset( $settings->text_line_height['small'] ) && $settings->text_line_height['small'] != '' && $settings->text_line_height_unit_responsive == '' ) { ?>
+                line-height: <?php echo $settings->text_line_height['small']; ?>px;
             <?php } ?>
 
-            <?php if( !isset( $settings->text_line_height_unit_responsive ) ) { ?>
-                <?php if( isset( $settings->text_line_height['small'] ) && $settings->text_line_height['small'] != '' ) : ?>
-                    line-height: <?php echo $settings->text_line_height['small']; ?>px;
-                <?php endif; ?>
-            <?php } else { ?>
-                <?php if( isset( $settings->text_line_height_unit_responsive ) && $settings->text_line_height_unit_responsive != '' ) : ?>
-                    line-height: <?php echo $settings->text_line_height_unit_responsive; ?>em;
-                <?php endif; ?>
-            <?php } ?>
+            <?php if( isset( $settings->text_line_height_unit_responsive ) && $settings->text_line_height_unit_responsive != '' ) : ?>
+                line-height: <?php echo $settings->text_line_height_unit_responsive; ?>em;
+            <?php endif; ?>
         }
     }
 <?php

@@ -176,7 +176,6 @@ if( $settings->flip_box_min_height_options == 'uabb-custom-height' ) {
         font-size: <?php echo $settings->back_title_typography_font_size_unit; ?>px;
     <?php endif; ?>
 
-
     <?php if( isset( $settings->back_title_typography_font_size['desktop'] ) && $settings->back_title_typography_font_size['desktop'] == '' && isset( $settings->back_title_typography_line_height['desktop'] ) && $settings->back_title_typography_line_height['desktop'] != '' && $settings->back_title_typography_line_height_unit == '' ) { ?>
         line-height: <?php echo $settings->back_title_typography_line_height['desktop']; ?>px;
     <?php } ?>
@@ -265,9 +264,9 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
                 font-size: <?php echo $settings->back_title_typography_font_size_unit_medium; ?>px;
             <?php endif; ?>
 
-            <?php if( $settings->back_title_typography_font_size['medium'] == '' && $settings->back_title_typography_line_height['medium'] != '' && $settings->back_title_typography_line_height_unit_medium == '' ) { ?>
-                    line-height: <?php echo $settings->back_title_typography_line_height['medium']; ?>px;
-                <?php } ?>
+            <?php if( isset( $settings->back_title_typography_font_size['medium'] ) && $settings->back_title_typography_font_size['medium'] == '' && isset( $settings->back_title_typography_line_height['medium'] ) && $settings->back_title_typography_line_height['medium'] != '' && $settings->back_title_typography_line_height_unit_medium == '' ) { ?>
+                line-height: <?php echo $settings->back_title_typography_line_height['medium']; ?>px;
+            <?php } ?>
 
             <?php if( isset( $settings->back_title_typography_line_height_unit_medium ) && $settings->back_title_typography_line_height_unit_medium != '' ) : ?>
                 line-height: <?php echo $settings->back_title_typography_line_height_unit_medium; ?>em;
