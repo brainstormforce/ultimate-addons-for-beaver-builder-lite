@@ -440,6 +440,7 @@ FLBuilder::register_module('UABBButtonModule', array(
 		            'font_size_unit'     => array(
 		                'type'          => 'unit',
 		                'label'         => __( 'Font Size', 'uabb' ),
+		                'description'   => 'px',
 		                'responsive' => array(
                             'placeholder' => array(
                                 'default' => '',

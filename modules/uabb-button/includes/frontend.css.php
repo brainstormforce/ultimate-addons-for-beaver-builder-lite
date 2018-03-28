@@ -70,7 +70,7 @@ if ( ! empty( $settings->bg_hover_color ) ) {
 	<?php } else { ?>
 		<?php if( isset( $settings->font_size_unit ) && $settings->font_size_unit != '' ) : ?>
 			font-size: <?php echo $settings->font_size_unit; ?>px;
-			<!-- line-height: <?php // echo $settings->font_size_unit + 2; ?>em; -->
+			line-height: <?php echo $settings->font_size_unit + 2; ?>em; 
 		<?php endif; ?>
 	<?php } ?>
 
