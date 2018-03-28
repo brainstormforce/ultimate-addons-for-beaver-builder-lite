@@ -490,7 +490,6 @@ if( $settings->slide_type == "style3" ) {
         line-height: <?php echo $settings->front_desc_line_height_unit; ?>em;
         <?php endif; ?>
     <?php } ?>
-    <?php endif; ?>
     <?php echo ( $settings->front_desc_margin_top != '' ) ? 'margin-top: ' . $settings->front_desc_margin_top . 'px;' : ''; ?>
     <?php echo ( $settings->front_desc_margin_bottom != '' ) ? 'margin-bottom: ' . $settings->front_desc_margin_bottom . 'px;' : ''; ?>
     <?php echo ( $settings->front_desc_color != '' ) ? 'color: ' . $settings->front_desc_color . ';' : ''; ?>
