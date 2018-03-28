@@ -458,7 +458,7 @@ if ( $settings->heading_font_family['family'] != "Default" || isset( $settings->
 <?php } ?>
 
 <?php
-if ( $settings->description_font_family['family'] != "Default" || isset( $settings->description_font_size['desktop'] ) && $settings->description_font_size['desktop'] != '' || isset( $settings->description_line_height['desktop'] ) && $settings->description_line_height['desktop'] != '' || isset( $settings->description_font_size_unit['desktop'] ) && $settings->description_font_size_unit['desktop'] != '' || isset( $settings->description_line_height_unit['desktop'] ) && $settings->description_line_height_unit['desktop'] != '' || $settings->description_color != '' ) { ?>
+if ( $settings->description_font_family['family'] != "Default" || isset( $settings->description_font_size['desktop'] ) && $settings->description_font_size['desktop'] != '' || isset( $settings->description_line_height['desktop'] ) && $settings->description_line_height['desktop'] != '' || isset( $settings->description_font_size_unit )  != '' || isset( $settings->description_line_height_unit ) && $settings->description_line_height_unit  || $settings->description_color != '' ) { ?>
 	.fl-node-<?php echo $id;?> .uabb-info-list-content .uabb-info-list-description {
 		<?php if( $settings->description_font_family['family'] != "Default") : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->description_font_family ); ?>
