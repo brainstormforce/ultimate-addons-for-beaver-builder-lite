@@ -195,7 +195,7 @@
 	                    line-height: <?php echo ( isset( $settings->line_height['small'] ) && $settings->line_height['small'] != '' ) ? $settings->line_height['small'] : $settings->r_custom_font_size + 2; ?>em;
 	                <?php endif; ?>
 				<?php } else { ?>
-					<<?php if( $settings->new_font_size_unit_responsible != '' ) : ?>
+					<?php if( $settings->new_font_size_unit_responsible != '' ) : ?>
 						font-size: <?php echo $settings->new_font_size_unit_responsible; ?>px;
 					<?php endif; ?>
 				<?php } ?>
