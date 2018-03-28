@@ -43,10 +43,10 @@ class UABBHeadingModule extends FLBuilderModule {
 				if ( isset( $node->settings->line_height['small']) && !isset( $node->settings->line_height_unit_responsive ) && $node->settings->new_font_size['small'] != 0 && !isset( $node->settings->line_height_unit_responsive ) ) {
 					$node->settings->line_height_unit_responsive = $node->settings->line_height['small'] / $node->settings->new_font_size['small'];
 				}
-				if( isset( $node->settings->line_height['medium']) && !isset( $node->settings->line_height_unit_medium ) && $node->settings->new_font_size['medium'] != 0 && !isset( $node->settings->line_height_unit_responsive ) ) {
+				if( isset( $node->settings->line_height['medium']) && !isset( $node->settings->line_height_unit_medium ) && $node->settings->new_font_size['medium'] != 0 && !isset( $node->settings->line_height_unit_medium ) ) {
 					$node->settings->line_height_unit_medium = $node->settings->line_height['medium'] / $node->settings->new_font_size['medium'];
 				}
-				if( isset( $node->settings->line_height['desktop']) && !isset( $node->settings->line_height_unit )  && $node->settings->new_font_size['desktop'] != 0 && !isset( $node->settings->line_height_unit_responsive )) {
+				if( isset( $node->settings->line_height['desktop']) && !isset( $node->settings->line_height_unit )  && $node->settings->new_font_size['desktop'] != 0 && !isset( $node->settings->line_height_unit )) {
 					$node->settings->line_height_unit = $node->settings->line_height['desktop'] / $node->settings->new_font_size['desktop'];
 				}
 
@@ -63,10 +63,10 @@ class UABBHeadingModule extends FLBuilderModule {
 				if ( isset( $node->settings->desc_line_height['small']) && !isset( $node->settings->desc_line_height_unit_responsive ) && $node->settings->desc_font_size['small'] != 0 && !isset( $node->settings->desc_line_height_unit_responsive ) ) {
 					$node->settings->desc_line_height_unit_responsive = $node->settings->desc_line_height['small'] / $node->settings->desc_font_size['small'];
 				}
-				if( isset( $node->settings->desc_line_height['medium']) && !isset( $node->settings->desc_line_height_unit_medium ) && $node->settings->desc_font_size['small'] != 0 && !isset( $node->settings->desc_line_height_unit_responsive ) ) {
+				if( isset( $node->settings->desc_line_height['medium']) && !isset( $node->settings->desc_line_height_unit_medium ) && $node->settings->desc_font_size['small'] != 0 && !isset( $node->settings->desc_line_height_unit_medium ) ) {
 					$node->settings->desc_line_height_unit_medium = $node->settings->desc_line_height['medium'] / $node->settings->desc_font_size['medium'];
 				}
-				if( isset( $node->settings->desc_line_height['desktop']) && !isset( $node->settings->desc_line_height_unit ) && $node->settings->desc_font_size['small'] != 0 && !isset( $node->settings->desc_line_height_unit_responsive ) ) {
+				if( isset( $node->settings->desc_line_height['desktop']) && !isset( $node->settings->desc_line_height_unit ) && $node->settings->desc_font_size['small'] != 0 && !isset( $node->settings->desc_line_height_unit ) ) {
 					$node->settings->desc_line_height_unit = $node->settings->desc_line_height['desktop'] / $node->settings->desc_font_size['desktop'];
 				}
 
@@ -83,10 +83,10 @@ class UABBHeadingModule extends FLBuilderModule {
 				if ( isset( $node->settings->separator_text_line_height['small']) && !isset( $node->settings->separator_text_line_height_unit_responsive ) && $node->settings->separator_text_font_size['small'] != 0 && !isset( $node->settings->separator_text_line_height_unit_responsive ) ) {
 					$node->settings->separator_text_line_height_unit_responsive = $node->settings->separator_text_line_height['small'] / $node->settings->separator_text_font_size['small'];
 				}
-				if( isset( $node->settings->separator_text_line_height['medium']) && !isset( $node->settings->separator_text_line_height_unit_medium ) && $node->settings->separator_text_font_size['small'] != 0 && !isset( $node->settings->separator_text_line_height_unit_responsive ) ) {
+				if( isset( $node->settings->separator_text_line_height['medium']) && !isset( $node->settings->separator_text_line_height_unit_medium ) && $node->settings->separator_text_font_size['small'] != 0 && !isset( $node->settings->separator_text_line_height_unit_medium ) ) {
 					$node->settings->separator_text_line_height_unit_medium = $node->settings->separator_text_line_height['medium'] / $node->settings->separator_text_font_size['medium'];
 				}
-				if( isset( $node->settings->separator_text_line_height['desktop']) && !isset( $node->settings->separator_text_line_height_unit ) && $node->settings->separator_text_font_size['small'] != 0 && !isset( $node->settings->separator_text_line_height_unit_responsive ) ) {
+				if( isset( $node->settings->separator_text_line_height['desktop']) && !isset( $node->settings->separator_text_line_height_unit ) && $node->settings->separator_text_font_size['small'] != 0 && !isset( $node->settings->separator_text_line_height_unit ) ) {
 					$node->settings->separator_text_line_height_unit = $node->settings->separator_text_line_height['desktop'] / $node->settings->separator_text_font_size['desktop'];
 				}
 
