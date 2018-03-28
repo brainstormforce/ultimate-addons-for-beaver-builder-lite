@@ -283,7 +283,7 @@ FLBuilder::register_settings_form('flip_box_icon_form_field', array(
                                 
                         /* Style Options */
                         'icon_color_preset'     => array(
-                            'type'          => 'uabb-toggle-switch',
+                            'type'          => 'select',
                             'label'         => __( 'Icon Color Presets', 'uabb' ),
                             'default'       => 'preset1',
                             'options'       => array(
@@ -674,7 +674,7 @@ FLBuilder::register_module('FlipBoxModule', array(
                 'title'         => __('Button', 'uabb'), // Section Title
                 'fields'        => array( // Section Fields
                     'show_button'    => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Show button', 'uabb'),
                         'default'       => 'no',
                         'options'       => array(
@@ -758,7 +758,7 @@ FLBuilder::register_module('FlipBoxModule', array(
                         'help'          => __( 'Apply height to complete Flipbox for small devices. It will inherit medium height if empty.', 'uabb' ),
                     ),
                     'responsive_compatibility' => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __( 'Responsive Compatibility', 'uabb' ),
                         'default'       => 'no',
                         'help'          => __( 'If enabled your Flip Box would automatically manage its height for small devices.', 'uabb' ),
@@ -768,7 +768,7 @@ FLBuilder::register_module('FlipBoxModule', array(
                         ),
                     ),
                     'display_vertically_center' => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Overall Vertical Alignment', 'uabb'),
                         'default'       => 'vertical-middle',
                         'help'          => __( 'If enabled, the Content would align vertically center.', 'uabb' ),

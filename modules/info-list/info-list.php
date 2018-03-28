@@ -262,7 +262,7 @@ FLBuilder::register_module('UABBInfoList', array(
                         )
                     ),
                     'align_items' => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Icon Vertical Alignment', 'uabb'),
                         'default'       => 'top',
                         'options'       => array(
@@ -271,7 +271,7 @@ FLBuilder::register_module('UABBInfoList', array(
                         ),
                     ),
                     'mobile_view' => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Mobile Structure', 'uabb'),
                         'default'       => '',
                         'options'       => array(
@@ -378,7 +378,7 @@ FLBuilder::register_module('UABBInfoList', array(
                         'show_reset' => true,
                     ),
                     'list_icon_animation' => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Image/Icon Animation', 'uabb'),
                         'description'   => '',
                         'help'          => __( 'Select whether you want to animate image/icon or not', 'uabb' ),
@@ -394,7 +394,7 @@ FLBuilder::register_module('UABBInfoList', array(
                 'title'         => __('List Connector', 'uabb'), // Section Title
                 'fields'        => array( // Section Fields
                     'list_connector_option'   => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Show Connector', 'uabb'),
                         'description'   => '',
                         'help'          => __( 'Select whether you would like to show connector on list items.', 'uabb' ),

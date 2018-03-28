@@ -127,7 +127,7 @@ FLBuilder::register_module('RibbonModule', array(
                         ),
                     ),
                     /*'responsive_compatibility' => array(
-                        'type' => 'uabb-toggle-switch',
+                        'type' => 'select',
                         'label' => __('Responsive Compatibility', 'uabb'),
                         'help' => __('There might be responsive issues for long texts. If you are facing such issues then select this option as Yes.', 'uabb'),
                         'default' => 'no',
@@ -137,7 +137,7 @@ FLBuilder::register_module('RibbonModule', array(
                         ),
                     ),*/
                     'stitching'     => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __( 'Stitching', 'uabb' ),
                         'default'       => 'yes',
                         'options'       => array(
@@ -147,7 +147,7 @@ FLBuilder::register_module('RibbonModule', array(
                         'help' => __( 'To give Stitch effect on Ribbon', 'uabb' )
                     ),
                     'shadow'     => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __( 'Ribbon Shadow', 'uabb' ),
                         'default'       => 'yes',
                         'options'       => array(

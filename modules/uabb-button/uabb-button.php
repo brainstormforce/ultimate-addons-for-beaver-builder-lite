@@ -284,7 +284,7 @@ FLBuilder::register_module('UABBButtonModule', array(
 						'size'        => '5',
 					),
                     'hover_attribute' => array(
-                    	'type'          => 'uabb-toggle-switch',
+                    	'type'          => 'select',
                         'label'         => __( 'Apply Hover Color To', 'uabb' ),
                         'default'       => 'bg',
                         'options'       => array(

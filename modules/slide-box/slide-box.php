@@ -483,7 +483,7 @@ FLBuilder::register_module('SlideBoxModule', array(
                         ),
                     ),
                     'front_align_items' => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Icon Vertical Alignment', 'uabb'),
                         'default'       => 'top',
                         'options'       => array(
@@ -492,7 +492,7 @@ FLBuilder::register_module('SlideBoxModule', array(
                         ),
                     ),
                     'front_icon_border' => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Border between Icon and Text', 'uabb'),
                         'default'       => '',
                         'options'       => array(
@@ -543,7 +543,7 @@ FLBuilder::register_module('SlideBoxModule', array(
                         'size'        => '5',
                     ),
                     'mobile_view' => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Mobile Structure', 'uabb'),
                         'default'       => '',
                         'options'       => array(
@@ -552,7 +552,7 @@ FLBuilder::register_module('SlideBoxModule', array(
                         )
                     ),
                     'stacking_order' => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Stacking Order', 'uabb'),
                         'default'       => 'default',
                         'options'       => array(
@@ -916,7 +916,7 @@ FLBuilder::register_module('SlideBoxModule', array(
                 'title'         => __('Slide Box Min Height', 'uabb'), // Section Title
                 'fields'        => array( // Section Fields
                     'set_min_height'   => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Minimum Height', 'uabb'),
                         'default'       => 'default',
                         'options'       => array(
@@ -940,7 +940,7 @@ FLBuilder::register_module('SlideBoxModule', array(
                         'help'          => __( 'Apply minimum height to complete SlideBox. It is useful when multiple SlideBox are in same row.', 'uabb' )
                     ),
                     'slide_vertical_align'         => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Overall Vertical Alignment', 'uabb'),
                         'default'       => 'center',
                         'help'          => __('If enabled, the Content would align vertically center', 'uabb'),
