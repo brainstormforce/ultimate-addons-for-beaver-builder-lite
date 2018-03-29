@@ -155,7 +155,7 @@
             .fl-node-<?php echo $id; ?> .uabb-heading,
             .fl-node-<?php echo $id; ?> .uabb-heading * { 
 
-				<?php if( $settings->new_font_size_unit_responsible != '' ) : ?>
+				<?php if( isset( $settings->new_font_size_unit_responsible ) && $settings->new_font_size_unit_responsible != '' ) : ?>
 					font-size: <?php echo $settings->new_font_size_unit_responsible; ?>px;
 				<?php endif; ?>
 
