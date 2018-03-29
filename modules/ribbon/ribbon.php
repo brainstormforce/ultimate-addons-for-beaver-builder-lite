@@ -43,14 +43,14 @@ class RibbonModule extends FLBuilderModule {
                     $node->settings->text_font_size_unit = $node->settings->text_font_size['desktop'];
                 }
 
-                if ( is_numeric( $node->settings->text_line_height['small']) && is_numeric( $node->settings->text_font_size['small']) && $node->settings->text_font_size['small'] != 0 && !isset( $node->settings->text_line_height_unit_responsive ) ) {
+                if ( is_numeric( $node->settings->text_line_height['small']) && is_numeric( $node->settings->text_font_size['small']) && isset( $node->settings->text_line_height['small']) && isset( $node->settings->text_font_size['small']) && $node->settings->text_font_size['small'] != 0 && !isset( $node->settings->text_line_height_unit_responsive ) ) {
 
                     $node->settings->text_line_height_unit_responsive = $node->settings->text_line_height['small'] / $node->settings->text_font_size['small'];
                 }
-                if( is_numeric( $node->settings->text_line_height['medium']) && is_numeric( $node->settings->text_font_size['medium']) && $node->settings->text_font_size['medium'] != 0 && !isset( $node->settings->text_line_height_unit_medium ) ) {
+                if( is_numeric( $node->settings->text_line_height['medium']) && is_numeric( $node->settings->text_font_size['medium']) && isset( $node->settings->text_line_height['medium']) && isset( $node->settings->text_font_size['medium']) && $node->settings->text_font_size['medium'] != 0 && !isset( $node->settings->text_line_height_unit_medium ) ) {
                     $node->settings->text_line_height_unit_medium = $node->settings->text_line_height['medium'] / $node->settings->text_font_size['medium'];
                 }
-                if( is_numeric( $node->settings->text_line_height['desktop']) && is_numeric( $node->settings->text_font_size['desktop']) && $node->settings->text_font_size['desktop'] != 0 && !isset( $node->settings->text_line_height_unit ) ) {
+                if( is_numeric( $node->settings->text_line_height['desktop']) && is_numeric( $node->settings->text_font_size['desktop']) && isset( $node->settings->text_line_height['desktop']) && isset( $node->settings->text_font_size['desktop']) && $node->settings->text_font_size['desktop'] != 0 && !isset( $node->settings->text_line_height_unit ) ) {
                     $node->settings->text_line_height_unit = $node->settings->text_line_height['desktop'] / $node->settings->text_font_size['desktop'];
                 }
 
