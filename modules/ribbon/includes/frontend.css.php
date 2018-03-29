@@ -411,7 +411,7 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
 
     @media ( max-width: <?php echo $global_settings->medium_breakpoint; ?>px ) {
         <?php
-        if( $settings->text_line_height['medium'] != '' || $settings->text_font_size['medium'] != '' || $settings->ribbon_width == 'auto' ) {
+        if( isset( $settings->text_line_height['medium'] ) && $settings->text_line_height['medium'] != '' || isset( $settings->text_font_size['medium'] ) && $settings->text_font_size['medium'] != '' || $settings->ribbon_width == 'auto' ) {
         ?>
 
         .fl-node-<?php echo $id;?> .uabb-ribbon-wrap .uabb-ribbon {

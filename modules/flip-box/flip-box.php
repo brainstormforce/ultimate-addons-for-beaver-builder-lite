@@ -43,14 +43,16 @@ class FlipBoxModule extends FLBuilderModule {
                             $node->settings->front_title_typography_font_size_unit = $node->settings->front_title_typography_font_size['desktop'];
                         }
 
-                        if ( is_numeric( $node->settings->front_title_typography_line_height['small']) && is_numeric( $node->settings->front_title_typography_font_size['small']) && isset( $node->settings->front_title_typography_line_height['small']) && isset( $node->settings->front_title_typography_font_size['small']) && $node->settings->front_title_typography_font_size['small'] != 0 && !isset( $node->settings->front_title_typography_line_height_unit_responsive ) ) {
-
+                        if ( isset( $node->settings->front_title_typography_line_height['small']) && isset( $node->settings->front_title_typography_font_size['small']) && $node->settings->front_title_typography_font_size['small'] != 0 && !isset( $node->settings->front_title_typography_line_height_unit_responsive ) ) {
+                            if( is_numeric( $node->settings->front_title_typography_line_height['small']) && is_numeric( $node->settings->front_title_typography_font_size['small']) )
                             $node->settings->front_title_typography_line_height_unit_responsive = $node->settings->front_title_typography_line_height['small'] / $node->settings->front_title_typography_font_size['small'];
                         }
-                        if( is_numeric( $node->settings->front_title_typography_line_height['medium']) && is_numeric( $node->settings->front_title_typography_font_size['medium']) && isset( $node->settings->front_title_typography_line_height['medium']) && isset( $node->settings->front_title_typography_font_size['medium']) && $node->settings->front_title_typography_font_size['medium'] != 0 && !isset( $node->settings->front_title_typography_line_height_unit_medium ) ) {
+                        if( isset( $node->settings->front_title_typography_line_height['medium']) && isset( $node->settings->front_title_typography_font_size['medium']) && $node->settings->front_title_typography_font_size['medium'] != 0 && !isset( $node->settings->front_title_typography_line_height_unit_medium ) ) {
+                            if( is_numeric( $node->settings->front_title_typography_line_height['medium']) && is_numeric( $node->settings->front_title_typography_font_size['medium']) )
                             $node->settings->front_title_typography_line_height_unit_medium = $node->settings->front_title_typography_line_height['medium'] / $node->settings->front_title_typography_font_size['medium'];
                         }
-                        if( is_numeric( $node->settings->front_title_typography_line_height['desktop']) && is_numeric( $node->settings->front_title_typography_font_size['desktop']) && isset( $node->settings->front_title_typography_line_height['desktop']) && isset( $node->settings->front_title_typography_font_size['desktop']) && $node->settings->front_title_typography_font_size['desktop'] != 0 && !isset( $node->settings->front_title_typography_line_height_unit ) ) {
+                        if( isset( $node->settings->front_title_typography_line_height['desktop']) && isset( $node->settings->front_title_typography_font_size['desktop']) && $node->settings->front_title_typography_font_size['desktop'] != 0 && !isset( $node->settings->front_title_typography_line_height_unit ) ) {
+                            if( is_numeric( $node->settings->front_title_typography_line_height['desktop']) && is_numeric( $node->settings->front_title_typography_font_size['desktop']) )
                             $node->settings->front_title_typography_line_height_unit = $node->settings->front_title_typography_line_height['desktop'] / $node->settings->front_title_typography_font_size['desktop'];
                         }
 
@@ -64,13 +66,16 @@ class FlipBoxModule extends FLBuilderModule {
                             $node->settings->front_desc_typography_font_size_unit = $node->settings->front_desc_typography_font_size['desktop'];
                         }
 
-                        if ( is_numeric( $node->settings->front_desc_typography_line_height['small']) && is_numeric( $node->settings->front_desc_typography_font_size['small']) && isset( $node->settings->front_desc_typography_line_height['small']) && isset( $node->settings->front_desc_typography_font_size['small']) && $node->settings->front_desc_typography_font_size['small'] != 0 && !isset( $node->settings->front_desc_typography_line_height_unit_responsive ) ) {
+                        if ( isset( $node->settings->front_desc_typography_line_height['small']) && isset( $node->settings->front_desc_typography_font_size['small']) && $node->settings->front_desc_typography_font_size['small'] != 0 && !isset( $node->settings->front_desc_typography_line_height_unit_responsive ) ) {
+                            if( is_numeric( $node->settings->front_desc_typography_line_height['small']) && is_numeric( $node->settings->front_desc_typography_font_size['small']) )
                             $node->settings->front_desc_typography_line_height_unit_responsive = $node->settings->front_desc_typography_line_height['small'] / $node->settings->front_desc_typography_font_size['small'];
                         }
-                        if( is_numeric( $node->settings->front_desc_typography_line_height['medium']) && is_numeric( $node->settings->front_desc_typography_font_size['medium']) && isset( $node->settings->front_desc_typography_line_height['medium']) && isset( $node->settings->front_desc_typography_font_size['medium']) && $node->settings->front_desc_typography_font_size['medium'] != 0 && !isset( $node->settings->front_desc_typography_line_height_unit_medium ) ) {
+                        if( isset( $node->settings->front_desc_typography_line_height['medium']) && isset( $node->settings->front_desc_typography_font_size['medium']) && $node->settings->front_desc_typography_font_size['medium'] != 0 && !isset( $node->settings->front_desc_typography_line_height_unit_medium ) ) {
+                            if( is_numeric( $node->settings->front_desc_typography_line_height['medium']) && is_numeric( $node->settings->front_desc_typography_font_size['medium']) )
                             $node->settings->front_desc_typography_line_height_unit_medium = $node->settings->front_desc_typography_line_height['medium'] / $node->settings->front_desc_typography_font_size['medium'];
                         }
-                        if( is_numeric( $node->settings->front_desc_typography_line_height['desktop']) && is_numeric( $node->settings->front_desc_typography_font_size['desktop']) && isset( $node->settings->front_desc_typography_line_height['desktop']) && isset( $node->settings->front_desc_typography_font_size['desktop']) && $node->settings->front_desc_typography_font_size['desktop'] != 0 && !isset( $node->settings->front_desc_typography_line_height_unit ) ) {
+                        if( isset( $node->settings->front_desc_typography_line_height['desktop']) && isset( $node->settings->front_desc_typography_font_size['desktop']) && $node->settings->front_desc_typography_font_size['desktop'] != 0 && !isset( $node->settings->front_desc_typography_line_height_unit ) ) {
+                            if( is_numeric( $node->settings->front_desc_typography_line_height['desktop']) && is_numeric( $node->settings->front_desc_typography_font_size['desktop']) )
                             $node->settings->front_desc_typography_line_height_unit = $node->settings->front_desc_typography_line_height['desktop'] / $node->settings->front_desc_typography_font_size['desktop'];
                         }
                         
@@ -84,13 +89,16 @@ class FlipBoxModule extends FLBuilderModule {
                             $node->settings->back_title_typography_font_size_unit = $node->settings->back_title_typography_font_size['desktop'];
                         }
 
-                        if ( is_numeric( $node->settings->back_title_typography_line_height['small']) && is_numeric( $node->settings->back_title_typography_font_size['small']) && isset( $node->settings->back_title_typography_line_height['small']) && isset( $node->settings->back_title_typography_font_size['small']) && $node->settings->back_title_typography_font_size['small'] != 0 && !isset( $node->settings->back_title_typography_line_height_unit_responsive ) ) {
+                        if ( isset( $node->settings->back_title_typography_line_height['small']) && isset( $node->settings->back_title_typography_font_size['small']) && $node->settings->back_title_typography_font_size['small'] != 0 && !isset( $node->settings->back_title_typography_line_height_unit_responsive ) ) {
+                            if( is_numeric( $node->settings->back_title_typography_line_height['small']) && is_numeric( $node->settings->back_title_typography_font_size['small']) )
                             $node->settings->back_title_typography_line_height_unit_responsive = $node->settings->back_title_typography_line_height['small'] / $node->settings->back_title_typography_font_size['small'];
                         }
-                        if( is_numeric( $node->settings->back_title_typography_line_height['medium']) && is_numeric( $node->settings->back_title_typography_font_size['medium']) && isset( $node->settings->back_title_typography_line_height['medium']) && isset( $node->settings->back_title_typography_font_size['medium']) && $node->settings->back_title_typography_font_size['medium'] != 0 && !isset( $node->settings->back_title_typography_line_height_unit_medium ) ) {
+                        if( isset( $node->settings->back_title_typography_line_height['medium']) && isset( $node->settings->back_title_typography_font_size['medium']) && $node->settings->back_title_typography_font_size['medium'] != 0 && !isset( $node->settings->back_title_typography_line_height_unit_medium ) ) {
+                            if( is_numeric( $node->settings->back_title_typography_line_height['medium']) && is_numeric( $node->settings->back_title_typography_font_size['medium']) )
                             $node->settings->back_title_typography_line_height_unit_medium = $node->settings->back_title_typography_line_height['medium'] / $node->settings->back_title_typography_font_size['medium'];
                         }
-                        if( is_numeric( $node->settings->back_title_typography_line_height['desktop']) && is_numeric( $node->settings->back_title_typography_font_size['desktop']) && isset( $node->settings->back_title_typography_line_height['desktop']) && isset( $node->settings->back_title_typography_font_size['desktop']) && $node->settings->back_title_typography_font_size['desktop'] != 0 && !isset( $node->settings->back_title_typography_line_height_unit ) ) {
+                        if( isset( $node->settings->back_title_typography_line_height['desktop']) && isset( $node->settings->back_title_typography_font_size['desktop']) && $node->settings->back_title_typography_font_size['desktop'] != 0 && !isset( $node->settings->back_title_typography_line_height_unit ) ) {
+                            if( is_numeric( $node->settings->back_title_typography_line_height['desktop']) && is_numeric( $node->settings->back_title_typography_font_size['desktop']) )
                             $node->settings->back_title_typography_line_height_unit = $node->settings->back_title_typography_line_height['desktop'] / $node->settings->back_title_typography_font_size['desktop'];
                         }
 
@@ -104,13 +112,16 @@ class FlipBoxModule extends FLBuilderModule {
                             $node->settings->back_desc_typography_font_size_unit = $node->settings->back_desc_typography_font_size['desktop'];
                         }
 
-                        if ( is_numeric( $node->settings->back_desc_typography_line_height['small']) && is_numeric( $node->settings->back_desc_typography_font_size['small']) && isset( $node->settings->back_desc_typography_line_height['small']) && isset( $node->settings->back_desc_typography_font_size['small']) && $node->settings->back_desc_typography_font_size['small'] != 0 && !isset( $node->settings->back_desc_typography_line_height_unit_responsive ) ) {
+                        if ( isset( $node->settings->back_desc_typography_line_height['small']) && isset( $node->settings->back_desc_typography_font_size['small']) && $node->settings->back_desc_typography_font_size['small'] != 0 && !isset( $node->settings->back_desc_typography_line_height_unit_responsive ) ) {
+                            if( is_numeric( $node->settings->back_desc_typography_line_height['small']) && is_numeric( $node->settings->back_desc_typography_font_size['small']) )
                             $node->settings->back_desc_typography_line_height_unit_responsive = $node->settings->back_desc_typography_line_height['small'] / $node->settings->back_desc_typography_font_size['small'];
                         }
-                        if( is_numeric( $node->settings->back_desc_typography_line_height['medium']) && is_numeric( $node->settings->back_desc_typography_font_size['medium']) && isset( $node->settings->back_desc_typography_line_height['medium']) && isset( $node->settings->back_desc_typography_font_size['medium']) && $node->settings->back_desc_typography_font_size['medium'] != 0 && !isset( $node->settings->back_desc_typography_line_height_unit_medium ) ) {
+                        if( isset( $node->settings->back_desc_typography_line_height['medium']) && isset( $node->settings->back_desc_typography_font_size['medium']) && $node->settings->back_desc_typography_font_size['medium'] != 0 && !isset( $node->settings->back_desc_typography_line_height_unit_medium ) ) {
+                            if( is_numeric( $node->settings->back_desc_typography_line_height['medium']) && is_numeric( $node->settings->back_desc_typography_font_size['medium']) )
                             $node->settings->back_desc_typography_line_height_unit_medium = $node->settings->back_desc_typography_line_height['medium'] / $node->settings->back_desc_typography_font_size['medium'];
                         }
-                        if( is_numeric( $node->settings->back_desc_typography_line_height['desktop']) && is_numeric( $node->settings->back_desc_typography_font_size['desktop']) && isset( $node->settings->back_desc_typography_line_height['desktop']) && isset( $node->settings->back_desc_typography_font_size['desktop']) && $node->settings->back_desc_typography_font_size['desktop'] != 0 && !isset( $node->settings->back_desc_typography_line_height_unit ) ) {
+                        if( isset( $node->settings->back_desc_typography_line_height['desktop']) && isset( $node->settings->back_desc_typography_font_size['desktop']) && $node->settings->back_desc_typography_font_size['desktop'] != 0 && !isset( $node->settings->back_desc_typography_line_height_unit ) ) {
+                            if( is_numeric( $node->settings->back_desc_typography_line_height['desktop']) && is_numeric( $node->settings->back_desc_typography_font_size['desktop']) )
                             $node->settings->back_desc_typography_line_height_unit = $node->settings->back_desc_typography_line_height['desktop'] / $node->settings->back_desc_typography_font_size['desktop'];
                         }
 
