@@ -65,7 +65,7 @@ if ( ! empty( $settings->bg_hover_color ) ) {
 
 	<?php if( isset( $settings->font_size_unit ) && $settings->font_size_unit != '' ) : ?>
 		font-size: <?php echo $settings->font_size_unit; ?>px;
-		line-height: <?php echo $settings->font_size_unit + 2; ?>em; 
+		line-height: <?php echo $settings->font_size_unit + 2; ?>px; 
 	<?php endif; ?>
 
 	<?php if( isset( $settings->font_size['desktop'] ) && $settings->font_size['desktop'] == '' && isset( $settings->line_height['desktop'] ) && $settings->line_height['desktop'] != '' && $settings->line_height_unit == '' ) { ?>
@@ -212,7 +212,7 @@ if( $global_settings->responsive_enabled ) : ?>
 <?php /* Typography responsive layout starts here*/ ?>
 
 <?php if($global_settings->responsive_enabled) { // Global Setting If started 
-	if( $settings->font_size_unit_medium != '' || $settings->line_height_unit_medium != '' || ( isset( $settings->font_size['medium'] ) && is_array( $settings->font_size ) && $settings->font_size['medium'] != "" ) || ( isset( $settings->line_height['medium'] ) && is_array( $settings->line_height ) && $settings->line_height['medium'] != "" ) )
+	if( isset( $settings->font_size_unit_medium ) || isset( $settings->line_height_unit_medium ) || ( isset( $settings->font_size['medium'] ) && is_array( $settings->font_size ) && $settings->font_size['medium'] != "" ) || ( isset( $settings->line_height['medium'] ) && is_array( $settings->line_height ) && $settings->line_height['medium'] != "" ) )
 	{
 		/* Medium Breakpoint media query */	
 	?>
@@ -258,7 +258,7 @@ if( $global_settings->responsive_enabled ) : ?>
 		}		
 	<?php
 	}
-	if( $settings->font_size_unit_responsive != '' || $settings->line_height_unit_responsive != '' || ( isset( $settings->font_size['small'] )  && is_array( $settings->font_size ) && $settings->font_size['small'] != "" ) || ( isset( $settings->line_height['small'] ) && is_array( $settings->line_height ) && $settings->line_height['small'] != "" ) )
+	if( isset( $settings->font_size_unit_responsive )  || isset( $settings->line_height_unit_responsive ) || ( isset( $settings->font_size['small'] )  && is_array( $settings->font_size ) && $settings->font_size['small'] != "" ) || ( isset( $settings->line_height['small'] ) && is_array( $settings->line_height ) && $settings->line_height['small'] != "" ) )
 	{
 		/* Small Breakpoint media query */	
 	?>
