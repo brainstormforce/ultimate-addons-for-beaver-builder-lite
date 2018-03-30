@@ -53,10 +53,6 @@
 		font-size: <?php echo $settings->new_font_size_unit; ?>px;
 	<?php endif; ?>
 
-	<?php if( isset( $settings->new_font_size['desktop'] ) && $settings->new_font_size['desktop'] == '' && isset( $settings->line_height['desktop'] ) && $settings->line_height['desktop'] != '' && $settings->line_height_unit == '' ) { ?>
-	    line-height: <?php echo $settings->line_height['desktop']; ?>px;
-	<?php } ?>
-
 	<?php if( isset( $settings->line_height_unit ) && $settings->line_height_unit != '' ) : ?>
 		line-height: <?php echo $settings->line_height_unit; ?>em;
 	<?php endif; ?>
@@ -77,10 +73,6 @@
 	<?php if( isset( $settings->desc_font_size_unit ) && $settings->desc_font_size_unit != '' ) : ?>
 		font-size: <?php echo $settings->desc_font_size_unit; ?>px;
 	<?php endif; ?>
-
-	<?php if( isset( $settings->desc_font_size['desktop'] ) && $settings->desc_font_size['desktop'] == '' && isset( $settings->desc_line_height['desktop'] ) && $settings->desc_line_height['desktop'] != '' && $settings->desc_line_height_unit == '' ) { ?>
-	    line-height: <?php echo $settings->desc_line_height['desktop']; ?>px;
-	<?php } ?>
 
 	<?php if( isset( $settings->desc_line_height_unit ) && $settings->desc_line_height_unit != '' ) : ?>
 		line-height: <?php echo $settings->desc_line_height_unit; ?>em;
@@ -106,13 +98,9 @@
             .fl-node-<?php echo $id; ?> .uabb-heading,
             .fl-node-<?php echo $id; ?> .uabb-heading * { 
 
-				<?php if( $settings->new_font_size_unit_medium != '' ) : ?>
+				<?php if( isset( $settings->new_font_size_unit_medium ) && $settings->new_font_size_unit_medium != '' ) : ?>
 					font-size: <?php echo $settings->new_font_size_unit_medium; ?>px;
 				<?php endif; ?>
-
-				<?php if( isset( $settings->new_font_size['medium'] ) && $settings->new_font_size['medium'] == '' && isset( $settings->desc_line_height['medium'] ) && $settings->desc_line_height['medium'] != '' && $settings->line_height_unit_medium == '' ) { ?>
-				    line-height: <?php echo $settings->desc_line_height['medium']; ?>px;
-				<?php } ?>
 
 				<?php if( isset( $settings->line_height_unit_medium ) && $settings->line_height_unit_medium != '' ) : ?>
 					line-height: <?php echo $settings->line_height_unit_medium; ?>em;
@@ -121,19 +109,13 @@
 			}
 			.fl-node-<?php echo $id; ?> .uabb-text-editor {
 
+				<?php if( isset( $settings->desc_font_size_unit_medium ) && $settings->desc_font_size_unit_medium != '' ) : ?>
+					font-size: <?php echo $settings->desc_font_size_unit_medium; ?>px;
+				<?php endif; ?>
 
-					<?php if( isset( $settings->desc_font_size_unit_medium ) && $settings->desc_font_size_unit_medium != '' ) : ?>
-						font-size: <?php echo $settings->desc_font_size_unit_medium; ?>px;
-					<?php endif; ?>
-
-					<?php if( isset( $settings->desc_font_size['medium'] ) && $settings->desc_font_size['medium'] == '' && isset( $settings->desc_line_height['medium'] ) && $settings->desc_line_height['medium'] != '' && $settings->desc_line_height_unit_medium == '' ) { ?>
-					    line-height: <?php echo $settings->desc_line_height['medium']; ?>px;
-					<?php } ?>
-
-					<?php if( isset( $settings->desc_line_height_unit_medium ) && $settings->desc_line_height_unit_medium != '' ) : ?>
-						line-height: <?php echo $settings->desc_line_height_unit_medium; ?>em;
-					<?php endif; ?>
-
+				<?php if( isset( $settings->desc_line_height_unit_medium ) && $settings->desc_line_height_unit_medium != '' ) : ?>
+					line-height: <?php echo $settings->desc_line_height_unit_medium; ?>em;
+				<?php endif; ?>
 			}
         }
     
@@ -159,10 +141,6 @@
 					font-size: <?php echo $settings->new_font_size_unit_responsible; ?>px;
 				<?php endif; ?>
 
-				<?php if( isset( $settings->new_font_size['small'] ) && $settings->new_font_size['small'] == '' && isset( $settings->line_height['small'] ) && $settings->line_height['small'] != '' && $settings->line_height_unit_responsive == '' ) { ?>
-				    line-height: <?php echo $settings->line_height['small']; ?>px;
-				<?php } ?>
-
 				<?php if( isset( $settings->line_height_unit_responsive ) && $settings->line_height_unit_responsive != '' ) : ?>
 					line-height: <?php echo $settings->line_height_unit_responsive; ?>em;
 				<?php endif; ?>
@@ -173,10 +151,6 @@
 				<?php if( isset( $settings->desc_font_size_unit_responsive ) && $settings->desc_font_size_unit_responsive != '' ) : ?>
 					font-size: <?php echo $settings->desc_font_size_unit_responsive; ?>px;
 				<?php endif; ?>
-
-				<?php if( isset( $settings->desc_font_size['small'] ) && $settings->desc_font_size['small'] == '' && isset( $settings->desc_line_height['small'] ) && $settings->desc_line_height['small'] != '' && $settings->desc_line_height_unit_responsive == '' ) { ?>
-				    line-height: <?php echo $settings->desc_line_height['small']; ?>px;
-				<?php } ?>
 
 				<?php if( isset( $settings->desc_line_height_unit_responsive ) && $settings->desc_line_height_unit_responsive != '' ) : ?>
 					line-height: <?php echo $settings->desc_line_height_unit_responsive; ?>em;
@@ -299,10 +273,6 @@
 					font-size: <?php echo $settings->separator_text_font_size_unit; ?>px;
 				<?php endif; ?>
 
-				<?php if( isset( $settings->separator_text_font_size['desktop'] ) && $settings->separator_text_font_size['desktop'] == '' && isset( $settings->separator_text_line_height['desktop'] ) && $settings->separator_text_line_height['desktop'] != '' && $settings->separator_text_line_height_unit == '' ) { ?>
-				    line-height: <?php echo $settings->separator_text_line_height['desktop']; ?>px;
-				<?php } ?>
-
 				<?php if( isset( $settings->separator_text_line_height_unit ) && $settings->separator_text_line_height_unit != '' ) : ?>
 					line-height: <?php echo $settings->separator_text_line_height_unit; ?>em;
 				<?php endif; ?>
@@ -372,25 +342,16 @@ if( $settings->separator_style == 'line_text' || $settings->separator_style == '
 	if( $global_settings->responsive_enabled ) { // Global Setting If started ?>
 	    @media ( max-width: <?php echo $global_settings->medium_breakpoint; ?>px ) {
 	    	
-	    	<?php
-	    	if( $settings->separator_text_font_size['medium'] != '' || $settings->separator_text_line_height['medium'] != '' ) {
-	    	?>
+
 	     	.fl-node-<?php echo $id; ?> <?php echo $settings->separator_text_tag_selection; ?>.uabb-divider-text {
 				<?php if( isset( $settings->separator_text_font_size_unit_medium ) && $settings->separator_text_font_size_unit_medium != '' ) : ?>
 					font-size: <?php echo $settings->separator_text_font_size_unit_medium; ?>px;
 				<?php endif; ?>
 
-				<?php if( isset( $settings->separator_text_font_size['medium'] ) && $settings->separator_text_font_size['medium'] == '' && isset( $settings->separator_text_line_height['medium'] ) && $settings->separator_text_line_height['medium'] != '' && $settings->separator_text_line_height_unit_medium == '' ) { ?>
-				    line-height: <?php echo $settings->separator_text_line_height['medium']; ?>px;
-				<?php } ?>
-
 				<?php if( isset( $settings->separator_text_line_height_unit_medium ) && $settings->separator_text_line_height_unit_medium != '' ) : ?>
 					line-height: <?php echo $settings->separator_text_line_height_unit_medium; ?>em;
 				<?php endif; ?>
 	     	}
-			<?php
-			}
-			?>
 
 			<?php /* For Medium Device */ ?>
 			.fl-node-<?php echo $id; ?> .uabb-responsive-medsmall .uabb-side-left {
@@ -407,26 +368,16 @@ if( $settings->separator_style == 'line_text' || $settings->separator_style == '
 	 
 	     @media ( max-width: <?php echo $global_settings->responsive_breakpoint; ?>px ) {
 
-	     	<?php
-	    	if( $settings->separator_text_font_size['small'] != '' || $settings->separator_text_line_height['small'] != '' ) {
-	    	?>
 	     	.fl-node-<?php echo $id; ?> <?php echo $settings->separator_text_tag_selection; ?>.uabb-divider-text {
 
-					<?php if( isset( $settings->separator_text_font_size_unit_responsive ) && $settings->separator_text_font_size_unit_responsive != '' ) : ?>
-						font-size: <?php echo $settings->separator_text_font_size_unit_responsive; ?>px;
-					<?php endif; ?>
+				<?php if( isset( $settings->separator_text_font_size_unit_responsive ) && $settings->separator_text_font_size_unit_responsive != '' ) : ?>
+					font-size: <?php echo $settings->separator_text_font_size_unit_responsive; ?>px;
+				<?php endif; ?>
 
-					<?php if( isset( $settings->separator_text_font_size['small'] ) && $settings->separator_text_font_size['small'] == '' && isset( $settings->separator_text_line_height['small'] ) && $settings->separator_text_line_height['small'] != '' && $settings->separator_text_line_height_unit_responsive == '' ) { ?>
-					    line-height: <?php echo $settings->separator_text_line_height['small']; ?>px;
-					<?php } ?>
-
-					<?php if( isset( $settings->separator_text_line_height_unit_responsive ) && $settings->separator_text_line_height_unit_responsive != '' ) : ?>
-						line-height: <?php echo $settings->separator_text_line_height_unit_responsive; ?>em;
-					<?php endif; ?>
+				<?php if( isset( $settings->separator_text_line_height_unit_responsive ) && $settings->separator_text_line_height_unit_responsive != '' ) : ?>
+					line-height: <?php echo $settings->separator_text_line_height_unit_responsive; ?>em;
+				<?php endif; ?>
 	     	}
-			<?php
-			}
-			?>
 
 			<?php if ( $settings->responsive_img_size != '' ) { ?>
 			.fl-node-<?php echo $id; ?> .uabb-image-outter-wrap {
