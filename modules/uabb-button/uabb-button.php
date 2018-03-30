@@ -43,15 +43,15 @@ class UABBButtonModule extends FLBuilderModule {
 
                 if ( isset( $node->settings->line_height['small']) && isset( $node->settings->font_size['small']) && $node->settings->font_size['small'] != 0 && !isset( $node->settings->line_height_unit_responsive ) ) {
                 	if( is_numeric( $node->settings->line_height['small']) && is_numeric( $node->settings->font_size['small']) )
-                    $node->settings->line_height_unit_responsive = $node->settings->line_height['small'] / $node->settings->font_size['small'];
+                    $node->settings->line_height_unit_responsive = round( $node->settings->line_height['small'] / $node->settings->font_size['small'], 2 );
                 }
                 if( isset( $node->settings->line_height['medium']) && isset( $node->settings->font_size['medium']) && $node->settings->font_size['medium'] != 0 && !isset( $node->settings->line_height_unit_medium ) ) {
                 	if( is_numeric( $node->settings->line_height['medium']) && is_numeric( $node->settings->font_size['medium']) )
-                    $node->settings->line_height_unit_medium = $node->settings->line_height['medium'] / $node->settings->font_size['medium'];
+                    $node->settings->line_height_unit_medium = round( $node->settings->line_height['medium'] / $node->settings->font_size['medium'], 2 );
                 }
                 if( isset( $node->settings->line_height['desktop']) && isset( $node->settings->font_size['desktop']) && $node->settings->font_size['desktop'] != 0 && !isset( $node->settings->line_height_unit ) ) {
                 	if( is_numeric( $node->settings->line_height['desktop']) && is_numeric( $node->settings->font_size['desktop']) )
-                    $node->settings->line_height_unit = $node->settings->line_height['desktop'] / $node->settings->font_size['desktop'];
+                    $node->settings->line_height_unit = round( $node->settings->line_height['desktop'] / $node->settings->font_size['desktop'], 2 );
                 }
 
             }

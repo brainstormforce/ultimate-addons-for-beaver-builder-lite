@@ -20,7 +20,6 @@ class UABBHeadingModule extends FLBuilderModule {
             'partial_refresh'	=> true,
 			'icon'				=> 'text.svg',
 		));
-
 	}
 
     /**
