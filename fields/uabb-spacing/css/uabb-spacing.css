@@ -14,20 +14,20 @@
 }
 
 .uabb-spacing-wrapper i.simplify-icon.dashicons.uabb-help-tooltip {
-    width: 23px;
-    height: 23px;
-    font-size: 23px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
     text-align: center;
-    line-height: 23px;
+    line-height: 31px;
 }
 .uabb-spacing-wrapper i.simplify-icon.dashicons.dashicons-no-alt.uabb-help-tooltip {
     transform: rotate(45deg);
 }
 .uabb-spacing-wrapper .uabb-spacing-items i.dashicons {
-    width: 23px;
-    height: 23px;
+    width: 30px;
+    height: 30px;
     text-align: center;
-    line-height: 23px;
+    line-height: 31px;
 }
 
 .uabb-spacing-wrapper .spacing-toggle-wrap,
@@ -43,8 +43,8 @@
 
 .uabb-spacing-wrapper .uabb-spacing-item input.uabb-spacing-input {
     box-sizing: border-box!important;
-    height: 25px !important;
-    min-height: 25px;
+    height: 34px !important;
+    min-height: 34px;
     margin: 0;
     width: 50px;
 }
@@ -67,7 +67,7 @@
 .uabb-spacing-wrapper span.uabb-icon {
     display: inline-block;
     position: relative;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     text-align: center;
     text-shadow: 0 1px 0 #fff;

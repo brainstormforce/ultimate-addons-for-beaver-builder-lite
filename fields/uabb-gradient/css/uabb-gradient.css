@@ -23,18 +23,18 @@
 .uabb-gradient-wrapper .uabb-gradient-label {
     display: inline-block;
     vertical-align: top;
-    width: 40px;
+    width: 50px;
     margin-right: 15px;
     padding-top: 5px;
 }
 
 .uabb-gradient-wrapper .wp-picker-container,
 .uabb-gradient-wrapper .fl-color-picker {
-    display: inline-block;
+  /*  display: inline-block;*/
     vertical-align: top;
     position: absolute;
     top: 0;
-    left: 55px;
+    left: 66px;
 }
 
 .uabb-gradient-wrapper .uabb-gradient-angle-input {

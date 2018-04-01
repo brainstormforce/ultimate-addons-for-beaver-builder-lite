@@ -34,25 +34,22 @@ if(!class_exists('UABB_Spacing'))
 		function __construct()
 		{	
 			add_action( 'fl_builder_control_uabb-spacing', array($this, 'uabb_spacing'), 1, 4 );
-			//add_action( 'wp_enqueue_scripts', array( $this, 'uabb_spacing_assets' ) );
+			add_action( 'fl_builder_custom_fields', array( $this, 'ui_fields' ), 10, 1 );
 		}
+
+		function ui_fields( $fields ) {
+			$fields['uabb-spacing'] = BB_ULTIMATE_ADDON_DIR . 'fields/uabb-spacing/ui-field-uabb-spacing.php';
+
+			return $fields;
+	    }
 		
 		function uabb_spacing($name, $value, $field, $settings) {
 
-			//var_dump( $value );
 			$name_def = $name;
 			$name = 'uabb_'.$name;
-
 			$value = str_replace("px","", $value );
+
 			$uabb_default = array_filter( preg_split("/\s*;\s*/", $value) );
-
-			/*if( end( $uabb_default ) == '' ){
-				$uabb_default = array_pop( $uabb_default );
-			}*/
-
-			//$uabb_default = preg_split('/\s+/', trim( $value ) );
-
-			//var_dump( $uabb_default );
 
 			$mode = isset( $field['mode'] ) ? $field['mode'] : 'padding';
 			$data_mode = " data-mode='".$mode."'";
@@ -77,12 +74,9 @@ if(!class_exists('UABB_Spacing'))
 				'left' 		=>	isset( $field['placeholder']['left'] ) ? $field['placeholder']['left'] : 'Left',
 			);
 
-			//var_dump( $uabb_default );
 			if ( is_array( $uabb_default ) ) {
 				foreach ($uabb_default as $value) {
 					$uabb_default = array_filter( preg_split("/\s*:\s*/", $value) );
-					//var_dump( $uabb_default[0] );
-					//var_dump( $uabb_default[1] );
 					$ch = isset( $uabb_default[0] ) ? $uabb_default[0] : 'margin' ;
 
 					$array_value = isset( $uabb_default[1] ) ? $uabb_default[1] : '';
@@ -109,7 +103,6 @@ if(!class_exists('UABB_Spacing'))
 						
 						case 'margin':
 						case 'padding':
-							//$medias_options['all']		= $array_value ;
 							
 							if ( isset( $uabb_default[1] ) && $uabb_default[1] != '' ) {
 								$uabb_default[1] =  preg_split('/\s+/', trim( $uabb_default[1] ) );
@@ -139,31 +132,6 @@ if(!class_exists('UABB_Spacing'))
 					
 				}
 			}
-			
-
-
-			/*if ( isset( $uabb_default[0] ) && $uabb_default[0] != '' ) {
-				switch ( count( $uabb_default )) {
-					case 1:
-						$medias_all['all'] = $uabb_default[0]; 
-						break;
-					case 2:
-						$medias_options['top']		= $medias_options['bottom']	= $uabb_default[0];
-						$medias_options['right'] 	= $medias_options['left']	= $uabb_default[1];
-						break;
-					case 3:
-						$medias_options['top']		= $uabb_default[0];
-						$medias_options['right'] 	= $medias_options['left']	= $uabb_default[1];
-						$medias_options['bottom']	= $uabb_default[2];
-						break;
-					case 4:
-						$medias_options['top']		= $uabb_default[0];
-						$medias_options['right'] 	= $uabb_default[1];
-						$medias_options['bottom']	= $uabb_default[2];
-						$medias_options['left']		= $uabb_default[3];
-						break;
-				}
-			}*/
 		
 			$medias =  array_merge( $medias_all, $medias_options );
 
@@ -249,20 +217,11 @@ if(!class_exists('UABB_Spacing'))
 				}
 				$html .= '</div>'; // Close options wrapper
 			$html .= '  </div>';
-			//$html .= $this->get_units($unit);
-			//$html .= '  <input type="hidden" data-unit="'.$unit.'"  name="'.$settings['param_name'].'" class="wpb_vc_param_value ultimate-responsive-value '.$settings['param_name'].' '.$settings['type'].'_field" value="'.$value.'" '.$dependency.' />';
 	
 			$html .= '</div>';
 		
 			echo $html;
 		}
-		
-		/*function uabb_spacing_assets() {
-		    if ( class_exists( 'FLBuilderModel' ) && FLBuilderModel::is_builder_active() ) {
-		    	wp_enqueue_style( 'uabb-spacing', BB_ULTIMATE_ADDON_URL . 'fields/uabb-spacing/css/uabb-spacing.css', array(), '' );
-		        wp_enqueue_script( 'uabb-spacing', BB_ULTIMATE_ADDON_URL . 'fields/uabb-spacing/js/uabb-spacing.js', array(), '', true );
-		    }
-		}*/
 
 		function uabb_preview( $field, $key, $mode ){
 			$uabb_preview = '';
@@ -292,10 +251,6 @@ if(!class_exists('UABB_Spacing'))
 		function uabb_spacing_param_media($name, $class, $dashicon, $key, $default_value, $selector, $data_id, $input_class, $placeholder_value) {
 			$tooltipVal  = str_replace('_', ' ', $data_id);
 			$html  = '<div class="uabb-spacing-item '.$class.' '.$data_id.'" '.$selector.'>';
-				/*$html .= '<span class="uabb-icon">';
-					$html .=          $dashicon;
-        			$html .= '<div class="uabb-tooltip '.$data_id.'">'.ucwords($tooltipVal).'</div>';
-				$html .= '</span>';*/
 				$html .= '    <input type="text" placeholder="'.$placeholder_value.'"name="'.$name.'[]['.$key.']" class="uabb-spacing-input '.$input_class.'" maxlength="3" size="6" value="'.$default_value.'" data-field="'.$key.'"/>';
 			$html .= '  </div>';
 			return $html;

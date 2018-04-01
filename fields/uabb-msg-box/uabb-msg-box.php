@@ -7,7 +7,7 @@
  * 'iconmsgs'     => array(
 *                       'type'           => 'uabb-msgbox',
 *                       'label'          => '',
-*                       'msg-type'       => 'success',
+*                       'msg_type'       => 'success',
 *                       'class'          => 'my-custom-class'
 *                       'content'        => 'This alert box could indicate a neutral informative change or action.'
 *					),
@@ -20,18 +20,18 @@ if(!class_exists('UABB_MSG_Field'))
 		function __construct()
 		{	
 			add_action( 'fl_builder_control_uabb-msgbox', array($this, 'uabb_msgbox'), 1, 4 );
-			//add_action( 'wp_enqueue_scripts', array( $this, 'msg_field_scripts' ) );
+                  add_action( 'fl_builder_custom_fields', array( $this, 'ui_fields' ), 10, 1 );
 		}
 
-		/*function msg_field_scripts() {
-	    	      if ( class_exists( 'FLBuilderModel' ) && FLBuilderModel::is_builder_active() ) {
-	    		wp_enqueue_style( 'msg_field-styles', plugins_url( 'css/uabb-msg-field.css', __FILE__ ) );
-	      	}
-		}*/
+            function ui_fields( $fields ) {
+                  $fields['uabb-msgbox'] = BB_ULTIMATE_ADDON_DIR . 'fields/uabb-msg-box/ui-field-uabb-msgbox.php';
+
+                  return $fields;
+            }
 		
 		function uabb_msgbox($name, $value, $field, $settings) {
       		
-      		$msg_type = isset( $field['msg-type'] ) ? $field['msg-type'] : 'info';
+      		$msg_type = isset( $field['msg_type'] ) ? $field['msg_type'] : 'info';
                   $custom_class = isset( $field['class'] ) ? $field['class'] : '';
       		$custom_class .= ' uabb-msg-'.$msg_type; 
 
