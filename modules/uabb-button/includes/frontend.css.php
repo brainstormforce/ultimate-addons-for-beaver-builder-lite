@@ -227,7 +227,7 @@ if( $global_settings->responsive_enabled ) : ?>
 					<?php endif; ?>
 				<?php endif; ?>
 
-				<?php if( isset( $settings->font_size['medium'] ) && $settings->font_size['medium'] == '' && isset( $settings->line_height['medium'] ) && $settings->line_height['medium'] != '' && $settings->line_height_unit_medium == '' ) { ?>
+				<?php if( isset( $settings->font_size['medium'] ) && $settings->font_size['medium'] == '' && isset( $settings->line_height['medium'] ) && $settings->line_height['medium'] != '' && $settings->line_height_unit == '' && $settings->line_height_unit_medium == '' ) { ?>
 				    line-height: <?php echo $settings->line_height['medium']; ?>px;
 				<?php } ?>
 
@@ -246,7 +246,7 @@ if( $global_settings->responsive_enabled ) : ?>
 			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
 			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
 
-				<?php if( isset( $settings->font_size['medium'] ) && $settings->font_size['medium'] == '' && isset( $settings->line_height['medium'] ) && $settings->line_height['medium'] != '' && $settings->line_height_unit_medium == '' ) { ?>
+				<?php if( isset( $settings->font_size['medium'] ) && $settings->font_size['medium'] == '' && isset( $settings->line_height['medium'] ) && $settings->line_height['medium'] != '' && $settings->line_height_unit == '' && $settings->line_height_unit_medium == '' ) { ?>
 				    line-height: <?php echo $settings->line_height['medium']; ?>px;
 				<?php } ?>
 
@@ -273,7 +273,7 @@ if( $global_settings->responsive_enabled ) : ?>
 					<?php endif; ?>
 				<?php endif; ?>
 
-				<?php if( isset( $settings->font_size['small'] ) && $settings->font_size['small'] == '' && isset( $settings->line_height['small'] ) && $settings->line_height['small'] != '' && $settings->line_height_unit_responsive == '' ) { ?>
+				<?php if( isset( $settings->font_size['small'] ) && $settings->font_size['small'] == '' && isset( $settings->line_height['small'] ) && $settings->line_height['small'] != '' && $settings->line_height_unit == '' && $settings->line_height_unit_medium == '' && $settings->line_height_unit_responsive == '' ) { ?>
 				    line-height: <?php echo $settings->line_height['small']; ?>px;
 				<?php } ?>
 
@@ -291,7 +291,7 @@ if( $global_settings->responsive_enabled ) : ?>
 			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
 			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
 
-				<?php if( isset( $settings->font_size['small'] ) && $settings->font_size['small'] == '' && isset( $settings->line_height['small'] ) && $settings->line_height['small'] != '' && $settings->line_height_unit_responsive == '' ) { ?>
+				<?php if( isset( $settings->font_size['small'] ) && $settings->font_size['small'] == '' && isset( $settings->line_height['small'] ) && $settings->line_height['small'] != '' && $settings->line_height_unit == '' && $settings->line_height_unit_medium == '' && $settings->line_height_unit_responsive == '' ) { ?>
 				    line-height: <?php echo $settings->line_height['small']; ?>px;
 				<?php } ?>
 				

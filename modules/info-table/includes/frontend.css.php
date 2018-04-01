@@ -728,7 +728,7 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 						font-size: <?php echo $settings->heading_font_size_unit_medium; ?>px;
 					<?php endif; ?>
 
-					<?php if( isset( $settings->heading_font_size['medium'] ) && $settings->heading_font_size['medium'] == '' && isset( $settings->heading_line_height['medium'] ) && $settings->heading_line_height['medium'] != '' && $settings->heading_line_height_unit_medium == '' ) { ?>
+					<?php if( isset( $settings->heading_font_size['medium'] ) && $settings->heading_font_size['medium'] == '' && isset( $settings->heading_line_height['medium'] ) && $settings->heading_line_height['medium'] != '' && $settings->heading_line_height_unit == '' && $settings->heading_line_height_unit_medium == '' ) { ?>
 					    line-height: <?php echo $settings->heading_line_height['medium']; ?>px;
 					<?php } ?>
 
@@ -746,7 +746,7 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 						font-size: <?php echo $settings->sub_heading_font_size_unit_medium; ?>px;
 					<?php endif; ?>
 
-					<?php if( isset( $settings->sub_heading_font_size['medium'] ) && $settings->sub_heading_font_size['medium'] == '' && isset( $settings->sub_heading_line_height['medium'] ) && $settings->sub_heading_line_height['medium'] != '' && $settings->sub_heading_line_height_unit_medium == '' ) { ?>
+					<?php if( isset( $settings->sub_heading_font_size['medium'] ) && $settings->sub_heading_font_size['medium'] == '' && isset( $settings->sub_heading_line_height['medium'] ) && $settings->sub_heading_line_height['medium'] != '' && $settings->sub_heading_line_height_unit == '' && $settings->sub_heading_line_height_unit_medium == '' ) { ?>
 					    line-height: <?php echo $settings->sub_heading_line_height['medium']; ?>px;
 					<?php } ?>
 
@@ -764,7 +764,7 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 						font-size: <?php echo $settings->description_font_size_unit_medium; ?>px;px;
 					<?php endif; ?>
 
-					<?php if( isset( $settings->description_font_size['medium'] ) && $settings->description_font_size['medium'] == '' && isset( $settings->description_line_height['medium'] ) && $settings->description_line_height['medium'] != '' && $settings->description_line_height_unit_medium == '' ) { ?>
+					<?php if( isset( $settings->description_font_size['medium'] ) && $settings->description_font_size['medium'] == '' && isset( $settings->description_line_height['medium'] ) && $settings->description_line_height['medium'] != '' && $settings->description_line_height_unit == '' && $settings->description_line_height_unit_medium == '' ) { ?>
 					    line-height: <?php echo $settings->description_line_height['medium']; ?>px;
 					<?php } ?>
 
@@ -782,7 +782,7 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 						font-size: <?php echo $settings->btn_font_size_unit_medium; ?>px;px;
 					<?php endif; ?>
 
-					<?php if( isset( $settings->btn_font_size['medium'] ) && $settings->btn_font_size['medium'] == '' && isset( $settings->btn_line_height['medium'] ) && $settings->btn_line_height['medium'] != '' && $settings->btn_line_height_unit_medium == '' ) { ?>
+					<?php if( isset( $settings->btn_font_size['medium'] ) && $settings->btn_font_size['medium'] == '' && isset( $settings->btn_line_height['medium'] ) && $settings->btn_line_height['medium'] != '' && $settings->btn_line_height_unit == '' && $settings->btn_line_height_unit_medium == '' ) { ?>
 					    line-height: <?php echo $settings->btn_line_height['medium']; ?>px;
 					<?php } ?>
 
@@ -805,7 +805,7 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 						font-size: <?php echo $settings->heading_font_size_unit_responsive; ?>px;
 					<?php endif; ?>
 
-					<?php if( isset( $settings->heading_font_size['small'] ) && $settings->heading_font_size['small'] == '' && isset( $settings->heading_line_height['small'] ) && $settings->heading_line_height['small'] != '' && $settings->heading_line_height_unit_responsive == '' ) { ?>
+					<?php if( isset( $settings->heading_font_size['small'] ) && $settings->heading_font_size['small'] == '' && isset( $settings->heading_line_height['small'] ) && $settings->heading_line_height['small'] != '' && $settings->heading_line_height_unit == '' && $settings->heading_line_height_unit_medium == '' && $settings->heading_line_height_unit_responsive == '' ) { ?>
 					    line-height: <?php echo $settings->heading_line_height['small']; ?>px;
 					<?php } ?>
 
@@ -823,7 +823,7 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 						font-size: <?php echo $settings->sub_heading_font_size_unit_responsive; ?>px;
 					<?php endif; ?>
                 
-                	<?php if( isset( $settings->sub_heading_font_size['small'] ) && $settings->sub_heading_font_size['small'] == '' && isset( $settings->sub_heading_line_height['small'] ) && $settings->sub_heading_line_height['small'] != '' && $settings->sub_heading_line_height_unit_responsive == '' ) { ?>
+                	<?php if( isset( $settings->sub_heading_font_size['small'] ) && $settings->sub_heading_font_size['small'] == '' && isset( $settings->sub_heading_line_height['small'] ) && $settings->sub_heading_line_height['small'] != '' && $settings->sub_heading_line_height_unit == '' && $settings->sub_heading_line_height_unit_medium == '' && $settings->sub_heading_line_height_unit_responsive == '' ) { ?>
                 	    line-height: <?php echo $settings->sub_heading_line_height['small']; ?>px;
                 	<?php } ?>
 
@@ -842,7 +842,7 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 						font-size: <?php echo $settings->description_font_size_unit_responsive; ?>px;
 					<?php endif; ?>
 
-					<?php if( isset( $settings->description_font_size['small'] ) && $settings->description_font_size['small'] == '' && isset( $settings->description_line_height['small'] ) && $settings->description_line_height['small'] != '' && $settings->description_line_height_unit_responsive == '' ) { ?>
+					<?php if( isset( $settings->description_font_size['small'] ) && $settings->description_font_size['small'] == '' && isset( $settings->description_line_height['small'] ) && $settings->description_line_height['small'] != '' && $settings->description_line_height_unit == '' && $settings->description_line_height_unit_medium == '' && $settings->description_line_height_unit_responsive == '' ) { ?>
 					    line-height: <?php echo $settings->description_line_height['small']; ?>px;
 					<?php } ?>
                 
@@ -869,7 +869,7 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 							font-size: <?php echo $settings->btn_font_size_unit_responsive; ?>px;
 						<?php endif; ?>
 
-						<?php if( isset( $settings->btn_font_size['small'] ) && $settings->btn_font_size['small'] == '' && isset( $settings->btn_line_height['small'] ) && $settings->btn_line_height['small'] != '' && $settings->btn_line_height_unit_responsive == '' ) { ?>
+						<?php if( isset( $settings->btn_font_size['small'] ) && $settings->btn_font_size['small'] == '' && isset( $settings->btn_line_height['small'] ) && $settings->btn_line_height['small'] != '' && $settings->btn_line_height_unit == '' && $settings->btn_line_height_unit_medium == ''&& $settings->btn_line_height_unit_responsive == '' ) { ?>
 						    line-height: <?php echo $settings->btn_line_height['small']; ?>px;
 						<?php } ?>
 
