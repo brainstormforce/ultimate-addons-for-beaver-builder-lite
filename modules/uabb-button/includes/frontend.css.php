@@ -65,6 +65,7 @@ if ( ! empty( $settings->bg_hover_color ) ) {
 
 	<?php if( isset( $settings->font_size_unit ) && $settings->font_size_unit != '' ) : ?>
 		font-size: <?php echo $settings->font_size_unit; ?>px;
+		<?php if( $settings->line_height_unit == '' ) ?>
 		line-height: <?php echo $settings->font_size_unit + 2; ?>px; 
 	<?php endif; ?>
 
@@ -222,7 +223,7 @@ if( $global_settings->responsive_enabled ) : ?>
 
 				<?php if( isset( $settings->font_size_unit_medium ) && $settings->font_size_unit_medium != '' ) : ?>
 					font-size: <?php echo $settings->font_size_unit_medium; ?>px;
-					<?php if( $settings->width != 'custom' ) : ?>
+					<?php if( $settings->width != 'custom' ) && $settings->line_height_unit_medium == '' : ?>
 						line-height: <?php echo $settings->font_size_unit_medium + 2; ?>px;
 					<?php endif; ?>
 				<?php endif; ?>
@@ -268,7 +269,7 @@ if( $global_settings->responsive_enabled ) : ?>
 
 				<?php if( isset( $settings->font_size_unit_responsive ) && $settings->font_size_unit_responsive != '' ) : ?>
 					font-size: <?php echo $settings->font_size_unit_responsive; ?>px;
-					<?php if( $settings->width != 'custom' ) : ?>
+					<?php if( $settings->width != 'custom' ) && $settings->line_height_unit_responsive == '' : ?>
 						line-height: <?php echo $settings->font_size_unit_responsive + 2; ?>px;
 					<?php endif; ?>
 				<?php endif; ?>

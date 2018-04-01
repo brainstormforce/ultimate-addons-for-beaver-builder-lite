@@ -16,9 +16,12 @@ class UABBInfoList extends FLBuilderModule {
             'partial_refresh' => false, // Defaults to false and can be omitted.
             'icon'            => 'info-list.svg'
         ));
+
         $this->add_js( 'jquery-waypoints' );
+        
         // Register and enqueue your own.
         $this->add_css( 'uabb-animate', $this->url . 'css/animate.css' );
+
         add_filter( 'fl_builder_layout_data', array( $this , 'render_new_data' ), 10, 3 );
     }
 
