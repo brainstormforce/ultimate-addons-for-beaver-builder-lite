@@ -10,7 +10,6 @@
 
 require_once 'uabb-simplify/uabb-simplify.php';
 require_once 'uabb-spacing/uabb-spacing.php';
-require_once 'uabb-toggle-switch/uabb-toggle-switch.php';
 require_once 'uabb-blank-spacer/uabb-blank-spacer.php';
 require_once 'uabb-msg-box/uabb-msg-box.php';
 require_once 'uabb-gradient/uabb-gradient.php';
