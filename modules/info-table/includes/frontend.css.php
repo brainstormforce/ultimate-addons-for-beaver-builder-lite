@@ -761,7 +761,7 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 				.fl-node-<?php echo $id;?> .info-table .info-table-description {
 
 					<?php if( isset( $settings->description_font_size_unit_medium ) && $settings->description_font_size_unit_medium != '' ) : ?>
-						font-size: <?php echo $settings->description_font_size_unit_medium; ?>px;px;
+						font-size: <?php echo $settings->description_font_size_unit_medium; ?>px;
 					<?php endif; ?>
 
 					<?php if( isset( $settings->description_font_size['medium'] ) && $settings->description_font_size['medium'] == '' && isset( $settings->description_line_height['medium'] ) && $settings->description_line_height['medium'] != '' && $settings->description_line_height_unit == '' && $settings->description_line_height_unit_medium == '' ) { ?>
@@ -779,7 +779,7 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 				.fl-node-<?php echo $id;?> .info-table-wrap .info-table-button a {
 
 					<?php if( isset( $settings->btn_font_size_unit_medium ) && $settings->btn_font_size_unit_medium != '' ) : ?>
-						font-size: <?php echo $settings->btn_font_size_unit_medium; ?>px;px;
+						font-size: <?php echo $settings->btn_font_size_unit_medium; ?>px;
 					<?php endif; ?>
 
 					<?php if( isset( $settings->btn_font_size['medium'] ) && $settings->btn_font_size['medium'] == '' && isset( $settings->btn_line_height['medium'] ) && $settings->btn_line_height['medium'] != '' && $settings->btn_line_height_unit == '' && $settings->btn_line_height_unit_medium == '' ) { ?>
