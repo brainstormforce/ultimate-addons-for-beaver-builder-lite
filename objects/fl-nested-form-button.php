@@ -314,23 +314,27 @@ FLBuilder::register_settings_form('button_form_field', array(
                                 'selector'        => '.uabb-creative-button'
                             )
                         ),
-                        'font_size'     => array(
-                            'type'          => 'uabb-simplify',
+                        'font_size_unit'     => array(
+                            'type'          => 'unit',
                             'label'         => __( 'Font Size', 'uabb' ),
-                            'default'       => array(
-                                'desktop'       => '',
-                                'medium'        => '',
-                                'small'         => '',
-                            )
+                            'responsive' => array(
+                                'placeholder' => array(
+                                    'default' => '',
+                                    'medium' => '',
+                                    'responsive' => '',
+                                ),
+                            ),
                         ),
-                        'line_height'    => array(
-                            'type'          => 'uabb-simplify',
+                        'line_height_unit'    => array(
+                            'type'          => 'unit',
                             'label'         => __( 'Line Height', 'uabb' ),
-                            'default'       => array(
-                                'desktop'       => '',
-                                'medium'        => '',
-                                'small'         => '',
-                            )
+                            'responsive' => array(
+                                'placeholder' => array(
+                                    'default' => '',
+                                    'medium' => '',
+                                    'responsive' => '',
+                                ),
+                            ),
                         ),
                     )
                 ),
