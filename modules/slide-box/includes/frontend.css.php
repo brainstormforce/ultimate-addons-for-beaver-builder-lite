@@ -736,7 +736,7 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
 
                 <?php if( isset( $settings->link_font_size_unit_responsive ) && $settings->link_font_size_unit_responsive != '' ) : ?>
                     font-size: <?php echo $settings->link_font_size_unit_responsive; ?>px;
-                    <?php if( $settings->d == '' ) ?>
+                    <?php if( $settings->link_line_height_unit_responsive == '' ) ?>
                     line-height: <?php echo $settings->link_font_size_unit_responsive + 2; ?>px;
                 <?php endif; ?>
 
