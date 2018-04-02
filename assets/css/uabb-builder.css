@@ -3,28 +3,6 @@
 * This CSS will not load on frontend / wp-admin screen.
 */
 
-
-/* Equal Height Column Alignment Live Preview CSS */
-.fl-row-content .fl-col-group-equal-height.fl-col-group-align-top .fl-col-content {
-	-webkit-justify-content: flex-start;
-			justify-content: flex-start;
-		  -webkit-box-align: start;
-		   -webkit-box-pack: start;
-			  -ms-flex-pack: start;
-
-}
-
-.fl-row-content .fl-col-group-equal-height.fl-col-group-align-center .fl-col-content {
-	align-items: center;
-	justify-content: flex-start;
-	-webkit-align-items: center;
-	-webkit-box-align: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-align: center;
-	-ms-flex-pack: center;
-}
-
 /* Blog Post Search Filter */
 #uabb-settings-section-filter .fl-form-table .as-selections {
 	cursor: text;
@@ -37,6 +15,7 @@
 	box-shadow: none!important;
 	border: 0!important;
 }
+
 #uabb-settings-section-filter .fl-form-table .as-selections .as-selection-item {
 	margin: 3px 3px;
 }
@@ -44,77 +23,6 @@
 #uabb-settings-section-filter .fl-form-table .as-selections .as-selection-item,
 #uabb-settings-section-filter .fl-form-table .as-selections .as-selection-item .as-close {
 	line-height: 20px;
-}
-
-/* Font Family */
-.fl-builder-bar-content,
-.fl-builder-panel,
-.fl-lightbox :not(i),
-.fl-lightbox-header h1,
-.fl-builder-actions-title,
-.fl-builder-alert-lightbox .fl-lightbox-message,
-.fl-builder-panel [class^="fl-builder"] button,
-.fl-builder-panel [class^="fl-builder"] input,
-.fl-builder-panel [class^="fl-builder"] select,
-.fl-builder-panel [class^="fl-builder"] textarea,
-.fl-builder-lightbox [class^="fl-builder"] button,
-.fl-builder-lightbox [class^="fl-builder"] input,
-.fl-builder-lightbox [class^="fl-builder"] select,
-.fl-builder-lightbox [class^="fl-builder"] textarea {
-	font-family: Tahoma,Verdana,sans-serif !important;
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	letter-spacing: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-.fl-lightbox .ace_editor,
-.fl-lightbox .ace_editor * {
-    font-family: Monaco,Menlo,"Ubuntu Mono","Droid Sans Mono",Consolas,monospace!important;
-    font-size: 12px!important;
-    font-weight: 400!important;
-    letter-spacing: 0!important;
-}
-
-/* Input Box & Textarea Design */
-.fl-builder-panel [class^="fl-builder"] input,
-.fl-builder-panel [class^="fl-builder"] textarea {
-	border: 1px solid #dfdfdf !important;
-	border-radius: 0 !important;
-	box-shadow: none !important;
-	margin: 0 !important;
-	padding: 14px 20px !important;
-	outline: none !important;
-	font-size: 14px !important;
-	line-height: 1em;
-	color: #666 !important;
-	outline: none !important;
-    height: auto !important;
-}
-.fl-builder-panel [class^="fl-builder"] input:focus,
-.fl-builder-panel [class^="fl-builder"] textarea:focus,
-.fl-builder-panel [class^="fl-builder"] input:active,
-.fl-builder-panel [class^="fl-builder"] textarea:active {
-	border-color: #dfdfdf !important;
-	box-shadow: 0px 1px 5px 0px #c7c7c7 !important;
-	outline: none !important;
-}
-.fl-builder-lightbox [class^="fl-builder"] input,
-.fl-builder-lightbox [class^="fl-builder"] textarea {
-	border: 1px solid #dfdfdf !important;
-	outline: none !important;
-}
-.fl-builder-lightbox [class^="fl-builder"] input:focus,
-.fl-builder-lightbox [class^="fl-builder"] textarea:focus,
-.fl-builder-lightbox [class^="fl-builder"] input:active,
-.fl-builder-lightbox [class^="fl-builder"] textarea:active {
-	border-color: #dfdfdf !important;
-	box-shadow: 0px 1px 5px 0px #c7c7c7 !important;
-	outline: none !important;
 }
 
 /* Accordion Icon Transformation */
