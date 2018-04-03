@@ -104,20 +104,35 @@ if( $settings->flip_box_min_height_options == 'uabb-custom-height' ) {
 }
 
 .fl-node-<?php echo $id; ?> .uabb-flip-box-section {
-    <?php echo ( $settings->inner_padding != '' ) ? $settings->inner_padding : 'padding: 15px;'; ?>
+    <?php 
+        if(isset($settings->inner_padding_dimension_top) ){
+            echo ( $settings->inner_padding_dimension_top != '' ) ? 'padding-top:'.$settings->inner_padding_dimension_top.'px;' : 'padding-top: 15px;'; 
+        }
+        if(isset($settings->inner_padding_dimension_bottom) ){
+            echo ( $settings->inner_padding_dimension_bottom != '' ) ? 'padding-bottom:'.$settings->inner_padding_dimension_bottom.'px;' : 'padding-bottom: 15px;';
+        }
+        if(isset($settings->inner_padding_dimension_left) ){
+            echo ( $settings->inner_padding_dimension_left != '' ) ? 'padding-left:'.$settings->inner_padding_dimension_left.'px;' : 'padding-left: 15px;';
+        }
+        if(isset($settings->inner_padding_dimension_right) ){
+            echo ( $settings->inner_padding_dimension_right != '' ) ? 'padding-right:'.$settings->inner_padding_dimension_right.'px;' : 'padding-right: 15px;';
+        } 
+    ?>
 }
-
 
 .fl-node-<?php echo $id; ?> .uabb-front .uabb-face-text-title {
     <?php if( isset( $settings->front_title_typography_font_size_unit ) && $settings->front_title_typography_font_size_unit != '' ) : ?>
         font-size: <?php echo $settings->front_title_typography_font_size_unit; ?>px;
     <?php endif; ?>
+
     <?php if( isset( $settings->front_title_typography_font_size['desktop'] ) && $settings->front_title_typography_font_size['desktop'] == '' && isset( $settings->front_title_typography_line_height['desktop'] ) && $settings->front_title_typography_line_height['desktop'] != '' && $settings->front_title_typography_line_height_unit == '' ) { ?>
         line-height: <?php echo $settings->front_title_typography_line_height['desktop']; ?>px;
     <?php } ?>
+
     <?php if( isset( $settings->front_title_typography_line_height_unit ) && $settings->front_title_typography_line_height_unit != '' ) : ?>
         line-height: <?php echo $settings->front_title_typography_line_height_unit; ?>em;
     <?php endif; ?>
+
     <?php
     if( $settings->front_title_typography_font_family['family'] != 'Default' ) {
         UABB_Helper::uabb_font_css( $settings->front_title_typography_font_family );
@@ -130,16 +145,17 @@ if( $settings->flip_box_min_height_options == 'uabb-custom-height' ) {
     ?>
 }
 
-
 .fl-node-<?php echo $id; ?> .uabb-back .uabb-text-editor {
     color : <?php echo uabb_theme_text_color( $settings->back_desc_typography_color ); ?>;
 
     <?php if( isset( $settings->back_desc_typography_font_size_unit ) && $settings->back_desc_typography_font_size_unit != '' ) : ?>
         font-size: <?php echo $settings->back_desc_typography_font_size_unit; ?>px;
     <?php endif; ?>
+
     <?php if( isset( $settings->back_desc_typography_font_size['desktop'] ) && $settings->back_desc_typography_font_size['desktop'] == '' && isset( $settings->back_desc_typography_line_height['desktop'] ) && $settings->back_desc_typography_line_height['desktop'] != '' && $settings->back_desc_typography_line_height_unit == '' ) { ?>
         line-height: <?php echo $settings->back_desc_typography_line_height['desktop']; ?>px;
     <?php } ?>
+
     <?php if( isset( $settings->back_desc_typography_line_height_unit ) && $settings->back_desc_typography_line_height_unit != '' ) : ?>
         line-height: <?php echo $settings->back_desc_typography_line_height_unit; ?>em;
     <?php endif; ?>
@@ -169,7 +185,6 @@ if( $settings->flip_box_min_height_options == 'uabb-custom-height' ) {
     ?>
 }
 
-
 .fl-node-<?php echo $id; ?> .uabb-back .uabb-back-text-title {
 
     <?php if( isset( $settings->back_title_typography_font_size_unit ) && $settings->back_title_typography_font_size_unit != '' ) : ?>
@@ -196,8 +211,6 @@ if( $settings->flip_box_min_height_options == 'uabb-custom-height' ) {
     ?>
 }
 
-
-
 <?php
 if( $global_settings->responsive_enabled ) { // Global Setting If started
 ?>
@@ -214,6 +227,23 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
             }
         }
         ?>
+
+        .fl-node-<?php echo $id; ?> .uabb-flip-box-section {
+            <?php 
+                if(isset($settings->inner_padding_dimension_top_medium) ){
+                    echo ( $settings->inner_padding_dimension_top_medium != '' ) ? 'padding-top:'.$settings->inner_padding_dimension_top_medium.'px;' : ''; 
+                }
+                if(isset($settings->inner_padding_dimension_bottom_medium) ){
+                    echo ( $settings->inner_padding_dimension_bottom_medium != '' ) ? 'padding-bottom:'.$settings->inner_padding_dimension_bottom_medium.'px;' : '';
+                }
+                if(isset($settings->inner_padding_dimension_left_medium) ){
+                    echo ( $settings->inner_padding_dimension_left_medium != '' ) ? 'padding-left:'.$settings->inner_padding_dimension_left_medium.'px;' : '';
+                }
+                if(isset($settings->inner_padding_dimension_right_medium) ){
+                    echo ( $settings->inner_padding_dimension_right_medium != '' ) ? 'padding-right:'.$settings->inner_padding_dimension_right_medium.'px;' : '';
+                } 
+            ?>
+        }
 
         .fl-node-<?php echo $id; ?> .uabb-front .uabb-text-editor {
             <?php if( isset( $settings->front_desc_typography_font_size_unit_medium ) && $settings->front_desc_typography_font_size_unit_medium != '' ) : ?>
@@ -258,7 +288,6 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
             <?php endif; ?>
         }
 
-
         .fl-node-<?php echo $id; ?> .uabb-back .uabb-back-text-title {
             <?php if( isset( $settings->back_title_typography_font_size_unit_medium ) && $settings->back_title_typography_font_size_unit_medium != '' ) : ?>
                 font-size: <?php echo $settings->back_title_typography_font_size_unit_medium; ?>px;
@@ -294,6 +323,23 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
             }
         }
         ?>
+        
+        .fl-node-<?php echo $id; ?> .uabb-flip-box-section {
+            <?php 
+                if(isset($settings->inner_padding_dimension_top_responsive) ){
+                    echo ( $settings->inner_padding_dimension_top_responsive != '' ) ? 'padding-top:'.$settings->inner_padding_dimension_top_responsive.'px;' : ''; 
+                }
+                if(isset($settings->inner_padding_dimension_bottom_responsive) ){
+                    echo ( $settings->inner_padding_dimension_bottom_responsive != '' ) ? 'padding-bottom:'.$settings->inner_padding_dimension_bottom_responsive.'px;' : '';
+                }
+                if(isset($settings->inner_padding_dimension_left_responsive) ){
+                    echo ( $settings->inner_padding_dimension_left_responsive != '' ) ? 'padding-left:'.$settings->inner_padding_dimension_left_responsive.'px;' : '';
+                }
+                if(isset($settings->inner_padding_dimension_right_responsive) ){
+                    echo ( $settings->inner_padding_dimension_right_responsive != '' ) ? 'padding-right:'.$settings->inner_padding_dimension_right_responsive.'px;' : '';
+                } 
+            ?>
+        }
 
         .fl-node-<?php echo $id; ?> .uabb-front .uabb-text-editor {
 

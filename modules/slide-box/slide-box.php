@@ -34,6 +34,86 @@ class SlideBoxModule extends FLBuilderModule {
             
             if ( isset( $node->settings->type ) && 'slide-box' === $node->settings->type ) {
 
+                if( isset( $node->settings->front_padding ) &&  !isset( $node->settings->front_padding_dimension_top ) &&  !isset( $node->settings->front_padding_dimension_bottom ) &&  !isset( $node->settings->front_padding_dimension_left ) &&  !isset( $node->settings->front_padding_dimension_right ) ) {
+                    
+                        $value = "";
+                        $value = str_replace("px","", $node->settings->front_padding );
+                        
+                        $output = array();
+                        $uabb_default = array_filter( preg_split("/\s*;\s*/", $value) );
+                        $node->settings->front_padding_dimension_top    = '0';
+                        $node->settings->front_padding_dimension_bottom = '0';
+                        $node->settings->front_padding_dimension_right  = '0';
+                        $node->settings->front_padding_dimension_left   = '0';
+                        foreach($uabb_default as $val) {
+                            $new = explode(':',$val);
+                             $output[] = $new;
+                        }
+                        for ($i=0; $i < count( $output ); $i++) { 
+
+                            switch ( $output[$i][0] ) {
+                                case 'padding-top':
+                                   $node->settings->front_padding_dimension_top    = (int)$output[$i][1];
+                                    break;
+                                case 'padding-bottom':
+                                    $node->settings->front_padding_dimension_bottom = (int)$output[$i][1];
+                                    break;
+                                case 'padding-right':
+                                    $node->settings->front_padding_dimension_right  = (int)$output[$i][1];
+                                    break;
+                                case 'padding-left':
+                                    $node->settings->front_padding_dimension_left   = (int)$output[$i][1];
+                                    break;
+                                case 'padding':
+                                    $node->settings->front_padding_dimension_top    = (int)$output[$i][1];
+                                    $node->settings->front_padding_dimension_bottom = (int)$output[$i][1];
+                                    $node->settings->front_padding_dimension_left   = (int)$output[$i][1];
+                                    $node->settings->front_padding_dimension_right  = (int)$output[$i][1];
+                                    break;
+                            }
+                        }
+                    }
+
+                        if( isset( $node->settings->back_padding ) &&  !isset( $node->settings->back_padding_dimension_top ) &&  !isset( $node->settings->back_padding_dimension_bottom ) &&  !isset( $node->settings->back_padding_dimension_left ) &&  !isset( $node->settings->back_padding_dimension_right ) ) {
+                 
+                        $value = "";
+                        $value = str_replace("px","", $node->settings->back_padding );
+                        
+                        $output = array();
+                        $uabb_default = array_filter( preg_split("/\s*;\s*/", $value) );
+                        $node->settings->back_padding_dimension_top    = '0';
+                        $node->settings->back_padding_dimension_bottom = '0';
+                        $node->settings->back_padding_dimension_right  = '0';
+                        $node->settings->back_padding_dimension_left   = '0';
+                            foreach($uabb_default as $val) {
+                                $new = explode(':',$val);
+                                 $output[] = $new;
+                            }
+                            for ($i=0; $i < count( $output ); $i++) { 
+                                switch ( $output[$i][0] ) {
+
+                                    case 'padding-top':
+                                       $node->settings->back_padding_dimension_top    = (int)$output[$i][1];
+                                        break;
+                                    case 'padding-bottom':
+                                        $node->settings->back_padding_dimension_bottom = (int)$output[$i][1];
+                                        break;
+                                    case 'padding-right':
+                                        $node->settings->back_padding_dimension_right  = (int)$output[$i][1];
+                                        break;
+                                    case 'padding-left':
+                                        $node->settings->back_padding_dimension_left   = (int)$output[$i][1];
+                                        break;
+                                    case 'padding':
+                                        $node->settings->back_padding_dimension_top    = (int)$output[$i][1];
+                                        $node->settings->back_padding_dimension_bottom = (int)$output[$i][1];
+                                        $node->settings->back_padding_dimension_left   = (int)$output[$i][1];
+                                        $node->settings->back_padding_dimension_right  = (int)$output[$i][1];
+                                        break;
+                                }
+                            }
+                        }
+
                 if ( isset( $node->settings->front_title_font_size['small']) && !isset( $node->settings->front_title_font_size_unit_responsive ) ) {
                     $node->settings->front_title_font_size_unit_responsive = $node->settings->front_title_font_size['small'];
                 }
@@ -735,12 +815,17 @@ FLBuilder::register_module('SlideBoxModule', array(
             'front_styles'       => array( // Section
                 'title'         => __('Slide Box Front Style', 'uabb'), // Section Title
                 'fields'        => array( // Section Fields
-                    'front_padding' => array(
-                        'type'      => 'uabb-spacing',
+                    'front_padding_dimension' => array(
+                        'type'      => 'dimension',
                         'label'     => __( 'Content Padding', 'uabb' ),
-                        'mode'      => 'padding',
-                        'default'   => 'padding: 25px;',
                         'help'     => __( 'To apply padding to Slide Box Front use this setting', 'uabb' ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '25',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ), 
                     ),
                     'front_background_color'    => array( 
                         'type'       => 'color',
@@ -782,12 +867,17 @@ FLBuilder::register_module('SlideBoxModule', array(
             'back_styles'       => array( // Section
                 'title'         => __('Slide Box Back Style', 'uabb'), // Section Title
                 'fields'        => array( // Section Fields
-                    'back_padding' => array(
-                        'type'      => 'uabb-spacing',
+                    'back_padding_dimension' => array(
+                        'type'      => 'dimension',
                         'label'     => __( 'Content Padding', 'uabb' ),
-                        'mode'      => 'padding',
-                        'default'   => 'padding: 25px;',
                         'help'     => __( 'To apply padding to Slide Box Back use this setting', 'uabb' ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '25',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ), 
                     ),
                     'back_alignment'   => array(
                         'type'          => 'select',
