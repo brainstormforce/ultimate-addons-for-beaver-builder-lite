@@ -36,7 +36,6 @@ class FlipBoxModule extends FLBuilderModule {
                         if( isset( $node->settings->inner_padding ) &&  !isset( $node->settings->inner_padding_dimension_top ) &&  !isset( $node->settings->inner_padding_dimension_bottom ) &&  !isset( $node->settings->inner_padding_dimension_left ) &&  !isset( $node->settings->inner_padding_dimension_right ) ) {
                      
                             $value = "";
-                            if(isset($node->settings->inner_padding)) 
                             $value = str_replace("px","", $node->settings->inner_padding );
                             
                             $output = array();

@@ -37,7 +37,6 @@ class SlideBoxModule extends FLBuilderModule {
                 if( isset( $node->settings->front_padding ) &&  !isset( $node->settings->front_padding_dimension_top ) &&  !isset( $node->settings->front_padding_dimension_bottom ) &&  !isset( $node->settings->front_padding_dimension_left ) &&  !isset( $node->settings->front_padding_dimension_right ) ) {
                  
                         $value = "";
-                        if(isset($node->settings->front_padding)) 
                         $value = str_replace("px","", $node->settings->front_padding );
                         
                         $output = array();
@@ -74,7 +73,6 @@ class SlideBoxModule extends FLBuilderModule {
                         if( isset( $node->settings->back_padding ) &&  !isset( $node->settings->back_padding_dimension_top ) &&  !isset( $node->settings->back_padding_dimension_bottom ) &&  !isset( $node->settings->back_padding_dimension_left ) &&  !isset( $node->settings->back_padding_dimension_right ) ) {
                  
                         $value = "";
-                        if(isset($node->settings->back_padding)) 
                         $value = str_replace("px","", $node->settings->back_padding );
                         
                         $output = array();
@@ -812,12 +810,10 @@ FLBuilder::register_module('SlideBoxModule', array(
                     'front_padding_dimension' => array(
                         'type'      => 'dimension',
                         'label'     => __( 'Content Padding', 'uabb' ),
-                        'mode'      => 'padding',
-                        'default'   => 'padding: 25px;',
                         'help'     => __( 'To apply padding to Slide Box Front use this setting', 'uabb' ),
                         'responsive' => array(
                             'placeholder' => array(
-                                'default' => '15',
+                                'default' => '25',
                                 'medium' => '',
                                 'responsive' => '',
                             ),
@@ -866,12 +862,10 @@ FLBuilder::register_module('SlideBoxModule', array(
                     'back_padding_dimension' => array(
                         'type'      => 'dimension',
                         'label'     => __( 'Content Padding', 'uabb' ),
-                        'mode'      => 'padding',
-                        'default'   => 'padding: 25px;',
                         'help'     => __( 'To apply padding to Slide Box Back use this setting', 'uabb' ),
                         'responsive' => array(
                             'placeholder' => array(
-                                'default' => '15',
+                                'default' => '25',
                                 'medium' => '',
                                 'responsive' => '',
                             ),

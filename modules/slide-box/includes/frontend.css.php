@@ -42,16 +42,16 @@
 .fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-slide-front {
     <?php 
         if(isset($settings->front_padding_dimension_top) && $settings->front_padding_dimension_top != ''){
-            echo ( $settings->front_padding_dimension_top != '' ) ? 'padding-top:'.$settings->front_padding_dimension_top.'px;' : 'padding-top: 15px;'; 
+            echo ( $settings->front_padding_dimension_top != '' ) ? 'padding-top:'.$settings->front_padding_dimension_top.'px;' : 'padding-top: 25px;'; 
         }
         if(isset($settings->front_padding_dimension_bottom) && $settings->front_padding_dimension_bottom != ''){
-            echo ( $settings->front_padding_dimension_bottom != '' ) ? 'padding-bottom:'.$settings->front_padding_dimension_bottom.'px;' : 'padding-bottom: 15px;';
+            echo ( $settings->front_padding_dimension_bottom != '' ) ? 'padding-bottom:'.$settings->front_padding_dimension_bottom.'px;' : 'padding-bottom: 25px;';
         }
         if(isset($settings->front_padding_dimension_left) && $settings->front_padding_dimension_left != ''){
-            echo ( $settings->front_padding_dimension_left != '' ) ? 'padding-left:'.$settings->front_padding_dimension_left.'px;' : 'padding-left: 15px;';
+            echo ( $settings->front_padding_dimension_left != '' ) ? 'padding-left:'.$settings->front_padding_dimension_left.'px;' : 'padding-left: 25px;';
         }
         if(isset($settings->front_padding_dimension_right) && $settings->front_padding_dimension_right != ''){
-            echo ( $settings->front_padding_dimension_right != '' ) ? 'padding-right:'.$settings->front_padding_dimension_right.'px;' : 'padding-right: 15px;';
+            echo ( $settings->front_padding_dimension_right != '' ) ? 'padding-right:'.$settings->front_padding_dimension_right.'px;' : 'padding-right: 25px;';
         } 
     ?>
 }
@@ -59,16 +59,16 @@
 .fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-slide-down {
     <?php 
         if(isset($settings->back_padding_dimension_top) && $settings->back_padding_dimension_top != ''){
-            echo ( $settings->back_padding_dimension_top != '' ) ? 'padding-top:'.$settings->back_padding_dimension_top.'px;' : 'padding-top: 15px;'; 
+            echo ( $settings->back_padding_dimension_top != '' ) ? 'padding-top:'.$settings->back_padding_dimension_top.'px;' : 'padding-top: 25px;'; 
         }
         if(isset($settings->back_padding_dimension_bottom) && $settings->back_padding_dimension_bottom != ''){
-            echo ( $settings->back_padding_dimension_bottom != '' ) ? 'padding-bottom:'.$settings->back_padding_dimension_bottom.'px;' : 'padding-bottom: 15px;';
+            echo ( $settings->back_padding_dimension_bottom != '' ) ? 'padding-bottom:'.$settings->back_padding_dimension_bottom.'px;' : 'padding-bottom: 25px;';
         }
         if(isset($settings->back_padding_dimension_left) && $settings->back_padding_dimension_left != ''){
-            echo ( $settings->back_padding_dimension_left != '' ) ? 'padding-left:'.$settings->back_padding_dimension_left.'px;' : 'padding-left: 15px;';
+            echo ( $settings->back_padding_dimension_left != '' ) ? 'padding-left:'.$settings->back_padding_dimension_left.'px;' : 'padding-left: 25px;';
         }
         if(isset($settings->back_padding_dimension_right) && $settings->back_padding_dimension_right != ''){
-            echo ( $settings->back_padding_dimension_right != '' ) ? 'padding-right:'.$settings->back_padding_dimension_right.'px;' : 'padding-right: 15px;';
+            echo ( $settings->back_padding_dimension_right != '' ) ? 'padding-right:'.$settings->back_padding_dimension_right.'px;' : 'padding-right: 25px;';
         } 
     ?>
 }
