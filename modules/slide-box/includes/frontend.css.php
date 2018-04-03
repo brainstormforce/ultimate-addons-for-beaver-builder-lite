@@ -613,16 +613,16 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
         .fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-slide-front {
             <?php 
                 if(isset($settings->front_padding_dimension_top_medium) && $settings->front_padding_dimension_top_medium != ''){
-                    echo ( $settings->front_padding_dimension_top_medium != '' ) ? 'padding-top:'.$settings->front_padding_dimension_top_medium.'px;' : 'padding-top: 15px;'; 
+                    echo ( $settings->front_padding_dimension_top_medium != '' ) ? 'padding-top:'.$settings->front_padding_dimension_top_medium.'px;' : ''; 
                 }
                 if(isset($settings->front_padding_dimension_bottom_medium) && $settings->front_padding_dimension_bottom_medium != ''){
-                    echo ( $settings->front_padding_dimension_bottom_medium != '' ) ? 'padding-bottom:'.$settings->front_padding_dimension_bottom_medium.'px;' : 'padding-bottom: 15px;';
+                    echo ( $settings->front_padding_dimension_bottom_medium != '' ) ? 'padding-bottom:'.$settings->front_padding_dimension_bottom_medium.'px;' : '';
                 }
                 if(isset($settings->front_padding_dimension_left_medium) && $settings->front_padding_dimension_left_medium != ''){
-                    echo ( $settings->front_padding_dimension_left_medium != '' ) ? 'padding-left:'.$settings->front_padding_dimension_left_medium.'px;' : 'padding-left: 15px;';
+                    echo ( $settings->front_padding_dimension_left_medium != '' ) ? 'padding-left:'.$settings->front_padding_dimension_left_medium.'px;' : '';
                 }
                 if(isset($settings->front_padding_dimension_right_medium) && $settings->front_padding_dimension_right_medium != ''){
-                    echo ( $settings->front_padding_dimension_right_medium != '' ) ? 'padding-right:'.$settings->front_padding_dimension_right_medium.'px;' : 'padding-right: 15px;';
+                    echo ( $settings->front_padding_dimension_right_medium != '' ) ? 'padding-right:'.$settings->front_padding_dimension_right_medium.'px;' : '';
                 } 
             ?>
         }
@@ -725,16 +725,16 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
         .fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-slide-front {
             <?php 
                 if(isset($settings->front_padding_dimension_top_responsive) && $settings->front_padding_dimension_top_responsive != ''){
-                    echo ( $settings->front_padding_dimension_top_responsive != '' ) ? 'padding-top:'.$settings->front_padding_dimension_top_responsive.'px;' : 'padding-top: 15px;'; 
+                    echo ( $settings->front_padding_dimension_top_responsive != '' ) ? 'padding-top:'.$settings->front_padding_dimension_top_responsive.'px;' : ''; 
                 }
                 if(isset($settings->front_padding_dimension_bottom_responsive) && $settings->front_padding_dimension_bottom_responsive != ''){
-                    echo ( $settings->front_padding_dimension_bottom_responsive != '' ) ? 'padding-bottom:'.$settings->front_padding_dimension_bottom_responsive.'px;' : 'padding-bottom: 15px;';
+                    echo ( $settings->front_padding_dimension_bottom_responsive != '' ) ? 'padding-bottom:'.$settings->front_padding_dimension_bottom_responsive.'px;' : '';
                 }
                 if(isset($settings->front_padding_dimension_left_responsive) && $settings->front_padding_dimension_left_responsive != ''){
-                    echo ( $settings->front_padding_dimension_left_responsive != '' ) ? 'padding-left:'.$settings->front_padding_dimension_left_responsive.'px;' : 'padding-left: 15px;';
+                    echo ( $settings->front_padding_dimension_left_responsive != '' ) ? 'padding-left:'.$settings->front_padding_dimension_left_responsive.'px;' : '';
                 }
                 if(isset($settings->front_padding_dimension_right_responsive) && $settings->front_padding_dimension_right_responsive != ''){
-                    echo ( $settings->front_padding_dimension_right_responsive != '' ) ? 'padding-right:'.$settings->front_padding_dimension_right_responsive.'px;' : 'padding-right: 15px;';
+                    echo ( $settings->front_padding_dimension_right_responsive != '' ) ? 'padding-right:'.$settings->front_padding_dimension_right_responsive.'px;' : '';
                 } 
             ?>
         }
@@ -742,16 +742,16 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
         .fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-slide-down {
             <?php 
                 if(isset($settings->back_padding_dimension_top_responsive) && $settings->back_padding_dimension_top_responsive != ''){
-                    echo ( $settings->back_padding_dimension_top_responsive != '' ) ? 'padding-top:'.$settings->back_padding_dimension_top_responsive.'px;' : 'padding-top: 15px;'; 
+                    echo ( $settings->back_padding_dimension_top_responsive != '' ) ? 'padding-top:'.$settings->back_padding_dimension_top_responsive.'px;' : ''; 
                 }
                 if(isset($settings->back_padding_dimension_bottom_responsive) && $settings->back_padding_dimension_bottom_responsive != ''){
-                    echo ( $settings->back_padding_dimension_bottom_responsive != '' ) ? 'padding-bottom:'.$settings->back_padding_dimension_bottom_responsive.'px;' : 'padding-bottom: 15px;';
+                    echo ( $settings->back_padding_dimension_bottom_responsive != '' ) ? 'padding-bottom:'.$settings->back_padding_dimension_bottom_responsive.'px;' : '';
                 }
                 if(isset($settings->back_padding_dimension_left_responsive) && $settings->back_padding_dimension_left_responsive != ''){
-                    echo ( $settings->back_padding_dimension_left_responsive != '' ) ? 'padding-left:'.$settings->back_padding_dimension_left_responsive.'px;' : 'padding-left: 15px;';
+                    echo ( $settings->back_padding_dimension_left_responsive != '' ) ? 'padding-left:'.$settings->back_padding_dimension_left_responsive.'px;' : '';
                 }
                 if(isset($settings->back_padding_dimension_right_responsive) && $settings->back_padding_dimension_right_responsive != ''){
-                    echo ( $settings->back_padding_dimension_right_responsive != '' ) ? 'padding-right:'.$settings->back_padding_dimension_right_responsive.'px;' : 'padding-right: 15px;';
+                    echo ( $settings->back_padding_dimension_right_responsive != '' ) ? 'padding-right:'.$settings->back_padding_dimension_right_responsive.'px;' : '';
                 } 
             ?>
         }
