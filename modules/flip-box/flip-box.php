@@ -856,6 +856,7 @@ FLBuilder::register_module('FlipBoxModule', array(
                         'type'      => 'dimension',
                         'label'     => __( 'Padding', 'uabb' ),
                         'help'        => __('Manage the outside spacing of content area of flipbox.', 'uabb'),
+                        'description' =>'px',
                         'responsive' => array(
                             'placeholder' => array(
                                 'default' => '15',

@@ -819,6 +819,7 @@ FLBuilder::register_module('SlideBoxModule', array(
                         'type'      => 'dimension',
                         'label'     => __( 'Content Padding', 'uabb' ),
                         'help'     => __( 'To apply padding to Slide Box Front use this setting', 'uabb' ),
+                        'description' =>'px',
                         'responsive' => array(
                             'placeholder' => array(
                                 'default' => '25',
@@ -871,6 +872,7 @@ FLBuilder::register_module('SlideBoxModule', array(
                         'type'      => 'dimension',
                         'label'     => __( 'Content Padding', 'uabb' ),
                         'help'     => __( 'To apply padding to Slide Box Back use this setting', 'uabb' ),
+                        'description' =>'px',
                         'responsive' => array(
                             'placeholder' => array(
                                 'default' => '25',
