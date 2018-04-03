@@ -672,6 +672,10 @@ if ( $settings->sub_heading_font_family['family'] != "Default" || isset( $settin
 		<?php if( isset( $settings->sub_heading_line_height_unit ) && $settings->sub_heading_line_height_unit != '' ) : ?>
 			line-height: <?php echo $settings->sub_heading_line_height_unit; ?>em;
 		<?php endif; ?>
+
+		<?php if( $settings->sub_heading_color != '' ) : ?>
+			color: <?php echo $settings->sub_heading_color; ?>;
+		<?php endif; ?>
 	}
 <?php }
 if ( $settings->description_font_family['family'] != "Default" || isset( $settings->description_font_size['desktop'] ) && $settings->description_font_size['desktop'] != '' || isset( $settings->description_line_height['desktop'] ) && $settings->description_line_height['desktop'] != '' || $settings->description_font_size_unit != '' || $settings->description_line_height_unit != '' || $settings->description_color != '' ) { ?>
@@ -704,6 +708,7 @@ if ( $settings->btn_font_family['family'] != "Default" || isset( $settings->btn_
 
 		<?php if( isset( $settings->btn_font_size_unit ) && $settings->btn_font_size_unit != '' ) : ?>
 			font-size: <?php echo $settings->btn_font_size_unit; ?>px;
+			<?php if( $settings->btn_line_height_unit == '' ) ?>
 			line-height: <?php echo $settings->btn_font_size_unit + 5; ?>px;
 		<?php endif; ?>
 
