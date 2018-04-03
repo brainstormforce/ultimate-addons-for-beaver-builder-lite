@@ -35,40 +35,44 @@ class SlideBoxModule extends FLBuilderModule {
             if ( isset( $node->settings->type ) && 'slide-box' === $node->settings->type ) {
 
                 if( isset( $node->settings->front_padding ) &&  !isset( $node->settings->front_padding_dimension_top ) &&  !isset( $node->settings->front_padding_dimension_bottom ) &&  !isset( $node->settings->front_padding_dimension_left ) &&  !isset( $node->settings->front_padding_dimension_right ) ) {
-                 
+                    
                         $value = "";
                         $value = str_replace("px","", $node->settings->front_padding );
                         
                         $output = array();
                         $uabb_default = array_filter( preg_split("/\s*;\s*/", $value) );
-                            foreach($uabb_default as $val) {
-                                $new = explode(':',$val);
-                                 $output[] = $new;
-                            }
-                            for ($i=0; $i < count( $output ); $i++) { 
-                                switch ( $output[$i][0] ) {
+                        $node->settings->front_padding_dimension_top    = '0';
+                        $node->settings->front_padding_dimension_bottom = '0';
+                        $node->settings->front_padding_dimension_right  = '0';
+                        $node->settings->front_padding_dimension_left   = '0';
+                        foreach($uabb_default as $val) {
+                            $new = explode(':',$val);
+                             $output[] = $new;
+                        }
+                        for ($i=0; $i < count( $output ); $i++) { 
 
-                                    case 'padding-top':
-                                       $node->settings->front_padding_dimension_top    = (int)$output[$i][1];
-                                        break;
-                                    case 'padding-bottom':
-                                        $node->settings->front_padding_dimension_bottom = (int)$output[$i][1];
-                                        break;
-                                    case 'padding-right':
-                                        $node->settings->front_padding_dimension_right  = (int)$output[$i][1];
-                                        break;
-                                    case 'padding-left':
-                                        $node->settings->front_padding_dimension_left   = (int)$output[$i][1];
-                                        break;
-                                    case 'padding':
-                                        $node->settings->front_padding_dimension_top    = (int)$output[$i][1];
-                                        $node->settings->front_padding_dimension_bottom = (int)$output[$i][1];
-                                        $node->settings->front_padding_dimension_left   = (int)$output[$i][1];
-                                        $node->settings->front_padding_dimension_right  = (int)$output[$i][1];
-                                        break;
-                                }
+                            switch ( $output[$i][0] ) {
+                                case 'padding-top':
+                                   $node->settings->front_padding_dimension_top    = (int)$output[$i][1];
+                                    break;
+                                case 'padding-bottom':
+                                    $node->settings->front_padding_dimension_bottom = (int)$output[$i][1];
+                                    break;
+                                case 'padding-right':
+                                    $node->settings->front_padding_dimension_right  = (int)$output[$i][1];
+                                    break;
+                                case 'padding-left':
+                                    $node->settings->front_padding_dimension_left   = (int)$output[$i][1];
+                                    break;
+                                case 'padding':
+                                    $node->settings->front_padding_dimension_top    = (int)$output[$i][1];
+                                    $node->settings->front_padding_dimension_bottom = (int)$output[$i][1];
+                                    $node->settings->front_padding_dimension_left   = (int)$output[$i][1];
+                                    $node->settings->front_padding_dimension_right  = (int)$output[$i][1];
+                                    break;
                             }
                         }
+                    }
 
                         if( isset( $node->settings->back_padding ) &&  !isset( $node->settings->back_padding_dimension_top ) &&  !isset( $node->settings->back_padding_dimension_bottom ) &&  !isset( $node->settings->back_padding_dimension_left ) &&  !isset( $node->settings->back_padding_dimension_right ) ) {
                  
@@ -77,6 +81,10 @@ class SlideBoxModule extends FLBuilderModule {
                         
                         $output = array();
                         $uabb_default = array_filter( preg_split("/\s*;\s*/", $value) );
+                        $node->settings->back_padding_dimension_top    = '0';
+                        $node->settings->back_padding_dimension_bottom = '0';
+                        $node->settings->back_padding_dimension_right  = '0';
+                        $node->settings->back_padding_dimension_left   = '0';
                             foreach($uabb_default as $val) {
                                 $new = explode(':',$val);
                                  $output[] = $new;

@@ -105,16 +105,16 @@ if( $settings->flip_box_min_height_options == 'uabb-custom-height' ) {
 
 .fl-node-<?php echo $id; ?> .uabb-flip-box-section {
     <?php 
-        if(isset($settings->inner_padding_dimension_top) && $settings->inner_padding_dimension_top != ''){
+        if(isset($settings->inner_padding_dimension_top) ){
             echo ( $settings->inner_padding_dimension_top != '' ) ? 'padding-top:'.$settings->inner_padding_dimension_top.'px;' : 'padding-top: 15px;'; 
         }
-        if(isset($settings->inner_padding_dimension_bottom) && $settings->inner_padding_dimension_bottom != ''){
+        if(isset($settings->inner_padding_dimension_bottom) ){
             echo ( $settings->inner_padding_dimension_bottom != '' ) ? 'padding-bottom:'.$settings->inner_padding_dimension_bottom.'px;' : 'padding-bottom: 15px;';
         }
-        if(isset($settings->inner_padding_dimension_left) && $settings->inner_padding_dimension_left != ''){
+        if(isset($settings->inner_padding_dimension_left) ){
             echo ( $settings->inner_padding_dimension_left != '' ) ? 'padding-left:'.$settings->inner_padding_dimension_left.'px;' : 'padding-left: 15px;';
         }
-        if(isset($settings->inner_padding_dimension_right) && $settings->inner_padding_dimension_right != ''){
+        if(isset($settings->inner_padding_dimension_right) ){
             echo ( $settings->inner_padding_dimension_right != '' ) ? 'padding-right:'.$settings->inner_padding_dimension_right.'px;' : 'padding-right: 15px;';
         } 
     ?>
@@ -230,16 +230,16 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
 
         .fl-node-<?php echo $id; ?> .uabb-flip-box-section {
             <?php 
-                if(isset($settings->inner_padding_dimension_top_medium) || $settings->inner_padding_dimension_top_medium != ''){
+                if(isset($settings->inner_padding_dimension_top_medium) ){
                     echo ( $settings->inner_padding_dimension_top_medium != '' ) ? 'padding-top:'.$settings->inner_padding_dimension_top_medium.'px;' : ''; 
                 }
-                if(isset($settings->inner_padding_dimension_bottom_medium) || $settings->inner_padding_dimension_bottom_medium != ''){
+                if(isset($settings->inner_padding_dimension_bottom_medium) ){
                     echo ( $settings->inner_padding_dimension_bottom_medium != '' ) ? 'padding-bottom:'.$settings->inner_padding_dimension_bottom_medium.'px;' : '';
                 }
-                if(isset($settings->inner_padding_dimension_left_medium) || $settings->inner_padding_dimension_left_medium != ''){
+                if(isset($settings->inner_padding_dimension_left_medium) ){
                     echo ( $settings->inner_padding_dimension_left_medium != '' ) ? 'padding-left:'.$settings->inner_padding_dimension_left_medium.'px;' : '';
                 }
-                if(isset($settings->inner_padding_dimension_right_medium) || $settings->inner_padding_dimension_right_medium != ''){
+                if(isset($settings->inner_padding_dimension_right_medium) ){
                     echo ( $settings->inner_padding_dimension_right_medium != '' ) ? 'padding-right:'.$settings->inner_padding_dimension_right_medium.'px;' : '';
                 } 
             ?>
@@ -326,16 +326,16 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
         
         .fl-node-<?php echo $id; ?> .uabb-flip-box-section {
             <?php 
-                if(isset($settings->inner_padding_dimension_top_responsive) || $settings->inner_padding_dimension_top_responsive != ''){
+                if(isset($settings->inner_padding_dimension_top_responsive) ){
                     echo ( $settings->inner_padding_dimension_top_responsive != '' ) ? 'padding-top:'.$settings->inner_padding_dimension_top_responsive.'px;' : ''; 
                 }
-                if(isset($settings->inner_padding_dimension_bottom_responsive) || $settings->inner_padding_dimension_bottom_responsive != ''){
+                if(isset($settings->inner_padding_dimension_bottom_responsive) ){
                     echo ( $settings->inner_padding_dimension_bottom_responsive != '' ) ? 'padding-bottom:'.$settings->inner_padding_dimension_bottom_responsive.'px;' : '';
                 }
-                if(isset($settings->inner_padding_dimension_left_responsive) || $settings->inner_padding_dimension_left_responsive != ''){
+                if(isset($settings->inner_padding_dimension_left_responsive) ){
                     echo ( $settings->inner_padding_dimension_left_responsive != '' ) ? 'padding-left:'.$settings->inner_padding_dimension_left_responsive.'px;' : '';
                 }
-                if(isset($settings->inner_padding_dimension_right_responsive) || $settings->inner_padding_dimension_right_responsive != ''){
+                if(isset($settings->inner_padding_dimension_right_responsive) ){
                     echo ( $settings->inner_padding_dimension_right_responsive != '' ) ? 'padding-right:'.$settings->inner_padding_dimension_right_responsive.'px;' : '';
                 } 
             ?>

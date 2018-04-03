@@ -40,34 +40,39 @@ class FlipBoxModule extends FLBuilderModule {
                             
                             $output = array();
                             $uabb_default = array_filter( preg_split("/\s*;\s*/", $value) );
-                                foreach($uabb_default as $val) {
-                                    $new = explode(':',$val);
-                                     $output[] = $new;
+                            
+                            $node->settings->inner_padding_dimension_top    = '0';
+                            $node->settings->inner_padding_dimension_bottom = '0';
+                            $node->settings->inner_padding_dimension_left   = '0';
+                            $node->settings->inner_padding_dimension_right  = '0';
+                            
+                            foreach($uabb_default as $val) {
+                                $new = explode(':',$val);
+                                 $output[] = $new;
+                            }
+                            for ($i=0; $i < count( $output ); $i++) { 
+                                switch ( $output[$i][0] ) {
+                                    case 'padding-top':
+                                       $node->settings->inner_padding_dimension_top    = (int)$output[$i][1];
+                                        break;
+                                    case 'padding-bottom':
+                                        $node->settings->inner_padding_dimension_bottom = (int)$output[$i][1];
+                                        break;
+                                    case 'padding-right':
+                                        $node->settings->inner_padding_dimension_right  = (int)$output[$i][1];
+                                        break;
+                                    case 'padding-left':
+                                        $node->settings->inner_padding_dimension_left   = (int)$output[$i][1];
+                                        break;
+                                    case 'padding':
+                                        $node->settings->inner_padding_dimension_top    = (int)$output[$i][1];
+                                        $node->settings->inner_padding_dimension_bottom = (int)$output[$i][1];
+                                        $node->settings->inner_padding_dimension_left   = (int)$output[$i][1];
+                                        $node->settings->inner_padding_dimension_right  = (int)$output[$i][1];
+                                        break;
                                 }
-                                for ($i=0; $i < count( $output ); $i++) { 
-                                    switch ( $output[$i][0] ) {
-
-                                        case 'padding-top':
-                                           $node->settings->inner_padding_dimension_top    = (int)$output[$i][1];
-                                            break;
-                                        case 'padding-bottom':
-                                            $node->settings->inner_padding_dimension_bottom = (int)$output[$i][1];
-                                            break;
-                                        case 'padding-right':
-                                            $node->settings->inner_padding_dimension_right  = (int)$output[$i][1];
-                                            break;
-                                        case 'padding-left':
-                                            $node->settings->inner_padding_dimension_left   = (int)$output[$i][1];
-                                            break;
-                                        case 'padding':
-                                            $node->settings->inner_padding_dimension_top    = (int)$output[$i][1];
-                                            $node->settings->inner_padding_dimension_bottom = (int)$output[$i][1];
-                                            $node->settings->inner_padding_dimension_left   = (int)$output[$i][1];
-                                            $node->settings->inner_padding_dimension_right  = (int)$output[$i][1];
-                                            break;
-                                    }
-                                }
-                            }                                         
+                            }
+                        }                                         
                         
                         if ( isset( $node->settings->front_title_typography_font_size['small']) && !isset( $node->settings->front_title_typography_font_size_unit_responsive ) ) {
                             $node->settings->front_title_typography_font_size_unit_responsive = $node->settings->front_title_typography_font_size['small'];
