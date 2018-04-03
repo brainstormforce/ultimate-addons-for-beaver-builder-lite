@@ -9,7 +9,6 @@
 // require_once 'uabb-fields.php';
 
 require_once 'uabb-spacing/uabb-spacing.php';
-require_once 'uabb-msg-box/uabb-msg-box.php';
 require_once 'uabb-gradient/uabb-gradient.php';
 
 if( !class_exists('UABB_Custom_Field_Scripts') ) {
@@ -26,9 +25,6 @@ if( !class_exists('UABB_Custom_Field_Scripts') ) {
 		    	/* uabb-spacing field */
 				wp_enqueue_style( 'uabb-spacing', BB_ULTIMATE_ADDON_URL . 'fields/uabb-spacing/css/uabb-spacing.css', array(), '' );
 				wp_enqueue_script( 'uabb-spacing', BB_ULTIMATE_ADDON_URL . 'fields/uabb-spacing/js/uabb-spacing.js', array(), '', true );
-
-		        /* uabb-msgbox field */
-		   		wp_enqueue_style( 'msg_field-styles', BB_ULTIMATE_ADDON_URL . 'fields/uabb-msg-box/css/uabb-msg-field.css' );
 
 		        /* uabb-gradient field */
 				wp_enqueue_style( 'uabb-gradient', BB_ULTIMATE_ADDON_URL . 'fields/uabb-gradient/css/uabb-gradient.css', array(), '' );
