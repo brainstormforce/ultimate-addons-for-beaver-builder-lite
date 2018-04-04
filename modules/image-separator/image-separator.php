@@ -657,7 +657,7 @@ FLBuilder::register_module('UABBImageSeparatorModule', array(
 
                     /* Link Toggle */
                     'enable_link'     => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __( 'Enable Link', 'uabb' ),
                         'default'       => 'no',
                         'options'       => array(

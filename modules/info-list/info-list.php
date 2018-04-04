@@ -16,9 +16,71 @@ class UABBInfoList extends FLBuilderModule {
             'partial_refresh' => false, // Defaults to false and can be omitted.
             'icon'            => 'info-list.svg'
         ));
+
         $this->add_js( 'jquery-waypoints' );
+        
         // Register and enqueue your own.
         $this->add_css( 'uabb-animate', $this->url . 'css/animate.css' );
+
+        add_filter( 'fl_builder_layout_data', array( $this , 'render_new_data' ), 10, 3 );
+    }
+
+    function render_new_data( $data ) {
+
+        foreach ( $data as &$node ) {
+            
+            if ( isset( $node->settings->type ) && 'info-list' === $node->settings->type ) {
+                
+                if ( isset( $node->settings->heading_font_size['small']) && !isset( $node->settings->heading_font_size_unit_responsive ) ) {
+                    $node->settings->heading_font_size_unit_responsive = $node->settings->heading_font_size['small'];
+                }
+                if( isset( $node->settings->heading_font_size['medium']) && !isset( $node->settings->heading_font_size_unit_medium ) ) {
+                    $node->settings->heading_font_size_unit_medium = $node->settings->heading_font_size['medium'];
+                }
+                if( isset( $node->settings->heading_font_size['desktop']) && !isset( $node->settings->heading_font_size_unit ) ) {
+                    $node->settings->heading_font_size_unit = $node->settings->heading_font_size['desktop'];
+                }
+
+                if ( isset( $node->settings->heading_line_height['small']) && isset( $node->settings->heading_font_size['small']) && $node->settings->heading_font_size['small'] != 0 && !isset( $node->settings->heading_line_height_unit_responsive ) ) {
+                    if( is_numeric( $node->settings->heading_line_height['small']) && is_numeric( $node->settings->heading_font_size['small']) )
+                    $node->settings->heading_line_height_unit_responsive = round( $node->settings->heading_line_height['small'] / $node->settings->heading_font_size['small'], 2 );
+                }
+                if( isset( $node->settings->heading_line_height['medium']) && isset( $node->settings->heading_font_size['medium']) && $node->settings->heading_font_size['medium'] != 0 && !isset( $node->settings->heading_line_height_unit_medium ) ) {
+                    if( is_numeric( $node->settings->heading_line_height['medium']) && is_numeric( $node->settings->heading_font_size['medium']) )
+                    $node->settings->heading_line_height_unit_medium = round( $node->settings->heading_line_height['medium'] / $node->settings->heading_font_size['medium'], 2 );
+                }
+                if( isset( $node->settings->heading_line_height['desktop']) && isset( $node->settings->heading_font_size['desktop']) && $node->settings->heading_font_size['desktop'] != 0 && !isset( $node->settings->heading_line_height_unit ) ) {
+                    if( is_numeric( $node->settings->heading_line_height['desktop']) && is_numeric( $node->settings->heading_font_size['desktop']) )
+                    $node->settings->heading_line_height_unit = round( $node->settings->heading_line_height['desktop'] / $node->settings->heading_font_size['desktop'], 2 );
+                }
+
+                if ( isset( $node->settings->description_font_size['small']) && !isset( $node->settings->description_font_size_unit_responsive ) ) {
+                    $node->settings->description_font_size_unit_responsive = $node->settings->description_font_size['small'];
+                }
+                if( isset( $node->settings->description_font_size['medium']) && !isset( $node->settings->description_font_size_unit_medium ) ) {
+                    $node->settings->description_font_size_unit_medium = $node->settings->description_font_size['medium'];
+                }
+                if( isset( $node->settings->description_font_size['desktop']) && !isset( $node->settings->description_font_size_unit ) ) {
+                    $node->settings->description_font_size_unit = $node->settings->description_font_size['desktop'];
+                }
+
+                if ( isset( $node->settings->description_line_height['small']) && isset( $node->settings->description_font_size['small']) && $node->settings->description_font_size['small'] != 0 && !isset( $node->settings->description_line_height_unit_responsive ) ) {
+                    if( is_numeric( $node->settings->description_line_height['small']) && is_numeric( $node->settings->description_font_size['small']) )
+                    $node->settings->description_line_height_unit_responsive = round( $node->settings->description_line_height['small'] / $node->settings->description_font_size['small'], 2 );
+                }
+                if( isset( $node->settings->description_line_height['medium']) && isset( $node->settings->description_font_size['medium']) && $node->settings->description_font_size['medium'] != 0 && !isset( $node->settings->description_line_height_unit_medium ) ) {
+                    if( is_numeric( $node->settings->description_line_height['medium']) && is_numeric( $node->settings->description_font_size['medium']) )
+                    $node->settings->description_line_height_unit_medium = round( $node->settings->description_line_height['medium'] / $node->settings->description_font_size['medium'], 2 );
+                }
+                if( isset( $node->settings->description_line_height['desktop']) && isset( $node->settings->description_font_size['desktop']) && $node->settings->description_font_size['desktop'] != 0 && !isset( $node->settings->description_line_height_unit ) ) {
+                    if( is_numeric( $node->settings->description_line_height['desktop']) && is_numeric( $node->settings->description_font_size['desktop']) )
+                    $node->settings->description_line_height_unit = round( $node->settings->description_line_height['desktop'] / $node->settings->description_font_size['desktop'], 2 );
+                }
+
+            }
+        }
+
+        return $data;
     }
 
      /**
@@ -209,7 +271,7 @@ FLBuilder::register_module('UABBInfoList', array(
                         )
                     ),
                     'align_items' => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Icon Vertical Alignment', 'uabb'),
                         'default'       => 'top',
                         'options'       => array(
@@ -218,7 +280,7 @@ FLBuilder::register_module('UABBInfoList', array(
                         ),
                     ),
                     'mobile_view' => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Mobile Structure', 'uabb'),
                         'default'       => '',
                         'options'       => array(
@@ -325,7 +387,7 @@ FLBuilder::register_module('UABBInfoList', array(
                         'show_reset' => true,
                     ),
                     'list_icon_animation' => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Image/Icon Animation', 'uabb'),
                         'description'   => '',
                         'help'          => __( 'Select whether you want to animate image/icon or not', 'uabb' ),
@@ -341,7 +403,7 @@ FLBuilder::register_module('UABBInfoList', array(
                 'title'         => __('List Connector', 'uabb'), // Section Title
                 'fields'        => array( // Section Fields
                     'list_connector_option'   => array(
-                        'type'          => 'uabb-toggle-switch',
+                        'type'          => 'select',
                         'label'         => __('Show Connector', 'uabb'),
                         'description'   => '',
                         'help'          => __( 'Select whether you would like to show connector on list items.', 'uabb' ),
@@ -413,22 +475,40 @@ FLBuilder::register_module('UABBInfoList', array(
                             'selector'        => '.uabb-info-list-title'
                         )
                     ),
-                    'heading_font_size'     => array(
-                        'type'          => 'uabb-simplify',
+                    'heading_font_size_unit'     => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Font Size', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'px',
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ),
+                        'preview'         => array(
+                            'type'          => 'css',
+                            'selector'      => '.uabb-info-list-title',
+                            'property'      => 'font-size',
+                            'unit'          => 'px'
                         ),
                     ),
-                    'heading_line_height'    => array(
-                        'type'          => 'uabb-simplify',
+                    'heading_line_height_unit'    => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Line Height', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'em',
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ),
+                        'preview'         => array(
+                            'type'          => 'css',
+                            'selector'      => '.uabb-info-list-title',
+                            'property'      => 'line-height',
+                            'unit'          => 'em'
                         ),
                     ),
                     'heading_color'        => array( 
@@ -474,22 +554,40 @@ FLBuilder::register_module('UABBInfoList', array(
                             
                         )
                     ),
-                    'description_font_size'     => array(
-                        'type'          => 'uabb-simplify',
+                    'description_font_size_unit'     => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Font Size', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'px',
+                        'preview'         => array(
+                            'type'            => 'css',
+                            'selector'        => '.uabb-info-list-description *',
+                            'property'        => 'font-size',
+                            'unit'            => 'px'
+                        ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
                         ),
                     ),
-                    'description_line_height'    => array(
-                        'type'          => 'uabb-simplify',
+                    'description_line_height_unit'    => array(
+                        'type'          => 'unit',
                         'label'         => __( 'Line Height', 'uabb' ),
-                        'default'       => array(
-                            'desktop'       => '',
-                            'medium'        => '',
-                            'small'         => '',
+                        'description'   => 'em',
+                        'preview'         => array(
+                            'type'            => 'css',
+                            'selector'        => '.uabb-info-list-description *',
+                            'property'        => 'line-height',
+                            'unit'            => 'em'
+                        ),
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
                         ),
                     ),
                     'description_color'        => array( 
