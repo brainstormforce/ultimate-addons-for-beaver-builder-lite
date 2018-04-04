@@ -205,9 +205,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 = 1.2.3 =
 * New: Added Heading module
 * New: Custom field compatibility with Beaver Builder 2.0
-* Improvement: Deprecated uabb-simplify field and replaced it with with BB's unit field
-* Improvement: Deprecated uabb-spacing field and replaced it with with BB's dimension field
-* Improvement: Deprecated uabb-toggle-switch field  and replaced it with with BB's select field
+* Improvement: Deprecated uabb-simplify field and replaced it with BB's unit field
+* Improvement: Deprecated uabb-spacing field and replaced it with BB's dimension field
+* Improvement: Deprecated uabb-toggle-switch field and replaced it with BB's select field
 * Improvement: Deprecated uabb-blank-spacer field
 * Improvement: Deprecated uabb-msg-box field
 * Improvement: Replaced line-height's unit from px to em for all modules
