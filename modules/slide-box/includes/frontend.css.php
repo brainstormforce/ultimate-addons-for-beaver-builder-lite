@@ -762,7 +762,7 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
                 <?php if( isset( $settings->front_desc_font_size_unit_responsive ) && $settings->front_desc_font_size_unit_responsive != '' ) : ?>
                     font-size: <?php echo $settings->front_desc_font_size_unit_responsive; ?>px;
                     <?php if( $settings->front_desc_line_height_unit_responsive == '' ) ?>
-                    line-height: <?php echo $settings->front_desc_font_size_unit_responsive + 2; ?>px;
+                        line-height: <?php echo $settings->front_desc_font_size_unit_responsive + 2; ?>px;
                 <?php endif; ?>
 
                 <?php if( isset( $settings->front_desc_font_size['small'] ) && $settings->front_desc_font_size['small'] == '' && isset( $settings->front_desc_line_height['small'] ) && $settings->front_desc_line_height['small'] != '' && $settings->front_desc_line_height_unit == '' && $settings->front_desc_line_height_unit_medium == '' && $settings->front_desc_line_height_unit_responsive == '' ) { ?>
@@ -833,7 +833,7 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
                     line-height: <?php echo $settings->link_font_size_unit_responsive + 2; ?>px;
                 <?php endif; ?>
 
-                <?php if( isset( $settings->link_font_size['small'] ) && $settings->link_font_size['small'] == '' && isset( $settings->link_line_height['small'] ) && $settings->link_line_height['small'] != '' && $settings->link_line_height_unit == '' && $settings->link_line_height_unit_medium == '' && $settings->d == '' ) { ?>
+                <?php if( isset( $settings->link_font_size['small'] ) && $settings->link_font_size['small'] == '' && isset( $settings->link_line_height['small'] ) && $settings->link_line_height['small'] != '' && $settings->link_line_height_unit == '' && $settings->link_line_height_unit_medium == '' && $settings->link_line_height_unit_responsive == '' ) { ?>
                     line-height: <?php echo $settings->link_line_height['small']; ?>px;
                 <?php } ?>
 

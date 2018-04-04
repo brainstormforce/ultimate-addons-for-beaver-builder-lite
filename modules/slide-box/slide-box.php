@@ -74,45 +74,48 @@ class SlideBoxModule extends FLBuilderModule {
                         }
                     }
 
-                        if( isset( $node->settings->back_padding ) &&  !isset( $node->settings->back_padding_dimension_top ) &&  !isset( $node->settings->back_padding_dimension_bottom ) &&  !isset( $node->settings->back_padding_dimension_left ) &&  !isset( $node->settings->back_padding_dimension_right ) ) {
-                 
-                        $value = "";
-                        $value = str_replace("px","", $node->settings->back_padding );
-                        
-                        $output = array();
-                        $uabb_default = array_filter( preg_split("/\s*;\s*/", $value) );
-                        $node->settings->back_padding_dimension_top    = '0';
-                        $node->settings->back_padding_dimension_bottom = '0';
-                        $node->settings->back_padding_dimension_right  = '0';
-                        $node->settings->back_padding_dimension_left   = '0';
-                            foreach($uabb_default as $val) {
-                                $new = explode(':',$val);
-                                 $output[] = $new;
-                            }
-                            for ($i=0; $i < count( $output ); $i++) { 
-                                switch ( $output[$i][0] ) {
+                if( isset( $node->settings->back_padding ) &&  !isset( $node->settings->back_padding_dimension_top ) &&  !isset( $node->settings->back_padding_dimension_bottom ) &&  !isset( $node->settings->back_padding_dimension_left ) &&  !isset( $node->settings->back_padding_dimension_right ) ) {
+         
+                    $value = "";
+                    $value = str_replace("px","", $node->settings->back_padding );
+                    
+                    $output = array();
+                    $uabb_default = array_filter( preg_split("/\s*;\s*/", $value) );
 
-                                    case 'padding-top':
-                                       $node->settings->back_padding_dimension_top    = (int)$output[$i][1];
-                                        break;
-                                    case 'padding-bottom':
-                                        $node->settings->back_padding_dimension_bottom = (int)$output[$i][1];
-                                        break;
-                                    case 'padding-right':
-                                        $node->settings->back_padding_dimension_right  = (int)$output[$i][1];
-                                        break;
-                                    case 'padding-left':
-                                        $node->settings->back_padding_dimension_left   = (int)$output[$i][1];
-                                        break;
-                                    case 'padding':
-                                        $node->settings->back_padding_dimension_top    = (int)$output[$i][1];
-                                        $node->settings->back_padding_dimension_bottom = (int)$output[$i][1];
-                                        $node->settings->back_padding_dimension_left   = (int)$output[$i][1];
-                                        $node->settings->back_padding_dimension_right  = (int)$output[$i][1];
-                                        break;
-                                }
-                            }
+                    $node->settings->back_padding_dimension_top    = '0';
+                    $node->settings->back_padding_dimension_bottom = '0';
+                    $node->settings->back_padding_dimension_right  = '0';
+                    $node->settings->back_padding_dimension_left   = '0';
+
+                    foreach($uabb_default as $val) {
+                        $new = explode(':',$val);
+                         $output[] = $new;
+                    }
+
+                    for ( $i = 0; $i < count( $output ); $i++ ) { 
+                        switch ( $output[$i][0] ) {
+
+                            case 'padding-top':
+                               $node->settings->back_padding_dimension_top    = (int)$output[$i][1];
+                                break;
+                            case 'padding-bottom':
+                                $node->settings->back_padding_dimension_bottom = (int)$output[$i][1];
+                                break;
+                            case 'padding-right':
+                                $node->settings->back_padding_dimension_right  = (int)$output[$i][1];
+                                break;
+                            case 'padding-left':
+                                $node->settings->back_padding_dimension_left   = (int)$output[$i][1];
+                                break;
+                            case 'padding':
+                                $node->settings->back_padding_dimension_top    = (int)$output[$i][1];
+                                $node->settings->back_padding_dimension_bottom = (int)$output[$i][1];
+                                $node->settings->back_padding_dimension_left   = (int)$output[$i][1];
+                                $node->settings->back_padding_dimension_right  = (int)$output[$i][1];
+                                break;
                         }
+                    }
+                }
 
                 if ( isset( $node->settings->front_title_font_size['small']) && !isset( $node->settings->front_title_font_size_unit_responsive ) ) {
                     $node->settings->front_title_font_size_unit_responsive = $node->settings->front_title_font_size['small'];
@@ -240,16 +243,16 @@ class SlideBoxModule extends FLBuilderModule {
                 }
 
                 if ( isset( $node->settings->button->line_height->small) && isset( $node->settings->button->font_size->small) && $node->settings->button->font_size->small != 0 && !isset( $node->settings->button->line_height_unit_responsive ) ) {
-                    if( is_numeric( $node->settings->button->line_height->small) && is_numeric( $node->settings->button->font_size->small) )
-                    $node->settings->button->line_height_unit_responsive = round( $node->settings->button->line_height->small / $node->settings->button->font_size->small );
+                    if( is_numeric( $node->settings->button->line_height->small) && is_numeric( $node->settings->button->font_size->small ) )
+                    $node->settings->button->line_height_unit_responsive = round( $node->settings->button->line_height->small / $node->settings->button->font_size->small, 2 );
                 }
                 if( isset( $node->settings->button->line_height->medium) && isset( $node->settings->button->font_size->medium) && $node->settings->button->font_size->medium != 0 && !isset( $node->settings->button->line_height_unit_medium ) ) {
-                    if( is_numeric( $node->settings->button->line_height->medium) && is_numeric( $node->settings->button->font_size->medium) )
-                    $node->settings->button->line_height_unit_medium = round( $node->settings->button->line_height->medium / $node->settings->button->font_size->medium );
+                    if( is_numeric( $node->settings->button->line_height->medium) && is_numeric( $node->settings->button->font_size->medium ) )
+                    $node->settings->button->line_height_unit_medium = round( $node->settings->button->line_height->medium / $node->settings->button->font_size->medium, 2 );
                 }
                 if( isset( $node->settings->button->line_height->desktop) && isset( $node->settings->button->font_size->desktop) && $node->settings->button->font_size->desktop != 0 && !isset( $node->settings->button->line_height_unit ) ) {
-                    if( is_numeric( $node->settings->button->line_height->desktop) && is_numeric( $node->settings->button->font_size->desktop) )
-                    $node->settings->button->line_height_unit = round( $node->settings->button->line_height->desktop / $node->settings->button->font_size->desktop );
+                    if( is_numeric( $node->settings->button->line_height->desktop) && is_numeric( $node->settings->button->font_size->desktop ) )
+                    $node->settings->button->line_height_unit = round( $node->settings->button->line_height->desktop / $node->settings->button->font_size->desktop, 2 );
                 }
 
             }

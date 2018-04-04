@@ -411,28 +411,26 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
 
     @media ( max-width: <?php echo $global_settings->medium_breakpoint; ?>px ) {
         <?php
-        if( isset( $settings->text_line_height['medium'] ) && $settings->text_line_height['medium'] != '' || isset( $settings->text_font_size['medium'] ) && $settings->text_font_size['medium'] != '' || $settings->ribbon_width == 'auto' ) {
+        if( isset( $settings->text_line_height['medium'] ) && $settings->text_line_height['medium'] != '' || isset( $settings->text_font_size['medium'] ) && $settings->text_font_size['medium'] != '' || $settings->ribbon_width == 'auto' || isset( $settings->text_font_size_unit_medium ) || isset( $settings->text_line_height_unit_medium ) ) {
         ?>
 
-        .fl-node-<?php echo $id;?> .uabb-ribbon-wrap .uabb-ribbon {
+            .fl-node-<?php echo $id;?> .uabb-ribbon-wrap .uabb-ribbon {
 
-            <?php if( isset( $settings->text_font_size_unit_medium ) && $settings->text_font_size_unit_medium != '' ) : ?>
-                font-size: <?php echo $settings->text_font_size_unit_medium; ?>px;
-            <?php endif; ?>
+                <?php if( isset( $settings->text_font_size_unit_medium ) && $settings->text_font_size_unit_medium != '' ) : ?>
+                    font-size: <?php echo $settings->text_font_size_unit_medium; ?>px;
+                <?php endif; ?>
 
-            <?php if( isset( $settings->text_font_size['medium'] ) && $settings->text_font_size['medium'] == '' && isset( $settings->text_line_height['medium'] ) && $settings->text_line_height['medium'] != '' && $settings->text_line_height_unit == '' && $settings->text_line_height_unit_medium == '' ) { ?>
-                line-height: <?php echo $settings->text_line_height['medium']; ?>px;
-            <?php } ?>
+                <?php if( isset( $settings->text_font_size['medium'] ) && $settings->text_font_size['medium'] == '' && isset( $settings->text_line_height['medium'] ) && $settings->text_line_height['medium'] != '' && $settings->text_line_height_unit == '' && $settings->text_line_height_unit_medium == '' ) { ?>
+                    line-height: <?php echo $settings->text_line_height['medium']; ?>px;
+                <?php } ?>
 
-            <?php if( isset( $settings->text_line_height_unit_medium ) && $settings->text_line_height_unit_medium != '' ) : ?>
-                line-height: <?php echo $settings->text_line_height_unit_medium; ?>em;
-            <?php endif; ?>
+                <?php if( isset( $settings->text_line_height_unit_medium ) && $settings->text_line_height_unit_medium != '' ) : ?>
+                    line-height: <?php echo $settings->text_line_height_unit_medium; ?>em;
+                <?php endif; ?>
 
-        }
+            }
 
-        <?php
-        }
-        ?>
+        <?php } ?>
     }
 
     @media ( max-width: <?php echo $global_settings->responsive_breakpoint; ?>px ) {
