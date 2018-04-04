@@ -743,7 +743,7 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 				}
 			<?php } ?>
 
-			<?php if( isset( $settings->sub_heading_font_size['medium'] ) && $settings->sub_heading_font_size['medium'] ) || isset( $settings->sub_heading_line_height['medium'] ) && $settings->sub_heading_line_height['medium'] != "" || isset( $settings->sub_heading_font_size_unit_medium ) || isset( $settings->sub_heading_line_height_unit_medium ) ) { ?>
+			<?php if( ( isset( $settings->sub_heading_font_size['medium'] ) && $settings->sub_heading_font_size['medium'] ) || ( isset( $settings->sub_heading_line_height['medium'] ) && $settings->sub_heading_line_height['medium'] != "" ) || isset( $settings->sub_heading_font_size_unit_medium ) || isset( $settings->sub_heading_line_height_unit_medium ) ) { ?>
 				.fl-node-<?php echo $id;?> .info-table-heading .info-table-sub-heading {
 
 					<?php if( isset( $settings->sub_heading_font_size_unit_medium ) && $settings->sub_heading_font_size_unit_medium != '' ) : ?>
