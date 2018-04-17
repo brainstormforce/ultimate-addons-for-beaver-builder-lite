@@ -202,7 +202,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ## Changelog ##
 
-### 1.2.3 ###
+### 1.2.3.1 ###
 * Fixed: Heading Module responsive font size not working
 
 ### 1.2.3 ###
