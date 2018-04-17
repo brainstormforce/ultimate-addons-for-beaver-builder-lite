@@ -137,8 +137,8 @@
             .fl-node-<?php echo $id; ?> .uabb-heading,
             .fl-node-<?php echo $id; ?> .uabb-heading * { 
 
-				<?php if( isset( $settings->new_font_size_unit_responsible ) && $settings->new_font_size_unit_responsible != '' ) : ?>
-					font-size: <?php echo $settings->new_font_size_unit_responsible; ?>px;
+				<?php if( isset( $settings->new_font_size_unit_responsive ) && $settings->new_font_size_unit_responsive != '' ) : ?>
+					font-size: <?php echo $settings->new_font_size_unit_responsive; ?>px;
 				<?php endif; ?>
 
 				<?php if( isset( $settings->line_height_unit_responsive ) && $settings->line_height_unit_responsive != '' ) : ?>
