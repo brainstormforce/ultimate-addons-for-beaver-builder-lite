@@ -632,88 +632,125 @@ if( $settings->box_design != 'design02' ) {
 
 <?php 
 /* Typography style starts here  */ 
-if ( $settings->heading_font_family['family'] != "Default" || isset( $settings->heading_font_size['desktop'] ) && $settings->heading_font_size['desktop'] != '' || isset( $settings->heading_line_height['desktop'] ) && $settings->heading_line_height['desktop'] != '' || $settings->heading_font_size_unit != '' || $settings->heading_line_height_unit != ''|| $settings->heading_color != '' ) { ?>
+if ( $settings->heading_font_family['family'] != "Default" || isset( $settings->heading_line_height['desktop'] ) || $settings->heading_font_size_unit != '' || $settings->heading_line_height_unit != ''|| $settings->heading_color != '' ) { ?>
 	.fl-node-<?php echo $id;?> .info-table-heading .info-table-main-heading {
 		<?php if( $settings->heading_font_family['family'] != "Default") : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->heading_font_family ); ?>
 		<?php endif; ?>
 
-
-		<?php if( isset( $settings->heading_font_size_unit ) && $settings->heading_font_size_unit != '' ) : ?>
-			font-size: <?php echo $settings->heading_font_size_unit; ?>px;
-		<?php endif; ?>
+		<?php if( isset( $settings->heading_font_size_unit ) && $settings->heading_font_size_unit == '' && isset( $settings->heading_font_size['desktop'] ) && $settings->heading_font_size['desktop'] != '' ) { ?>
+			font-size: <?php echo $settings->heading_font_size['desktop']; ?>px;
+		<?php } else { ?>
+			<?php if( isset( $settings->heading_font_size_unit ) && $settings->heading_font_size_unit != '' ) : ?>
+				font-size: <?php echo $settings->heading_font_size_unit; ?>px;
+			<?php endif; ?>
+		<?php } ?>
 
 		<?php if( isset( $settings->heading_font_size['desktop'] ) && $settings->heading_font_size['desktop'] == '' && isset( $settings->heading_line_height['desktop'] ) && $settings->heading_line_height['desktop'] != '' && $settings->heading_line_height_unit == '' ) { ?>
 		    line-height: <?php echo $settings->heading_line_height['desktop']; ?>px;
 		<?php } ?>
 
-		<?php if( isset( $settings->heading_line_height_unit ) && $settings->heading_line_height_unit != '' ) : ?>
-			line-height: <?php echo $settings->heading_line_height_unit; ?>em;
-		<?php endif; ?>
+		<?php if( isset( $settings->heading_line_height_unit ) && $settings->heading_line_height_unit == '' && isset( $settings->heading_line_height['desktop'] ) && $settings->heading_line_height['desktop'] != '' ) { ?>
+			line-height: <?php echo $settings->heading_line_height['desktop']; ?>px;
+		<?php } else { ?>
+			<?php if( isset( $settings->heading_line_height_unit ) && $settings->heading_line_height_unit != '' ) : ?>
+				line-height: <?php echo $settings->heading_line_height_unit; ?>em;
+			<?php endif; ?>
+		<?php } ?>
 
 		<?php if( $settings->heading_color != '' ) : ?>
 			color: <?php echo $settings->heading_color; ?>;
 		<?php endif; ?>
 	}
 <?php }
-if ( $settings->sub_heading_font_family['family'] != "Default" || isset( $settings->sub_heading_font_size['desktop'] ) && $settings->sub_heading_font_size['desktop'] != '' || isset( $settings->sub_heading_line_height['desktop'] ) && $settings->sub_heading_line_height['desktop'] != '' || $settings->sub_heading_font_size_unit != '' || $settings->sub_heading_line_height_unit != '' || $settings->sub_heading_color != '' ) { ?>
+
+if ( $settings->sub_heading_font_family['family'] != "Default" || isset( $settings->sub_heading_font_size['desktop'] ) || isset( $settings->sub_heading_line_height['desktop'] ) || $settings->sub_heading_font_size_unit != '' || $settings->sub_heading_line_height_unit != '' || $settings->sub_heading_color != '' ) { ?>
 	.fl-node-<?php echo $id;?> .info-table-heading .info-table-sub-heading {
 		<?php if( $settings->sub_heading_font_family['family'] != "Default") : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->sub_heading_font_family ); ?>
 		<?php endif; ?>
-		<?php if( isset( $settings->sub_heading_font_size_unit ) && $settings->sub_heading_font_size_unit != '' ) : ?>
-			font-size: <?php echo $settings->sub_heading_font_size_unit; ?>px;
-		<?php endif; ?>
+
+		<?php if( isset( $settings->sub_heading_font_size_unit ) && $settings->sub_heading_font_size_unit == '' && isset( $settings->sub_heading_font_size['desktop'] ) && $settings->sub_heading_font_size['desktop'] != '' ) { ?>
+			font-size: <?php echo $settings->sub_heading_font_size['desktop']; ?>px;
+		<?php } else { ?>
+			<?php if( isset( $settings->sub_heading_font_size_unit ) && $settings->sub_heading_font_size_unit != '' ) : ?>
+				font-size: <?php echo $settings->sub_heading_font_size_unit; ?>px;
+			<?php endif; ?>
+		<?php } ?>
 
 		<?php if( isset( $settings->sub_heading_font_size['desktop'] ) && $settings->sub_heading_font_size['desktop'] == '' && isset( $settings->sub_heading_line_height['desktop'] ) && $settings->sub_heading_line_height['desktop'] != '' && $settings->sub_heading_line_height_unit == '' ) { ?>
 		    line-height: <?php echo $settings->sub_heading_line_height['desktop']; ?>px;
 		<?php } ?>
 
-		<?php if( isset( $settings->sub_heading_line_height_unit ) && $settings->sub_heading_line_height_unit != '' ) : ?>
-			line-height: <?php echo $settings->sub_heading_line_height_unit; ?>em;
-		<?php endif; ?>
+		<?php if( isset( $settings->sub_heading_line_height_unit ) && $settings->sub_heading_line_height_unit == '' && isset( $settings->sub_heading_line_height['desktop'] ) && $settings->sub_heading_line_height['desktop'] != '' ) { ?>
+			line-height: <?php echo $settings->sub_heading_line_height['desktop']; ?>px;
+		<?php } else { ?>
+			<?php if( isset( $settings->sub_heading_line_height_unit ) && $settings->sub_heading_line_height_unit != '' ) : ?>
+				line-height: <?php echo $settings->sub_heading_line_height_unit; ?>em;
+			<?php endif; ?>
+		<?php } ?>
+
 	}
 <?php }
-if ( $settings->description_font_family['family'] != "Default" || isset( $settings->description_font_size['desktop'] ) && $settings->description_font_size['desktop'] != '' || isset( $settings->description_line_height['desktop'] ) && $settings->description_line_height['desktop'] != '' || $settings->description_font_size_unit != '' || $settings->description_line_height_unit != '' || $settings->description_color != '' ) { ?>
+if ( $settings->description_font_family['family'] != "Default" || isset( $settings->description_font_size['desktop'] ) || isset( $settings->description_line_height['desktop'] ) || $settings->description_font_size_unit != '' || $settings->description_line_height_unit != '' || $settings->description_color != '' ) { ?>
 	.fl-node-<?php echo $id;?> .info-table .info-table-description {
+
 		<?php if( $settings->description_font_family['family'] != "Default") : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->description_font_family ); ?>
 		<?php endif; ?>
-		<?php if( isset( $settings->description_font_size_unit ) && $settings->description_font_size_unit != '' ) : ?>
-			font-size: <?php echo $settings->description_font_size_unit; ?>px;
-		<?php endif; ?>
+
+		<?php if( isset( $settings->description_font_size_unit ) && $settings->description_font_size_unit == '' && isset( $settings->description_font_size['desktop'] ) && $settings->description_font_size['desktop'] != '' ) { ?>
+			font-size: <?php echo $settings->description_font_size['desktop']; ?>px;
+		<?php } else { ?>
+			<?php if( isset( $settings->description_font_size_unit ) && $settings->description_font_size_unit != '' ) : ?>
+				font-size: <?php echo $settings->description_font_size_unit; ?>px;
+			<?php endif; ?>
+		<?php } ?>
 
 		<?php if( isset( $settings->description_font_size['desktop'] ) && $settings->description_font_size['desktop'] == '' && isset( $settings->description_line_height['desktop'] ) && $settings->description_line_height['desktop'] != '' && $settings->description_line_height_unit == '' ) { ?>
 		    line-height: <?php echo $settings->description_line_height['desktop']; ?>px;
 		<?php } ?>
 
-		<?php if( isset( $settings->description_line_height_unit ) && $settings->description_line_height_unit != '' ) : ?>
-			line-height: <?php echo $settings->description_line_height_unit; ?>em;
-		<?php endif; ?>
-		<?php if( $settings->description_color != '' ) : ?>
-			color: <?php echo $settings->description_color; ?>;
-		<?php endif; ?>
+		<?php if( isset( $settings->description_line_height_unit ) && $settings->description_line_height_unit == '' && isset( $settings->description_line_height['desktop'] ) && $settings->description_line_height['desktop'] != '' ) { ?>
+			line-height: <?php echo $settings->description_line_height['desktop']; ?>px;
+		<?php } else { ?>
+			<?php if( isset( $settings->description_line_height_unit ) && $settings->description_line_height_unit != '' ) : ?>
+				line-height: <?php echo $settings->description_line_height_unit; ?>em;
+			<?php endif; ?>
+		<?php } ?>
 	}
 <?php }
 
 if ( $settings->btn_font_family['family'] != "Default" || isset( $settings->btn_font_size['desktop'] ) && $settings->btn_font_size['desktop'] != '' || isset( $settings->btn_line_height['desktop'] ) && $settings->btn_line_height['desktop'] != '' || $settings->btn_font_size_unit != '' || $settings->btn_line_height_unit != '' ) { ?>
 	.fl-node-<?php echo $id;?> .info-table-wrap .info-table-button a {
+
 		<?php if( $settings->btn_font_family['family'] != "Default") : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->btn_font_family ); ?>
 		<?php endif; ?>
 
-		<?php if( isset( $settings->btn_font_size_unit ) && $settings->btn_font_size_unit != '' ) : ?>
-			font-size: <?php echo $settings->btn_font_size_unit; ?>px;
-			line-height: <?php echo $settings->btn_font_size_unit + 5; ?>px;
-		<?php endif; ?>
+		<?php if( isset( $settings->btn_font_size_unit ) && $settings->btn_font_size_unit == '' && isset( $settings->btn_font_size['desktop'] ) && $settings->btn_font_size['desktop'] != '' ) { ?>
+        	font-size: <?php echo $settings->btn_font_size['desktop']; ?>px;
+				<?php if($settings->btn_line_height['desktop'] != "" ) ?>
+			line-height: <?php echo $settings->btn_font_size['desktop'] + 5; ?>px;
+        <?php } else { ?>
+	        <?php if( isset( $settings->btn_font_size_unit ) && $settings->btn_font_size_unit != '' ) : ?>
+				font-size: <?php echo $settings->btn_font_size_unit; ?>px; 
+				<?php if($settings->btn_line_height_unit != "" ) ?>
+					line-height: <?php echo $settings->btn_font_size_unit + 5; ?>px;
+			<?php endif; ?>
+		<?php } ?>
 
 		<?php if( isset( $settings->btn_font_size['desktop'] ) && $settings->btn_font_size['desktop'] == '' && isset( $settings->btn_line_height['desktop'] ) && $settings->btn_line_height['desktop'] != '' && $settings->btn_line_height_unit == '' ) { ?>
 		    line-height: <?php echo $settings->btn_line_height['desktop']; ?>px;
 		<?php } ?>
 
-		<?php if( isset( $settings->btn_line_height_unit ) && $settings->btn_line_height_unit != '' ) : ?>
-			line-height: <?php echo $settings->btn_line_height_unit; ?>em;
-		<?php endif; ?>
+		<?php if( isset( $settings->btn_line_height_unit ) && $settings->btn_line_height_unit == '' && isset( $settings->btn_line_height['desktop'] ) && $settings->btn_line_height['desktop'] != '' ) { ?>
+			line-height: <?php echo $settings->btn_line_height['desktop']; ?>px;
+		<?php } else { ?>
+			<?php if( isset( $settings->btn_line_height_unit ) && $settings->btn_line_height_unit != '' ) : ?>
+				line-height: <?php echo $settings->btn_line_height_unit; ?>em;
+			<?php endif; ?>
+		<?php } ?>
 
 	}
 <?php }
@@ -721,7 +758,7 @@ if ( $settings->btn_font_family['family'] != "Default" || isset( $settings->btn_
 if($global_settings->responsive_enabled) { // Global Setting If started 
 	?>
 		@media ( max-width: <?php echo $global_settings->medium_breakpoint .'px'; ?> ) {
-			<?php if( isset( $settings->heading_font_size['medium'] ) && $settings->heading_font_size['medium'] !="" || isset( $settings->heading_line_height['medium'] ) && $settings->heading_line_height['medium'] != "" || $settings->heading_font_size_unit_medium !="" || $settings->heading_line_height_unit_medium != "" ) { ?>
+			<?php if( isset( $settings->heading_font_size['medium'] ) || isset( $settings->heading_line_height['medium'] ) && $settings->heading_line_height['medium'] != "" || $settings->heading_font_size_unit_medium !="" || $settings->heading_line_height_unit_medium != "" ) { ?>
 				.fl-node-<?php echo $id;?> .info-table-heading .info-table-main-heading {
 
 					<?php if( isset( $settings->heading_font_size_unit_medium ) && $settings->heading_font_size_unit_medium != '' ) : ?>

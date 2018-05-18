@@ -448,6 +448,7 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 								isset( $template_data['status'] ) && $template_data['status'] == true &&
 								isset( $template_data['dat_url_local'] ) && !empty( $template_data['dat_url_local'] )
 							) {
+								if(is_array($exist_templates[$type]))
 								$exist_templates[$type] = ( count( $exist_templates[$type] ) + 1 );
 							}
 						}
