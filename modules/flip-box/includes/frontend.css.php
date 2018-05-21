@@ -145,22 +145,10 @@ if( $settings->flip_box_min_height_options == 'uabb-custom-height' ) {
             }
         } 
     ?>
->>>>>>> Stashed changes
 }
 
 
 .fl-node-<?php echo $id; ?> .uabb-front .uabb-face-text-title {
-<<<<<<< Updated upstream
-    <?php if( isset( $settings->front_title_typography_font_size_unit ) && $settings->front_title_typography_font_size_unit != '' ) : ?>
-        font-size: <?php echo $settings->front_title_typography_font_size_unit; ?>px;
-    <?php endif; ?>
-    <?php if( isset( $settings->front_title_typography_font_size['desktop'] ) && $settings->front_title_typography_font_size['desktop'] == '' && isset( $settings->front_title_typography_line_height['desktop'] ) && $settings->front_title_typography_line_height['desktop'] != '' && $settings->front_title_typography_line_height_unit == '' ) { ?>
-        line-height: <?php echo $settings->front_title_typography_line_height['desktop']; ?>px;
-    <?php } ?>
-    <?php if( isset( $settings->front_title_typography_line_height_unit ) && $settings->front_title_typography_line_height_unit != '' ) : ?>
-        line-height: <?php echo $settings->front_title_typography_line_height_unit; ?>em;
-    <?php endif; ?>
-=======
 
     <?php if( isset( $settings->front_title_typography_font_size_unit ) && $settings->front_title_typography_font_size_unit == '' && isset( $settings->front_title_typography_font_size['desktop'] ) && $settings->front_title_typography_font_size['desktop'] != '' ) { ?>
     font-size: <?php echo $settings->front_title_typography_font_size['desktop']; ?>px;
@@ -182,7 +170,6 @@ if( $settings->flip_box_min_height_options == 'uabb-custom-height' ) {
         <?php endif; ?>
    <?php } ?>
 
->>>>>>> Stashed changes
     <?php
     if( $settings->front_title_typography_font_family['family'] != 'Default' ) {
         UABB_Helper::uabb_font_css( $settings->front_title_typography_font_family );
@@ -348,7 +335,7 @@ if( $global_settings->responsive_enabled ) { // Global Setting If started
 
         .fl-node-<?php echo $id; ?> .uabb-back .uabb-text-editor {
 
-            ?php if( isset( $settings->back_desc_typography_font_size_unit_medium ) && $settings->back_desc_typography_font_size_unit_medium == '' && isset( $settings->back_desc_typography_font_size['medium'] ) && $settings->back_desc_typography_font_size['medium'] != '' ) { ?>
+            <?php if( isset( $settings->back_desc_typography_font_size_unit_medium ) && $settings->back_desc_typography_font_size_unit_medium == '' && isset( $settings->back_desc_typography_font_size['medium'] ) && $settings->back_desc_typography_font_size['medium'] != '' ) { ?>
                     font-size: <?php echo $settings->back_desc_typography_font_size['medium']; ?>px;
             <?php } else { ?>
                 <?php if( isset( $settings->back_desc_typography_font_size_unit_medium ) && $settings->back_desc_typography_font_size_unit_medium != '' ) : ?>
