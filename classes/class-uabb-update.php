@@ -58,7 +58,7 @@ if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
 			}
 
 			// If matches the current version then skip the next steps.
-			if ( version_compare( $saved_version, BB_ULTIMATE_ADDON_VER, '=' ) ) {
+			if ( version_compare( $saved_version, BB_ULTIMATE_ADDON_LITE_VERSION, '=' ) ) {
 				return;
 			}
 
@@ -69,7 +69,7 @@ if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
 				$old_jrn_details = array();
 			}
 
-			$new_jrn_details = array( 'previous_version' => $saved_version, 'current_version' => BB_ULTIMATE_ADDON_VER );
+			$new_jrn_details = array( 'previous_version' => $saved_version, 'current_version' => BB_ULTIMATE_ADDON_LITE_VERSION );
 
 
 			array_push( $old_jrn_details, $new_jrn_details );
@@ -78,7 +78,7 @@ if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
 			
 			do_action( 'uabb_update_version_before' );
 			// Update saved version number.
-			update_option( '_uabb_saved_version', BB_ULTIMATE_ADDON_VER );
+			update_option( '_uabb_saved_version', BB_ULTIMATE_ADDON_LITE_VERSION );
 
 			// Flush the rewrite rules.
 			flush_rewrite_rules();
