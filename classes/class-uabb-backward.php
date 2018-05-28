@@ -38,7 +38,8 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		public function __construct() {
 
 			// UABB Updates.
-			add_action( 'fl_builder_editing_enabled', array( $this, 'update_data' ) );
+			add_action( 'wp', array( $this, 'update_data' ) );
+			//add_action( 'fl_builder_editing_enabled', array( $this, 'update_data' ) );
 
 			add_action( 'transition_post_status', array( $this, 'post_status' ), 10, 3 );
 		}
