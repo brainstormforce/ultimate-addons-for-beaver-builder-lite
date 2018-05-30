@@ -74,7 +74,7 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 				foreach ( $layout_data as $id => $data ) {
 					if ( isset( $layout_data[ $id ]->settings->type  ) ) {
 						
-						switch ( $layout_draft[ $id ]->settings->type ) {
+						switch ( $layout_data[ $id ]->settings->type ) {
 							case 'flip-box':
 								$this->uabb_flip_box( $layout_data[ $id ]->settings );
 								break;
