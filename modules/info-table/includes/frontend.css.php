@@ -930,7 +930,6 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 		            <?php } else if( isset( $settings->btn_line_height_unit_responsive ) && $settings->btn_line_height_unit_responsive == '' && isset( $settings->btn_line_height['small'] ) && $settings->btn_line_height['small'] != '' ) {?>
 		                line-height: <?php echo $settings->btn_line_height['small']; ?>px;
 		            <?php } ?> 
-
 				}
 				
 			<?php } ?>

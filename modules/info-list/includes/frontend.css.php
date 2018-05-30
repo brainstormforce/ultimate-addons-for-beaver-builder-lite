@@ -83,7 +83,6 @@ if ( $settings->list_connector_option == "yes" ) {
 }
 ?>
 
-
 <?php
 if( $settings->icon_position == 'left' || $settings->icon_position == 'right' ) {
 	if( $settings->align_items == 'center' ) {
