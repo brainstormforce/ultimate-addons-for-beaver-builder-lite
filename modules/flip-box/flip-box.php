@@ -682,7 +682,7 @@ FLBuilder::register_module('FlipBoxModule', array(
                             'no'      => __('No', 'uabb'),
                         )
                     ),
-                    'inner_padding' => array(
+                    'inner_padding_dimension' => array(
                         'type'      => 'uabb-spacing',
                         'label'     => __( 'Padding', 'uabb' ),
                         'help'         => __('Manage the outside spacing of content area of flipbox.', 'uabb'),

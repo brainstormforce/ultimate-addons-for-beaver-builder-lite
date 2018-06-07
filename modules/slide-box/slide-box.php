@@ -583,7 +583,7 @@ FLBuilder::register_module('SlideBoxModule', array(
             'front_styles'       => array( // Section
                 'title'         => __('Slide Box Front Style', 'uabb'), // Section Title
                 'fields'        => array( // Section Fields
-                    'front_padding' => array(
+                    'front_padding_dimension' => array(
                         'type'      => 'uabb-spacing',
                         'label'     => __( 'Content Padding', 'uabb' ),
                         'mode'      => 'padding',
@@ -630,7 +630,7 @@ FLBuilder::register_module('SlideBoxModule', array(
             'back_styles'       => array( // Section
                 'title'         => __('Slide Box Back Style', 'uabb'), // Section Title
                 'fields'        => array( // Section Fields
-                    'back_padding' => array(
+                    'back_padding_dimension' => array(
                         'type'      => 'uabb-spacing',
                         'label'     => __( 'Content Padding', 'uabb' ),
                         'mode'      => 'padding',
