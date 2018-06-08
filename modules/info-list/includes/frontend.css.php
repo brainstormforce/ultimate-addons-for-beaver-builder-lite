@@ -589,18 +589,16 @@ if ( $settings->description_font_family['family'] != "Default" || isset( $settin
 		                font-size: <?php echo $settings->description_font_size['small']; ?>px;
 		            <?php } ?>
 
-					<?php if( isset( $settings->description_font_size['small'] ) && $settings->description_font_size['small'] == '' && isset( $settings->description_line_height['small'] ) && $settings->description_line_height['small'] != '' && $settings->description_line_height_unit == '' && $settings->description_line_height_unit_medium == '' && $settings->description_line_height_unit_responsive == '' ) { ?>
-					    line-height: <?php echo $settings->description_line_height['small']; ?>px;
-					<?php } ?>
-
+				<?php if( isset( $settings->description_font_size['small'] ) && $settings->description_font_size['small'] == '' && isset( $settings->description_line_height['small'] ) && $settings->description_line_height['small'] != '' && $settings->description_line_height_unit == '' && $settings->description_line_height_unit_medium == '' && $settings->description_line_height_unit_responsive == '' ) { ?>
+				    line-height: <?php echo $settings->description_line_height['small']; ?>px;
+				<?php } ?>
 		            <?php if( $converted === 'yes' || isset( $settings->description_line_height_unit_responsive ) && $settings->description_line_height_unit_responsive != '' ) { ?>
 		                line-height: <?php echo $settings->description_line_height_unit_responsive; ?>em;
 		            <?php } else if( isset( $settings->description_line_height_unit_responsive ) && $settings->description_line_height_unit_responsive == '' && isset( $settings->description_line_height['small'] ) && $settings->description_line_height['small'] != '' ) {?>
 		                line-height: <?php echo $settings->description_line_height['small']; ?>px;
 		            <?php } ?>
 
-				}
-			<?php } ?>
+			}
 
 			<?php if( $settings->mobile_view == 'stack' ) { ?>
 			.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-icon {

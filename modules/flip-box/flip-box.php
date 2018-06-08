@@ -685,12 +685,15 @@ FLBuilder::register_module('FlipBoxModule', array(
                     'inner_padding_dimension' => array(
                         'type'      => 'uabb-spacing',
                         'label'     => __( 'Padding', 'uabb' ),
-                        'help'         => __('Manage the outside spacing of content area of flipbox.', 'uabb'),
-                        //'default'   => 'padding: 15px;',    //optional
-                        'mode'      => 'padding',
-                        'placeholder'   => array(
-                            'all' => '15'
-                        )
+                        'help'        => __('Manage the outside spacing of content area of flipbox.', 'uabb'),
+                        'description' =>'px',
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '15',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ),    
                     ),
                 )
             ),

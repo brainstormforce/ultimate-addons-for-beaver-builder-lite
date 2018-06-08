@@ -183,6 +183,7 @@ $converted = get_post_meta( $post->ID,'_uabb_converted', true );
 			    
 			    <?php if( isset( $settings->new_font_size['small'] ) && $settings->new_font_size['small'] == '' && isset( $settings->line_height['small'] ) && $settings->line_height['small'] != '' && $settings->line_height_unit_responsive == '' && $settings->line_height_unit_medium == '' && $settings->line_height_unit == '' ) :?>
 					    line-height: <?php echo $settings->line_height['small']; ?>px;
+
 				<?php endif; ?>
 	            
 	            <?php if( $converted === 'yes' || isset( $settings->line_height_unit_responsive ) && $settings->line_height_unit_responsive != '' ){ ?> 

@@ -584,11 +584,18 @@ FLBuilder::register_module('SlideBoxModule', array(
                 'title'         => __('Slide Box Front Style', 'uabb'), // Section Title
                 'fields'        => array( // Section Fields
                     'front_padding_dimension' => array(
+
                         'type'      => 'uabb-spacing',
                         'label'     => __( 'Content Padding', 'uabb' ),
-                        'mode'      => 'padding',
-                        'default'   => 'padding: 25px;',
                         'help'     => __( 'To apply padding to Slide Box Front use this setting', 'uabb' ),
+                        'description' =>'px',
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '25',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ), 
                     ),
                     'front_background_color'    => array( 
                         'type'       => 'color',
@@ -633,9 +640,15 @@ FLBuilder::register_module('SlideBoxModule', array(
                     'back_padding_dimension' => array(
                         'type'      => 'uabb-spacing',
                         'label'     => __( 'Content Padding', 'uabb' ),
-                        'mode'      => 'padding',
-                        'default'   => 'padding: 25px;',
                         'help'     => __( 'To apply padding to Slide Box Back use this setting', 'uabb' ),
+                        'description' =>'px',
+                        'responsive' => array(
+                            'placeholder' => array(
+                                'default' => '25',
+                                'medium' => '',
+                                'responsive' => '',
+                            ),
+                        ), 
                     ),
                     'back_alignment'   => array(
                         'type'          => 'select',

@@ -317,6 +317,7 @@ FLBuilder::register_settings_form('button_form_field', array(
                         'font_size_unit'     => array(
                             'type'          => 'unit',
                             'label'         => __( 'Font Size', 'uabb' ),
+                            'description'   => 'px',
                             'responsive' => array(
                                 'placeholder' => array(
                                     'default' => '',
@@ -328,6 +329,7 @@ FLBuilder::register_settings_form('button_form_field', array(
                         'line_height_unit'    => array(
                             'type'          => 'unit',
                             'label'         => __( 'Line Height', 'uabb' ),
+                            'description'   => 'em',
                             'responsive' => array(
                                 'placeholder' => array(
                                     'default' => '',

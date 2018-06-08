@@ -639,7 +639,6 @@ if ( $settings->heading_font_family['family'] != "Default" || isset( $settings->
 		<?php if( $settings->heading_font_family['family'] != "Default") : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->heading_font_family ); ?>
 		<?php endif; ?>
-
 	    <?php if( $converted === 'yes' || isset( $settings->heading_font_size_unit ) && $settings->heading_font_size_unit != '' ) {
 	        ?>
 	        font-size: <?php echo $settings->heading_font_size_unit; ?>px;
@@ -679,7 +678,6 @@ if ( $settings->sub_heading_font_family['family'] != "Default" || isset( $settin
 		<?php if( isset( $settings->sub_heading_font_size['desktop'] ) && $settings->sub_heading_font_size['desktop'] == '' && isset( $settings->sub_heading_line_height['desktop'] ) && $settings->sub_heading_line_height['desktop'] != '' && $settings->sub_heading_line_height_unit == '' ) { ?>
 		    line-height: <?php echo $settings->sub_heading_line_height['desktop']; ?>px;
 		<?php } ?>
-
 	    <?php if( $converted === 'yes' || isset( $settings->sub_heading_line_height_unit ) && $settings->sub_heading_line_height_unit != '' ) { ?>
 	        line-height: <?php echo $settings->sub_heading_line_height_unit; ?>em;
 	    <?php } else if(isset( $settings->sub_heading_line_height_unit ) && $settings->sub_heading_line_height_unit == '' && isset( $settings->sub_heading_line_height['desktop'] ) && $settings->sub_heading_line_height['desktop'] != '') { ?>
@@ -715,13 +713,12 @@ if ( $settings->description_font_family['family'] != "Default" || isset( $settin
 	}
 <?php }
 
-if ( $settings->btn_font_family['family'] != "Default" || isset( $settings->btn_font_size['desktop'] ) && $settings->btn_font_size['desktop'] != '' || isset( $settings->btn_line_height['desktop'] ) && $settings->btn_line_height['desktop'] != '' || $settings->btn_font_size_unit != '' || $settings->btn_line_height_unit != '' ) { ?>
+if ( $settings->btn_font_family['family'] != "Default" || isset( $settings->btn_font_size['desktop'] ) && $settings->btn_font_size['desktop'] != '' || isset( $settings->btn_line_height['desktop'] ) && $settings->btn_line_height['desktop'] != '' || isset( $settings->btn_font_size_unit ) || isset( $settings->btn_line_height_unit ) ) { ?>
 	.fl-node-<?php echo $id;?> .info-table-wrap .info-table-button a {
 
 		<?php if( $settings->btn_font_family['family'] != "Default") : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->btn_font_family ); ?>
 		<?php endif; ?>
-
 	    <?php if( $converted === 'yes' || isset( $settings->btn_font_size_unit ) && $settings->btn_font_size_unit != '' ) { ?>
 	     	font-size: <?php echo $settings->btn_font_size_unit; ?>px;
 			<?php if( $settings->btn_line_height_unit == '' &&  $settings->btn_font_size_unit != '' ){ ?>
@@ -769,7 +766,6 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 
 				}
 			<?php } ?>
-
 			<?php if( isset( $settings->sub_heading_font_size['medium'] ) || isset( $settings->sub_heading_line_height['medium'] ) || isset( $settings->sub_heading_font_size_unit_medium ) || isset( $settings->sub_heading_line_height_unit_medium ) || isset( $settings->sub_heading_line_height_unit ) ) { ?>
 				.fl-node-<?php echo $id;?> .info-table-heading .info-table-sub-heading {
 
@@ -837,12 +833,11 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 			<?php } ?>
 	    }
 	<?php
-
 	if( isset( $settings->heading_font_size['small'] ) || isset( $settings->heading_line_height['small'] ) || isset( $settings->sub_heading_font_size['small'] ) || isset( $settings->sub_heading_line_height['small'] ) || isset( $settings->description_font_size['small'] ) || isset( $settings->description_line_height['small'] ) || isset( $settings->btn_font_size['small'] ) || isset( $settings->btn_line_height['small'] ) || isset( $settings->heading_font_size_unit_responsive ) || isset( $settings->heading_line_height_unit_responsive ) || isset( $settings->sub_heading_font_size_unit_responsive ) || isset( $settings->sub_heading_line_height_unit_responsive ) || isset( $settings->description_font_size_unit_responsive ) || isset( $settings->description_line_height_unit_responsive ) || isset( $settings->btn_font_size_unit_responsive ) || isset( $settings->btn_line_height_unit_responsive ) || isset( $settings->heading_line_height_unit ) || isset( $settings->heading_line_height_unit_medium ) || isset( $settings->sub_heading_line_height_unit ) || isset( $settings->sub_heading_line_height_unit_medium ) ) {
 	?>
 		@media ( max-width: <?php echo $global_settings->responsive_breakpoint .'px'; ?> ) {
 			
-			.fl-node-<?php echo $id;?> .info-table-heading .info-table-main-heading {                    
+			.fl-node-<?php echo $id;?> .info-table-heading .info-table-main-heading { 
 
 	            <?php if( $converted === 'yes' || isset( $settings->heading_font_size_unit_responsive ) && $settings->heading_font_size_unit_responsive != '' ){ ?>
 	                font-size: <?php echo $settings->heading_font_size_unit_responsive; ?>px;   
@@ -853,7 +848,6 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 				<?php if( isset( $settings->heading_font_size['small'] ) && $settings->heading_font_size['small'] == '' && isset( $settings->heading_line_height['small'] ) && $settings->heading_line_height['small'] != '' && $settings->heading_line_height_unit == '' && $settings->heading_line_height_unit_medium == '' && $settings->heading_line_height_unit_responsive == '' ) { ?>
 				    line-height: <?php echo $settings->heading_line_height['small']; ?>px;
 				<?php } ?>
-
 	            <?php if( $converted === 'yes' || isset( $settings->heading_line_height_unit_responsive ) && $settings->heading_line_height_unit_responsive != '' ) { ?>
 	                line-height: <?php echo $settings->heading_line_height_unit_responsive; ?>em;
 	            <?php } else if( isset( $settings->heading_line_height_unit_responsive ) && $settings->heading_line_height_unit_responsive == '' && isset( $settings->heading_line_height['small'] ) && $settings->heading_line_height['small'] != '' ) {?>
@@ -881,7 +875,6 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 	            <?php } ?>
 				
 			}
-
 			<?php if( isset( $settings->description_font_size['small'] ) || isset( $settings->description_line_height['small'] ) || $settings->description_font_size_unit_responsive != "" || $settings->description_line_height_unit_responsive != "" || isset( $settings->description_line_height_unit ) || isset( $settings->description_line_height_unit_responsive ) ) { ?>
 				.fl-node-<?php echo $id;?> .info-table .info-table-description {
 
@@ -911,7 +904,7 @@ if($global_settings->responsive_enabled) { // Global Setting If started
 					<?php endif; ?>
 				}
 			<?php } ?>
-
+			
 			<?php if( isset( $settings->btn_font_size['small'] ) || isset( $settings->btn_line_height['small'] ) || isset( $settings->btn_font_size_unit_responsive ) || isset( $settings->btn_line_height_unit_responsive ) || isset( $settings->btn_line_height_unit ) || isset( $settings->btn_line_height_unit_medium ) ) { ?>
 				.fl-node-<?php echo $id;?> .info-table-wrap .info-table-button a {
 

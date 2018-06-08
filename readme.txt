@@ -3,8 +3,8 @@ Contributors: brainstormforce
 Donate link: https://www.paypal.me/BrainstormForce
 Tags: beaver builder, beaver builder free, beaver addons, beaver builder addon, beaver builder add ons, beaver builder lite, beaver builder modules, beaver builder addons, beaver builder extensions, beaver addon, beaver builder plugin, beaver builder wordpress
 Requires at least: 4.6
-Tested up to: 4.9.0
-Stable tag: 1.2.2
+Tested up to: 4.9.5
+Stable tag: 1.2.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -123,6 +123,11 @@ With the Ultimate Addons for Beaver Builder you get a collection of over 35+ cus
  	<li><a href="https://www.ultimatebeaver.com/modules/social-share/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Social Share</a>: A powerful module that lets visitors share your content across various social media platforms without installing a new plugin for the same.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/hotspot/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Hotspot</a>: Want to highlight a particular part of an image? Use the Hotspot module to add a hotspot with an icon, text or image.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/image-carousel/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Image Carousel</a>: Display a set of images in a carousel that comes with various caption styling, navigation, grid settings and more.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/column-shadow/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Column Shadow</a>: Add beautiful shadow effects to your Beaver Builder columns making them even more attractive.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/row-column-gradient/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Gradient Backgrounds</a>: Create beautiful rows and columns with good looking and attractive gradient backgrounds.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/advanced-menu/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Advanced Menu</a>: Create an creative menus with the Advanced Menu module that is fully compatible with the Beaver Themer too!.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/contact-form7-styler/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Contact Form 7 Styler</a>: Create simple yet attractive contact forms using CF7 styler for your WordPress website and make it easy for users to contact you.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/gravity-forms/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Gravity Forms Styler</a>: Create an attractive and simple Gravity Forms Styler for your WordPress website and make it easy for users to contact you.</li>
 </ul>
 <strong>Template Cloud with Page and Section Templates</strong>
 
@@ -197,8 +202,18 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 == Changelog ==
 
+= 1.2.3.1 =
+* Fixed: Heading Module responsive font size not working
+
 = 1.2.3 =
-* New: Introduced Heading Module
+* New: Added Heading module
+* New: Custom field compatibility with Beaver Builder 2.0
+* Improvement: Deprecated uabb-simplify field and replaced it with BB's unit field
+* Improvement: Deprecated uabb-spacing field and replaced it with BB's dimension field
+* Improvement: Deprecated uabb-toggle-switch field and replaced it with BB's select field
+* Improvement: Deprecated uabb-blank-spacer field
+* Improvement: Deprecated uabb-msg-box field
+* Improvement: Replaced line-height's unit from px to em for all modules
 
 = 1.2.2 =
 * New: WPML Support
