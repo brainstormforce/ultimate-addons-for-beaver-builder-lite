@@ -2,7 +2,7 @@
 /**
  * Update and backward compatibility. 
  *
- * @since 1.3.0
+ * @since 1.2.4
  */
 
 if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
@@ -10,7 +10,7 @@ if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
 	/**
 	 * UABB_Plugin_Update initial setup
 	 *
-	 * @since 1.3.0
+	 * @since 1.2.4
 	 */
 	class UABB_Plugin_Update {
 
@@ -51,10 +51,10 @@ if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
 		static public function init() {
 
 			// Get saved version number.
-			$saved_version = get_option( '_uabb_saved_version', '0' );
+			$saved_version = get_option( '_uabb_lite_saved_version', '0' );
 
 			if( '0' === $saved_version ) {
-				update_option( '_uabb_1_7_2_ver', 'yes' );
+				update_option( '_uabb_lite_1_2_4_ver', 'yes' );
 			}
 
 			// If matches the current version then skip the next steps.
@@ -63,7 +63,7 @@ if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
 			}
 
 
-			$old_jrn_details = get_option( '_journey_details', '0' );
+			$old_jrn_details = get_option( '_uabb_lite_journey_details', '0' );
 			
 			if( $old_jrn_details == '0' ) {
 				$old_jrn_details = array();
@@ -74,11 +74,11 @@ if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
 
 			array_push( $old_jrn_details, $new_jrn_details );
 
-			update_option( '_journey_details', $old_jrn_details );
+			update_option( '_uabb_lite_journey_details', $old_jrn_details );
 			
 			do_action( 'uabb_update_version_before' );
 			// Update saved version number.
-			update_option( '_uabb_saved_version', BB_ULTIMATE_ADDON_LITE_VERSION );
+			update_option( '_uabb_lite_saved_version', BB_ULTIMATE_ADDON_LITE_VERSION );
 
 			// Flush the rewrite rules.
 			flush_rewrite_rules();
