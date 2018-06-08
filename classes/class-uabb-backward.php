@@ -2,7 +2,8 @@
 /**
  * Backward compatibility. 
  *
- * @since 1.3.0
+ * @since 1.2.4
+
  */
 
 if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
@@ -10,7 +11,8 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 	/**
 	 * UABB_Plugin_Backward initial setup
 	 *
-	 * @since 1.3.0
+	 * @since 1.2.4
+
 	 */
 	class UABB_Plugin_Backward {
 
@@ -47,7 +49,8 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		/**
 		 * Set UABB version for new page.
 		 *
-		 * @since 1.3.0
+		 * @since 1.2.4
+
 		 * @return void
 		 */
 		public function post_status( $new_status, $old_status, $post ) {
@@ -61,7 +64,8 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		/**
 		 * Execute Layout Data.
 		 *
-		 * @since 1.3.0
+		 * @since 1.2.4
+
 		 * @return void
 		 */
 		public function layout_data_execute( $post_id ) {
@@ -110,7 +114,8 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		/**
 		 * Execute Layout Draft.
 		 *
-		 * @since 1.3.0
+		 * @since 1.2.4
+
 		 * @return void
 		 */
 		public function layout_draft_execute(  $post_id ) {
@@ -159,7 +164,8 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		/**
 		 * Implement UABB update logic.
 		 *
-		 * @since 1.3.0
+		 * @since 1.2.4
+
 		 * @return void
 		 */
 		public function update_data() {
@@ -197,7 +203,8 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		/**
 		 * UABB Flip Box.
 		 *
-		 * @since 1.3.0
+		 * @since 1.2.4
+
 		 * @return void
 		 */
 		public function uabb_flip_box( &$settings ) {
@@ -362,7 +369,8 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		/**
 		 * UABB Info List.
 		 *
-		 * @since 1.3.0
+		 * @since 1.2.4
+
 		 * @return void
 		 */
 		public function uabb_info_list( &$settings ) {
@@ -417,7 +425,8 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		/**
 		 * UABB Info Table.
 		 *
-		 * @since 1.3.0
+		 * @since 1.2.4
+
 		 * @return void
 		 */
 		public function uabb_info_table( &$settings ) {
@@ -518,7 +527,8 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		/**
 		 * UABB Ribbon.
 		 *
-		 * @since 1.3.0
+		 * @since 1.2.4
+
 		 * @return void
 		 */
 		public function uabb_ribbon( &$settings ) {
@@ -550,7 +560,8 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		/**
 		 * UABB Slide Box.
 		 *
-		 * @since 1.3.0
+		 * @since 1.2.4
+
 		 * @return void
 		 */
 		public function uabb_slide_box( &$settings ) {
@@ -777,7 +788,8 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		/**
 		 * UABB Button.
 		 *
-		 * @since 1.3.0
+		 * @since 1.2.4
+
 		 * @return void
 		 */
 		public function uabb_button( &$settings ) {
