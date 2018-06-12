@@ -219,7 +219,7 @@ if( $global_settings->responsive_enabled ) : ?>
 			    <?php } else if(  isset( $settings->font_size_unit_medium ) && isset( $settings->font_size ) && is_array( $settings->font_size ) && $settings->font_size_unit_medium == '' && isset( $settings->font_size['medium'] ) && $settings->font_size['medium'] != '' ) {?>
 			    	font-size: <?php echo $settings->font_size['medium']; ?>px;
 				    line-height: <?php $settings->font_size['medium'] + 2?>px;
-			    <?php } else if(  isset( $settings->font_size_unit_medium ) && is_object( $settings->font_size ) && $settings->font_size_unit_medium == '' && isset( $settings->font_size->medium ) && $settings->font_size->medium != '' ) {?>
+			    <?php } else if(  isset( $settings->font_size_unit_medium ) && isset( $settings->font_size ) && is_object( $settings->font_size ) && $settings->font_size_unit_medium == '' && isset( $settings->font_size->medium ) && $settings->font_size->medium != '' ) {?>
 			    	font-size: <?php echo $settings->font_size->medium; ?>px;
 				    line-height: <?php $settings->font_size->medium + 2?>px;
 			    <?php } ?> 
