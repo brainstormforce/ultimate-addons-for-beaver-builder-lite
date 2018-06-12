@@ -585,7 +585,7 @@ FLBuilder::register_module('SlideBoxModule', array(
                 'fields'        => array( // Section Fields
                     'front_padding_dimension' => array(
 
-                        'type'      => 'uabb-spacing',
+                        'type'      => 'dimension',
                         'label'     => __( 'Content Padding', 'uabb' ),
                         'help'     => __( 'To apply padding to Slide Box Front use this setting', 'uabb' ),
                         'description' =>'px',
@@ -638,7 +638,7 @@ FLBuilder::register_module('SlideBoxModule', array(
                 'title'         => __('Slide Box Back Style', 'uabb'), // Section Title
                 'fields'        => array( // Section Fields
                     'back_padding_dimension' => array(
-                        'type'      => 'uabb-spacing',
+                        'type'      => 'dimension',
                         'label'     => __( 'Content Padding', 'uabb' ),
                         'help'     => __( 'To apply padding to Slide Box Back use this setting', 'uabb' ),
                         'description' =>'px',
