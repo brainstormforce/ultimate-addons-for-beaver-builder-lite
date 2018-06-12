@@ -239,25 +239,6 @@ if( $settings->icon_position == "left" ){ ?>
 	$list_item_counter = 0;
 	foreach( $settings->add_list_item as $item ){
 
-		/*if ( $settings->list_icon_style == 'simple' && ( $settings->icon_position == "right" || $settings->icon_position == "left" ) ) {
-			if ( $item->image_type == 'icon' ) {
-	?>
-			.fl-node-<?php echo $id; ?> .uabb-info-list .uabb-info-list-icon .uabb-icon-wrap .uabb-icon i, 
-			.fl-node-<?php echo $id; ?> .uabb-info-list .uabb-info-list-icon .uabb-icon-wrap .uabb-icon i:before {
-			    width: 1.3em;
-			    height: 1.3em;
-			    line-height: 1.3em;
-			}
-	<?php
-			} else if( $item->image_type == 'photo' ) {
-	?>
-			.fl-node-<?php echo $id; ?> .uabb-info-list .uabb-info-list-icon .uabb-imgicon-wrap .uabb-image img {
-			    width: <?php echo $settings->icon_image_size * 1.3; ?>px;
-			}
-	<?php
-			}
-		}*/
-
 		if ( $settings->list_icon_style == 'circle' ) {
             $infolist_icon_size = $settings->icon_image_size / 2;
         }else if ( $settings->list_icon_style == 'square' ) {
@@ -554,7 +535,7 @@ if ( $settings->description_font_family['family'] != "Default" || isset( $settin
 			<?php } ?>
 	    }
 	<?php
-	}
+	} }
 
 	if( isset( $settings->heading_font_size['small'] ) || isset( $settings->heading_line_height['small'] ) || isset( $settings->description_font_size['small'] ) || isset( $settings->description_line_height['small'] ) || isset( $settings->heading_font_size_unit_responsive) || isset( $settings->heading_line_height_unit_responsive ) || isset( $settings->description_font_size_unit_responsive ) || isset( $settings->description_line_height_unit_responsive ) || $settings->mobile_view == 'stack' ) {
 	?>
@@ -583,46 +564,47 @@ if ( $settings->description_font_family['family'] != "Default" || isset( $settin
 			<?php if( isset( $settings->description_font_size['small'] ) && $settings->description_font_size['small'] !="" || isset( $settings->description_line_height['small'] ) && $settings->description_line_height['small'] != "" || isset( $settings->description_font_size_unit_responsive ) || isset( $settings->description_line_height_unit_responsive ) ) { ?>
 				.fl-node-<?php echo $id;?> .uabb-info-list .uabb-info-list-content .uabb-info-list-description {
 
-		            <?php if( $converted === 'yes' || isset( $settings->description_font_size_unit_responsive ) && $settings->description_font_size_unit_responsive != '' ){ ?>
-		                font-size: <?php echo $settings->description_font_size_unit_responsive; ?>px;   
-		            <?php } else if( $settings->description_font_size_unit_responsive  && $settings->description_font_size_unit_responsive == '' && isset( $settings->description_font_size['small'] ) && $settings->description_font_size['small'] != '' ) { ?>
-		                font-size: <?php echo $settings->description_font_size['small']; ?>px;
-		            <?php } ?>
+	            <?php if( $converted === 'yes' || isset( $settings->description_font_size_unit_responsive ) && $settings->description_font_size_unit_responsive != '' ){ ?>
+	                font-size: <?php echo $settings->description_font_size_unit_responsive; ?>px;   
+	            <?php } else if( $settings->description_font_size_unit_responsive  && $settings->description_font_size_unit_responsive == '' && isset( $settings->description_font_size['small'] ) && $settings->description_font_size['small'] != '' ) { ?>
+	                font-size: <?php echo $settings->description_font_size['small']; ?>px;
+	            <?php } ?>
 
 				<?php if( isset( $settings->description_font_size['small'] ) && $settings->description_font_size['small'] == '' && isset( $settings->description_line_height['small'] ) && $settings->description_line_height['small'] != '' && $settings->description_line_height_unit == '' && $settings->description_line_height_unit_medium == '' && $settings->description_line_height_unit_responsive == '' ) { ?>
 				    line-height: <?php echo $settings->description_line_height['small']; ?>px;
 				<?php } ?>
-		            <?php if( $converted === 'yes' || isset( $settings->description_line_height_unit_responsive ) && $settings->description_line_height_unit_responsive != '' ) { ?>
-		                line-height: <?php echo $settings->description_line_height_unit_responsive; ?>em;
-		            <?php } else if( isset( $settings->description_line_height_unit_responsive ) && $settings->description_line_height_unit_responsive == '' && isset( $settings->description_line_height['small'] ) && $settings->description_line_height['small'] != '' ) {?>
-		                line-height: <?php echo $settings->description_line_height['small']; ?>px;
-		            <?php } ?>
+
+	            <?php if( $converted === 'yes' || isset( $settings->description_line_height_unit_responsive ) && $settings->description_line_height_unit_responsive != '' ) { ?>
+	                line-height: <?php echo $settings->description_line_height_unit_responsive; ?>em;
+	            <?php } else if( isset( $settings->description_line_height_unit_responsive ) && $settings->description_line_height_unit_responsive == '' && isset( $settings->description_line_height['small'] ) && $settings->description_line_height['small'] != '' ) {?>
+	                line-height: <?php echo $settings->description_line_height['small']; ?>px;
+	            <?php } ?>
 
 			}
 
 			<?php if( $settings->mobile_view == 'stack' ) { ?>
-			.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-icon {
-				padding: 0;
-				margin-bottom: 20px;
-			}
+				.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-icon {
+					padding: 0;
+					margin-bottom: 20px;
+				}
 
-			.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-content,
-			.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-icon {
-				display: block;
-				width: 100%;
-				text-align: center;
-			}
+				.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-content,
+				.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-icon {
+					display: block;
+					width: 100%;
+					text-align: center;
+				}
 
-			.fl-node-<?php echo $id;?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector,
-			.fl-node-<?php echo $id;?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector,
-			.fl-node-<?php echo $id;?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector-top,
-			.fl-node-<?php echo $id;?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector-top {
-				display: none;
-			}
+				.fl-node-<?php echo $id;?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector,
+				.fl-node-<?php echo $id;?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector,
+				.fl-node-<?php echo $id;?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector-top,
+				.fl-node-<?php echo $id;?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector-top {
+					display: none;
+				}
 			<?php } ?>
-	    }
-	<?php
-	}
+		}	
+	<?php  
+	} 
 }
 ?>
-/* Typography responsive layout Ends here */
+
