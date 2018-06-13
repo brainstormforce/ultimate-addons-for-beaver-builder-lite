@@ -1,7 +1,7 @@
 <?php
 
 global $post;
-$converted = get_post_meta( $post->ID,'_uabb_converted', true );
+$converted = get_post_meta( $post->ID,'_uabb_lite_converted', true );
 
 $settings->bg_color = uabb_theme_button_bg_color( $settings->bg_color );
 $settings->bg_hover_color = uabb_theme_button_bg_hover_color( $settings->bg_hover_color );

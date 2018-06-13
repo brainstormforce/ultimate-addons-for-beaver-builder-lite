@@ -1,6 +1,6 @@
 <?php
 global $post;
-$converted = get_post_meta( $post->ID,'_uabb_converted', true );
+$converted = get_post_meta( $post->ID,'_uabb_lite_converted', true );
     
 $settings->text_color = UABB_Helper::uabb_colorpicker( $settings, 'text_color' );
 $settings->ribbon_color = UABB_Helper::uabb_colorpicker( $settings, 'ribbon_color' );

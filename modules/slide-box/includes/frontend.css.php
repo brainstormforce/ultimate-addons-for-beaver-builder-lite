@@ -8,7 +8,7 @@
 <?php 
 
     global $post;
-    $converted = get_post_meta( $post->ID,'_uabb_converted', true );
+    $converted = get_post_meta( $post->ID,'_uabb_lite_converted', true );
 
     $settings->icon_color = UABB_Helper::uabb_colorpicker( $settings, 'icon_color' );
     $settings->icon_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'icon_hover_color' );
