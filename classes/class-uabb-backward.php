@@ -170,9 +170,13 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		 */
 		public function update_data() {
 
-			$update_journey = get_option( '_uabb_lite_journey_details', '0' );
+			if ( ! FLBuilderModel::is_builder_active() && FLBuilderAJAX::doing_ajax() ) {
+				return;
+			}
 
-			$new_user = get_option( '_uabb_lite_1_2_4_ver', '0' );
+			$update_journey = get_option( '_uabb_lite_journey_details', '0' );
+           
+           	$new_user = get_option( '_uabb_lite_1_2_4_ver', '0' );   
 
 			if( 'yes' == $new_user ) {
 				return;
@@ -181,13 +185,11 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 			$post_id = get_the_ID();
 			
 			$new_page = get_post_meta( $post_id,'_uabb_lite_version', true );
-
 			if ( '' !== $new_page ) {
 				return;
 			}
 
 			$flag = get_post_meta( $post_id,'_uabb_lite_converted', true );
-
 			if ( 'yes' === $flag ) {
 				return;
 			}
