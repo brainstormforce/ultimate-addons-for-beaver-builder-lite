@@ -24,7 +24,7 @@
     display: inline-block;
     vertical-align: top;
     width: 50px;
-    margin-right: 15px;
+    margin: 0 15px 10px 0;
     padding-top: 5px;
 }
 
@@ -32,10 +32,10 @@
 .uabb-gradient-wrapper .fl-color-picker {
   /*  display: inline-block;*/
     vertical-align: top;
-    position: absolute;
+    /*position: absolute;
     top: 0;
     left: 66px;
-}
+*/}
 
 .uabb-gradient-wrapper .uabb-gradient-angle-input {
     display: inline-block;
@@ -46,7 +46,7 @@
 
 .uabb-gradient-wrapper .uabb-gradient-direction-select {
     margin: 0;
-    padding: 0;
+    padding: 3px 9px;
     height: 24px;
     box-sizing: border-box;
 }
