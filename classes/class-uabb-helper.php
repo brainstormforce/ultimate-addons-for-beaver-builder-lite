@@ -7,6 +7,14 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 	
 	class BB_Ultimate_Addon_Helper {
 
+		/**
+		 * Holds any category strings of modules.
+		 *
+		 * @since 1.3.0
+		 * @var Category Strings
+		 */
+		static public $basic_modules = 'Basic Modules';
+
 		/*
 		* Constructor function that initializes required actions and hooks
 		* @Since 1.0

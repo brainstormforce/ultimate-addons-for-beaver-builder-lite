@@ -13,7 +13,7 @@ class UABBButtonModule extends FLBuilderModule {
 		parent::__construct(array(
 			'name'          => __('Button', 'uabb'),
 			'description'   => __('A simple call to action button.', 'uabb'),
-			'category'      => BB_Ultimate_Addon_Helper::module_cat(''),
+			'category'          => BB_Ultimate_Addon_Helper::module_cat(BB_Ultimate_Addon_Helper::$basic_modules),
             'group'         => UABB_CAT,
 			'dir'           => BB_ULTIMATE_ADDON_DIR . 'modules/uabb-button/',
             'url'           => BB_ULTIMATE_ADDON_URL . 'modules/uabb-button/',

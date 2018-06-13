@@ -116,7 +116,14 @@ if( $settings->flip_box_min_height_options == 'uabb-custom-height' ) {
 
 .fl-node-<?php echo $id; ?> .uabb-flip-box-section {
         <?php 
-    if( $converted === 'yes' || isset($settings->inner_padding_dimension_top) && $settings->inner_padding_dimension_top != '' &&  isset( $settings->inner_padding_dimension_bottom ) && $settings->inner_padding_dimension_bottom != ''  && isset( $settings->inner_padding_dimension_left ) && $settings->inner_padding_dimension_left != ''  && isset( $settings->inner_padding_dimension_right ) && $settings->inner_padding_dimension_right != '' ) {
+    if( $converted === 'yes' ||  isset($settings->inner_padding_dimension_top) && isset( $settings->inner_padding_dimension_bottom )  && isset( $settings->inner_padding_dimension_left )  && isset( $settings->inner_padding_dimension_right )  ) { 
+        if( isset( $settings->inner_padding ) && $settings->inner_padding == '' ) {
+            $settings->inner_padding_dimension_top = '15';
+            $settings->inner_padding_dimension_bottom = '15';
+            $settings->inner_padding_dimension_left = '15';
+            $settings->inner_padding_dimension_right = '15';
+        }
+
         if(isset($settings->inner_padding_dimension_top) ){
             echo ( $settings->inner_padding_dimension_top != '' ) ? 'padding-top:'.$settings->inner_padding_dimension_top.'px;' : 'padding-top: 15px;'; 
         }
