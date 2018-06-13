@@ -57,7 +57,7 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 
 		    if ( $old_status === 'new'  &&  $new_status === 'auto-draft' ) {
 				/* Update Version */
-				update_post_meta( $post->ID,'_uabb_version', BB_ULTIMATE_ADDON_LITE_VERSION );
+				update_post_meta( $post->ID,'_uabb_lite_version', BB_ULTIMATE_ADDON_LITE_VERSION );
 		    }
 		}
 
