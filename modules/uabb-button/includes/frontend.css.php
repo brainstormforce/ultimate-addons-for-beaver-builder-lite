@@ -66,6 +66,36 @@ if ( ! empty( $settings->bg_hover_color ) ) {
 		<?php UABB_Helper::uabb_font_css( $settings->font_family ); ?>
 	<?php endif; ?>
 
+    <?php if( $converted === 'yes' || isset( $settings->font_size_unit ) && $settings->font_size_unit != '' ) { ?>
+     	font-size: <?php echo $settings->font_size_unit; ?>px;
+		<?php if( $settings->line_height_unit == '' &&  $settings->font_size_unit != '' ){ ?>
+			line-height: <?php echo $settings->font_size_unit + 2 ; ?>px;
+	    <?php } ?>		
+    <?php } else if(  isset( $settings->font_size_unit ) && $settings->font_size_unit == '' && isset( $settings->font_size ) && is_array( $settings->font_size ) && isset( $settings->font_size['desktop'] ) && $settings->font_size['desktop'] != '' ) { ?>
+	    font-size: <?php echo $settings->font_size['desktop']; ?>px;
+	    line-height: <?php echo $settings->font_size['desktop'] + 2 ; ?>px;
+	<?php } else if(isset( $settings->font_size_unit ) && $settings->font_size_unit == '' && isset( $settings->font_size ) && is_object( $settings->font_size ) && isset( $settings->font_size->desktop ) && $settings->font_size->desktop != '' ) { ?>
+        font-size: <?php echo $settings->font_size->desktop; ?>px;
+        line-height: <?php echo $settings->font_size->desktop + 2 ; ?>px; ?>
+    <?php } ?>
+
+	<?php if( isset( $settings->font_size ) && is_array( $settings->font_size )  ){ ?>
+	    <?php if( isset( $settings->font_size['desktop'] ) && $settings->font_size['desktop'] == '' && isset( $settings->line_height['desktop'] ) && $settings->line_height['desktop'] != '' && $settings->line_height_unit == '' ) { ?>
+				line-height: <?php echo $settings->line_height['desktop']; ?>px;
+		<?php } ?>
+	<?php } else if( isset( $settings->font_size ) && is_object( $settings->font_size )  ){ ?>
+	    <?php if( isset( $settings->font_size->desktop ) && $settings->font_size->desktop == '' && isset( $settings->line_height->desktop ) && $settings->line_height->desktop != '' && $settings->line_height_unit == '' ) { ?>
+			    line-height: <?php echo $settings->line_height->desktop; ?>px;
+		<?php } ?>
+	<?php } ?>
+
+    <?php if( $converted === 'yes' || isset( $settings->line_height_unit ) && $settings->line_height_unit != '' ) { ?>
+    	line-height: <?php echo $settings->line_height_unit; ?>em;	
+    <?php }  else if( isset( $settings->line_height_unit ) && $settings->line_height_unit == '' && isset( $settings->line_height )  && is_array( $settings->line_height ) && isset( $settings->line_height['desktop'] ) && $settings->line_height['desktop'] != '' ) { ?>
+        line-height: <?php echo $settings->line_height['desktop']; ?>px;
+    <?php } else if( isset( $settings->line_height_unit ) && $settings->line_height_unit == '' && isset( $settings->line_height )  && is_object( $settings->line_height ) && isset( $settings->line_height->desktop ) && $settings->line_height->desktop != '') { ?>
+        line-height: <?php echo $settings->line_height->desktop; ?>px;
+	<?php } ?>
 
 	<?php if( $settings->width == 'custom' ) { 
 			$padding_top_bottom = ( $settings->padding_top_bottom !== '' ) ? $settings->padding_top_bottom : '0';
