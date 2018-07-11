@@ -3,7 +3,6 @@
  * Backward compatibility. 
  *
  * @since 1.2.4
-
  */
 
 if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
@@ -39,8 +38,8 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		public function __construct() {
 
 			// UABB Updates.
-			//add_action( 'wp', array( $this, 'update_data' ) );
-			add_action( 'fl_builder_editing_enabled', array( $this, 'update_data' ) );
+			add_action( 'wp', array( $this, 'update_data' ) );
+			//add_action( 'fl_builder_editing_enabled', array( $this, 'update_data' ) );
 
 			add_action( 'transition_post_status', array( $this, 'post_status' ), 10, 3 );
 		}
@@ -69,7 +68,7 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 
 			/* Layout Data */
 			$layout_data 	= get_post_meta( $post_id, '_fl_builder_data', true );
-			update_post_meta( $post_id,'_fl_builder_data_back', $layout_data );
+			update_post_meta( $post_id, '_fl_builder_data_back', $layout_data );
 			
 			if ( is_array( $layout_data ) ) {
 				foreach ( $layout_data as $id => $data ) {
@@ -165,7 +164,7 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		 */
 		public function update_data() {
 
-			if ( ! FLBuilderModel::is_builder_active() && FLBuilderAJAX::doing_ajax() ) {
+/*			if ( ! FLBuilderModel::is_builder_active() && FLBuilderAJAX::doing_ajax() ) {
 				return;
 			}
 
@@ -194,7 +193,7 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 			$this->layout_draft_execute( $post_id );
 			
 			/* Update Flag */
-			update_post_meta( $post_id,'_uabb_lite_converted', 'yes' );
+			/*update_post_meta( $post_id,'_uabb_lite_converted', 'yes' );*/
 		}
 
 		/**

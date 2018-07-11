@@ -45,7 +45,7 @@ if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
 		/**
 		 * Implement UABB update logic.
 		 *
-		 * @since 1.3.0
+		 * @since 1.2.4
 		 * @return void
 		 */
 		static public function init() {
