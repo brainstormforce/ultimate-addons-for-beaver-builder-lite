@@ -5,14 +5,14 @@
  * @since 1.2.4
  */
 
-if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
+if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 
 	/**
-	 * UABB_Plugin_Backward initial setup
+	 * UABB_lite_Plugin_Backward initial setup
 	 *
 	 * @since 1.2.4
 	 */
-	class UABB_Plugin_Backward {
+	class UABB_lite_Plugin_Backward {
 
 		/**
 		 * Class instance.
@@ -164,20 +164,22 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		 */
 		public function update_data() {
 
-/*			if ( ! FLBuilderModel::is_builder_active() && FLBuilderAJAX::doing_ajax() ) {
+		if ( ! FLBuilderModel::is_builder_active() && FLBuilderAJAX::doing_ajax() ) {
 				return;
 			}
 
-			$update_journey = get_option( '_uabb_lite_journey_details', '0' );
+/*			$update_journey = get_option( '_uabb_lite_journey_details', '0' );
            
            	$new_user = get_option( '_uabb_lite_1_2_4_ver', '0' );   
 
 			if( 'yes' == $new_user ) {
 				return;
 			}
-
+*/
 			$post_id = get_the_ID();
-			
+			//print_r($post_id);
+/*			
+
 			$new_page = get_post_meta( $post_id,'_uabb_lite_version', true );
 			if ( '' !== $new_page ) {
 				return;
@@ -186,14 +188,15 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 			$flag = get_post_meta( $post_id,'_uabb_lite_converted', true );
 			if ( 'yes' === $flag ) {
 				return;
-			}
+			}*/
 			
 			$this->layout_data_execute( $post_id );
 
 			$this->layout_draft_execute( $post_id );
 			
 			/* Update Flag */
-			/*update_post_meta( $post_id,'_uabb_lite_converted', 'yes' );*/
+			update_post_meta( $post_id,'_uabb_lite_converted', 'no' );
+
 		}
 
 		/**
@@ -809,4 +812,4 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		}		
 	}
 }// End if().
-UABB_Plugin_Backward::get_instance();
+UABB_lite_Plugin_Backward::get_instance();

@@ -5,14 +5,14 @@
  * @since 1.2.4
  */
 
-if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
+if ( ! class_exists( 'UABB_lite_Plugin_Update' ) ) {
 
 	/**
 	 * UABB_Plugin_Update initial setup
 	 *
 	 * @since 1.2.4
 	 */
-	class UABB_Plugin_Update {
+	class UABB_lite_Plugin_Update {
 
 		/**
 		 * Class instance.
@@ -87,4 +87,4 @@ if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
 		}
 	}
 }// End if().
-UABB_Plugin_Update::get_instance();
+UABB_lite_Plugin_Update::get_instance();
