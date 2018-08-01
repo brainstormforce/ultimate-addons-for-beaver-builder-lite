@@ -186,7 +186,7 @@ FLBuilder::register_module('RibbonModule', array(
                     ),
                     'gradient_color' => array(
                         'type'          => 'uabb-gradient',
-                        'label'         => __('', 'uabb'),
+                        'label'         => __('Gradient', 'uabb'),
                         'default'       => array(
                             'color_one' => '',
                             'color_two' => '',
