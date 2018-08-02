@@ -5,14 +5,14 @@
  * @since 1.2.4
  */
 
-if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
+if ( ! class_exists( 'UABB_lite_Plugin_Update' ) ) {
 
 	/**
 	 * UABB_Plugin_Update initial setup
 	 *
 	 * @since 1.2.4
 	 */
-	class UABB_Plugin_Update {
+	class UABB_lite_Plugin_Update {
 
 		/**
 		 * Class instance.
@@ -45,7 +45,7 @@ if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
 		/**
 		 * Implement UABB update logic.
 		 *
-		 * @since 1.3.0
+		 * @since 1.2.4
 		 * @return void
 		 */
 		static public function init() {
@@ -53,9 +53,10 @@ if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
 			// Get saved version number.
 			$saved_version = get_option( '_uabb_lite_saved_version', '0' );
 
-			if( '0' === $saved_version ) {
-				update_option( '_uabb_lite_1_2_4_ver', 'yes' );
-			}
+			$version = '1.2.4';
+           if ( (int)$version < (int)BB_ULTIMATE_ADDON_LITE_VERSION ) {
+               update_option('_uabb_lite_1_2_4_ver', 'yes');
+           }
 
 			// If matches the current version then skip the next steps.
 			if ( version_compare( $saved_version, BB_ULTIMATE_ADDON_LITE_VERSION, '=' ) ) {
@@ -87,4 +88,4 @@ if ( ! class_exists( 'UABB_Plugin_Update' ) ) {
 		}
 	}
 }// End if().
-UABB_Plugin_Update::get_instance();
+UABB_lite_Plugin_Update::get_instance();

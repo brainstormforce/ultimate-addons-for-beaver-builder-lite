@@ -3,18 +3,16 @@
  * Backward compatibility. 
  *
  * @since 1.2.4
-
  */
 
-if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
+if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 
 	/**
-	 * UABB_Plugin_Backward initial setup
+	 * UABB_lite_Plugin_Backward initial setup
 	 *
 	 * @since 1.2.4
-
 	 */
-	class UABB_Plugin_Backward {
+	class UABB_lite_Plugin_Backward {
 
 		/**
 		 * Class instance.
@@ -50,14 +48,13 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		 * Set UABB version for new page.
 		 *
 		 * @since 1.2.4
-
 		 * @return void
 		 */
 		public function post_status( $new_status, $old_status, $post ) {
 
 		    if ( $old_status === 'new'  &&  $new_status === 'auto-draft' ) {
 				/* Update Version */
-				update_post_meta( $post->ID,'_uabb_version', BB_ULTIMATE_ADDON_LITE_VERSION );
+				update_post_meta( $post->ID,'_uabb_lite_version', BB_ULTIMATE_ADDON_LITE_VERSION );
 		    }
 		}
 
@@ -65,14 +62,13 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		 * Execute Layout Data.
 		 *
 		 * @since 1.2.4
-
 		 * @return void
 		 */
 		public function layout_data_execute( $post_id ) {
 
 			/* Layout Data */
 			$layout_data 	= get_post_meta( $post_id, '_fl_builder_data', true );
-			update_post_meta( $post_id,'_fl_builder_data_back', $layout_data );
+			update_post_meta( $post_id, '_fl_builder_data_back', $layout_data );
 			
 			if ( is_array( $layout_data ) ) {
 				foreach ( $layout_data as $id => $data ) {
@@ -105,7 +101,7 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 				}
 
 				update_post_meta( $post_id,'_fl_builder_data', $layout_data );
-
+  
 				$layout_data = null;
 				unset( $layout_data );
 			}
@@ -115,12 +111,10 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		 * Execute Layout Draft.
 		 *
 		 * @since 1.2.4
-
 		 * @return void
 		 */
 		public function layout_draft_execute(  $post_id ) {
 
-			/* Layout Draft */
 			$layout_draft 	= get_post_meta( $post_id, '_fl_builder_draft', true );
 			update_post_meta( $post_id,'_fl_builder_draft_back', $layout_draft );
 
@@ -130,22 +124,22 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 						
 						switch ( $layout_draft[ $id ]->settings->type ) {
 							case 'flip-box':
-								$this->uabb_flip_box( $layout_data[ $id ]->settings );
+								$this->uabb_flip_box( $layout_draft[ $id ]->settings );
 								break;
 							case 'info-list':
-								$this->uabb_info_list( $layout_data[ $id ]->settings );
+								$this->uabb_info_list( $layout_draft[ $id ]->settings );
 								break;
 							case 'info-table':
-								$this->uabb_info_table( $layout_data[ $id ]->settings );
+								$this->uabb_info_table( $layout_draft[ $id ]->settings );
 								break;
 							case 'ribbon':
-								$this->uabb_ribbon( $layout_data[ $id ]->settings );
+								$this->uabb_ribbon( $layout_draft[ $id ]->settings );
 								break;
 							case 'slide-box':
-								$this->uabb_slide_box( $layout_data[ $id ]->settings );
+								$this->uabb_slide_box( $layout_draft[ $id ]->settings );
 								break;
 							case 'uabb-button':
-								$this->uabb_button( $layout_data[ $id ]->settings );
+								$this->uabb_button( $layout_draft[ $id ]->settings );
 								break;
 									
 							default:
@@ -165,21 +159,24 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		 * Implement UABB update logic.
 		 *
 		 * @since 1.2.4
-
 		 * @return void
 		 */
 		public function update_data() {
 
-			$update_journey = get_option( '_uabb_lite_journey_details', '0' );
+			if ( ! FLBuilderModel::is_builder_active() && FLBuilderAJAX::doing_ajax() ) {
+				return;
+			}
 
-			$new_user = get_option( '_uabb_lite_1_2_4_ver', '0' );
+			$update_journey = get_option( '_uabb_lite_journey_details', '0' ); 
+
+           	$new_user = get_option( '_uabb_lite_1_2_4_ver', '0' ); 
 
 			if( 'yes' == $new_user ) {
 				return;
 			}
 
 			$post_id = get_the_ID();
-			
+
 			$new_page = get_post_meta( $post_id,'_uabb_lite_version', true );
 
 			if ( '' !== $new_page ) {
@@ -198,13 +195,13 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 			
 			/* Update Flag */
 			update_post_meta( $post_id,'_uabb_lite_converted', 'yes' );
+
 		}
 
 		/**
 		 * UABB Flip Box.
 		 *
 		 * @since 1.2.4
-
 		 * @return void
 		 */
 		public function uabb_flip_box( &$settings ) {
@@ -370,7 +367,6 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		 * UABB Info List.
 		 *
 		 * @since 1.2.4
-
 		 * @return void
 		 */
 		public function uabb_info_list( &$settings ) {
@@ -426,7 +422,6 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		 * UABB Info Table.
 		 *
 		 * @since 1.2.4
-
 		 * @return void
 		 */
 		public function uabb_info_table( &$settings ) {
@@ -528,7 +523,6 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		 * UABB Ribbon.
 		 *
 		 * @since 1.2.4
-
 		 * @return void
 		 */
 		public function uabb_ribbon( &$settings ) {
@@ -561,7 +555,6 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		 * UABB Slide Box.
 		 *
 		 * @since 1.2.4
-
 		 * @return void
 		 */
 		public function uabb_slide_box( &$settings ) {
@@ -789,7 +782,6 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		 * UABB Button.
 		 *
 		 * @since 1.2.4
-
 		 * @return void
 		 */
 		public function uabb_button( &$settings ) {
@@ -819,4 +811,4 @@ if ( ! class_exists( 'UABB_Plugin_Backward' ) ) {
 		}		
 	}
 }// End if().
-UABB_Plugin_Backward::get_instance();
+UABB_lite_Plugin_Backward::get_instance();

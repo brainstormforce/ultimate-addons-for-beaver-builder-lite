@@ -1,7 +1,7 @@
 <?php
 
 global $post;
-$converted = get_post_meta( $post->ID,'_uabb_converted', true );
+$converted = get_post_meta( $post->ID,'_uabb_lite_converted', true );
 
 /* Variable settings */
 $settings->heading_color = UABB_Helper::uabb_colorpicker( $settings, 'heading_color' );

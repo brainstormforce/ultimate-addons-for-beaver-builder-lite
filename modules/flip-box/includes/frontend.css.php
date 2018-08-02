@@ -1,7 +1,7 @@
 <?php
 
 global $post;
-$converted = get_post_meta( $post->ID,'_uabb_converted', true );
+$converted = get_post_meta( $post->ID,'_uabb_lite_converted', true );
 
 $settings->front_background_color = UABB_Helper::uabb_colorpicker( $settings, 'front_background_color', true );
 $settings->front_border_color = UABB_Helper::uabb_colorpicker( $settings, 'front_border_color' );
