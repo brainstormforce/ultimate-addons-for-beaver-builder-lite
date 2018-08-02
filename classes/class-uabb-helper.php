@@ -7,6 +7,14 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 	
 	class BB_Ultimate_Addon_Helper {
 
+		/**
+		 * Holds any category strings of modules.
+		 *
+		 * @since 1.3.0
+		 * @var Category Strings
+		 */
+		static public $basic_modules = '';
+
 		/*
 		* Constructor function that initializes required actions and hooks
 		* @Since 1.0
@@ -18,6 +26,7 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 
 		function set_constants() {
 			$branding         = BB_Ultimate_Addon_Helper::get_builder_uabb_branding();
+			self::$basic_modules	= __( 'Basic', 'uabb' );
 			$branding_name    = 'UABB';
 			$branding_modules = __('UABB Modules', 'uabb');
 
