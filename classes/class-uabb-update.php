@@ -54,9 +54,9 @@ if ( ! class_exists( 'UABB_lite_Plugin_Update' ) ) {
 			$saved_version = get_option( '_uabb_lite_saved_version', '0' );
 
 			$version = '1.2.4';
-		        if ( (int)$version < BB_ULTIMATE_ADDON_LITE_VERSION ) {
-			    update_option('_uabb_lite_1_2_4_ver', 'yes');
-		        }
+           if ( (int)$version < (int)BB_ULTIMATE_ADDON_LITE_VERSION ) {
+               update_option('_uabb_lite_1_2_4_ver', 'yes');
+           }
 
 			// If matches the current version then skip the next steps.
 			if ( version_compare( $saved_version, BB_ULTIMATE_ADDON_LITE_VERSION, '=' ) ) {
