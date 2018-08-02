@@ -13,7 +13,7 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 		 * @since 1.3.0
 		 * @var Category Strings
 		 */
-		static public $basic_modules = 'Basic Modules';
+		static public $basic_modules = __( 'Basic Modules', 'uabb' );
 
 		/*
 		* Constructor function that initializes required actions and hooks

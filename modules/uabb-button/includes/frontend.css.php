@@ -246,7 +246,6 @@ if( $global_settings->responsive_enabled ) : ?>
 					<?php if( $settings->width != 'custom' && $settings->line_height_unit_medium == '' && $settings->font_size_unit_medium != '' ) { ?>
 						line-height: <?php $settings->font_size_unit_medium + 2?>px;
 					<?php } ?>	
-
 			    <?php } else if(  isset( $settings->font_size_unit_medium ) && isset( $settings->font_size ) && is_array( $settings->font_size ) && $settings->font_size_unit_medium == '' && isset( $settings->font_size['medium'] ) && $settings->font_size['medium'] != '' ) {?>
 			    	font-size: <?php echo $settings->font_size['medium']; ?>px;
 				    line-height: <?php $settings->font_size['medium'] + 2?>px;
@@ -255,18 +254,18 @@ if( $global_settings->responsive_enabled ) : ?>
 				    line-height: <?php $settings->font_size->medium + 2?>px;
 			    <?php } ?> 
 
-				<?php if( isset( $settings->font_size ) && isset( $settings->font_size ) ) { ?>
+				<?php if( isset( $settings->font_size ) && is_array( $settings->font_size ) ) { ?>
 					<?php if( isset( $settings->font_size['medium'] ) && $settings->font_size['medium'] == '' && isset( $settings->line_height['medium'] ) && $settings->line_height['medium'] != '' && $settings->line_height_unit == '' && $settings->line_height_unit_medium == '' ) { ?>
 					    line-height: <?php echo $settings->line_height['medium']; ?>px;
 					<?php } ?>
-				<?php } else if( isset( $settings->font_size ) && isset( $settings->font_size ) ) { ?>
+				<?php } else if( isset( $settings->font_size ) && is_object( $settings->font_size ) ) { ?>
 					<?php if( isset( $settings->font_size->medium ) && $settings->font_size->medium == '' && isset( $settings->line_height->medium ) && $settings->line_height->medium != '' && $settings->line_height_unit == '' && $settings->line_height_unit_medium == '' ) { ?>
 				    	line-height: <?php echo $settings->line_height->medium; ?>px;
 					<?php } ?>
 				<?php } ?>
 
 	            <?php if( $converted === 'yes' || isset( $settings->line_height_unit_medium ) && $settings->line_height_unit_medium != '' ){ ?>
-	                line-height: <?php echo $settings->line_height_unit_medium; ?>em;  
+	                line-height: <?php echo $settings->line_height_unit_medium; ?>em;   
 	            <?php } else if( isset( $settings->line_height_unit_medium ) && isset( $settings->line_height ) && is_array( $settings->line_height ) && $settings->line_height_unit_medium == '' && isset( $settings->line_height['medium'] ) && $settings->line_height['medium'] != '' ) { ?>
 	                line-height: <?php echo $settings->line_height['medium']; ?>px;
 	            <?php } else if( isset( $settings->line_height_unit_medium ) &&  isset( $settings->line_height ) &&  is_object( $settings->line_height ) && $settings->line_height_unit_medium == '' && isset( $settings->line_height->medium ) && $settings->line_height->medium != '' ) {?>
@@ -320,11 +319,11 @@ if( $global_settings->responsive_enabled ) : ?>
 	                line-height: <?php echo $settings->font_size->small + 2 ; ?>px;
 	            <?php } ?>
 
-				<?php if( isset( $settings->font_size ) && isset( $settings->font_size ) ) { ?>
+				<?php if( isset( $settings->font_size ) && is_array( $settings->font_size ) ) { ?>
 					<?php if( isset( $settings->font_size['small'] ) && $settings->font_size['small'] == '' && isset( $settings->line_height['small'] ) && $settings->line_height['small'] != '' && $settings->line_height_unit == '' && $settings->line_height_unit_medium == '' && $settings->line_height_unit_responsive == '' ) { ?>
 					    line-height: <?php echo $settings->line_height['small']; ?>px;
 					<?php } ?>
-				<?php } else if( isset( $settings->font_size ) && isset( $settings->font_size ) ) { ?>
+				<?php } else if( isset( $settings->font_size ) && is_object( $settings->font_size ) ) { ?>
 					<?php if( isset( $settings->font_size->small ) && $settings->font_size->small == '' && isset( $settings->line_height->small ) && $settings->line_height->small != '' && $settings->line_height_unit == '' && $settings->line_height_unit_medium == '' && $settings->line_height_unit_responsive == '' ) { ?>
 					    line-height: <?php echo $settings->line_height->small; ?>px;
 					<?php } ?>
