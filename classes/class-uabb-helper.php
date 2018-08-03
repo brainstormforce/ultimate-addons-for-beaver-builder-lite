@@ -386,6 +386,36 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 					'class' => '',
 					'tag_title' => ''
 				),
+				'uabb-content-toggle'         	=> array(
+					'label' => 'Content Toggle',
+					'demo_url' => 'https://www.ultimatebeaver.com/modules/content-toggle/',
+					'class' => 'uabb-premium-flyout-green',
+					'tag_title' => 'New!'
+				),
+				'uabb-business-hours'         	=> array(
+					'label' => 'Business Hours',
+					'demo_url' => 'https://www.ultimatebeaver.com/modules/business-hours/',
+					'class' => 'uabb-premium-flyout-green',
+					'tag_title' => 'New!'
+				),
+				'uabb-woo-add-to-cart'         	=> array(
+					'label' => 'Woo Add to Cart',
+					'demo_url' => 'https://www.ultimatebeaver.com/modules/woo-add-to-cart/',
+					'class' => 'uabb-premium-flyout-green',
+					'tag_title' => 'New!'
+				),
+				'uabb-woo-categories'         	=> array(
+					'label' => 'Woo Categories',
+					'demo_url' => 'https://www.ultimatebeaver.com/modules/woo-categories/',
+					'class' => 'uabb-premium-flyout-green',
+					'tag_title' => 'New!'
+				),
+				'uabb-woo-products'         	=> array(
+					'label' => 'Woo Products',
+					'demo_url' => 'https://www.ultimatebeaver.com/modules/woo-products/',
+					'class' => 'uabb-premium-flyout-green',
+					'tag_title' => 'New!'
+				),
 			);
 			
 			return $premium_modules_array;
