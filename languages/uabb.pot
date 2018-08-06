@@ -1,47 +1,47 @@
-#, fuzzy
+# Copyright (C) 2018 Brainstorm Force
+# This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Addon for Beaver Builder 1.3.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bb-ultimate-"
-"addon\n"
-"POT-Creation-Date: 2016-12-26 06:32+0000\n"
+"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.2.4\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/bb-ultimate-addon\n"
+"POT-Creation-Date: 2018-08-06 05:30:51+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: Loco - https://localise.biz/\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Country: United States\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-Bookmarks: \n"
-"X-Textdomain-Support: yes"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n1.0.2\n"
 
 #: bb-ultimate-addon.php:47
-#, php-format
 msgid ""
-"Unfortunately, plugin could not be activated as the memory allocated by your "
-"host has almost exhausted. UABB plugin recommends that your site should have "
-"15M PHP memory remaining. <br/><br/>Please check <a target=\"_blank\" "
-"href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">"
-"this</a> article for solution or contact <a target=\"_blank\" href=\"http:"
-"//store.brainstormforce.com/support\">support</a>.<br/><br/><a "
+"Unfortunately, plugin could not be activated as the memory allocated by "
+"your host has almost exhausted. UABB plugin recommends that your site "
+"should have 15M PHP memory remaining. <br/><br/>Please check <a "
+"target=\"_blank\" "
+"href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\""
+">this</a> article for solution or contact <a target=\"_blank\" "
+"href=\"http://store.brainstormforce.com/support\">support</a>.<br/><br/><a "
 "class=\"button button-primary\" href=\"%s\">Return to Plugins Page</a>"
 msgstr ""
 
-#: bb-ultimate-addon.php:99
-#, php-format
+#: bb-ultimate-addon.php:109
 msgid ""
 "You currently have two versions of <strong>Ultimate Addon for Beaver "
-"Builder</strong> active on this site. Please <a href='%s'>deactivate one</a> "
-"before continuing."
+"Builder</strong> active on this site. Please <a href='%s'>deactivate "
+"one</a> before continuing."
 msgstr ""
 
 #: classes/class-uabb-admin-settings.php:91
@@ -80,12 +80,6 @@ msgstr ""
 msgid "Removed!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:169
-#, php-format
-msgctxt "%s stands for custom branded \"UABB\" name."
-msgid "%s Settings"
-msgstr ""
-
 #: classes/class-uabb-admin-settings.php:186
 msgid "Settings updated!"
 msgstr ""
@@ -94,26 +88,26 @@ msgstr ""
 msgid "Welcome"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:206
-#: includes/admin-settings-general.php:3 modules/info-list/info-list.php:503
+#: classes/class-uabb-admin-settings.php:207
+#: includes/admin-settings-general.php:3 modules/info-list/info-list.php:559
 msgid "General Settings"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:212
+#: classes/class-uabb-admin-settings.php:214
 msgid "Modules"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:220
+#: classes/class-uabb-admin-settings.php:222
 #: includes/admin-settings-premium.php:16
 #: includes/admin-settings-template-cloud.php:3
 msgid "Template Cloud"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:227
+#: classes/class-uabb-admin-settings.php:229
 msgid "Font Icon Manager"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:233
+#: classes/class-uabb-admin-settings.php:235
 #: includes/admin-settings-premium.php:3
 msgid "Premium Features"
 msgstr ""
@@ -123,12 +117,10 @@ msgid "Image Link"
 msgstr ""
 
 #: classes/class-uabb-cloud-templates.php:274
-#, php-format
 msgid "Welcome to %s Template Cloud!"
 msgstr ""
 
 #: classes/class-uabb-cloud-templates.php:275
-#, php-format
 msgid ""
 "%s Template Cloud would allow you to browse through our growing library of "
 "150+ professionally designed templates and download the only ones that you "
@@ -169,65 +161,138 @@ msgstr ""
 
 #: classes/class-uabb-global-settings.php:28
 #: classes/uabb-global-settings-form.php:5
-#, php-format
 msgid "%s - Global Settings"
 msgstr ""
 
 #: classes/class-uabb-global-settings.php:33
-#, php-format
 msgid "%s - Knowledge Base"
 msgstr ""
 
 #: classes/class-uabb-global-settings.php:38
-#, php-format
 msgid "%s - Contact Support"
 msgstr ""
 
-#: classes/class-uabb-helper.php:22
+#: classes/class-uabb-helper.php:29
+msgid "Basic"
+msgstr ""
+
+#: classes/class-uabb-helper.php:31
 msgid "UABB Modules"
 msgstr ""
 
-#: classes/class-uabb-helper.php:35 includes/admin-settings-modules.php:3
-#, php-format
+#: classes/class-uabb-helper.php:44 includes/admin-settings-modules.php:3
 msgid "%s Modules"
 msgstr ""
 
-#: classes/class-uabb-init.php:54
-msgctxt "Plugin action link label."
-msgid "Upgrade"
-msgstr ""
-
-#: classes/class-uabb-init.php:195
+#: classes/class-uabb-init.php:201
 msgid "plugin requires"
 msgstr ""
 
-#: classes/class-uabb-init.php:195
+#: classes/class-uabb-init.php:201
 msgid " plugin installed & activated."
+msgstr ""
+
+#: classes/class-uabb-wpml.php:59 classes/uabb-global-settings-form.php:49
+#: modules/flip-box/flip-box.php:579 modules/info-table/info-table.php:951
+#: modules/slide-box/slide-box.php:494 modules/slide-box/slide-box.php:539
+#: modules/uabb-button/uabb-button.php:14 objects/fl-nested-form-button.php:8
+msgid "Button"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:64
+#: modules/image-separator/image-separator.php:675
+#: modules/info-list/info-list.php:573 modules/slide-box/slide-box.php:513
+#: modules/uabb-button/uabb-button.php:119
+#: modules/uabb-button/uabb-button.php:123
+#: modules/uabb-heading/uabb-heading.php:87
+#: objects/fl-nested-form-button.php:29 objects/fl-nested-form-button.php:33
+msgid "Link"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:76
+msgid "Flip Box: Title on Front"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:81 classes/class-uabb-wpml.php:91
+msgid "Flip Box: Description"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:86
+msgid "Flip Box: Title on Back"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:103
+msgid "Slide Box: Front Slide Title"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:108
+msgid "Slide Box: Front Description"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:113
+msgid "Slide Box: Back Slide Title"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:118
+msgid "Slide Box: Back Description"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:123
+msgid "Slide Box: Link"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:128
+msgid "Slide Box: Call to action text"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:147
+msgid "Info Table : Heading"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:152
+msgid "Info Table : Sub Heading"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:157
+msgid "Info Table : Description"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:162
+msgid "Info Table : Call to action button text"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:167
+msgid "Info Table : Link"
+msgstr ""
+
+#: classes/class-uabb-wpml.php:179
+msgid "Image Separator : Link"
 msgstr ""
 
 #: classes/class-ui-panel.php:204
 msgid "Search Module..."
 msgstr ""
 
-#: classes/class-ui-panel.php:265
+#: classes/class-ui-panel.php:270
 msgid "Presets"
 msgstr ""
 
-#: classes/class-ui-panel.php:270 includes/admin-settings-template-cloud.php:28
+#: classes/class-ui-panel.php:275 includes/admin-settings-template-cloud.php:28
 msgid "Sections"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:10
-#: objects/fl-nested-form-button.php:50 objects/fl-nested-form-button.php:53
-#: objects/fl-nested-form-button.php:57 modules/flip-box/flip-box.php:75
-#: modules/flip-box/flip-box.php:588 modules/image-icon/image-icon.php:609
-#: modules/image-separator/image-separator.php:412
-#: modules/info-table/info-table.php:98 modules/info-table/info-table.php:386
-#: modules/info-table/info-table.php:485 modules/ribbon/ribbon.php:73
-#: modules/uabb-button/uabb-button.php:144
-#: modules/uabb-button/uabb-button.php:147
+#: classes/uabb-global-settings-form.php:10 modules/flip-box/flip-box.php:94
+#: modules/flip-box/flip-box.php:609 modules/image-icon/image-icon.php:613
+#: modules/image-separator/image-separator.php:415
+#: modules/info-table/info-table.php:105 modules/info-table/info-table.php:394
+#: modules/info-table/info-table.php:493 modules/ribbon/ribbon.php:91
+#: modules/uabb-button/uabb-button.php:148
 #: modules/uabb-button/uabb-button.php:151
-#: modules/uabb-separator/uabb-separator.php:82
+#: modules/uabb-button/uabb-button.php:155
+#: modules/uabb-heading/uabb-heading.php:321
+#: modules/uabb-separator/uabb-separator.php:85
+#: objects/fl-nested-form-button.php:50 objects/fl-nested-form-button.php:53
+#: objects/fl-nested-form-button.php:57
 msgid "Style"
 msgstr ""
 
@@ -240,12 +305,14 @@ msgid "Enable Global Styling"
 msgstr ""
 
 #: classes/uabb-global-settings-form.php:32
-#: objects/fl-nested-form-button.php:11 modules/image-icon/image-icon.php:383
-#: modules/image-separator/image-separator.php:367
-#: modules/info-list/info-list.php:170 modules/info-list/info-list.php:500
-#: modules/info-table/info-table.php:32 modules/spacer-gap/spacer-gap.php:22
-#: modules/uabb-button/uabb-button.php:98
-#: modules/uabb-separator/uabb-separator.php:30
+#: modules/image-icon/image-icon.php:385
+#: modules/image-separator/image-separator.php:369
+#: modules/info-list/info-list.php:190 modules/info-list/info-list.php:556
+#: modules/info-table/info-table.php:34 modules/spacer-gap/spacer-gap.php:24
+#: modules/uabb-button/uabb-button.php:100
+#: modules/uabb-heading/uabb-heading.php:70
+#: modules/uabb-separator/uabb-separator.php:33
+#: objects/fl-nested-form-button.php:11
 msgid "General"
 msgstr ""
 
@@ -257,93 +324,95 @@ msgstr ""
 msgid "Primary Text Color"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:49 objects/fl-nested-form-button.php:8
-#: modules/flip-box/flip-box.php:558 modules/info-table/info-table.php:889
-#: modules/slide-box/slide-box.php:489 modules/slide-box/slide-box.php:534
-#: modules/uabb-button/uabb-button.php:14
-msgid "Button"
-msgstr ""
-
-#: classes/uabb-global-settings-form.php:53
-#: objects/fl-nested-form-button.php:171 modules/flip-box/flip-box.php:192
-#: modules/flip-box/flip-box.php:324 modules/flip-box/flip-box.php:483
-#: modules/image-icon/image-icon.php:763 modules/image-icon/image-icon.php:827
-#: modules/image-separator/image-separator.php:529
-#: modules/info-table/info-table.php:221 modules/info-table/info-table.php:621
-#: modules/info-table/info-table.php:683 modules/slide-box/slide-box.php:314
-#: modules/slide-box/slide-box.php:590 modules/slide-box/slide-box.php:652
-#: modules/uabb-button/uabb-button.php:253
+#: classes/uabb-global-settings-form.php:53 modules/flip-box/flip-box.php:211
+#: modules/flip-box/flip-box.php:345 modules/flip-box/flip-box.php:504
+#: modules/image-icon/image-icon.php:767 modules/image-icon/image-icon.php:831
+#: modules/image-separator/image-separator.php:532
+#: modules/info-table/info-table.php:228 modules/info-table/info-table.php:629
+#: modules/info-table/info-table.php:691 modules/slide-box/slide-box.php:319
+#: modules/slide-box/slide-box.php:602 modules/slide-box/slide-box.php:670
+#: modules/uabb-button/uabb-button.php:257
+#: objects/fl-nested-form-button.php:171
 msgid "Background Color"
 msgstr ""
 
 #: classes/uabb-global-settings-form.php:59
-#: classes/uabb-global-settings-form.php:76
+#: classes/uabb-global-settings-form.php:76 modules/flip-box/flip-box.php:217
+#: modules/flip-box/flip-box.php:351 modules/flip-box/flip-box.php:510
+#: modules/image-icon/image-icon.php:773 modules/image-icon/image-icon.php:790
+#: modules/image-icon/image-icon.php:837 modules/image-icon/image-icon.php:854
+#: modules/image-separator/image-separator.php:543
+#: modules/image-separator/image-separator.php:557
+#: modules/info-list/info-list.php:279 modules/info-table/info-table.php:167
+#: modules/info-table/info-table.php:182 modules/info-table/info-table.php:234
+#: modules/info-table/info-table.php:249 modules/info-table/info-table.php:635
+#: modules/info-table/info-table.php:652 modules/info-table/info-table.php:697
+#: modules/info-table/info-table.php:714 modules/slide-box/slide-box.php:325
+#: modules/slide-box/slide-box.php:410 modules/slide-box/slide-box.php:425
+#: modules/slide-box/slide-box.php:613 modules/slide-box/slide-box.php:628
+#: modules/slide-box/slide-box.php:682 modules/slide-box/slide-box.php:719
+#: modules/slide-box/slide-box.php:747 modules/slide-box/slide-box.php:787
+#: modules/uabb-button/uabb-button.php:263
+#: modules/uabb-button/uabb-button.php:280
 #: objects/fl-nested-form-button.php:177 objects/fl-nested-form-button.php:194
-#: modules/flip-box/flip-box.php:198 modules/flip-box/flip-box.php:330
-#: modules/flip-box/flip-box.php:489 modules/image-icon/image-icon.php:769
-#: modules/image-icon/image-icon.php:786 modules/image-icon/image-icon.php:833
-#: modules/image-icon/image-icon.php:850
-#: modules/image-separator/image-separator.php:540
-#: modules/image-separator/image-separator.php:554
-#: modules/info-list/info-list.php:259 modules/info-table/info-table.php:160
-#: modules/info-table/info-table.php:175 modules/info-table/info-table.php:227
-#: modules/info-table/info-table.php:242 modules/info-table/info-table.php:627
-#: modules/info-table/info-table.php:644 modules/info-table/info-table.php:689
-#: modules/info-table/info-table.php:706 modules/slide-box/slide-box.php:320
-#: modules/slide-box/slide-box.php:405 modules/slide-box/slide-box.php:420
-#: modules/slide-box/slide-box.php:601 modules/slide-box/slide-box.php:616
-#: modules/slide-box/slide-box.php:664 modules/slide-box/slide-box.php:701
-#: modules/slide-box/slide-box.php:729 modules/slide-box/slide-box.php:769
-#: modules/uabb-button/uabb-button.php:259
-#: modules/uabb-button/uabb-button.php:276
 msgid "Opacity"
 msgstr ""
 
 #: classes/uabb-global-settings-form.php:67
-#: objects/fl-nested-form-button.php:185 modules/image-icon/image-icon.php:777
-#: modules/image-icon/image-icon.php:841
-#: modules/image-separator/image-separator.php:548
-#: modules/info-table/info-table.php:236 modules/info-table/info-table.php:635
-#: modules/info-table/info-table.php:697
-#: modules/uabb-button/uabb-button.php:267
+#: modules/image-icon/image-icon.php:781 modules/image-icon/image-icon.php:845
+#: modules/image-separator/image-separator.php:551
+#: modules/info-table/info-table.php:243 modules/info-table/info-table.php:643
+#: modules/info-table/info-table.php:705
+#: modules/uabb-button/uabb-button.php:271
+#: objects/fl-nested-form-button.php:185
 msgid "Background Hover Color"
 msgstr ""
 
 #: classes/uabb-global-settings-form.php:84
-#: objects/fl-nested-form-button.php:156 modules/info-table/info-table.php:206
-#: modules/uabb-button/uabb-button.php:238
+#: modules/info-table/info-table.php:213
+#: modules/uabb-button/uabb-button.php:242
+#: modules/uabb-heading/uabb-heading.php:443
+#: modules/uabb-heading/uabb-heading.php:639
+#: objects/fl-nested-form-button.php:156
 msgid "Text Color"
 msgstr ""
 
 #: classes/uabb-global-settings-form.php:90
-#: objects/fl-nested-form-button.php:162 modules/info-table/info-table.php:212
-#: modules/uabb-button/uabb-button.php:244
+#: modules/info-table/info-table.php:219
+#: modules/uabb-button/uabb-button.php:248
+#: objects/fl-nested-form-button.php:162
 msgid "Text Hover Color"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:99
-#: objects/fl-nested-form-button.php:319 modules/flip-box/flip-box.php:714
-#: modules/flip-box/flip-box.php:769 modules/flip-box/flip-box.php:840
-#: modules/flip-box/flip-box.php:895 modules/info-list/info-list.php:400
-#: modules/info-list/info-list.php:461 modules/info-table/info-table.php:766
-#: modules/info-table/info-table.php:823 modules/info-table/info-table.php:864
-#: modules/info-table/info-table.php:905 modules/ribbon/ribbon.php:237
-#: modules/slide-box/slide-box.php:873 modules/slide-box/slide-box.php:933
-#: modules/slide-box/slide-box.php:1008 modules/slide-box/slide-box.php:1066
-#: modules/slide-box/slide-box.php:1125 modules/uabb-button/uabb-button.php:402
+#: classes/uabb-global-settings-form.php:99 modules/flip-box/flip-box.php:738
+#: modules/flip-box/flip-box.php:811 modules/flip-box/flip-box.php:900
+#: modules/flip-box/flip-box.php:973 modules/info-list/info-list.php:420
+#: modules/info-list/info-list.php:499 modules/info-table/info-table.php:774
+#: modules/info-table/info-table.php:849 modules/info-table/info-table.php:908
+#: modules/info-table/info-table.php:967 modules/ribbon/ribbon.php:255
+#: modules/slide-box/slide-box.php:891 modules/slide-box/slide-box.php:969
+#: modules/slide-box/slide-box.php:1062 modules/slide-box/slide-box.php:1138
+#: modules/slide-box/slide-box.php:1215 modules/uabb-button/uabb-button.php:406
+#: modules/uabb-heading/uabb-heading.php:407
+#: modules/uabb-heading/uabb-heading.php:497
+#: modules/uabb-heading/uabb-heading.php:603
+#: objects/fl-nested-form-button.php:319
 msgid "Font Size"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:107
-#: objects/fl-nested-form-button.php:328 modules/flip-box/flip-box.php:723
-#: modules/flip-box/flip-box.php:778 modules/flip-box/flip-box.php:849
-#: modules/flip-box/flip-box.php:904 modules/info-list/info-list.php:409
-#: modules/info-list/info-list.php:470 modules/info-table/info-table.php:775
-#: modules/info-table/info-table.php:832 modules/info-table/info-table.php:873
-#: modules/info-table/info-table.php:914 modules/ribbon/ribbon.php:246
-#: modules/slide-box/slide-box.php:882 modules/slide-box/slide-box.php:942
-#: modules/slide-box/slide-box.php:1017 modules/slide-box/slide-box.php:1075
-#: modules/slide-box/slide-box.php:1134 modules/uabb-button/uabb-button.php:411
+#: classes/uabb-global-settings-form.php:107 modules/flip-box/flip-box.php:756
+#: modules/flip-box/flip-box.php:829 modules/flip-box/flip-box.php:918
+#: modules/flip-box/flip-box.php:991 modules/info-list/info-list.php:438
+#: modules/info-list/info-list.php:517 modules/info-table/info-table.php:792
+#: modules/info-table/info-table.php:867 modules/info-table/info-table.php:926
+#: modules/info-table/info-table.php:979 modules/ribbon/ribbon.php:273
+#: modules/slide-box/slide-box.php:909 modules/slide-box/slide-box.php:987
+#: modules/slide-box/slide-box.php:1080 modules/slide-box/slide-box.php:1156
+#: modules/slide-box/slide-box.php:1233 modules/uabb-button/uabb-button.php:424
+#: modules/uabb-heading/uabb-heading.php:425
+#: modules/uabb-heading/uabb-heading.php:515
+#: modules/uabb-heading/uabb-heading.php:621
+#: objects/fl-nested-form-button.php:331
 msgid "Line Height"
 msgstr ""
 
@@ -355,12 +424,18 @@ msgstr ""
 msgid "Text Transform"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:126
+#: classes/uabb-global-settings-form.php:126 modules/flip-box/flip-box.php:146
+#: modules/flip-box/flip-box.php:363 modules/flip-box/flip-box.php:522
+#: modules/image-icon/image-icon.php:552 modules/image-icon/image-icon.php:674
+#: modules/image-separator/image-separator.php:469
+#: modules/info-list/info-list.php:308 modules/info-list/info-list.php:620
+#: modules/info-table/info-table.php:194 modules/info-table/info-table.php:298
+#: modules/info-table/info-table.php:450 modules/info-table/info-table.php:551
+#: modules/ribbon/ribbon.php:83 modules/uabb-button/uabb-button.php:178
+#: modules/uabb-button/uabb-button.php:209
+#: modules/uabb-heading/uabb-heading.php:167
+#: modules/uabb-heading/uabb-heading.php:309
 #: objects/fl-nested-form-button.php:92 objects/fl-nested-form-button.php:123
-#: modules/flip-box/flip-box.php:342 modules/flip-box/flip-box.php:501
-#: modules/info-list/info-list.php:288 modules/info-table/info-table.php:187
-#: modules/ribbon/ribbon.php:65 modules/uabb-button/uabb-button.php:174
-#: modules/uabb-button/uabb-button.php:205
 msgid "None"
 msgstr ""
 
@@ -376,8 +451,8 @@ msgstr ""
 msgid "Lowercase"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:130 modules/flip-box/flip-box.php:317
-#: modules/flip-box/flip-box.php:476
+#: classes/uabb-global-settings-form.php:130 modules/flip-box/flip-box.php:338
+#: modules/flip-box/flip-box.php:497
 msgid "Initial"
 msgstr ""
 
@@ -385,11 +460,11 @@ msgstr ""
 msgid "Inherit"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:136 modules/flip-box/flip-box.php:158
-#: modules/image-icon/image-icon.php:591 modules/image-icon/image-icon.php:712
-#: modules/image-separator/image-separator.php:508
-#: modules/info-table/info-table.php:250 modules/info-table/info-table.php:476
-#: modules/info-table/info-table.php:577
+#: classes/uabb-global-settings-form.php:136 modules/flip-box/flip-box.php:177
+#: modules/image-icon/image-icon.php:595 modules/image-icon/image-icon.php:716
+#: modules/image-separator/image-separator.php:511
+#: modules/info-table/info-table.php:257 modules/info-table/info-table.php:484
+#: modules/info-table/info-table.php:585
 msgid "Border Radius"
 msgstr ""
 
@@ -399,6 +474,60 @@ msgstr ""
 
 #: classes/uabb-global-settings-form.php:152
 msgid "Horizontal Padding"
+msgstr ""
+
+#: classes/wpml/class-wpml-uabb-infolist.php:15
+msgid "Info List : Title"
+msgstr ""
+
+#: classes/wpml/class-wpml-uabb-infolist.php:18
+msgid "Info List : Link"
+msgstr ""
+
+#: classes/wpml/class-wpml-uabb-infolist.php:21
+msgid "Info List : Description"
+msgstr ""
+
+#: fields/uabb-gradient/ui-field-uabb-gradient.php:14
+msgid "Left to Right"
+msgstr ""
+
+#: fields/uabb-gradient/ui-field-uabb-gradient.php:15
+msgid "Right to Left"
+msgstr ""
+
+#: fields/uabb-gradient/ui-field-uabb-gradient.php:16
+msgid "Top to Bottom"
+msgstr ""
+
+#: fields/uabb-gradient/ui-field-uabb-gradient.php:17
+msgid "Bottom to Top"
+msgstr ""
+
+#: fields/uabb-gradient/ui-field-uabb-gradient.php:18
+#: modules/ribbon/ribbon.php:100 modules/uabb-button/uabb-button.php:309
+#: objects/fl-nested-form-button.php:222
+msgid "Custom"
+msgstr ""
+
+#: fields/uabb-gradient/ui-field-uabb-gradient.php:25
+msgid "Color 1"
+msgstr ""
+
+#: fields/uabb-gradient/ui-field-uabb-gradient.php:39
+msgid "Color 2"
+msgstr ""
+
+#: fields/uabb-gradient/ui-field-uabb-gradient.php:53
+msgid "Direction"
+msgstr ""
+
+#: fields/uabb-gradient/ui-field-uabb-gradient.php:69
+msgid "Angle"
+msgstr ""
+
+#: fields/uabb-gradient/ui-field-uabb-gradient.php:71
+msgid "deg"
 msgstr ""
 
 #: includes/admin-settings-general.php:23
@@ -431,7 +560,8 @@ msgstr ""
 
 #: includes/admin-settings-general.php:40
 msgid ""
-"Enable this setting to see live preview of a page without leaving the editor."
+"Enable this setting to see live preview of a page without leaving the "
+"editor."
 msgstr ""
 
 #: includes/admin-settings-general.php:48
@@ -443,7 +573,6 @@ msgid "Reload Icons"
 msgstr ""
 
 #: includes/admin-settings-icons.php:10
-#, php-format
 msgid ""
 "Clicking the button below will reinstall %s icons on your website. If you "
 "are facing issues to load %s icons then you are at right place to "
@@ -513,7 +642,6 @@ msgid "WordPress Multisite"
 msgstr ""
 
 #: includes/admin-settings-premium.php:17
-#, php-format
 msgid ""
 "Ultimate Addons is 100% compatible and well tested on WordPress multisite "
 "network installations ."
@@ -571,19 +699,19 @@ msgstr ""
 
 #: includes/admin-settings-welcome.php:7
 msgid ""
-"Thank you for choosing the Ultimate Addons for Beaver Builder and welcome on "
-"board! We promise to take you through an ultimate journey of website "
+"Thank you for choosing the Ultimate Addons for Beaver Builder and welcome "
+"on board! We promise to take you through an ultimate journey of website "
 "building. You’ll find a few settings in the column on the left. Need some "
 "more time-saving and advanced modules to play with? You can avail all of "
 "them with 200+ page & section templates and dedicated support from our team."
 msgstr ""
 
 #: includes/admin-settings-welcome.php:13
-#, php-format
 msgid ""
 "For more time-saving features and access to our expert support team, <a "
-"href=\"%s\" target=\"_blank\">upgrade now!</a> With regular updates, helpful "
-"tutorials, we promise to make website building an ultimate journey for you!"
+"href=\"%s\" target=\"_blank\">upgrade now!</a> With regular updates, "
+"helpful tutorials, we promise to make website building an ultimate journey "
+"for you!"
 msgstr ""
 
 #: includes/admin-settings-welcome.php:18
@@ -596,11 +724,10 @@ msgid ""
 msgstr ""
 
 #: includes/admin-settings-welcome.php:22
-#, php-format
 msgid ""
 "With <a href=\"%s\" target=\"_blank\">regular updates</a>, <a href=\"%s\" "
-"target=\"_blank\">helpful tutorials</a>, we promise to make website building "
-"an ultimate journey for you!"
+"target=\"_blank\">helpful tutorials</a>, we promise to make website "
+"building an ultimate journey for you!"
 msgstr ""
 
 #: includes/admin-settings-welcome.php:31
@@ -608,7 +735,6 @@ msgid "Join our Community!"
 msgstr ""
 
 #: includes/admin-settings-welcome.php:32
-#, php-format
 msgid ""
 "Want to connect with us to know more? Or have some suggestions we can take "
 "forward? <a href=\"%s\" target=\"_blank\">Join our Facebook community</a>, "
@@ -617,7 +743,6 @@ msgid ""
 msgstr ""
 
 #: includes/ui-panel-presets.php:77
-#, php-format
 msgid "Note - You can enable, disable and manage %s presets here."
 msgstr ""
 
@@ -633,911 +758,673 @@ msgid "Search Section..."
 msgstr ""
 
 #: includes/ui-panel-sections.php:77
-#, php-format
 msgid "Note - You can enable, disable and manage %s sections here."
-msgstr ""
-
-#: objects/fl-nested-form-button.php:18 modules/slide-box/slide-box.php:488
-#: modules/slide-box/slide-box.php:504 modules/slide-box/slide-box.php:528
-#: modules/uabb-button/uabb-button.php:105
-msgid "Text"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:19 modules/uabb-button/uabb-button.php:106
-msgid "Click Here"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:29 objects/fl-nested-form-button.php:33
-#: modules/image-separator/image-separator.php:672
-#: modules/info-list/info-list.php:516 modules/slide-box/slide-box.php:508
-#: modules/uabb-button/uabb-button.php:116
-#: modules/uabb-button/uabb-button.php:120
-msgid "Link"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:38
-#: modules/image-separator/image-separator.php:679
-#: modules/info-list/info-list.php:532 modules/info-table/info-table.php:82
-#: modules/slide-box/slide-box.php:516 modules/uabb-button/uabb-button.php:129
-msgid "Link Target"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:41
-#: modules/image-separator/image-separator.php:682
-#: modules/info-list/info-list.php:535 modules/info-table/info-table.php:86
-#: modules/slide-box/slide-box.php:519 modules/uabb-button/uabb-button.php:132
-msgid "Same Window"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:42
-#: modules/image-separator/image-separator.php:683
-#: modules/info-list/info-list.php:536 modules/info-table/info-table.php:87
-#: modules/slide-box/slide-box.php:520 modules/uabb-button/uabb-button.php:133
-msgid "New Window"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:61 modules/uabb-button/uabb-button.php:155
-msgid "Flat"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:62 modules/flip-box/flip-box.php:216
-#: modules/image-icon/image-icon.php:810 modules/info-table/info-table.php:668
-#: modules/ribbon/ribbon.php:152 modules/ribbon/ribbon.php:171
-#: modules/uabb-button/uabb-button.php:156
-msgid "Gradient"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:63 modules/uabb-button/uabb-button.php:157
-msgid "Transparent"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:64 modules/uabb-button/uabb-button.php:158
-msgid "3D"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:81 modules/flip-box/flip-box.php:376
-#: modules/flip-box/flip-box.php:536 modules/uabb-button/uabb-button.php:163
-msgid "Border Size"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:89 objects/fl-nested-form-button.php:105
-#: objects/fl-nested-form-button.php:120
-#: modules/uabb-button/uabb-button.php:171
-#: modules/uabb-button/uabb-button.php:187
-#: modules/uabb-button/uabb-button.php:202
-msgid "Hover Styles"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:93 modules/uabb-button/uabb-button.php:175
-msgid "Fade Background"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:94 modules/uabb-button/uabb-button.php:176
-msgid "Fill Background From Top"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:95 modules/uabb-button/uabb-button.php:177
-msgid "Fill Background From Bottom"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:96 modules/uabb-button/uabb-button.php:178
-msgid "Fill Background From Left"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:97 modules/uabb-button/uabb-button.php:179
-msgid "Fill Background From Right"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:98 modules/uabb-button/uabb-button.php:180
-msgid "Fill Background Vertical"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:99 modules/uabb-button/uabb-button.php:181
-msgid "Fill Background Diagonal"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:100
-#: modules/uabb-button/uabb-button.php:182
-msgid "Fill Background Horizontal"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:108
-#: modules/uabb-button/uabb-button.php:190
-msgid "Move Down"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:109
-#: modules/uabb-button/uabb-button.php:191
-msgid "Move Up"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:110
-#: modules/uabb-button/uabb-button.php:192
-msgid "Move Left"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:111
-#: modules/uabb-button/uabb-button.php:193
-msgid "Move Right"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:112
-#: modules/uabb-button/uabb-button.php:194
-msgid "Animate Top"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:113
-#: modules/uabb-button/uabb-button.php:195
-msgid "Animate Bottom"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:124
-#: modules/uabb-button/uabb-button.php:206
-msgid "Appear Icon From Right"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:125
-#: modules/uabb-button/uabb-button.php:207
-msgid "Appear Icon From Left"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:126
-#: modules/uabb-button/uabb-button.php:208
-msgid "Appear Icon From Top"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:127
-#: modules/uabb-button/uabb-button.php:209
-msgid "Appear Icon From Bottom"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:133
-#: modules/uabb-button/uabb-button.php:215
-msgid "Icons"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:137 modules/flip-box/flip-box.php:50
-#: modules/flip-box/flip-box.php:60 modules/image-icon/image-icon.php:393
-#: modules/image-icon/image-icon.php:414 modules/info-list/info-list.php:526
-#: modules/info-list/info-list.php:562 modules/info-list/info-list.php:578
-#: modules/info-list/info-list.php:582 modules/info-table/info-table.php:292
-#: modules/info-table/info-table.php:312 modules/slide-box/slide-box.php:205
-#: modules/slide-box/slide-box.php:220 modules/slide-box/slide-box.php:224
-#: modules/slide-box/slide-box.php:711 modules/uabb-button/uabb-button.php:219
-msgid "Icon"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:142
-#: modules/uabb-button/uabb-button.php:224
-msgid "Icon Position"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:145
-#: modules/uabb-button/uabb-button.php:227
-msgid "Before Text"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:146
-#: modules/uabb-button/uabb-button.php:228
-msgid "After Text"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:152 modules/flip-box/flip-box.php:167
-#: modules/image-icon/image-icon.php:728 modules/image-icon/image-icon.php:822
-#: modules/image-separator/image-separator.php:524
-#: modules/info-table/info-table.php:586 modules/info-table/info-table.php:678
-#: modules/uabb-button/uabb-button.php:234
-msgid "Colors"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:202
-#: modules/uabb-button/uabb-button.php:284
-msgid "Apply Hover Color To"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:205
-#: modules/uabb-button/uabb-button.php:287
-msgid "Border"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:206
-#: modules/uabb-button/uabb-button.php:288
-msgid "Background"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:213
-#: modules/image-separator/image-separator.php:586
-#: modules/uabb-button/uabb-button.php:296
-msgid "Structure"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:217
-#: modules/uabb-button/uabb-button.php:300
-#: modules/uabb-separator/uabb-separator.php:58
-msgid "Width"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:220
-#: modules/uabb-button/uabb-button.php:303
-msgctxt "Width."
-msgid "Auto"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:221
-#: modules/uabb-button/uabb-button.php:304
-msgid "Full Width"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:222 modules/ribbon/ribbon.php:82
-#: modules/uabb-button/uabb-button.php:305
-msgid "Custom"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:238 modules/ribbon/ribbon.php:95
-#: modules/uabb-button/uabb-button.php:321
-msgid "Custom Width"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:246
-#: modules/uabb-button/uabb-button.php:329
-msgid "Custom Height"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:254
-#: modules/uabb-button/uabb-button.php:337
-msgid "Padding Top/Bottom"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:262
-#: modules/uabb-button/uabb-button.php:345
-msgid "Padding Left/Right"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:270
-#: modules/uabb-button/uabb-button.php:353
-msgid "Round Corners"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:277 modules/image-icon/image-icon.php:428
-#: modules/image-icon/image-icon.php:479 modules/info-table/info-table.php:374
-#: modules/ribbon/ribbon.php:102 modules/uabb-button/uabb-button.php:360
-#: modules/uabb-separator/uabb-separator.php:66
-msgid "Alignment"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:280 objects/fl-nested-form-button.php:290
-#: modules/image-icon/image-icon.php:432 modules/image-icon/image-icon.php:483
-#: modules/image-separator/image-separator.php:618
-#: modules/info-list/info-list.php:198 modules/info-table/info-table.php:377
-#: modules/ribbon/ribbon.php:106 modules/slide-box/slide-box.php:361
-#: modules/slide-box/slide-box.php:372 modules/slide-box/slide-box.php:640
-#: modules/slide-box/slide-box.php:789 modules/slide-box/slide-box.php:829
-#: modules/uabb-button/uabb-button.php:363
-#: modules/uabb-button/uabb-button.php:373
-#: modules/uabb-separator/uabb-separator.php:69
-msgid "Center"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:281 objects/fl-nested-form-button.php:291
-#: modules/image-icon/image-icon.php:431 modules/image-icon/image-icon.php:482
-#: modules/image-separator/image-separator.php:617
-#: modules/info-table/info-table.php:376 modules/ribbon/ribbon.php:107
-#: modules/slide-box/slide-box.php:362 modules/slide-box/slide-box.php:641
-#: modules/slide-box/slide-box.php:790 modules/uabb-button/uabb-button.php:364
-#: modules/uabb-button/uabb-button.php:374
-#: modules/uabb-separator/uabb-separator.php:70
-msgid "Left"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:282 objects/fl-nested-form-button.php:292
-#: modules/image-icon/image-icon.php:433 modules/image-icon/image-icon.php:484
-#: modules/image-separator/image-separator.php:619
-#: modules/info-table/info-table.php:378 modules/ribbon/ribbon.php:108
-#: modules/slide-box/slide-box.php:363 modules/slide-box/slide-box.php:642
-#: modules/slide-box/slide-box.php:791 modules/uabb-button/uabb-button.php:365
-#: modules/uabb-button/uabb-button.php:375
-#: modules/uabb-separator/uabb-separator.php:71
-msgid "Right"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:287
-#: modules/uabb-button/uabb-button.php:370
-msgid "Mobile Alignment"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:300 modules/flip-box/flip-box.php:679
-#: modules/info-list/info-list.php:365 modules/info-table/info-table.php:731
-#: modules/ribbon/ribbon.php:202 modules/slide-box/slide-box.php:838
-#: modules/uabb-button/uabb-button.php:383
-msgid "Typography"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:303 modules/flip-box/flip-box.php:579
-#: modules/slide-box/slide-box.php:538 modules/uabb-button/uabb-button.php:386
-msgid "Button Settings"
-msgstr ""
-
-#: objects/fl-nested-form-button.php:307 modules/flip-box/flip-box.php:702
-#: modules/flip-box/flip-box.php:757 modules/flip-box/flip-box.php:828
-#: modules/flip-box/flip-box.php:883 modules/info-list/info-list.php:388
-#: modules/info-list/info-list.php:448 modules/info-table/info-table.php:754
-#: modules/info-table/info-table.php:811 modules/info-table/info-table.php:852
-#: modules/info-table/info-table.php:893 modules/ribbon/ribbon.php:225
-#: modules/slide-box/slide-box.php:861 modules/slide-box/slide-box.php:921
-#: modules/slide-box/slide-box.php:996 modules/slide-box/slide-box.php:1054
-#: modules/slide-box/slide-box.php:1113 modules/uabb-button/uabb-button.php:390
-msgid "Font Family"
-msgstr ""
-
-#: fields/uabb-simplify/uabb-simplify.php:79
-msgid "Responsive Options"
-msgstr ""
-
-#: fields/uabb-spacing/uabb-spacing.php:196
-msgid "Expand/Collapse Options"
 msgstr ""
 
 #: modules/flip-box/flip-box.php:15 modules/flip-box/flip-box.php:16
 msgid "Flip Box"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:53 modules/image-icon/image-icon.php:25
-#: modules/image-icon/image-icon.php:386 modules/info-table/info-table.php:281
-#: modules/info-table/info-table.php:284 modules/slide-box/slide-box.php:196
+#: modules/flip-box/flip-box.php:69 modules/flip-box/flip-box.php:79
+#: modules/image-icon/image-icon.php:395 modules/image-icon/image-icon.php:416
+#: modules/info-list/info-list.php:584 modules/info-list/info-list.php:621
+#: modules/info-list/info-list.php:637 modules/info-list/info-list.php:641
+#: modules/info-table/info-table.php:299 modules/info-table/info-table.php:319
+#: modules/slide-box/slide-box.php:209 modules/slide-box/slide-box.php:224
+#: modules/slide-box/slide-box.php:228 modules/slide-box/slide-box.php:729
+#: modules/uabb-button/uabb-button.php:223
+#: modules/uabb-heading/uabb-heading.php:209
+#: objects/fl-nested-form-button.php:137
+msgid "Icon"
+msgstr ""
+
+#: modules/flip-box/flip-box.php:72 modules/image-icon/image-icon.php:25
+#: modules/image-icon/image-icon.php:388 modules/info-table/info-table.php:288
+#: modules/info-table/info-table.php:291 modules/slide-box/slide-box.php:200
 msgid "Image / Icon"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:56 modules/image-icon/image-icon.php:410
-#: modules/info-table/info-table.php:308
+#: modules/flip-box/flip-box.php:75 modules/image-icon/image-icon.php:412
+#: modules/info-table/info-table.php:315
+#: modules/uabb-heading/uabb-heading.php:205
 msgid "Icon Basics"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:66 modules/image-icon/image-icon.php:420
-#: modules/image-icon/image-icon.php:471 modules/info-table/info-table.php:318
-#: modules/info-table/info-table.php:363 modules/slide-box/slide-box.php:245
-#: modules/slide-box/slide-box.php:297
+#: modules/flip-box/flip-box.php:85 modules/image-icon/image-icon.php:422
+#: modules/image-icon/image-icon.php:475 modules/info-table/info-table.php:325
+#: modules/info-table/info-table.php:371 modules/slide-box/slide-box.php:249
+#: modules/slide-box/slide-box.php:302
+#: modules/uabb-heading/uabb-heading.php:214
+#: modules/uabb-heading/uabb-heading.php:272
 msgid "Size"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:80 modules/image-icon/image-icon.php:497
-#: modules/info-table/info-table.php:391
+#: modules/flip-box/flip-box.php:99 modules/image-icon/image-icon.php:501
+#: modules/info-table/info-table.php:399
 msgid "Icon Background Style"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:83 modules/image-icon/image-icon.php:500
-#: modules/image-icon/image-icon.php:618
-#: modules/image-separator/image-separator.php:421
-#: modules/info-list/info-list.php:234 modules/info-table/info-table.php:394
-#: modules/info-table/info-table.php:494 modules/slide-box/slide-box.php:267
+#: modules/flip-box/flip-box.php:102 modules/image-icon/image-icon.php:504
+#: modules/image-icon/image-icon.php:622
+#: modules/image-separator/image-separator.php:424
+#: modules/info-list/info-list.php:254 modules/info-table/info-table.php:402
+#: modules/info-table/info-table.php:502 modules/slide-box/slide-box.php:272
 msgid "Simple"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:84 modules/image-icon/image-icon.php:501
-#: modules/info-table/info-table.php:395
+#: modules/flip-box/flip-box.php:103 modules/image-icon/image-icon.php:505
+#: modules/info-table/info-table.php:403
 msgid "Circle Background"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:85 modules/image-icon/image-icon.php:502
-#: modules/info-table/info-table.php:396
+#: modules/flip-box/flip-box.php:104 modules/image-icon/image-icon.php:506
+#: modules/info-table/info-table.php:404
 msgid "Square Background"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:86 modules/image-icon/image-icon.php:503
-#: modules/image-icon/image-icon.php:621
-#: modules/image-separator/image-separator.php:424
-#: modules/info-list/info-list.php:237 modules/info-table/info-table.php:397
-#: modules/info-table/info-table.php:497 modules/slide-box/slide-box.php:270
+#: modules/flip-box/flip-box.php:105 modules/image-icon/image-icon.php:507
+#: modules/image-icon/image-icon.php:625
+#: modules/image-separator/image-separator.php:427
+#: modules/info-list/info-list.php:257 modules/info-table/info-table.php:405
+#: modules/info-table/info-table.php:505 modules/slide-box/slide-box.php:275
 msgid "Design your own"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:112 modules/image-icon/image-icon.php:533
-#: modules/image-icon/image-icon.php:649
-#: modules/image-separator/image-separator.php:446
-#: modules/info-table/info-table.php:427 modules/info-table/info-table.php:526
-#: modules/slide-box/slide-box.php:305
+#: modules/flip-box/flip-box.php:131 modules/image-icon/image-icon.php:537
+#: modules/image-icon/image-icon.php:653
+#: modules/image-separator/image-separator.php:449
+#: modules/info-table/info-table.php:435 modules/info-table/info-table.php:534
+#: modules/slide-box/slide-box.php:310
 msgid "Background Size"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:123 modules/image-icon/image-icon.php:544
-#: modules/image-icon/image-icon.php:666
-#: modules/image-separator/image-separator.php:462
-#: modules/info-list/info-list.php:284 modules/info-table/info-table.php:438
-#: modules/info-table/info-table.php:539
+#: modules/flip-box/flip-box.php:142 modules/image-icon/image-icon.php:548
+#: modules/image-icon/image-icon.php:670
+#: modules/image-separator/image-separator.php:465
+#: modules/info-list/info-list.php:304 modules/info-table/info-table.php:446
+#: modules/info-table/info-table.php:547
 msgid "Border Style"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:125 modules/flip-box/flip-box.php:340
-#: modules/flip-box/flip-box.php:499 modules/image-icon/image-icon.php:546
-#: modules/image-icon/image-icon.php:668
-#: modules/image-separator/image-separator.php:464
-#: modules/info-list/info-list.php:286 modules/info-table/info-table.php:440
-#: modules/info-table/info-table.php:541
+#: modules/flip-box/flip-box.php:144 modules/flip-box/flip-box.php:361
+#: modules/flip-box/flip-box.php:520 modules/image-icon/image-icon.php:550
+#: modules/image-icon/image-icon.php:672
+#: modules/image-separator/image-separator.php:467
+#: modules/info-list/info-list.php:306 modules/info-table/info-table.php:448
+#: modules/info-table/info-table.php:549
 msgid ""
 "The type of border to use. Double borders must have a width of at least 3px "
 "to render properly."
 msgstr ""
 
-#: modules/flip-box/flip-box.php:150 modules/image-icon/image-icon.php:576
-#: modules/image-icon/image-icon.php:698
-#: modules/image-separator/image-separator.php:494
-#: modules/info-list/info-list.php:297 modules/info-table/info-table.php:465
-#: modules/info-table/info-table.php:566
+#: modules/flip-box/flip-box.php:147 modules/flip-box/flip-box.php:364
+#: modules/flip-box/flip-box.php:523 modules/image-icon/image-icon.php:553
+#: modules/image-icon/image-icon.php:675
+#: modules/image-separator/image-separator.php:470
+#: modules/info-list/info-list.php:309 modules/info-list/info-list.php:374
+#: modules/info-table/info-table.php:451 modules/info-table/info-table.php:552
+#: modules/uabb-heading/uabb-heading.php:324
+#: modules/uabb-separator/uabb-separator.php:88
+msgid "Solid"
+msgstr ""
+
+#: modules/flip-box/flip-box.php:148 modules/flip-box/flip-box.php:365
+#: modules/flip-box/flip-box.php:524 modules/image-icon/image-icon.php:554
+#: modules/image-icon/image-icon.php:676
+#: modules/image-separator/image-separator.php:471
+#: modules/info-list/info-list.php:310 modules/info-list/info-list.php:375
+#: modules/info-table/info-table.php:452 modules/info-table/info-table.php:553
+#: modules/uabb-heading/uabb-heading.php:325
+#: modules/uabb-separator/uabb-separator.php:89
+msgid "Dashed"
+msgstr ""
+
+#: modules/flip-box/flip-box.php:149 modules/flip-box/flip-box.php:366
+#: modules/flip-box/flip-box.php:525 modules/image-icon/image-icon.php:555
+#: modules/image-icon/image-icon.php:677
+#: modules/image-separator/image-separator.php:472
+#: modules/info-list/info-list.php:311 modules/info-list/info-list.php:376
+#: modules/info-table/info-table.php:453 modules/info-table/info-table.php:554
+#: modules/uabb-heading/uabb-heading.php:326
+#: modules/uabb-separator/uabb-separator.php:90
+msgid "Dotted"
+msgstr ""
+
+#: modules/flip-box/flip-box.php:150 modules/flip-box/flip-box.php:367
+#: modules/flip-box/flip-box.php:526 modules/image-icon/image-icon.php:556
+#: modules/image-icon/image-icon.php:678
+#: modules/image-separator/image-separator.php:473
+#: modules/info-list/info-list.php:312 modules/info-table/info-table.php:454
+#: modules/info-table/info-table.php:555
+#: modules/uabb-heading/uabb-heading.php:327
+#: modules/uabb-separator/uabb-separator.php:91
+msgid "Double"
+msgstr ""
+
+#: modules/flip-box/flip-box.php:169 modules/image-icon/image-icon.php:580
+#: modules/image-icon/image-icon.php:702
+#: modules/image-separator/image-separator.php:497
+#: modules/info-list/info-list.php:317 modules/info-table/info-table.php:473
+#: modules/info-table/info-table.php:574
 msgid "Border Width"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:173 modules/image-icon/image-icon.php:734
-#: modules/info-table/info-table.php:592
+#: modules/flip-box/flip-box.php:186 modules/image-icon/image-icon.php:732
+#: modules/image-icon/image-icon.php:826
+#: modules/image-separator/image-separator.php:527
+#: modules/info-table/info-table.php:594 modules/info-table/info-table.php:686
+#: modules/uabb-button/uabb-button.php:238
+#: objects/fl-nested-form-button.php:152
+msgid "Colors"
+msgstr ""
+
+#: modules/flip-box/flip-box.php:192 modules/image-icon/image-icon.php:738
+#: modules/info-table/info-table.php:600
 msgid "Icon Color Presets"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:176 modules/image-icon/image-icon.php:737
-#: modules/info-table/info-table.php:595
+#: modules/flip-box/flip-box.php:195 modules/image-icon/image-icon.php:741
+#: modules/info-table/info-table.php:603
 msgid "Preset 1"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:177 modules/image-icon/image-icon.php:738
-#: modules/info-table/info-table.php:596
+#: modules/flip-box/flip-box.php:196 modules/image-icon/image-icon.php:742
+#: modules/info-table/info-table.php:604
 msgid "Preset 2"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:179 modules/image-icon/image-icon.php:741
-#: modules/info-table/info-table.php:599
+#: modules/flip-box/flip-box.php:198 modules/image-icon/image-icon.php:745
+#: modules/info-table/info-table.php:607
 msgid ""
 "Preset 1 => Icon : White, Background : Theme </br>Preset 2 => Icon : Theme, "
 "Background : #f3f3f3"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:184 modules/image-icon/image-icon.php:746
-#: modules/info-list/info-list.php:587 modules/info-table/info-table.php:604
-#: modules/ribbon/ribbon.php:181 modules/slide-box/slide-box.php:230
-#: modules/slide-box/slide-box.php:716 modules/slide-box/slide-box.php:751
-#: modules/slide-box/slide-box.php:757
+#: modules/flip-box/flip-box.php:203 modules/image-icon/image-icon.php:750
+#: modules/info-list/info-list.php:646 modules/info-table/info-table.php:612
+#: modules/ribbon/ribbon.php:199 modules/slide-box/slide-box.php:234
+#: modules/slide-box/slide-box.php:734 modules/slide-box/slide-box.php:769
+#: modules/slide-box/slide-box.php:775
+#: modules/uabb-heading/uabb-heading.php:228
 msgid "Icon Color"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:208 modules/flip-box/flip-box.php:391
-#: modules/flip-box/flip-box.php:551 modules/image-icon/image-icon.php:796
-#: modules/image-icon/image-icon.php:860
-#: modules/image-separator/image-separator.php:564
-#: modules/info-list/info-list.php:305 modules/info-table/info-table.php:654
-#: modules/info-table/info-table.php:716 modules/slide-box/slide-box.php:399
+#: modules/flip-box/flip-box.php:227 modules/flip-box/flip-box.php:412
+#: modules/flip-box/flip-box.php:572 modules/image-icon/image-icon.php:800
+#: modules/image-icon/image-icon.php:864
+#: modules/image-separator/image-separator.php:567
+#: modules/info-list/info-list.php:325 modules/info-table/info-table.php:662
+#: modules/info-table/info-table.php:724 modules/slide-box/slide-box.php:404
 msgid "Border Color"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:219 modules/flip-box/flip-box.php:565
-#: modules/flip-box/flip-box.php:651 modules/flip-box/flip-box.php:661
-#: modules/image-icon/image-icon.php:813
-#: modules/image-separator/image-separator.php:662
-#: modules/image-separator/image-separator.php:705
-#: modules/info-list/info-list.php:317 modules/info-list/info-list.php:333
-#: modules/info-table/info-table.php:671 modules/ribbon/ribbon.php:127
-#: modules/ribbon/ribbon.php:137 modules/slide-box/slide-box.php:381
-#: modules/slide-box/slide-box.php:682 modules/slide-box/slide-box.php:804
+#: modules/flip-box/flip-box.php:235 modules/image-icon/image-icon.php:814
+#: modules/info-table/info-table.php:676 modules/ribbon/ribbon.php:170
+#: modules/ribbon/ribbon.php:189 modules/uabb-button/uabb-button.php:160
+#: objects/fl-nested-form-button.php:62
+msgid "Gradient"
+msgstr ""
+
+#: modules/flip-box/flip-box.php:238 modules/flip-box/flip-box.php:586
+#: modules/flip-box/flip-box.php:672 modules/flip-box/flip-box.php:682
+#: modules/image-icon/image-icon.php:817
+#: modules/image-separator/image-separator.php:665
+#: modules/image-separator/image-separator.php:708
+#: modules/info-list/info-list.php:337 modules/info-list/info-list.php:353
+#: modules/info-table/info-table.php:679 modules/ribbon/ribbon.php:145
+#: modules/ribbon/ribbon.php:155 modules/slide-box/slide-box.php:386
+#: modules/slide-box/slide-box.php:700 modules/slide-box/slide-box.php:822
 msgid "No"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:220 modules/flip-box/flip-box.php:566
-#: modules/flip-box/flip-box.php:650 modules/flip-box/flip-box.php:660
-#: modules/image-icon/image-icon.php:814
-#: modules/image-separator/image-separator.php:661
-#: modules/info-list/info-list.php:316 modules/info-list/info-list.php:332
-#: modules/info-table/info-table.php:672 modules/ribbon/ribbon.php:126
-#: modules/ribbon/ribbon.php:136 modules/slide-box/slide-box.php:380
-#: modules/slide-box/slide-box.php:681 modules/slide-box/slide-box.php:805
+#: modules/flip-box/flip-box.php:239 modules/flip-box/flip-box.php:587
+#: modules/flip-box/flip-box.php:671 modules/flip-box/flip-box.php:681
+#: modules/image-icon/image-icon.php:818
+#: modules/image-separator/image-separator.php:664
+#: modules/info-list/info-list.php:336 modules/info-list/info-list.php:352
+#: modules/info-table/info-table.php:680 modules/ribbon/ribbon.php:144
+#: modules/ribbon/ribbon.php:154 modules/slide-box/slide-box.php:385
+#: modules/slide-box/slide-box.php:699 modules/slide-box/slide-box.php:823
 msgid "Yes"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:235
+#: modules/flip-box/flip-box.php:254
 msgid "Flip Box Front"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:238
+#: modules/flip-box/flip-box.php:257
 msgid "Front"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:242
+#: modules/flip-box/flip-box.php:261
 msgid "Icon Settings"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:248
+#: modules/flip-box/flip-box.php:267
 msgid "Title on Front"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:249
+#: modules/flip-box/flip-box.php:268
 msgid "Let's Flip!"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:250 modules/flip-box/flip-box.php:409
+#: modules/flip-box/flip-box.php:269 modules/flip-box/flip-box.php:430
 msgid "Perhaps, this is the most highlighted text."
 msgstr ""
 
-#: modules/flip-box/flip-box.php:257
+#: modules/flip-box/flip-box.php:277
 msgid ""
 "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
-"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+"Lorem Ipsum has been the industry's standard dummy text ever since the "
+"1500s."
 msgstr ""
 
-#: modules/flip-box/flip-box.php:262
+#: modules/flip-box/flip-box.php:283
 msgid "Front Styles"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:266 modules/flip-box/flip-box.php:425
+#: modules/flip-box/flip-box.php:287 modules/flip-box/flip-box.php:446
 msgid "Background Type"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:268 modules/flip-box/flip-box.php:427
-#: modules/flip-box/flip-box.php:658
+#: modules/flip-box/flip-box.php:289 modules/flip-box/flip-box.php:448
+#: modules/flip-box/flip-box.php:679
 msgid "If enabled, the Content would align vertically center."
 msgstr ""
 
-#: modules/flip-box/flip-box.php:270 modules/flip-box/flip-box.php:429
-#: modules/info-table/info-table.php:784 modules/info-table/info-table.php:841
-#: modules/info-table/info-table.php:882 modules/ribbon/ribbon.php:151
-#: modules/ribbon/ribbon.php:255 modules/slide-box/slide-box.php:891
-#: modules/slide-box/slide-box.php:1026 modules/slide-box/slide-box.php:1143
-#: modules/uabb-separator/uabb-separator.php:37
+#: modules/flip-box/flip-box.php:291 modules/flip-box/flip-box.php:450
+#: modules/info-table/info-table.php:810 modules/info-table/info-table.php:885
+#: modules/info-table/info-table.php:944 modules/ribbon/ribbon.php:169
+#: modules/ribbon/ribbon.php:291 modules/slide-box/slide-box.php:927
+#: modules/slide-box/slide-box.php:1098 modules/slide-box/slide-box.php:1251
+#: modules/uabb-heading/uabb-heading.php:338
+#: modules/uabb-heading/uabb-heading.php:533
+#: modules/uabb-separator/uabb-separator.php:40
 msgid "Color"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:271 modules/flip-box/flip-box.php:430
-#: modules/info-list/info-list.php:595
+#: modules/flip-box/flip-box.php:292 modules/flip-box/flip-box.php:451
+#: modules/info-list/info-list.php:654
 msgid "Image"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:284 modules/flip-box/flip-box.php:443
+#: modules/flip-box/flip-box.php:305 modules/flip-box/flip-box.php:464
 msgid "Background Image"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:289 modules/flip-box/flip-box.php:448
+#: modules/flip-box/flip-box.php:310 modules/flip-box/flip-box.php:469
 msgid "Background Image Position"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:292 modules/flip-box/flip-box.php:451
+#: modules/flip-box/flip-box.php:313 modules/flip-box/flip-box.php:472
 msgid "Left Top"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:293 modules/flip-box/flip-box.php:452
+#: modules/flip-box/flip-box.php:314 modules/flip-box/flip-box.php:473
 msgid "Left Center"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:294 modules/flip-box/flip-box.php:453
+#: modules/flip-box/flip-box.php:315 modules/flip-box/flip-box.php:474
 msgid "Left Bottom"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:295 modules/flip-box/flip-box.php:454
+#: modules/flip-box/flip-box.php:316 modules/flip-box/flip-box.php:475
 msgid "Center Top"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:296 modules/flip-box/flip-box.php:455
+#: modules/flip-box/flip-box.php:317 modules/flip-box/flip-box.php:476
 msgid "Center Center"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:297 modules/flip-box/flip-box.php:456
+#: modules/flip-box/flip-box.php:318 modules/flip-box/flip-box.php:477
 msgid "Center Bottom"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:298 modules/flip-box/flip-box.php:457
+#: modules/flip-box/flip-box.php:319 modules/flip-box/flip-box.php:478
 msgid "Right Top"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:299 modules/flip-box/flip-box.php:458
+#: modules/flip-box/flip-box.php:320 modules/flip-box/flip-box.php:479
 msgid "Right Center"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:300 modules/flip-box/flip-box.php:459
+#: modules/flip-box/flip-box.php:321 modules/flip-box/flip-box.php:480
 msgid "Right Bottom"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:305 modules/flip-box/flip-box.php:464
+#: modules/flip-box/flip-box.php:326 modules/flip-box/flip-box.php:485
 msgid "Repeat"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:314 modules/flip-box/flip-box.php:473
+#: modules/flip-box/flip-box.php:335 modules/flip-box/flip-box.php:494
 msgid "Display Sizes"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:318 modules/flip-box/flip-box.php:477
+#: modules/flip-box/flip-box.php:339 modules/flip-box/flip-box.php:498
 msgid "Cover"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:319 modules/flip-box/flip-box.php:478
+#: modules/flip-box/flip-box.php:340 modules/flip-box/flip-box.php:499
 msgid "Contain"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:338 modules/flip-box/flip-box.php:497
+#: modules/flip-box/flip-box.php:359 modules/flip-box/flip-box.php:518
 msgid "Box Border Style"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:343 modules/flip-box/flip-box.php:502
-#: modules/info-list/info-list.php:289 modules/info-list/info-list.php:354
-#: modules/uabb-separator/uabb-separator.php:85
-msgid "Solid"
-msgstr ""
-
-#: modules/flip-box/flip-box.php:344 modules/flip-box/flip-box.php:503
-#: modules/info-list/info-list.php:290 modules/info-list/info-list.php:355
-#: modules/uabb-separator/uabb-separator.php:86
-msgid "Dashed"
-msgstr ""
-
-#: modules/flip-box/flip-box.php:345 modules/flip-box/flip-box.php:504
-#: modules/info-list/info-list.php:291 modules/info-list/info-list.php:356
-#: modules/uabb-separator/uabb-separator.php:87
-msgid "Dotted"
-msgstr ""
-
-#: modules/flip-box/flip-box.php:346 modules/flip-box/flip-box.php:505
-#: modules/info-list/info-list.php:292
-#: modules/uabb-separator/uabb-separator.php:88
-msgid "Double"
-msgstr ""
-
-#: modules/flip-box/flip-box.php:347 modules/flip-box/flip-box.php:506
+#: modules/flip-box/flip-box.php:368 modules/flip-box/flip-box.php:527
 msgid "Inset"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:348 modules/flip-box/flip-box.php:507
+#: modules/flip-box/flip-box.php:369 modules/flip-box/flip-box.php:528
 msgid "Outset"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:381 modules/flip-box/flip-box.php:541
+#: modules/flip-box/flip-box.php:397 modules/flip-box/flip-box.php:557
+#: modules/uabb-button/uabb-button.php:167 objects/fl-nested-form-button.php:81
+msgid "Border Size"
+msgstr ""
+
+#: modules/flip-box/flip-box.php:402 modules/flip-box/flip-box.php:562
 msgid "Enter value in pixels."
 msgstr ""
 
-#: modules/flip-box/flip-box.php:400
+#: modules/flip-box/flip-box.php:421
 msgid "Flip Box Back"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:403
+#: modules/flip-box/flip-box.php:424
 msgid "Back"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:407 modules/slide-box/slide-box.php:457
+#: modules/flip-box/flip-box.php:428 modules/slide-box/slide-box.php:462
 msgid "Title on Back"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:408
+#: modules/flip-box/flip-box.php:429
 msgid "Cool!"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:416
+#: modules/flip-box/flip-box.php:437
 msgid ""
 "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
 "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:421
+#: modules/flip-box/flip-box.php:442
 msgid "Back Styles"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:562
+#: modules/flip-box/flip-box.php:583
 msgid "Show button"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:591
+#: modules/flip-box/flip-box.php:600 modules/slide-box/slide-box.php:543
+#: modules/uabb-button/uabb-button.php:390
+#: objects/fl-nested-form-button.php:303
+msgid "Button Settings"
+msgstr ""
+
+#: modules/flip-box/flip-box.php:612
 msgid "Flipbox Styles"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:595
+#: modules/flip-box/flip-box.php:616
 msgid "Flip Type"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:597
+#: modules/flip-box/flip-box.php:618
 msgid "Select Flip type for this flip box."
 msgstr ""
 
-#: modules/flip-box/flip-box.php:599
+#: modules/flip-box/flip-box.php:620
 msgid "Flip Horizontally From Left"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:600
+#: modules/flip-box/flip-box.php:621
 msgid "Flip Horizontally From Right"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:601
+#: modules/flip-box/flip-box.php:622
 msgid "Flip Vertically From Top"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:602
+#: modules/flip-box/flip-box.php:623
 msgid "Flip Vertically From Bottom"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:607
+#: modules/flip-box/flip-box.php:628
 msgid "Box Height"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:610
+#: modules/flip-box/flip-box.php:631
 msgid "Display full content and adjust height of box accordingly"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:611
+#: modules/flip-box/flip-box.php:632
 msgid "Give a custom height of your choice to the box"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:624
+#: modules/flip-box/flip-box.php:645
 msgid "Desktop Height"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:628
+#: modules/flip-box/flip-box.php:649
 msgid ""
 "Apply height to complete Flipbox. It is useful when multiple Flipboxes are "
 "in same row."
 msgstr ""
 
-#: modules/flip-box/flip-box.php:632
+#: modules/flip-box/flip-box.php:653
 msgid "Medium Device Height"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:635
+#: modules/flip-box/flip-box.php:656
 msgid ""
-"Apply height to complete Flipbox for medium devices. It will inherit desktop "
-"height if empty."
+"Apply height to complete Flipbox for medium devices. It will inherit "
+"desktop height if empty."
 msgstr ""
 
-#: modules/flip-box/flip-box.php:639
+#: modules/flip-box/flip-box.php:660
 msgid "Small Device Height"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:642
+#: modules/flip-box/flip-box.php:663
 msgid ""
 "Apply height to complete Flipbox for small devices. It will inherit medium "
 "height if empty."
 msgstr ""
 
-#: modules/flip-box/flip-box.php:646
+#: modules/flip-box/flip-box.php:667 modules/uabb-heading/uabb-heading.php:305
 msgid "Responsive Compatibility"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:648
+#: modules/flip-box/flip-box.php:669
 msgid ""
 "If enabled your Flip Box would automatically manage its height for small "
 "devices."
 msgstr ""
 
-#: modules/flip-box/flip-box.php:656 modules/slide-box/slide-box.php:825
+#: modules/flip-box/flip-box.php:677 modules/slide-box/slide-box.php:843
 msgid "Overall Vertical Alignment"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:666
+#: modules/flip-box/flip-box.php:687
 msgid "Padding"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:667
+#: modules/flip-box/flip-box.php:688
 msgid "Manage the outside spacing of content area of flipbox."
 msgstr ""
 
-#: modules/flip-box/flip-box.php:682 modules/slide-box/slide-box.php:841
+#: modules/flip-box/flip-box.php:703 modules/info-list/info-list.php:385
+#: modules/info-table/info-table.php:739 modules/ribbon/ribbon.php:220
+#: modules/slide-box/slide-box.php:856 modules/uabb-button/uabb-button.php:387
+#: modules/uabb-heading/uabb-heading.php:375
+#: objects/fl-nested-form-button.php:300
+msgid "Typography"
+msgstr ""
+
+#: modules/flip-box/flip-box.php:706 modules/slide-box/slide-box.php:859
 msgid "Front Title"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:686 modules/flip-box/flip-box.php:812
+#: modules/flip-box/flip-box.php:710 modules/flip-box/flip-box.php:872
 msgid "Title Tag"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:689 modules/flip-box/flip-box.php:815
-#: modules/info-list/info-list.php:375 modules/info-table/info-table.php:741
-#: modules/info-table/info-table.php:798 modules/ribbon/ribbon.php:212
-#: modules/slide-box/slide-box.php:848 modules/slide-box/slide-box.php:983
+#: modules/flip-box/flip-box.php:713 modules/flip-box/flip-box.php:875
+#: modules/info-list/info-list.php:395 modules/info-table/info-table.php:749
+#: modules/info-table/info-table.php:824 modules/ribbon/ribbon.php:230
+#: modules/slide-box/slide-box.php:866 modules/slide-box/slide-box.php:1037
+#: modules/uabb-heading/uabb-heading.php:578
 msgid "H1"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:690 modules/flip-box/flip-box.php:816
-#: modules/info-list/info-list.php:376 modules/info-table/info-table.php:742
-#: modules/info-table/info-table.php:799 modules/ribbon/ribbon.php:213
-#: modules/slide-box/slide-box.php:849 modules/slide-box/slide-box.php:984
+#: modules/flip-box/flip-box.php:714 modules/flip-box/flip-box.php:876
+#: modules/info-list/info-list.php:396 modules/info-table/info-table.php:750
+#: modules/info-table/info-table.php:825 modules/ribbon/ribbon.php:231
+#: modules/slide-box/slide-box.php:867 modules/slide-box/slide-box.php:1038
+#: modules/uabb-heading/uabb-heading.php:579
 msgid "H2"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:691 modules/flip-box/flip-box.php:817
-#: modules/info-list/info-list.php:377 modules/info-table/info-table.php:743
-#: modules/info-table/info-table.php:800 modules/ribbon/ribbon.php:214
-#: modules/slide-box/slide-box.php:850 modules/slide-box/slide-box.php:985
+#: modules/flip-box/flip-box.php:715 modules/flip-box/flip-box.php:877
+#: modules/info-list/info-list.php:397 modules/info-table/info-table.php:751
+#: modules/info-table/info-table.php:826 modules/ribbon/ribbon.php:232
+#: modules/slide-box/slide-box.php:868 modules/slide-box/slide-box.php:1039
+#: modules/uabb-heading/uabb-heading.php:580
 msgid "H3"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:692 modules/flip-box/flip-box.php:818
-#: modules/info-list/info-list.php:378 modules/info-table/info-table.php:744
-#: modules/info-table/info-table.php:801 modules/ribbon/ribbon.php:215
-#: modules/slide-box/slide-box.php:851 modules/slide-box/slide-box.php:986
+#: modules/flip-box/flip-box.php:716 modules/flip-box/flip-box.php:878
+#: modules/info-list/info-list.php:398 modules/info-table/info-table.php:752
+#: modules/info-table/info-table.php:827 modules/ribbon/ribbon.php:233
+#: modules/slide-box/slide-box.php:869 modules/slide-box/slide-box.php:1040
+#: modules/uabb-heading/uabb-heading.php:581
 msgid "H4"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:693 modules/flip-box/flip-box.php:819
-#: modules/info-list/info-list.php:379 modules/info-table/info-table.php:745
-#: modules/info-table/info-table.php:802 modules/ribbon/ribbon.php:216
-#: modules/slide-box/slide-box.php:852 modules/slide-box/slide-box.php:987
+#: modules/flip-box/flip-box.php:717 modules/flip-box/flip-box.php:879
+#: modules/info-list/info-list.php:399 modules/info-table/info-table.php:753
+#: modules/info-table/info-table.php:828 modules/ribbon/ribbon.php:234
+#: modules/slide-box/slide-box.php:870 modules/slide-box/slide-box.php:1041
+#: modules/uabb-heading/uabb-heading.php:582
 msgid "H5"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:694 modules/flip-box/flip-box.php:820
-#: modules/info-list/info-list.php:380 modules/info-table/info-table.php:746
-#: modules/info-table/info-table.php:803 modules/ribbon/ribbon.php:217
-#: modules/slide-box/slide-box.php:853 modules/slide-box/slide-box.php:988
+#: modules/flip-box/flip-box.php:718 modules/flip-box/flip-box.php:880
+#: modules/info-list/info-list.php:400 modules/info-table/info-table.php:754
+#: modules/info-table/info-table.php:829 modules/ribbon/ribbon.php:235
+#: modules/slide-box/slide-box.php:871 modules/slide-box/slide-box.php:1042
+#: modules/uabb-heading/uabb-heading.php:583
 msgid "H6"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:695 modules/flip-box/flip-box.php:821
-#: modules/info-list/info-list.php:381 modules/info-table/info-table.php:747
-#: modules/info-table/info-table.php:804 modules/ribbon/ribbon.php:218
-#: modules/slide-box/slide-box.php:854 modules/slide-box/slide-box.php:989
+#: modules/flip-box/flip-box.php:719 modules/flip-box/flip-box.php:881
+#: modules/info-list/info-list.php:401 modules/info-table/info-table.php:755
+#: modules/info-table/info-table.php:830 modules/ribbon/ribbon.php:236
+#: modules/slide-box/slide-box.php:872 modules/slide-box/slide-box.php:1043
+#: modules/uabb-heading/uabb-heading.php:584
 msgid "Div"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:696 modules/flip-box/flip-box.php:822
-#: modules/info-list/info-list.php:382 modules/info-table/info-table.php:748
-#: modules/info-table/info-table.php:805 modules/ribbon/ribbon.php:219
-#: modules/slide-box/slide-box.php:855 modules/slide-box/slide-box.php:990
+#: modules/flip-box/flip-box.php:720 modules/flip-box/flip-box.php:882
+#: modules/info-list/info-list.php:402 modules/info-table/info-table.php:756
+#: modules/info-table/info-table.php:831 modules/ribbon/ribbon.php:237
+#: modules/slide-box/slide-box.php:873 modules/slide-box/slide-box.php:1044
+#: modules/uabb-heading/uabb-heading.php:585
 msgid "p"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:697 modules/flip-box/flip-box.php:823
-#: modules/info-list/info-list.php:383 modules/info-table/info-table.php:749
-#: modules/info-table/info-table.php:806 modules/ribbon/ribbon.php:220
-#: modules/slide-box/slide-box.php:856 modules/slide-box/slide-box.php:991
+#: modules/flip-box/flip-box.php:721 modules/flip-box/flip-box.php:883
+#: modules/info-list/info-list.php:403 modules/info-table/info-table.php:757
+#: modules/info-table/info-table.php:832 modules/ribbon/ribbon.php:238
+#: modules/slide-box/slide-box.php:874 modules/slide-box/slide-box.php:1045
+#: modules/uabb-heading/uabb-heading.php:586
 msgid "span"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:732
+#: modules/flip-box/flip-box.php:726 modules/flip-box/flip-box.php:799
+#: modules/flip-box/flip-box.php:888 modules/flip-box/flip-box.php:961
+#: modules/info-list/info-list.php:408 modules/info-list/info-list.php:486
+#: modules/info-table/info-table.php:762 modules/info-table/info-table.php:837
+#: modules/info-table/info-table.php:896 modules/info-table/info-table.php:955
+#: modules/ribbon/ribbon.php:243 modules/slide-box/slide-box.php:879
+#: modules/slide-box/slide-box.php:957 modules/slide-box/slide-box.php:1050
+#: modules/slide-box/slide-box.php:1126 modules/slide-box/slide-box.php:1203
+#: modules/uabb-button/uabb-button.php:394
+#: modules/uabb-heading/uabb-heading.php:485
+#: modules/uabb-heading/uabb-heading.php:591
+#: objects/fl-nested-form-button.php:307
+msgid "Font Family"
+msgstr ""
+
+#: modules/flip-box/flip-box.php:774
 msgid "Front Title Color"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:738 modules/flip-box/flip-box.php:793
-#: modules/flip-box/flip-box.php:864 modules/flip-box/flip-box.php:919
-#: modules/info-list/info-list.php:428 modules/slide-box/slide-box.php:903
-#: modules/slide-box/slide-box.php:963 modules/slide-box/slide-box.php:1037
-#: modules/slide-box/slide-box.php:1095
+#: modules/flip-box/flip-box.php:780 modules/flip-box/flip-box.php:853
+#: modules/flip-box/flip-box.php:942 modules/flip-box/flip-box.php:1015
+#: modules/info-list/info-list.php:466 modules/slide-box/slide-box.php:939
+#: modules/slide-box/slide-box.php:1017 modules/slide-box/slide-box.php:1109
+#: modules/slide-box/slide-box.php:1185
+#: modules/uabb-heading/uabb-heading.php:454
+#: modules/uabb-heading/uabb-heading.php:544
 msgid "Margin Top"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:745 modules/flip-box/flip-box.php:800
-#: modules/flip-box/flip-box.php:871 modules/flip-box/flip-box.php:926
-#: modules/info-list/info-list.php:435 modules/slide-box/slide-box.php:909
-#: modules/slide-box/slide-box.php:969 modules/slide-box/slide-box.php:1043
-#: modules/slide-box/slide-box.php:1101
+#: modules/flip-box/flip-box.php:787 modules/flip-box/flip-box.php:860
+#: modules/flip-box/flip-box.php:949 modules/flip-box/flip-box.php:1022
+#: modules/info-list/info-list.php:473 modules/slide-box/slide-box.php:945
+#: modules/slide-box/slide-box.php:1023 modules/slide-box/slide-box.php:1115
+#: modules/slide-box/slide-box.php:1191
+#: modules/uabb-heading/uabb-heading.php:467
+#: modules/uabb-heading/uabb-heading.php:557
 msgid "Margin Bottom"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:753 modules/slide-box/slide-box.php:917
+#: modules/flip-box/flip-box.php:795 modules/slide-box/slide-box.php:953
 msgid "Front Description"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:787
+#: modules/flip-box/flip-box.php:847
 msgid "Front Description Color"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:808 modules/slide-box/slide-box.php:976
+#: modules/flip-box/flip-box.php:868 modules/slide-box/slide-box.php:1030
 msgid "Back Title"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:858
+#: modules/flip-box/flip-box.php:936
 msgid "Back Title Color"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:879 modules/slide-box/slide-box.php:1050
+#: modules/flip-box/flip-box.php:957 modules/slide-box/slide-box.php:1122
 msgid "Back Description"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:913
+#: modules/flip-box/flip-box.php:1009
 msgid "Back Description Color"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:934
+#: modules/flip-box/flip-box.php:1030
 msgid "Margin"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:938
+#: modules/flip-box/flip-box.php:1034
 msgid "Icon Margin Top"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:945
+#: modules/flip-box/flip-box.php:1041
 msgid "Icon Margin Bottom"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:952
+#: modules/flip-box/flip-box.php:1048
 msgid "Button Margin Top"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:959
+#: modules/flip-box/flip-box.php:1055
 msgid "Button Margin Bottom"
 msgstr ""
 
@@ -1545,87 +1432,143 @@ msgstr ""
 msgid "Image / Icon with effect"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:390 modules/info-list/info-list.php:558
-#: modules/info-table/info-table.php:288 modules/slide-box/slide-box.php:200
+#: modules/image-icon/image-icon.php:392 modules/info-list/info-list.php:617
+#: modules/info-table/info-table.php:295 modules/slide-box/slide-box.php:204
 msgid "Image Type"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:394 modules/image-icon/image-icon.php:461
-#: modules/info-list/info-list.php:563 modules/info-list/info-list.php:616
-#: modules/info-table/info-table.php:293 modules/info-table/info-table.php:353
-#: modules/slide-box/slide-box.php:204 modules/slide-box/slide-box.php:254
-#: modules/slide-box/slide-box.php:258
+#: modules/image-icon/image-icon.php:396 modules/image-icon/image-icon.php:463
+#: modules/info-list/info-list.php:622 modules/info-list/info-list.php:675
+#: modules/info-table/info-table.php:300 modules/info-table/info-table.php:360
+#: modules/slide-box/slide-box.php:208 modules/slide-box/slide-box.php:258
+#: modules/slide-box/slide-box.php:262
+#: modules/uabb-heading/uabb-heading.php:261
 msgid "Photo"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:440 modules/info-table/info-table.php:332
+#: modules/image-icon/image-icon.php:430 modules/image-icon/image-icon.php:483
+#: modules/info-table/info-table.php:382 modules/ribbon/ribbon.php:120
+#: modules/uabb-button/uabb-button.php:364
+#: modules/uabb-heading/uabb-heading.php:124
+#: modules/uabb-separator/uabb-separator.php:69
+#: objects/fl-nested-form-button.php:277
+msgid "Alignment"
+msgstr ""
+
+#: modules/image-icon/image-icon.php:433 modules/image-icon/image-icon.php:486
+#: modules/image-separator/image-separator.php:620
+#: modules/info-table/info-table.php:384 modules/ribbon/ribbon.php:125
+#: modules/slide-box/slide-box.php:367 modules/slide-box/slide-box.php:659
+#: modules/slide-box/slide-box.php:808 modules/uabb-button/uabb-button.php:368
+#: modules/uabb-button/uabb-button.php:378
+#: modules/uabb-heading/uabb-heading.php:127
+#: modules/uabb-heading/uabb-heading.php:143
+#: modules/uabb-separator/uabb-separator.php:73
+#: objects/fl-nested-form-button.php:281 objects/fl-nested-form-button.php:291
+msgid "Left"
+msgstr ""
+
+#: modules/image-icon/image-icon.php:434 modules/image-icon/image-icon.php:487
+#: modules/image-separator/image-separator.php:621
+#: modules/info-list/info-list.php:218 modules/info-table/info-table.php:385
+#: modules/ribbon/ribbon.php:124 modules/slide-box/slide-box.php:366
+#: modules/slide-box/slide-box.php:377 modules/slide-box/slide-box.php:658
+#: modules/slide-box/slide-box.php:807 modules/slide-box/slide-box.php:847
+#: modules/uabb-button/uabb-button.php:367
+#: modules/uabb-button/uabb-button.php:377
+#: modules/uabb-heading/uabb-heading.php:128
+#: modules/uabb-heading/uabb-heading.php:144
+#: modules/uabb-separator/uabb-separator.php:72
+#: objects/fl-nested-form-button.php:280 objects/fl-nested-form-button.php:290
+msgid "Center"
+msgstr ""
+
+#: modules/image-icon/image-icon.php:435 modules/image-icon/image-icon.php:488
+#: modules/image-separator/image-separator.php:622
+#: modules/info-table/info-table.php:386 modules/ribbon/ribbon.php:126
+#: modules/slide-box/slide-box.php:368 modules/slide-box/slide-box.php:660
+#: modules/slide-box/slide-box.php:809 modules/uabb-button/uabb-button.php:369
+#: modules/uabb-button/uabb-button.php:379
+#: modules/uabb-heading/uabb-heading.php:129
+#: modules/uabb-heading/uabb-heading.php:145
+#: modules/uabb-separator/uabb-separator.php:74
+#: objects/fl-nested-form-button.php:282 objects/fl-nested-form-button.php:292
+msgid "Right"
+msgstr ""
+
+#: modules/image-icon/image-icon.php:442 modules/info-table/info-table.php:339
+#: modules/uabb-heading/uabb-heading.php:240
 msgid "Image Basics"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:444 modules/info-list/info-list.php:599
-#: modules/info-table/info-table.php:336
+#: modules/image-icon/image-icon.php:446 modules/info-list/info-list.php:658
+#: modules/info-table/info-table.php:343
+#: modules/uabb-heading/uabb-heading.php:244
 msgid "Photo Source"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:447 modules/info-list/info-list.php:602
-#: modules/info-table/info-table.php:339
+#: modules/image-icon/image-icon.php:449 modules/info-list/info-list.php:661
+#: modules/info-table/info-table.php:346
+#: modules/uabb-heading/uabb-heading.php:247
 msgid "Media Library"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:448 modules/info-list/info-list.php:603
-#: modules/info-table/info-table.php:340
+#: modules/image-icon/image-icon.php:450 modules/info-list/info-list.php:662
+#: modules/info-table/info-table.php:347
+#: modules/uabb-heading/uabb-heading.php:248
 msgid "URL"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:466 modules/info-list/info-list.php:621
-#: modules/info-table/info-table.php:358
+#: modules/image-icon/image-icon.php:469 modules/info-list/info-list.php:681
+#: modules/info-table/info-table.php:366
+#: modules/uabb-heading/uabb-heading.php:267
 msgid "Photo URL"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:534 modules/info-table/info-table.php:428
+#: modules/image-icon/image-icon.php:538 modules/info-table/info-table.php:436
 msgid "Spacing between Icon & Background edge"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:614
-#: modules/image-separator/image-separator.php:417
-#: modules/info-table/info-table.php:490 modules/slide-box/slide-box.php:263
+#: modules/image-icon/image-icon.php:618
+#: modules/image-separator/image-separator.php:420
+#: modules/info-table/info-table.php:498 modules/slide-box/slide-box.php:268
 msgid "Image Style"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:616
-#: modules/image-separator/image-separator.php:419
-#: modules/info-table/info-table.php:492 modules/slide-box/slide-box.php:265
+#: modules/image-icon/image-icon.php:620
+#: modules/image-separator/image-separator.php:422
+#: modules/info-table/info-table.php:500 modules/slide-box/slide-box.php:270
 msgid "Circle and Square style will crop your image in 1:1 ratio"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:619
-#: modules/image-separator/image-separator.php:422
-#: modules/info-list/info-list.php:236 modules/info-table/info-table.php:495
-#: modules/slide-box/slide-box.php:268
+#: modules/image-icon/image-icon.php:623
+#: modules/image-separator/image-separator.php:425
+#: modules/info-list/info-list.php:256 modules/info-table/info-table.php:503
+#: modules/slide-box/slide-box.php:273
 msgid "Circle"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:620
-#: modules/image-separator/image-separator.php:423
-#: modules/info-list/info-list.php:235 modules/info-table/info-table.php:496
-#: modules/slide-box/slide-box.php:269
+#: modules/image-icon/image-icon.php:624
+#: modules/image-separator/image-separator.php:426
+#: modules/info-list/info-list.php:255 modules/info-table/info-table.php:504
+#: modules/slide-box/slide-box.php:274
 msgid "Square"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:651
-#: modules/image-separator/image-separator.php:447
-#: modules/info-table/info-table.php:527 modules/slide-box/slide-box.php:306
+#: modules/image-icon/image-icon.php:655
+#: modules/image-separator/image-separator.php:450
+#: modules/info-table/info-table.php:535 modules/slide-box/slide-box.php:311
 msgid "Spacing between Image edge & Background edge"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:752 modules/info-table/info-table.php:610
-#: modules/slide-box/slide-box.php:236
+#: modules/image-icon/image-icon.php:756 modules/info-table/info-table.php:618
+#: modules/slide-box/slide-box.php:240
 msgid "Icon Hover Color"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:802 modules/image-icon/image-icon.php:866
-#: modules/image-separator/image-separator.php:575
-#: modules/info-table/info-table.php:660 modules/info-table/info-table.php:722
+#: modules/image-icon/image-icon.php:806 modules/image-icon/image-icon.php:870
+#: modules/image-separator/image-separator.php:578
+#: modules/info-table/info-table.php:668 modules/info-table/info-table.php:730
 msgid "Border Hover Color"
 msgstr ""
 
@@ -1637,311 +1580,342 @@ msgstr ""
 msgid "Use Image as a separator "
 msgstr ""
 
-#: modules/image-separator/image-separator.php:375
+#: modules/image-separator/image-separator.php:377
 msgid "Separator Image"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:380
+#: modules/image-separator/image-separator.php:383
 msgid "Desktop Size"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:384
+#: modules/image-separator/image-separator.php:387
 msgid "Image size cannot be more than parent size."
 msgstr ""
 
-#: modules/image-separator/image-separator.php:388
+#: modules/image-separator/image-separator.php:391
 msgid "Medium Device Size"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:392
-msgid ""
-"Apply image size for medium devices. It will inherit desktop size if empty."
+#: modules/image-separator/image-separator.php:395
+msgid "Apply image size for medium devices. It will inherit desktop size if empty."
 msgstr ""
 
-#: modules/image-separator/image-separator.php:399
+#: modules/image-separator/image-separator.php:402
 msgid "Small Device Size"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:403
-msgid ""
-"Apply image size for small devices. It will inherit medium size if empty."
+#: modules/image-separator/image-separator.php:406
+msgid "Apply image size for small devices. It will inherit medium size if empty."
 msgstr ""
 
-#: modules/image-separator/image-separator.php:591
+#: modules/image-separator/image-separator.php:589
+#: modules/uabb-button/uabb-button.php:300
+#: modules/uabb-heading/uabb-heading.php:120
+#: objects/fl-nested-form-button.php:213
+msgid "Structure"
+msgstr ""
+
+#: modules/image-separator/image-separator.php:594
 msgid "Image Top / Bottom Position"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:593
-#: modules/image-separator/image-separator.php:615
+#: modules/image-separator/image-separator.php:596
+#: modules/image-separator/image-separator.php:618
 msgid "Select the position to display Image Separator"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:595
+#: modules/image-separator/image-separator.php:598
+#: modules/uabb-heading/uabb-heading.php:199
 msgid "Bottom"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:596
-#: modules/info-list/info-list.php:199 modules/slide-box/slide-box.php:371
-#: modules/slide-box/slide-box.php:830
+#: modules/image-separator/image-separator.php:599
+#: modules/info-list/info-list.php:219 modules/slide-box/slide-box.php:376
+#: modules/slide-box/slide-box.php:848
+#: modules/uabb-heading/uabb-heading.php:198
 msgid "Top"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:603
+#: modules/image-separator/image-separator.php:606
 msgid "Gutter"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:605
+#: modules/image-separator/image-separator.php:608
 msgid ""
 "50% is default. Increase to push the image outside or decrease to pull the "
 "image inside."
 msgstr ""
 
-#: modules/image-separator/image-separator.php:613
+#: modules/image-separator/image-separator.php:616
 msgid "Image Left / Right Position"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:634
+#: modules/image-separator/image-separator.php:637
 msgid "Value from Left / Right"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:636
+#: modules/image-separator/image-separator.php:639
 msgid "From left / From right"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:645
+#: modules/image-separator/image-separator.php:648
+#: modules/uabb-heading/uabb-heading.php:140
 msgid "Responsive Alignment"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:647
-msgid ""
-"To view Image Separator center aligned on different devices use this setting"
+#: modules/image-separator/image-separator.php:650
+msgid "To view Image Separator center aligned on different devices use this setting"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:649
-#: modules/info-table/info-table.php:379 modules/slide-box/slide-box.php:441
+#: modules/image-separator/image-separator.php:652
+#: modules/info-table/info-table.php:387 modules/slide-box/slide-box.php:446
 msgid "Default"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:650
+#: modules/image-separator/image-separator.php:653
 msgid "Small Device"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:651
+#: modules/image-separator/image-separator.php:654
 msgid "Small & Medium Devices"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:658
+#: modules/image-separator/image-separator.php:661
 msgid "Enable Link"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:694
-#: modules/image-separator/image-separator.php:701
+#: modules/image-separator/image-separator.php:682
+#: modules/info-list/info-list.php:590 modules/info-table/info-table.php:89
+#: modules/slide-box/slide-box.php:521 modules/uabb-button/uabb-button.php:133
+#: modules/uabb-heading/uabb-heading.php:95
+#: objects/fl-nested-form-button.php:38
+msgid "Link Target"
+msgstr ""
+
+#: modules/image-separator/image-separator.php:685
+#: modules/info-list/info-list.php:593 modules/info-table/info-table.php:93
+#: modules/slide-box/slide-box.php:524 modules/uabb-button/uabb-button.php:136
+#: modules/uabb-heading/uabb-heading.php:98
+#: objects/fl-nested-form-button.php:41
+msgid "Same Window"
+msgstr ""
+
+#: modules/image-separator/image-separator.php:686
+#: modules/info-list/info-list.php:594 modules/info-table/info-table.php:94
+#: modules/slide-box/slide-box.php:525 modules/uabb-button/uabb-button.php:137
+#: modules/uabb-heading/uabb-heading.php:99
+#: objects/fl-nested-form-button.php:42
+msgid "New Window"
+msgstr ""
+
+#: modules/image-separator/image-separator.php:697
+#: modules/image-separator/image-separator.php:704
 msgid "Animation"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:703
+#: modules/image-separator/image-separator.php:706
 msgid "Choose one of the animation types for Separator."
 msgstr ""
 
-#: modules/image-separator/image-separator.php:706
+#: modules/image-separator/image-separator.php:709
 msgid "bounce"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:707
+#: modules/image-separator/image-separator.php:710
 msgid "flash"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:708
+#: modules/image-separator/image-separator.php:711
 msgid "pulse"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:709
+#: modules/image-separator/image-separator.php:712
 msgid "rubberBand"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:710
+#: modules/image-separator/image-separator.php:713
 msgid "shake"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:711
+#: modules/image-separator/image-separator.php:714
 msgid "headShake"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:712
+#: modules/image-separator/image-separator.php:715
 msgid "swing"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:713
+#: modules/image-separator/image-separator.php:716
 msgid "tada"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:714
+#: modules/image-separator/image-separator.php:717
 msgid "wobble"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:715
+#: modules/image-separator/image-separator.php:718
 msgid "jello"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:716
+#: modules/image-separator/image-separator.php:719
 msgid "bounceIn"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:717
+#: modules/image-separator/image-separator.php:720
 msgid "bounceInDown"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:718
+#: modules/image-separator/image-separator.php:721
 msgid "bounceInLeft"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:719
+#: modules/image-separator/image-separator.php:722
 msgid "bounceInRight"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:720
+#: modules/image-separator/image-separator.php:723
 msgid "bounceInUp"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:721
+#: modules/image-separator/image-separator.php:724
 msgid "fadeIn"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:722
+#: modules/image-separator/image-separator.php:725
 msgid "fadeInDown"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:723
+#: modules/image-separator/image-separator.php:726
 msgid "fadeInDownBig"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:724
+#: modules/image-separator/image-separator.php:727
 msgid "fadeInLeft"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:725
+#: modules/image-separator/image-separator.php:728
 msgid "fadeInLeftBig"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:726
+#: modules/image-separator/image-separator.php:729
 msgid "fadeInRight"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:727
+#: modules/image-separator/image-separator.php:730
 msgid "fadeInRightBig"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:728
+#: modules/image-separator/image-separator.php:731
 msgid "fadeInUp"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:729
+#: modules/image-separator/image-separator.php:732
 msgid "fadeInUpBig"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:730
+#: modules/image-separator/image-separator.php:733
 msgid "flipInX"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:731
+#: modules/image-separator/image-separator.php:734
 msgid "flipInY"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:732
+#: modules/image-separator/image-separator.php:735
 msgid "flipOutX"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:733
+#: modules/image-separator/image-separator.php:736
 msgid "flipOutY"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:734
+#: modules/image-separator/image-separator.php:737
 msgid "lightSpeedIn"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:735
+#: modules/image-separator/image-separator.php:738
 msgid "rotateIn"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:736
+#: modules/image-separator/image-separator.php:739
 msgid "rotateInDownLeft"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:737
+#: modules/image-separator/image-separator.php:740
 msgid "rotateInDownRight"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:738
+#: modules/image-separator/image-separator.php:741
 msgid "rotateInUpLeft"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:739
+#: modules/image-separator/image-separator.php:742
 msgid "rotateInUpRight"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:740
+#: modules/image-separator/image-separator.php:743
 msgid "rollIn"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:741
+#: modules/image-separator/image-separator.php:744
 msgid "zoomIn"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:742
+#: modules/image-separator/image-separator.php:745
 msgid "zoomInDown"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:743
+#: modules/image-separator/image-separator.php:746
 msgid "zoomInLeft"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:744
+#: modules/image-separator/image-separator.php:747
 msgid "zoomInRight"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:745
+#: modules/image-separator/image-separator.php:748
 msgid "zoomInUp"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:746
+#: modules/image-separator/image-separator.php:749
 msgid "slideInDown"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:747
+#: modules/image-separator/image-separator.php:750
 msgid "slideInLeft"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:748
+#: modules/image-separator/image-separator.php:751
 msgid "slideInRight"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:749
+#: modules/image-separator/image-separator.php:752
 msgid "slideInUp"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:765
+#: modules/image-separator/image-separator.php:768
 msgid "Animation Delay"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:767
+#: modules/image-separator/image-separator.php:770
 msgid "Delay the animation effect for seconds you entered."
 msgstr ""
 
-#: modules/image-separator/image-separator.php:775
+#: modules/image-separator/image-separator.php:778
 msgid "Repeat Animation"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:777
+#: modules/image-separator/image-separator.php:780
 msgid ""
-"The animation effect will repeat to the count you enter. Enter 0 if you want "
-"to repeat it infinitely."
+"The animation effect will repeat to the count you enter. Enter 0 if you "
+"want to repeat it infinitely."
 msgstr ""
 
-#: modules/image-separator/image-separator.php:785
+#: modules/image-separator/image-separator.php:788
 msgid "Viewport Position"
 msgstr ""
 
-#: modules/image-separator/image-separator.php:787
+#: modules/image-separator/image-separator.php:790
 msgid "The area of screen from top where animation effect will start working."
 msgstr ""
 
@@ -1953,149 +1927,151 @@ msgstr ""
 msgid "A totally awesome module!"
 msgstr ""
 
-#: modules/info-list/info-list.php:152 modules/info-list/info-list.php:159
+#: modules/info-list/info-list.php:172 modules/info-list/info-list.php:179
 msgid "List Item"
 msgstr ""
 
-#: modules/info-list/info-list.php:173
+#: modules/info-list/info-list.php:193
 msgid "List Settings"
 msgstr ""
 
-#: modules/info-list/info-list.php:177
+#: modules/info-list/info-list.php:197
 msgid "Icon / Image Position"
 msgstr ""
 
-#: modules/info-list/info-list.php:180
+#: modules/info-list/info-list.php:200
 msgid "Icon to the left"
 msgstr ""
 
-#: modules/info-list/info-list.php:181
+#: modules/info-list/info-list.php:201
 msgid "Icon to the right"
 msgstr ""
 
-#: modules/info-list/info-list.php:182
+#: modules/info-list/info-list.php:202
 msgid "Icon at top"
 msgstr ""
 
-#: modules/info-list/info-list.php:195 modules/slide-box/slide-box.php:368
+#: modules/info-list/info-list.php:215 modules/slide-box/slide-box.php:373
 msgid "Icon Vertical Alignment"
 msgstr ""
 
-#: modules/info-list/info-list.php:204 modules/slide-box/slide-box.php:428
+#: modules/info-list/info-list.php:224 modules/slide-box/slide-box.php:433
 msgid "Mobile Structure"
 msgstr ""
 
-#: modules/info-list/info-list.php:207 modules/slide-box/slide-box.php:431
+#: modules/info-list/info-list.php:227 modules/slide-box/slide-box.php:436
 msgid "Inline"
 msgstr ""
 
-#: modules/info-list/info-list.php:208 modules/slide-box/slide-box.php:432
+#: modules/info-list/info-list.php:228 modules/slide-box/slide-box.php:437
 msgid "Stack"
 msgstr ""
 
-#: modules/info-list/info-list.php:216
+#: modules/info-list/info-list.php:236
 msgid "Icon / Image Size"
 msgstr ""
 
-#: modules/info-list/info-list.php:223
+#: modules/info-list/info-list.php:243
 msgid "Space Between Two Elements"
 msgstr ""
 
-#: modules/info-list/info-list.php:230
+#: modules/info-list/info-list.php:250
 msgid "Icon / Image Style"
 msgstr ""
 
-#: modules/info-list/info-list.php:253
+#: modules/info-list/info-list.php:273
 msgid "Color Option for Background"
 msgstr ""
 
-#: modules/info-list/info-list.php:267
+#: modules/info-list/info-list.php:287
 msgid "Border Radius ( For Background )"
 msgstr ""
 
-#: modules/info-list/info-list.php:276
+#: modules/info-list/info-list.php:296
 msgid "Padding ( For Background )"
 msgstr ""
 
-#: modules/info-list/info-list.php:311
+#: modules/info-list/info-list.php:331
 msgid "Image/Icon Animation"
 msgstr ""
 
-#: modules/info-list/info-list.php:313
+#: modules/info-list/info-list.php:333
 msgid "Select whether you want to animate image/icon or not"
 msgstr ""
 
-#: modules/info-list/info-list.php:323
+#: modules/info-list/info-list.php:343
 msgid "List Connector"
 msgstr ""
 
-#: modules/info-list/info-list.php:327
+#: modules/info-list/info-list.php:347
 msgid "Show Connector"
 msgstr ""
 
-#: modules/info-list/info-list.php:329
+#: modules/info-list/info-list.php:349
 msgid "Select whether you would like to show connector on list items."
 msgstr ""
 
-#: modules/info-list/info-list.php:344
+#: modules/info-list/info-list.php:364
 msgid "Connector Line Color"
 msgstr ""
 
-#: modules/info-list/info-list.php:350
+#: modules/info-list/info-list.php:370
 msgid "Connector Line Style"
 msgstr ""
 
-#: modules/info-list/info-list.php:368 modules/info-list/info-list.php:507
-#: modules/info-list/info-list.php:511 modules/slide-box/slide-box.php:179
+#: modules/info-list/info-list.php:388 modules/info-list/info-list.php:563
+#: modules/info-list/info-list.php:567 modules/slide-box/slide-box.php:181
 msgid "Title"
 msgstr ""
 
-#: modules/info-list/info-list.php:372 modules/info-table/info-table.php:738
-#: modules/info-table/info-table.php:795
+#: modules/info-list/info-list.php:392 modules/info-table/info-table.php:746
+#: modules/info-table/info-table.php:821
 msgid "Select Tag"
 msgstr ""
 
-#: modules/info-list/info-list.php:420 modules/info-list/info-list.php:479
+#: modules/info-list/info-list.php:458 modules/info-list/info-list.php:535
 msgid "Choose Color"
 msgstr ""
 
-#: modules/info-list/info-list.php:444 modules/info-table/info-table.php:848
+#: modules/info-list/info-list.php:482 modules/info-table/info-table.php:892
+#: modules/uabb-heading/uabb-heading.php:108
+#: modules/uabb-heading/uabb-heading.php:481
 msgid "Description"
 msgstr ""
 
-#: modules/info-list/info-list.php:497
+#: modules/info-list/info-list.php:553
 msgid "Add List Item"
 msgstr ""
 
-#: modules/info-list/info-list.php:509
+#: modules/info-list/info-list.php:565
 msgid "Name of the element"
 msgstr ""
 
-#: modules/info-list/info-list.php:510
+#: modules/info-list/info-list.php:566
 msgid "Provide a title for this icon list item."
 msgstr ""
 
-#: modules/info-list/info-list.php:520
+#: modules/info-list/info-list.php:578
 msgid "Apply Link To"
 msgstr ""
 
-#: modules/info-list/info-list.php:523 modules/info-table/info-table.php:58
+#: modules/info-list/info-list.php:581 modules/info-table/info-table.php:63
 msgid "No Link"
 msgstr ""
 
-#: modules/info-list/info-list.php:524
+#: modules/info-list/info-list.php:582
 msgid "Complete Box"
 msgstr ""
 
-#: modules/info-list/info-list.php:525
+#: modules/info-list/info-list.php:583
 msgid "List Title"
 msgstr ""
 
-#: modules/info-list/info-list.php:541 modules/info-table/info-table.php:51
+#: modules/info-list/info-list.php:599 modules/info-table/info-table.php:55
 msgid "Enter description text here."
 msgstr ""
 
-#: modules/info-list/info-list.php:551 modules/info-list/info-list.php:554
+#: modules/info-list/info-list.php:610 modules/info-list/info-list.php:613
 msgid "Icon / Image"
 msgstr ""
 
@@ -2107,141 +2083,144 @@ msgstr ""
 msgid "A basic info table."
 msgstr ""
 
-#: modules/info-table/info-table.php:35
+#: modules/info-table/info-table.php:37
 msgid "Info-Table"
 msgstr ""
 
-#: modules/info-table/info-table.php:39 modules/info-table/info-table.php:40
-#: modules/info-table/info-table.php:734
+#: modules/info-table/info-table.php:41 modules/info-table/info-table.php:42
+#: modules/info-table/info-table.php:742
+#: modules/uabb-heading/uabb-heading.php:14
+#: modules/uabb-heading/uabb-heading.php:77
+#: modules/uabb-heading/uabb-heading.php:378
 msgid "Heading"
 msgstr ""
 
-#: modules/info-table/info-table.php:41
+#: modules/info-table/info-table.php:43
 msgid "Enter Info-Table Title"
 msgstr ""
 
-#: modules/info-table/info-table.php:45 modules/info-table/info-table.php:46
-#: modules/info-table/info-table.php:791
+#: modules/info-table/info-table.php:48 modules/info-table/info-table.php:49
+#: modules/info-table/info-table.php:817
 msgid "Sub Heading"
 msgstr ""
 
-#: modules/info-table/info-table.php:55
+#: modules/info-table/info-table.php:60
 msgid "Add Link"
 msgstr ""
 
-#: modules/info-table/info-table.php:59
+#: modules/info-table/info-table.php:64
 msgid "Call to Action Button"
 msgstr ""
 
-#: modules/info-table/info-table.php:60
+#: modules/info-table/info-table.php:65
 msgid "Link to Complete Box"
 msgstr ""
 
-#: modules/info-table/info-table.php:74
+#: modules/info-table/info-table.php:79
 msgid "Call to action button text"
 msgstr ""
 
-#: modules/info-table/info-table.php:78
+#: modules/info-table/info-table.php:84
 msgid "Select URL"
 msgstr ""
 
-#: modules/info-table/info-table.php:83
+#: modules/info-table/info-table.php:90
 msgid "Controls where CTA link will open after click."
 msgstr ""
 
-#: modules/info-table/info-table.php:101 modules/slide-box/slide-box.php:547
+#: modules/info-table/info-table.php:108 modules/slide-box/slide-box.php:552
 msgid "Styles"
 msgstr ""
 
-#: modules/info-table/info-table.php:105
+#: modules/info-table/info-table.php:112
 msgid "Select Design Style"
 msgstr ""
 
-#: modules/info-table/info-table.php:108
+#: modules/info-table/info-table.php:115
 msgid "Design 01"
 msgstr ""
 
-#: modules/info-table/info-table.php:109
+#: modules/info-table/info-table.php:116
 msgid "Design 02"
 msgstr ""
 
-#: modules/info-table/info-table.php:110
+#: modules/info-table/info-table.php:117
 msgid "Design 03"
 msgstr ""
 
-#: modules/info-table/info-table.php:111
+#: modules/info-table/info-table.php:118
 msgid "Design 04"
 msgstr ""
 
-#: modules/info-table/info-table.php:112
+#: modules/info-table/info-table.php:119
 msgid "Design 05"
 msgstr ""
 
-#: modules/info-table/info-table.php:113
+#: modules/info-table/info-table.php:120
 msgid "Design 06"
 msgstr ""
 
-#: modules/info-table/info-table.php:135
+#: modules/info-table/info-table.php:142
 msgid "Select Color Scheme"
 msgstr ""
 
-#: modules/info-table/info-table.php:138
+#: modules/info-table/info-table.php:145
 msgid "Black"
 msgstr ""
 
-#: modules/info-table/info-table.php:139
+#: modules/info-table/info-table.php:146
 msgid "Red"
 msgstr ""
 
-#: modules/info-table/info-table.php:140
+#: modules/info-table/info-table.php:147
 msgid "Blue"
 msgstr ""
 
-#: modules/info-table/info-table.php:141
+#: modules/info-table/info-table.php:148
 msgid "Yellow"
 msgstr ""
 
-#: modules/info-table/info-table.php:142
+#: modules/info-table/info-table.php:149
 msgid "Green"
 msgstr ""
 
-#: modules/info-table/info-table.php:143
+#: modules/info-table/info-table.php:150
 msgid "Gray"
 msgstr ""
 
-#: modules/info-table/info-table.php:144
+#: modules/info-table/info-table.php:151
 msgid "Design Your Own"
 msgstr ""
 
-#: modules/info-table/info-table.php:154
+#: modules/info-table/info-table.php:161
 msgid "Main background Color"
 msgstr ""
 
-#: modules/info-table/info-table.php:169
+#: modules/info-table/info-table.php:176
 msgid "Highlight background Color"
 msgstr ""
 
-#: modules/info-table/info-table.php:184
+#: modules/info-table/info-table.php:191
 msgid "Hover Effect"
 msgstr ""
 
-#: modules/info-table/info-table.php:188
+#: modules/info-table/info-table.php:195
 msgid "Box Shadow"
 msgstr ""
 
-#: modules/info-table/info-table.php:193
+#: modules/info-table/info-table.php:200
 msgid "Min Height"
 msgstr ""
 
-#: modules/info-table/info-table.php:201
+#: modules/info-table/info-table.php:208
 msgid "CTA Button Style"
 msgstr ""
 
-#: modules/info-table/info-table.php:259
+#: modules/info-table/info-table.php:266
 msgid "Top Margin"
 msgstr ""
 
-#: modules/info-table/info-table.php:268
+#: modules/info-table/info-table.php:275
 msgid "Bottom Margin"
 msgstr ""
 
@@ -2249,106 +2228,111 @@ msgstr ""
 msgid "Ribbon"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:35
+#: modules/ribbon/ribbon.php:53
 msgid "Layout"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:42
+#: modules/ribbon/ribbon.php:60
 msgid "Ribbon Message"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:43
+#: modules/ribbon/ribbon.php:61
 msgid "SPECIAL OFFER"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:51
+#: modules/ribbon/ribbon.php:69
 msgid "Left Icon"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:56
+#: modules/ribbon/ribbon.php:74
 msgid "Right Icon"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:61
+#: modules/ribbon/ribbon.php:79
 msgid "Hide Ribbon Wings"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:63
+#: modules/ribbon/ribbon.php:81
 msgid "To hide Ribbon Wings on Small or Medium device use this option."
 msgstr ""
 
-#: modules/ribbon/ribbon.php:66
+#: modules/ribbon/ribbon.php:84 modules/uabb-heading/uabb-heading.php:310
 msgid "Small Devices"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:67
+#: modules/ribbon/ribbon.php:85 modules/uabb-heading/uabb-heading.php:311
 msgid "Medium & Small Devices"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:77
+#: modules/ribbon/ribbon.php:95
 msgid "Ribbon Width"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:80
+#: modules/ribbon/ribbon.php:98
 msgid "Auto"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:81
+#: modules/ribbon/ribbon.php:99
 msgid "Full"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:104
+#: modules/ribbon/ribbon.php:113 modules/uabb-button/uabb-button.php:325
+#: objects/fl-nested-form-button.php:238
+msgid "Custom Width"
+msgstr ""
+
+#: modules/ribbon/ribbon.php:122
 msgid "To align Ribbon use this setting."
 msgstr ""
 
-#: modules/ribbon/ribbon.php:123
+#: modules/ribbon/ribbon.php:141
 msgid "Stitching"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:129
+#: modules/ribbon/ribbon.php:147
 msgid "To give Stitch effect on Ribbon"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:133
+#: modules/ribbon/ribbon.php:151
 msgid "Ribbon Shadow"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:143
+#: modules/ribbon/ribbon.php:161
 msgid "Ribbon Colors"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:147
+#: modules/ribbon/ribbon.php:165
 msgid "Ribbon Color Type"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:149
+#: modules/ribbon/ribbon.php:167
 msgid ""
 "You can select one of the two background types: Color: simple one color "
 "background or Gradient: two color background."
 msgstr ""
 
-#: modules/ribbon/ribbon.php:165
+#: modules/ribbon/ribbon.php:183
 msgid "Ribbon Color"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:187
+#: modules/ribbon/ribbon.php:205
 msgid "Ribbon Fold Color"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:193
+#: modules/ribbon/ribbon.php:211
 msgid "Ribbon Wings Color"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:205
+#: modules/ribbon/ribbon.php:223
 msgid "Ribbon Text"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:209 modules/slide-box/slide-box.php:845
-#: modules/slide-box/slide-box.php:980
+#: modules/ribbon/ribbon.php:227 modules/slide-box/slide-box.php:863
+#: modules/slide-box/slide-box.php:1034
 msgid "Tag"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:261
+#: modules/ribbon/ribbon.php:297
 msgid "Text Shadow Color"
 msgstr ""
 
@@ -2356,217 +2340,215 @@ msgstr ""
 msgid "Slide Box"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:172 modules/slide-box/slide-box.php:175
-#: modules/slide-box/slide-box.php:180
+#: modules/slide-box/slide-box.php:174 modules/slide-box/slide-box.php:177
+#: modules/slide-box/slide-box.php:182
 msgid "Slide Box Front"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:191
+#: modules/slide-box/slide-box.php:194
 msgid "Add description text here. Lorem Ipsum is a dummy content."
 msgstr ""
 
-#: modules/slide-box/slide-box.php:203
-msgctxt "Image type."
-msgid "None"
-msgstr ""
-
-#: modules/slide-box/slide-box.php:330
+#: modules/slide-box/slide-box.php:335
 msgid "Image / Icon Position"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:334
+#: modules/slide-box/slide-box.php:339
 msgid "Position"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:336
+#: modules/slide-box/slide-box.php:341
 msgid "Image / Icon position"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:338
+#: modules/slide-box/slide-box.php:343
 msgid "Above Heading"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:339
+#: modules/slide-box/slide-box.php:344
 msgid "Left of Heading"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:340
+#: modules/slide-box/slide-box.php:345
 msgid "Right of Heading"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:341
+#: modules/slide-box/slide-box.php:346
 msgid "Left of Text and Heading"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:342
+#: modules/slide-box/slide-box.php:347
 msgid "Right of Text and Heading"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:358 modules/slide-box/slide-box.php:637
+#: modules/slide-box/slide-box.php:363 modules/slide-box/slide-box.php:655
 msgid "Overall Alignment"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:377
+#: modules/slide-box/slide-box.php:382
 msgid "Border between Icon and Text"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:391
+#: modules/slide-box/slide-box.php:396
 msgid "Border Thickness"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:414
+#: modules/slide-box/slide-box.php:419
 msgid "Border Hover / Focus Color"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:437
+#: modules/slide-box/slide-box.php:442
 msgid "Stacking Order"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:440
+#: modules/slide-box/slide-box.php:445
 msgid "Reversed"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:443
+#: modules/slide-box/slide-box.php:448
 msgid "Use this option to show Icon / Image above title in small devices."
 msgstr ""
 
-#: modules/slide-box/slide-box.php:450 modules/slide-box/slide-box.php:453
-#: modules/slide-box/slide-box.php:458
+#: modules/slide-box/slide-box.php:455 modules/slide-box/slide-box.php:458
+#: modules/slide-box/slide-box.php:463
 msgid "Slide Box Back"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:475
+#: modules/slide-box/slide-box.php:480
 msgid ""
-"<ul><li>Enter description text here.</li><li>Enter description text here."
-"</li></ul>"
+"<ul><li>Enter description text here.</li><li>Enter description text "
+"here.</li></ul>"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:480
+#: modules/slide-box/slide-box.php:485
 msgid "Call to Action"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:484
+#: modules/slide-box/slide-box.php:489
 msgid "Type"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:487
-msgctxt "Call to action."
-msgid "None"
+#: modules/slide-box/slide-box.php:493 modules/slide-box/slide-box.php:509
+#: modules/slide-box/slide-box.php:533 modules/uabb-button/uabb-button.php:107
+#: modules/uabb-heading/uabb-heading.php:292
+#: modules/uabb-heading/uabb-heading.php:296
+#: objects/fl-nested-form-button.php:18
+msgid "Text"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:509
+#: modules/slide-box/slide-box.php:514
 msgid ""
 "The link applies to the entire module. If choosing a call to action type "
 "below, this link will also be used for the text or button."
 msgstr ""
 
-#: modules/slide-box/slide-box.php:529
+#: modules/slide-box/slide-box.php:534
 msgid "Read More"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:554
+#: modules/slide-box/slide-box.php:559
 msgid "Select Style"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:556
+#: modules/slide-box/slide-box.php:561
 msgid "Select Slide style for this slide box."
 msgstr ""
 
-#: modules/slide-box/slide-box.php:558
+#: modules/slide-box/slide-box.php:563
 msgid "Style 1"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:559
+#: modules/slide-box/slide-box.php:564
 msgid "Style 2"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:560
+#: modules/slide-box/slide-box.php:565
 msgid "Style 3"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:579
+#: modules/slide-box/slide-box.php:584
 msgid "Slide Box Front Style"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:583 modules/slide-box/slide-box.php:630
+#: modules/slide-box/slide-box.php:589 modules/slide-box/slide-box.php:642
 msgid "Content Padding"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:586
+#: modules/slide-box/slide-box.php:590
 msgid "To apply padding to Slide Box Front use this setting"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:610
+#: modules/slide-box/slide-box.php:622
 msgid "Background Hover/Focus Color"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:626
+#: modules/slide-box/slide-box.php:638
 msgid "Slide Box Back Style"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:633
+#: modules/slide-box/slide-box.php:643
 msgid "To apply padding to Slide Box Back use this setting"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:674
+#: modules/slide-box/slide-box.php:692
 msgid "Overlay"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:678
+#: modules/slide-box/slide-box.php:696
 msgid "Enable Overlay"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:695
+#: modules/slide-box/slide-box.php:713
 msgid "Overlay Color"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:723 modules/slide-box/slide-box.php:763
+#: modules/slide-box/slide-box.php:741 modules/slide-box/slide-box.php:781
 msgid "Icon Background Color"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:738 modules/slide-box/slide-box.php:778
+#: modules/slide-box/slide-box.php:756 modules/slide-box/slide-box.php:796
 msgid "Icon Size"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:747
+#: modules/slide-box/slide-box.php:765
 msgid "Drop Down Icon"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:786
+#: modules/slide-box/slide-box.php:804
 msgid "Icon Alignment"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:797
+#: modules/slide-box/slide-box.php:815
 msgid "Slide Box Min Height"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:801
+#: modules/slide-box/slide-box.php:819
 msgid "Minimum Height"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:818
+#: modules/slide-box/slide-box.php:836
 msgid "Enter Height"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:821
+#: modules/slide-box/slide-box.php:839
 msgid ""
 "Apply minimum height to complete SlideBox. It is useful when multiple "
 "SlideBox are in same row."
 msgstr ""
 
-#: modules/slide-box/slide-box.php:827
+#: modules/slide-box/slide-box.php:845
 msgid "If enabled, the Content would align vertically center"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:897 modules/slide-box/slide-box.php:957
+#: modules/slide-box/slide-box.php:933 modules/slide-box/slide-box.php:1011
 msgid "Hover/Focus Color"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:951 modules/slide-box/slide-box.php:1086
+#: modules/slide-box/slide-box.php:1005 modules/slide-box/slide-box.php:1176
 msgid "Description Color"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:1109
+#: modules/slide-box/slide-box.php:1199
 msgid "Link Text"
 msgstr ""
 
@@ -2574,24 +2556,304 @@ msgstr ""
 msgid "Spacer / Gap"
 msgstr ""
 
-#: modules/spacer-gap/spacer-gap.php:29
+#: modules/spacer-gap/spacer-gap.php:31
 msgid "Desktop"
 msgstr ""
 
-#: modules/spacer-gap/spacer-gap.php:34
+#: modules/spacer-gap/spacer-gap.php:36
 msgid "This value will work for all devices."
 msgstr ""
 
-#: modules/spacer-gap/spacer-gap.php:38
+#: modules/spacer-gap/spacer-gap.php:40
 msgid "Medium Device ( Tabs )"
 msgstr ""
 
-#: modules/spacer-gap/spacer-gap.php:47
+#: modules/spacer-gap/spacer-gap.php:49
 msgid "Small Device ( Mobile )"
 msgstr ""
 
 #: modules/uabb-button/uabb-button.php:15
 msgid "A simple call to action button."
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:108 objects/fl-nested-form-button.php:19
+msgid "Click Here"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:159 objects/fl-nested-form-button.php:61
+msgid "Flat"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:161 objects/fl-nested-form-button.php:63
+msgid "Transparent"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:162 objects/fl-nested-form-button.php:64
+msgid "3D"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:175
+#: modules/uabb-button/uabb-button.php:191
+#: modules/uabb-button/uabb-button.php:206 objects/fl-nested-form-button.php:89
+#: objects/fl-nested-form-button.php:105 objects/fl-nested-form-button.php:120
+msgid "Hover Styles"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:179 objects/fl-nested-form-button.php:93
+msgid "Fade Background"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:180 objects/fl-nested-form-button.php:94
+msgid "Fill Background From Top"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:181 objects/fl-nested-form-button.php:95
+msgid "Fill Background From Bottom"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:182 objects/fl-nested-form-button.php:96
+msgid "Fill Background From Left"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:183 objects/fl-nested-form-button.php:97
+msgid "Fill Background From Right"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:184 objects/fl-nested-form-button.php:98
+msgid "Fill Background Vertical"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:185 objects/fl-nested-form-button.php:99
+msgid "Fill Background Diagonal"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:186
+#: objects/fl-nested-form-button.php:100
+msgid "Fill Background Horizontal"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:194
+#: objects/fl-nested-form-button.php:108
+msgid "Move Down"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:195
+#: objects/fl-nested-form-button.php:109
+msgid "Move Up"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:196
+#: objects/fl-nested-form-button.php:110
+msgid "Move Left"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:197
+#: objects/fl-nested-form-button.php:111
+msgid "Move Right"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:198
+#: objects/fl-nested-form-button.php:112
+msgid "Animate Top"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:199
+#: objects/fl-nested-form-button.php:113
+msgid "Animate Bottom"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:210
+#: objects/fl-nested-form-button.php:124
+msgid "Appear Icon From Right"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:211
+#: objects/fl-nested-form-button.php:125
+msgid "Appear Icon From Left"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:212
+#: objects/fl-nested-form-button.php:126
+msgid "Appear Icon From Top"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:213
+#: objects/fl-nested-form-button.php:127
+msgid "Appear Icon From Bottom"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:219
+#: objects/fl-nested-form-button.php:133
+msgid "Icons"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:228
+#: objects/fl-nested-form-button.php:142
+msgid "Icon Position"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:231
+#: objects/fl-nested-form-button.php:145
+msgid "Before Text"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:232
+#: objects/fl-nested-form-button.php:146
+msgid "After Text"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:288
+#: objects/fl-nested-form-button.php:202
+msgid "Apply Hover Color To"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:291
+#: objects/fl-nested-form-button.php:205
+msgid "Border"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:292
+#: objects/fl-nested-form-button.php:206
+msgid "Background"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:304
+#: modules/uabb-heading/uabb-heading.php:364
+#: modules/uabb-separator/uabb-separator.php:61
+#: objects/fl-nested-form-button.php:217
+msgid "Width"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:308
+#: objects/fl-nested-form-button.php:221
+msgid "Full Width"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:333
+#: objects/fl-nested-form-button.php:246
+msgid "Custom Height"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:341
+#: objects/fl-nested-form-button.php:254
+msgid "Padding Top/Bottom"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:349
+#: objects/fl-nested-form-button.php:262
+msgid "Padding Left/Right"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:357
+#: objects/fl-nested-form-button.php:270
+msgid "Round Corners"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:374
+#: objects/fl-nested-form-button.php:287
+msgid "Mobile Alignment"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:15
+msgid "Display a title/page heading."
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:78
+msgid "Design is a funny word"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:131
+msgid "This is the overall alignment and would apply to all Heading elements"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:150
+msgid "The alignment will apply on Mobile"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:157
+#: modules/uabb-heading/uabb-heading.php:160
+msgid "Separator"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:164
+msgid "Separator Style"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:168
+msgid "Line"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:169
+msgid "Line With Icon"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:170
+msgid "Line With Image"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:171
+msgid "Line With Text"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:194
+msgid "Separator Position"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:197
+msgid "Between Heading & Description"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:280
+msgid "Responsive Size"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:284
+msgid ""
+"Image size below medium devices. Leave it blank if you want to keep same "
+"size"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:306
+msgid ""
+"There might be responsive issues for long texts. If you are facing such "
+"issues then select appropriate devices width to make your module responsive."
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:317
+msgid "Line Style"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:329
+#: modules/uabb-separator/uabb-separator.php:98
+msgid ""
+"The type of border to use. Double borders must have a height of at least "
+"3px to render properly."
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:349
+#: modules/uabb-separator/uabb-separator.php:46
+msgid "Thickness"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:354
+#: modules/uabb-separator/uabb-separator.php:57
+msgid "Thickness of Border"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:382
+msgid "HTML Tag"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:399
+msgid "Font"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:571
+msgid "Separator Text Typography"
+msgstr ""
+
+#: modules/uabb-heading/uabb-heading.php:575
+msgid "Text Tag"
 msgstr ""
 
 #: modules/uabb-separator/uabb-separator.php:14
@@ -2602,37 +2864,23 @@ msgstr ""
 msgid "A divider line to separate content."
 msgstr ""
 
-#: modules/uabb-separator/uabb-separator.php:43
-msgid "Thickness"
-msgstr ""
-
-#: modules/uabb-separator/uabb-separator.php:54
-msgid "Thickness of Border"
-msgstr ""
-
-#: modules/uabb-separator/uabb-separator.php:78
+#: modules/uabb-separator/uabb-separator.php:81
 msgid "Align the border."
 msgstr ""
 
-#: modules/uabb-separator/uabb-separator.php:95
-msgid ""
-"The type of border to use. Double borders must have a height of at least 3px "
-"to render properly."
-msgstr ""
-
-#. Name of the plugin
-msgid "Ultimate Addons Lite for Beaver Builder"
-msgstr ""
-
-#. Description of the plugin
-msgid ""
-"Ultimate Addons is a free extension for Beaver Builder that adds 10 modules, "
-"and works on top of any Beaver Builder Package. (Free, Standard, Pro & "
-"Agency) You can use it with on any WordPress theme."
+#. Plugin Name of the plugin/theme
+msgid "Ultimate Addons for Beaver Builder - Lite"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
 msgid "http://www.ultimatebeaver.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Ultimate Addons is a free extension for Beaver Builder that adds 10 "
+"modules, and works on top of any Beaver Builder Package. (Free, Standard, "
+"Pro & Agency) You can use it with on any WordPress theme."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -2641,4 +2889,30 @@ msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "http://www.brainstormforce.com"
+msgstr ""
+
+#: classes/class-uabb-admin-settings.php:169
+msgctxt "%s stands for custom branded \"UABB\" name."
+msgid "%s Settings"
+msgstr ""
+
+#: classes/class-uabb-init.php:54
+msgctxt "Plugin action link label."
+msgid "Upgrade"
+msgstr ""
+
+#: modules/slide-box/slide-box.php:207
+msgctxt "Image type."
+msgid "None"
+msgstr ""
+
+#: modules/slide-box/slide-box.php:492
+msgctxt "Call to action."
+msgid "None"
+msgstr ""
+
+#: modules/uabb-button/uabb-button.php:307
+#: objects/fl-nested-form-button.php:220
+msgctxt "Width."
+msgid "Auto"
 msgstr ""
