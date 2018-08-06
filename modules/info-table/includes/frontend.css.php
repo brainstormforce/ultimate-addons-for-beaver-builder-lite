@@ -683,7 +683,9 @@ if ( $settings->sub_heading_font_family['family'] != "Default" || isset( $settin
 	    <?php } else if(isset( $settings->sub_heading_line_height_unit ) && $settings->sub_heading_line_height_unit == '' && isset( $settings->sub_heading_line_height['desktop'] ) && $settings->sub_heading_line_height['desktop'] != '') { ?>
 	        line-height: <?php echo $settings->sub_heading_line_height['desktop']; ?>px;
 	    <?php } ?>
-
+		<?php if(isset( $settings->sub_heading_color)) { ?>
+        	color:<?php echo  $settings->sub_heading_color; ?>;
+        	<?php } ?>
 	}
 <?php }
 if ( $settings->description_font_family['family'] != "Default" || isset( $settings->description_font_size['desktop'] ) || isset( $settings->description_line_height['desktop'] ) || $settings->description_font_size_unit != '' || $settings->description_line_height_unit != '' || $settings->description_color != '' ) { ?>
@@ -709,7 +711,9 @@ if ( $settings->description_font_family['family'] != "Default" || isset( $settin
 	    <?php } else if(isset( $settings->description_line_height_unit ) && $settings->description_line_height_unit == '' && isset( $settings->description_line_height['desktop'] ) && $settings->description_line_height['desktop'] != '') { ?>
 	        line-height: <?php echo $settings->description_line_height['desktop']; ?>px;
 	    <?php } ?>
-
+		<?php if(isset( $settings->description_color)) { ?>
+        		color:<?php echo  $settings->description_color; ?>;
+       		 <?php } ?>
 	}
 <?php }
 
