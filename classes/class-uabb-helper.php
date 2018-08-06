@@ -7,6 +7,14 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 	
 	class BB_Ultimate_Addon_Helper {
 
+		/**
+		 * Holds any category strings of modules.
+		 *
+		 * @since 1.3.0
+		 * @var Category Strings
+		 */
+		static public $basic_modules = '';
+
 		/*
 		* Constructor function that initializes required actions and hooks
 		* @Since 1.0
@@ -18,6 +26,7 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 
 		function set_constants() {
 			$branding         = BB_Ultimate_Addon_Helper::get_builder_uabb_branding();
+			self::$basic_modules	= __( 'Basic', 'uabb' );
 			$branding_name    = 'UABB';
 			$branding_modules = __('UABB Modules', 'uabb');
 
@@ -377,6 +386,36 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 					'class' => '',
 					'tag_title' => ''
 				),
+				'uabb-content-toggle'         	=> array(
+					'label' => 'Content Toggle',
+					'demo_url' => 'https://www.ultimatebeaver.com/modules/content-toggle/',
+					'class' => 'uabb-premium-flyout-green',
+					'tag_title' => 'New!'
+				),
+				'uabb-business-hours'         	=> array(
+					'label' => 'Business Hours',
+					'demo_url' => 'https://www.ultimatebeaver.com/modules/business-hours/',
+					'class' => 'uabb-premium-flyout-green',
+					'tag_title' => 'New!'
+				),
+				'uabb-woo-add-to-cart'         	=> array(
+					'label' => 'Woo Add to Cart',
+					'demo_url' => 'https://www.ultimatebeaver.com/modules/woo-add-to-cart/',
+					'class' => 'uabb-premium-flyout-green',
+					'tag_title' => 'New!'
+				),
+				'uabb-woo-categories'         	=> array(
+					'label' => 'Woo Categories',
+					'demo_url' => 'https://www.ultimatebeaver.com/modules/woo-categories/',
+					'class' => 'uabb-premium-flyout-green',
+					'tag_title' => 'New!'
+				),
+				'uabb-woo-products'         	=> array(
+					'label' => 'Woo Products',
+					'demo_url' => 'https://www.ultimatebeaver.com/modules/woo-products/',
+					'class' => 'uabb-premium-flyout-green',
+					'tag_title' => 'New!'
+				),
 			);
 			
 			return $premium_modules_array;
@@ -448,7 +487,9 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 								isset( $template_data['status'] ) && $template_data['status'] == true &&
 								isset( $template_data['dat_url_local'] ) && !empty( $template_data['dat_url_local'] )
 							) {
-								$exist_templates[$type] = ( count( $exist_templates[$type] ) + 1 );
+								if( is_array( $exist_templates[$type] ) ) {
+									$exist_templates[$type] = ( count( $exist_templates[$type] ) + 1 );
+								}
 							}
 						}
 					}
@@ -457,20 +498,20 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 
 			switch ( $templates_type ) {
 				case 'page-templates':
-								$_templates_exist = ( $exist_templates['page-templates'] >= 1 ) ? true : false;
+					$_templates_exist = ( $exist_templates['page-templates'] >= 1 ) ? true : false;
 				break;
 
 				case 'sections':
-								$_templates_exist = ( $exist_templates['sections'] >= 1 ) ? true : false;
+					$_templates_exist = ( $exist_templates['sections'] >= 1 ) ? true : false;
 				break;
 
 				case 'presets':
-								$_templates_exist = ( $exist_templates['presets'] >= 1 ) ? true : false;
+					$_templates_exist = ( $exist_templates['presets'] >= 1 ) ? true : false;
 				break;
 
 				case 'all':
 					default:
-								$_templates_exist = ( $exist_templates['page-templates'] >= 1 || $exist_templates['sections'] >= 1 || $exist_templates['presets'] >= 1 ) ? true : false;
+						$_templates_exist = ( $exist_templates['page-templates'] >= 1 || $exist_templates['sections'] >= 1 || $exist_templates['presets'] >= 1 ) ? true : false;
 				break;
 			}
 

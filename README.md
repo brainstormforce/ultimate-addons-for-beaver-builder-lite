@@ -40,7 +40,7 @@ Want to connect with us to know more? Or have some suggestions we can take forwa
 <ul>
  	<li><a href="https://www.ultimatebeaver.com/modules/ribbon/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Ribbon</a>: An attractive lead generation module that allows you to display headings, titles and offers within an attractive ribbon that can be customized as per your needs.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/image-separator/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Image Separator</a>: A creative module that allows you to add relevant and attractive looking images between rows.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/info-table/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO">Info Table</a> : A wonderful content module that can be used to display content in a descriptive manner with a title, description, links and image to accompany them all.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/info-table/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO">Info Table</a> : A wonderful content module that can be used to display content in a descriptive manner with a title, description, links and image to accompany them all.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/info-list/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Info List</a>: Another content module that allows you to display a list of items with their respective information along with an image or icon.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/slide-box?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Slide Box</a>: A creative module that allows you to add content on the front and back of a box. The content on the back slides out when you hover or click on the box.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/flip-box/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Flip Box</a>: Another creative module that acts similar to a slide box; just that the box is flipped around to display the content on the back.</li>
@@ -101,7 +101,7 @@ With the Ultimate Addons for Beaver Builder you get a collection of over 35+ cus
  	<li><a href="https://www.ultimatebeaver.com/modules/simple-separator/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Simple Separator</a>: A simple content module that allows you to add a separator between the title and the description of a particular content. You’ll love the styling options given here!</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/advanced-tabs/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Advanced Tabs</a>: An advanced content module that lets you add a number of tabs with images, icons, text and other modules that makes navigation easier.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/team/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Team</a>: A content module that lets you introduce the people you are working with. Simply drag and drop; add photos and text that best suits your team.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/price-box/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Price Box</a>: The price box module not only allows you to display the price but, gives you a number of styles that can be used to compare a number of pricing options, products and more.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/price-box/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Price Box</a>: The price box module not only allows you to display the price but, gives you a number of styles that can be used to compare a number of pricing options, products and more.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/advanced-posts/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Advanced Posts</a>: Have a blog on your website? The Advanced Posts module lets you display your blog posts in a single section on a page. With various layouts and styling options, you are sure to entice your users.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/info-banner/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Info Banners</a>: Banners can be boring with simple text and images. The Info banners can be customized with attractive images, great text, clickable links and animations you’ll love!</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/info-list/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Info List</a>: Another content module that allows you to display a list of items with their respective information along with an image or icon.</li>
@@ -128,6 +128,11 @@ With the Ultimate Addons for Beaver Builder you get a collection of over 35+ cus
  	<li><a href="https://www.ultimatebeaver.com/modules/advanced-menu/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Advanced Menu</a>: Create an creative menus with the Advanced Menu module that is fully compatible with the Beaver Themer too!.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/contact-form7-styler/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Contact Form 7 Styler</a>: Create simple yet attractive contact forms using CF7 styler for your WordPress website and make it easy for users to contact you.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/gravity-forms/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Gravity Forms Styler</a>: Create an attractive and simple Gravity Forms Styler for your WordPress website and make it easy for users to contact you.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/content-toggle/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Content Toggle</a>: Use the Content Toggle module of the Ultimate Addons for Beaver Builder and allow your users to switch between two different content types, templates or pages within the same section..</li> 	
+ 	<li><a href="https://www.ultimatebeaver.com/modules/business-hours/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Business Hours</a>: Create a stylish business hours section that suits your website with the Business Hours module of the Ultimate Addons for Beaver Builder.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/woo-products/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Woo Products</a>: Use the Ultimate Addon’s Woo Products module to display your products and create a better-looking eCommerce store on your website.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/woo-categories/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Woo Categories</a>: Display product categories in style with the advanced Woo Categories module of the Ultimate Addons for Beaver Builder.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/woo-add-to-cart/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Woo Add To Cart</a>: Use the Ultimate Addon’s Woo Add to Cart module built to work with Beaver Builder and WooCommerce to add advanced add to cart options quickly and easily.</li>
 </ul>
 <strong>Template Cloud with Page and Section Templates</strong>
 
@@ -191,7 +196,7 @@ Absolutely no! The Ultimate Addons is built with ease and performance in mind. Y
 
 ### Is the Ultimate Addons translation ready? ###
 
-Yes it is! This plugin comes with .po and .mo files. It is already translated in a few languages. We have a <a href="http://translate.ultimatebeaver.com/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=FAQ" target="_blank">GlotPress portal</a> where you can help us translate the Ultimate Addons in your language.
+Yes it is! This plugin comes with .po and .mo files. It is already translated in a few languages. We have a <a href="http://translate.ultimatebeaver.com/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=FAQ" target="_blank">GlotPress portal</a> where you can help us translate the Ultimate Addons in your language.
 
 ## Screenshots ##
 
@@ -201,6 +206,10 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 4. /assets/screenshots/4.png
 
 ## Changelog ##
+
+### 1.2.4 ###
+* Fixed: Improved performance of the field replacement functionality
+* Fixed: Reduced the frontend data render calls to help with performance
 
 ### 1.2.3.1 ###
 * Fixed: Heading Module responsive font size not working

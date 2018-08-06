@@ -7,7 +7,7 @@ class UABBSpacerGap extends FLBuilderModule {
         parent::__construct(array(
             'name'            => __( 'Spacer / Gap', 'uabb' ),
             'description'     => __( 'A totally awesome module!', 'uabb' ),
-            'category'      => BB_Ultimate_Addon_Helper::module_cat(''),
+            'category'          => BB_Ultimate_Addon_Helper::module_cat(BB_Ultimate_Addon_Helper::$basic_modules),
             'group'         => UABB_CAT,
             'dir'             => BB_ULTIMATE_ADDON_DIR . 'modules/spacer-gap/',
             'url'             => BB_ULTIMATE_ADDON_URL . 'modules/spacer-gap/',
