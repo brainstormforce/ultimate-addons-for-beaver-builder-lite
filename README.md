@@ -3,8 +3,8 @@
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Tags:** beaver builder, beaver builder free, beaver addons, beaver builder addon, beaver builder add ons, beaver builder lite, beaver builder modules, beaver builder addons, beaver builder extensions, beaver addon, beaver builder plugin, beaver builder wordpress  
 **Requires at least:** 4.6  
-**Tested up to:** 4.9.5
-**Stable tag:** 1.2.3.1  
+**Tested up to:** 4.9.8  
+**Stable tag:** 1.2.4  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -40,15 +40,15 @@ Want to connect with us to know more? Or have some suggestions we can take forwa
 <ul>
  	<li><a href="https://www.ultimatebeaver.com/modules/ribbon/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Ribbon</a>: An attractive lead generation module that allows you to display headings, titles and offers within an attractive ribbon that can be customized as per your needs.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/image-separator/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Image Separator</a>: A creative module that allows you to add relevant and attractive looking images between rows.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/info-table/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO">Info Table</a> : A wonderful content module that can be used to display content in a descriptive manner with a title, description, links and image to accompany them all.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/info-table/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO">Info Table</a> : A wonderful content module that can be used to display content in a descriptive manner with a title, description, links and image to accompany them all.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/info-list/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Info List</a>: Another content module that allows you to display a list of items with their respective information along with an image or icon.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/slide-box?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Slide Box</a>: A creative module that allows you to add content on the front and back of a box. The content on the back slides out when you hover or click on the box.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/flip-box/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Flip Box</a>: Another creative module that acts similar to a slide box; just that the box is flipped around to display the content on the back.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/button/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Button</a>: A button can act as an effective lead generation module paired with your call-to-action. This module comes with several ways to make it look stylish and trendy.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/image-icon/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Image / Icon</a>: A lively content module that allows you to add an image of your choice and an icon among the hundreds available in the free library that comes with the Ultimate Addons for Beaver Builder.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/image-separator/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Simple Separator</a>: A simple content module that allows you to add a separator between the title and the description of a particular content. You’ll love the styling options given here!</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/heading/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Heading</a>: The Heading module allows you to add a heading anywhere on the page. Next time you want to add a single line, remember, you have the heading module.</li>
  	<li>Spacer: A very simple, yet useful module that allows you to insert extra space between modules or anywhere on a page.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/heading/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Heading</a>: The Heading module allows you to add a heading anywhere on the page. Next time you want to add a single line, remember, you have the heading module.</li>
  	<li>100% SEO Friendly and quick loading modules.</li>
  	<li>A translation friendly interface that makes working easy and fun.</li>
  	<li>Built with responsive designs.</li>
@@ -101,7 +101,7 @@ With the Ultimate Addons for Beaver Builder you get a collection of over 35+ cus
  	<li><a href="https://www.ultimatebeaver.com/modules/simple-separator/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Simple Separator</a>: A simple content module that allows you to add a separator between the title and the description of a particular content. You’ll love the styling options given here!</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/advanced-tabs/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Advanced Tabs</a>: An advanced content module that lets you add a number of tabs with images, icons, text and other modules that makes navigation easier.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/team/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Team</a>: A content module that lets you introduce the people you are working with. Simply drag and drop; add photos and text that best suits your team.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/price-box/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Price Box</a>: The price box module not only allows you to display the price but, gives you a number of styles that can be used to compare a number of pricing options, products and more.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/price-box/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Price Box</a>: The price box module not only allows you to display the price but, gives you a number of styles that can be used to compare a number of pricing options, products and more.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/advanced-posts/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Advanced Posts</a>: Have a blog on your website? The Advanced Posts module lets you display your blog posts in a single section on a page. With various layouts and styling options, you are sure to entice your users.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/info-banner/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Info Banners</a>: Banners can be boring with simple text and images. The Info banners can be customized with attractive images, great text, clickable links and animations you’ll love!</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/info-list/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Info List</a>: Another content module that allows you to display a list of items with their respective information along with an image or icon.</li>
@@ -196,7 +196,7 @@ Absolutely no! The Ultimate Addons is built with ease and performance in mind. Y
 
 ### Is the Ultimate Addons translation ready? ###
 
-Yes it is! This plugin comes with .po and .mo files. It is already translated in a few languages. We have a <a href="http://translate.ultimatebeaver.com/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=FAQ" target="_blank">GlotPress portal</a> where you can help us translate the Ultimate Addons in your language.
+Yes it is! This plugin comes with .po and .mo files. It is already translated in a few languages. We have a <a href="http://translate.ultimatebeaver.com/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=FAQ" target="_blank">GlotPress portal</a> where you can help us translate the Ultimate Addons in your language.
 
 ## Screenshots ##
 
