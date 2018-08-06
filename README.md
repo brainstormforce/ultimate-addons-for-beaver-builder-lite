@@ -244,4 +244,4 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 * Fixed: Image Separator - Fixed scroll bar issue on small devices
 
 ### 1.0 ###
-* Initial release{\rtf1}
+* Initial release
