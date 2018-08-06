@@ -39,8 +39,6 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 
 			// UABB Updates.
 			add_action( 'wp', array( $this, 'update_data' ) );
-			//add_action( 'fl_builder_editing_enabled', array( $this, 'update_data' ) );
-
 			add_action( 'transition_post_status', array( $this, 'post_status' ), 10, 3 );
 		}
 

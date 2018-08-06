@@ -487,8 +487,9 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 								isset( $template_data['status'] ) && $template_data['status'] == true &&
 								isset( $template_data['dat_url_local'] ) && !empty( $template_data['dat_url_local'] )
 							) {
-								if(is_array($exist_templates[$type]))
-								$exist_templates[$type] = ( count( $exist_templates[$type] ) + 1 );
+								if( is_array( $exist_templates[$type] ) ) {
+									$exist_templates[$type] = ( count( $exist_templates[$type] ) + 1 );
+								}
 							}
 						}
 					}
@@ -497,20 +498,20 @@ if( !class_exists( "BB_Ultimate_Addon_Helper" ) ) {
 
 			switch ( $templates_type ) {
 				case 'page-templates':
-								$_templates_exist = ( $exist_templates['page-templates'] >= 1 ) ? true : false;
+					$_templates_exist = ( $exist_templates['page-templates'] >= 1 ) ? true : false;
 				break;
 
 				case 'sections':
-								$_templates_exist = ( $exist_templates['sections'] >= 1 ) ? true : false;
+					$_templates_exist = ( $exist_templates['sections'] >= 1 ) ? true : false;
 				break;
 
 				case 'presets':
-								$_templates_exist = ( $exist_templates['presets'] >= 1 ) ? true : false;
+					$_templates_exist = ( $exist_templates['presets'] >= 1 ) ? true : false;
 				break;
 
 				case 'all':
 					default:
-								$_templates_exist = ( $exist_templates['page-templates'] >= 1 || $exist_templates['sections'] >= 1 || $exist_templates['presets'] >= 1 ) ? true : false;
+						$_templates_exist = ( $exist_templates['page-templates'] >= 1 || $exist_templates['sections'] >= 1 || $exist_templates['presets'] >= 1 ) ? true : false;
 				break;
 			}
 
