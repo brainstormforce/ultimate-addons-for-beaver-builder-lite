@@ -13,7 +13,7 @@ class UABBButtonModule extends FLBuilderModule {
 		parent::__construct(array(
 			'name'          => __('Button', 'uabb'),
 			'description'   => __('A simple call to action button.', 'uabb'),
-			'category'      => BB_Ultimate_Addon_Helper::module_cat(''),
+			'category'          => BB_Ultimate_Addon_Helper::module_cat(BB_Ultimate_Addon_Helper::$basic_modules),
             'group'         => UABB_CAT,
 			'dir'           => BB_ULTIMATE_ADDON_DIR . 'modules/uabb-button/',
             'url'           => BB_ULTIMATE_ADDON_URL . 'modules/uabb-button/',
@@ -21,46 +21,8 @@ class UABBButtonModule extends FLBuilderModule {
             'enabled'       => true, // Defaults to true and can be omitted.
             'icon'          => 'button.svg'
 		));
-
-		add_filter( 'fl_builder_layout_data', array( $this , 'render_new_data' ), 10, 3 );
 	}
-
-    function render_new_data( $data ) {
-
-        foreach ( $data as &$node ) {
-            
-            if ( isset( $node->settings->type ) && 'uabb-button' === $node->settings->type ) {
-
-                if ( isset( $node->settings->font_size['small']) && !isset( $node->settings->font_size_unit_responsive ) ) {
-                    $node->settings->font_size_unit_responsive = $node->settings->font_size['small'];
-                }
-                if( isset( $node->settings->font_size['medium']) && !isset( $node->settings->font_size_unit_medium ) ) {
-                    $node->settings->font_size_unit_medium = $node->settings->font_size['medium'];
-                }
-                if( isset( $node->settings->font_size['desktop']) && !isset( $node->settings->font_size_unit ) ) {
-                    $node->settings->font_size_unit = $node->settings->font_size['desktop'];
-                }
-
-                if ( isset( $node->settings->line_height['small']) && isset( $node->settings->font_size['small']) && $node->settings->font_size['small'] != 0 && !isset( $node->settings->line_height_unit_responsive ) ) {
-                	if( is_numeric( $node->settings->line_height['small']) && is_numeric( $node->settings->font_size['small']) )
-                    $node->settings->line_height_unit_responsive = round( $node->settings->line_height['small'] / $node->settings->font_size['small'], 2 );
-                }
-                if( isset( $node->settings->line_height['medium']) && isset( $node->settings->font_size['medium']) && $node->settings->font_size['medium'] != 0 && !isset( $node->settings->line_height_unit_medium ) ) {
-                	if( is_numeric( $node->settings->line_height['medium']) && is_numeric( $node->settings->font_size['medium']) )
-                    $node->settings->line_height_unit_medium = round( $node->settings->line_height['medium'] / $node->settings->font_size['medium'], 2 );
-                }
-                if( isset( $node->settings->line_height['desktop']) && isset( $node->settings->font_size['desktop']) && $node->settings->font_size['desktop'] != 0 && !isset( $node->settings->line_height_unit ) ) {
-                	if( is_numeric( $node->settings->line_height['desktop']) && is_numeric( $node->settings->font_size['desktop']) )
-                    $node->settings->line_height_unit = round( $node->settings->line_height['desktop'] / $node->settings->font_size['desktop'], 2 );
-                }
-
-            }
-        }
-
-    return $data;
-    }
-
-
+	
 	/**
 	 * @method update
 	 */

@@ -3,8 +3,8 @@ Contributors: brainstormforce
 Donate link: https://www.paypal.me/BrainstormForce
 Tags: beaver builder, beaver builder free, beaver addons, beaver builder addon, beaver builder add ons, beaver builder lite, beaver builder modules, beaver builder addons, beaver builder extensions, beaver addon, beaver builder plugin, beaver builder wordpress
 Requires at least: 4.6
-Tested up to: 4.9.5
-Stable tag: 1.2.3.1
+Tested up to: 5.0
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -128,6 +128,11 @@ With the Ultimate Addons for Beaver Builder you get a collection of over 35+ cus
  	<li><a href="https://www.ultimatebeaver.com/modules/advanced-menu/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Advanced Menu</a>: Create an creative menus with the Advanced Menu module that is fully compatible with the Beaver Themer too!.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/contact-form7-styler/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Contact Form 7 Styler</a>: Create simple yet attractive contact forms using CF7 styler for your WordPress website and make it easy for users to contact you.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/gravity-forms/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Gravity Forms Styler</a>: Create an attractive and simple Gravity Forms Styler for your WordPress website and make it easy for users to contact you.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/content-toggle/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Content Toggle</a>: Use the Content Toggle module of the Ultimate Addons for Beaver Builder and allow your users to switch between two different content types, templates or pages within the same section..</li> 	
+ 	<li><a href="https://www.ultimatebeaver.com/modules/business-hours/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Business Hours</a>: Create a stylish business hours section that suits your website with the Business Hours module of the Ultimate Addons for Beaver Builder.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/woo-products/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Woo Products</a>: Use the Ultimate Addon’s Woo Products module to display your products and create a better-looking eCommerce store on your website.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/woo-categories/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Woo Categories</a>: Display product categories in style with the advanced Woo Categories module of the Ultimate Addons for Beaver Builder.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/woo-add-to-cart/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Woo Add To Cart</a>: Use the Ultimate Addon’s Woo Add to Cart module built to work with Beaver Builder and WooCommerce to add advanced add to cart options quickly and easily.</li>
 </ul>
 <strong>Template Cloud with Page and Section Templates</strong>
 
@@ -201,6 +206,10 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 4. /assets/screenshots/4.png
 
 == Changelog ==
+
+= 1.2.4 =
+* Fixed: Improved performance of the field replacement functionality
+* Fixed: Reduced the frontend data render calls to help with performance
 
 = 1.2.3.1 =
 * Fixed: Heading Module responsive font size not working

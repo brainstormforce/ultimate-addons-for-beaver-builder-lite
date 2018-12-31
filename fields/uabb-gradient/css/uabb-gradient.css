@@ -1,6 +1,5 @@
 .uabb-gradient-wrapper {
     position: relative;
-   /* height: 132px;*/
 }
 
 .uabb-gradient-wrapper .uabb-gradient-item {
@@ -13,7 +12,7 @@
 }
 
 .uabb-gradient-wrapper.bb-colorpick .uabb-gradient-item:last-child {
-    margin-top: 4px;
+    margin-top: 15px;
     margin-bottom: 0;
 }
 .uabb-gradient-wrapper .wp-color-result {
@@ -22,19 +21,15 @@
 
 .uabb-gradient-wrapper .uabb-gradient-label {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: bottom;
     width: 50px;
-    margin-right: 15px;
+    margin: 0 15px 10px 0;
     padding-top: 5px;
 }
 
 .uabb-gradient-wrapper .wp-picker-container,
 .uabb-gradient-wrapper .fl-color-picker {
-  /*  display: inline-block;*/
     vertical-align: top;
-    position: absolute;
-    top: 0;
-    left: 66px;
 }
 
 .uabb-gradient-wrapper .uabb-gradient-angle-input {
@@ -46,14 +41,14 @@
 
 .uabb-gradient-wrapper .uabb-gradient-direction-select {
     margin: 0;
-    padding: 0;
+    padding: 3px 9px;
     height: 24px;
     box-sizing: border-box;
 }
 
 .uabb-gradient-wrapper .uabb-gradient-angle .fl-field-description {
     display: inline-block;
-    padding-top: 5px;
+    padding-top: 9px;
 }
 
 
@@ -69,8 +64,6 @@
 
 .uabb-gradient-wrapper .uabb-gradient-direction,
 .uabb-gradient-wrapper .uabb-gradient-angle {
-    /*display: inline-block;
-    vertical-align: top;*/
     min-height: 32px;
 }
 
@@ -90,4 +83,12 @@
 .uabb-gradient-wrapper .uabb-gradient-angle {
     position: relative;
     z-index: 1;
+}
+
+.uabb-gradient-wrapper .fl-color-picker {
+    display: inline-flex;
+}
+
+.fl-lightbox-width-slim .uabb-gradient-wrapper .uabb-gradient-label {
+    display: block;
 }
