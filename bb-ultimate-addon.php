@@ -87,27 +87,31 @@ if( !class_exists( "BB_Ultimate_Addon" ) ) {
 
 	new BB_Ultimate_Addon();
 } else {
-	// Display admin notice for activating beaver builder
-	add_action( 'admin_notices', 'admin_notices' );
-	add_action( 'network_admin_notices', 'admin_notices' );
-	function admin_notices() {
-		$deactivate_url = admin_url( 'plugins.php' );
-		if ( is_plugin_active_for_network( 'ultimate-addons-for-beaver-builder-lite/bb-ultimate-addon.php' ) ) {
-			$deactivate_url = network_admin_url( 'plugins.php' );
+	
+	if( ! function_exists( 'uabb_lite_admin_notices' ) ) {
+		function uabb_lite_admin_notices() {
+			$deactivate_url = admin_url( 'plugins.php' );
+			if ( is_plugin_active_for_network( 'ultimate-addons-for-beaver-builder-lite/bb-ultimate-addon.php' ) ) {
+				$deactivate_url = network_admin_url( 'plugins.php' );
+			}
+			$slug = 'bb-ultimate-addon';
+			$deactivate_url = add_query_arg(
+				array(
+					'action'        => 'deactivate',
+					'plugin'        => rawurlencode( 'ultimate-addons-for-beaver-builder-lite/' . $slug . '.php' ),
+					'plugin_status' => 'all',
+					'paged'         => '1',
+					'_wpnonce'      => wp_create_nonce( 'deactivate-plugin_ultimate-addons-for-beaver-builder-lite/' . $slug . '.php' ),
+				), $deactivate_url
+			);
+			echo '<div class="notice notice-error"><p>';
+			echo sprintf( __( "You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='%s'>deactivate one</a> before continuing.", 'uabb' ), $deactivate_url );
+			echo '</p></div>';
 		}
-		$slug = 'bb-ultimate-addon';
-		$deactivate_url = add_query_arg(
-			array(
-				'action'        => 'deactivate',
-				'plugin'        => rawurlencode( 'ultimate-addons-for-beaver-builder-lite/' . $slug . '.php' ),
-				'plugin_status' => 'all',
-				'paged'         => '1',
-				'_wpnonce'      => wp_create_nonce( 'deactivate-plugin_ultimate-addons-for-beaver-builder-lite/' . $slug . '.php' ),
-			), $deactivate_url
-		);
-		echo '<div class="notice notice-error"><p>';
-		echo sprintf( __( "You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='%s'>deactivate one</a> before continuing.", 'uabb' ), $deactivate_url );
-		echo '</p></div>';
 
+		// Display admin notice for activating beaver builder
+		add_action( 'admin_notices', 'uabb_lite_admin_notices' );
+		add_action( 'network_admin_notices', 'uabb_lite_admin_notices' );
 	}
+
 }
