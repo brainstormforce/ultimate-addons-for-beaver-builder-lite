@@ -59,6 +59,7 @@ class UABB_Init {
 	function includes() {
         
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-update.php';
+		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-compatibility.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-backward.php';
 		
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-helper.php';
