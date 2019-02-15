@@ -167,19 +167,45 @@ if ( ! empty( $settings->bg_hover_color ) ) {
 	<?php endif; ?>
 }
 <?php if ( ! $version_bb_check ) { ?>
-	<?php if ( 'custom' == $settings->width && $settings->custom_height != '' && ( $settings->line_height->desktop == '' || ( intval($settings->custom_height) > intval($settings->line_height->desktop) ) ) ) : ?>
-	html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-	html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+	<?php if ( isset( $settings->line_height ) && is_array( $settings->line_height ) && 'custom' == $settings->width && '' != $settings->custom_height && ( isset( $settings->line_height['desktop'] ) && '' == $settings->line_height['desktop'] || ( intval( $settings->custom_height ) > intval( $settings->line_height['desktop'] ) ) ) ) { ?>
+
+		html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
+		html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
 		line-height: <?php echo $settings->custom_height; ?>px;
-	}
-	<?php endif; ?>
+		}
+
+	<?php } elseif ( isset( $settings->line_height ) && is_object( $settings->line_height ) && 'custom' == $settings->width && '' != $settings->custom_height && ( isset( $settings->line_height->desktop ) && '' == $settings->line_height->desktop || ( intval( $settings->custom_height ) > intval( $settings->line_height->desktop ) ) ) ) { ?>
+		html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
+		html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+		line-height: <?php echo $settings->custom_height; ?>px;
+		}
+	<?php } ?>
 <?php } else { ?>
-	<?php if ( 'custom' == $settings->width && $settings->custom_height != '' && (  $settings->button_typo['line_height'] == '' || ( intval($settings->custom_height) > intval(  $settings->button_typo['line_height']['length'] ) ) ) ) : ?>
-	html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-	html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
-		line-height: <?php echo $settings->custom_height; ?>px;
-	}
-	<?php endif; ?>
+	<?php if ( is_array( $settings->button_typo ) ) { ?>
+		<?php if ( isset( $settings->button_typo['line_height'] ) && is_array( $settings->button_typo['line_height'] ) && 'custom' == $settings->width && '' != $settings->custom_height ) { ?>
+			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
+			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+				line-height: <?php echo $settings->custom_height . $settings->custom_height_unit; ?>;
+			}
+		<?php } elseif ( isset( $settings->button_typo['line_height'] ) && is_object( $settings->button_typo['line_height'] ) && 'custom' == $settings->width && '' != $settings->custom_height ) { ?>
+			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
+			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+				line-height: <?php echo $settings->custom_height . $settings->custom_height_unit; ?>;
+			}
+		<?php } ?>
+	<?php } elseif ( is_object( $settings->button_typo ) ) { ?>
+			<?php if ( isset( $settings->button_typo->line_height ) && is_object( $settings->button_typo->line_height ) && 'custom' == $settings->width && '' != $settings->custom_height ) { ?>
+			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
+			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+				line-height: <?php echo $settings->custom_height . $settings->custom_height_unit; ?>;
+			}
+		<?php } elseif ( isset( $settings->button_typo->line_height ) && is_object( $settings->button_typo->line_height ) && 'custom' == $settings->width && '' != $settings->custom_height ) { ?>
+			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
+			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+				line-height: <?php echo $settings->custom_height . $settings->custom_height_unit; ?>;
+			}
+		<?php } ?>
+	<?php } ?>
 <?php } ?>
 
 <?php if ( 'custom' == $settings->width && $settings->custom_height != '' ) : 
