@@ -166,13 +166,21 @@ if ( ! empty( $settings->bg_hover_color ) ) {
 	
 	<?php endif; ?>
 }
-
-<?php if ( 'custom' == $settings->width && $settings->custom_height != '' && ( $settings->line_height->desktop == '' || ( intval($settings->custom_height) > intval($settings->line_height->desktop) ) ) ) : ?>
-html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
-	line-height: <?php echo $settings->custom_height; ?>px;
-}
-<?php endif; ?>
+<?php if ( ! $version_bb_check ) { ?>
+	<?php if ( 'custom' == $settings->width && $settings->custom_height != '' && ( $settings->line_height->desktop == '' || ( intval($settings->custom_height) > intval($settings->line_height->desktop) ) ) ) : ?>
+	html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
+	html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+		line-height: <?php echo $settings->custom_height; ?>px;
+	}
+	<?php endif; ?>
+<?php } else { ?>
+	<?php if ( 'custom' == $settings->width && $settings->custom_height != '' && (  $settings->button_typo['line_height'] == '' || ( intval($settings->custom_height) > intval(  $settings->button_typo['line_height']['length'] ) ) ) ) : ?>
+	html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
+	html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+		line-height: <?php echo $settings->custom_height; ?>px;
+	}
+	<?php endif; ?>
+<?php } ?>
 
 <?php if ( 'custom' == $settings->width && $settings->custom_height != '' ) : 
 	$translateText = intval($settings->custom_height) + ($padding_top_bottom * 2) + 50;
