@@ -1,4 +1,10 @@
-<?php //echo '<pre>'; print_r($settings); echo "</pre>"; ?>
+<?php
+	if ( isset( $settings->link_nofollow ) ) {
+		$link_nofollow = $settings->link_nofollow;
+	} else {
+		$link_nofollow = '';
+	}
+ ?>
 <div class="uabb-module-content <?php echo $module->get_classname(); ?>">
 	<?php 
 	if ( isset( $settings->threed_button_options ) && ( $settings->threed_button_options == "animate_top" || $settings->threed_button_options == "animate_bottom" || $settings->threed_button_options == "animate_left" || $settings->threed_button_options == "animate_right" ) ) {
@@ -8,7 +14,7 @@
 	}
 	?>
 	
-		<a href="<?php echo $settings->link; ?>" target="<?php echo $settings->link_target; ?>" class="uabb-button uabb-creative-button <?php echo 'uabb-creative-'.$settings->style.'-btn' ?> <?php echo $module->get_button_style(); ?> <?php echo ( isset( $settings->a_class ) ) ? $settings->a_class : '' ; ?> " <?php echo ( isset( $settings->a_data ) ) ? $settings->a_data : '' ; ?> role="button">
+		<a href="<?php echo $settings->link; ?>" target="<?php echo $settings->link_target; ?>" <?php UABB_Helper::get_link_rel( $settings->link_target, $link_nofollow, 1 ); ?>class="uabb-button uabb-creative-button <?php echo 'uabb-creative-'.$settings->style.'-btn' ?> <?php echo $module->get_button_style(); ?> <?php echo ( isset( $settings->a_class ) ) ? $settings->a_class : '' ; ?> " <?php echo ( isset( $settings->a_data ) ) ? $settings->a_data : '' ; ?> role="button">
 			<?php if ( ! empty( $settings->icon ) && ( 'before' == $settings->icon_position || ! isset( $settings->icon_position ) ) ) : 
 
 			if ( $settings->style == 'flat' && isset( $settings->flat_button_options ) && ( $settings->flat_button_options == "animate_to_right" || $settings->flat_button_options == "animate_to_left" || $settings->flat_button_options == "animate_from_top" || $settings->flat_button_options == "animate_from_bottom" ) ) {

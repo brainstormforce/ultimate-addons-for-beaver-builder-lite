@@ -204,5 +204,35 @@ if( !class_exists( 'UABB_Helper' ) ) {
 			}
 			echo $css;
 		}
+		/**
+		 *  Get link rel attribute
+		 *
+		 *  @since 1.3.0
+		 *  @param string $target gets an string for the link.
+		 *  @param string $is_nofollow gets an string for is no follow.
+		 *  @param string $echo gets an string for echo.
+		 *  @return string
+		 */
+		static public function get_link_rel( $target, $is_nofollow = 0, $echo = 0 ) {
+
+			$attr = '';
+			if ( '_blank' == $target ) {
+				$attr .= 'noopener';
+			}
+
+			if ( 1 == $is_nofollow || 'yes' == $is_nofollow ) {
+				$attr .= ' nofollow';
+			}
+
+			if ( '' == $attr ) {
+				return;
+			}
+
+			$attr = trim( $attr );
+			if ( ! $echo ) {
+				return 'rel="' . $attr . '"';
+			}
+			echo 'rel="' . $attr . '"';
+		}
 	}
 }
