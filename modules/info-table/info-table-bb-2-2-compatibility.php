@@ -59,21 +59,10 @@ FLBuilder::register_module('UABBInfoTableModule', array(
                     'it_link'       => array(
                         'type'      => 'link',
                         'label'     => __( 'Select URL', 'uabb' ),
-                        'connections'   => array( 'url' )
+                        'connections'   => array( 'url' ),
+                        'show_target'    => true,
+                        'show_nofollow'  => true,
                     ),
-                    'it_link_target'   => array(
-                        'type'          => 'select',
-                        'label'         => __('Link Target', 'uabb'),
-                        'help'          => __( 'Controls where CTA link will open after click.', 'uabb' ),
-                        'default'       => '_self',
-                        'options'       => array(
-                            '_self'         => __('Same Window', 'uabb'),
-                            '_blank'        => __('New Window', 'uabb')
-                        ),
-                        'preview'       => array(
-                            'type'          => 'none'
-                        )
-                    )
                 )
             ),
         )
