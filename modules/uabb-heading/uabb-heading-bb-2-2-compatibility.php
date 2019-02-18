@@ -31,20 +31,10 @@ FLBuilder::register_module('UABBHeadingModule', array(
 						'preview'         => array(
 							'type'            => 'none'
 						),
-						'connections'		=> array( 'url' )
+						'connections'		=> array( 'url' ),
+						'show_target'    => true,
+						'show_nofollow'    => true,
 					),
-					'link_target'   => array(
-						'type'          => 'select',
-						'label'         => __('Link Target', 'uabb'),
-						'default'       => '_self',
-						'options'       => array(
-							'_self'         => __('Same Window', 'uabb'),
-							'_blank'        => __('New Window', 'uabb')
-						),
-						'preview'         => array(
-							'type'            => 'none'
-						)
-					)
 				)
 			),
 			'description'	=> array( 
@@ -66,11 +56,6 @@ FLBuilder::register_module('UABBHeadingModule', array(
 						'type'          => 'align',
 						'label'         => __('Alignment', 'uabb'),
 						'default'       => 'center',
-						'options'       => array(
-							'left'      =>  __('Left', 'uabb'),
-							'center'    =>  __('Center', 'uabb'),
-							'right'     =>  __('Right', 'uabb')
-						),
 						'help'         => __('This is the overall alignment and would apply to all Heading elements', 'uabb'),
 						'preview'         => array(
                             'type'          => 'css',
@@ -82,11 +67,6 @@ FLBuilder::register_module('UABBHeadingModule', array(
 						'type'          => 'align',
 						'label'         => __('Responsive Alignment', 'uabb'),
 						'default'       => 'center',
-						'options'       => array(
-							'left'      =>  __('Left', 'uabb'),
-							'center'    =>  __('Center', 'uabb'),
-							'right'     =>  __('Right', 'uabb')
-						),
 						'preview'         => array(
 							'type'            => 'none'
 						),
