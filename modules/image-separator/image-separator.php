@@ -378,6 +378,11 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 			// Handle opacity fields.
 			$helper->handle_opacity_inputs( $settings, 'img_bg_color_opc', 'img_bg_color' );
 			$helper->handle_opacity_inputs( $settings, 'img_bg_hover_color_opc', 'img_bg_hover_color' );
+			if ( isset( $settings->link_nofollow ) ) {
+				if ( '1' == $settings->link_nofollow || 'yes' == $settings->link_nofollow ) {
+					$settings->link_nofollow = 'yes';
+				}
+			}
 
 		} elseif ( $version_bb_check && 'yes' != $page_migrated ) {
 

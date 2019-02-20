@@ -308,27 +308,17 @@ FLBuilder::register_module('UABBImageSeparatorModule', array(
                         ),
                         'toggle'        => array(
 		                    'yes'         => array(
-		                        'fields'        => array( 'link', 'link_target' )
+		                        'fields'        => array( 'link',)
 		                    ),
 		                ),
                     ),
 					'link'          => array(
 						'type'          => 'link',
 						'label'         => __('Link', 'uabb'),
+						'show_target'   => true,
+						'show_nofollow' => true,
 						'preview'         => array(
 							'type'            => 'none'
-						)
-					),
-					'link_target'   => array(
-						'type'          => 'select',
-						'label'         => __('Link Target', 'uabb'),
-						'default'       => '_self',
-						'options'       => array(
-							'_self'         => __('Same Window', 'uabb'),
-							'_blank'        => __('New Window', 'uabb')
-						),
-						'preview'       => array(
-							'type'          => 'none'
 						)
 					),
 				)
