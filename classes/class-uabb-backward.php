@@ -161,6 +161,10 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		 */
 		public function update_data() {
 
+			if ( UABB_Lite_Compatibility::check_bb_version() ) {
+				return;
+			}
+			
 			if ( ! FLBuilderModel::is_builder_active() && FLBuilderAJAX::doing_ajax() ) {
 				return;
 			}
