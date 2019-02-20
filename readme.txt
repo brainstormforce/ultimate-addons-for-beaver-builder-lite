@@ -207,6 +207,13 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 == Changelog ==
 
+= 1.3.0 =
+* New: Added Typography field compatibility with Beaver Builder 2.2
+* New: Added Border field compatibility with Beaver Builder 2.2
+* New: Added Link field compatibility with Beaver Builder 2.2
+* Improvement: Added color connections to all color fields
+* Improvement: Added slider support to all unit fields
+
 = 1.2.4 =
 * Fixed: Improved performance of the field replacement functionality
 * Fixed: Reduced the frontend data render calls to help with performance
