@@ -362,7 +362,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	/**
 	 * Ensure backwards compatibility with old settings.
 	 *
-	 * @since 1.14.0
+	 * @since 1.3.0
 	 * @param object $settings A module settings object.
 	 * @param object $helper A settings compatibility helper.
 	 * @return object

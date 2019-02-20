@@ -1,7 +1,7 @@
 <?php
 /**
  * Register the module and its form settings with new typography, border, align param settings provided in beaver builder version 2.2.
- * Applicable for BB version greater than 2.2 and UABB version 1.14.0 or later.
+ * Applicable for BB version greater than 2.2 and UABB version 1.3.0 or later.
  *
  * Converted font, align, border settings to respective param setting.
  *
