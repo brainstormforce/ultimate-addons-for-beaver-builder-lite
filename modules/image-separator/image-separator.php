@@ -19,19 +19,20 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	/**
 	 * @method __construct
 	 */
-	public function __construct()
-	{
-		parent::__construct(array(
-			'name'          => __('Image Separator', 'uabb'),
-			'description'   => __('Use Image as a separator ', 'uabb'),
-			'category'          => BB_Ultimate_Addon_Helper::module_cat(BB_Ultimate_Addon_Helper::$basic_modules),
-            'group'         => UABB_CAT,
-			'dir'           	=> BB_ULTIMATE_ADDON_DIR . 'modules/image-separator/',
-            'url'           	=> BB_ULTIMATE_ADDON_URL . 'modules/image-separator/',
-            'icon'				=> 'format-image.svg',
-		));
+	public function __construct() {
+		parent::__construct(
+			array(
+				'name'        => __( 'Image Separator', 'uabb' ),
+				'description' => __( 'Use Image as a separator ', 'uabb' ),
+				'category'    => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
+				'group'       => UABB_CAT,
+				'dir'         => BB_ULTIMATE_ADDON_DIR . 'modules/image-separator/',
+				'url'         => BB_ULTIMATE_ADDON_URL . 'modules/image-separator/',
+				'icon'        => 'format-image.svg',
+			)
+		);
 
-		$this->add_js('jquery-waypoints');
+		$this->add_js( 'jquery-waypoints' );
 
 		// Register and enqueue your own.
 		$this->add_css( 'uabb-animate', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-animate.css' );
@@ -42,17 +43,16 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * @method update
 	 * @param $settings {object}
 	 */
-	public function update($settings)
-	{
+	public function update( $settings ) {
 		// Make sure we have a photo_src property.
-		if(!isset($settings->photo_src)) {
+		if ( ! isset( $settings->photo_src ) ) {
 			$settings->photo_src = '';
 		}
 
 		// Cache the attachment data.
-		$data = FLBuilderPhoto::get_attachment_data($settings->photo);
+		$data = FLBuilderPhoto::get_attachment_data( $settings->photo );
 
-		if($data) {
+		if ( $data ) {
 			$settings->data = $data;
 		}
 
@@ -65,29 +65,27 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	/**
 	 * @method delete
 	 */
-	public function delete()
-	{
+	public function delete() {
 		$cropped_path = $this->_get_cropped_path();
 
-		if(file_exists($cropped_path['path'])) {
-			unlink($cropped_path['path']);
+		if ( file_exists( $cropped_path['path'] ) ) {
+			unlink( $cropped_path['path'] );
 		}
 	}
 
 	/**
 	 * @method crop
 	 */
-	public function crop()
-	{
+	public function crop() {
 		// Delete an existing crop if it exists.
 		$this->delete();
 
 		// Do a crop.
-		if(!empty($this->settings->image_style) && $this->settings->image_style != "simple" && $this->settings->image_style != "custom" ) {
+		if ( ! empty( $this->settings->image_style ) && $this->settings->image_style != 'simple' && $this->settings->image_style != 'custom' ) {
 
 			$editor = $this->_get_editor();
 
-			if(!$editor || is_wp_error($editor)) {
+			if ( ! $editor || is_wp_error( $editor ) ) {
 				return false;
 			}
 
@@ -97,33 +95,29 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 			$new_height   = $size['height'];
 
 			// Get the crop ratios.
-			
-			
-			if($this->settings->image_style == 'circle') {
+			if ( $this->settings->image_style == 'circle' ) {
 				$ratio_1 = 1;
 				$ratio_2 = 1;
-			}
-			elseif($this->settings->image_style == 'square') {
+			} elseif ( $this->settings->image_style == 'square' ) {
 				$ratio_1 = 1;
 				$ratio_2 = 1;
 			}
 
 			// Get the new width or height.
-			if($size['width'] / $size['height'] < $ratio_1) {
+			if ( $size['width'] / $size['height'] < $ratio_1 ) {
 				$new_height = $size['width'] * $ratio_2;
-			}
-			else {
+			} else {
 				$new_width = $size['height'] * $ratio_1;
 			}
 
 			// Make sure we have enough memory to crop.
-			@ini_set('memory_limit', '300M');
+			@ini_set( 'memory_limit', '300M' );
 
 			// Crop the photo.
-			$editor->resize($new_width, $new_height, true);
+			$editor->resize( $new_width, $new_height, true );
 
 			// Save the photo.
-			$editor->save($cropped_path['path']);
+			$editor->save( $cropped_path['path'] );
 
 			// Return the new url.
 			return $cropped_path['url'];
@@ -135,21 +129,18 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	/**
 	 * @method get_data
 	 */
-	public function get_data()
-	{
-		if(!$this->data) {
-
+	public function get_data() {
+		if ( ! $this->data ) {
 
 			// Photo source is set to "library".
-			if(is_object($this->settings->photo)) {
+			if ( is_object( $this->settings->photo ) ) {
 				$this->data = $this->settings->photo;
-			}
-			else {
-				$this->data = FLBuilderPhoto::get_attachment_data($this->settings->photo);
+			} else {
+				$this->data = FLBuilderPhoto::get_attachment_data( $this->settings->photo );
 			}
 
 			// Data object is empty, use the settings cache.
-			if(!$this->data && isset($this->settings->data)) {
+			if ( ! $this->data && isset( $this->settings->data ) ) {
 				$this->data = $this->settings->data;
 			}
 		}
@@ -160,21 +151,20 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	/**
 	 * @method get_classes
 	 */
-	public function get_classes()
-	{
-		$classes = array( 'uabb-photo-img' );
-		
+	public function get_classes() {
+		 $classes = array( 'uabb-photo-img' );
+
 		if ( ! empty( $this->settings->photo ) ) {
-			
+
 			$data = self::get_data();
-			
+
 			if ( is_object( $data ) ) {
 				$classes[] = 'wp-image-' . $data->id;
 
 				if ( isset( $data->sizes ) ) {
 
 					foreach ( $data->sizes as $key => $size ) {
-						
+
 						if ( $size->url == $this->settings->photo_src ) {
 							$classes[] = 'size-' . $key;
 							break;
@@ -183,32 +173,31 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 				}
 			}
 		}
-			
+
 		return implode( ' ', $classes );
-	} 
+	}
 
 	/**
 	 * @method get_src
 	 */
-	public function get_src()
-	{
-		$src = $this->_get_uncropped_url();
+	public function get_src() {
+		 $src = $this->_get_uncropped_url();
 
 		// Return a cropped photo.
-		if($this->_has_source() && !empty($this->settings->image_style)) {
+		if ( $this->_has_source() && ! empty( $this->settings->image_style ) ) {
 
 			$cropped_path = $this->_get_cropped_path();
 
 			// See if the cropped photo already exists.
-			if(file_exists($cropped_path['path'])) {
+			if ( file_exists( $cropped_path['path'] ) ) {
 				$src = $cropped_path['url'];
 			}
 			// It doesn't, check if this is a demo image.
-			elseif(stristr($src, FL_BUILDER_DEMO_URL) && !stristr(FL_BUILDER_DEMO_URL, $_SERVER['HTTP_HOST'])) {
+			elseif ( stristr( $src, FL_BUILDER_DEMO_URL ) && ! stristr( FL_BUILDER_DEMO_URL, $_SERVER['HTTP_HOST'] ) ) {
 				$src = $this->_get_cropped_demo_url();
 			}
 			// It doesn't, check if this is a OLD demo image.
-			elseif(stristr($src, FL_BUILDER_OLD_DEMO_URL)) {
+			elseif ( stristr( $src, FL_BUILDER_OLD_DEMO_URL ) ) {
 				$src = $this->_get_cropped_demo_url();
 			}
 			// A cropped photo doesn't exist, try to create one.
@@ -216,7 +205,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 
 				$url = $this->crop();
 
-				if($url) {
+				if ( $url ) {
 					$src = $url;
 				}
 			}
@@ -229,37 +218,34 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	/**
 	 * @method get_alt
 	 */
-	public function get_alt()
-	{
-		$photo = $this->get_data();
+	public function get_alt() {
+		 $photo = $this->get_data();
 
-		if(!empty($photo->alt)) {
-			return htmlspecialchars($photo->alt);
-		}
-		else if(!empty($photo->description)) {
-			return htmlspecialchars($photo->description);
-		}
-		else if(!empty($photo->caption)) {
-			return htmlspecialchars($photo->caption);
-		}
-		else if(!empty($photo->title)) {
-			return htmlspecialchars($photo->title);
+		if ( ! empty( $photo->alt ) ) {
+			return htmlspecialchars( $photo->alt );
+		} elseif ( ! empty( $photo->description ) ) {
+			return htmlspecialchars( $photo->description );
+		} elseif ( ! empty( $photo->caption ) ) {
+			return htmlspecialchars( $photo->caption );
+		} elseif ( ! empty( $photo->title ) ) {
+			return htmlspecialchars( $photo->title );
 		}
 	}
 
 	/**
 	 * @method get_attributes
 	 */
-	/*public function get_attributes()
+	/*
+	public function get_attributes()
 	{
 		$attrs = '';
-		
+
 		if ( isset( $this->settings->attributes ) ) {
 			foreach ( $this->settings->attributes as $key => $val ) {
 				$attrs .= $key . '="' . $val . '" ';
 			}
 		}
-		
+
 		return $attrs;
 	}*/
 
@@ -267,9 +253,8 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * @method _has_source
 	 * @protected
 	 */
-	protected function _has_source()
-	{
-		if( !empty($this->settings->photo_src) ) {
+	protected function _has_source() {
+		if ( ! empty( $this->settings->photo_src ) ) {
 			return true;
 		}
 
@@ -280,18 +265,16 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * @method _get_editor
 	 * @protected
 	 */
-	protected function _get_editor()
-	{
-		if($this->_has_source() && $this->_editor === null) {
+	protected function _get_editor() {
+		if ( $this->_has_source() && $this->_editor === null ) {
 
 			$url_path  = $this->_get_uncropped_url();
-			$file_path = str_ireplace(home_url(), ABSPATH, $url_path);
+			$file_path = str_ireplace( home_url(), ABSPATH, $url_path );
 
-			if(file_exists($file_path)) {
-				$this->_editor = wp_get_image_editor($file_path);
-			}
-			else {
-				$this->_editor = wp_get_image_editor($url_path);
+			if ( file_exists( $file_path ) ) {
+				$this->_editor = wp_get_image_editor( $file_path );
+			} else {
+				$this->_editor = wp_get_image_editor( $url_path );
 			}
 		}
 
@@ -302,34 +285,32 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * @method _get_cropped_path
 	 * @protected
 	 */
-	protected function _get_cropped_path()
-	{
-		$crop        = empty($this->settings->image_style) ? 'simple' : $this->settings->image_style;
-		$url         = $this->_get_uncropped_url();
-		$cache_dir   = FLBuilderModel::get_cache_dir();
+	protected function _get_cropped_path() {
+		$crop      = empty( $this->settings->image_style ) ? 'simple' : $this->settings->image_style;
+		$url       = $this->_get_uncropped_url();
+		$cache_dir = FLBuilderModel::get_cache_dir();
 
-		if(empty($url)) {
-			$filename    = uniqid(); // Return a file that doesn't exist.
-		}
-		else {
-			
+		if ( empty( $url ) ) {
+			$filename = uniqid(); // Return a file that doesn't exist.
+		} else {
+
 			if ( stristr( $url, '?' ) ) {
 				$parts = explode( '?', $url );
 				$url   = $parts[0];
 			}
-			
-			$pathinfo    = pathinfo($url);
-			$dir         = $pathinfo['dirname'];
-			$ext         = $pathinfo['extension'];
-			$name        = wp_basename($url, ".$ext");
-			$new_ext     = strtolower($ext);
-			$filename    = "{$name}-{$crop}.{$new_ext}";
+
+			$pathinfo = pathinfo( $url );
+			$dir      = $pathinfo['dirname'];
+			$ext      = $pathinfo['extension'];
+			$name     = wp_basename( $url, ".$ext" );
+			$new_ext  = strtolower( $ext );
+			$filename = "{$name}-{$crop}.{$new_ext}";
 		}
 
 		return array(
 			'filename' => $filename,
 			'path'     => $cache_dir['path'] . $filename,
-			'url'      => $cache_dir['url'] . $filename
+			'url'      => $cache_dir['url'] . $filename,
 		);
 	}
 
@@ -337,12 +318,10 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * @method _get_uncropped_url
 	 * @protected
 	 */
-	protected function _get_uncropped_url()
-	{
-		if(!empty($this->settings->photo_src)) {
+	protected function _get_uncropped_url() {
+		if ( ! empty( $this->settings->photo_src ) ) {
 			$url = $this->settings->photo_src;
-		}
-		else {
+		} else {
 			$url = FL_BUILDER_URL . 'img/pixel.png';
 		}
 
@@ -353,8 +332,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * @method _get_cropped_demo_url
 	 * @protected
 	 */
-	protected function _get_cropped_demo_url()
-	{
+	protected function _get_cropped_demo_url() {
 		$info = $this->_get_cropped_path();
 
 		return FL_BUILDER_DEMO_CACHE_URL . $info['filename'];

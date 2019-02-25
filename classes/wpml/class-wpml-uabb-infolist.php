@@ -10,7 +10,7 @@ class WPML_UABB_Infolist extends WPML_Beaver_Builder_Module_With_Items {
 	}
 
 	protected function get_title( $field ) {
-		switch( $field ) {
+		switch ( $field ) {
 			case 'list_item_title':
 				return esc_html__( 'Info List : Title', 'uabb' );
 
@@ -41,4 +41,4 @@ class WPML_UABB_Infolist extends WPML_Beaver_Builder_Module_With_Items {
 		}
 	}
 }
-?>
+

@@ -1,61 +1,71 @@
 <?php
+/**
+ *  UABB Heading module file
+ *
+ *  @package UABB Heading
+ */
 
 /**
+ * Function that initializes UABB Heading Module
+ *
  * @class UABBHeadingModule
  */
 class UABBHeadingModule extends FLBuilderModule {
 
 	/**
+	 * Constructor function that constructs default values for the Heading module.
+	 *
 	 * @method __construct
 	 */
-	public function __construct()
-	{
-		parent::__construct(array(
-			'name'          	=> __('Heading', 'uabb'),
-			'description'   	=> __('Display a title/page heading.', 'uabb'),
-			'category'          => BB_Ultimate_Addon_Helper::module_cat(BB_Ultimate_Addon_Helper::$basic_modules),
-            'group'             => UABB_CAT,
-			'dir'           	=> BB_ULTIMATE_ADDON_DIR . 'modules/uabb-heading/',
-            'url'           	=> BB_ULTIMATE_ADDON_URL . 'modules/uabb-heading/',
-            'partial_refresh'	=> true,
-			'icon'				=> 'text.svg',
-		));
+	public function __construct() {
+		parent::__construct(
+			array(
+				'name'            => __( 'Heading', 'uabb' ),
+				'description'     => __( 'Display a title/page heading.', 'uabb' ),
+				'category'        => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
+				'group'           => UABB_CAT,
+				'dir'             => BB_ULTIMATE_ADDON_DIR . 'modules/uabb-heading/',
+				'url'             => BB_ULTIMATE_ADDON_URL . 'modules/uabb-heading/',
+				'partial_refresh' => true,
+				'icon'            => 'text.svg',
+			)
+		);
 	}
 
-    /**
+	/**
+	 * Function that renders pos.
+	 *
 	 * @method render_image
 	 */
-	public function render_image()
-	{
-
-		if( $this->settings->separator_style == 'line_image' || $this->settings->separator_style == 'line_icon' ) {
+	public function render_image() {
+		if ( 'line_image' == $this->settings->separator_style || 'line_icon' == $this->settings->separator_style ) {
 			$imageicon_array = array(
-	 
+
 				/* General Section */
-				'image_type' => ( $this->settings->separator_style == 'line_image' ) ? 'photo' : ( ( $this->settings->separator_style == 'line_icon' ) ? 'icon' : '' ),
+				'image_type'   => ( 'line_image' == $this->settings->separator_style ) ? 'photo' : ( ( 'line_icon' == $this->settings->separator_style ) ? 'icon' : '' ),
 
 				/* Icon Basics */
-				'icon' => $this->settings->icon,
-				'icon_size' => $this->settings->icon_size,
-				'icon_align' => 'center',
+				'icon'         => $this->settings->icon,
+				'icon_size'    => $this->settings->icon_size,
+				'icon_align'   => 'center',
 
 				/* Image Basics */
 				'photo_source' => $this->settings->photo_source,
-				'photo' => $this->settings->photo,
-				'photo_url' => $this->settings->photo_url,
-				'img_size' => $this->settings->img_size,
-				'img_align' => 'center',
-				'photo_src' => ( isset( $this->settings->photo_src ) ) ? $this->settings->photo_src : '' ,
-			); 
+				'photo'        => $this->settings->photo,
+				'photo_url'    => $this->settings->photo_url,
+				'img_size'     => $this->settings->img_size,
+				'img_align'    => 'center',
+				'photo_src'    => ( isset( $this->settings->photo_src ) ) ? $this->settings->photo_src : '',
+			);
 
 			/* Render HTML Function */
-			if( $this->settings->separator_style == 'line_image' ) {
+			if ( 'line_image' == $this->settings->separator_style ) {
 				echo '<div class="uabb-image-outter-wrap">';
 			}
 
 			FLBuilder::render_module_html( 'image-icon', $imageicon_array );
-			
-			if( $this->settings->separator_style == 'line_image' ) {
+
+			if ( 'line_image' == $this->settings->separator_style ) {
 				echo '</div>';
 			}
 		}

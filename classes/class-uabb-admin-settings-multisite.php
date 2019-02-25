@@ -13,11 +13,10 @@ final class UABBBuilderMultisiteSettings {
 	 * @since 1.0
 	 * @return void
 	 */
-	static public function init()
-	{
-		add_action( 'admin_init', __CLASS__ . '::admin_init' );
+	static public function init() {
+		 add_action( 'admin_init', __CLASS__ . '::admin_init' );
 		add_action( 'admin_init', __CLASS__ . '::uabb_lite_redirect_on_activation' );
-		add_action( 'network_admin_menu',                __CLASS__ . '::menu' );
+		add_action( 'network_admin_menu', __CLASS__ . '::menu' );
 	}
 
 	/**
@@ -26,14 +25,13 @@ final class UABBBuilderMultisiteSettings {
 	 * @since 1.0
 	 * @return null
 	 */
-	static public function uabb_lite_redirect_on_activation( $url )
-	{
-		if( get_option( 'uabb_lite_redirect' ) == true ) {
+	static public function uabb_lite_redirect_on_activation( $url ) {
+		if ( get_option( 'uabb_lite_redirect' ) == true ) {
 			update_option( 'uabb_lite_redirect', false );
-			if( !is_multisite() ) :
+			if ( ! is_multisite() ) :
 				wp_redirect( admin_url( 'options-general.php?page=uabb-builder-settings#uabb-welcome' ) );
 				exit();
-			endif;
+			 endif;
 		}
 	}
 
@@ -43,8 +41,7 @@ final class UABBBuilderMultisiteSettings {
 	 * @since 1.8
 	 * @return void
 	 */
-	static public function admin_init()
-	{
+	static public function admin_init() {
 		if ( is_network_admin() && isset( $_REQUEST['page'] ) && $_REQUEST['page'] == 'uabb-builder-multisite-settings' ) {
 			add_action( 'admin_enqueue_scripts', 'UABBBuilderAdminSettings::styles_scripts' );
 			UABBBuilderAdminSettings::save();
@@ -57,13 +54,12 @@ final class UABBBuilderMultisiteSettings {
 	 * @since 1.0
 	 * @return void
 	 */
-	static public function menu()
-	{
-		$title = UABB_PREFIX; // FLBuilderModel::get_branding();
-		$cap   = 'manage_network_plugins';
-		$slug  = 'uabb-builder-multisite-settings';
-		$func  = 'UABBBuilderAdminSettings::render';
-		
+	static public function menu() {
+		 $title = UABB_PREFIX; // FLBuilderModel::get_branding();
+		$cap    = 'manage_network_plugins';
+		$slug   = 'uabb-builder-multisite-settings';
+		$func   = 'UABBBuilderAdminSettings::render';
+
 		add_submenu_page( 'settings.php', $title, $title, $cap, $slug, $func );
 	}
 }

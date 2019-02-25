@@ -3,8 +3,8 @@
 /**
  * Attachment Data Extra fields
  */
-if( !class_exists( "UABB_Attachment" ) ) {
-	
+if ( ! class_exists( 'UABB_Attachment' ) ) {
+
 	class UABB_Attachment {
 
 		/*
@@ -24,17 +24,17 @@ if( !class_exists( "UABB_Attachment" ) ) {
 			 * @param $post object, attachment record in database
 			 * @return $form_fields, modified form fields
 			 */
-			 
-			function uabb_attachment_field_cta( $form_fields, $post ) {
-				$form_fields['uabb-cta-link'] = array(
-					'label' => __( 'Image Link', 'uabb' ),
-					'input' => 'text',
-					'value' => get_post_meta( $post->ID, 'uabb-cta-link', true ),
-					/*'helps' => 'Add cta link to photo',*/
-				);
 
-				return $form_fields;
-			}
+		function uabb_attachment_field_cta( $form_fields, $post ) {
+			$form_fields['uabb-cta-link'] = array(
+				'label' => __( 'Image Link', 'uabb' ),
+				'input' => 'text',
+				'value' => get_post_meta( $post->ID, 'uabb-cta-link', true ),
+				/*'helps' => 'Add cta link to photo',*/
+			);
+
+			return $form_fields;
+		}
 
 
 			/**
@@ -45,14 +45,15 @@ if( !class_exists( "UABB_Attachment" ) ) {
 			 * @return $post array, modified post data
 			 */
 
-			function uabb_attachment_field_cta_save( $post, $attachment ) {
-				if( isset( $attachment['uabb-cta-link'] ) )
-					update_post_meta( $post['ID'], 'uabb-cta-link', $attachment['uabb-cta-link'] );
-
-				return $post;
+		function uabb_attachment_field_cta_save( $post, $attachment ) {
+			if ( isset( $attachment['uabb-cta-link'] ) ) {
+				update_post_meta( $post['ID'], 'uabb-cta-link', $attachment['uabb-cta-link'] );
 			}
-			
-		
+
+			return $post;
+		}
+
+
 	}
 	new UABB_Attachment();
 }

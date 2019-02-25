@@ -6,11 +6,15 @@
 		
 		<div class="fl-settings-form-content">
 
-			<p><?php echo sprintf( 
-					__( 'Clicking the button below will reinstall %s icons on your website. If you are facing issues to load %s icons then you are at right place to troubleshoot it.', 'uabb' ), 
-					UABB_PREFIX, 
-					UABB_PREFIX 
-				); ?></p>
+			<p>
+			<?php
+			echo sprintf(
+				__( 'Clicking the button below will reinstall %1$s icons on your website. If you are facing issues to load %2$s icons then you are at right place to troubleshoot it.', 'uabb' ),
+				UABB_PREFIX,
+				UABB_PREFIX
+			);
+			?>
+				</p>
 			<span class="button uabb-reload-icons">
 				<i class="dashicons dashicons-update" style="padding: 3px;"></i>
 				<?php _e( 'Reload Icons', 'uabb' ); ?>

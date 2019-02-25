@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * = Global functions
@@ -23,50 +23,49 @@
  * uabb_theme_button_horizontal_padding()
  * uabb_theme_button_border_radius()
  * uabb_parse_color_to_hex()
- *
  */
 
 /**
  * array_replace_recursive() function for PHP older version
  */
 
-if ( !function_exists('array_replace_recursive') ) {
-	function array_replace_recursive($base, $replacements) {
+if ( ! function_exists( 'array_replace_recursive' ) ) {
+	function array_replace_recursive( $base, $replacements ) {
 
-		$base = recurse($base, $replacements);
-    	// handle the arguments, merge one by one
-    	$args = func_get_args();
-    	$base = $args[0];
-    	if ( !is_array($base) ) {
-      		return $base;
-    	}
-    
-    	for ($i = 1; $i < count($args); $i++) {
-      		if ( is_array($args[$i]) ) {
-        		$base = recurse($base, $args[$i]);
-      		}
-    	}
-    
-    	return $base;
-  	}
+		$base = recurse( $base, $replacements );
+		// handle the arguments, merge one by one
+		$args = func_get_args();
+		$base = $args[0];
+		if ( ! is_array( $base ) ) {
+			return $base;
+		}
 
-  	function recurse($base, $replacements) {
-    	foreach ($replacements as $key => $value) {
-        	// create new key in $base, if it is empty or not an array
-        	if (!isset($base[$key]) || (isset($base[$key]) && !is_array($base[$key]))) {
-          		$base[$key] = array();
-        	}
+		for ( $i = 1; $i < count( $args ); $i++ ) {
+			if ( is_array( $args[ $i ] ) ) {
+				$base = recurse( $base, $args[ $i ] );
+			}
+		}
 
-        	// overwrite the value in the base array
-        	if (is_array($value)) {
-          		$value = recurse($base[$key], $value);
-        	}
-        	
-        	$base[$key] = $value;
-      	}
-      	
-      	return $base;
-    }
+		return $base;
+	}
+
+	function recurse( $base, $replacements ) {
+		foreach ( $replacements as $key => $value ) {
+			// create new key in $base, if it is empty or not an array
+			if ( ! isset( $base[ $key ] ) || ( isset( $base[ $key ] ) && ! is_array( $base[ $key ] ) ) ) {
+				$base[ $key ] = array();
+			}
+
+			// overwrite the value in the base array
+			if ( is_array( $value ) ) {
+				$value = recurse( $base[ $key ], $value );
+			}
+
+			$base[ $key ] = $value;
+		}
+
+		return $base;
+	}
 }
 /**
  * Provide option to override the element defaults from theme options.
@@ -81,7 +80,7 @@ function uabb_theme_base_color( $default ) {
 	if ( $default == '' ) {
 
 		$color = apply_filters( 'uabb/global/theme_color', $default );
-		
+
 		if ( $color == '' ) {
 			$color = apply_filters( 'uabb_theme_theme_color', $default );
 		}
@@ -105,7 +104,7 @@ function uabb_theme_text_color( $default ) {
 	if ( $default == '' ) {
 
 		$color = apply_filters( 'uabb/global/text_color', $default );
-		
+
 		if ( $color == '' ) {
 			$color = apply_filters( 'uabb_theme_text_color', $default );
 		}
@@ -129,7 +128,7 @@ function uabb_theme_link_color( $default ) {
 	if ( $default == '' ) {
 
 		$color = apply_filters( 'uabb/global/link_color', $default );
-				
+
 		if ( $color == '' ) {
 			$color = apply_filters( 'uabb_theme_link_color', $default );
 		}
@@ -153,7 +152,7 @@ function uabb_theme_link_hover_color( $default ) {
 	if ( $default == '' ) {
 
 		$color = apply_filters( 'uabb/global/link_hover_color', $default );
-				
+
 		if ( $color == '' ) {
 			$color = apply_filters( 'uabb_theme_link_hover_color', $default );
 		}
@@ -174,7 +173,7 @@ function uabb_theme_link_hover_color( $default ) {
 function uabb_theme_button_font_family( $default ) {
 	$btn_font_family = array();
 
-	if ( $default['family'] == '' ||  $default['family'] == 'Default' ) {
+	if ( $default['family'] == '' || $default['family'] == 'Default' ) {
 
 		$btn_font_family = apply_filters( 'uabb_theme_button_font_family', $default );
 
@@ -194,11 +193,11 @@ function uabb_theme_button_font_size( $default ) {
 	if ( $default == '' ) {
 
 		$font_size = apply_filters( 'uabb/global/button_font_size', $default );
-				
+
 		if ( $font_size == '' ) {
 			$font_size = apply_filters( 'uabb_theme_button_font_size', $default );
-		}else{
-			$font_size = $font_size.'px';
+		} else {
+			$font_size = $font_size . 'px';
 		}
 	} else {
 		$font_size = $default;
@@ -216,11 +215,11 @@ function uabb_theme_button_line_height( $default ) {
 	if ( $default == '' ) {
 
 		$line_height = apply_filters( 'uabb/global/button_line_height', $default );
-				
+
 		if ( $line_height == '' ) {
 			$line_height = apply_filters( 'uabb_theme_button_line_height', $default );
-		}else{
-			$line_height = $line_height.'px';
+		} else {
+			$line_height = $line_height . 'px';
 		}
 	} else {
 		$line_height = $default;
@@ -238,11 +237,11 @@ function uabb_theme_button_letter_spacing( $default ) {
 	if ( $default == '' ) {
 
 		$letter_spacing = apply_filters( 'uabb/global/button_letter_spacing', $default );
-				
+
 		if ( $letter_spacing == '' ) {
 			$letter_spacing = apply_filters( 'uabb_theme_button_letter_spacing', $default );
-		}else{
-			$letter_spacing = $letter_spacing.'px';
+		} else {
+			$letter_spacing = $letter_spacing . 'px';
 		}
 	} else {
 		$letter_spacing = $default;
@@ -260,7 +259,7 @@ function uabb_theme_button_text_transform( $default ) {
 	if ( $default == '' ) {
 
 		$text_transform = apply_filters( 'uabb/global/button_text_transform', $default );
-				
+
 		if ( $text_transform == '' ) {
 			$text_transform = apply_filters( 'uabb_theme_button_text_transform', $default );
 		}
@@ -284,7 +283,7 @@ function uabb_theme_button_bg_color( $default ) {
 	if ( $default == '' ) {
 
 		$color = apply_filters( 'uabb/global/button_bg_color', $default );
-				
+
 		if ( $color == '' ) {
 			$color = apply_filters( 'uabb_theme_button_bg_color', $default );
 		}
@@ -308,7 +307,7 @@ function uabb_theme_button_bg_hover_color( $default ) {
 	if ( $default == '' ) {
 
 		$color = apply_filters( 'uabb/global/button_bg_hover_color', $default );
-				
+
 		if ( $color == '' ) {
 			$color = apply_filters( 'uabb_theme_button_bg_hover_color', $default );
 		}
@@ -332,7 +331,7 @@ function uabb_theme_button_text_color( $default ) {
 	if ( $default == '' ) {
 
 		$color = apply_filters( 'uabb/global/button_text_color', $default );
-				
+
 		if ( $color == '' ) {
 			$color = apply_filters( 'uabb_theme_button_text_color', $default );
 		}
@@ -356,7 +355,7 @@ function uabb_theme_button_text_hover_color( $default ) {
 	if ( $default == '' ) {
 
 		$color = apply_filters( 'uabb/global/button_text_hover_color', $default );
-				
+
 		if ( $color == '' ) {
 			$color = apply_filters( 'uabb_theme_button_text_hover_color', $default );
 		}
@@ -380,7 +379,7 @@ function uabb_theme_button_padding( $default ) {
 	if ( $default == '' ) {
 
 		$padding = apply_filters( 'uabb/global/button_padding', $default );
-							
+
 		if ( $padding == '' ) {
 			$padding = apply_filters( 'uabb_theme_button_padding', $default );
 			if ( $padding == '' ) {
@@ -400,7 +399,7 @@ function uabb_theme_button_vertical_padding( $default ) {
 	if ( $default == '' ) {
 
 		$padding = apply_filters( 'uabb/global/button_vertical_padding', $default );
-							
+
 		if ( $padding == '' ) {
 			$padding = apply_filters( 'uabb_theme_button_vertical_padding', $default );
 			if ( $padding == '' ) {
@@ -420,7 +419,7 @@ function uabb_theme_button_horizontal_padding( $default ) {
 	if ( $default == '' ) {
 
 		$padding = apply_filters( 'uabb/global/button_horizontal_padding', $default );
-							
+
 		if ( $padding == '' ) {
 			$padding = apply_filters( 'uabb_theme_button_horizontal_padding', $default );
 			if ( $padding == '' ) {
@@ -445,7 +444,7 @@ function uabb_theme_button_border_radius( $default ) {
 	$radius = '';
 
 	if ( $default == '' ) {
-	
+
 		$radius = apply_filters( 'uabb/global/button_border_radius', $default );
 
 		if ( $radius == '' ) {
@@ -472,20 +471,20 @@ function uabb_theme_button_border_radius( $default ) {
  */
 function uabb_parse_color_to_hex( $code = '' ) {
 	$color = '';
-	$hex = '';
-	if( $code != '' ) {
+	$hex   = '';
+	if ( $code != '' ) {
 		if ( strpos( $code, 'rgba' ) !== false ) {
-			$code = ltrim( $code, 'rgba(' );
-			$code = rtrim( $code, ')' );
-			$rgb = explode( ',', $code );
-			$hex .= str_pad(dechex($rgb[0]), 2, "0", STR_PAD_LEFT);
-			$hex .= str_pad(dechex($rgb[1]), 2, "0", STR_PAD_LEFT);
-			$hex .= str_pad(dechex($rgb[2]), 2, "0", STR_PAD_LEFT);
+			$code  = ltrim( $code, 'rgba(' );
+			$code  = rtrim( $code, ')' );
+			$rgb   = explode( ',', $code );
+			$hex  .= str_pad( dechex( $rgb[0] ), 2, '0', STR_PAD_LEFT );
+			$hex  .= str_pad( dechex( $rgb[1] ), 2, '0', STR_PAD_LEFT );
+			$hex  .= str_pad( dechex( $rgb[2] ), 2, '0', STR_PAD_LEFT );
 			$color = $hex;
 		} else {
 			$color = ltrim( $code, '#' );
 		}
 	}
-	//var_dump($hex); die;
+	// var_dump($hex); die;
 	return $color;
 }

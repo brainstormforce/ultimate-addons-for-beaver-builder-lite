@@ -6,57 +6,55 @@
  * @package Next
  */
 
-if ( !class_exists( 'UABBGlobalSettingsOptions' ) ) {
+if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 	/**
-	* 
-	*/
-	class UABBGlobalSettingsOptions 	{
+	 *
+	 */
+	class UABBGlobalSettingsOptions {
 		public $uabb_setting_options;
 
 		function __construct() {
 
 			$this->uabb_setting_options = UABB_Global_Styling::get_uabb_global_settings();
 
-			//FLBuilderModel::get_admin_settings_option( '_fl_builder_uabb_global', true );
-
+			// FLBuilderModel::get_admin_settings_option( '_fl_builder_uabb_global', true );
 			add_filter( 'uabb/global/theme_color', array( $this, 'uabb_global_theme_color' ) );
 			add_filter( 'uabb/global/text_color', array( $this, 'uabb_global_text_color' ) );
-			
+
 			add_filter( 'uabb/global/link_color', array( $this, 'uabb_global_link_color' ) );
 			add_filter( 'uabb/global/link_hover_color', array( $this, 'uabb_global_link_hover_color' ) );
-			
+
 			add_filter( 'uabb/global/button_font_family', array( $this, 'uabb_global_button_font_family' ) );
 			add_filter( 'uabb/global/button_font_size', array( $this, 'uabb_global_button_font_size' ) );
 			add_filter( 'uabb/global/button_line_height', array( $this, 'uabb_global_button_line_height' ) );
 			add_filter( 'uabb/global/button_letter_spacing', array( $this, 'uabb_global_button_letter_spacing' ) );
 			add_filter( 'uabb/global/button_text_transform', array( $this, 'uabb_global_button_text_transform' ) );
 
-
 			add_filter( 'uabb/global/button_text_color', array( $this, 'uabb_global_button_text_color' ) );
 			add_filter( 'uabb/global/button_text_hover_color', array( $this, 'uabb_global_button_text_hover_color' ) );
 			add_filter( 'uabb/global/button_bg_color', array( $this, 'uabb_global_button_bg_color' ) );
 			add_filter( 'uabb/global/button_bg_hover_color', array( $this, 'uabb_global_button_bg_hover_color' ) );
-			
+
 			add_filter( 'uabb/global/button_border_radius', array( $this, 'uabb_global_button_border_radius' ) );
 			add_filter( 'uabb/global/button_padding', array( $this, 'uabb_global_button_padding' ) );
 			add_filter( 'uabb/global/button_vertical_padding', array( $this, 'uabb_global_button_vertical_padding' ) );
 			add_filter( 'uabb/global/button_horizontal_padding', array( $this, 'uabb_global_button_horizontal_padding' ) );
 		}
 
-		function uabb_get_global_option( $option, $color = false, $opc = false ){
+		function uabb_get_global_option( $option, $color = false, $opc = false ) {
 			$uabb_setting_options = $this->uabb_setting_options;
-			
+
 			if ( isset( $uabb_setting_options->enable_global ) && ( $uabb_setting_options->enable_global == 'no' ) ) {
 				return '';
-			}elseif ( isset( $uabb_setting_options->$option ) && !empty( $uabb_setting_options->$option ) ) {
-			 	
-			 	if ( $color ) {
-			 		$uabb_setting_options->$option = UABB_Helper::uabb_colorpicker( $uabb_setting_options, $option, $opc );
-			 	}
-			 	return $uabb_setting_options->$option;
+			} elseif ( isset( $uabb_setting_options->$option ) && ! empty( $uabb_setting_options->$option ) ) {
+
+				if ( $color ) {
+					$uabb_setting_options->$option = UABB_Helper::uabb_colorpicker( $uabb_setting_options, $option, $opc );
+				}
+				return $uabb_setting_options->$option;
 			}
 
-			return ''; 
+			return '';
 		}
 		/**
 		 * Theme Color -
@@ -105,9 +103,8 @@ if ( !class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		 * Button Font Family
 		 */
 		function uabb_global_button_font_family() {
-			//$btn_font_family['family'] = brainstorm_get_option( 'next-button-typography', array( 1 => 'font-family' ), 'Open Sans Condensed' );
-			//$btn_font_family['weight'] = brainstorm_get_option( 'next-button-typography', array( 1 => 'font-weight' ), 'bold' );
-
+			// $btn_font_family['family'] = brainstorm_get_option( 'next-button-typography', array( 1 => 'font-family' ), 'Open Sans Condensed' );
+			// $btn_font_family['weight'] = brainstorm_get_option( 'next-button-typography', array( 1 => 'font-weight' ), 'bold' );
 			return $btn_font_family;
 		}
 
@@ -116,7 +113,7 @@ if ( !class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		 */
 		function uabb_global_button_font_size() {
 			$font_size = $this->uabb_get_global_option( 'btn_font_size' );
-			
+
 			return $font_size;
 		}
 
@@ -125,7 +122,7 @@ if ( !class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		 */
 		function uabb_global_button_line_height() {
 			$line_height = $this->uabb_get_global_option( 'btn_line_height' );
-			
+
 			return $line_height;
 		}
 
@@ -135,7 +132,7 @@ if ( !class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		 */
 		function uabb_global_button_letter_spacing() {
 			$letter_spacing = $this->uabb_get_global_option( 'btn_letter_spacing' );
-			
+
 			return $letter_spacing;
 		}
 
@@ -145,7 +142,7 @@ if ( !class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		 */
 		function uabb_global_button_text_transform() {
 			$text_transform = $this->uabb_get_global_option( 'btn_text_transform' );
-			
+
 			return $text_transform;
 		}
 
@@ -164,9 +161,9 @@ if ( !class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		 * Button Text Hover Color -
 		 */
 		function uabb_global_button_text_hover_color() {
-		    $color = $this->uabb_get_global_option( 'btn_text_hover_color', true );
+			$color = $this->uabb_get_global_option( 'btn_text_hover_color', true );
 
-		    return $color;
+			return $color;
 		}
 
 
@@ -174,9 +171,9 @@ if ( !class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		 * Button Background Color -
 		 */
 		function uabb_global_button_bg_color() {
-		    $color = $this->uabb_get_global_option( 'btn_bg_color', true, true );
+			$color = $this->uabb_get_global_option( 'btn_bg_color', true, true );
 
-		    return $color;
+			return $color;
 		}
 
 
@@ -184,9 +181,9 @@ if ( !class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		 * Button Background Hover Color -
 		 */
 		function uabb_global_button_bg_hover_color() {
-		    $color = $this->uabb_get_global_option( 'btn_bg_hover_color', true, true );
+			$color = $this->uabb_get_global_option( 'btn_bg_hover_color', true, true );
 
-		    return $color;
+			return $color;
 		}
 
 

@@ -8,26 +8,26 @@ class UABBButtonModule extends FLBuilderModule {
 	/**
 	 * @method __construct
 	 */
-	public function __construct()
-	{
-		parent::__construct(array(
-			'name'          => __('Button', 'uabb'),
-			'description'   => __('A simple call to action button.', 'uabb'),
-			'category'          => BB_Ultimate_Addon_Helper::module_cat(BB_Ultimate_Addon_Helper::$basic_modules),
-            'group'         => UABB_CAT,
-			'dir'           => BB_ULTIMATE_ADDON_DIR . 'modules/uabb-button/',
-            'url'           => BB_ULTIMATE_ADDON_URL . 'modules/uabb-button/',
-            'editor_export' => true, // Defaults to true and can be omitted.
-            'enabled'       => true, // Defaults to true and can be omitted.
-            'icon'          => 'button.svg'
-		));
+	public function __construct() {
+		parent::__construct(
+			array(
+				'name'          => __( 'Button', 'uabb' ),
+				'description'   => __( 'A simple call to action button.', 'uabb' ),
+				'category'      => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
+				'group'         => UABB_CAT,
+				'dir'           => BB_ULTIMATE_ADDON_DIR . 'modules/uabb-button/',
+				'url'           => BB_ULTIMATE_ADDON_URL . 'modules/uabb-button/',
+				'editor_export' => true, // Defaults to true and can be omitted.
+				'enabled'       => true, // Defaults to true and can be omitted.
+				'icon'          => 'button.svg',
+			)
+		);
 	}
-	
+
 	/**
 	 * @method update
 	 */
-	public function update( $settings )
-	{
+	public function update( $settings ) {
 		// Remove the old three_d setting.
 		if ( isset( $settings->three_d ) ) {
 			unset( $settings->three_d );
@@ -39,28 +39,27 @@ class UABBButtonModule extends FLBuilderModule {
 	/**
 	 * @method get_classname
 	 */
-	public function get_classname()
-	{
+	public function get_classname() {
 		$classname = 'uabb-button-wrap uabb-creative-button-wrap';
 
-		if(!empty($this->settings->width)) {
+		if ( ! empty( $this->settings->width ) ) {
 			$classname .= ' uabb-button-width-' . $this->settings->width;
 			$classname .= ' uabb-creative-button-width-' . $this->settings->width;
 		}
-		if(!empty($this->settings->align)) {
+		if ( ! empty( $this->settings->align ) ) {
 			$classname .= ' uabb-button-' . $this->settings->align;
 			$classname .= ' uabb-creative-button-' . $this->settings->align;
 		}
-		if(!empty($this->settings->mob_align)) {
+		if ( ! empty( $this->settings->mob_align ) ) {
 			$classname .= ' uabb-button-reponsive-' . $this->settings->mob_align;
 			$classname .= ' uabb-creative-button-reponsive-' . $this->settings->mob_align;
 		}
-		if(!empty($this->settings->icon)) {
+		if ( ! empty( $this->settings->icon ) ) {
 			$classname .= ' uabb-button-has-icon';
 			$classname .= ' uabb-creative-button-has-icon';
 		}
 
-		if( empty($this->settings->text) ) {
+		if ( empty( $this->settings->text ) ) {
 			$classname .= ' uabb-creative-button-icon-no-text';
 		}
 
@@ -69,23 +68,25 @@ class UABBButtonModule extends FLBuilderModule {
 	/**
 	 * @method get_button_style
 	 */
-	public function get_button_style()
-	{
+	public function get_button_style() {
 		$btn_style = '';
 
-		if(!empty($this->settings->style) && $this->settings->style == "transparent" ) {
-			if( isset( $this->settings->transparent_button_options ) && !empty( $this->settings->transparent_button_options ) )
-			$btn_style .= ' uabb-' . $this->settings->transparent_button_options .'-btn';
+		if ( ! empty( $this->settings->style ) && $this->settings->style == 'transparent' ) {
+			if ( isset( $this->settings->transparent_button_options ) && ! empty( $this->settings->transparent_button_options ) ) {
+				$btn_style .= ' uabb-' . $this->settings->transparent_button_options . '-btn';
+			}
 		}
 
-		if(!empty($this->settings->style) && $this->settings->style == "threed" ) {
-			if( isset( $this->settings->threed_button_options ) && !empty( $this->settings->threed_button_options ) )
-			$btn_style .= ' uabb-' . $this->settings->threed_button_options .'-btn';
+		if ( ! empty( $this->settings->style ) && $this->settings->style == 'threed' ) {
+			if ( isset( $this->settings->threed_button_options ) && ! empty( $this->settings->threed_button_options ) ) {
+				$btn_style .= ' uabb-' . $this->settings->threed_button_options . '-btn';
+			}
 		}
 
-		if(!empty($this->settings->style) && $this->settings->style == "flat" ) {
-			if( isset( $this->settings->flat_button_options ) && !empty( $this->settings->flat_button_options ) )
-			$btn_style .= ' uabb-' . $this->settings->flat_button_options .'-btn';
+		if ( ! empty( $this->settings->style ) && $this->settings->style == 'flat' ) {
+			if ( isset( $this->settings->flat_button_options ) && ! empty( $this->settings->flat_button_options ) ) {
+				$btn_style .= ' uabb-' . $this->settings->flat_button_options . '-btn';
+			}
 		}
 
 		return $btn_style;
@@ -191,7 +192,6 @@ class UABBButtonModule extends FLBuilderModule {
 				if ( '1' == $settings->link_nofollow || 'yes' == $settings->link_nofollow ) {
 					$settings->link_nofollow = 'yes';
 				}
-
 			}
 		} elseif ( $version_bb_check && 'yes' != $page_migrated ) {
 

@@ -15,7 +15,7 @@ if(! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
 else
 	var is_touch_device = true;
 
-<?php if($settings->slide_type == 'style1') { ?>
+<?php if ( $settings->slide_type == 'style1' ) { ?>
 var isMobile = { 
 	Android: function() { 
 		return navigator.userAgent.match(/Android/i);
@@ -38,7 +38,7 @@ var isMobile = {
 };
 var device = isMobile.any();
 if( device == null ) {
-	jQuery('.fl-node-<?php echo $id;?>').find('.uabb-slide-box-wrap').hover( function() {
+	jQuery('.fl-node-<?php echo $id; ?>').find('.uabb-slide-box-wrap').hover( function() {
 		_hideAll_SlideBox('');
 		
 		var style1 = jQuery(this).find('.uabb-style1');
@@ -56,13 +56,13 @@ if( device == null ) {
 
 		$this = jQuery(this);
 		setTimeout(function(){
-		  	$this.removeClass('set-z-index');
+			  $this.removeClass('set-z-index');
 		}, 250);
 		style1.removeClass('open-slidedown');
 	});	
 } 
 else if( device != null ) {
-	jQuery('.fl-node-<?php echo $id;?>').find('.uabb-slide-box-wrap').click( function() {
+	jQuery('.fl-node-<?php echo $id; ?>').find('.uabb-slide-box-wrap').click( function() {
 		
 		var style1 = jQuery(this).find('.uabb-style1');
 		$this = jQuery(this);
@@ -80,51 +80,51 @@ else if( device != null ) {
 
 
 
-<?php }else{ ?>
-jQuery('.fl-node-<?php echo $id;?>').on( 'click' , '.uabb-slide-face', function(){
-    var self = jQuery(this),
-    	slide_type = self.closest('.uabb-slide-type').data('style'),
-        style2 = self.closest('.uabb-style2'),
-        style3 = self.closest('.uabb-style3');
-    if( slide_type = 'style2' ) {
-    	var dropdown_icon = style2.find('.uabb-slide-dropdown .fa'),
-    		slidebox_wrap = style2.closest('.uabb-slide-box-wrap');
+<?php } else { ?>
+jQuery('.fl-node-<?php echo $id; ?>').on( 'click' , '.uabb-slide-face', function(){
+	var self = jQuery(this),
+		slide_type = self.closest('.uabb-slide-type').data('style'),
+		style2 = self.closest('.uabb-style2'),
+		style3 = self.closest('.uabb-style3');
+	if( slide_type = 'style2' ) {
+		var dropdown_icon = style2.find('.uabb-slide-dropdown .fa'),
+			slidebox_wrap = style2.closest('.uabb-slide-box-wrap');
 
-	    
-	    if( style2.hasClass('open-slidedown') ){
+		
+		if( style2.hasClass('open-slidedown') ){
 
-	        style2.removeClass('open-slidedown');
-	        setTimeout(function(){
-			  	style2.closest('.uabb-slide-box-wrap').removeClass('set-z-index');
+			style2.removeClass('open-slidedown');
+			setTimeout(function(){
+				  style2.closest('.uabb-slide-box-wrap').removeClass('set-z-index');
 			},250);
-	    	dropdown_icon.removeClass('fa-angle-up');
-	    	dropdown_icon.addClass('fa-angle-down');
-	    } else {
-	        style2.addClass('open-slidedown');
-	        slidebox_wrap.addClass('set-z-index');
-	        dropdown_icon.removeClass('fa-angle-down');
-	    	dropdown_icon.addClass('fa-angle-up');
-	    }
+			dropdown_icon.removeClass('fa-angle-up');
+			dropdown_icon.addClass('fa-angle-down');
+		} else {
+			style2.addClass('open-slidedown');
+			slidebox_wrap.addClass('set-z-index');
+			dropdown_icon.removeClass('fa-angle-down');
+			dropdown_icon.addClass('fa-angle-up');
+		}
 	}
 
 	if( slide_type = 'style3' ) {
-    	var dropdown_icon = style3.find('.uabb-slide-dropdown .fa'),
-    		slidebox_wrap = style3.closest('.uabb-slide-box-wrap');
+		var dropdown_icon = style3.find('.uabb-slide-dropdown .fa'),
+			slidebox_wrap = style3.closest('.uabb-slide-box-wrap');
 
-	    if( style3.hasClass('open-slidedown') ){
+		if( style3.hasClass('open-slidedown') ){
 
-	        style3.removeClass('open-slidedown');
-	        setTimeout(function(){
-			  	style3.closest('.uabb-slide-box-wrap').removeClass('set-z-index');
+			style3.removeClass('open-slidedown');
+			setTimeout(function(){
+				  style3.closest('.uabb-slide-box-wrap').removeClass('set-z-index');
 			}, 250);
-	    	dropdown_icon.removeClass('fa-minus');
-	    	dropdown_icon.addClass('fa-plus');
-	    } else {
-	        style3.addClass('open-slidedown');
-	        slidebox_wrap.addClass('set-z-index');
-	        dropdown_icon.removeClass('fa-plus');
-	    	dropdown_icon.addClass('fa-minus');
-	    }
+			dropdown_icon.removeClass('fa-minus');
+			dropdown_icon.addClass('fa-plus');
+		} else {
+			style3.addClass('open-slidedown');
+			slidebox_wrap.addClass('set-z-index');
+			dropdown_icon.removeClass('fa-plus');
+			dropdown_icon.addClass('fa-minus');
+		}
 	}
 });
 <?php } ?>
