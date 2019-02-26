@@ -1,7 +1,21 @@
 <?php
+/**
+ *  UABB Spacer Gap Module file.
+ *
+ *  @package UABB Spacer Gap Module
+ */
 
+/**
+ * Function that initializes UABB Spacer Gap Module.
+ *
+ * @class UABBSpacerGap
+ */
 class UABBSpacerGap extends FLBuilderModule {
-
+	/**
+	 * Constructor function that constructs default values for the Spacer Gap Module
+	 *
+	 * @method __construct
+	 */
 	public function __construct() {
 		parent::__construct(
 			array(
@@ -19,6 +33,7 @@ class UABBSpacerGap extends FLBuilderModule {
 		);
 	}
 }
+
 /*
  * Condition to verify Beaver Builder version.
  * And accordingly render the required form settings file.

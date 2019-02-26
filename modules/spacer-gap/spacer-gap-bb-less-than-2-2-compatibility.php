@@ -6,15 +6,16 @@
  *
  * @package UABB Spacer Gap Module
  */
+
 FLBuilder::register_module(
 	'UABBSpacerGap',
 	array(
-		'spacer_gap_general' => array( // Tab
-			'title'    => __( 'General', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
-				'spacer_gap_general' => array( // Section
-					'title'  => '', // Section Title
-					'fields' => array( // Section Fields
+		'spacer_gap_general' => array( // Tab.
+			'title'    => __( 'General', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'spacer_gap_general' => array( // Section.
+					'title'  => '', // Section Title.
+					'fields' => array( // Section Fields.
 						'desktop_space' => array(
 							'type'        => 'text',
 							'label'       => __( 'Desktop', 'uabb' ),
