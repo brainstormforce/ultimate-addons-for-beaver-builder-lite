@@ -6,6 +6,7 @@
  *
  * @package UABB Heading Module
  */
+
 FLBuilder::register_module(
 	'UABBButtonModule',
 	array(
@@ -110,9 +111,6 @@ FLBuilder::register_module(
 								'threed_right'   => __( 'Move Right', 'uabb' ),
 								'animate_top'    => __( 'Animate Top', 'uabb' ),
 								'animate_bottom' => __( 'Animate Bottom', 'uabb' ),
-								/*
-							'animate_left'     => __('Animate Left', 'uabb'),
-								'animate_right'     => __('Animate Right', 'uabb'),*/
 							),
 						),
 						'flat_button_options'        => array(

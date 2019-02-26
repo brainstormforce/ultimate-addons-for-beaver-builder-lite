@@ -1,11 +1,20 @@
 <?php
+/**
+ *  UABB Button Module file
+ *
+ *  @package UABB Button Module
+ */
 
 /**
+ * Function that initializes UABB Button Module
+ *
  * @class UABBButtonModule
  */
 class UABBButtonModule extends FLBuilderModule {
 
 	/**
+	 * Constructor function that constructs default values for the Button Module
+	 *
 	 * @method __construct
 	 */
 	public function __construct() {
@@ -25,7 +34,10 @@ class UABBButtonModule extends FLBuilderModule {
 	}
 
 	/**
+	 * Function that gets the button styling.
+	 *
 	 * @method update
+	 * @param object $settings gets the settings for the button module.
 	 */
 	public function update( $settings ) {
 		// Remove the old three_d setting.
@@ -37,6 +49,8 @@ class UABBButtonModule extends FLBuilderModule {
 	}
 
 	/**
+	 * Function that gets the class names.
+	 *
 	 * @method get_classname
 	 */
 	public function get_classname() {
@@ -66,24 +80,26 @@ class UABBButtonModule extends FLBuilderModule {
 		return $classname;
 	}
 	/**
+	 * Function that gets the button styling.
+	 *
 	 * @method get_button_style
 	 */
 	public function get_button_style() {
 		$btn_style = '';
 
-		if ( ! empty( $this->settings->style ) && $this->settings->style == 'transparent' ) {
+		if ( ! empty( $this->settings->style ) && 'transparent' == $this->settings->style ) {
 			if ( isset( $this->settings->transparent_button_options ) && ! empty( $this->settings->transparent_button_options ) ) {
 				$btn_style .= ' uabb-' . $this->settings->transparent_button_options . '-btn';
 			}
 		}
 
-		if ( ! empty( $this->settings->style ) && $this->settings->style == 'threed' ) {
+		if ( ! empty( $this->settings->style ) && 'threed' == $this->settings->style ) {
 			if ( isset( $this->settings->threed_button_options ) && ! empty( $this->settings->threed_button_options ) ) {
 				$btn_style .= ' uabb-' . $this->settings->threed_button_options . '-btn';
 			}
 		}
 
-		if ( ! empty( $this->settings->style ) && $this->settings->style == 'flat' ) {
+		if ( ! empty( $this->settings->style ) && 'flat' == $this->settings->style ) {
 			if ( isset( $this->settings->flat_button_options ) && ! empty( $this->settings->flat_button_options ) ) {
 				$btn_style .= ' uabb-' . $this->settings->flat_button_options . '-btn';
 			}
