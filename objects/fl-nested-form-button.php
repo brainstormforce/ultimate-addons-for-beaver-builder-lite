@@ -1,8 +1,10 @@
 <?php
-
 /**
  *  FLBuilder Registered Nested Forms - Button Form Field
+ *
+ * @package Button
  */
+
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 
 if ( ! $version_bb_check ) {
@@ -115,9 +117,6 @@ if ( ! $version_bb_check ) {
 										'threed_right'   => __( 'Move Right', 'uabb' ),
 										'animate_top'    => __( 'Animate Top', 'uabb' ),
 										'animate_bottom' => __( 'Animate Bottom', 'uabb' ),
-										/*
-									'animate_left'     => __('Animate Left', 'uabb'),
-										'animate_right'     => __('Animate Right', 'uabb'),*/
 									),
 								),
 								'flat_button_options'   => array(
@@ -455,9 +454,6 @@ if ( ! $version_bb_check ) {
 										'threed_right'   => __( 'Move Right', 'uabb' ),
 										'animate_top'    => __( 'Animate Top', 'uabb' ),
 										'animate_bottom' => __( 'Animate Bottom', 'uabb' ),
-										/*
-										'animate_left'     => __('Animate Left', 'uabb'),
-										'animate_right'     => __('Animate Right', 'uabb'),*/
 									),
 								),
 								'flat_button_options'   => array(
