@@ -7,12 +7,13 @@
  *
  * @package UABB Heading Module
  */
+
 FLBuilder::register_module(
 	'RibbonModule',
 	array(
-		'general'    => array( // Tab
-			'title'    => __( 'Layout', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
+		'general'    => array( // Tab.
+			'title'    => __( 'Layout', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
 				'general' => array(
 					'title'  => '',
 					'fields' => array(
@@ -51,7 +52,7 @@ FLBuilder::register_module(
 				'style'   => array(
 					'title'  => __( 'Style', 'uabb' ),
 					'fields' => array(
-						'ribbon_width'  => array(
+						'ribbon_width' => array(
 							'type'    => 'select',
 							'label'   => __( 'Ribbon Width', 'uabb' ),
 							'default' => 'auto',
@@ -65,11 +66,11 @@ FLBuilder::register_module(
 									'fields' => array( 'custom_width', 'ribbon_align' ),
 								),
 								'auto'   => array(
-									'fields' => array( 'ribbon_align' /*, 'responsive_compatibility'*/ ),
+									'fields' => array( 'ribbon_align' ),
 								),
 							),
 						),
-						'custom_width'  => array(
+						'custom_width' => array(
 							'type'        => 'unit',
 							'label'       => __( 'Custom Width', 'uabb' ),
 							'placeholder' => '500',
@@ -77,7 +78,7 @@ FLBuilder::register_module(
 							'slider'      => true,
 							'units'       => array( 'px' ),
 						),
-						'ribbon_align'  => array(
+						'ribbon_align' => array(
 							'type'    => 'align',
 							'label'   => __( 'Alignment', 'uabb' ),
 							'default' => 'center',
@@ -88,28 +89,17 @@ FLBuilder::register_module(
 								'right'  => __( 'Right', 'uabb' ),
 							),
 						),
-						/*
-						'responsive_compatibility' => array(
-								'type' => 'select',
-								'label' => __('Responsive Compatibility', 'uabb'),
-								'help' => __('There might be responsive issues for long texts. If you are facing such issues then select this option as Yes.', 'uabb'),
-								'default' => 'no',
-								'options' => array(
-									'yes' => __('Yes','uabb'),
-									'no' => __('No','uabb'),
-								),
-							),*/
-							'stitching' => array(
-								'type'    => 'select',
-								'label'   => __( 'Stitching', 'uabb' ),
-								'default' => 'yes',
-								'options' => array(
-									'yes' => __( 'Yes', 'uabb' ),
-									'no'  => __( 'No', 'uabb' ),
-								),
-								'help'    => __( 'To give Stitch effect on Ribbon', 'uabb' ),
+						'stitching'    => array(
+							'type'    => 'select',
+							'label'   => __( 'Stitching', 'uabb' ),
+							'default' => 'yes',
+							'options' => array(
+								'yes' => __( 'Yes', 'uabb' ),
+								'no'  => __( 'No', 'uabb' ),
 							),
-						'shadow'        => array(
+							'help'    => __( 'To give Stitch effect on Ribbon', 'uabb' ),
+						),
+						'shadow'       => array(
 							'type'    => 'select',
 							'label'   => __( 'Ribbon Shadow', 'uabb' ),
 							'default' => 'yes',
@@ -137,7 +127,7 @@ FLBuilder::register_module(
 									'fields' => array( 'ribbon_color' ),
 								),
 								'gradient' => array(
-									'fields' => array( /*'top_gradient_color', 'bottom_gradient_color'*/ 'gradient_color' ),
+									'fields' => array( 'gradient_color' ),
 								),
 							),
 						),
@@ -182,9 +172,9 @@ FLBuilder::register_module(
 				),
 			),
 		),
-		'typography' => array( // Tab
-			'title'    => __( 'Typography', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
+		'typography' => array( // Tab.
+			'title'    => __( 'Typography', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
 				'text_typography' => array(
 					'title'  => __( 'Ribbon Text', 'uabb' ),
 					'fields' => array(

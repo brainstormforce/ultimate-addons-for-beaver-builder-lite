@@ -1,12 +1,18 @@
 <?php
+/**
+ *  UABB Ribbon Module file
+ *
+ *  @package UABB Ribbon Module
+ */
 
 /**
+ * Function that initializes UABB Ribbon Module
  *
  * @class RibbonModule
  */
 class RibbonModule extends FLBuilderModule {
-
 	/**
+	 * Constructor function that constructs default values for the Ribbon Module
 	 *
 	 * @method __construct
 	 */
@@ -203,8 +209,12 @@ class RibbonModule extends FLBuilderModule {
 		}
 		return $settings;
 	}
+
 	/**
-	 * @method get_icons
+	 * Function to get the icon for the Progress Bar
+	 *
+	 * @method get_icon
+	 * @param string $icon gets the icon for the module.
 	 */
 	public function get_icon( $icon = '' ) {
 		// check if $icon is referencing an included icon.

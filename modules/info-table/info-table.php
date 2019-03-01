@@ -1,11 +1,18 @@
 <?php
+/**
+ *  UABB Info Table Module file
+ *
+ *  @package UABB Info Table Module
+ */
 
 /**
+ * Function that initializes Info Table Module
+ *
  * @class UABBInfoTableModule
  */
 class UABBInfoTableModule extends FLBuilderModule {
-
 	/**
+	 * Constructor function that constructs default values for the Info Table Module
 	 *
 	 * @method __construct
 	 */
