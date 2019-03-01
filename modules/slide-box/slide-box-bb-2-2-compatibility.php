@@ -7,15 +7,16 @@
  *
  * @package UABB Heading Module
  */
+
 FLBuilder::register_module(
 	'SlideBoxModule',
 	array(
-		'slide_front' => array( // Tab
-			'title'    => __( 'Slide Box Front', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
-				'title'           => array( // Section
-					'title'  => __( 'Slide Box Front', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+		'slide_front' => array( // Tab.
+			'title'    => __( 'Slide Box Front', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'title'           => array( // Section.
+					'title'  => __( 'Slide Box Front', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'title_front' => array(
 							'type'        => 'text',
 							'label'       => __( 'Title', 'uabb' ),
@@ -36,9 +37,9 @@ FLBuilder::register_module(
 						),
 					),
 				),
-				'general'         => array( // Section
-					'title'  => __( 'Image / Icon', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'general'         => array( // Section.
+					'title'  => __( 'Image / Icon', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'image_type' => array(
 							'type'    => 'select',
 							'label'   => __( 'Image Type', 'uabb' ),
@@ -172,9 +173,9 @@ FLBuilder::register_module(
 					),
 				),
 
-				'img_icon_styles' => array( // Section
-					'title'  => __( 'Image / Icon Position', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'img_icon_styles' => array( // Section.
+					'title'  => __( 'Image / Icon Position', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'front_img_icon_position'       => array(
 							'type'    => 'select',
 							'label'   => __( 'Position', 'uabb' ),
@@ -280,12 +281,12 @@ FLBuilder::register_module(
 				),
 			),
 		),
-		'slide_down'  => array( // Tab
-			'title'    => __( 'Slide Box Back', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
-				'title'           => array( // Section
-					'title'  => __( 'Slide Box Back', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+		'slide_down'  => array( // Tab.
+			'title'    => __( 'Slide Box Back', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'title'           => array( // Section.
+					'title'  => __( 'Slide Box Back', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'title_back' => array(
 							'type'    => 'text',
 							'label'   => __( 'Title on Back', 'uabb' ),
@@ -298,14 +299,14 @@ FLBuilder::register_module(
 						),
 					),
 				),
-				'description'     => array( // Section
-					'title'  => '', // Section Title
-					'fields' => array( // Section Fields
+				'description'     => array( // Section.
+					'title'  => '', // Section Title.
+					'fields' => array( // Section Fields.
 						'desc_back' => array(
 							'type'          => 'editor',
 							'media_buttons' => false,
 							'rows'          => 10,
-							'label'         => __( '', 'uabb' ),
+							'label'         => __( 'Description', 'uabb' ),
 							'default'       => __( '<ul><li>Enter description text here.</li><li>Enter description text here.</li></ul>', 'uabb' ),
 						),
 					),
@@ -334,9 +335,9 @@ FLBuilder::register_module(
 						),
 					),
 				),
-				'cta_type_text'   => array( // Section
-					'title'  => __( 'Text', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'cta_type_text'   => array( // Section.
+					'title'  => __( 'Text', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'link'     => array(
 							'type'          => 'link',
 							'label'         => __( 'Link', 'uabb' ),
@@ -354,9 +355,9 @@ FLBuilder::register_module(
 						),
 					),
 				),
-				'cta_type_button' => array( // Section
-					'title'  => __( 'Button', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'cta_type_button' => array( // Section.
+					'title'  => __( 'Button', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'button' => array(
 							'type'         => 'form',
 							'label'        => __( 'Button Settings', 'uabb' ),
@@ -367,12 +368,12 @@ FLBuilder::register_module(
 				),
 			),
 		),
-		'style'       => array( // Tab
-			'title'    => __( 'Styles', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
-				'general'              => array( // Section
-					'title'  => __( '', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+		'style'       => array( // Tab.
+			'title'    => __( 'Styles', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'general'              => array( // Section.
+					'title'  => __( 'Description', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'slide_type' => array(
 							'type'    => 'select',
 							'label'   => __( 'Select Style', 'uabb' ),
@@ -399,9 +400,9 @@ FLBuilder::register_module(
 						),
 					),
 				),
-				'front_styles'         => array( // Section
-					'title'  => __( 'Slide Box Front Style', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'front_styles'         => array( // Section.
+					'title'  => __( 'Slide Box Front Style', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'front_padding_dimension'        => array(
 
 							'type'        => 'dimension',
@@ -457,9 +458,9 @@ FLBuilder::register_module(
 
 					),
 				),
-				'back_styles'          => array( // Section
-					'title'  => __( 'Slide Box Back Style', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'back_styles'          => array( // Section.
+					'title'  => __( 'Slide Box Back Style', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'back_padding_dimension' => array(
 							'type'       => 'dimension',
 							'label'      => __( 'Content Padding', 'uabb' ),
@@ -505,9 +506,9 @@ FLBuilder::register_module(
 						),
 					),
 				),
-				'overlay'              => array( // Section
-					'title'  => __( 'Overlay', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'overlay'              => array( // Section.
+					'title'  => __( 'Overlay', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'overlay'                   => array(
 							'type'    => 'select',
 							'label'   => __( 'Enable Overlay', 'uabb' ),
@@ -576,9 +577,9 @@ FLBuilder::register_module(
 						),
 					),
 				),
-				'dropdown_icon'        => array( // Section
-					'title'  => __( 'Drop Down Icon', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'dropdown_icon'        => array( // Section.
+					'title'  => __( 'Drop Down Icon', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'dropdown_icon_color'      => array(
 							'type'        => 'color',
 							'label'       => __( 'Icon Color', 'uabb' ),
@@ -624,9 +625,9 @@ FLBuilder::register_module(
 						),
 					),
 				),
-				'slide_box_min_height' => array( // Section
-					'title'  => __( 'Slide Box Min Height', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'slide_box_min_height' => array( // Section.
+					'title'  => __( 'Slide Box Min Height', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'set_min_height'       => array(
 							'type'    => 'select',
 							'label'   => __( 'Minimum Height', 'uabb' ),
@@ -666,9 +667,9 @@ FLBuilder::register_module(
 				),
 			),
 		),
-		'typography'  => array( // Tab
-			'title'    => __( 'Typography', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
+		'typography'  => array( // Tab.
+			'title'    => __( 'Typography', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
 				'front_title_typography' => array(
 					'title'  => __( 'Front Title', 'uabb' ),
 					'fields' => array(

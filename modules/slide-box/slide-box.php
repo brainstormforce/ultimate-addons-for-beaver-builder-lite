@@ -1,12 +1,18 @@
 <?php
+/**
+ *  UABB Slide Box Module file
+ *
+ *  @package UABB Slide Box Module
+ */
 
 /**
+ * Function that initializes UABB Slide Box Module
  *
  * @class SlideBoxModule
  */
 class SlideBoxModule extends FLBuilderModule {
-
 	/**
+	 * Constructor function that constructs default values for the Slide Box Module
 	 *
 	 * @method __construct
 	 */
@@ -1001,6 +1007,12 @@ class SlideBoxModule extends FLBuilderModule {
 
 		return $settings;
 	}
+
+	/**
+	 * Function that renders the link for the Slide Box
+	 *
+	 * @method render_link
+	 */
 	public function render_link() {
 		if ( isset( $this->settings->link_nofollow ) ) {
 			$link_nofollow = $this->settings->link_nofollow;
@@ -1013,27 +1025,32 @@ class SlideBoxModule extends FLBuilderModule {
 	}
 
 	/**
+	 * Function that renders the button for the Slide Box
+	 *
 	 * @method render_button
 	 */
 	public function render_button() {
-		if ( $this->settings->cta_type == 'button' ) {
-			if ( $this->settings->button != '' ) {
+		if ( 'button' == $this->settings->cta_type ) {
+			if ( '' != $this->settings->button ) {
 				FLBuilder::render_module_html( 'uabb-button', $this->settings->button );
 			}
 		}
 	}
 
 	/**
+	 * Function that renders the Image for the Slide Box module.
+	 *
 	 * @method render_image
+	 * @param var $pos gets the position of the image.
 	 */
 	public function render_image( $pos ) {
-		if ( $this->settings->front_img_icon_position == $pos ) {
+		if ( $pos == $this->settings->front_img_icon_position ) {
 			$imageicon_array = array(
 
-				/* General Section */
+				/* General Section. */
 				'image_type'              => $this->settings->image_type,
 
-				/* Icon Basics */
+				/* Icon Basics. */
 				'icon'                    => $this->settings->icon,
 				'icon_size'               => $this->settings->icon_size,
 				'icon_align'              => '',
@@ -1084,8 +1101,13 @@ class SlideBoxModule extends FLBuilderModule {
 		}
 	}
 
+	/**
+	 * Function that renders the overlay icon for the Slide Box
+	 *
+	 * @method render_overlay_icon
+	 */
 	public function render_overlay_icon() {
-		if ( $this->settings->slide_type == 'style1' && $this->settings->overlay == 'yes' ) {
+		if ( 'style1' == $this->settings->slide_type && 'yes' == $this->settings->overlay ) {
 			/* Render HTML Function */
 			echo '<div class="uabb-slide-box-overlay">';
 			echo    '<span class="uabb-icon-wrap">
@@ -1097,9 +1119,14 @@ class SlideBoxModule extends FLBuilderModule {
 		}
 	}
 
+	/**
+	 * Function that renders the overlay icon for the Slide Box
+	 *
+	 * @method render_overlay_icon
+	 */
 	public function render_dropdown_icon() {
 
-		if ( $this->settings->slide_type == 'style2' ) {
+		if ( 'style2' == $this->settings->slide_type ) {
 
 			$icon_settings = array(
 				'bg_color' => $this->settings->dropdown_icon_bg_color,
@@ -1108,10 +1135,6 @@ class SlideBoxModule extends FLBuilderModule {
 				'size'     => $this->settings->dropdown_icon_size,
 				'text'     => '',
 			);
-
-			// echo '<div class="uabb-slide-dropdown">';
-			// FLBuilder::render_module_html('uabb-icon', $icon_settings);
-			// echo '</div>';
 			echo '<div class="uabb-slide-dropdown">';
 			echo    '<span class="uabb-icon-wrap">
                         <span class="uabb-icon">
@@ -1121,7 +1144,7 @@ class SlideBoxModule extends FLBuilderModule {
 			echo '</div>';
 		}
 
-		if ( $this->settings->slide_type == 'style3' ) {
+		if ( 'style3' == $this->settings->slide_type ) {
 
 			$icon_settings = array(
 				'color' => $this->settings->dropdown_icon_color,

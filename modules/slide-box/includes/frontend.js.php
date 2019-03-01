@@ -1,21 +1,24 @@
+<?php
 /**
- * This file should contain frontend JavaScript that 
+ * This file should contain frontend JavaScript that
  * will be applied to individual module instances.
  *
- * You have access to three variables in this file: 
- * 
+ * You have access to three variables in this file:
+ *
  * $module An instance of your module class.
  * $id The module's ID.
  * $settings The module's settings.
  *
- * Example: 
+ * @package Slide Box
  */
+
+?>
 if(! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
 	var is_touch_device = false;
 else
 	var is_touch_device = true;
 
-<?php if ( $settings->slide_type == 'style1' ) { ?>
+<?php if ( 'style1' == $settings->slide_type ) { ?>
 var isMobile = { 
 	Android: function() { 
 		return navigator.userAgent.match(/Android/i);
@@ -40,7 +43,7 @@ var device = isMobile.any();
 if( device == null ) {
 	jQuery('.fl-node-<?php echo $id; ?>').find('.uabb-slide-box-wrap').hover( function() {
 		_hideAll_SlideBox('');
-		
+
 		var style1 = jQuery(this).find('.uabb-style1');
 
 		if( ! jQuery(this).hasClass('set-z-index') ) {
@@ -51,19 +54,19 @@ if( device == null ) {
 		}
 	},
 	function() {
-		
+
 		var style1 = jQuery(this).find('.uabb-style1');
 
 		$this = jQuery(this);
 		setTimeout(function(){
-			  $this.removeClass('set-z-index');
+			$this.removeClass('set-z-index');
 		}, 250);
 		style1.removeClass('open-slidedown');
 	});	
 } 
 else if( device != null ) {
 	jQuery('.fl-node-<?php echo $id; ?>').find('.uabb-slide-box-wrap').click( function() {
-		
+
 		var style1 = jQuery(this).find('.uabb-style1');
 		$this = jQuery(this);
 
@@ -90,12 +93,11 @@ jQuery('.fl-node-<?php echo $id; ?>').on( 'click' , '.uabb-slide-face', function
 		var dropdown_icon = style2.find('.uabb-slide-dropdown .fa'),
 			slidebox_wrap = style2.closest('.uabb-slide-box-wrap');
 
-		
 		if( style2.hasClass('open-slidedown') ){
 
 			style2.removeClass('open-slidedown');
 			setTimeout(function(){
-				  style2.closest('.uabb-slide-box-wrap').removeClass('set-z-index');
+				style2.closest('.uabb-slide-box-wrap').removeClass('set-z-index');
 			},250);
 			dropdown_icon.removeClass('fa-angle-up');
 			dropdown_icon.addClass('fa-angle-down');
@@ -107,7 +109,7 @@ jQuery('.fl-node-<?php echo $id; ?>').on( 'click' , '.uabb-slide-face', function
 		}
 	}
 
-	if( slide_type = 'style3' ) {
+	if( 'style3' = slide_type ) {
 		var dropdown_icon = style3.find('.uabb-slide-dropdown .fa'),
 			slidebox_wrap = style3.closest('.uabb-slide-box-wrap');
 
@@ -115,7 +117,7 @@ jQuery('.fl-node-<?php echo $id; ?>').on( 'click' , '.uabb-slide-face', function
 
 			style3.removeClass('open-slidedown');
 			setTimeout(function(){
-				  style3.closest('.uabb-slide-box-wrap').removeClass('set-z-index');
+				style3.closest('.uabb-slide-box-wrap').removeClass('set-z-index');
 			}, 250);
 			dropdown_icon.removeClass('fa-minus');
 			dropdown_icon.addClass('fa-plus');

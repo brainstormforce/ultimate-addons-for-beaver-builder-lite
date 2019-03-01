@@ -1,5 +1,4 @@
 <?php
-
 /**
  * This file should be used to render each module instance.
  * You have access to two variables in this file:
@@ -7,10 +6,9 @@
  * $module An instance of your module class.
  * $settings The module's settings.
  *
- * Example:
+ * @package Slide Box
  */
-// echo '<pre>'; print_r($module); echo '</pre>';
-// echo '<pre>'; print_r($settings); echo '</pre>';
+
 $pos = $settings->front_img_icon_position;
 ?>
 <div class="uabb-module-content uabb-slide-box-wrap">
@@ -18,43 +16,43 @@ $pos = $settings->front_img_icon_position;
 		<div id="uabb-slide-box-wrap-<?php echo $module->node; ?>" class="uabb-slide-box">
 			<div class="uabb-slide-face uabb-slide-front uabb-slide-<?php echo $settings->image_type . '-' . $pos; ?>">
 				<div class="uabb-slide-box-section "><!-- Inline Block Space Fix
-					<?php if ( $settings->image_type != 'none' ) : ?>
-						<?php if ( $pos == 'left' ) { ?>
+					<?php if ( 'none' != $settings->image_type ) : ?>
+						<?php if ( 'left' == $pos ) { ?>
 							--><div class="uabb-slide-front-left-img">
 								<?php $module->render_image( 'left' ); ?>
 							</div><!-- Inline Block Space Fix
-							<?php if ( $settings->front_icon_border == 'yes' ) { ?>
+							<?php if ( 'yes' == $settings->front_icon_border ) { ?>
 							--><span class="uabb-slide-icon-border"></span><!-- Inline Block Space Fix
 							<?php } ?>
 						<?php } ?>
-						<?php if ( $pos == 'above-title' ) { ?>
+						<?php if ( 'above-title' == $pos ) { ?>
 							--><div class="uabb-slide-front-above-img">
 								<?php $module->render_image( 'above-title' ); ?>
 							</div><!-- Inline Block Space Fix
 						<?php } ?>
 					<?php endif; ?>
 					--><div class="uabb-slide-front-right-text"><!-- Inline Block Space Fix
-						<?php if ( $settings->image_type != 'none' && $pos == 'left-title' ) : ?>
+						<?php if ( 'none' != $settings->image_type && 'left-title' == $pos ) : ?>
 							--><div class="uabb-slide-front-left-title-img">
 								<?php $module->render_image( 'left-title' ); ?>
 							</div><!-- Inline Block Space Fix
 						<?php endif; ?>
-						<?php if ( $settings->title_front != '' ) { ?>
+						<?php if ( '' != $settings->title_front ) { ?>
 							--><<?php echo $settings->front_title_tag_selection; ?> class="uabb-slide-face-text-title"><?php echo $settings->title_front; ?></<?php echo $settings->front_title_tag_selection; ?>><!-- Inline Block Space Fix
 						<?php } ?>
-						<?php if ( $settings->image_type != 'none' && $pos == 'right-title' ) : ?>
+						<?php if ( 'none' != $settings->image_type && 'right-title' == $pos ) : ?>
 							--><div class="uabb-slide-front-right-title-img">
 								<?php $module->render_image( 'right-title' ); ?>
 							</div><!-- Inline Block Space Fix
 						<?php endif; ?>
-						<?php if ( $settings->desc_front != '' ) { ?>
+						<?php if ( '' != $settings->desc_front ) { ?>
 							--><div class="uabb-slide-box-section-content uabb-text-editor">
 								<?php echo trim( $settings->desc_front ); ?>
 							</div><!-- Inline Block Space Fix
 						<?php } ?>
 					--></div><!-- Inline Block Space Fix
-					<?php if ( $settings->image_type != 'none' && $pos == 'right' ) : ?>
-						<?php if ( $settings->front_icon_border == 'yes' ) { ?>
+					<?php if ( 'none' != $settings->image_type && 'right' == $pos ) : ?>
+						<?php if ( 'yes' == $settings->front_icon_border ) { ?>
 							--><span class="uabb-slide-icon-border"></span><!-- Inline Block Space Fix
 						<?php } ?>
 						--><div class="uabb-slide-front-right-img">
@@ -71,12 +69,12 @@ $pos = $settings->front_img_icon_position;
 			<div class="uabb-slide-face uabb-slide-down">
 				<div class="uabb-slide-box-section- ">
 				<?php
-				if ( $settings->title_back != '' ) {
+				if ( '' != $settings->title_back ) {
 					?>
 					<<?php echo $settings->back_title_tag_selection; ?> class="uabb-slide-back-text-title"><?php echo $settings->title_back; ?></<?php echo $settings->back_title_tag_selection; ?>>
 					<?php
 				}
-				if ( $settings->desc_back != '' ) {
+				if ( '' != $settings->desc_back ) {
 					?>
 					<div class="uabb-slide-down-box-section-content uabb-text-editor">
 						<?php echo trim( $settings->desc_back ); ?>
@@ -85,11 +83,11 @@ $pos = $settings->front_img_icon_position;
 				}
 				?>
 					<?php
-					if ( $settings->cta_type != 'none' ) {
-						// Link CTA
+					if ( 'none' != $settings->cta_type ) {
+						// Link CTA.
 						$module->render_link();
 
-						// Button CTA
+						// Button CTA.
 						$module->render_button();
 					}
 					?>
