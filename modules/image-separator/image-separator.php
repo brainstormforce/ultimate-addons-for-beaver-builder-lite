@@ -1,22 +1,37 @@
 <?php
+/**
+ *  UABB Image Separator Module file
+ *
+ *  @package UABB Image Separator Module
+ */
 
 /**
+ * Function that initializes Image Separator Module
+ *
  * @class UABBImageSeparatorModule
  */
 class UABBImageSeparatorModule extends FLBuilderModule {
 
 	/**
+	 * Variable for Image Separator module
+	 *
 	 * @property $data
+	 * @var $data
 	 */
 	public $data = null;
 
 	/**
+	 * Variable for Image Separator module
+	 *
 	 * @property $_editor
 	 * @protected
+	 * @var $_editor
 	 */
 	protected $_editor = null;
 
 	/**
+	 * Constructor function that constructs default values for the Image Separator Module
+	 *
 	 * @method __construct
 	 */
 	public function __construct() {
@@ -40,8 +55,10 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 
 
 	/**
+	 * Function to update the Image src
+	 *
 	 * @method update
-	 * @param $settings {object}
+	 * @param obejct $settings gets the settings for the object.
 	 */
 	public function update( $settings ) {
 		// Make sure we have a photo_src property.
@@ -63,6 +80,8 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	}
 
 	/**
+	 * Function to delete the cropped image src
+	 *
 	 * @method delete
 	 */
 	public function delete() {
@@ -74,6 +93,8 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	}
 
 	/**
+	 * Function to crop the the existing image
+	 *
 	 * @method crop
 	 */
 	public function crop() {
@@ -81,7 +102,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 		$this->delete();
 
 		// Do a crop.
-		if ( ! empty( $this->settings->image_style ) && $this->settings->image_style != 'simple' && $this->settings->image_style != 'custom' ) {
+		if ( ! empty( $this->settings->image_style ) && 'simple' != $this->settings->image_style && 'custom' != $this->settings->image_style ) {
 
 			$editor = $this->_get_editor();
 
@@ -95,10 +116,10 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 			$new_height   = $size['height'];
 
 			// Get the crop ratios.
-			if ( $this->settings->image_style == 'circle' ) {
+			if ( 'circle' == $this->settings->image_style ) {
 				$ratio_1 = 1;
 				$ratio_2 = 1;
-			} elseif ( $this->settings->image_style == 'square' ) {
+			} elseif ( 'square' == $this->settings->image_style ) {
 				$ratio_1 = 1;
 				$ratio_2 = 1;
 			}
@@ -127,6 +148,8 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	}
 
 	/**
+	 * Function to get the Image src
+	 *
 	 * @method get_data
 	 */
 	public function get_data() {
@@ -149,10 +172,12 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	}
 
 	/**
+	 * Function to get the classes for the Image src
+	 *
 	 * @method get_classes
 	 */
 	public function get_classes() {
-		 $classes = array( 'uabb-photo-img' );
+		$classes = array( 'uabb-photo-img' );
 
 		if ( ! empty( $this->settings->photo ) ) {
 
@@ -178,10 +203,12 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	}
 
 	/**
+	 * Function to get src for the Image src
+	 *
 	 * @method get_src
 	 */
 	public function get_src() {
-		 $src = $this->_get_uncropped_url();
+		$src = $this->_get_uncropped_url();
 
 		// Return a cropped photo.
 		if ( $this->_has_source() && ! empty( $this->settings->image_style ) ) {
@@ -191,17 +218,11 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 			// See if the cropped photo already exists.
 			if ( file_exists( $cropped_path['path'] ) ) {
 				$src = $cropped_path['url'];
-			}
-			// It doesn't, check if this is a demo image.
-			elseif ( stristr( $src, FL_BUILDER_DEMO_URL ) && ! stristr( FL_BUILDER_DEMO_URL, $_SERVER['HTTP_HOST'] ) ) {
+			} elseif ( stristr( $src, FL_BUILDER_DEMO_URL ) && ! stristr( FL_BUILDER_DEMO_URL, $_SERVER['HTTP_HOST'] ) ) {
 				$src = $this->_get_cropped_demo_url();
-			}
-			// It doesn't, check if this is a OLD demo image.
-			elseif ( stristr( $src, FL_BUILDER_OLD_DEMO_URL ) ) {
+			} elseif ( stristr( $src, FL_BUILDER_OLD_DEMO_URL ) ) {
 				$src = $this->_get_cropped_demo_url();
-			}
-			// A cropped photo doesn't exist, try to create one.
-			else {
+			} else {
 
 				$url = $this->crop();
 
@@ -216,10 +237,12 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 
 
 	/**
+	 * Function to get alternate val for the Image
+	 *
 	 * @method get_alt
 	 */
 	public function get_alt() {
-		 $photo = $this->get_data();
+		$photo = $this->get_data();
 
 		if ( ! empty( $photo->alt ) ) {
 			return htmlspecialchars( $photo->alt );
@@ -233,23 +256,8 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	}
 
 	/**
-	 * @method get_attributes
-	 */
-	/*
-	public function get_attributes()
-	{
-		$attrs = '';
-
-		if ( isset( $this->settings->attributes ) ) {
-			foreach ( $this->settings->attributes as $key => $val ) {
-				$attrs .= $key . '="' . $val . '" ';
-			}
-		}
-
-		return $attrs;
-	}*/
-
-	/**
+	 * Function to check for the Image src
+	 *
 	 * @method _has_source
 	 * @protected
 	 */
@@ -262,11 +270,13 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	}
 
 	/**
+	 * Function to get the editor for the Image src
+	 *
 	 * @method _get_editor
 	 * @protected
 	 */
 	protected function _get_editor() {
-		if ( $this->_has_source() && $this->_editor === null ) {
+		if ( $this->_has_source() && null === $this->_editor ) {
 
 			$url_path  = $this->_get_uncropped_url();
 			$file_path = str_ireplace( home_url(), ABSPATH, $url_path );
@@ -282,6 +292,8 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	}
 
 	/**
+	 * Function to get th cropped path for the Image src
+	 *
 	 * @method _get_cropped_path
 	 * @protected
 	 */
@@ -315,6 +327,8 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	}
 
 	/**
+	 * Function to get the uncropped url of the Image src
+	 *
 	 * @method _get_uncropped_url
 	 * @protected
 	 */
@@ -329,7 +343,9 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	}
 
 	/**
-	 * @method _get_cropped_demo_url
+	 * Function to get the uncropped url of the Image src
+	 *
+	 * @method _get_uncropped_url
 	 * @protected
 	 */
 	protected function _get_cropped_demo_url() {
@@ -367,6 +383,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 		return $settings;
 	}
 }
+
 /*
  * Condition to verify Beaver Builder version.
  * And accordingly render the required form settings file.

@@ -7,16 +7,16 @@
  *
  * @package UABB Image Separator Module
  */
+
 FLBuilder::register_module(
 	'UABBImageSeparatorModule',
 	array(
-		'general'       => array( // Tab
-			'title'    => __( 'General', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
-				/* Image Basic Setting */
-				'img_basic'    => array( // Section
-					'title'  => '', // Section Title
-					'fields' => array( // Section Fields
+		'general'       => array( // Tab.
+			'title'    => __( 'General', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'img_basic'    => array( // Section.
+					'title'  => '', // Section Title.
+					'fields' => array( // Section Fields.
 						'photo'           => array(
 							'type'        => 'photo',
 							'label'       => __( 'Separator Image', 'uabb' ),
@@ -115,11 +115,11 @@ FLBuilder::register_module(
 							'default' => 'none',
 							'help'    => __( 'The type of border to use. Double borders must have a width of at least 3px to render properly.', 'uabb' ),
 							'options' => array(
-								'none'   => __( 'None', 'Border type.', 'uabb' ),
-								'solid'  => __( 'Solid', 'Border type.', 'uabb' ),
-								'dashed' => __( 'Dashed', 'Border type.', 'uabb' ),
-								'dotted' => __( 'Dotted', 'Border type.', 'uabb' ),
-								'double' => __( 'Double', 'Border type.', 'uabb' ),
+								'none'   => __( 'None', 'uabb' ),
+								'solid'  => __( 'Solid', 'uabb' ),
+								'dashed' => __( 'Dashed', 'uabb' ),
+								'dotted' => __( 'Dotted', 'uabb' ),
+								'double' => __( 'Double', 'uabb' ),
 							),
 							'toggle'  => array(
 								'solid'  => array(
@@ -135,12 +135,6 @@ FLBuilder::register_module(
 									'fields' => array( 'img_border_width', 'img_border_radius', 'img_border_color', 'img_border_hover_color' ),
 								),
 							),
-							/*
-						'preview'     => array(
-									'type'      => 'css',
-									'selector'  => '.uabb-image .uabb-photo-img',
-									'property'  => 'border-style',
-							)*/
 						),
 						'img_border_width'     => array(
 							'type'        => 'unit',
@@ -175,9 +169,9 @@ FLBuilder::register_module(
 					),
 				),
 				/* Image Colors */
-				'img_colors'   => array( // Section
-					'title'  => __( 'Colors', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'img_colors'   => array( // Section.
+					'title'  => __( 'Colors', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						/* Background Color Dependent on Icon Style **/
 						'img_bg_color'           => array(
 							'type'        => 'color',
@@ -338,9 +332,9 @@ FLBuilder::register_module(
 				),
 			),
 		),
-		'animation_tab' => array( // Tab
-			'title'    => __( 'Animation', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
+		'animation_tab' => array( // Tab.
+			'title'    => __( 'Animation', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
 				'anim_general' => array(
 					'title'  => '',
 					'fields' => array(
@@ -397,18 +391,6 @@ FLBuilder::register_module(
 								'slideInUp'         => __( 'slideInUp', 'uabb' ),
 							),
 						),
-
-						/*
-						'img_animation_duration'          => array(
-							'type'          => 'text',
-							'label'         => __('Animation Duration', 'uabb'),
-							'default'       => '',
-							'help'          => 'How long the animation effect should last. Decides the speed of effect.',
-							'maxlength'     => '3',
-							'size'          => '6',
-							'description'   => 's',
-						),*/
-
 						'img_animation_delay'   => array(
 							'type'        => 'unit',
 							'label'       => __( 'Animation Delay', 'uabb' ),
