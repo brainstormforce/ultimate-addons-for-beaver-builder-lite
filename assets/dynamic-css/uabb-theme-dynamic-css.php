@@ -1,8 +1,11 @@
-<?php ob_start();
-
+<?php
 /**
  * Write Your Dynamic CSS Below This
+ *
+ * @package UABB Theme Dynamic CSS file
  */
+
+ob_start();
 ?>
 
 /* Theme Button
@@ -15,11 +18,11 @@
 
 .uabb-creative-button-wrap a,
 .uabb-creative-button-wrap a:visited {
-	
+
 	<?php if ( isset( $uabb_theme_btn_family['family'] ) ) { ?>
 	font-family: <?php echo $uabb_theme_btn_family['family']; ?>;
 	<?php } ?> 
-	
+
 	<?php if ( isset( $uabb_theme_btn_family['weight'] ) ) { ?>
 	font-weight: <?php echo $uabb_theme_btn_family['weight']; ?>;
 	<?php } ?>
@@ -46,11 +49,11 @@
 	<?php if ( isset( $uabb_theme_btn_family['family'] ) ) { ?>
 	font-family: <?php echo $uabb_theme_btn_family['family']; ?>;
 	<?php } ?> 
-	
+
 	<?php if ( isset( $uabb_theme_btn_family['weight'] ) ) { ?>
 	font-weight: <?php echo $uabb_theme_btn_family['weight']; ?>;
 	<?php } ?>
-		
+
 	<?php if ( uabb_theme_button_font_size( '' ) != '' ) { ?>
 	font-size: <?php echo uabb_theme_button_font_size( '' ); ?>;
 	<?php } ?>
