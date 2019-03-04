@@ -6,15 +6,16 @@
  *
  * @package UABB Image Icon Module
  */
+
 FLBuilder::register_module(
 	'ImageIconModule',
 	array(
-		'general' => array( // Tab
-			'title'    => __( 'General', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
-				'type_general' => array( // Section
-					'title'  => __( 'Image / Icon', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+		'general' => array( // Tab.
+			'title'    => __( 'General', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'type_general' => array( // Section.
+					'title'  => __( 'Image / Icon', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'image_type' => array(
 							'type'    => 'select',
 							'label'   => __( 'Image Type', 'uabb' ),
@@ -36,9 +37,9 @@ FLBuilder::register_module(
 				),
 
 				/* Icon Basic Setting */
-				'icon_basic'   => array( // Section
-					'title'  => __( 'Icon Basics', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'icon_basic'   => array( // Section.
+					'title'  => __( 'Icon Basics', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'icon'       => array(
 							'type'        => 'icon',
 							'label'       => __( 'Icon', 'uabb' ),
@@ -66,9 +67,9 @@ FLBuilder::register_module(
 					),
 				),
 				/* Image Basic Setting */
-				'img_basic'    => array( // Section
-					'title'  => __( 'Image Basics', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'img_basic'    => array( // Section.
+					'title'  => __( 'Image Basics', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'photo_source' => array(
 							'type'    => 'select',
 							'label'   => __( 'Photo Source', 'uabb' ),
@@ -137,18 +138,14 @@ FLBuilder::register_module(
 							'toggle'  => array(
 								'simple' => array(
 									'fields' => array(),
-									/*'sections' => array( 'colors' )*/
 								),
 								'circle' => array(
-									/*'sections' => array( 'colors' ),*/
 									'fields' => array( 'icon_color_preset', 'icon_bg_color', 'icon_bg_color_opc', 'icon_bg_hover_color', 'icon_bg_hover_color_opc', 'icon_three_d' ),
 								),
 								'square' => array(
-									/*'sections' => array( 'colors' ),*/
 									'fields' => array( 'icon_color_preset', 'icon_bg_color', 'icon_bg_color_opc', 'icon_bg_hover_color', 'icon_bg_hover_color_opc', 'icon_three_d' ),
 								),
 								'custom' => array(
-									/*'sections' => array( 'colors' ),*/
 									'fields' => array( 'icon_color_preset', 'icon_border_style', 'icon_bg_color', 'icon_bg_color_opc', 'icon_bg_hover_color', 'icon_bg_hover_color_opc', 'icon_three_d', 'icon_bg_size', 'icon_bg_border_radius' ),
 								),
 							),
@@ -177,11 +174,11 @@ FLBuilder::register_module(
 							'default' => 'solid',
 							'help'    => __( 'The type of border to use. Double borders must have a width of at least 3px to render properly.', 'uabb' ),
 							'options' => array(
-								'none'   => __( 'None', 'Border type.', 'uabb' ),
-								'solid'  => __( 'Solid', 'Border type.', 'uabb' ),
-								'dashed' => __( 'Dashed', 'Border type.', 'uabb' ),
-								'dotted' => __( 'Dotted', 'Border type.', 'uabb' ),
-								'double' => __( 'Double', 'Border type.', 'uabb' ),
+								'none'   => __( 'None', 'uabb' ),
+								'solid'  => __( 'Solid', 'uabb' ),
+								'dashed' => __( 'Dashed', 'uabb' ),
+								'dotted' => __( 'Dotted', 'uabb' ),
+								'double' => __( 'Double', 'uabb' ),
 							),
 							'toggle'  => array(
 								'solid'  => array(
@@ -197,12 +194,6 @@ FLBuilder::register_module(
 									'fields' => array( 'icon_border_width', 'icon_border_color', 'icon_border_hover_color' ),
 								),
 							),
-							/*
-						'preview'     => array(
-									'type'      => 'css',
-									'selector'  => '.uabb-icon i',
-									'property'  => 'border-style',
-							)*/
 						),
 						'icon_border_width'     => array(
 							'type'        => 'text',
@@ -300,11 +291,11 @@ FLBuilder::register_module(
 							'default' => 'none',
 							'help'    => __( 'The type of border to use. Double borders must have a width of at least 3px to render properly.', 'uabb' ),
 							'options' => array(
-								'none'   => __( 'None', 'Border type.', 'uabb' ),
-								'solid'  => __( 'Solid', 'Border type.', 'uabb' ),
-								'dashed' => __( 'Dashed', 'Border type.', 'uabb' ),
-								'dotted' => __( 'Dotted', 'Border type.', 'uabb' ),
-								'double' => __( 'Double', 'Border type.', 'uabb' ),
+								'none'   => __( 'None', 'uabb' ),
+								'solid'  => __( 'Solid', 'uabb' ),
+								'dashed' => __( 'Dashed', 'uabb' ),
+								'dotted' => __( 'Dotted', 'uabb' ),
+								'double' => __( 'Double', 'uabb' ),
 							),
 							'toggle'  => array(
 								'solid'  => array(
@@ -320,12 +311,6 @@ FLBuilder::register_module(
 									'fields' => array( 'img_border_width', 'img_border_radius', 'img_border_color', 'img_border_hover_color' ),
 								),
 							),
-							/*
-						'preview'     => array(
-									'type'      => 'css',
-									'selector'  => '.uabb-image .uabb-photo-img',
-									'property'  => 'border-style',
-							)*/
 						),
 						'img_border_width'     => array(
 							'type'        => 'text',
@@ -348,20 +333,13 @@ FLBuilder::register_module(
 							'maxlength'   => '3',
 							'size'        => '6',
 							'placeholder' => '0',
-							/*
-						'preview'     => array(
-									'type'      => 'css',
-									'selector'  => '.uabb-image .uabb-image-content',
-									'property'  => 'border-radius',
-									'unit'      => 'px'
-							)*/
 						),
 					),
 				),
 				/* Icon Colors */
-				'icon_colors'  => array( // Section
-					'title'  => __( 'Colors', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'icon_colors'  => array( // Section.
+					'title'  => __( 'Colors', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 
 						/* Style Options */
 						'icon_color_preset'       => array(
@@ -371,7 +349,6 @@ FLBuilder::register_module(
 							'options' => array(
 								'preset1' => __( 'Preset 1', 'uabb' ),
 								'preset2' => __( 'Preset 2', 'uabb' ),
-								/*'preset3'		=> 'Preset 3',*/
 							),
 							'help'    => __( 'Preset 1 => Icon : White, Background : Theme </br>Preset 2 => Icon : Theme, Background : #f3f3f3', 'uabb' ),
 						),
@@ -453,9 +430,9 @@ FLBuilder::register_module(
 				),
 
 				/* Image Colors */
-				'img_colors'   => array( // Section
-					'title'  => __( 'Colors', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'img_colors'   => array( // Section.
+					'title'  => __( 'Colors', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						/* Background Color Dependent on Icon Style **/
 						'img_bg_color'           => array(
 							'type'       => 'color',
@@ -504,7 +481,6 @@ FLBuilder::register_module(
 						),
 					),
 				),
-
 			),
 		),
 	)
