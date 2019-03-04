@@ -1,47 +1,55 @@
 <?php
-/*
-	Declaration of array
-
-	Ex.	'YOUR_VARIABLE_NAME'     => array(
-						'type'          => 'uabb-gradient',
-						'label'         => __( 'Gradient', 'uabb' ),
-						'default'       => array            //Required NULL or Default value
-							'color_one'     => '',
-							'color_two'     => '',
-							'angle'         => '0',
-						)
-					)
-
-Note : Default value is required here. Either pass it NULL or enter your own value.
-
-	How to access variables
-
-		.fl-node-<?php echo $id; ?> .YOUR-CLASS{
-			<?php UABB_Helper::uabb_gradient_css( $settings->YOUR_VARIABLE_NAME ); ?>
-	   }
-*/
+/**
+ *  UABB Gradient file
+ *
+ *  @package UABB Gradient
+ */
 
 if ( ! class_exists( 'UABB_Gradient' ) ) {
+	/**
+	 * This class initializes Gradient
+	 *
+	 * @class UABB_Gradient
+	 */
 	class UABB_Gradient {
-
+		/**
+		 * Constructor function that initializes required actions
+		 *
+		 * @since x.x.x
+		 */
 		function __construct() {
 			add_action( 'fl_builder_control_uabb-gradient', array( $this, 'uabb_gradient' ), 1, 4 );
 			add_action( 'fl_builder_custom_fields', array( $this, 'ui_fields' ), 10, 1 );
 		}
 
+		/**
+		 * Function that renders row's CSS
+		 *
+		 * @since x.x.x
+		 * @param array $fields gets the fields for the gradient.
+		 */
 		function ui_fields( $fields ) {
 			$fields['uabb-gradient'] = BB_ULTIMATE_ADDON_DIR . 'fields/uabb-gradient/ui-field-uabb-gradient.php';
 
 			return $fields;
 		}
 
+		/**
+		 * Function that renders row's CSS
+		 *
+		 * @since x.x.x
+		 * @param var    $name gets the name for the gradient field.
+		 * @param array  $value gets an array of gradient values.
+		 * @param array  $field gets an array of field values.
+		 * @param object $settings gets the object of respective fields.
+		 */
 		function uabb_gradient( $name, $value, $field, $settings ) {
 
 			$name_new = 'uabb_' . $name;
 			$value    = (array) $value;
 			$preview  = json_encode( array( 'type' => 'refresh' ) );
 
-			$default   = ( isset( $field['default'] ) && $field['default'] != '' ) ? $field['default'] : '';
+			$default   = ( isset( $field['default'] ) && '' != $field['default'] ) ? $field['default'] : '';
 			$direction = array(
 				'left_right' => 'Left to Right',
 				'right_left' => 'Right to Left',
@@ -81,7 +89,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 			$html .= '<select name="' . $name . '[][direction]' . '" class="uabb-gradient-direction-select">';
 			foreach ( $direction as $direction_key => $direction_value ) {
 				$selected = '';
-				if ( $value['direction'] == $direction_key ) {
+				if ( $direction_key == $value['direction'] ) {
 					$selected = 'selected="selected"';
 				}
 				$html .= '<option value="' . $direction_key . '" ' . $selected . '>' . $direction_value . '</option>';

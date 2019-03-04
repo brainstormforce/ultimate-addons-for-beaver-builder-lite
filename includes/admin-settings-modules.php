@@ -1,6 +1,14 @@
+<?php
+/**
+ * General Settings Page
+ *
+ * @package UABB Settings Modules
+ */
+
+?>
 <div id="fl-uabb-modules-form" class="fl-settings-form uabb-modules-fl-settings-form">
 
-	<h3 class="fl-settings-form-header"><?php echo sprintf( __( '%s Modules', 'uabb' ), UABB_PREFIX ); ?></h3>
+	<h3 class="fl-settings-form-header"><?php echo sprintf( __( '%s Modules', 'uabb' ), UABB_PREFIX ); // @codingStandardsIgnoreLine. ?></h3>
 
 	<div id="uabb-modules-form" class="uabb-lite-modules" action="<?php UABBBuilderAdminSettings::render_form_action( 'uabb-modules' ); ?>" method="post">
 		<div class="fl-settings-form-content">

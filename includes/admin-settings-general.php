@@ -1,3 +1,11 @@
+<?php
+/**
+ * General Settings Page
+ *
+ * @package UABB Settings General
+ */
+
+?>
 <div id="fl-uabb-form" class="fl-settings-form uabb-fl-settings-form">
 
 	<h3 class="fl-settings-form-header"><?php _e( 'General Settings', 'uabb' ); ?></h3>
@@ -12,10 +20,12 @@
 				$branding_name       = BB_Ultimate_Addon_Helper::get_builder_uabb_branding( 'uabb-plugin-name' );
 				$branding_short_name = BB_Ultimate_Addon_Helper::get_builder_uabb_branding( 'uabb-plugin-short-name' );
 
-				$is_load_templates = $is_load_panels = $uabb_live_preview = '';
+				$is_load_templates = '';
+				$is_load_panels    = '';
+				$uabb_live_preview = '';
 			if ( is_array( $uabb ) ) {
-				$is_load_panels    = ( array_key_exists( 'load_panels', $uabb ) && $uabb['load_panels'] == 1 ) ? ' checked' : '';
-				$uabb_live_preview = ( array_key_exists( 'uabb-live-preview', $uabb ) && $uabb['uabb-live-preview'] == 1 ) ? ' checked' : '';
+				$is_load_panels    = ( array_key_exists( 'load_panels', $uabb ) && 1 == $uabb['load_panels'] ) ? ' checked' : '';
+				$uabb_live_preview = ( array_key_exists( 'uabb-live-preview', $uabb ) && 1 == $uabb['uabb-live-preview'] ) ? ' checked' : '';
 			}
 			?>
 

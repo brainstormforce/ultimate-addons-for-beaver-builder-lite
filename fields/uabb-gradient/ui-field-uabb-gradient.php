@@ -1,3 +1,11 @@
+<?php
+/**
+ * For UI Field Gradient
+ *
+ * @package Gradient Field
+ */
+
+?>
 <#
 var field   = data.field,
 	name    = data.name,
