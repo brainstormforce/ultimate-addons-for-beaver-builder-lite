@@ -1,7 +1,21 @@
 <?php
+/**
+ *  UABB Info List Module file
+ *
+ *  @package UABB Info List Module
+ */
 
+/**
+ * Function that initializes Info List Module
+ *
+ * @class UABBInfoList
+ */
 class UABBInfoList extends FLBuilderModule {
-
+	/**
+	 * Constructor function that constructs default values for the Info List Module
+	 *
+	 * @method __construct
+	 */
 	public function __construct() {
 		parent::__construct(
 			array(
@@ -24,9 +38,12 @@ class UABBInfoList extends FLBuilderModule {
 		$this->add_css( 'uabb-animate', $this->url . 'css/animate.css' );
 	}
 
-	 /**
-	  * @method get_icons
-	  */
+	/**
+	 * Function to get the icon for the Info List
+	 *
+	 * @method get_icons
+	 * @param string $icon gets the icon for the module.
+	 */
 	public function get_icon( $icon = '' ) {
 
 		// check if $icon is referencing an included icon.
@@ -42,14 +59,22 @@ class UABBInfoList extends FLBuilderModule {
 	}
 
 	/**
+	 * Render Image
+	 *
 	 * @method render_image
+	 * @param object $item gets the object for the module.
+	 * @param object $settings gets the settings for the module.
 	 */
 	public function render_image( $item, $settings ) {
-		if ( $settings->list_icon_style == 'circle' ) {
-			$infolist_icon_size = $settings->icon_image_size / 2;
-		} elseif ( $settings->list_icon_style == 'square' ) {
-			$infolist_icon_size = $settings->icon_image_size / 2;
-		} elseif ( $settings->list_icon_style == 'custom' ) {
+		if ( 'circle' == $settings->list_icon_style ) {
+			if ( is_numeric( $settings->icon_image_size ) ) {
+				$infolist_icon_size = $settings->icon_image_size / 2;
+			}
+		} elseif ( 'square' == $settings->list_icon_style ) {
+			if ( is_numeric( $settings->icon_image_size ) ) {
+				$infolist_icon_size = $settings->icon_image_size / 2;
+			}
+		} elseif ( 'custom' == $settings->list_icon_style ) {
 			$infolist_icon_size = $settings->icon_image_size;
 		} else {
 			$infolist_icon_size = $settings->icon_image_size;
@@ -91,10 +116,14 @@ class UABBInfoList extends FLBuilderModule {
 
 	}
 	/**
+	 * Render text
+	 *
 	 * @method render_text
+	 * @param object $item gets the items.
+	 * @param var    $list_item_counter  counts the list item counter value.
 	 */
 	public function render_each_item( $item, $list_item_counter ) {
-		 $target  = '';
+		$target   = '';
 		$nofollow = '';
 		if ( ! UABB_Lite_Compatibility::check_bb_version() ) {
 
@@ -115,15 +144,15 @@ class UABBInfoList extends FLBuilderModule {
 		echo '<li class="uabb-info-list-item info-list-item-dynamic' . $list_item_counter . '">';
 		echo '<div class="uabb-info-list-content-wrapper uabb-info-list-' . $this->settings->icon_position . '">';
 
-		if ( ! empty( $item->list_item_link ) && $item->list_item_link === 'complete' && ! empty( $item->list_item_url ) ) {
+		if ( ! empty( $item->list_item_link ) && 'complete' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
 			echo '<a href="' . $item->list_item_url . '" class="uabb-info-list-link" target="' . $target . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '></a>';
 		}
 
-		if ( $item->image_type != 'none' ) {
+		if ( 'none' != $item->image_type ) {
 			echo '<div class="uabb-info-list-icon info-list-icon-dynamic' . $list_item_counter . '">';
 
-			if ( ! empty( $item->list_item_link ) && $item->list_item_link == 'icon' ) {
+			if ( ! empty( $item->list_item_link ) && 'icon' == $item->list_item_link ) {
 				echo '<a href="' . $item->list_item_url . '" class="uabb-info-list-link" target="' . $target . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '></a>';
 			}
 				$this->render_image( $item, $this->settings );
@@ -134,13 +163,13 @@ class UABBInfoList extends FLBuilderModule {
 		echo '<div class="uabb-info-list-content uabb-info-list-' . $this->settings->icon_position . ' info-list-content-dynamic' . $list_item_counter . '">';
 
 		echo '<' . $this->settings->heading_tag_selection . ' class="uabb-info-list-title">';
-		if ( ! empty( $item->list_item_link ) && $item->list_item_link === 'list-title' && ! empty( $item->list_item_url ) ) {
+		if ( ! empty( $item->list_item_link ) && 'list-title' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
 			echo '<a href="' . $item->list_item_url . '" target="' . $target . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '>';
 
 		}
 		echo $item->list_item_title;
-		if ( ! empty( $item->list_item_link ) && $item->list_item_link === 'list-title' && ! empty( $item->list_item_url ) ) {
+		if ( ! empty( $item->list_item_link ) && 'list-title' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
 			echo '</a>';
 
@@ -160,8 +189,8 @@ class UABBInfoList extends FLBuilderModule {
 
 		$list_item_counter = $list_item_counter + 1;
 		echo '</div>';
-		if ( $item->image_type != 'none' ) {
-			if ( $this->settings->align_items == 'center' && $this->settings->icon_position != 'top' ) {
+		if ( 'none' != $item->image_type ) {
+			if ( 'center' == $this->settings->align_items && 'top' != $this->settings->icon_position ) {
 				echo '<div class="uabb-info-list-connector-top uabb-info-list-' . $this->settings->icon_position . '"></div>';
 			}
 			echo '<div class="uabb-info-list-connector uabb-info-list-' . $this->settings->icon_position . '"></div>';
@@ -170,10 +199,12 @@ class UABBInfoList extends FLBuilderModule {
 		echo '</li>';
 	}
 	/**
+	 * Render List text
+	 *
 	 * @method render_text
 	 */
 	public function render_list() {
-		 $info_list_html   = '';
+		$info_list_html    = '';
 		$list_item_counter = 0;
 		foreach ( $this->settings->add_list_item as $item ) {
 			$this->render_each_item( $item, $list_item_counter );

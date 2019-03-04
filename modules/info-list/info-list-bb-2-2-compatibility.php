@@ -7,15 +7,16 @@
  *
  * @package UABB Info List Module
  */
+
 FLBuilder::register_module(
 	'UABBInfoList',
 	array(
-		'info_list_item'    => array( // Tab
-			'title'    => __( 'List Item', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
-				'info_list_general' => array( // Section
-					'title'  => '', // Section Title
-					'fields' => array( // Section Fields
+		'info_list_item'    => array( // Tab.
+			'title'    => __( 'List Item', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'info_list_general' => array( // Section.
+					'title'  => '', // Section Title.
+					'fields' => array( // Section Fields.
 						'add_list_item' => array(
 							'type'         => 'form',
 							'label'        => __( 'List Item', 'uabb' ),
@@ -28,12 +29,12 @@ FLBuilder::register_module(
 			),
 		),
 
-		'info_list_general' => array( // Tab
-			'title'    => __( 'General', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
-				'info_list_general'   => array( // Section
-					'title'  => __( 'List Settings', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+		'info_list_general' => array( // Tab.
+			'title'    => __( 'General', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'info_list_general'   => array( // Section.
+					'title'  => __( 'List Settings', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'icon_position'              => array(
 							'type'    => 'select',
 							'label'   => __( 'Icon / Image Position', 'uabb' ),
@@ -191,9 +192,9 @@ FLBuilder::register_module(
 						),
 					),
 				),
-				'info_list_connector' => array( // Section
-					'title'  => __( 'List Connector', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'info_list_connector' => array( // Section.
+					'title'  => __( 'List Connector', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'list_connector_option' => array(
 							'type'        => 'select',
 							'label'       => __( 'Show Connector', 'uabb' ),
@@ -235,9 +236,9 @@ FLBuilder::register_module(
 			),
 		),
 
-		'info_list_style'   => array( // Tab
-			'title'    => __( 'Typography', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
+		'info_list_style'   => array( // Tab.
+			'title'    => __( 'Typography', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
 				'heading_typography'     => array(
 					'title'  => __( 'Title', 'uabb' ),
 					'fields' => array(
@@ -332,7 +333,7 @@ FLBuilder::register_module(
 );
 
 
-// Add List Items
+// Add List Items.
 FLBuilder::register_settings_form(
 	'info_list_item_form',
 	array(
@@ -396,7 +397,7 @@ FLBuilder::register_settings_form(
 								'label'   => __( 'Image Type', 'uabb' ),
 								'default' => 'none',
 								'options' => array(
-									'none'  => __( 'None', 'Image type.', 'uabb' ),
+									'none'  => __( 'None', 'uabb' ),
 									'icon'  => __( 'Icon', 'uabb' ),
 									'photo' => __( 'Photo', 'uabb' ),
 								),
@@ -412,9 +413,9 @@ FLBuilder::register_settings_form(
 						),
 					),
 					/* Icon Basic Setting */
-					'icon_basic' => array( // Section
-						'title'  => __( 'Icon', 'uabb' ), // Section Title
-						'fields' => array( // Section Fields
+					'icon_basic' => array( // Section.
+						'title'  => __( 'Icon', 'uabb' ), // Section Title.
+						'fields' => array( // Section Fields.
 							'icon'       => array(
 								'type'        => 'icon',
 								'label'       => __( 'Icon', 'uabb' ),
@@ -431,9 +432,9 @@ FLBuilder::register_settings_form(
 						),
 					),
 					/* Image Basic Setting */
-					'img_basic'  => array( // Section
-						'title'  => __( 'Image', 'uabb' ), // Section Title
-						'fields' => array( // Section Fields
+					'img_basic'  => array( // Section.
+						'title'  => __( 'Image', 'uabb' ), // Section Title.
+						'fields' => array( // Section Fields.
 							'photo_source' => array(
 								'type'    => 'select',
 								'label'   => __( 'Photo Source', 'uabb' ),
