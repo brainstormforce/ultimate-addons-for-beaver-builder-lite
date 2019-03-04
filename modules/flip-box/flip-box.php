@@ -1,12 +1,19 @@
 <?php
+/**
+ *  UABB Flip Box Module file
+ *
+ *  @package UABB Flip Box Module
+ */
 
 /**
+ * Function that initializes UABB Flip Box Module
  *
  * @class FlipBoxModule
  */
 class FlipBoxModule extends FLBuilderModule {
-
 	/**
+	 * Constructor function that constructs default values for the Flip Box Module
+	 *
 	 * @method __construct
 	 */
 	public function __construct() {
@@ -27,7 +34,10 @@ class FlipBoxModule extends FLBuilderModule {
 	}
 
 	/**
+	 * Function that gets the Icons for the Flip Box module
+	 *
 	 * @method get_icons
+	 * @param string $icon gets an string to check if $icon is referencing an included icon.
 	 */
 	public function get_icon( $icon = '' ) {
 
@@ -45,21 +55,25 @@ class FlipBoxModule extends FLBuilderModule {
 
 
 	/**
+	 * Function that renders the button for the button
+	 *
 	 * @method render_button
 	 */
 	public function render_button() {
-		if ( $this->settings->show_button == 'yes' ) {
-			if ( $this->settings->button != '' ) {
+		if ( 'yes' == $this->settings->show_button ) {
+			if ( '' != $this->settings->button ) {
 				FLBuilder::render_module_html( 'uabb-button', $this->settings->button );
 			}
 		}
 	}
 
 	/**
+	 * Function that renders the Icon or Photo for the Flip Box
+	 *
 	 * @method render_icon
 	 */
 	public function render_icon() {
-		if ( $this->settings->smile_icon != '' && $this->settings->smile_icon->icon != '' ) {
+		if ( '' != $this->settings->smile_icon && '' != $this->settings->smile_icon->icon ) {
 			$this->settings->smile_icon->image_type = 'icon';
 			FLBuilder::render_module_html( 'image-icon', $this->settings->smile_icon );
 		}

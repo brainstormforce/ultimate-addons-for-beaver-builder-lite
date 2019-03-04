@@ -1,3 +1,11 @@
+<?php
+/**
+ *  UABB Flip Box Module front-end JS php file
+ *
+ *  @package UABB Flip Box Module
+ */
+
+?>
 (function($) {
 
 	var document_width, document_height;
@@ -10,8 +18,8 @@
 		flip_box_min_height_medium: '<?php echo $settings->flip_box_min_height_medium; ?>',
 		flip_box_min_height_small: '<?php echo $settings->flip_box_min_height_small; ?>',
 		small_breakpoint: <?php echo $global_settings->responsive_breakpoint; ?>,
-		  medium_breakpoint: <?php echo $global_settings->medium_breakpoint; ?>,
-		  responsive_compatibility: '<?php echo $settings->responsive_compatibility; ?>'
+		medium_breakpoint: <?php echo $global_settings->medium_breakpoint; ?>,
+		responsive_compatibility: '<?php echo $settings->responsive_compatibility; ?>'
 	};
 
 	jQuery(document).ready( function() {
@@ -28,8 +36,6 @@
 				}
 			});
 		}
-
-		
 		/* Accordion Click Trigger */
 		UABBTrigger.addHook( 'uabb-accordion-click', function( argument, selector ) {
 			new UABBFlipBox( args );
@@ -39,7 +45,7 @@
 		UABBTrigger.addHook( 'uabb-tab-click', function( argument, selector ) {
 			new UABBFlipBox( args );
 		});
-		
+
 	});
 
 	jQuery(window).load( function() {

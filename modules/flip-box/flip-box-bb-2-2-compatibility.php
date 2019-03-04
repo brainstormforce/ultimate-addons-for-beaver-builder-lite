@@ -7,6 +7,7 @@
  *
  * @package UABB Flip Box Module
  */
+
 FLBuilder::register_settings_form(
 	'flip_box_icon_form_field',
 	array(
@@ -16,8 +17,8 @@ FLBuilder::register_settings_form(
 				'title'    => __( 'Image / Icon', 'uabb' ),
 				'sections' => array(
 					'icon_basic'  => array(
-						'title'  => __( 'Icon Basics', 'uabb' ), // Section Title
-						'fields' => array( // Section Fields
+						'title'  => __( 'Icon Basics', 'uabb' ), // Section Title.
+						'fields' => array( // Section Fields.
 							'icon'      => array(
 								'type'        => 'icon',
 								'label'       => __( 'Icon', 'uabb' ),
@@ -89,11 +90,11 @@ FLBuilder::register_settings_form(
 								'default' => 'none',
 								'help'    => __( 'The type of border to use. Double borders must have a width of at least 3px to render properly.', 'uabb' ),
 								'options' => array(
-									'none'   => __( 'None', 'Border type.', 'uabb' ),
-									'solid'  => __( 'Solid', 'Border type.', 'uabb' ),
-									'dashed' => __( 'Dashed', 'Border type.', 'uabb' ),
-									'dotted' => __( 'Dotted', 'Border type.', 'uabb' ),
-									'double' => __( 'Double', 'Border type.', 'uabb' ),
+									'none'   => __( 'None', 'uabb' ),
+									'solid'  => __( 'Solid', 'uabb' ),
+									'dashed' => __( 'Dashed', 'uabb' ),
+									'dotted' => __( 'Dotted', 'uabb' ),
+									'double' => __( 'Double', 'uabb' ),
 								),
 								'toggle'  => array(
 									'solid'  => array(
@@ -130,9 +131,9 @@ FLBuilder::register_settings_form(
 							),
 						),
 					),
-					'icon_colors' => array( // Section
-						'title'  => __( 'Colors', 'uabb' ), // Section Title
-						'fields' => array( // Section Fields
+					'icon_colors' => array( // Section.
+						'title'  => __( 'Colors', 'uabb' ), // Section Title.
+						'fields' => array( // Section Fields.
 
 							/* Style Options */
 							'icon_color_preset' => array(
@@ -205,12 +206,12 @@ FLBuilder::register_settings_form(
 FLBuilder::register_module(
 	'FlipBoxModule',
 	array(
-		'flip_front' => array( // Tab
-			'title'    => __( 'Flip Box Front', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
-				'title'        => array( // Section
-					'title'  => __( 'Front', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+		'flip_front' => array( // Tab.
+			'title'    => __( 'Flip Box Front', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'title'        => array( // Section.
+					'title'  => __( 'Front', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'smile_icon'  => array(
 							'type'         => 'form',
 							'label'        => __( 'Icon Settings', 'uabb' ),
@@ -234,9 +235,9 @@ FLBuilder::register_module(
 						),
 					),
 				),
-				'front_styles' => array( // Section
-					'title'  => __( 'Front Styles', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'front_styles' => array( // Section.
+					'title'  => __( 'Front Styles', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'front_background_type'  => array(
 							'type'    => 'select',
 							'label'   => __( 'Background Type', 'uabb' ),
@@ -327,12 +328,12 @@ FLBuilder::register_module(
 				),
 			),
 		),
-		'flip_back'  => array( // Tab
-			'title'    => __( 'Flip Box Back', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
-				'title'       => array( // Section
-					'title'  => __( 'Back', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+		'flip_back'  => array( // Tab.
+			'title'    => __( 'Flip Box Back', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'title'       => array( // Section.
+					'title'  => __( 'Back', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'title_back' => array(
 							'type'    => 'text',
 							'label'   => __( 'Title on Back', 'uabb' ),
@@ -348,9 +349,9 @@ FLBuilder::register_module(
 						),
 					),
 				),
-				'back_styles' => array( // Section
-					'title'  => __( 'Back Styles', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'back_styles' => array( // Section.
+					'title'  => __( 'Back Styles', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'back_background_type'  => array(
 							'type'    => 'select',
 							'label'   => __( 'Background Type', 'uabb' ),
@@ -439,9 +440,9 @@ FLBuilder::register_module(
 						),
 					),
 				),
-				'button'      => array( // Section
-					'title'  => __( 'Button', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'button'      => array( // Section.
+					'title'  => __( 'Button', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'show_button' => array(
 							'type'    => 'select',
 							'label'   => __( 'Show button', 'uabb' ),
@@ -469,12 +470,12 @@ FLBuilder::register_module(
 				),
 			),
 		),
-		'style'      => array( // Tab
-			'title'    => __( 'Style', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
-				'general' => array( // Section
-					'title'  => __( 'Flipbox Styles', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+		'style'      => array( // Tab.
+			'title'    => __( 'Style', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'general' => array( // Section.
+					'title'  => __( 'Flipbox Styles', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'flip_type'                   => array(
 							'type'    => 'select',
 							'label'   => __( 'Flip Type', 'uabb' ),
@@ -567,9 +568,9 @@ FLBuilder::register_module(
 				),
 			),
 		),
-		'typography' => array( // Tab
-			'title'    => __( 'Typography', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
+		'typography' => array( // Tab.
+			'title'    => __( 'Typography', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
 				'front_title_typography' => array(
 					'title'  => __( 'Front Title', 'uabb' ),
 					'fields' => array(
@@ -758,9 +759,9 @@ FLBuilder::register_module(
 						),
 					),
 				),
-				'margin_options'         => array( // Section
-					'title'  => __( 'Margin', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
+				'margin_options'         => array( // Section.
+					'title'  => __( 'Margin', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'icon_margin_top'      => array(
 							'type'        => 'unit',
 							'label'       => __( 'Icon Margin Top', 'uabb' ),
