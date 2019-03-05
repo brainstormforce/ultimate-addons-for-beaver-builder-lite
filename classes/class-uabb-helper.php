@@ -1,57 +1,76 @@
 <?php
-
 /**
  * Custom modules
+ *
+ * @package UABB Helper
  */
-if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 
+if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
+	/**
+	 * This class initializes BB Ultiamte Addon Helper
+	 *
+	 * @class BB_Ultimate_Addon_Helper
+	 */
 	class BB_Ultimate_Addon_Helper {
 
 		/**
 		 * Holds any category strings of modules.
 		 *
 		 * @since 1.3.0
-		 * @var Category Strings
+		 * @var $basic_modules Category Strings
 		 */
 		static public $basic_modules = '';
 
-		/*
-		* Constructor function that initializes required actions and hooks
-		* @Since 1.0
-		*/
+		/**
+		 * Constructor function that initializes required actions and hooks
+		 *
+		 * @since 1.0
+		 */
 		function __construct() {
 
 			$this->set_constants();
 		}
 
+		/**
+		 * Function that set constants for UABB
+		 *
+		 * @since x.x.x
+		 */
 		function set_constants() {
 			$branding            = BB_Ultimate_Addon_Helper::get_builder_uabb_branding();
 			self::$basic_modules = __( 'Basic', 'uabb' );
 			$branding_name       = 'UABB';
 			$branding_modules    = __( 'UABB Modules', 'uabb' );
 
-			// Branding - %s
-			if (
-				is_array( $branding ) &&
-				array_key_exists( 'uabb-plugin-short-name', $branding ) &&
-				$branding['uabb-plugin-short-name'] != ''
-			) {
+			// Branding - %s.
+			if ( is_array( $branding ) && array_key_exists( 'uabb-plugin-short-name', $branding ) && '' != $branding['uabb-plugin-short-name'] ) {
 				$branding_name = $branding['uabb-plugin-short-name'];
 			}
 
-			// Branding - %s Modules
-			if ( $branding_name != 'UABB' ) {
-				$branding_modules = sprintf( __( '%s Modules', 'uabb' ), $branding_name );
+			// Branding - %s Modules.
+			if ( 'UABB' != $branding_name ) {
+				$branding_modules = sprintf( __( '%s Modules', 'uabb' ), $branding_name ); // @codingStandardsIgnoreLine.
 			}
 
 			define( 'UABB_PREFIX', $branding_name );
 			define( 'UABB_CAT', $branding_modules );
 		}
 
+		/**
+		 * Function that renders BB's modules category
+		 *
+		 * @since x.x.x
+		 * @param array $cat gets the BB's UI ControlPanel Category.
+		 */
 		static public function module_cat( $cat ) {
 			return class_exists( 'FLBuilderUIContentPanel' ) ? $cat : UABB_CAT;
 		}
 
+		/**
+		 * Function that renders builder UABB
+		 *
+		 * @since x.x.x
+		 */
 		static public function get_builder_uabb() {
 			$uabb = UABB_Init::$uabb_options['fl_builder_uabb'];
 
@@ -64,12 +83,12 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'uabb-row-separator'  => 1,
 			);
 
-			// if empty add all defaults
+			// if empty add all defaults.
 			if ( empty( $uabb ) ) {
 				$uabb = $defaults;
 			} else {
 
-				// add new key
+				// add new key.
 				foreach ( $defaults as $key => $value ) {
 					if ( is_array( $uabb ) && ! array_key_exists( $key, $uabb ) ) {
 						$uabb[ $key ] = $value;
@@ -82,6 +101,12 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 			return apply_filters( 'uabb_get_builder_uabb', $uabb );
 		}
 
+		/**
+		 * Function that renders extensions for the UABB
+		 *
+		 * @since x.x.x
+		 * @param string $request_key gets the request key's value.
+		 */
 		static public function get_builder_uabb_branding( $request_key = '' ) {
 			$uabb = UABB_Init::$uabb_options['fl_builder_uabb_branding'];
 
@@ -89,12 +114,12 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'uabb-enable-template-cloud' => 1,
 			);
 
-			// if empty add all defaults
+			// if empty add all defaults.
 			if ( empty( $uabb ) ) {
 				$uabb = $defaults;
 			} else {
 
-				// add new key
+				// add new key.
 				foreach ( $defaults as $key => $value ) {
 					if ( is_array( $uabb ) && ! array_key_exists( $key, $uabb ) ) {
 						$uabb[ $key ] = $value;
@@ -118,6 +143,11 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 			return $uabb;
 		}
 
+		/**
+		 * Function that renders all the UABB modules
+		 *
+		 * @since x.x.x
+		 */
 		static public function get_all_modules() {
 			$modules_array = array(
 				'spacer-gap'      => 'Spacer / Gap',
@@ -136,6 +166,11 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 			return $modules_array;
 		}
 
+		/**
+		 * Function that renders premium modules
+		 *
+		 * @since x.x.x
+		 */
 		static public function get_premium_modules() {
 			$premium_modules_array = array(
 
@@ -420,34 +455,32 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 			return $premium_modules_array;
 		}
 
+		/**
+		 * Function that renders UABB's modules
+		 *
+		 * @since x.x.x
+		 */
 		static public function get_builder_uabb_modules() {
 			$uabb           = UABB_Init::$uabb_options['fl_builder_uabb_modules'];
 			$all_modules    = self::get_all_modules();
 			$is_all_modules = true;
 
-			/*
-			 Delte below after test */
-			// $uabb             = self::get_all_modules();
-			/* Delte above after test */
-
-			// if empty add all defaults
+			// if empty add all defaults.
 			if ( empty( $uabb ) ) {
 				$uabb        = self::get_all_modules();
 				$uabb['all'] = 'all';
 			} else {
 				if ( ! isset( $uabb['unset_all'] ) ) {
-					// add new key
+					// add new key.
 					foreach ( $all_modules as $key => $value ) {
 						if ( is_array( $uabb ) && ! array_key_exists( $key, $uabb ) ) {
 							$uabb[ $key ] = $key;
-							// $is_all_modules = false;
-							// break;
 						}
 					}
 				}
 			}
 
-			if ( $is_all_modules == false && isset( $uabb['all'] ) ) {
+			if ( false == $is_all_modules && isset( $uabb['all'] ) ) {
 				unset( $uabb['all'] );
 			}
 
@@ -463,6 +496,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 *
 		 *  Return the status of pages, sections, presets or all templates. Default: all
 		 *
+		 *  @param string $templates_type gets the templates type.
 		 *  @return boolean
 		 */
 		public static function is_templates_exist( $templates_type = 'all' ) {
@@ -477,17 +511,14 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 			if ( is_array( $templates ) && count( $templates ) > 0 ) {
 				foreach ( $templates as $type => $type_templates ) {
 
-					// Individual type array - [page-templates], [layout] or [row]
 					if ( $type_templates ) {
 						foreach ( $type_templates as $template_id => $template_data ) {
 
 							/**
 							 *  Check [status] & [dat_url_local] exist
 							 */
-							if (
-								isset( $template_data['status'] ) && $template_data['status'] == true &&
-								isset( $template_data['dat_url_local'] ) && ! empty( $template_data['dat_url_local'] )
-							) {
+							if ( isset( $template_data['status'] ) && true == $template_data['status'] &&
+								isset( $template_data['dat_url_local'] ) && ! empty( $template_data['dat_url_local'] ) ) {
 								if ( is_array( $exist_templates[ $type ] ) ) {
 									$exist_templates[ $type ] = ( count( $exist_templates[ $type ] ) + 1 );
 								}
@@ -523,6 +554,9 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 *  Get link rel attribute
 		 *
 		 *  @since 1.6.1
+		 *  @param string $target gets an string for the link.
+		 *  @param string $is_nofollow gets an string for is no follow.
+		 *  @param string $echo gets an string for echo.
 		 *  @return string
 		 */
 		static public function get_link_rel( $target, $is_nofollow = 0, $echo = 0 ) {

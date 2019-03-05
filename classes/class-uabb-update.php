@@ -3,6 +3,7 @@
  * Update and backward compatibility.
  *
  * @since 1.2.4
+ * @package Update and Backward
  */
 
 if ( ! class_exists( 'UABB_lite_Plugin_Update' ) ) {
@@ -12,7 +13,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Update' ) ) {
 	 *
 	 * @since 1.2.4
 	 */
-	class UABB_lite_Plugin_Update {
+	class UABB_lite_Plugin_Update { // @codingStandardsIgnoreLine.
 
 		/**
 		 * Class instance.
@@ -65,7 +66,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Update' ) ) {
 
 			$old_jrn_details = get_option( '_uabb_lite_journey_details', '0' );
 
-			if ( $old_jrn_details == '0' ) {
+			if ( '0' == $old_jrn_details ) {
 				$old_jrn_details = array();
 			}
 

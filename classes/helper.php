@@ -1,13 +1,16 @@
 <?php
-
 /**
- *      UABB Helper
+ * Custom modules
  *
- *  Helper functions, actions & filter hooks etc.
+ * @package UABB Helper
  */
 
 if ( ! class_exists( 'UABB_Helper' ) ) {
-
+	/**
+	 * This class initializes BB Ultiamte Addon Helper
+	 *
+	 * @class UABB_Helper
+	 */
 	class UABB_Helper {
 
 		/**
@@ -26,7 +29,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				$css .= 'font-family: ' . $font['family'] . ';';
 			}
 
-			if ( $font['weight'] == 'regular' ) {
+			if ( 'regular' == $font['weight'] ) {
 				$css .= 'font-weight: normal;';
 			} else {
 				$css .= 'font-weight: ' . $font['weight'] . ';';
@@ -47,8 +50,8 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 */
 		static public function uabb_get_color( $hex, $opacity ) {
 			$rgba = $hex;
-			if ( $opacity != '' ) {
-				if ( strlen( $hex ) == 3 ) {
+			if ( '' != $opacity ) {
+				if ( 3 == strlen( $hex ) ) {
 					$r = hexdec( substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) );
 					$g = hexdec( substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) );
 					$b = hexdec( substr( $hex, 2, 1 ) . substr( $hex, 2, 1 ) );
@@ -64,45 +67,42 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		}
 
 		/**
-		 *  Get - RGBA Color
+		 * Initializes recurse function
 		 *
-		 *  Get HEX color and return RGBA. Default return RGB color.
-		 *
-		 * @param   $hex        HEX color code
-		 * @param   $opacity    Opacity of HEX color
-		 * @return  $rgba       Return RGBA if opacity is set. Default return RGB.
-		 * @since   1.0
+		 * @param var   $color returns the base values.
+		 * @param array $is_array = false returns the array values.
+		 * @param array $opacity = false returns the opacity values.
 		 */
 		static public function uabb_hex2rgba( $color, $opacity = false, $is_array = false ) {
 
 			$default = $color;
 
-			// Return default if no color provided
+			// Return default if no color provided.
 			if ( empty( $color ) ) {
 				  return $default;
 			}
 
-			// Sanitize $color if "#" is provided
-			if ( $color[0] == '#' ) {
+			// Sanitize $color if "#" is provided.
+			if ( '#' == $color[0] ) {
 				$color = substr( $color, 1 );
 			}
 
-			// Check if color has 6 or 3 characters and get values
-			if ( strlen( $color ) == 6 ) {
+			// Check if color has 6 or 3 characters and get values.
+			if ( 6 == strlen( $color ) ) {
 					$hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
-			} elseif ( strlen( $color ) == 3 ) {
+			} elseif ( 3 == strlen( $color ) ) {
 					$hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
 			} else {
 					return $default;
 			}
 
-			// Convert hexadec to rgb
+			// Convert hexadec to rgb.
 			$rgb = array_map( 'hexdec', $hex );
 
-			// Check if opacity is set(rgba or rgb)
-			if ( $opacity !== false && $opacity !== '' ) {
+			// Check if opacity is set(rgba or rgb).
+			if ( false !== $opacity && '' !== $opacity ) {
 				if ( abs( $opacity ) > 1 ) {
-					// $opacity = 1.0;
+
 					$opacity = $opacity / 100;
 				}
 				$output = 'rgba(' . implode( ',', $rgb ) . ',' . $opacity . ')';
@@ -113,7 +113,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			if ( $is_array ) {
 				return $rgb;
 			} else {
-				// Return rgb(a) color string
+
 				return $output;
 			}
 		}
@@ -121,25 +121,26 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		/**
 		 *  Get - Colorpicker Value based on colorpicker
 		 *
-		 * @param   $hex        HEX color code
-		 * @param   $opacity    Opacity of HEX color
-		 * @return  $rgba       Return RGBA if opacity is set. Default return RGB.
+		 * @param   $hex HEX color code
+		 * @param   $opc  Opacity of HEX color
+		 * @return  $name Return RGBA if opacity is set. Default return RGB.
 		 * @since   1.0
 		 */
 		static public function uabb_colorpicker( $settings, $name = '', $opc = false ) {
 
-			$hex_color = $opacity = '';
+			$hex_color = '';
+			$opacity   = '';
 			$hex_color = $settings->$name;
 
-			if ( $hex_color != '' && $hex_color[0] != 'r' && $hex_color[0] != 'R' ) {
+			if ( '' != $hex_color && 'r' != $hex_color[0] && 'R' != $hex_color[0] ) {
 
-				if ( $opc == true && $settings->{ $name . '_opc' } !== '' ) {
+				if ( true == $opc && '' !== $settings->{ $name . '_opc' } ) {
 					$opacity = $settings->{ $name . '_opc' };
 					$rgba    = self::uabb_hex2rgba( $hex_color, $opacity / 100 );
 					return $rgba;
 				}
 
-				if ( $hex_color[0] != '#' ) {
+				if ( '#' != $hex_color[0] ) {
 
 					return '#' . $hex_color;
 				}
@@ -151,12 +152,9 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		/**
 		 *  Get - Gradient color CSS
 		 *
-		 * @param   $hex        HEX color code
-		 * @param   $opacity    Opacity of HEX color
-		 * @return  $rgba       Return RGBA if opacity is set. Default return RGB.
+		 * @param   $gradient return gradient
 		 * @since   1.0
 		 */
-
 		static public function uabb_gradient_css( $gradient ) {
 			$gradient_angle = intval( $gradient['angle'] );
 			$direction      = $gradient['direction'];
@@ -165,7 +163,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			$angle          = 0;
 			$css            = '';
 
-			if ( $direction != 'custom' ) {
+			if ( 'custom' != $direction ) {
 				switch ( $direction ) {
 					case 'left_right':
 						$gradient_angle = 0;
@@ -184,17 +182,17 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				}
 			}
 
-			if ( isset( $gradient['color_one'] ) && $gradient['color_one'] != '' ) {
+			if ( isset( $gradient['color_one'] ) && '' != $gradient['color_one'] ) {
 				$color1 = self::uabb_hex2rgba( $gradient['color_one'] );
 			}
 
-			if ( isset( $gradient['color_two'] ) && $gradient['color_two'] != '' ) {
+			if ( isset( $gradient['color_two'] ) && '' != $gradient['color_two'] ) {
 				$color2 = self::uabb_hex2rgba( $gradient['color_two'] );
 			}
 
 			$angle = abs( $gradient_angle - 450 ) % 360;
 
-			if ( $color1 != '' && $color2 != '' ) {
+			if ( '' != $color1 && '' != $color2 ) {
 
 				$css .= 'background: -webkit-linear-gradient(' . $gradient_angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';
 				$css .= 'background: -o-linear-gradient(' . $gradient_angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';

@@ -1,8 +1,9 @@
 <?php
 /**
- * UABB WPML Translatable
+ * UABB WPML Translatable File
  *
- * @since 1.2.2
+ * @since 1.6.7
+ * @package UABB WPML Tranlatable
  */
 
 if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
@@ -20,15 +21,14 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 		 * @return void
 		 */
 		static public function init() {
-			 add_filter( 'wpml_beaver_builder_modules_to_translate', __CLASS__ . '::wpml_uabb_modules_translate' );
+			add_filter( 'wpml_beaver_builder_modules_to_translate', __CLASS__ . '::wpml_uabb_modules_translate' );
 			UABBLite_WPML_Translatable::load_files();
 		}
 
 		/**
-		 * include files for modules which has form loop.
+		 * Load files.
 		 *
-		 * @since 1.2.2
-		 * @return void
+		 * @since 1.6.7
 		 */
 		static public function load_files() {
 			if ( class_exists( 'WPML_Page_Builders_Defined' ) ) {
@@ -38,16 +38,15 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 		}
 
 		/**
-		 * initialize nodes to translate
+		 * Initialize nodes to translate
 		 *
-		 * @since 1.2.2
-		 * @param array  $form
-		 * @param string $slug
+		 * @since 1.6.7
+		 * @param array $form gets the forms array to be resolved.
 		 * @return array
 		 */
 		static public function wpml_uabb_modules_translate( $form ) {
 
-			// Button Module
+			// Button Module.
 			$form['uabb-button'] = array(
 				'conditions' => array( 'type' => 'uabb-button' ),
 				'fields'     => array(
@@ -64,7 +63,7 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 				),
 			);
 
-			// Flip Box
+			// Flip Box.
 			$form['flip-box'] = array(
 				'conditions' => array( 'type' => 'flip-box' ),
 				'fields'     => array(
@@ -91,7 +90,7 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 				),
 			);
 
-			// Slide Box
+			// Slide Box.
 			$form['slide-box'] = array(
 				'conditions' => array( 'type' => 'slide-box' ),
 				'fields'     => array(
@@ -128,14 +127,14 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 				),
 			);
 
-			// Info list Module
+			// Info list Module.
 			$form['info-list'] = array(
 				'conditions'        => array( 'type' => 'info-list' ),
 				'fields'            => array(),
 				'integration-class' => 'WPML_UABB_Infolist',
 			);
 
-			// Info Table
+			// Info Table.
 			$form['info-table'] = array(
 				'conditions' => array( 'type' => 'info-table' ),
 				'fields'     => array(
@@ -167,7 +166,7 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 				),
 			);
 
-			// Image Separator Module
+			// Image Separator Module.
 			$form['image-separator'] = array(
 				'conditions' => array( 'type' => 'image-separator' ),
 				'fields'     => array(

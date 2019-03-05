@@ -1,14 +1,26 @@
 <?php
-
 /**
  * Global Filters for Beaver Builder theme customizer values
+ *
+ * @package Beaver Builder Theme Global Integration
  */
 
 if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
-
+	/**
+	 * This class initializes BB options and required fields
+	 *
+	 * @class UABB_BBThemeGlobalIntegration
+	 */
 	class UABB_BBThemeGlobalIntegration {
+		/**
+		 * Gets the Beaver Builder theme's options
+		 *
+		 * @var $bb_options
+		 */
 		public $bb_options;
-
+		/**
+		 * Constructor function that initializes required actions and hooks
+		 */
 		function __construct() {
 			/**
 			 *  **
@@ -34,8 +46,6 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 			/* Primary Text Color */
 			$var['theme_text_color'] = FLColor::hex( $mods['fl-body-text-color'] );
 
-			/*
-			 Button */
 			/* Background Colors */
 			$var['btn_bg_color']       = FLColor::hex( array( $mods['fl-accent'] ) );
 			$var['btn_bg_hover_color'] = FLColor::hex( array( $mods['fl-accent-hover'] ) );
@@ -112,8 +122,6 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 			return $color;
 		}
-
-
 	}
 
 	new UABB_BBThemeGlobalIntegration();

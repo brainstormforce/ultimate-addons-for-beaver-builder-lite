@@ -1,4 +1,9 @@
 <?php
+/**
+ *  UABB Global Settings
+ *
+ *  @package Global Settings Form
+ */
 
 FLBuilder::register_settings_form(
 	'uabb-global',
@@ -6,7 +11,7 @@ FLBuilder::register_settings_form(
 		'title' => sprintf(
 			esc_attr__( '%s - Global Settings', 'uabb' ),
 			UABB_PREFIX
-		),
+		),// @codingStandardsIgnoreLine.
 		'tabs'  => array(
 			'general' => array(
 				'title'    => __( 'Style', 'uabb' ),

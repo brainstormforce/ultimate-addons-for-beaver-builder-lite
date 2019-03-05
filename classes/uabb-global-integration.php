@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Global Filters from uabb settings global values to override defaullts in UABB
  *
@@ -8,16 +7,26 @@
 
 if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 	/**
+	 * This class initializes UABB Global Settings Options
 	 *
+	 * @class UABBGlobalSettingsOptions
 	 */
 	class UABBGlobalSettingsOptions {
+		/**
+		 * Constructor function that initializes necessary filters
+		 *
+		 * @var $uabb_setting_options gets the uabb setting options
+		 */
 		public $uabb_setting_options;
-
+		/**
+		 * Constructor function that initializes necessary filters
+		 *
+		 * @since x.x.x
+		 */
 		function __construct() {
 
 			$this->uabb_setting_options = UABB_Global_Styling::get_uabb_global_settings();
 
-			// FLBuilderModel::get_admin_settings_option( '_fl_builder_uabb_global', true );
 			add_filter( 'uabb/global/theme_color', array( $this, 'uabb_global_theme_color' ) );
 			add_filter( 'uabb/global/text_color', array( $this, 'uabb_global_text_color' ) );
 
@@ -40,11 +49,18 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 			add_filter( 'uabb/global/button_vertical_padding', array( $this, 'uabb_global_button_vertical_padding' ) );
 			add_filter( 'uabb/global/button_horizontal_padding', array( $this, 'uabb_global_button_horizontal_padding' ) );
 		}
-
+		/**
+		 * Function that initializes global settings options
+		 *
+		 * @since x.x.x
+		 * @param object $option gets the options for the UABB settings.
+		 * @param var    $color gets the color.
+		 * @param var    $opc gets the opacity for the colorpicker.
+		 */
 		function uabb_get_global_option( $option, $color = false, $opc = false ) {
 			$uabb_setting_options = $this->uabb_setting_options;
 
-			if ( isset( $uabb_setting_options->enable_global ) && ( $uabb_setting_options->enable_global == 'no' ) ) {
+			if ( isset( $uabb_setting_options->enable_global ) && ( 'no' == $uabb_setting_options->enable_global ) ) {
 				return '';
 			} elseif ( isset( $uabb_setting_options->$option ) && ! empty( $uabb_setting_options->$option ) ) {
 
@@ -103,8 +119,6 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		 * Button Font Family
 		 */
 		function uabb_global_button_font_family() {
-			// $btn_font_family['family'] = brainstorm_get_option( 'next-button-typography', array( 1 => 'font-family' ), 'Open Sans Condensed' );
-			// $btn_font_family['weight'] = brainstorm_get_option( 'next-button-typography', array( 1 => 'font-weight' ), 'bold' );
 			return $btn_font_family;
 		}
 
@@ -207,13 +221,15 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 			$v_padding = $this->uabb_get_global_option( 'btn_vertical_padding' );
 			$h_padding = $this->uabb_get_global_option( 'btn_horizontal_padding' );
 
-			if ( $v_padding != '' && $h_padding != '' ) {
+			if ( '' != $v_padding && '' != $h_padding ) {
 				$padding = $v_padding . 'px ' . $h_padding . 'px';
 			}
 
 			return $padding;
 		}
-
+		/**
+		 * Button Padding -
+		 */
 		function uabb_global_button_vertical_padding() {
 			$v_padding = '';
 
@@ -221,7 +237,9 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 			return $v_padding;
 		}
-
+		/**
+		 * Button Padding -
+		 */
 		function uabb_global_button_horizontal_padding() {
 			$h_padding = '';
 

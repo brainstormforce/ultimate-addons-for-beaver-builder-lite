@@ -1,26 +1,35 @@
 <?php
-
 /**
- * Global Styling
+ *  Global Styling
+ *
+ *  @package Global Styling
  */
 
+/**
+ * This class initializes UABB Global Styling
+ *
+ * @class UABB_Global_Styling
+ */
 class UABB_Global_Styling {
 
 	/**
-	 *  Constructor
+	 * Constructor function that initializes required actions and hooks
 	 */
-
 	public function __construct() {
 
-		// self::add_options();
 		self::init_actions();
 	}
 
+	/**
+	 * Function to add options for UABB Global Settings
+	 *
+	 * @since x.x.x
+	 */
 	function add_options() {
 
 		$global_options = UABB_Init::$uabb_options['uabb_global_settings'];
 
-		if ( ! isset( $global_options ) || $global_options == '' || ! is_array( $global_options ) ) {
+		if ( ! isset( $global_options ) || '' == $global_options || ! is_array( $global_options ) ) {
 
 			$default = array(
 				'enable_global'          => 'yes',
@@ -50,12 +59,21 @@ class UABB_Global_Styling {
 			update_option( '_uabb_global_settings', $default );
 		}
 	}
-
+	/**
+	 * Function that initializes actions for UABB Global Settings
+	 *
+	 * @since x.x.x
+	 */
 	static public function init_actions() {
-		 FLBuilderAJAX::add_action( 'render_uabb_global_settings', 'UABB_Global_Styling::render_uabb_global_settings' );
+		FLBuilderAJAX::add_action( 'render_uabb_global_settings', 'UABB_Global_Styling::render_uabb_global_settings' );
 		FLBuilderAJAX::add_action( 'save_uabb_global_settings', 'UABB_Global_Styling::save_uabb_global_settings', array( 'settings' ) );
 	}
 
+	/**
+	 * Function to that renders UABB Global Settings
+	 *
+	 * @since x.x.x
+	 */
 	static public function render_uabb_global_settings() {
 
 		$settings = self::get_uabb_global_settings();
@@ -72,13 +90,15 @@ class UABB_Global_Styling {
 		);
 	}
 
+	/**
+	 * Function that gets UABB Global Settings
+	 *
+	 * @since x.x.x
+	 */
 	static public function get_uabb_global_settings() {
-		 $settings = UABB_Init::$uabb_options['uabb_global_settings'];
+		$settings = UABB_Init::$uabb_options['uabb_global_settings'];
 
 		$defaults = FLBuilderModel::get_settings_form_defaults( 'uabb-global' );
-
-		// var_dump( $settings  );
-		// die();
 		if ( ! $settings ) {
 			$settings = new StdClass();
 		}
@@ -86,6 +106,12 @@ class UABB_Global_Styling {
 		return (object) array_merge( (array) $defaults, (array) $settings );
 	}
 
+	/**
+	 * Function to that saves UABB Global Settings
+	 *
+	 * @since x.x.x
+	 * @param array $settings gets a array of old and new settings values.
+	 */
 	static public function save_uabb_global_settings( $settings = array() ) {
 		$old_settings = self::get_uabb_global_settings();
 		$new_settings = (object) array_merge( (array) $old_settings, (array) $settings );
