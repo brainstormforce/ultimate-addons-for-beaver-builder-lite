@@ -2,7 +2,8 @@
 /**
  * Backward compatibility.
  *
- * @since 1.2.4
+ * @since 1.7.0
+ * @package BAckward Compatibility
  */
 
 if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
@@ -12,7 +13,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 	 *
 	 * @since 1.2.4
 	 */
-	class UABB_lite_Plugin_Backward {
+	class UABB_lite_Plugin_Backward { // @codingStandardsIgnoreLine.
 
 		/**
 		 * Class instance.
@@ -45,12 +46,15 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * Set UABB version for new page.
 		 *
-		 * @since 1.2.4
+		 * @since 1.7.2
+		 * @param var $new_status Checks the value if user is new.
+		 * @param var $old_status Checks the value if user is old.
+		 * @param var $post Checks the value of the post.
 		 * @return void
 		 */
 		public function post_status( $new_status, $old_status, $post ) {
 
-			if ( $old_status === 'new' && $new_status === 'auto-draft' ) {
+			if ( 'new' === $old_status && 'auto-draft' === $new_status ) {
 				/* Update Version */
 				update_post_meta( $post->ID, '_uabb_lite_version', BB_ULTIMATE_ADDON_LITE_VERSION );
 			}
@@ -59,7 +63,8 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * Execute Layout Data.
 		 *
-		 * @since 1.2.4
+		 * @since 1.7.2
+		 * @param var $post_id Gets the post ID.
 		 * @return void
 		 */
 		public function layout_data_execute( $post_id ) {
@@ -108,7 +113,8 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * Execute Layout Draft.
 		 *
-		 * @since 1.2.4
+		 * @since 1.7.2
+		 * @param var $post_id gets the Post ID of the layout draft execute.
 		 * @return void
 		 */
 		public function layout_draft_execute( $post_id ) {
@@ -199,7 +205,8 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * UABB Flip Box.
 		 *
-		 * @since 1.2.4
+		 * @since 1.7.2
+		 * @param object $settings gets the settings of respective module.
 		 * @return void
 		 */
 		public function uabb_flip_box( &$settings ) {
@@ -214,17 +221,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->front_title_typography_font_size_unit = $settings->front_title_typography_font_size['desktop'];
 			}
 
-			if ( isset( $settings->front_title_typography_line_height['small'] ) && isset( $settings->front_title_typography_font_size['small'] ) && $settings->front_title_typography_font_size['small'] != 0 && ! isset( $settings->front_title_typography_line_height_unit_responsive ) ) {
+			if ( isset( $settings->front_title_typography_line_height['small'] ) && isset( $settings->front_title_typography_font_size['small'] ) && 0 != $settings->front_title_typography_font_size['small'] && ! isset( $settings->front_title_typography_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->front_title_typography_line_height['small'] ) && is_numeric( $settings->front_title_typography_font_size['small'] ) ) {
 					$settings->front_title_typography_line_height_unit_responsive = round( $settings->front_title_typography_line_height['small'] / $settings->front_title_typography_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->front_title_typography_line_height['medium'] ) && isset( $settings->front_title_typography_font_size['medium'] ) && $settings->front_title_typography_font_size['medium'] != 0 && ! isset( $settings->front_title_typography_line_height_unit_medium ) ) {
+			if ( isset( $settings->front_title_typography_line_height['medium'] ) && isset( $settings->front_title_typography_font_size['medium'] ) && 0 != $settings->front_title_typography_font_size['medium'] && ! isset( $settings->front_title_typography_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->front_title_typography_line_height['medium'] ) && is_numeric( $settings->front_title_typography_font_size['medium'] ) ) {
 					$settings->front_title_typography_line_height_unit_medium = round( $settings->front_title_typography_line_height['medium'] / $settings->front_title_typography_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->front_title_typography_line_height['desktop'] ) && isset( $settings->front_title_typography_font_size['desktop'] ) && $settings->front_title_typography_font_size['desktop'] != 0 && ! isset( $settings->front_title_typography_line_height_unit ) ) {
+			if ( isset( $settings->front_title_typography_line_height['desktop'] ) && isset( $settings->front_title_typography_font_size['desktop'] ) && 0 != $settings->front_title_typography_font_size['desktop'] && ! isset( $settings->front_title_typography_line_height_unit ) ) {
 				if ( is_numeric( $settings->front_title_typography_line_height['desktop'] ) && is_numeric( $settings->front_title_typography_font_size['desktop'] ) ) {
 					$settings->front_title_typography_line_height_unit = round( $settings->front_title_typography_line_height['desktop'] / $settings->front_title_typography_font_size['desktop'], 2 );
 				}
@@ -240,17 +247,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->front_desc_typography_font_size_unit = $settings->front_desc_typography_font_size['desktop'];
 			}
 
-			if ( isset( $settings->front_desc_typography_line_height['small'] ) && isset( $settings->front_desc_typography_font_size['small'] ) && $settings->front_desc_typography_font_size['small'] != 0 && ! isset( $settings->front_desc_typography_line_height_unit_responsive ) ) {
+			if ( isset( $settings->front_desc_typography_line_height['small'] ) && isset( $settings->front_desc_typography_font_size['small'] ) && 0 != $settings->front_desc_typography_font_size['small'] && ! isset( $settings->front_desc_typography_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->front_desc_typography_line_height['small'] ) && is_numeric( $settings->front_desc_typography_font_size['small'] ) ) {
 					$settings->front_desc_typography_line_height_unit_responsive = round( $settings->front_desc_typography_line_height['small'] / $settings->front_desc_typography_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->front_desc_typography_line_height['medium'] ) && isset( $settings->front_desc_typography_font_size['medium'] ) && $settings->front_desc_typography_font_size['medium'] != 0 && ! isset( $settings->front_desc_typography_line_height_unit_medium ) ) {
+			if ( isset( $settings->front_desc_typography_line_height['medium'] ) && isset( $settings->front_desc_typography_font_size['medium'] ) && 0 != $settings->front_desc_typography_font_size['medium'] && ! isset( $settings->front_desc_typography_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->front_desc_typography_line_height['medium'] ) && is_numeric( $settings->front_desc_typography_font_size['medium'] ) ) {
 					$settings->front_desc_typography_line_height_unit_medium = round( $settings->front_desc_typography_line_height['medium'] / $settings->front_desc_typography_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->front_desc_typography_line_height['desktop'] ) && isset( $settings->front_desc_typography_font_size['desktop'] ) && $settings->front_desc_typography_font_size['desktop'] != 0 && ! isset( $settings->front_desc_typography_line_height_unit ) ) {
+			if ( isset( $settings->front_desc_typography_line_height['desktop'] ) && isset( $settings->front_desc_typography_font_size['desktop'] ) && 0 != $settings->front_desc_typography_font_size['desktop'] && ! isset( $settings->front_desc_typography_line_height_unit ) ) {
 				if ( is_numeric( $settings->front_desc_typography_line_height['desktop'] ) && is_numeric( $settings->front_desc_typography_font_size['desktop'] ) ) {
 					$settings->front_desc_typography_line_height_unit = round( $settings->front_desc_typography_line_height['desktop'] / $settings->front_desc_typography_font_size['desktop'], 2 );
 				}
@@ -266,17 +273,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->back_title_typography_font_size_unit = $settings->back_title_typography_font_size['desktop'];
 			}
 
-			if ( isset( $settings->back_title_typography_line_height['small'] ) && isset( $settings->back_title_typography_font_size['small'] ) && $settings->back_title_typography_font_size['small'] != 0 && ! isset( $settings->back_title_typography_line_height_unit_responsive ) ) {
+			if ( isset( $settings->back_title_typography_line_height['small'] ) && isset( $settings->back_title_typography_font_size['small'] ) && 0 != $settings->back_title_typography_font_size['small'] && ! isset( $settings->back_title_typography_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->back_title_typography_line_height['small'] ) && is_numeric( $settings->back_title_typography_font_size['small'] ) ) {
 					$settings->back_title_typography_line_height_unit_responsive = round( $settings->back_title_typography_line_height['small'] / $settings->back_title_typography_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->back_title_typography_line_height['medium'] ) && isset( $settings->back_title_typography_font_size['medium'] ) && $settings->back_title_typography_font_size['medium'] != 0 && ! isset( $settings->back_title_typography_line_height_unit_medium ) ) {
+			if ( isset( $settings->back_title_typography_line_height['medium'] ) && isset( $settings->back_title_typography_font_size['medium'] ) && 0 != $settings->back_title_typography_font_size['medium'] && ! isset( $settings->back_title_typography_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->back_title_typography_line_height['medium'] ) && is_numeric( $settings->back_title_typography_font_size['medium'] ) ) {
 					$settings->back_title_typography_line_height_unit_medium = round( $settings->back_title_typography_line_height['medium'] / $settings->back_title_typography_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->back_title_typography_line_height['desktop'] ) && isset( $settings->back_title_typography_font_size['desktop'] ) && $settings->back_title_typography_font_size['desktop'] != 0 && ! isset( $settings->back_title_typography_line_height_unit ) ) {
+			if ( isset( $settings->back_title_typography_line_height['desktop'] ) && isset( $settings->back_title_typography_font_size['desktop'] ) && 0 != $settings->back_title_typography_font_size['desktop'] && ! isset( $settings->back_title_typography_line_height_unit ) ) {
 				if ( is_numeric( $settings->back_title_typography_line_height['desktop'] ) && is_numeric( $settings->back_title_typography_font_size['desktop'] ) ) {
 					$settings->back_title_typography_line_height_unit = round( $settings->back_title_typography_line_height['desktop'] / $settings->back_title_typography_font_size['desktop'], 2 );
 				}
@@ -292,17 +299,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->back_desc_typography_font_size_unit = $settings->back_desc_typography_font_size['desktop'];
 			}
 
-			if ( isset( $settings->back_desc_typography_line_height['small'] ) && isset( $settings->back_desc_typography_font_size['small'] ) && $settings->back_desc_typography_font_size['small'] != 0 && ! isset( $settings->back_desc_typography_line_height_unit_responsive ) ) {
+			if ( isset( $settings->back_desc_typography_line_height['small'] ) && isset( $settings->back_desc_typography_font_size['small'] ) && 0 != $settings->back_desc_typography_font_size['small'] && ! isset( $settings->back_desc_typography_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->back_desc_typography_line_height['small'] ) && is_numeric( $settings->back_desc_typography_font_size['small'] ) ) {
 					$settings->back_desc_typography_line_height_unit_responsive = $settings->back_desc_typography_line_height['small'] / $settings->back_desc_typography_font_size['small'];
 				}
 			}
-			if ( isset( $settings->back_desc_typography_line_height['medium'] ) && isset( $settings->back_desc_typography_font_size['medium'] ) && $settings->back_desc_typography_font_size['medium'] != 0 && ! isset( $settings->back_desc_typography_line_height_unit_medium ) ) {
+			if ( isset( $settings->back_desc_typography_line_height['medium'] ) && isset( $settings->back_desc_typography_font_size['medium'] ) && 0 != $settings->back_desc_typography_font_size['medium'] && ! isset( $settings->back_desc_typography_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->back_desc_typography_line_height['medium'] ) && is_numeric( $settings->back_desc_typography_font_size['medium'] ) ) {
 					$settings->back_desc_typography_line_height_unit_medium = $settings->back_desc_typography_line_height['medium'] / $settings->back_desc_typography_font_size['medium'];
 				}
 			}
-			if ( isset( $settings->back_desc_typography_line_height['desktop'] ) && isset( $settings->back_desc_typography_font_size['desktop'] ) && $settings->back_desc_typography_font_size['desktop'] != 0 && ! isset( $settings->back_desc_typography_line_height_unit ) ) {
+			if ( isset( $settings->back_desc_typography_line_height['desktop'] ) && isset( $settings->back_desc_typography_font_size['desktop'] ) && 0 != $settings->back_desc_typography_font_size['desktop'] && ! isset( $settings->back_desc_typography_line_height_unit ) ) {
 				if ( is_numeric( $settings->back_desc_typography_line_height['desktop'] ) && is_numeric( $settings->back_desc_typography_font_size['desktop'] ) ) {
 					$settings->back_desc_typography_line_height_unit = $settings->back_desc_typography_line_height['desktop'] / $settings->back_desc_typography_font_size['desktop'];
 				}
@@ -318,17 +325,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->button->font_size_unit = $settings->button->font_size->desktop;
 			}
 
-			if ( isset( $settings->button->line_height->small ) && isset( $settings->button->font_size->small ) && $settings->button->font_size->small != 0 && ! isset( $settings->button->line_height_unit_responsive ) ) {
+			if ( isset( $settings->button->line_height->small ) && isset( $settings->button->font_size->small ) && 0 != $settings->button->font_size->small && ! isset( $settings->button->line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->button->line_height->small ) && is_numeric( $settings->button->font_size->small ) ) {
 					$settings->button->line_height_unit_responsive = round( $settings->button->line_height->small / $settings->button->font_size->small );
 				}
 			}
-			if ( isset( $settings->button->line_height->medium ) && isset( $settings->button->font_size->medium ) && $settings->button->font_size->medium != 0 && ! isset( $settings->button->line_height_unit_medium ) ) {
+			if ( isset( $settings->button->line_height->medium ) && isset( $settings->button->font_size->medium ) && 0 != $settings->button->font_size->medium && ! isset( $settings->button->line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->button->line_height->medium ) && is_numeric( $settings->button->font_size->medium ) ) {
 					$settings->button->line_height_unit_medium = round( $settings->button->line_height->medium / $settings->button->font_size->medium );
 				}
 			}
-			if ( isset( $settings->button->line_height->desktop ) && isset( $settings->button->font_size->desktop ) && $settings->button->font_size->desktop != 0 && ! isset( $settings->button->line_height_unit ) ) {
+			if ( isset( $settings->button->line_height->desktop ) && isset( $settings->button->font_size->desktop ) && 0 != $settings->button->font_size->desktop && ! isset( $settings->button->line_height_unit ) ) {
 				if ( is_numeric( $settings->button->line_height->desktop ) && is_numeric( $settings->button->font_size->desktop ) ) {
 					$settings->button->line_height_unit = round( $settings->button->line_height->desktop / $settings->button->font_size->desktop );
 				}
@@ -348,8 +355,8 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->inner_padding_dimension_right  = '';
 
 				foreach ( $uabb_default as $val ) {
-					$new       = explode( ':', $val );
-					 $output[] = $new;
+					$new      = explode( ':', $val );
+					$output[] = $new;
 				}
 				for ( $i = 0; $i < count( $output ); $i++ ) {
 					switch ( $output[ $i ][0] ) {
@@ -379,7 +386,8 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * UABB Info List.
 		 *
-		 * @since 1.2.4
+		 * @since 1.7.2
+		 * @param object $settings gets the settings of respective module.
 		 * @return void
 		 */
 		public function uabb_info_list( &$settings ) {
@@ -394,17 +402,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->heading_font_size_unit = $settings->heading_font_size['desktop'];
 			}
 
-			if ( isset( $settings->heading_line_height['small'] ) && isset( $settings->heading_font_size['small'] ) && $settings->heading_font_size['small'] != 0 && ! isset( $settings->heading_line_height_unit_responsive ) ) {
+			if ( isset( $settings->heading_line_height['small'] ) && isset( $settings->heading_font_size['small'] ) && 0 != $settings->heading_font_size['small'] && ! isset( $settings->heading_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->heading_line_height['small'] ) && is_numeric( $settings->heading_font_size['small'] ) ) {
 					$settings->heading_line_height_unit_responsive = round( $settings->heading_line_height['small'] / $settings->heading_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->heading_line_height['medium'] ) && isset( $settings->heading_font_size['medium'] ) && $settings->heading_font_size['medium'] != 0 && ! isset( $settings->heading_line_height_unit_medium ) ) {
+			if ( isset( $settings->heading_line_height['medium'] ) && isset( $settings->heading_font_size['medium'] ) && 0 != $settings->heading_font_size['medium'] && ! isset( $settings->heading_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->heading_line_height['medium'] ) && is_numeric( $settings->heading_font_size['medium'] ) ) {
 					$settings->heading_line_height_unit_medium = round( $settings->heading_line_height['medium'] / $settings->heading_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->heading_line_height['desktop'] ) && isset( $settings->heading_font_size['desktop'] ) && $settings->heading_font_size['desktop'] != 0 && ! isset( $settings->heading_line_height_unit ) ) {
+			if ( isset( $settings->heading_line_height['desktop'] ) && isset( $settings->heading_font_size['desktop'] ) && 0 != $settings->heading_font_size['desktop'] && ! isset( $settings->heading_line_height_unit ) ) {
 				if ( is_numeric( $settings->heading_line_height['desktop'] ) && is_numeric( $settings->heading_font_size['desktop'] ) ) {
 					$settings->heading_line_height_unit = round( $settings->heading_line_height['desktop'] / $settings->heading_font_size['desktop'], 2 );
 				}
@@ -420,17 +428,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->description_font_size_unit = $settings->description_font_size['desktop'];
 			}
 
-			if ( isset( $settings->description_line_height['small'] ) && isset( $settings->description_font_size['small'] ) && $settings->description_font_size['small'] != 0 && ! isset( $settings->description_line_height_unit_responsive ) ) {
+			if ( isset( $settings->description_line_height['small'] ) && isset( $settings->description_font_size['small'] ) && 0 != $settings->description_font_size['small'] && ! isset( $settings->description_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->description_line_height['small'] ) && is_numeric( $settings->description_font_size['small'] ) ) {
 					$settings->description_line_height_unit_responsive = round( $settings->description_line_height['small'] / $settings->description_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->description_line_height['medium'] ) && isset( $settings->description_font_size['medium'] ) && $settings->description_font_size['medium'] != 0 && ! isset( $settings->description_line_height_unit_medium ) ) {
+			if ( isset( $settings->description_line_height['medium'] ) && isset( $settings->description_font_size['medium'] ) && 0 != $settings->description_font_size['medium'] && ! isset( $settings->description_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->description_line_height['medium'] ) && is_numeric( $settings->description_font_size['medium'] ) ) {
 					$settings->description_line_height_unit_medium = round( $settings->description_line_height['medium'] / $settings->description_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->description_line_height['desktop'] ) && isset( $settings->description_font_size['desktop'] ) && $settings->description_font_size['desktop'] != 0 && ! isset( $settings->description_line_height_unit ) ) {
+			if ( isset( $settings->description_line_height['desktop'] ) && isset( $settings->description_font_size['desktop'] ) && 0 != $settings->description_font_size['desktop'] && ! isset( $settings->description_line_height_unit ) ) {
 				if ( is_numeric( $settings->description_line_height['desktop'] ) && is_numeric( $settings->description_font_size['desktop'] ) ) {
 					$settings->description_line_height_unit = round( $settings->description_line_height['desktop'] / $settings->description_font_size['desktop'], 2 );
 				}
@@ -440,7 +448,8 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * UABB Info Table.
 		 *
-		 * @since 1.2.4
+		 * @since 1.7.2
+		 * @param object $settings gets the settings of respective module.
 		 * @return void
 		 */
 		public function uabb_info_table( &$settings ) {
@@ -455,17 +464,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->heading_font_size_unit = $settings->heading_font_size['desktop'];
 			}
 
-			if ( isset( $settings->heading_line_height['small'] ) && isset( $settings->heading_font_size['small'] ) && $settings->heading_font_size['small'] != 0 && ! isset( $settings->heading_line_height_unit_responsive ) ) {
+			if ( isset( $settings->heading_line_height['small'] ) && isset( $settings->heading_font_size['small'] ) && 0 != $settings->heading_font_size['small'] && ! isset( $settings->heading_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->heading_line_height['small'] ) && is_numeric( $settings->heading_font_size['small'] ) ) {
 					$settings->heading_line_height_unit_responsive = round( $settings->heading_line_height['small'] / $settings->heading_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->heading_line_height['medium'] ) && isset( $settings->heading_font_size['medium'] ) && $settings->heading_font_size['medium'] != 0 && ! isset( $settings->heading_line_height_unit_medium ) ) {
+			if ( isset( $settings->heading_line_height['medium'] ) && isset( $settings->heading_font_size['medium'] ) && 0 != $settings->heading_font_size['medium'] && ! isset( $settings->heading_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->heading_line_height['medium'] ) && is_numeric( $settings->heading_font_size['medium'] ) ) {
 					$settings->heading_line_height_unit_medium = round( $settings->heading_line_height['medium'] / $settings->heading_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->heading_line_height['desktop'] ) && isset( $settings->heading_font_size['desktop'] ) && $settings->heading_font_size['desktop'] != 0 && ! isset( $settings->heading_line_height_unit ) ) {
+			if ( isset( $settings->heading_line_height['desktop'] ) && isset( $settings->heading_font_size['desktop'] ) && 0 != $settings->heading_font_size['desktop'] && ! isset( $settings->heading_line_height_unit ) ) {
 				if ( is_numeric( $settings->heading_line_height['desktop'] ) && is_numeric( $settings->heading_font_size['desktop'] ) ) {
 					$settings->heading_line_height_unit = round( $settings->heading_line_height['desktop'] / $settings->heading_font_size['desktop'], 2 );
 				}
@@ -481,17 +490,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->description_font_size_unit = $settings->description_font_size['desktop'];
 			}
 
-			if ( isset( $settings->description_line_height['small'] ) && isset( $settings->description_font_size['small'] ) && $settings->description_font_size['small'] != 0 && ! isset( $settings->description_line_height_unit_responsive ) ) {
+			if ( isset( $settings->description_line_height['small'] ) && isset( $settings->description_font_size['small'] ) && 0 != $settings->description_font_size['small'] && ! isset( $settings->description_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->description_line_height['small'] ) && is_numeric( $settings->description_font_size['small'] ) ) {
 					$settings->description_line_height_unit_responsive = round( $settings->description_line_height['small'] / $settings->description_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->description_line_height['medium'] ) && isset( $settings->description_font_size['medium'] ) && $settings->description_font_size['medium'] != 0 && ! isset( $settings->description_line_height_unit_medium ) ) {
+			if ( isset( $settings->description_line_height['medium'] ) && isset( $settings->description_font_size['medium'] ) && 0 != $settings->description_font_size['medium'] && ! isset( $settings->description_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->description_line_height['medium'] ) && is_numeric( $settings->description_font_size['medium'] ) ) {
 					$settings->description_line_height_unit_medium = round( $settings->description_line_height['medium'] / $settings->description_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->description_line_height['desktop'] ) && isset( $settings->description_font_size['desktop'] ) && $settings->description_font_size['desktop'] != 0 && ! isset( $settings->description_line_height_unit ) ) {
+			if ( isset( $settings->description_line_height['desktop'] ) && isset( $settings->description_font_size['desktop'] ) && 0 != $settings->description_font_size['desktop'] && ! isset( $settings->description_line_height_unit ) ) {
 				if ( is_numeric( $settings->description_line_height['desktop'] ) && is_numeric( $settings->description_font_size['desktop'] ) ) {
 					$settings->description_line_height_unit = round( $settings->description_line_height['desktop'] / $settings->description_font_size['desktop'], 2 );
 				}
@@ -507,17 +516,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->sub_heading_font_size_unit = $settings->sub_heading_font_size['desktop'];
 			}
 
-			if ( isset( $settings->sub_heading_line_height['small'] ) && isset( $settings->sub_heading_font_size['small'] ) && $settings->sub_heading_font_size['small'] != 0 && ! isset( $settings->sub_heading_line_height_unit_responsive ) ) {
+			if ( isset( $settings->sub_heading_line_height['small'] ) && isset( $settings->sub_heading_font_size['small'] ) && 0 != $settings->sub_heading_font_size['small'] && ! isset( $settings->sub_heading_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->sub_heading_line_height['small'] ) && is_numeric( $settings->sub_heading_font_size['small'] ) ) {
 					$settings->sub_heading_line_height_unit_responsive = round( $settings->sub_heading_line_height['small'] / $settings->sub_heading_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->sub_heading_line_height['medium'] ) && isset( $settings->sub_heading_font_size['medium'] ) && $settings->sub_heading_font_size['medium'] != 0 && ! isset( $settings->sub_heading_line_height_unit_medium ) ) {
+			if ( isset( $settings->sub_heading_line_height['medium'] ) && isset( $settings->sub_heading_font_size['medium'] ) && 0 != $settings->sub_heading_font_size['medium'] && ! isset( $settings->sub_heading_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->sub_heading_line_height['medium'] ) && is_numeric( $settings->sub_heading_font_size['medium'] ) ) {
 					$settings->sub_heading_line_height_unit_medium = round( $settings->sub_heading_line_height['medium'] / $settings->sub_heading_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->sub_heading_line_height['desktop'] ) && isset( $settings->sub_heading_font_size['desktop'] ) && $settings->sub_heading_font_size['desktop'] != 0 && ! isset( $settings->sub_heading_line_height_unit ) ) {
+			if ( isset( $settings->sub_heading_line_height['desktop'] ) && isset( $settings->sub_heading_font_size['desktop'] ) && 0 != $settings->sub_heading_font_size['desktop'] && ! isset( $settings->sub_heading_line_height_unit ) ) {
 				if ( is_numeric( $settings->sub_heading_line_height['desktop'] ) && is_numeric( $settings->sub_heading_font_size['desktop'] ) ) {
 					$settings->sub_heading_line_height_unit = round( $settings->sub_heading_line_height['desktop'] / $settings->sub_heading_font_size['desktop'], 2 );
 				}
@@ -533,17 +542,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->btn_font_size_unit = $settings->btn_font_size['desktop'];
 			}
 
-			if ( isset( $settings->btn_line_height['small'] ) && isset( $settings->btn_font_size['small'] ) && $settings->btn_font_size['small'] != 0 && ! isset( $settings->btn_line_height_unit_responsive ) ) {
+			if ( isset( $settings->btn_line_height['small'] ) && isset( $settings->btn_font_size['small'] ) && 0 != $settings->btn_font_size['small'] && ! isset( $settings->btn_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->btn_line_height['small'] ) && is_numeric( $settings->btn_font_size['small'] ) ) {
 					$settings->btn_line_height_unit_responsive = round( $settings->btn_line_height['small'] / $settings->btn_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->btn_line_height['medium'] ) && isset( $settings->btn_font_size['medium'] ) && $settings->btn_font_size['medium'] != 0 && ! isset( $settings->btn_line_height_unit_medium ) ) {
+			if ( isset( $settings->btn_line_height['medium'] ) && isset( $settings->btn_font_size['medium'] ) && 0 != $settings->btn_font_size['medium'] && ! isset( $settings->btn_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->btn_line_height['medium'] ) && is_numeric( $settings->btn_font_size['medium'] ) ) {
 					$settings->btn_line_height_unit_medium = round( $settings->btn_line_height['medium'] / $settings->btn_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->btn_line_height['desktop'] ) && isset( $settings->btn_font_size['desktop'] ) && $settings->btn_font_size['desktop'] != 0 && ! isset( $settings->btn_line_height_unit ) ) {
+			if ( isset( $settings->btn_line_height['desktop'] ) && isset( $settings->btn_font_size['desktop'] ) && 0 != $settings->btn_font_size['desktop'] && ! isset( $settings->btn_line_height_unit ) ) {
 				if ( is_numeric( $settings->btn_line_height['desktop'] ) && is_numeric( $settings->btn_font_size['desktop'] ) ) {
 					$settings->btn_line_height_unit = round( $settings->btn_line_height['desktop'] / $settings->btn_font_size['desktop'], 2 );
 				}
@@ -551,9 +560,10 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		}
 
 		/**
-		 * UABB Ribbon.
+		 * UABB ribbon.
 		 *
-		 * @since 1.2.4
+		 * @since 1.7.2
+		 * @param object $settings gets the settings of respective module.
 		 * @return void
 		 */
 		public function uabb_ribbon( &$settings ) {
@@ -568,17 +578,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->text_font_size_unit = $settings->text_font_size['desktop'];
 			}
 
-			if ( isset( $settings->text_line_height['small'] ) && isset( $settings->text_font_size['small'] ) && $settings->text_font_size['small'] != 0 && ! isset( $settings->text_line_height_unit_responsive ) ) {
+			if ( isset( $settings->text_line_height['small'] ) && isset( $settings->text_font_size['small'] ) && 0 != $settings->text_font_size['small'] && ! isset( $settings->text_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->text_line_height['small'] ) && is_numeric( $settings->text_font_size['small'] ) ) {
 					$settings->text_line_height_unit_responsive = round( $settings->text_line_height['small'] / $settings->text_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->text_line_height['medium'] ) && isset( $settings->text_font_size['medium'] ) && $settings->text_font_size['medium'] != 0 && ! isset( $settings->text_line_height_unit_medium ) ) {
+			if ( isset( $settings->text_line_height['medium'] ) && isset( $settings->text_font_size['medium'] ) && 0 != $settings->text_font_size['medium'] && ! isset( $settings->text_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->text_line_height['medium'] ) && is_numeric( $settings->text_font_size['medium'] ) ) {
 					$settings->text_line_height_unit_medium = round( $settings->text_line_height['medium'] / $settings->text_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->text_line_height['desktop'] ) && isset( $settings->text_font_size['desktop'] ) && $settings->text_font_size['desktop'] != 0 && ! isset( $settings->text_line_height_unit ) ) {
+			if ( isset( $settings->text_line_height['desktop'] ) && isset( $settings->text_font_size['desktop'] ) && 0 != $settings->text_font_size['desktop'] && ! isset( $settings->text_line_height_unit ) ) {
 				if ( is_numeric( $settings->text_line_height['desktop'] ) && is_numeric( $settings->text_font_size['desktop'] ) ) {
 					$settings->text_line_height_unit = round( $settings->text_line_height['desktop'] / $settings->text_font_size['desktop'], 2 );
 				}
@@ -588,7 +598,8 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * UABB Slide Box.
 		 *
-		 * @since 1.2.4
+		 * @since 1.7.2
+		 * @param object $settings gets the settings of respective module.
 		 * @return void
 		 */
 		public function uabb_slide_box( &$settings ) {
@@ -603,17 +614,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->front_title_font_size_unit = $settings->front_title_font_size['desktop'];
 			}
 
-			if ( isset( $settings->front_title_line_height['small'] ) && isset( $settings->front_title_font_size['small'] ) && $settings->front_title_font_size['small'] != 0 && ! isset( $settings->front_title_line_height_unit_responsive ) ) {
+			if ( isset( $settings->front_title_line_height['small'] ) && isset( $settings->front_title_font_size['small'] ) && 0 != $settings->front_title_font_size['small'] && ! isset( $settings->front_title_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->front_title_line_height['small'] ) && is_numeric( $settings->front_title_font_size['small'] ) ) {
 					$settings->front_title_line_height_unit_responsive = round( $settings->front_title_line_height['small'] / $settings->front_title_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->front_title_line_height['medium'] ) && isset( $settings->front_title_font_size['medium'] ) && $settings->front_title_font_size['medium'] != 0 && ! isset( $settings->front_title_line_height_unit_medium ) ) {
+			if ( isset( $settings->front_title_line_height['medium'] ) && isset( $settings->front_title_font_size['medium'] ) && 0 != $settings->front_title_font_size['medium'] && ! isset( $settings->front_title_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->front_title_line_height['medium'] ) && is_numeric( $settings->front_title_font_size['medium'] ) ) {
 					$settings->front_title_line_height_unit_medium = round( $settings->front_title_line_height['medium'] / $settings->front_title_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->front_title_line_height['desktop'] ) && isset( $settings->front_title_font_size['desktop'] ) && $settings->front_title_font_size['desktop'] != 0 && ! isset( $settings->front_title_line_height_unit ) ) {
+			if ( isset( $settings->front_title_line_height['desktop'] ) && isset( $settings->front_title_font_size['desktop'] ) && 0 != $settings->front_title_font_size['desktop'] && ! isset( $settings->front_title_line_height_unit ) ) {
 				if ( is_numeric( $settings->front_title_line_height['desktop'] ) && is_numeric( $settings->front_title_font_size['desktop'] ) ) {
 					$settings->front_title_line_height_unit = round( $settings->front_title_line_height['desktop'] / $settings->front_title_font_size['desktop'], 2 );
 				}
@@ -629,17 +640,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->front_desc_font_size_unit = $settings->front_desc_font_size['desktop'];
 			}
 
-			if ( isset( $settings->front_desc_line_height['small'] ) && isset( $settings->front_desc_font_size['small'] ) && $settings->front_desc_font_size['small'] != 0 && ! isset( $settings->front_desc_line_height_unit_responsive ) ) {
+			if ( isset( $settings->front_desc_line_height['small'] ) && isset( $settings->front_desc_font_size['small'] ) && 0 != $settings->front_desc_font_size['small'] && ! isset( $settings->front_desc_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->front_desc_line_height['small'] ) && is_numeric( $settings->front_desc_font_size['small'] ) ) {
 					$settings->front_desc_line_height_unit_responsive = round( $settings->front_desc_line_height['small'] / $settings->front_desc_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->front_desc_line_height['medium'] ) && isset( $settings->front_desc_font_size['medium'] ) && $settings->front_desc_font_size['medium'] != 0 && ! isset( $settings->front_desc_line_height_unit_medium ) ) {
+			if ( isset( $settings->front_desc_line_height['medium'] ) && isset( $settings->front_desc_font_size['medium'] ) && 0 != $settings->front_desc_font_size['medium'] && ! isset( $settings->front_desc_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->front_desc_line_height['medium'] ) && is_numeric( $settings->front_desc_font_size['medium'] ) ) {
 					$settings->front_desc_line_height_unit_medium = round( $settings->front_desc_line_height['medium'] / $settings->front_desc_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->front_desc_line_height['desktop'] ) && isset( $settings->front_desc_font_size['desktop'] ) && $settings->front_desc_font_size['desktop'] != 0 && ! isset( $settings->front_desc_line_height_unit ) ) {
+			if ( isset( $settings->front_desc_line_height['desktop'] ) && isset( $settings->front_desc_font_size['desktop'] ) && 0 != $settings->front_desc_font_size['desktop'] && ! isset( $settings->front_desc_line_height_unit ) ) {
 				if ( is_numeric( $settings->front_desc_line_height['desktop'] ) && is_numeric( $settings->front_desc_font_size['desktop'] ) ) {
 					$settings->front_desc_line_height_unit = round( $settings->front_desc_line_height['desktop'] / $settings->front_desc_font_size['desktop'], 2 );
 				}
@@ -655,17 +666,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->back_title_font_size_unit = $settings->back_title_font_size['desktop'];
 			}
 
-			if ( isset( $settings->back_title_line_height['small'] ) && isset( $settings->back_title_font_size['small'] ) && $settings->back_title_font_size['small'] != 0 && ! isset( $settings->back_title_line_height_unit_responsive ) ) {
+			if ( isset( $settings->back_title_line_height['small'] ) && isset( $settings->back_title_font_size['small'] ) && 0 != $settings->back_title_font_size['small'] && ! isset( $settings->back_title_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->back_title_line_height['small'] ) && is_numeric( $settings->back_title_font_size['small'] ) ) {
 					$settings->back_title_line_height_unit_responsive = round( $settings->back_title_line_height['small'] / $settings->back_title_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->back_title_line_height['medium'] ) && isset( $settings->back_title_font_size['medium'] ) && $settings->back_title_font_size['medium'] != 0 && ! isset( $settings->back_title_line_height_unit_medium ) ) {
+			if ( isset( $settings->back_title_line_height['medium'] ) && isset( $settings->back_title_font_size['medium'] ) && 0 != $settings->back_title_font_size['medium'] && ! isset( $settings->back_title_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->back_title_line_height['medium'] ) && is_numeric( $settings->back_title_font_size['medium'] ) ) {
 					$settings->back_title_line_height_unit_medium = round( $settings->back_title_line_height['medium'] / $settings->back_title_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->back_title_line_height['desktop'] ) && isset( $settings->back_title_font_size['desktop'] ) && $settings->back_title_font_size['desktop'] != 0 && ! isset( $settings->back_title_line_height_unit ) ) {
+			if ( isset( $settings->back_title_line_height['desktop'] ) && isset( $settings->back_title_font_size['desktop'] ) && 0 != $settings->back_title_font_size['desktop'] && ! isset( $settings->back_title_line_height_unit ) ) {
 				if ( is_numeric( $settings->back_title_line_height['desktop'] ) && is_numeric( $settings->back_title_font_size['desktop'] ) ) {
 					$settings->back_title_line_height_unit = round( $settings->back_title_line_height['desktop'] / $settings->back_title_font_size['desktop'], 2 );
 				}
@@ -681,17 +692,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->back_desc_font_size_unit = $settings->back_desc_font_size['desktop'];
 			}
 
-			if ( isset( $settings->back_desc_line_height['small'] ) && isset( $settings->back_desc_font_size['small'] ) && $settings->back_desc_font_size['small'] != 0 && ! isset( $settings->back_desc_line_height_unit_responsive ) ) {
+			if ( isset( $settings->back_desc_line_height['small'] ) && isset( $settings->back_desc_font_size['small'] ) && 0 != $settings->back_desc_font_size['small'] && ! isset( $settings->back_desc_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->back_desc_line_height['small'] ) && is_numeric( $settings->back_desc_font_size['small'] ) ) {
 					$settings->back_desc_line_height_unit_responsive = round( $settings->back_desc_line_height['small'] / $settings->back_desc_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->back_desc_line_height['medium'] ) && isset( $settings->back_desc_font_size['medium'] ) && $settings->back_desc_font_size['medium'] != 0 && ! isset( $settings->back_desc_line_height_unit_medium ) ) {
+			if ( isset( $settings->back_desc_line_height['medium'] ) && isset( $settings->back_desc_font_size['medium'] ) && 0 != $settings->back_desc_font_size['medium'] && ! isset( $settings->back_desc_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->back_desc_line_height['medium'] ) && is_numeric( $settings->back_desc_font_size['medium'] ) ) {
 					$settings->back_desc_line_height_unit_medium = round( $settings->back_desc_line_height['medium'] / $settings->back_desc_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->back_desc_line_height['desktop'] ) && isset( $settings->back_desc_font_size['desktop'] ) && $settings->back_desc_font_size['desktop'] != 0 && ! isset( $settings->back_desc_line_height_unit ) ) {
+			if ( isset( $settings->back_desc_line_height['desktop'] ) && isset( $settings->back_desc_font_size['desktop'] ) && 0 != $settings->back_desc_font_size['desktop'] && ! isset( $settings->back_desc_line_height_unit ) ) {
 				if ( is_numeric( $settings->back_desc_line_height['desktop'] ) && is_numeric( $settings->back_desc_font_size['desktop'] ) ) {
 					$settings->back_desc_line_height_unit = round( $settings->back_desc_line_height['desktop'] / $settings->back_desc_font_size['desktop'], 2 );
 				}
@@ -707,17 +718,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->link_font_size_unit = $settings->link_font_size['desktop'];
 			}
 
-			if ( isset( $settings->link_line_height['small'] ) && isset( $settings->link_font_size['small'] ) && $settings->link_font_size['small'] != 0 && ! isset( $settings->link_line_height_unit_responsive ) ) {
+			if ( isset( $settings->link_line_height['small'] ) && isset( $settings->link_font_size['small'] ) && 0 != $settings->link_font_size['small'] && ! isset( $settings->link_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->link_line_height['small'] ) && is_numeric( $settings->link_font_size['small'] ) ) {
 					$settings->link_line_height_unit_responsive = round( $settings->link_line_height['small'] / $settings->link_font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->link_line_height['medium'] ) && isset( $settings->link_font_size['medium'] ) && $settings->link_font_size['medium'] != 0 && ! isset( $settings->link_line_height_unit_medium ) ) {
+			if ( isset( $settings->link_line_height['medium'] ) && isset( $settings->link_font_size['medium'] ) && 0 != $settings->link_font_size['medium'] && ! isset( $settings->link_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->link_line_height['medium'] ) && is_numeric( $settings->link_font_size['medium'] ) ) {
 					$settings->link_line_height_unit_medium = round( $settings->link_line_height['medium'] / $settings->link_font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->link_line_height['desktop'] ) && isset( $settings->link_font_size['desktop'] ) && $settings->link_font_size['desktop'] != 0 && ! isset( $settings->link_line_height_unit ) ) {
+			if ( isset( $settings->link_line_height['desktop'] ) && isset( $settings->link_font_size['desktop'] ) && 0 != $settings->link_font_size['desktop'] && ! isset( $settings->link_line_height_unit ) ) {
 				if ( is_numeric( $settings->link_line_height['desktop'] ) && is_numeric( $settings->link_font_size['desktop'] ) ) {
 					$settings->link_line_height_unit = round( $settings->link_line_height['desktop'] / $settings->link_font_size['desktop'], 2 );
 				}
@@ -733,17 +744,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->button->font_size_unit = $settings->button->font_size->desktop;
 			}
 
-			if ( isset( $settings->button->line_height->small ) && isset( $settings->button->font_size->small ) && $settings->button->font_size->small != 0 && ! isset( $settings->button->line_height_unit_responsive ) ) {
+			if ( isset( $settings->button->line_height->small ) && isset( $settings->button->font_size->small ) && 0 != $settings->button->font_size->small && ! isset( $settings->button->line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->button->line_height->small ) && is_numeric( $settings->button->font_size->small ) ) {
 					$settings->button->line_height_unit_responsive = round( $settings->button->line_height->small / $settings->button->font_size->small );
 				}
 			}
-			if ( isset( $settings->button->line_height->medium ) && isset( $settings->button->font_size->medium ) && $settings->button->font_size->medium != 0 && ! isset( $settings->button->line_height_unit_medium ) ) {
+			if ( isset( $settings->button->line_height->medium ) && isset( $settings->button->font_size->medium ) && 0 != $settings->button->font_size->medium && ! isset( $settings->button->line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->button->line_height->medium ) && is_numeric( $settings->button->font_size->medium ) ) {
 					$settings->button->line_height_unit_medium = round( $settings->button->line_height->medium / $settings->button->font_size->medium );
 				}
 			}
-			if ( isset( $settings->button->line_height->desktop ) && isset( $settings->button->font_size->desktop ) && $settings->button->font_size->desktop != 0 && ! isset( $settings->button->line_height_unit ) ) {
+			if ( isset( $settings->button->line_height->desktop ) && isset( $settings->button->font_size->desktop ) && 0 != $settings->button->font_size->desktop && ! isset( $settings->button->line_height_unit ) ) {
 				if ( is_numeric( $settings->button->line_height->desktop ) && is_numeric( $settings->button->font_size->desktop ) ) {
 					$settings->button->line_height_unit = round( $settings->button->line_height->desktop / $settings->button->font_size->desktop );
 				}
@@ -761,8 +772,8 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->front_padding_dimension_right  = '0';
 				$settings->front_padding_dimension_left   = '0';
 				foreach ( $uabb_default as $val ) {
-					$new       = explode( ':', $val );
-					 $output[] = $new;
+					$new      = explode( ':', $val );
+					$output[] = $new;
 				}
 				for ( $i = 0; $i < count( $output ); $i++ ) {
 
@@ -801,8 +812,8 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->back_padding_dimension_right  = '0';
 				$settings->back_padding_dimension_left   = '0';
 				foreach ( $uabb_default as $val ) {
-					$new       = explode( ':', $val );
-					 $output[] = $new;
+					$new      = explode( ':', $val );
+					$output[] = $new;
 				}
 				for ( $i = 0; $i < count( $output ); $i++ ) {
 					switch ( $output[ $i ][0] ) {
@@ -833,7 +844,8 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * UABB Button.
 		 *
-		 * @since 1.2.4
+		 * @since 1.7.2
+		 * @param object $settings gets the settings of respective module.
 		 * @return void
 		 */
 		public function uabb_button( &$settings ) {
@@ -848,17 +860,17 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 				$settings->font_size_unit = $settings->font_size['desktop'];
 			}
 
-			if ( isset( $settings->line_height['small'] ) && isset( $settings->font_size['small'] ) && $settings->font_size['small'] != 0 && ! isset( $settings->line_height_unit_responsive ) ) {
+			if ( isset( $settings->line_height['small'] ) && isset( $settings->font_size['small'] ) && 0 != $settings->font_size['small'] && ! isset( $settings->line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->line_height['small'] ) && is_numeric( $settings->font_size['small'] ) ) {
 					$settings->line_height_unit_responsive = round( $settings->line_height['small'] / $settings->font_size['small'], 2 );
 				}
 			}
-			if ( isset( $settings->line_height['medium'] ) && isset( $settings->font_size['medium'] ) && $settings->font_size['medium'] != 0 && ! isset( $settings->line_height_unit_medium ) ) {
+			if ( isset( $settings->line_height['medium'] ) && isset( $settings->font_size['medium'] ) && 0 != $settings->font_size['medium'] && ! isset( $settings->line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->line_height['medium'] ) && is_numeric( $settings->font_size['medium'] ) ) {
 					$settings->line_height_unit_medium = round( $settings->line_height['medium'] / $settings->font_size['medium'], 2 );
 				}
 			}
-			if ( isset( $settings->line_height['desktop'] ) && isset( $settings->font_size['desktop'] ) && $settings->font_size['desktop'] != 0 && ! isset( $settings->line_height_unit ) ) {
+			if ( isset( $settings->line_height['desktop'] ) && isset( $settings->font_size['desktop'] ) && 0 != $settings->font_size['desktop'] && ! isset( $settings->line_height_unit ) ) {
 				if ( is_numeric( $settings->line_height['desktop'] ) && is_numeric( $settings->font_size['desktop'] ) ) {
 					$settings->line_height_unit = round( $settings->line_height['desktop'] / $settings->font_size['desktop'], 2 );
 				}

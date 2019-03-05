@@ -1,17 +1,38 @@
 <?php
-
 /**
  * UABB Cloud Templates initial setup
  *
  * @since 1.2.0.2
+ * @package UABB Cloud Templates
  */
 
 if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
-
+	/**
+	 * This class initializes UABB Cloud Templates
+	 *
+	 * @class UABB_Cloud_Templates
+	 */
 	class UABB_Cloud_Templates {
-
+		/**
+		 * Holds an instance of Cloud Templates.
+		 *
+		 * @since x.x.x
+		 * @var $instance instance
+		 */
 		private static $instance;
+		/**
+		 * Holds an cloud URL.
+		 *
+		 * @since x.x.x
+		 * @var $cloud_url cloud_url
+		 */
 		private static $cloud_url;
+		/**
+		 * Holds an UABB file system.
+		 *
+		 * @since x.x.x
+		 * @var $uabb_filesystem UABB filesystem
+		 */
 		protected static $uabb_filesystem = null;
 
 		/**
@@ -41,14 +62,18 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 
 			add_action( 'wp_ajax_uabb_cloud_dat_file_fetch', array( $this, 'fetch_cloud_templates' ) );
 		}
-
+		/**
+		 * Transient cloud templates
+		 *
+		 * @since 1.2.0.2
+		 */
 		static function reset_cloud_transient() {
 
-			// get - downloaded templates
+			// get - downloaded templates.
 			$cloud_templates      = array();
 			$downloaded_templates = get_site_option( '_uabb_cloud_templats', false );
 
-			// get - cloud templates by type
+			// get - cloud templates by type.
 			foreach ( self::$cloud_url as $type => $url ) {
 
 				$response = wp_remote_get(
@@ -67,7 +92,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 				$type_templates = json_decode( wp_remote_retrieve_body( $response ), 1 );
 
 				/**
-				 *  has {cloud} && has {downloaded}
+				 *  Has {cloud} && has {downloaded}
 				 *
 				 *  Then, keep latest & installed templates.
 				 */
@@ -117,9 +142,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 								 *  Add if 'status' == 'true' &&
 								 *  Add if not empty 'dat_url_local'
 								 */
-								if (
-									( $downloaded_templates[ $type ][ $key ]['status'] == 'true' ) &&
-									( ! empty( $downloaded_templates[ $type ][ $key ]['dat_url_local'] ) )
+								if ( ( 'true' == $downloaded_templates[ $type ][ $key ]['status'] ) && ( ! empty( $downloaded_templates[ $type ][ $key ]['dat_url_local'] ) )
 								) {
 									$type_templates[ $key ] = $downloaded_templates[ $type ][ $key ];
 								}
@@ -130,13 +153,11 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 					$cloud_templates[ $type ] = $type_templates;
 
 					/**
-					 *  has {cloud} && NOT has {downloaded}
+					 *  Has {cloud} && NOT has {downloaded}
 					 *
 					 *  Then, keep cloud.
 					 */
-				} elseif (
-						( is_array( $type_templates ) && count( $type_templates ) > 0 ) &&
-						( count( $downloaded_templates[ $type ] ) == 0 )
+				} elseif ( ( is_array( $type_templates ) && count( $type_templates ) > 0 ) && ( 0 == count( $downloaded_templates[ $type ] ) )
 					) {
 
 					$cloud_templates[ $type ] = $type_templates;
@@ -146,7 +167,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 					 *
 					 *  Then, keep downloaded.
 					 */
-				} elseif ( $type_templates == 0 && count( $downloaded_templates[ $type ] ) > 0 ) {
+				} elseif ( 0 == $type_templates && count( $downloaded_templates[ $type ] ) > 0 ) {
 
 					$cloud_templates[ $type ] = $downloaded_templates[ $type ];
 				}
@@ -164,6 +185,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 * Get cloud templates
 		 *
 		 * @since 1.2.0.2
+		 * @param string $type gets the type of the cloud templates.
 		 */
 		static function get_cloud_templates_count( $type = '' ) {
 			$templates       = get_site_option( '_uabb_cloud_templats', false );
@@ -202,6 +224,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 * Get cloud templates
 		 *
 		 * @since 1.2.0.2
+		 * @param string $type gets the type of the cloud templates.
 		 */
 		static function get_cloud_templates( $type = '' ) {
 
@@ -209,11 +232,11 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 
 			if ( ! empty( $templates ) ) {
 
-				// Return all templates
+				// Return all templates.
 				if ( empty( $type ) ) {
 					return $templates;
 
-					// Return specific templates
+					// Return specific templates.
 				} else {
 					return $templates[ $type ];
 				}
@@ -230,17 +253,23 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 */
 		function fetch_cloud_templates() {
 			self::reset_cloud_transient();
-			$ajaxResult['status'] = 'success';
+			$ajaxResult['status'] = 'success'; // @codingStandardsIgnoreLine.
 
-			// Result
-			echo json_encode( $ajaxResult );
+			// Result.
+			echo json_encode( $ajaxResult ); // @codingStandardsIgnoreLine.
 
 			die();
 		}
 
+		/**
+		 * Function that renders dat file type
+		 *
+		 * @since 1.4.6
+		 * @param file $dat_file_type gets the DAT file type.
+		 */
 		function get_right_type_key( $dat_file_type ) {
 
-			// Update the key
+			// Update the key.
 			if ( 'module' == $dat_file_type ) {
 				$dat_file_type = 'presets';
 			}
@@ -254,8 +283,13 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 			return $dat_file_type;
 		}
 
+		/**
+		 * Function that renders load filesystem
+		 *
+		 * @since x.x.x
+		 */
 		public static function load_filesystem() {
-			if ( self::$uabb_filesystem === null ) {
+			if ( null === self::$uabb_filesystem ) {
 				require_once ABSPATH . '/wp-admin/includes/class-wp-filesystem-base.php';
 				require_once ABSPATH . '/wp-admin/includes/class-wp-filesystem-direct.php';
 				self::$uabb_filesystem = new WP_Filesystem_Direct( array() );
@@ -266,14 +300,15 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 * Messages
 		 *
 		 * @since 1.2.0.2
+		 * @param string $msg gets an string message.
 		 */
 		static function message( $msg ) {
 			if ( ! empty( $msg ) ) {
 				if ( 'not-found' == $msg ) { ?>
 					<div class="uabb-cloud-templates-not-found">
 
-						<h3> <?php printf( __( 'Welcome to %s Template Cloud!', 'uabb' ), UABB_PREFIX ); ?> </h3>
-						<p> <?php printf( __( '%s Template Cloud would allow you to browse through our growing library of 150+ professionally designed templates and download the only ones that you need.', 'uabb' ), UABB_PREFIX ); ?> <span class="uabb-cloud-process button-primary" data-operation="fetch"> <i class="dashicons dashicons-update " style="display: none; padding: 3px;"></i> <?php _e( "Let's get started", 'uabb' ); ?> &rarr; </span></p>
+						<h3> <?php printf( __( 'Welcome to %s Template Cloud!', 'uabb' ), UABB_PREFIX ); // @codingStandardsIgnoreLine. ?> </h3>
+						<p> <?php printf( __( '%s Template Cloud would allow you to browse through our growing library of 150+ professionally designed templates and download the only ones that you need.', 'uabb' ), UABB_PREFIX ); ?> <span class="uabb-cloud-process button-primary" data-operation="fetch"> <i class="dashicons dashicons-update " style="display: none; padding: 3px;"></i> <?php _e( "Let's get started", 'uabb' ); // @codingStandardsIgnoreLine. ?> &rarr; </span></p>
 
 					</div>
 					<?php
@@ -285,6 +320,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 * Template HTML
 		 *
 		 * @since 1.2.0.2
+		 * @param string $type gets the type page-templates.
 		 */
 		static function template_html( $type = 'page-templates' ) {
 
@@ -295,7 +331,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 
 				<div class="uabb-templates-showcase-<?php echo $type; ?>">
 
-					<?php if ( $type == 'page-templates' ) { ?>
+					<?php if ( 'page-templates' == $type ) { ?>
 
 						<ul class="uabb-templates-filter">
 							<li><a class="active" href="#" data-group="all"><?php _e( 'All', 'uabb' ); ?> </a></li>
@@ -311,8 +347,8 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 								}
 							}
 
-								$tags = array_unique( $tags );      // Remove duplicates
-								sort( $tags );                      // Sort
+								$tags = array_unique( $tags );      // Remove duplicates.
+								sort( $tags );                      // Sort.
 
 							foreach ( $tags as $key => $tag ) {
 								$tag_title = strtolower( str_replace( ' ', '-', $tag ) );
@@ -344,7 +380,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 							$data['count']       = ( isset( $single_post['count'] ) ) ? $single_post['count'] : '';
 							$data['tags']        = ( isset( $single_post['tags'] ) ) ? $single_post['tags'] : '';
 
-							$template_class = ( $data['status'] == 'true' ) ? 'uabb-downloaded' : '';
+							$template_class = ( 'true' == $data['status'] ) ? 'uabb-downloaded' : '';
 
 							// get all single template tags.
 							$tags = array();
@@ -356,7 +392,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 							}
 
 							/* Add downloaded tag */
-							if ( $data['status'] == 'true' ) {
+							if ( 'true' == $data['status'] ) {
 								$tags[] = 'installed';
 							}
 
@@ -368,7 +404,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 
 									<div class="uabb-template-screenshot" data-template-name="<?php echo $data['name']; ?>" data-preview-url="<?php echo $data['preview_url']; ?>" data-template-id='<?php echo $data['id']; ?>' data-template-type='<?php echo $type; ?>'>
 
-										<?php if ( $type == 'page-templates' ) { ?>
+										<?php if ( 'page-templates' == $type ) { ?>
 											<img data-original="<?php echo $data['image']; ?>" alt="">
 											<noscript>
 												<img src="<?php echo $data['image']; ?>" alt="">
@@ -386,7 +422,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 											<span class="button button-sucess uabb-installed-btn">
 												<i class="dashicons dashicons-yes" style="padding: 3px;"></i>
 												<span class="msg"> <?php _e( 'Upgrade', 'uabb' ); ?> </span>
-											   </span>
+											</span>
 										</div>
 									</div>
 								</div>
@@ -423,6 +459,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 * Create local directory if not exist.
 		 *
 		 * @since 1.2.0.2
+		 * @param string $dir_name verifies the dir name with bb-ultimate-addon.
 		 */
 		static public function create_local_dir( $dir_name = 'bb-ultimate-addon' ) {
 
@@ -460,4 +497,4 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 /**
 *  Kicking this off by calling 'get_instance()' method
 */
-$UABB_Cloud_Templates = UABB_Cloud_Templates::get_instance();
+$UABB_Cloud_Templates = UABB_Cloud_Templates::get_instance(); // @codingStandardsIgnoreLine.

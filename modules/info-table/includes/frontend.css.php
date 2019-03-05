@@ -335,7 +335,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 
 		<?php if ( 'design02' != $settings->box_design ) { ?>
 			.fl-node-<?php echo $id; ?> .info-table-wrap .info-table-button a {
-				border-radius: <?php echo ( != '' $settings->btn_radius ) ? $settings->btn_radius : '3'; ?>px;
+				border-radius: <?php echo ( '' != $settings->btn_radius ) ? $settings->btn_radius : '3'; ?>px;
 			}
 		<?php } ?>
 
@@ -565,7 +565,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 		}
 		<?php if ( 'design02' != $settings->box_design ) { ?>
 			.fl-node-<?php echo $id; ?> .info-table-wrap .info-table-button a {
-				border-radius: <?php echo ( != '' $settings->btn_radius ) ? $settings->btn_radius : '3'; ?>px;
+				border-radius: <?php echo ( '' != $settings->btn_radius ) ? $settings->btn_radius : '3'; ?>px;
 			}
 		<?php } ?>
 

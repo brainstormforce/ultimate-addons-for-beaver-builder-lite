@@ -9,9 +9,9 @@ FLBuilder::register_settings_form(
 	'uabb-global',
 	array(
 		'title' => sprintf(
-			esc_attr__( '%s - Global Settings', 'uabb' ),
+			esc_attr__( '%s - Global Settings', 'uabb' ), // @codingStandardsIgnoreLine.
 			UABB_PREFIX
-		),// @codingStandardsIgnoreLine.
+		),
 		'tabs'  => array(
 			'general' => array(
 				'title'    => __( 'Style', 'uabb' ),

@@ -1,13 +1,14 @@
 <?php
 /**
  *  Global Styling.
- *  @package Global Styling.
  *
+ *  @package Global Styling.
  */
 
 /**
  * This class initializes UABB Global Styling.
- * @class UABB_Global_Styling.
+ *
+ * @class UABBGlobalSetting.
  */
 final class UABBGlobalSetting {
 
@@ -20,10 +21,10 @@ final class UABBGlobalSetting {
 		add_filter( 'fl_builder_ui_js_strings', __CLASS__ . '::add_js_string' );
 	}
 
-	
 	/**
 	 * Function that initializes actions for UABB Global Settings.
 	 *
+	 * @param  String $js_strings slug.
 	 * @since x.x.x
 	 */
 	static public function add_js_string( $js_strings ) {
@@ -34,19 +35,19 @@ final class UABBGlobalSetting {
 			$js_strings['uabbContactSupport'] = esc_attr__( 'UABB - Contact Support', 'uabb' );
 		} else {
 			$js_strings['uabbGlobalSettings'] = sprintf(
-				esc_attr__( '%s - Global Settings', 'uabb' ),
+				esc_attr__( '%s - Global Settings', 'uabb' ), // @codingStandardsIgnoreLine.
 				UABB_PREFIX
 			);
 
 			$js_strings['uabbKnowledgeBase'] = sprintf(
-				esc_attr__( '%s - Knowledge Base', 'uabb' ),
+				esc_attr__( '%s - Knowledge Base', 'uabb' ), // @codingStandardsIgnoreLine.
 				UABB_PREFIX
 			);
 
 			$js_strings['uabbContactSupport'] = sprintf(
-				esc_attr__( '%s - Contact Support', 'uabb' ),
+				esc_attr__( '%s - Contact Support', 'uabb' ), // @codingStandardsIgnoreLine.
 				UABB_PREFIX
-			);
+			); // @codingStandardsIgnoreLine.
 		}
 
 		$uabb = BB_Ultimate_Addon_Helper::get_builder_uabb_branding();

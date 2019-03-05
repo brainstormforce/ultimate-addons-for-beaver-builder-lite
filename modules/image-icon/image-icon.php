@@ -129,7 +129,7 @@ class ImageIconModule extends FLBuilderModule {
 			}
 
 			// Make sure we have enough memory to crop.
-			@ini_set( 'memory_limit', '300M' );
+			@ini_set( 'memory_limit', '300M' ); // @codingStandardsIgnoreLine.
 
 			// Crop the photo.
 			$editor->resize( $new_width, $new_height, true );

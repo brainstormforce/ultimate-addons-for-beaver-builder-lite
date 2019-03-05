@@ -1,10 +1,8 @@
-<?php
+<?php // @codingStandardsIgnoreLine.
 /**
- * Custom Fields Config File
+ *  UABB_Custom_Field_Scripts file
  *
- * This is custom fields config file, require your custom field's "main" file here.
- *
- * @package Custom Field
+ *  @package UABB Custom Field Scripts
  */
 
 require_once 'uabb-gradient/uabb-gradient.php';

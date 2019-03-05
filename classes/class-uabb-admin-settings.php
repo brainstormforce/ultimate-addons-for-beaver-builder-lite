@@ -1,9 +1,15 @@
 <?php
-
 /**
  * Handles logic for the admin settings page.
  *
  * @since 1.3.0
+ * @package UABB Admin Settings.
+ */
+
+/**
+ * This class initializes UABB Builder Admin Settings
+ *
+ * @class UABBBuilderAdminSettings
  */
 final class UABBBuilderAdminSettings {
 
@@ -23,7 +29,7 @@ final class UABBBuilderAdminSettings {
 	 * @return void
 	 */
 	static public function init() {
-		 add_action( 'after_setup_theme', __CLASS__ . '::init_hooks' );
+		add_action( 'after_setup_theme', __CLASS__ . '::init_hooks' );
 	}
 
 	/**
@@ -68,6 +74,7 @@ final class UABBBuilderAdminSettings {
 	 * Enqueues the needed CSS/JS for the builder's admin settings page.
 	 *
 	 * @since 1.3.0
+	 * @param hook $hook get the hooks for the styles.
 	 * @return void
 	 */
 	static public function styles_scripts( $hook ) {
@@ -75,14 +82,14 @@ final class UABBBuilderAdminSettings {
 		wp_register_script( 'uabb-admin-js', BB_ULTIMATE_ADDON_URL . 'assets/js/uabb-admin.js', array( 'jquery' ), '', true );
 		wp_localize_script( 'uabb-admin-js', 'uabb', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
-		// Load AJAX script only on Builder UI Panel
+		// Load AJAX script only on Builder UI Panel.
 		wp_register_script( 'uabb-lazyload', BB_ULTIMATE_ADDON_URL . 'assets/js/jquery.lazyload.min.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-tabs' ), null, true );
 		wp_register_script( 'uabb-cloud-templates-shuffle', BB_ULTIMATE_ADDON_URL . 'assets/js/jquery.shuffle.min.js', array( 'jquery' ), null, true );
 		wp_register_script( 'uabb-cloud-templates', BB_ULTIMATE_ADDON_URL . 'assets/js/uabb-cloud-templates.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-tabs', 'uabb-lazyload', 'uabb-cloud-templates-shuffle' ), null, true );
 		wp_enqueue_script( 'uabb-admin-menu-js', BB_ULTIMATE_ADDON_URL . 'assets/js/uabb-admin-menu.js' );
 		wp_register_style( 'uabb-admin-menu-css', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-admin-menu.css' );
 
-		$UABBCloudTemplates = array(
+		$UABBCloudTemplates = array( // @codingStandardsIgnoreLine.
 			'ajaxurl'                => admin_url( 'admin-ajax.php' ),
 			'errorMessage'           => __( 'Something went wrong!', 'uabb' ),
 			'successMessage'         => __( 'Complete', 'uabb' ),
@@ -93,8 +100,8 @@ final class UABBBuilderAdminSettings {
 			'btnTextDownload'        => __( 'Install', 'uabb' ),
 			'btnTextInstall'         => __( 'Installed', 'uabb' ),
 			'successMessageRemove'   => __( 'Removed!', 'uabb' ),
-		);
-		wp_localize_script( 'uabb-cloud-templates', 'UABBCloudTemplates', $UABBCloudTemplates );
+		); // @codingStandardsIgnoreLine.
+		wp_localize_script( 'uabb-cloud-templates', 'UABBCloudTemplates', $UABBCloudTemplates ); // @codingStandardsIgnoreLine.
 
 		if ( 'settings_page_uabb-builder-settings' == $hook || 'settings_page_uabb-builder-multisite-settings' == $hook ) {
 
@@ -107,12 +114,12 @@ final class UABBBuilderAdminSettings {
 
 			wp_enqueue_script( 'uabb-cloud-templates' );
 			wp_enqueue_script( 'uabb-lazyload' );
-			// wp_enqueue_script( 'uabb-admin-menu-js' );
+
 			wp_enqueue_style( 'uabb-admin-menu-css' );
 
 			wp_enqueue_media();
 
-			// Added ThickBox support
+			// Added ThickBox support.
 			add_thickbox();
 
 			/** BB Admin CSS */
@@ -151,13 +158,12 @@ final class UABBBuilderAdminSettings {
 	 * @return void
 	 */
 	static public function render_page_heading() {
-		// $icon = FLBuilderModel::get_branding_icon();
-		// $name = FLBuilderModel::get_branding();
+
 		if ( ! empty( $icon ) ) {
 			echo '<img src="' . $icon . '" />';
 		}
 
-		echo '<span>' . sprintf( _x( '%s Settings', '%s stands for custom branded "UABB" name.', 'uabb' ), UABB_PREFIX ) . '</span>';
+		echo '<span>' . sprintf( _x( '%s Settings', '%s stands for custom branded "UABB" name.', 'uabb' ), UABB_PREFIX ) . '</span>'; // @codingStandardsIgnoreLine.
 	}
 
 	/**
@@ -250,7 +256,7 @@ final class UABBBuilderAdminSettings {
 	 * @return void
 	 */
 	static public function render_forms() {
-		 self::render_form( 'welcome' );
+		self::render_form( 'welcome' );
 		self::render_form( 'general' );
 		self::render_form( 'modules' );
 		self::render_form( 'icons' );
@@ -343,7 +349,7 @@ final class UABBBuilderAdminSettings {
 	 * @return void
 	 */
 	static public function save() {
-		 // Only admins can save settings.
+		// Only admins can save settings.
 		if ( ! current_user_can( 'delete_users' ) ) {
 			return;
 		}

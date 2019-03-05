@@ -24,7 +24,7 @@ $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 	$settings->separator_line_height = ( '' !== trim( $settings->separator_line_height ) ) ? $settings->separator_line_height : '1';
 	$settings->separator_line_width  = ( '' !== trim( $settings->separator_line_width ) ) ? $settings->separator_line_width : '30';
 
-if ( != $settings->separator_style ) {
+if ( '' != $settings->separator_style ) {
 
 	$position = '0';
 	if ( 'center' == $settings->alignment ) {
@@ -58,7 +58,7 @@ if ( != $settings->separator_style ) {
 			<?php UABB_Helper::uabb_font_css( $settings->font ); ?>
 		<?php endif; ?>
 
-		<?php if ( 'yes' === $converted || isset( $settings->new_font_size_unit ) && != $settings->new_font_size_unit ) { ?>
+		<?php if ( 'yes' === $converted || isset( $settings->new_font_size_unit ) && '' != $settings->new_font_size_unit ) { ?>
 			font-size: <?php echo $settings->new_font_size_unit; ?>px; 
 		<?php } elseif ( isset( $settings->new_font_size_unit ) && '' == $settings->new_font_size_unit && isset( $settings->new_font_size['desktop'] ) && '' != $settings->new_font_size['desktop'] ) { ?>
 			font-size: <?php echo $settings->new_font_size['desktop']; ?>px;

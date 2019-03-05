@@ -39,14 +39,11 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		}
 
 		/**
-		 *  Get - Color
+		 * Initializes an array to replace recursive function
 		 *
-		 * Get HEX color and return RGBA. Default return HEX color.
+		 * @param var   $hex returns the bas values.
 		 *
-		 * @param   $hex        HEX color code
-		 * @param   $opacity    Opacity of HEX color
-		 * @return  $rgba       Return RGBA if opacity is set. Default return HEX.
-		 * @since 1.0
+		 * @param array $opacity returns the replacements values.
 		 */
 		static public function uabb_get_color( $hex, $opacity ) {
 			$rgba = $hex;
@@ -67,11 +64,12 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		}
 
 		/**
-		 * Initializes recurse function
+		 * Initializes an array to replace recursive function
 		 *
-		 * @param var   $color returns the base values.
-		 * @param array $is_array = false returns the array values.
-		 * @param array $opacity = false returns the opacity values.
+		 * @param var   $color returns the bas values.
+		 *
+		 * @param array $opacity returns the replacements values.
+		 * @param array $is_array returns the replacements values.
 		 */
 		static public function uabb_hex2rgba( $color, $opacity = false, $is_array = false ) {
 
@@ -79,7 +77,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 
 			// Return default if no color provided.
 			if ( empty( $color ) ) {
-				  return $default;
+				return $default;
 			}
 
 			// Sanitize $color if "#" is provided.
@@ -119,12 +117,12 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		}
 
 		/**
-		 *  Get - Colorpicker Value based on colorpicker
+		 * Initializes an array to replace recursive function
 		 *
-		 * @param   $hex HEX color code
-		 * @param   $opc  Opacity of HEX color
-		 * @return  $name Return RGBA if opacity is set. Default return RGB.
-		 * @since   1.0
+		 * @param var   $settings returns the bas values.
+		 *
+		 * @param array $name returns the replacements values.
+		 * @param array $opc returns the replacements values.
 		 */
 		static public function uabb_colorpicker( $settings, $name = '', $opc = false ) {
 
@@ -134,10 +132,12 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 
 			if ( '' != $hex_color && 'r' != $hex_color[0] && 'R' != $hex_color[0] ) {
 
-				if ( true == $opc && '' !== $settings->{ $name . '_opc' } ) {
-					$opacity = $settings->{ $name . '_opc' };
-					$rgba    = self::uabb_hex2rgba( $hex_color, $opacity / 100 );
-					return $rgba;
+				if ( true == $opc && isset( $settings->{ $name . '_opc' } ) ) {
+					if ( '' !== $settings->{ $name . '_opc' } ) {
+						$opacity = $settings->{ $name . '_opc' };
+						$rgba    = self::uabb_hex2rgba( $hex_color, $opacity / 100 );
+						return $rgba;
+					}
 				}
 
 				if ( '#' != $hex_color[0] ) {
@@ -147,13 +147,13 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			}
 
 			return $hex_color;
+
 		}
 
 		/**
-		 *  Get - Gradient color CSS
+		 * Initializes an array to replace recursive function
 		 *
-		 * @param   $gradient return gradient
-		 * @since   1.0
+		 * @param var $gradient returns the bas values.
 		 */
 		static public function uabb_gradient_css( $gradient ) {
 			$gradient_angle = intval( $gradient['angle'] );

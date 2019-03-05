@@ -193,7 +193,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 				echo ( '' != $settings->inner_padding_dimension_right ) ? 'padding-right:' . $settings->inner_padding_dimension_right . 'px;' : 'padding-right: 15px;';
 			}
 		} elseif ( isset( $settings->inner_padding ) && '' != $settings->inner_padding && isset( $settings->inner_padding_dimension_top ) && ( '' == $settings->inner_padding_dimension_top || '0' == $settings->inner_padding_dimension_top ) && isset( $settings->inner_padding_dimension_bottom ) && ( '' == $settings->inner_padding_dimension_bottom || '0' == $settings->inner_padding_dimension_bottom ) && isset( $settings->inner_padding_dimension_left ) && ( '' == $settings->inner_padding_dimension_left || '0' == $settings->inner_padding_dimension_left ) && isset( $settings->inner_padding_dimension_right ) && ( '' == $settings->inner_padding_dimension_right || '0' == $settings->inner_padding_dimension_right ) ) {
-				echo ( != '' $settings->inner_padding ) ? $settings->inner_padding : 'padding: 15px;';
+				echo ( '' != $settings->inner_padding ) ? $settings->inner_padding : 'padding: 15px;';
 				echo $settings->inner_padding;
 			?>
 		;
