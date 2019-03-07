@@ -91,32 +91,31 @@ if ( 'none' != $settings->image_type ) :
 				-moz-border-radius: <?php echo ( 'custom' == $settings->icon_style ) ? $settings->icon_bg_border_radius . 'px' : '100%'; ?>;
 				-webkit-border-radius: <?php echo ( 'custom' == $settings->icon_style ) ? $settings->icon_bg_border_radius . 'px' : '100%'; ?>;
 				<?php } if ( 'circle' == $settings->icon_style || 'square' == $settings->icon_style || 'custom' == $settings->icon_style ) { ?>
-				line-height: 
-					<?php
-					echo (
-					( ( 'custom' != $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
-					+
-					( ( 'custom' == $settings->icon_style ) ? $settings->icon_bg_size : 0 ) );
-					?>
-					px;
-
-				height: 
+				line-height:
 					<?php
 					echo (
 					( ( 'custom' != $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
 					+
 					( ( 'custom' == $settings->icon_style ) ? $settings->icon_bg_size : 0 )
-						);
+							. 'px;' );
 					?>
-					px;
-				width: 
+
+				height:
 					<?php
 					echo (
 					( ( 'custom' != $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
 					+
-					( ( 'custom' == $settings->icon_style ) ? $settings->icon_bg_size : 0 ) );
+					( ( 'custom' == $settings->icon_style ) ? $settings->icon_bg_size : 0 )
+						. 'px;' );
 					?>
-					px;
+				width:
+					<?php
+					echo (
+					( ( 'custom' != $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
+					+
+					( ( 'custom' == $settings->icon_style ) ? $settings->icon_bg_size : 0 )
+					. 'px;' );
+					?>
 				text-align: center;
 					<?php
 				}

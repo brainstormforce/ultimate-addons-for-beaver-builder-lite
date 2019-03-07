@@ -375,10 +375,10 @@ function uabb_theme_button_padding( $default ) {
 
 	if ( '' == $default ) {
 
-		$padding = apply_filters( 'uabb/global/button_padding', $default );// @codingStandardsIgnoreLine.
+		$padding = apply_filters( 'uabb/global/button_padding', $default );
 
 		if ( '' == $padding ) {
-			$padding = apply_filters( 'uabb_theme_button_padding', $default );
+			$padding = apply_filters( 'uabb/theme/button_padding', $default );
 			if ( '' == $padding ) {
 				$padding = '12px 24px';
 			}

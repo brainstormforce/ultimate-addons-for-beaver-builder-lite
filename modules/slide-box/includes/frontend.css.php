@@ -499,6 +499,13 @@ if ( 'style1' == $settings->slide_type ) {
 		justify-content: <?php echo ( 'left' == $settings->dropdown_icon_align ) ? 'flex-start' : ( ( 'right' == $settings->dropdown_icon_align ) ? 'flex-end' : '' ); ?>;
 	}
 <?php } ?>
+.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-face-text-title {
+	<?php
+		echo ( '' != $settings->front_title_color ) ? 'color: ' . $settings->front_title_color . ';' : '';
+		echo ( '' != $settings->front_title_margin_top ) ? 'margin-top: ' . $settings->front_title_margin_top . 'px;' : '';
+		echo ( '' != $settings->front_title_margin_bottom ) ? 'margin-bottom: ' . $settings->front_title_margin_bottom . 'px;' : 'margin-bottom: 15px;';
+	?>
+}
 /* Font Front Slide Heading (Desktop). */
 <?php if ( ! $version_bb_check ) { ?>
 	.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-face-text-title {
@@ -521,12 +528,6 @@ if ( 'style1' == $settings->slide_type ) {
 		<?php } elseif ( isset( $settings->front_title_line_height_unit ) && '' == $settings->front_title_line_height_unit && isset( $settings->front_title_line_height['desktop'] ) && '' != $settings->front_title_line_height['desktop'] ) { ?>
 			line-height: <?php echo $settings->front_title_line_height['desktop']; ?>px;
 		<?php } ?>
-
-		<?php
-		echo ( '' != $settings->front_title_color ) ? 'color: ' . $settings->front_title_color . ';' : '';
-		echo ( '' != $settings->front_title_margin_top ) ? 'margin-top: ' . $settings->front_title_margin_top . 'px;' : '';
-		echo ( '' != $settings->front_title_margin_bottom ) ? 'margin-bottom: ' . $settings->front_title_margin_bottom . 'px;' : 'margin-bottom: 15px;';
-		?>
 	}
 	<?php
 } else {
