@@ -89,7 +89,7 @@ jQuery('.fl-node-<?php echo $id; ?>').on( 'click' , '.uabb-slide-face', function
 		slide_type = self.closest('.uabb-slide-type').data('style'),
 		style2 = self.closest('.uabb-style2'),
 		style3 = self.closest('.uabb-style3');
-	if( slide_type = 'style2' ) {
+	if( slide_type == 'style2' ) {
 		var dropdown_icon = style2.find('.uabb-slide-dropdown .fa'),
 			slidebox_wrap = style2.closest('.uabb-slide-box-wrap');
 
@@ -109,7 +109,7 @@ jQuery('.fl-node-<?php echo $id; ?>').on( 'click' , '.uabb-slide-face', function
 		}
 	}
 
-	if( 'style3' = slide_type ) {
+	if( 'style3' == slide_type ) {
 		var dropdown_icon = style3.find('.uabb-slide-dropdown .fa'),
 			slidebox_wrap = style3.closest('.uabb-slide-box-wrap');
 

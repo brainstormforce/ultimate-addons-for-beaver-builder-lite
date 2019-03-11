@@ -648,7 +648,7 @@ FLBuilder::register_module(
 						'slide_min_height'     => array(
 							'type'   => 'unit',
 							'label'  => __( 'Enter Height', 'uabb' ),
-							'units'  => array( '' ),
+							'units'  => array( 'px' ),
 							'slider' => true,
 							'size'   => '8',
 							'help'   => __( 'Apply minimum height to complete SlideBox. It is useful when multiple SlideBox are in same row.', 'uabb' ),
