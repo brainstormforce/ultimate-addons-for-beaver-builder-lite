@@ -1,4 +1,4 @@
-.uabb-notice .notice-container{
+.astra-notice .notice-container{
 	padding-top: 10px;
 	padding-bottom: 10px;
 	display: flex;
@@ -6,11 +6,11 @@
 	align-items: center;
 }
 
-.uabb-notice .notice-content {
+.astra-notice .notice-content {
 	margin-left: 15px;
 }
 
-.uabb-notice .notice-image img{
+.astra-notice .notice-image img{
 	max-width: 70px;
 }
 

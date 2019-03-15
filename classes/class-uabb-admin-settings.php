@@ -61,8 +61,6 @@ final class UABBBuilderAdminSettings {
 	 * @since 1.3.0
 	 */
 	static public function notice_styles_scripts() {
-
-		wp_enqueue_script( 'uabb-admin-notices', BB_ULTIMATE_ADDON_URL . 'assets/js/uabb-admin-notices.js', array( 'jquery' ), true );
 		// Styles.
 		wp_enqueue_style( 'uabb-notice-settings', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-admin-notice.css', array() );
 
@@ -87,55 +85,50 @@ final class UABBBuilderAdminSettings {
 	 */
 	public static function register_notices() {
 
-		if ( false === get_option( 'uabb-old-setup' ) ) {
-			set_transient( 'uabb-first-rating', true, MINUTE_IN_SECONDS );
-			update_option( 'uabb-old-setup', true );
-		} elseif ( false === get_transient( 'uabb-first-rating' ) ) {
-
-			$image_path = BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg';
-
-			UABB_Admin_Notices::add_notice(
-				array(
-					'id'                         => 'uabb-admin-rating',
-					'type'                       => '',
-					'message'                    => sprintf(
-						'<div class="notice-image">
-							<img src="%1$s" class="custom-logo" alt="Ultimate Addon for Beaver Builder" itemprop="logo"></div>
-							<div class="notice-content">
-								<div class="notice-heading">
-									%2$s
-								</div>
-								%3$s<br />
-								<div class="uabb-review-notice-container">
-									<a href="%4$s" class="uabb-notice-close uabb-review-notice button-primary" target="_blank">
-									%5$s
-									</a>
-								<span class="dashicons dashicons-calendar"></span>
-									<a href="#" data-repeat-notice-after="%6$s" class="uabb-notice-close uabb-review-notice">
-									%7$s
-									</a>
-								<span class="dashicons dashicons-smiley"></span>
-									<a href="#" class="uabb-notice-close uabb-review-notice">
-									%8$s
-									</a>
-								</div>
-							</div>',
-						$image_path,
-						__( 'Hello! Thank you for choosing the Ultimate Addon for Beaver Builder to build this website!', 'ultimate-addon-for-beaver-builder' ),
-						__( 'Could you please do us a BIG favor and give it a 5-star rating on WordPress? This will boost our motivation and help other users make a comfortable decision while choosing this plugin.', 'ultimate-addons-for-gutenberg' ),
-						'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/?filter=5',
-						__( 'Ok, you deserve it', 'ultimate-addons-for-beaver-builder' ),
-						MONTH_IN_SECONDS,
-						__( 'Nope, maybe later', 'ultimate-addons-for-beaver-builder' ),
-						__( 'I already did', 'ultimate-addons-for-beaver-builder' )
-					),
-					'repeat-notice-after'        => MONTH_IN_SECONDS,
-					'display-notice-after'       => WEEK_IN_SECONDS,
-					'priority'                   => 20,
-					'display-with-other-notices' => false,
-				)
-			);
-		}
+		$image_path = BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg';
+		
+		Astra_Notices::add_notice(
+			array(
+				'id'                         => 'uabb-admin-rating',
+				'type'                       => '',
+				'message'                    => sprintf(
+					'<div class="notice-image">
+						<img src="%1$s" class="custom-logo" alt="Ultimate Addon for Beaver Builder" itemprop="logo"></div>
+						<div class="notice-content">
+							<div class="notice-heading">
+								%2$s
+							</div>
+							%3$s<br />
+							<div class="uabb-review-notice-container">
+								<a href="%4$s" class="astra-notice-close uagb-review-notice button-primary" target="_blank">
+								%5$s
+								</a>
+							<span class="dashicons dashicons-calendar"></span>
+								<a href="#" data-repeat-notice-after="%6$s" class="astra-notice-close uagb-review-notice">
+								%7$s
+								</a>
+							<span class="dashicons dashicons-smiley"></span>
+								<a href="#" class="astra-notice-close uagb-review-notice">
+								%8$s
+								</a>
+							</div>
+						</div>',
+					$image_path,
+					__( 'Hello! Thank you for choosing the Ultimate Addon for Beaver Builder to build this website!', 'ultimate-addon-for-beaver-builder' ),
+					__( 'Would you please mind sharing your views and give it a 5 star rating on the WordPress repository?', 'ultimate-addons-for-gutenberg' ),
+					'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/?filter=5',
+					__( 'Ok, you deserve it', 'ultimate-addon-for-beaver-builder' ),
+					MONTH_IN_SECONDS,
+					__( 'Nope, maybe later', 'ultimate-addon-for-beaver-builder' ),
+					__( 'I already did', 'ultimate-addon-for-beaver-builder' )
+				),
+				'repeat-notice-after'        => MONTH_IN_SECONDS,
+				'display-notice-after'       => WEEK_IN_SECONDS,
+				'priority'                   => 10,
+				'display-with-other-notices' => false,
+				'show_if'					 => true,
+			)
+		);
 	}
 	/**
 	 * Renders the admin settings menu.

@@ -581,6 +581,23 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 			echo 'rel="' . $attr . '"';
 		}
 
+		/**
+		 * Get flag if more than 5 pages are build using UAG.
+		 *
+		 * @since  1.10.0
+		 * @return boolean true/false Flag if more than 5 pages are build using UAG.
+		 */
+		public static function show_rating_notice() {
+			$page_ids=get_all_page_ids();
+
+			foreach ( $page_ids as $key ) {
+
+				$layout_data = get_post_meta( $key, '_fl_builder_data', true );
+				# code...
+				//var_dump( $layout_data );
+			}
+		}
+
 	}
 	new BB_Ultimate_Addon_Helper();
 }
