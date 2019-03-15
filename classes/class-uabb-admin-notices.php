@@ -12,7 +12,7 @@
  * It close the notice for 30 days.
  *
  * @package UAGB
- * @since 1.8.0
+ * @since 1.3.0
  */
 
 if ( ! class_exists( 'UABB_Admin_Notices' ) ) :
@@ -20,7 +20,7 @@ if ( ! class_exists( 'UABB_Admin_Notices' ) ) :
 	/**
 	 * UABB_Admin_Notices
 	 *
-	 * @since 1.8.0
+	 * @since 1.3.0
 	 */
 	class UABB_Admin_Notices {
 
@@ -29,7 +29,7 @@ if ( ! class_exists( 'UABB_Admin_Notices' ) ) :
 		 *
 		 * @access private
 		 * @var array Notices.
-		 * @since 1.8.0
+		 * @since 1.3.0
 		 */
 		private static $notices = array();
 
@@ -38,14 +38,14 @@ if ( ! class_exists( 'UABB_Admin_Notices' ) ) :
 		 *
 		 * @access private
 		 * @var object Class object.
-		 * @since 1.8.0
+		 * @since 1.3.0
 		 */
 		private static $instance;
 
 		/**
 		 * Initiator
 		 *
-		 * @since 1.8.0
+		 * @since 1.3.0
 		 * @return object initialized object of class.
 		 */
 		public static function get_instance() {
@@ -58,7 +58,7 @@ if ( ! class_exists( 'UABB_Admin_Notices' ) ) :
 		/**
 		 * Constructor
 		 *
-		 * @since 1.8.0
+		 * @since 1.3.0
 		 */
 		public function __construct() {
 			add_action( 'admin_notices', array( $this, 'show_notices' ), 30 );
@@ -68,7 +68,7 @@ if ( ! class_exists( 'UABB_Admin_Notices' ) ) :
 		/**
 		 * Add Notice.
 		 *
-		 * @since 1.8.0
+		 * @since 1.3.0
 		 * @param array $args Notice arguments.
 		 * @return void
 		 */
@@ -79,7 +79,7 @@ if ( ! class_exists( 'UABB_Admin_Notices' ) ) :
 		/**
 		 * Dismiss Notice.
 		 *
-		 * @since 1.8.0
+		 * @since 1.3.0
 		 * @return void
 		 */
 		function dismiss_notice() {
@@ -104,7 +104,7 @@ if ( ! class_exists( 'UABB_Admin_Notices' ) ) :
 		/**
 		 * Rating priority sort
 		 *
-		 * @since 1.8.0
+		 * @since 1.3.0
 		 * @param array $array1 array one.
 		 * @param array $array2 array two.
 		 * @return array
@@ -123,7 +123,7 @@ if ( ! class_exists( 'UABB_Admin_Notices' ) ) :
 		/**
 		 * Notice Types
 		 *
-		 * @since 1.8.0
+		 * @since 1.3.0
 		 * @return void
 		 */
 		function show_notices() {
@@ -174,13 +174,15 @@ if ( ! class_exists( 'UABB_Admin_Notices' ) ) :
 		/**
 		 * Markup Notice.
 		 *
-		 * @since 1.8.0
+		 * @since 1.3.0
 		 * @param  array $notice Notice markup.
 		 * @return void
 		 */
 		public static function markup( $notice = array() ) {
 
 			wp_enqueue_script( 'uabb-admin-notices' );
+
+			do_action( "astra_notice_before_markup_{$notice['id']}" );
 
 			?>
 			<div id="<?php echo esc_attr( $notice['id'] ); ?>" class="<?php echo esc_attr( $notice['classes'] ); ?>" data-repeat-notice-after="<?php echo esc_attr( $notice['repeat-notice-after'] ); ?>">
@@ -189,12 +191,14 @@ if ( ! class_exists( 'UABB_Admin_Notices' ) ) :
 				</div>
 			</div>
 			<?php
+
+			do_action( "astra_notice_after_markup_{$notice['id']}" );
 		}
 
 		/**
 		 * Notice classes.
 		 *
-		 * @since 1.8.0
+		 * @since 1.3.0
 		 *
 		 * @param  array $notice Notice arguments.
 		 * @return array       Notice wrapper classes.
@@ -212,7 +216,7 @@ if ( ! class_exists( 'UABB_Admin_Notices' ) ) :
 		/**
 		 * Get Notice ID.
 		 *
-		 * @since 1.8.0
+		 * @since 1.3.0
 		 *
 		 * @param  array $notice Notice arguments.
 		 * @param  int   $key     Notice array index.
@@ -229,17 +233,31 @@ if ( ! class_exists( 'UABB_Admin_Notices' ) ) :
 		/**
 		 * Is notice expired?
 		 *
-		 * @since 1.8.0
+		 * @since 1.3.0
 		 *
 		 * @param  array $notice Notice arguments.
 		 * @return boolean
 		 */
 		private static function is_expired( $notice ) {
+			$transient_status = get_transient( $notice['id'] );
 
-			$expired = get_transient( $notice['id'] );
-			if ( false === $expired ) {
-				$expired = get_user_meta( get_current_user_id(), $notice['id'], true );
-				if ( empty( $expired ) ) {
+			if ( false === $transient_status ) {
+
+				if ( isset( $notice['display-notice-after'] ) && false !== $notice['display-notice-after'] ) {
+
+					if ( 'delayed-notice' !== get_user_meta( get_current_user_id(), $notice['id'], true ) &&
+						'notice-dismissed' !== get_user_meta( get_current_user_id(), $notice['id'], true ) ) {
+						set_transient( $notice['id'], 'delayed-notice', $notice['display-notice-after'] );
+						update_user_meta( get_current_user_id(), $notice['id'], 'delayed-notice' );
+
+						return false;
+					}
+				}
+
+				// Check the user meta status if current notice is dismissed or delay completed.
+				$meta_status = get_user_meta( get_current_user_id(), $notice['id'], true );
+
+				if ( empty( $meta_status ) || 'delayed-notice' === $meta_status ) {
 					return true;
 				}
 			}
