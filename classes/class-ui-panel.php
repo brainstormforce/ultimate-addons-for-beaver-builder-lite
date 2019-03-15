@@ -2,7 +2,7 @@
 /**
  * UABB_UI_Panels setup
  *
- * @since 1.1.0.4
+ * @since 1.0
  * @package UABB UI Panels Setup
  */
 
@@ -44,7 +44,7 @@ class UABB_UI_Panels {
 	/**
 	 *  Function to add toggle UABB User Interface.
 	 *
-	 *  @since x.x.x
+	 *  @since 1.0
 	 */
 	function toggle_uabb_ui() {
 
@@ -65,7 +65,7 @@ class UABB_UI_Panels {
 	/**
 	 *  Function that initializes template selector data.
 	 *
-	 *  @since x.x.x
+	 *  @since 1.0
 	 */
 	public function init() {
 		add_filter( 'fl_builder_template_selector_data', array( $this, 'uabb_fl_builder_template_selector_data' ), 10, 2 );
@@ -75,7 +75,7 @@ class UABB_UI_Panels {
 	 *  Filter Templates
 	 *  Add additional information in templates array
 	 *
-	 *  @since x.x.x
+	 *  @since 1.0
 	 *  @param array $template_data Gets the tags for the Template Data.
 	 *  @param array $template Gets the author for the Template Data.
 	 */
@@ -87,7 +87,7 @@ class UABB_UI_Panels {
 	/**
 	 * Affiliate link override function
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 * @param string $url Returns the URL of the Affiliate URL.
 	 */
 	function uabb_affiliate_url( $url ) {
@@ -98,7 +98,7 @@ class UABB_UI_Panels {
 	/**
 	 * Affiliate link override function
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 * @param string $url Returns the Key shortcut for showUABBGlobalSettings.
 	 */
 	function uabb_bsf_registration_page_url( $url ) {
@@ -112,7 +112,7 @@ class UABB_UI_Panels {
 	/**
 	 * Function that displays the UABB License Form Heading
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 * @param string $form_heading Gets the form Heading.
 	 * @param string $license_status_class Gets the license status class.
 	 * @param string $license_status Gets the license status.
@@ -152,7 +152,7 @@ class UABB_UI_Panels {
 	/**
 	 * Render Global uabb-layout-builder js
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 * @param file   $js Gets the js file contents.
 	 * @param array  $nodes Gets the nodes of the layout builder.
 	 * @param object $global_settings Gets the object for the Layout builder.
@@ -166,7 +166,7 @@ class UABB_UI_Panels {
 	/**
 	 * Render Global uabb-layout-builder css
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 * @param file   $css Gets the CSS file contents.
 	 * @param array  $nodes Gets the nodes of the layout builder.
 	 * @param object $global_settings Gets the object for the Layout builder.
@@ -182,7 +182,7 @@ class UABB_UI_Panels {
 	/**
 	 * Function that renders Config and templates function
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 */
 	function config() {
 
@@ -210,7 +210,7 @@ class UABB_UI_Panels {
 	/**
 	 * Load cloud templates
 	 *
-	 * @since 1.2.0.2
+	 * @since 1.0
 	 */
 	function load_templates() {
 
@@ -246,7 +246,7 @@ class UABB_UI_Panels {
 	/**
 	 * Function that renders Before Row Layouts
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 */
 	function uabb_panel_before_row_layouts() {
 		?>
@@ -262,7 +262,7 @@ class UABB_UI_Panels {
 	 *  1. Return all templates 'excluding' UABB templates. If variable $status is set to 'exclude'. Default: 'exclude'
 	 *  2. Return ONLY UABB templates. If variable $status is NOT set to 'exclude'.
 	 *
-	 * @since 1.1.0.4
+	 * @since 1.0
 	 * @param array $templates Gets the array of UABB templates.
 	 * @param var   $status Checks for the status of UABB templates.
 	 */
@@ -383,7 +383,7 @@ class UABB_UI_Panels {
 	/**
 	 * Function that renders live preview
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 */
 	function render_live_preview() {
 		if ( FLBuilderModel::is_builder_active() ) {

@@ -1,10 +1,10 @@
 <?php
 /**
  * Register the module and its form settings for beaver builder version less than 2.2.
- * Applicable for UABB version 1.13.2 and before.
+ * Applicable for UABB version 1.3.0 and before.
  * Converted font, text size, and text transform settings to a responsive typography setting.
  *
- * @package UABB Heading Module
+ * @package UABB Info Table Module
  */
 
 FLBuilder::register_module(

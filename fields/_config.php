@@ -17,7 +17,7 @@ if ( ! class_exists( 'UABB_Custom_Field_Scripts' ) ) {
 		/**
 		 * Constructor that initializes custom field scripts
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 */
 		function __construct() {
 			add_action( 'wp_enqueue_scripts', array( $this, 'custom_field_scripts' ) );
@@ -26,7 +26,7 @@ if ( ! class_exists( 'UABB_Custom_Field_Scripts' ) ) {
 		/**
 		 * Function that enqueue styles and scripts
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 */
 		function custom_field_scripts() {
 			if ( class_exists( 'FLBuilderModel' ) && FLBuilderModel::is_builder_active() ) {

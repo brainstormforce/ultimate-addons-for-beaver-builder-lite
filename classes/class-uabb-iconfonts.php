@@ -2,7 +2,7 @@
 /**
  * UABB_IconFonts setup
  *
- * @since 1.1.0.4
+ * @since 1.0
  * @package UABB Iconfonts
  */
 
@@ -23,7 +23,7 @@ class UABB_IconFonts {
 	/**
 	 * Function that initializes UABB reload Icons
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 */
 	public function init() {
 		add_action( 'wp_ajax_uabb_reload_icons', array( $this, 'reload_icons' ) );
@@ -32,7 +32,7 @@ class UABB_IconFonts {
 	/**
 	 * Function that renders reload Icons
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 */
 	function reload_icons() {
 		delete_option( '_uabb_enabled_icons' );
@@ -43,7 +43,7 @@ class UABB_IconFonts {
 	/**
 	 * Function that registers UABB Icons
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 */
 	function register_icons() {
 
@@ -78,7 +78,7 @@ class UABB_IconFonts {
 	/**
 	 * Function that renders recurse copy for Icons
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 * @param array $src an array to get the src.
 	 * @param array $dst an object to get destination of the file.
 	 */

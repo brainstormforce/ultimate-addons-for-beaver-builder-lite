@@ -16,7 +16,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		/**
 		 * Holds any category strings of modules.
 		 *
-		 * @since 1.3.0
+		 * @since 1.0
 		 * @var $basic_modules Category Strings
 		 */
 		static public $basic_modules = '';
@@ -34,7 +34,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		/**
 		 * Function that set constants for UABB
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 */
 		function set_constants() {
 			$branding            = BB_Ultimate_Addon_Helper::get_builder_uabb_branding();
@@ -59,7 +59,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		/**
 		 * Function that renders BB's modules category
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 * @param array $cat gets the BB's UI ControlPanel Category.
 		 */
 		static public function module_cat( $cat ) {
@@ -69,7 +69,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		/**
 		 * Function that renders builder UABB
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 */
 		static public function get_builder_uabb() {
 			$uabb = UABB_Init::$uabb_options['fl_builder_uabb'];
@@ -104,7 +104,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		/**
 		 * Function that renders extensions for the UABB
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 * @param string $request_key gets the request key's value.
 		 */
 		static public function get_builder_uabb_branding( $request_key = '' ) {
@@ -146,7 +146,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		/**
 		 * Function that renders all the UABB modules
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 */
 		static public function get_all_modules() {
 			$modules_array = array(
@@ -169,7 +169,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		/**
 		 * Function that renders premium modules
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 */
 		static public function get_premium_modules() {
 			$premium_modules_array = array(
@@ -458,7 +458,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		/**
 		 * Function that renders UABB's modules
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 */
 		static public function get_builder_uabb_modules() {
 			$uabb           = UABB_Init::$uabb_options['fl_builder_uabb_modules'];
@@ -553,7 +553,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		/**
 		 *  Get link rel attribute
 		 *
-		 *  @since 1.6.1
+		 *  @since 1.0
 		 *  @param string $target gets an string for the link.
 		 *  @param string $is_nofollow gets an string for is no follow.
 		 *  @param string $echo gets an string for echo.

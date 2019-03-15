@@ -15,7 +15,7 @@ final class UABBGlobalSetting {
 	/**
 	 * Function that initializes actions for UABB Global Settings.
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 */
 	static public function init() {
 		add_filter( 'fl_builder_ui_js_strings', __CLASS__ . '::add_js_string' );
@@ -25,7 +25,7 @@ final class UABBGlobalSetting {
 	 * Function that initializes actions for UABB Global Settings.
 	 *
 	 * @param  String $js_strings slug.
-	 * @since x.x.x
+	 * @since 1.0
 	 */
 	static public function add_js_string( $js_strings ) {
 

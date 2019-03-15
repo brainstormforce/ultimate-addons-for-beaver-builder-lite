@@ -21,7 +21,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		/**
 		 * Constructor function that initializes necessary filters
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 */
 		function __construct() {
 
@@ -52,7 +52,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		/**
 		 * Function that initializes global settings options
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 * @param object $option gets the options for the UABB settings.
 		 * @param var    $color gets the color.
 		 * @param var    $opc gets the opacity for the colorpicker.

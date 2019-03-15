@@ -4,7 +4,7 @@
  * Applicable for UABB version 1.13.2 and before.
  * Converted font, text size, and text transform settings to a responsive typography setting.
  *
- * @package UABB Heading Module
+ * @package UABB Ribbon Module
  */
 
 FLBuilder::register_module(

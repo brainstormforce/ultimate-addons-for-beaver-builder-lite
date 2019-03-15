@@ -2,7 +2,7 @@
 /**
  * Backward compatibility.
  *
- * @since 1.7.0
+ * @since 1.2.4
  * @package BAckward Compatibility
  */
 
@@ -46,7 +46,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * Set UABB version for new page.
 		 *
-		 * @since 1.7.2
+		 * @since 1.2.4
 		 * @param var $new_status Checks the value if user is new.
 		 * @param var $old_status Checks the value if user is old.
 		 * @param var $post Checks the value of the post.
@@ -63,7 +63,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * Execute Layout Data.
 		 *
-		 * @since 1.7.2
+		 * @since 1.2.4
 		 * @param var $post_id Gets the post ID.
 		 * @return void
 		 */
@@ -113,7 +113,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * Execute Layout Draft.
 		 *
-		 * @since 1.7.2
+		 * @since 1.2.4
 		 * @param var $post_id gets the Post ID of the layout draft execute.
 		 * @return void
 		 */
@@ -205,7 +205,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * UABB Flip Box.
 		 *
-		 * @since 1.7.2
+		 * @since 1.2.4
 		 * @param object $settings gets the settings of respective module.
 		 * @return void
 		 */
@@ -386,7 +386,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * UABB Info List.
 		 *
-		 * @since 1.7.2
+		 * @since 1.2.4
 		 * @param object $settings gets the settings of respective module.
 		 * @return void
 		 */
@@ -448,7 +448,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * UABB Info Table.
 		 *
-		 * @since 1.7.2
+		 * @since 1.2.4
 		 * @param object $settings gets the settings of respective module.
 		 * @return void
 		 */
@@ -562,7 +562,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * UABB ribbon.
 		 *
-		 * @since 1.7.2
+		 * @since 1.2.4
 		 * @param object $settings gets the settings of respective module.
 		 * @return void
 		 */
@@ -598,7 +598,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * UABB Slide Box.
 		 *
-		 * @since 1.7.2
+		 * @since 1.2.4
 		 * @param object $settings gets the settings of respective module.
 		 * @return void
 		 */
@@ -844,7 +844,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		/**
 		 * UABB Button.
 		 *
-		 * @since 1.7.2
+		 * @since 1.2.4
 		 * @param object $settings gets the settings of respective module.
 		 * @return void
 		 */

@@ -15,7 +15,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 		/**
 		 * Constructor function that initializes required actions
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 */
 		function __construct() {
 			add_action( 'fl_builder_control_uabb-gradient', array( $this, 'uabb_gradient' ), 1, 4 );
@@ -25,7 +25,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 		/**
 		 * Function that renders row's CSS
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 * @param array $fields gets the fields for the gradient.
 		 */
 		function ui_fields( $fields ) {
@@ -37,7 +37,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 		/**
 		 * Function that renders row's CSS
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 * @param var    $name gets the name for the gradient field.
 		 * @param array  $value gets an array of gradient values.
 		 * @param array  $field gets an array of field values.

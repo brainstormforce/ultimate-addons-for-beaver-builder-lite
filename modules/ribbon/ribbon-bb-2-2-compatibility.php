@@ -5,7 +5,7 @@
  *
  * Converted font, align, border settings to respective param setting.
  *
- * @package UABB Heading Module
+ * @package UABB Ribbon Module
  */
 
 FLBuilder::register_module(

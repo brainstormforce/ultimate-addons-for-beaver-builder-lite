@@ -49,7 +49,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		/**
 		 * Function which resets the plugin activation if necessary memmory not found
 		 *
-		 * @Since 1.0.0
+		 * @Since 1.0
 		 */
 		function activation_reset() {
 
@@ -73,7 +73,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		/**
 		 * Memory Limit function that checks for memory limit for the UABB plugin
 		 *
-		 * @Since 1.4.0
+		 * @Since 1.0
 		 */
 		function check_memory_limit() {
 
@@ -113,7 +113,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 	/**
 	 * Memory Limit function that checks for memory limit for the UABB plugin
 	 *
-	 * @Since 1.4.0
+	 * @Since 1.0
 	 */
 	function admin_notices() {
 		$deactivate_url = admin_url( 'plugins.php' );

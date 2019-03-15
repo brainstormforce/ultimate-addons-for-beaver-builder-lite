@@ -28,7 +28,7 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 		/**
 		 * Load files.
 		 *
-		 * @since 1.6.7
+		 * @since 1.2.2
 		 */
 		static public function load_files() {
 			if ( class_exists( 'WPML_Page_Builders_Defined' ) ) {
@@ -40,7 +40,7 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 		/**
 		 * Initialize nodes to translate
 		 *
-		 * @since 1.6.7
+		 * @since 1.2.2
 		 * @param array $form gets the forms array to be resolved.
 		 * @return array
 		 */

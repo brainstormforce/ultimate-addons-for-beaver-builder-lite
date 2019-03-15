@@ -2,7 +2,7 @@
 /**
  * UABB initial setup
  *
- * @since 1.1.0.4
+ * @since 1.0
  * @package UABB Initial Setup
  */
 
@@ -58,7 +58,7 @@ class UABB_Init {
 	/**
 	 * Function that renders links
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 * @param string $actions gets an link.
 	 */
 	function uabb_render_plugin_action_links( $actions ) {
@@ -71,7 +71,7 @@ class UABB_Init {
 	/**
 	 * Function that includes necessary files
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 */
 	function includes() {
 
@@ -124,7 +124,7 @@ class UABB_Init {
 	/**
 	 * Function that renders UABB Global Settings form defaults
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 * @param array  $defaults gets the array for the form defaults.
 	 * @param string $form_type gets an array to check the form type.
 	 */
@@ -141,7 +141,7 @@ class UABB_Init {
 	/**
 	 * Function that initializes init function
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 */
 	function init() {
 
@@ -170,7 +170,7 @@ class UABB_Init {
 	/**
 	 * Function that renders UABB's Text-domain.
 	 *
-	 * @since 1.4.6
+	 * @since 1.0
 	 */
 	function load_plugin_textdomain() {
 		// Traditional WordPress plugin locale filter.
@@ -195,7 +195,7 @@ class UABB_Init {
 	/**
 	 * Function that loads UABB's scripts
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 */
 	function load_scripts() {
 
@@ -226,7 +226,7 @@ class UABB_Init {
 	/**
 	 * Function that renders admin notices
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 */
 	function admin_notices() {
 
@@ -246,7 +246,7 @@ class UABB_Init {
 	/**
 	 * Function that loads the modules.
 	 *
-	 * @since x.x.x
+	 * @since 1.0
 	 */
 	function load_modules() {
 

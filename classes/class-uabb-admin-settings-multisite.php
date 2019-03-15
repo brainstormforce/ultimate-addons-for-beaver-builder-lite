@@ -28,7 +28,7 @@ final class UABBBuilderMultisiteSettings {
 	/**
 	 * Sets the activate redirect url to the network admin settings.
 	 *
-	 * @since 1.8
+	 * @since 1.0
 	 * @param string $url gets the activate redirect URL.
 	 */
 	static public function uabb_lite_redirect_on_activation( $url ) {
@@ -44,7 +44,7 @@ final class UABBBuilderMultisiteSettings {
 	/**
 	 * Save network admin settings and enqueue scripts.
 	 *
-	 * @since 1.8
+	 * @since 1.0
 	 * @return void
 	 */
 	static public function admin_init() {

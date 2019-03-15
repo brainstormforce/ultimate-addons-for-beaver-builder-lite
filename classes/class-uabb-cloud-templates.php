@@ -2,7 +2,7 @@
 /**
  * UABB Cloud Templates initial setup
  *
- * @since 1.2.0.2
+ * @since 1.0
  * @package UABB Cloud Templates
  */
 
@@ -16,21 +16,21 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		/**
 		 * Holds an instance of Cloud Templates.
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 * @var $instance instance
 		 */
 		private static $instance;
 		/**
 		 * Holds an cloud URL.
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 * @var $cloud_url cloud_url
 		 */
 		private static $cloud_url;
 		/**
 		 * Holds an UABB file system.
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 * @var $uabb_filesystem UABB filesystem
 		 */
 		protected static $uabb_filesystem = null;
@@ -38,7 +38,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		/**
 		 *  Initiator
 		 *
-		 * @since 1.2.0.2
+		 * @since 1.0
 		 */
 		public static function get_instance() {
 			if ( ! isset( self::$instance ) ) {
@@ -50,7 +50,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		/**
 		 * Constructor function that initializes required actions and hooks
 		 *
-		 * @since 1.2.0.2
+		 * @since 1.0
 		 */
 		function __construct() {
 
@@ -65,7 +65,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		/**
 		 * Transient cloud templates
 		 *
-		 * @since 1.2.0.2
+		 * @since 1.0
 		 */
 		static function reset_cloud_transient() {
 
@@ -184,7 +184,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		/**
 		 * Get cloud templates
 		 *
-		 * @since 1.2.0.2
+		 * @since 1.0
 		 * @param string $type gets the type of the cloud templates.
 		 */
 		static function get_cloud_templates_count( $type = '' ) {
@@ -223,7 +223,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		/**
 		 * Get cloud templates
 		 *
-		 * @since 1.2.0.2
+		 * @since 1.0
 		 * @param string $type gets the type of the cloud templates.
 		 */
 		static function get_cloud_templates( $type = '' ) {
@@ -249,7 +249,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		/**
 		 * Fetch cloud templates
 		 *
-		 * @since 1.2.0.2
+		 * @since 1.0
 		 */
 		function fetch_cloud_templates() {
 			self::reset_cloud_transient();
@@ -264,7 +264,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		/**
 		 * Function that renders dat file type
 		 *
-		 * @since 1.4.6
+		 * @since 1.0
 		 * @param file $dat_file_type gets the DAT file type.
 		 */
 		function get_right_type_key( $dat_file_type ) {
@@ -286,7 +286,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		/**
 		 * Function that renders load filesystem
 		 *
-		 * @since x.x.x
+		 * @since 1.0
 		 */
 		public static function load_filesystem() {
 			if ( null === self::$uabb_filesystem ) {
@@ -299,7 +299,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		/**
 		 * Messages
 		 *
-		 * @since 1.2.0.2
+		 * @since 1.0
 		 * @param string $msg gets an string message.
 		 */
 		static function message( $msg ) {
@@ -319,7 +319,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		/**
 		 * Template HTML
 		 *
-		 * @since 1.2.0.2
+		 * @since 1.0
 		 * @param string $type gets the type page-templates.
 		 */
 		static function template_html( $type = 'page-templates' ) {
@@ -458,7 +458,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		/**
 		 * Create local directory if not exist.
 		 *
-		 * @since 1.2.0.2
+		 * @since 1.0
 		 * @param string $dir_name verifies the dir name with bb-ultimate-addon.
 		 */
 		static public function create_local_dir( $dir_name = 'bb-ultimate-addon' ) {
