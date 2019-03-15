@@ -51,8 +51,91 @@ final class UABBBuilderAdminSettings {
 			add_action( 'admin_enqueue_scripts', __CLASS__ . '::styles_scripts' );
 			self::save();
 		}
+		add_action( 'admin_notices', __CLASS__ . '::register_notices' );
+		add_filter( 'wp_kses_allowed_html', __CLASS__ . '::add_data_attributes', 10, 2 );
+		add_action( 'admin_enqueue_scripts', __CLASS__ . '::notice_styles_scripts' );
 	}
+	/**
+	 * Enqueues the needed CSS/JS for the builder's admin settings page.
+	 *
+	 * @since 1.3.0
+	 */
+	static public function notice_styles_scripts() {
 
+		wp_enqueue_script( 'uabb-admin-notices', BB_ULTIMATE_ADDON_URL . 'assets/js/uabb-admin-notices.js', array( 'jquery' ), true );
+		// Styles.
+		wp_enqueue_style( 'uabb-notice-settings', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-admin-notice.css', array() );
+
+	}
+	/**
+	 * Filters and Returns a list of allowed tags and attributes for a given context.
+	 *
+	 * @param Array  $allowedposttags Array of allowed tags.
+	 * @param String $context Context type (explicit).
+	 * @since 1.3.0
+	 * @return Array
+	 */
+	public static function add_data_attributes( $allowedposttags, $context ) {
+		$allowedposttags['a']['data-repeat-notice-after'] = true;
+
+		return $allowedposttags;
+	}
+	/**
+	 * Ask Plugin Rating
+	 *
+	 * @since 1.3.0
+	 */
+	public static function register_notices() {
+
+		if ( false === get_option( 'uabb-old-setup' ) ) {
+			set_transient( 'uabb-first-rating', true, MINUTE_IN_SECONDS );
+			update_option( 'uabb-old-setup', true );
+		} elseif ( false === get_transient( 'uabb-first-rating' ) ) {
+
+			$image_path = BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg';
+
+			UABB_Admin_Notices::add_notice(
+				array(
+					'id'                         => 'uabb-admin-rating',
+					'type'                       => '',
+					'message'                    => sprintf(
+						'<div class="notice-image">
+							<img src="%1$s" class="custom-logo" alt="Ultimate Addon for Beaver Builder" itemprop="logo"></div>
+							<div class="notice-content">
+								<div class="notice-heading">
+									%2$s
+								</div>
+								%3$s<br />
+								<div class="uabb-review-notice-container">
+									<a href="%4$s" class="uabb-notice-close uabb-review-notice button-primary" target="_blank">
+									%5$s
+									</a>
+								<span class="dashicons dashicons-calendar"></span>
+									<a href="#" data-repeat-notice-after="%6$s" class="uabb-notice-close uabb-review-notice">
+									%7$s
+									</a>
+								<span class="dashicons dashicons-smiley"></span>
+									<a href="#" class="uabb-notice-close uabb-review-notice">
+									%8$s
+									</a>
+								</div>
+							</div>',
+						$image_path,
+						__( 'Hello! Thank you for choosing the Ultimate Addon for Beaver Builder to build this website!', 'ultimate-addon-for-beaver-builder' ),
+						__( 'Could you please do us a BIG favor and give it a 5-star rating on WordPress? This will boost our motivation and help other users make a comfortable decision while choosing this plugin.', 'ultimate-addons-for-gutenberg' ),
+						'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/?filter=5',
+						__( 'Ok, you deserve it', 'ultimate-addons-for-beaver-builder' ),
+						MINUTE_IN_SECONDS,
+						__( 'Nope, maybe later', 'ultimate-addons-for-beaver-builder' ),
+						__( 'I already did', 'ultimate-addons-for-beaver-builder' )
+					),
+					'repeat-notice-after'        => MINUTE_IN_SECONDS,
+					'priority'                   => 5,
+					'display-with-other-notices' => false,
+				)
+			);
+		}
+	}
 	/**
 	 * Renders the admin settings menu.
 	 *
