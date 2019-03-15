@@ -3,8 +3,8 @@
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Tags:** beaver builder, beaver builder free, beaver addons, beaver builder addon, beaver builder add ons, beaver builder lite, beaver builder modules, beaver builder addons, beaver builder extensions, beaver addon, beaver builder plugin, beaver builder wordpress  
 **Requires at least:** 4.6  
-**Tested up to:** 5.0  
-**Stable tag:** 1.2.4  
+**Tested up to:** 5.1.0
+**Stable tag:** 1.3.0
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -14,7 +14,7 @@ The Ultimate Addons for Beaver Builder extends the Beaver Builder functionality 
 
 <strong>The Ultimate Addons for Beaver Builder</strong>
 
-Supercharge Beaver Builder with 45+ powerful modules & 200+ templates to build WordPress websites in record time! This <a href=" https://www.ultimatebeaver.com/?utm_source=wprepo&utm_campaign=Lite&utm_medium=description">Beaver Builder Addon</a> is here to make website building an ultimate journey for you all.
+Supercharge Beaver Builder with 50+ powerful modules & 200+ templates to build WordPress websites in record time! This <a href=" https://www.ultimatebeaver.com/?utm_source=wprepo&utm_campaign=Lite&utm_medium=description">Beaver Builder Addon</a> is here to make website building an ultimate journey for you all.
 
 Simply drag &amp; drop custom modules and pre-designed row &amp; page templates to reduce your website development time by around 30%!
 
@@ -133,6 +133,11 @@ With the Ultimate Addons for Beaver Builder you get a collection of over 35+ cus
  	<li><a href="https://www.ultimatebeaver.com/modules/woo-products/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Woo Products</a>: Use the Ultimate Addon’s Woo Products module to display your products and create a better-looking eCommerce store on your website.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/woo-categories/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Woo Categories</a>: Display product categories in style with the advanced Woo Categories module of the Ultimate Addons for Beaver Builder.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/woo-add-to-cart/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Woo Add To Cart</a>: Use the Ultimate Addon’s Woo Add to Cart module built to work with Beaver Builder and WooCommerce to add advanced add to cart options quickly and easily.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/video/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Video</a>: Embed a Video on a page with UABB’s optimized Video module that allows you to customize thumbnail, play button and more without affecting your page load time.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/table/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Table</a>: Create responsive and beautiful tables with advanced styling and features using the Table Module of the Ultimate Addons for Beaver Builder.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/video-gallery/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Video Gallery</a>: Flaunt all your beautiful videos within the highly optimized video gallery Module of the Ultimate Addons for Beaver Builder.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/price-list/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Price List</a>: Simply drag and drop Price List module to design pixel-perfect menus, catalogs, product list or any other list of featured items Price List Module of the Ultimate Addons for Beaver Builder.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/marketing-button/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Marketing Button</a>: Create trending and appealing call-to-actions with the Ultimate Addon’s Marketing Button that lets you add additional text with a fully customizable button.</li>
 </ul>
 <strong>Template Cloud with Page and Section Templates</strong>
 
@@ -206,6 +211,17 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 4. /assets/screenshots/4.png
 
 ## Changelog ##
+
+### 1.3.0 ###
+* New: Added Typography field compatibility with Beaver Builder 2.2
+* New: Added Border field compatibility with Beaver Builder 2.2
+* New: Added Link field compatibility with Beaver Builder 2.2
+* Improvement: Added color connections to all color fields
+* Improvement: Added slider support to all unit fields
+
+### 1.2.4 ###
+* Fixed: Improved performance of the field replacement functionality
+* Fixed: Reduced the frontend data render calls to help with performance
 
 ### 1.2.4 ###
 * Fixed: Improved performance of the field replacement functionality
