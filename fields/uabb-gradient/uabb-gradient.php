@@ -37,6 +37,21 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 
 		/**
 		 * Function that renders row's CSS
+		 * Declaration of array
+		 * Ex. 'YOUR_VARIABLE_NAME'     => array(
+		 * 'type'    => 'uabb-gradient',
+		 * 'label'   => __( 'Gradient', 'uabb' ),
+		 * 'default'  => array  //Required NULL or Default value
+		 * 'color_one' => '',
+		 * 'color_two' => '',
+		 * 'angle'     => '0',
+		 *  )
+		 *  )
+		 * Note : Default value is required here. Either pass it NULL or enter your own value.
+		 * How to access variables
+		 * fl-node-<?php echo $id; ?> .YOUR-CLASS{
+		 *  <?php UABB_Helper::uabb_gradient_css( $settings->YOUR_VARIABLE_NAME ); ?>
+		 * }
 		 *
 		 * @since 1.0
 		 * @param var    $name gets the name for the gradient field.
