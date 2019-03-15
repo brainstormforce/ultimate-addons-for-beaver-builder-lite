@@ -2,7 +2,7 @@
 /**
  * Handles logic for the admin settings page.
  *
- * @since 1.3.0
+ * @since 1.0
  * @package UABB Admin Settings.
  */
 
@@ -17,7 +17,7 @@ final class UABBBuilderAdminSettings {
 	 * Holds any errors that may arise from
 	 * saving admin settings.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @var array $errors
 	 */
 	static public $errors = array();
@@ -25,7 +25,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Initializes the admin settings.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @return void
 	 */
 	static public function init() {
@@ -36,7 +36,7 @@ final class UABBBuilderAdminSettings {
 	 * Adds the admin menu and enqueues CSS/JS if we are on
 	 * the builder admin settings page.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @return void
 	 */
 	static public function init_hooks() {
@@ -56,7 +56,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Renders the admin settings menu.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @return void
 	 */
 	static public function menu() {
@@ -73,7 +73,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Enqueues the needed CSS/JS for the builder's admin settings page.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @param hook $hook get the hooks for the styles.
 	 * @return void
 	 */
@@ -130,7 +130,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Renders the admin settings.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @return void
 	 */
 	static public function render() {
@@ -140,7 +140,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Renders the page class for network installs and single site installs.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @return void
 	 */
 	static public function render_page_class() {
@@ -154,7 +154,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Renders the admin settings page heading.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @return void
 	 */
 	static public function render_page_heading() {
@@ -169,7 +169,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Renders the update message.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @return void
 	 */
 	static public function render_update_message() {
@@ -185,7 +185,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Renders the nav items for the admin settings menu.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @return void
 	 */
 	static public function render_nav_items() {
@@ -252,7 +252,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Renders the admin settings forms.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @return void
 	 */
 	static public function render_forms() {
@@ -270,7 +270,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Renders an admin settings form based on the type specified.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @param string $type The type of form to render.
 	 * @return void
 	 */
@@ -283,7 +283,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Renders the action for a form.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @param string $type The type of form being rendered.
 	 * @return void
 	 */
@@ -298,7 +298,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Returns the action for a form.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @param string $type The type of form being rendered.
 	 * @return string The URL for the form action.
 	 */
@@ -313,7 +313,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Checks to see if a settings form is supported.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @param string $type The type of form to check.
 	 * @return bool
 	 */
@@ -324,7 +324,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Checks to see if multisite is supported.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @return bool
 	 */
 	static public function multisite_support() {
@@ -334,7 +334,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Adds an error message to be rendered.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @param string $message The error message to add.
 	 * @return void
 	 */
@@ -345,7 +345,7 @@ final class UABBBuilderAdminSettings {
 	/**
 	 * Saves the admin settings.
 	 *
-	 * @since 1.3.0
+	 * @since 1.0
 	 * @return void
 	 */
 	static public function save() {

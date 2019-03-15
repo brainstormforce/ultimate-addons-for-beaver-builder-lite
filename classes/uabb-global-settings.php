@@ -2,12 +2,14 @@
 /**
  *  Global Styling
  *
+ *  @since 1.0
  *  @package Global Styling
  */
 
 /**
  * This class initializes UABB Global Styling
  *
+ *  @since 1.0
  * @class UABB_Global_Styling
  */
 class UABB_Global_Styling {

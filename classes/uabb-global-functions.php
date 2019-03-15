@@ -1,6 +1,30 @@
 <?php
 /**
- *  Global Styling
+ * Global Styling
+ * Global functions
+ *
+ * This file contains UABB Global Functions
+ *
+ * array_replace_recursive()
+ * recurse()
+ * uabb_theme_base_color()
+ * uabb_theme_text_color()
+ * uabb_theme_link_color()
+ * uabb_theme_link_hover_color()
+ * uabb_theme_button_font_family()
+ * uabb_theme_button_font_size()
+ * uabb_theme_button_line_height()
+ * uabb_theme_button_letter_spacing()
+ * uabb_theme_button_text_transform()
+ * uabb_theme_button_bg_color()
+ * uabb_theme_button_bg_hover_color()
+ * uabb_theme_button_text_color()
+ * uabb_theme_button_text_hover_color()
+ * uabb_theme_button_padding()
+ * uabb_theme_button_vertical_padding()
+ * uabb_theme_button_horizontal_padding()
+ * uabb_theme_button_border_radius()
+ * uabb_parse_color_to_hex()
  *
  *  @package Global Styling
  */
@@ -375,10 +399,10 @@ function uabb_theme_button_padding( $default ) {
 
 	if ( '' == $default ) {
 
-		$padding = apply_filters( 'uabb/global/button_padding', $default );
+		$padding = apply_filters( 'uabb/global/button_padding', $default );// @codingStandardsIgnoreLine.
 
 		if ( '' == $padding ) {
-			$padding = apply_filters( 'uabb/theme/button_padding', $default );
+			$padding = apply_filters( 'uabb/theme/button_padding', $default );// @codingStandardsIgnoreLine.
 			if ( '' == $padding ) {
 				$padding = '12px 24px';
 			}

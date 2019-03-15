@@ -19,7 +19,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 	define( 'BB_ULTIMATE_ADDON_DIR', plugin_dir_path( __FILE__ ) );
 	define( 'BB_ULTIMATE_ADDON_URL', plugins_url( '/', __FILE__ ) );
 	define( 'BB_ULTIMATE_ADDON_LITE_VERSION', '1.3.0' );
-	define( 'BSF_REMOVE_uabb_FROM_REGISTRATION_LISTING', true );// @codingStandardsIgnoreLine.
+	define( 'BSF_REMOVE_UABB_FROM_REGISTRATION_LISTING', true );
 	define( 'BB_ULTIMATE_ADDON_FILE', trailingslashit( dirname( __FILE__ ) ) . 'bb-ultimate-addon.php' );// @codingStandardsIgnoreLine.
 	define( 'BB_ULTIMATE_ADDON_LITE', true );
 	define( 'BB_ULTIMATE_ADDON_UPGRADE_URL', 'https://www.ultimatebeaver.com/pricing/?utm_source=uabb-dashboard&utm_campaign=uabblite_upgrade&utm_medium=upgrade-button' );
@@ -81,25 +81,30 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 			$peak_memory   = memory_get_peak_usage( true );   // Available Memory.
 			$uabb_required = 14999999;                      // Required Memory for UABB.
 
-			if ( preg_match( '/^(\d+)(.)$/', $memory_limit, $matches ) ) {
+			if ( '-1' !== $memory_limit ) {
+				if ( preg_match( '/^(\d+)(.)$/', $memory_limit, $matches ) ) {
 
-				switch ( $matches[2] ) {
-					case 'K':
-						$memory_limit = $matches[1] * 1024;
-						break;
-					case 'M':
-						$memory_limit = $matches[1] * 1024 * 1024;
-						break;
-					case 'G':
-						$memory_limit = $matches[1] * 1024 * 1024 * 1024;
-						break;
+					switch ( $matches[2] ) {
+						case 'K':
+						case 'k':
+							$memory_limit = $matches[1] * 1024;
+							break;
+						case 'M':
+						case 'm':
+							$memory_limit = $matches[1] * 1024 * 1024;
+							break;
+						case 'G':
+						case 'g':
+							$memory_limit = $matches[1] * 1024 * 1024 * 1024;
+							break;
+					}
 				}
-			}
 
-			if ( $memory_limit - $peak_memory <= $uabb_required ) {
-				return true;
-			} else {
-				return false;
+				if ( $memory_limit - $peak_memory <= $uabb_required ) {
+					return true;
+				} else {
+					return false;
+				}
 			}
 		}
 	}

@@ -1,6 +1,7 @@
 <?php
 /**
  *  UABB Gradient file
+ * This initializes UABB Gradient
  *
  *  @package UABB Gradient
  */

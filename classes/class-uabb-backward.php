@@ -560,7 +560,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 		}
 
 		/**
-		 * UABB ribbon.
+		 * UABB Ribbon.
 		 *
 		 * @since 1.2.4
 		 * @param object $settings gets the settings of respective module.
