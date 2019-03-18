@@ -1,9 +1,15 @@
 <?php
-
 /**
  * Network admin settings for the page builder.
  *
  * @since 1.0
+ * @package Network Admin Settings
+ */
+
+/**
+ * This class initializes UABB Builder Multisite Settings
+ *
+ * @class UABBBuilderMultisiteSettings
  */
 final class UABBBuilderMultisiteSettings {
 
@@ -13,24 +19,22 @@ final class UABBBuilderMultisiteSettings {
 	 * @since 1.0
 	 * @return void
 	 */
-	static public function init()
-	{
+	static public function init() {
 		add_action( 'admin_init', __CLASS__ . '::admin_init' );
 		add_action( 'admin_init', __CLASS__ . '::uabb_lite_redirect_on_activation' );
-		add_action( 'network_admin_menu',                __CLASS__ . '::menu' );
+		add_action( 'network_admin_menu', __CLASS__ . '::menu' );
 	}
 
 	/**
-	 * Redirects to UABB Lite Welcome page on activation
+	 * Sets the activate redirect url to the network admin settings.
 	 *
 	 * @since 1.0
-	 * @return null
+	 * @param string $url gets the activate redirect URL.
 	 */
-	static public function uabb_lite_redirect_on_activation( $url )
-	{
-		if( get_option( 'uabb_lite_redirect' ) == true ) {
+	static public function uabb_lite_redirect_on_activation( $url ) {
+		if ( true == get_option( 'uabb_lite_redirect' ) ) {
 			update_option( 'uabb_lite_redirect', false );
-			if( !is_multisite() ) :
+			if ( ! is_multisite() ) :
 				wp_redirect( admin_url( 'options-general.php?page=uabb-builder-settings#uabb-welcome' ) );
 				exit();
 			endif;
@@ -40,12 +44,11 @@ final class UABBBuilderMultisiteSettings {
 	/**
 	 * Save network admin settings and enqueue scripts.
 	 *
-	 * @since 1.8
+	 * @since 1.0
 	 * @return void
 	 */
-	static public function admin_init()
-	{
-		if ( is_network_admin() && isset( $_REQUEST['page'] ) && $_REQUEST['page'] == 'uabb-builder-multisite-settings' ) {
+	static public function admin_init() {
+		if ( is_network_admin() && isset( $_REQUEST['page'] ) && 'uabb-builder-multisite-settings' == $_REQUEST['page'] ) {
 			add_action( 'admin_enqueue_scripts', 'UABBBuilderAdminSettings::styles_scripts' );
 			UABBBuilderAdminSettings::save();
 		}
@@ -57,13 +60,12 @@ final class UABBBuilderMultisiteSettings {
 	 * @since 1.0
 	 * @return void
 	 */
-	static public function menu()
-	{
-		$title = UABB_PREFIX; // FLBuilderModel::get_branding();
+	static public function menu() {
+		$title = UABB_PREFIX; // FLBuilderModel::get_branding();.
 		$cap   = 'manage_network_plugins';
 		$slug  = 'uabb-builder-multisite-settings';
 		$func  = 'UABBBuilderAdminSettings::render';
-		
+
 		add_submenu_page( 'settings.php', $title, $title, $cap, $slug, $func );
 	}
 }

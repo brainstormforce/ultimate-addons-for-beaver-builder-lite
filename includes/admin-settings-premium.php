@@ -1,3 +1,12 @@
+<?php
+/**
+ * General Settings Page
+ *
+ * @package UABB Settings Premium
+ */
+
+?>
+
 <div id="fl-uabb-premium-form" class="fl-settings-form uabb-fl-settings-form">
 
 	<h3 class="fl-settings-form-header"><?php _e( 'Premium Features', 'uabb' ); ?></h3>
