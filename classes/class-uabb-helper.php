@@ -617,7 +617,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 
 							$enable_module = $this->get_enable_module( $layout_data[ $id ]->settings->type );
 
-							if ( true == $enable_module ) {
+							if ( true === $enable_module ) {
 
 								$uabb_post_count++;
 							}
@@ -677,6 +677,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 						return true;
 						break;
 					default:
+						return false;
 						break;
 				}
 			}

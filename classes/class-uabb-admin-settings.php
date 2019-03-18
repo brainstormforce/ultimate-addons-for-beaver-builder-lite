@@ -124,7 +124,7 @@ final class UABBBuilderAdminSettings {
 				),
 				'repeat-notice-after'        => MONTH_IN_SECONDS,
 				'display-notice-after'       => WEEK_IN_SECONDS,
-				'priority'                   => 10,
+				'priority'                   => 15,
 				'display-with-other-notices' => false,
 				'show_if'                    => BB_Ultimate_Addon_Helper::show_rating_notice(),
 			)
