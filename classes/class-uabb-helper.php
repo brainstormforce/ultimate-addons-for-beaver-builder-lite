@@ -605,7 +605,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 
 				foreach ( $result as $key ) {
 
-					$layout_data = get_post_meta( $key, '_fl_builder_data', true );
+					$layout_data = get_post_meta( $key->ID, '_fl_builder_data', true );
 
 					if ( is_array( $layout_data ) ) {
 
@@ -615,7 +615,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 								break;
 							}
 
-							$enable_module = $this->get_enable_module( $layout_data[ $id ]->settings->type );
+							$enable_module = self::get_enable_module( $layout_data[ $id ]->settings->type );
 
 							if ( true === $enable_module ) {
 
@@ -636,10 +636,11 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		/**
 		 * Get flag if module enable on pages are build using UABB.
 		 *
+		 * @param String $type gets an module.
 		 * @since  1.3.0
 		 * @return boolean true/false Flag if more than 5 pages are build using UABB.
 		 */
-		public function get_enable_module( $type ) {
+		public static function get_enable_module( $type ) {
 
 			if ( isset( $type ) ) {
 				switch ( $type ) {
