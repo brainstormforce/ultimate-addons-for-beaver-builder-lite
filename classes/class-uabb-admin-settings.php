@@ -86,7 +86,7 @@ final class UABBBuilderAdminSettings {
 	public static function register_notices() {
 
 		$image_path = BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg';
-		
+
 		Astra_Notices::add_notice(
 			array(
 				'id'                         => 'uabb-admin-rating',
@@ -126,7 +126,7 @@ final class UABBBuilderAdminSettings {
 				'display-notice-after'       => WEEK_IN_SECONDS,
 				'priority'                   => 10,
 				'display-with-other-notices' => false,
-				'show_if'					 => BB_Ultimate_Addon_Helper::show_rating_notice(),
+				'show_if'                    => BB_Ultimate_Addon_Helper::show_rating_notice(),
 			)
 		);
 	}

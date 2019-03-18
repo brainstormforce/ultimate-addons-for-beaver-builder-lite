@@ -162,7 +162,7 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 		 * @return void
 		 */
 		public function show_notices() {
-			
+
 			$defaults = array(
 				'id'                         => '',      // Optional, Notice ID. If empty it set `astra-notices-id-<$array-index>`.
 				'type'                       => 'info',  // Optional, Notice type. Default `info`. Expected [info, warning, notice, error].
@@ -277,7 +277,7 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 		 */
 		private static function is_expired( $notice ) {
 			$transient_status = get_transient( $notice['id'] );
-			
+
 			if ( false === $transient_status ) {
 
 				if ( isset( $notice['display-notice-after'] ) && false !== $notice['display-notice-after'] ) {
