@@ -614,12 +614,14 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 							if ( $uabb_post_count >= 5 ) {
 								break;
 							}
+							if ( isset( $layout_data[ $id ]->settings->type ) ) {
 
-							$enable_module = self::get_enable_module( $layout_data[ $id ]->settings->type );
+								$enable_module = self::get_enable_module( $layout_data[ $id ]->settings->type );
 
-							if ( true === $enable_module ) {
+								if ( true === $enable_module ) {
 
-								$uabb_post_count++;
+									$uabb_post_count++;
+								}
 							}
 						}
 					}
