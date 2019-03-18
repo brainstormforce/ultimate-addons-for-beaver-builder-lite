@@ -126,7 +126,7 @@ final class UABBBuilderAdminSettings {
 				'display-notice-after'       => WEEK_IN_SECONDS,
 				'priority'                   => 10,
 				'display-with-other-notices' => false,
-				'show_if'					 => true,
+				'show_if'					 => BB_Ultimate_Addon_Helper::show_rating_notice(),
 			)
 		);
 	}

@@ -588,14 +588,41 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 * @return boolean true/false Flag if more than 5 pages are build using UAG.
 		 */
 		public static function show_rating_notice() {
-			$page_ids=get_all_page_ids();
 
-			foreach ( $page_ids as $key ) {
+			$posts_created_with_uag = get_option( 'posts-created-with-uabb' );
 
-				$layout_data = get_post_meta( $key, '_fl_builder_data', true );
-				# code...
-				//var_dump( $layout_data );
+			if ( null === $posts_created_with_uabb ) {
+
+				$page_ids = get_all_page_ids();
+
+				$uabb_post_count = 0;
+
+				foreach ( $page_ids as $key ) {
+
+					$layout_data = get_post_meta( $key, '_fl_builder_data', true );
+					
+					if ( is_array( $layout_data ) ) {
+
+						foreach ( $layout_data as $id => $data ) {
+
+							if ( $uabb_post_count >= 5 ) {
+								break;
+							}
+							if ( isset( $layout_data[ $id ]->settings->type ) || 'flip-box'=== $layout_data[ $id ]->settings->type || 'info-list'=== $layout_data[ $id ]->settings->type || 'info-table'=== $layout_data[ $id ]->settings->type || 'ribbon'=== $layout_data[ $id ]->settings->type || 'slide-box'=== $layout_data[ $id ]->settings->type || 'uabb-button'=== $layout_data[ $id ]->settings->type || 'spacer-gap'=== $layout_data[ $id ]->settings->type || 'image-separator' === $layout_data[ $id ]->settings->type || 'uabb-separator'=== $layout_data[ $id ]->settings->type || 'image-icon' === $layout_data[ $id ]->settings->type ) {
+
+								$uabb_post_count++;
+							}
+						}
+					}
+				}
+
+				if ( $uabb_post_count >= 5 ) {
+					update_option( 'posts-created-with-uabb', $uabb_post_count );
+
+					$posts_created_with_uabb = $uabb_post_count;
+				}
 			}
+			return ( $posts_created_with_uabb >= 5 );
 		}
 
 	}
