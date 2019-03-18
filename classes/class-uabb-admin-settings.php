@@ -100,22 +100,22 @@ final class UABBBuilderAdminSettings {
 							</div>
 							%3$s<br />
 							<div class="uabb-review-notice-container">
-								<a href="%4$s" class="astra-notice-close uagb-review-notice button-primary" target="_blank">
+								<a href="%4$s" class="astra-notice-close uabb-review-notice button-primary" target="_blank">
 								%5$s
 								</a>
 							<span class="dashicons dashicons-calendar"></span>
-								<a href="#" data-repeat-notice-after="%6$s" class="astra-notice-close uagb-review-notice">
+								<a href="#" data-repeat-notice-after="%6$s" class="astra-notice-close uabb-review-notice">
 								%7$s
 								</a>
 							<span class="dashicons dashicons-smiley"></span>
-								<a href="#" class="astra-notice-close uagb-review-notice">
+								<a href="#" class="astra-notice-close uabb-review-notice">
 								%8$s
 								</a>
 							</div>
 						</div>',
 					$image_path,
 					__( 'Hello! Thank you for choosing the Ultimate Addon for Beaver Builder to build this website!', 'ultimate-addon-for-beaver-builder' ),
-					__( 'Would you please mind sharing your views and give it a 5 star rating on the WordPress repository?', 'ultimate-addons-for-gutenberg' ),
+					__( 'Would you please mind sharing your views and give it a 5 star rating on the WordPress repository?', 'ultimate-addon-for-beaver-builder' ),
 					'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/?filter=5',
 					__( 'Ok, you deserve it', 'ultimate-addon-for-beaver-builder' ),
 					MONTH_IN_SECONDS,
