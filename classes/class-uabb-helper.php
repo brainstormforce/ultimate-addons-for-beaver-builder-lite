@@ -608,7 +608,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 							if ( $uabb_post_count >= 5 ) {
 								break;
 							}
-							if ( isset( $layout_data[ $id ]->settings->type ) || 'flip-box' === $layout_data[ $id ]->settings->type || 'info-list' === $layout_data[ $id ]->settings->type || 'info-table' === $layout_data[ $id ]->settings->type || 'ribbon' === $layout_data[ $id ]->settings->type || 'slide-box' === $layout_data[ $id ]->settings->type || 'uabb-button' === $layout_data[ $id ]->settings->type || 'spacer-gap' === $layout_data[ $id ]->settings->type || 'image-separator' === $layout_data[ $id ]->settings->type || 'uabb-separator' === $layout_data[ $id ]->settings->type || 'image-icon' === $layout_data[ $id ]->settings->type ) {
+							if ( isset( $layout_data[ $id ]->settings->type ) || 'flip-box' === $layout_data[ $id ]->settings->type || 'info-list' === $layout_data[ $id ]->settings->type || 'info-table' === $layout_data[ $id ]->settings->type || 'ribbon' === $layout_data[ $id ]->settings->type || 'slide-box' === $layout_data[ $id ]->settings->type || 'uabb-button' === $layout_data[ $id ]->settings->type || 'spacer-gap' === $layout_data[ $id ]->settings->type || 'image-separator' === $layout_data[ $id ]->settings->type || 'uabb-separator' === $layout_data[ $id ]->settings->type || 'image-icon' === $layout_data[ $id ]->settings->type || 'uabb-heading' === $layout_data[ $id ]->settings->type ) {
 
 								$uabb_post_count++;
 							}
