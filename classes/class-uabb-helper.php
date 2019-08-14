@@ -595,9 +595,9 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 
 				global $wpdb;
 
-				$prepare_stat = $wpdb->prepare("SELECT spp.ID, spp.post_status, wppm.meta_key, wppm.meta_value FROM $wpdb->posts spp INNER JOIN $wpdb->postmeta wppm WHERE spp.ID = wppm.post_id AND spp.post_status = '%s' AND wppm.meta_key = %s AND ( wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR  wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s') LIMIT %d ", 'publish', '_fl_builder_data', '%uabb-advanced-menu%','%flip-box%', '%info-list%','%info-table%', '%ribbon%', '%slide-box%','%uabb-button%','%spacer-gap%','%image-separator%','%uabb-separator%', '%image-icon%','%uabb-heading%', 3 );
+				$get_posts = $wpdb->prepare("SELECT spp.ID, spp.post_status, wppm.meta_key, wppm.meta_value FROM $wpdb->posts spp INNER JOIN $wpdb->postmeta wppm WHERE spp.ID = wppm.post_id AND spp.post_status = '%s' AND wppm.meta_key = %s AND ( wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR  wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s' OR wppm.meta_value LIKE '%s') LIMIT %d ", 'publish', '_fl_builder_data', '%uabb-advanced-menu%','%flip-box%', '%info-list%','%info-table%', '%ribbon%', '%slide-box%','%uabb-button%','%spacer-gap%','%image-separator%','%uabb-separator%', '%image-icon%','%uabb-heading%', 3 );
 
-				$result = $wpdb->get_results( $prepare_stat );
+				$result = $wpdb->get_results( $get_posts );
 
 				if ( count( $result ) == 5 ) {
 

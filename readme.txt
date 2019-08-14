@@ -211,6 +211,8 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 4. /assets/screenshots/4.png
 
 == Changelog ==
+= 1.3.0.1 =
+* Improvement: Optimized database calls while displaying Five Star rating notice
 
 = 1.3.0 =
 * New: Added Typography field compatibility with Beaver Builder 2.2
