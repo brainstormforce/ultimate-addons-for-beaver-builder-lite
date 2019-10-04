@@ -423,7 +423,6 @@ FLBuilder::register_module(
 							'type'        => 'color',
 							'connections' => array( 'color' ),
 							'label'       => __( 'Heading Background Color', 'uabb' ),
-							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
 							'preview'     => array(
@@ -435,7 +434,7 @@ FLBuilder::register_module(
 						'heading_padding'       => array(
 							'type'       => 'dimension',
 							'label'      => __( 'Padding', 'uabb' ),
-							'slider'     => true,
+							'description' => 'px',
 							'responsive'  => array(
 								'placeholder' => array(
 									'default'    => '',
@@ -443,7 +442,6 @@ FLBuilder::register_module(
 									'responsive' => '',
 								),
 							),
-							'units'      => array( 'px' ),
 							'preview'    => array(
 								'type'      => 'css',
 								'selector'  => '.fl-module-content.fl-node-content .uabb-heading  .uabb-heading-text',
