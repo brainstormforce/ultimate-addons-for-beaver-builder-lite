@@ -90,7 +90,7 @@ class UABB_IconFonts {
 			@mkdir( $dst );
 		}
 
-		while ( false !== ( $file = readdir( $dir ) ) ) {
+		while ( false !== ( $file = readdir( $dir ) ) ) { // @codingStandardsIgnoreLine.
 			if ( ( '.' != $file ) && ( '..' != $file ) ) {
 				if ( is_dir( $src . '/' . $file ) ) {
 					$this->recurse_copy( $src . '/' . $file, $dst . '/' . $file );

@@ -27,4 +27,9 @@
 	<exclude-pattern>*/classes/library/batch-processing/*</exclude-pattern>
 	<exclude-pattern>*/classes/library/image-processing-queue/*</exclude-pattern>
 
+	<rule ref="PHPCompatibility">
+	 	<exclude name="WordPress.PHP.StrictComparisons.LooseComparison" />
+		<exclude name="WordPress.PHP.StrictInArray.MissingTrueStrict" />
+	</rule>
+
 </ruleset>
