@@ -219,7 +219,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 = 1.3.1 =
 * Improvement: Added Background Color and Padding setting options in Heading module.
-* Fixed: Info List - Non Numeric value notice for Spacing in rare cases
+* Fixed: Info List - Non Numeric value notice for Image Size in rare cases
 
 = 1.3.0 =
 * New: Added Typography field compatibility with Beaver Builder 2.2
