@@ -3,8 +3,8 @@
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Tags:** beaver builder, beaver builder free, beaver addons, beaver builder addon, beaver builder add ons, beaver builder lite, beaver builder modules, beaver builder addons, beaver builder extensions, beaver addon, beaver builder plugin, beaver builder wordpress  
 **Requires at least:** 4.6  
-**Tested up to:** 5.1.1
-**Stable tag:** 1.3.0
+**Tested up to:** 5.2.4
+**Stable tag:** 1.3.1
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -138,6 +138,11 @@ With the Ultimate Addons for Beaver Builder you get a collection of over 35+ cus
 	<li><a href="https://www.ultimatebeaver.com/modules/video-gallery/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Video Gallery</a>: Flaunt all your beautiful videos within the highly optimized video gallery Module of the Ultimate Addons for Beaver Builder.</li>
 	<li><a href="https://www.ultimatebeaver.com/modules/price-list/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Price List</a>: Simply drag and drop Price List module to design pixel-perfect menus, catalogs, product list or any other list of featured items Price List Module of the Ultimate Addons for Beaver Builder.</li>
 	<li><a href="https://www.ultimatebeaver.com/modules/marketing-button/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Marketing Button</a>: Create trending and appealing call-to-actions with the Ultimate Addon’s Marketing Button that lets you add additional text with a fully customizable button.</li>
+	<li><a href=https://www.ultimatebeaver.com/modules/particle-backgrounds/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Particle Backgrounds</a>: Add interactive row and column backgrounds with animated particles using Particles background of the Ultimate Addons.</li>
+	<li><a href=https://www.ultimatebeaver.com/modules/business-reviews/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Business Reviews</a>: Build trust and authority by fetching real reviews from Google and Yelp directly on to your website!.</li>
+	>
+	<li><a href=https://www.ultimatebeaver.com/modules/off-canvas/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Off-Canvas</a>: Display creative flyout panels with menus, additional content, reference links, forms, etc. in a responsive off-canvas panel built with Beaver Builder.</li>
+	<li><a href=https://www.ultimatebeaver.com/modules/wpforms-styler/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">WPForms Styler</a>: Display stylish and engaging WPForms with advanced styling options through Beaver Builder itself!.</li>
 </ul>
 <strong>Template Cloud with Page and Section Templates</strong>
 
