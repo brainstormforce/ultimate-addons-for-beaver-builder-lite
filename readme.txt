@@ -218,7 +218,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 == Changelog ==
 
 = 1.3.1 =
-* Improvement: Added Heading Background Color and Padding setting options in Heading module.
+* Improvement: Added Background Color and Padding setting options in Heading module.
 
 = 1.3.0 =
 * New: Added Typography field compatibility with Beaver Builder 2.2
