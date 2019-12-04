@@ -11,7 +11,7 @@ $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
 	$settings->title_color = UABB_Helper::uabb_colorpicker( $settings, 'color' );
 	$settings->desc_color  = UABB_Helper::uabb_colorpicker( $settings, 'desc_color' );
-	$settings->bg_color   = UABB_Helper::uabb_colorpicker( $settings, 'bg_color' );
+	$settings->bg_color    = UABB_Helper::uabb_colorpicker( $settings, 'bg_color' );
 
 	$settings->heading_margin_top    = ( '' !== trim( $settings->heading_margin_top ) ) ? $settings->heading_margin_top : '0';
 	$settings->heading_margin_bottom = ( '' !== trim( $settings->heading_margin_bottom ) ) ? $settings->heading_margin_bottom : '15';

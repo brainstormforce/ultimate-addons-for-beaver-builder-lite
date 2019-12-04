@@ -595,12 +595,12 @@ function uabb_theme_border( $default ) {
 	$border_width  = uabb_theme_button_border_width( '' );
 	$border_color  = uabb_theme_border_color( '' );
 	$border_radius = uabb_theme_button_border_radius( '' );
-	$border = array();
+	$border        = array();
 
 	if ( is_array( $default ) && ( ! empty( $default['style'] ) || ! empty( $default['color'] ) || ! empty( $default['width']['top'] ) || ! empty( $default['width']['bottom'] ) || ! empty( $default['width']['left'] ) || ! empty( $default['width']['right'] ) || ! empty( $default['radius']['top_left'] ) || ! empty( $default['radius']['top_right'] ) || ! empty( $default['radius']['bottom_left'] ) || ! empty( $default['radius']['bottom_right'] ) ) ) {
 
 		$border = $default;
-	} elseif ( is_object( $default ) &&  ( ! empty( $default->style ) || ! empty( $default->color ) || ! empty( $default->width->top ) || ! empty( $default->width->bottom ) || ! empty( $default->width->left ) || ! empty( $default->width->right ) || ! empty( $default->radius->top_left ) || ! empty( $default->radius->top_right ) || ! empty( $default->radius->bottom_left ) || ! empty( $default->radius->bottom_right ) ) ) {
+	} elseif ( is_object( $default ) && ( ! empty( $default->style ) || ! empty( $default->color ) || ! empty( $default->width->top ) || ! empty( $default->width->bottom ) || ! empty( $default->width->left ) || ! empty( $default->width->right ) || ! empty( $default->radius->top_left ) || ! empty( $default->radius->top_right ) || ! empty( $default->radius->bottom_left ) || ! empty( $default->radius->bottom_right ) ) ) {
 
 		$border = $default;
 
@@ -616,7 +616,7 @@ function uabb_theme_border( $default ) {
 			);
 		}
 
-		$border['color'] = ( ! empty( $border_color ) ) ? substr( $border_color, 1 )  : '';
+		$border['color'] = ( ! empty( $border_color ) ) ? substr( $border_color, 1 ) : '';
 
 		$border['style'] = 'solid';
 
@@ -629,7 +629,7 @@ function uabb_theme_border( $default ) {
 				'bottom_right' => $border_radius,
 			);
 		}
-	} 
+	}
 	return $border;
 }
 /**
@@ -641,26 +641,25 @@ function uabb_theme_border( $default ) {
  */
 function uabb_theme_button_typography( $default ) {
 
-	$typography = array();
-	$font_family = array(
-		'family' => '',
+	$typography     = array();
+	$font_family    = array(
+		'family'      => '',
 		'font_weight' => '',
 	);
-	$font_size = uabb_theme_button_font_size( '' );
-	$line_height = uabb_theme_button_line_height( '' );
+	$font_size      = uabb_theme_button_font_size( '' );
+	$line_height    = uabb_theme_button_line_height( '' );
 	$text_transform = uabb_theme_button_text_transform( '' );
-	$font_family = uabb_theme_button_font_family( $font_family );
+	$font_family    = uabb_theme_button_font_family( $font_family );
 
-	$typography['desktop-font_size'] = array();
-	$typography['desktop_font_family'] = array();
+	$typography['desktop-font_size']      = array();
+	$typography['desktop_font_family']    = array();
 	$typography['desktop_line_transform'] = array();
 
-
-	if ( is_array( $default ) && ( ( array_key_exists( 'font_family', $default ) && 'Default' !== $default['font_family'] ) || (array_key_exists( 'default', $default ) && 'default' !== $default['font_weight'] ) || ! empty( $default['font_size']['length'] ) || ! empty( $default['line_height']['length'] ) || ! empty( $default['text_transform'] ) ) ) {
+	if ( is_array( $default ) && ( ( array_key_exists( 'font_family', $default ) && 'Default' !== $default['font_family'] ) || ( array_key_exists( 'default', $default ) && 'default' !== $default['font_weight'] ) || ! empty( $default['font_size']['length'] ) || ! empty( $default['line_height']['length'] ) || ! empty( $default['text_transform'] ) ) ) {
 
 		$typography['desktop'] = $default;
 
-	} elseif ( ''!== $default && is_object( $default ) && ( property_exists( $default, 'font_family' ) && ( 'Default' !== $default->font_family ) ||( property_exists( $default, 'font_weight' ) && 'default' !== $default->font_weight ) || ! empty( $default->font_size->length ) || ! empty( $default->line_height->length ) || ! empty( $default->text_transform ) ) ) {
+	} elseif ( '' !== $default && is_object( $default ) && ( property_exists( $default, 'font_family' ) && ( 'Default' !== $default->font_family ) || ( property_exists( $default, 'font_weight' ) && 'default' !== $default->font_weight ) || ! empty( $default->font_size->length ) || ! empty( $default->line_height->length ) || ! empty( $default->text_transform ) ) ) {
 
 		$typography['desktop'] = $default;
 
@@ -671,21 +670,21 @@ function uabb_theme_button_typography( $default ) {
 			$typography['desktop-font_size'] = array(
 				'font_size' => array(
 					'length' => ( array_key_exists( 'desktop', $font_size ) && ! empty( $font_size['desktop'] ) ) ? $font_size['desktop'] : '',
-					'unit'	 => ( array_key_exists( 'desktop-unit', $font_size ) && ! empty( $font_size['desktop-unit'] ) ) ? $font_size['desktop-unit'] : '',
+					'unit'   => ( array_key_exists( 'desktop-unit', $font_size ) && ! empty( $font_size['desktop-unit'] ) ) ? $font_size['desktop-unit'] : '',
 				),
 			);
 
 			$typography['tablet'] = array(
 				'font_size' => array(
 					'length' => ( array_key_exists( 'tablet', $font_size ) && ! empty( $font_size['tablet'] ) ) ? $font_size['tablet'] : '',
-					'unit'	 => ( array_key_exists( 'tablet-unit', $font_size ) && ! empty( $font_size['tablet-unit'] ) ) ? $font_size['tablet-unit'] : '',
+					'unit'   => ( array_key_exists( 'tablet-unit', $font_size ) && ! empty( $font_size['tablet-unit'] ) ) ? $font_size['tablet-unit'] : '',
 				),
 			);
 
 			$typography['mobile'] = array(
 				'font_size' => array(
 					'length' => ( array_key_exists( 'mobile', $font_size ) && ! empty( $font_size['mobile'] ) ) ? $font_size['mobile'] : '',
-					'unit'	 => ( array_key_exists( 'mobile-unit', $font_size ) && ! empty( $font_size['mobile-unit'] ) ) ? $font_size['mobile-unit'] : '',
+					'unit'   => ( array_key_exists( 'mobile-unit', $font_size ) && ! empty( $font_size['mobile-unit'] ) ) ? $font_size['mobile-unit'] : '',
 				),
 			);
 		}
@@ -699,9 +698,9 @@ function uabb_theme_button_typography( $default ) {
 
 		$typography['desktop_line_transform'] = array(
 
-			'line_height' => array(
+			'line_height'    => array(
 				'length' => ( ! empty( $line_height ) ) ? $line_height : '',
-				'unit'	 => '',
+				'unit'   => '',
 			),
 			'text_transform' => ( ! empty( $text_transform ) ) ? $text_transform : '',
 		);
