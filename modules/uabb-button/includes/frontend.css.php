@@ -206,21 +206,21 @@ if ( ! $version_bb_check ) {
 		.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
 			<?php
 			if ( isset( $settings->button_border_style ) ) {
-				echo ( '' != $settings->button_border_style ) ? 'border-style:' . $settings->button_border_style . ';' : 'solid';
+				echo ( '' != $settings->button_border_style &&  'none' !== $settings->button_border_style ) ? 'border-style:' . $settings->button_border_style . ';' : 'border-style:solid;';
 			}
 			if ( isset( $settings->button_border_width ) && ! empty( $settings->button_border_width ) ) {
 				echo ( '' != $settings->button_border_width ) ? 'border-width:' . $settings->button_border_width . 'px;' : '';
 			} else {
 
-				$button_border_width = uabb_theme_button_border_radius( '' );
+				$border_width = uabb_theme_button_border_width( '' );
 
-				echo ( is_array( $border_width ) && array_key_exists( 'top', $border_width ) ) ? 'border-width-top:' . $border_width['top'] . 'px;' : '';
-				echo ( is_array( $border_width ) && array_key_exists( 'left', $border_width ) ) ? 'border-width-left:' . $border_width['left'] . 'px;' : '';
-				echo ( is_array( $border_width ) && array_key_exists( 'right', $border_width ) ) ? 'border-width-right:' . $border_width['right'] . 'px;' : '';
-				echo ( is_array( $border_width ) && array_key_exists( 'bottom', $border_width ) ) ? 'border-width-bottom:' . $border_width['bottom'] . 'px;' : '';
+				echo ( is_array( $border_width ) && array_key_exists( 'top', $border_width ) ) ? 'border-top-width:' . $border_width['top'] . 'px;' : '';
+				echo ( is_array( $border_width ) && array_key_exists( 'left', $border_width ) ) ? 'border-left-width:' . $border_width['left'] . 'px;' : '';
+				echo ( is_array( $border_width ) && array_key_exists( 'right', $border_width ) ) ? 'border-right-width:' . $border_width['right'] . 'px;' : '';
+				echo ( is_array( $border_width ) && array_key_exists( 'bottom', $border_width ) ) ? 'border-bottom-width:' . $border_width['bottom'] . 'px;' : '';
 			}
 			if ( isset( $settings->button_border_radius ) ) {
-				echo ( '' != $settings->button_border_radius ) ? 'border-radius:' . $settings->button_border_radius . 'px;' : 'border-radius:' . uabb_theme_button_border_radius( '' ) . 'px';
+				echo ( '' != $settings->button_border_radius ) ? 'border-radius:' . $settings->button_border_radius . 'px;' : 'border-radius:' . uabb_theme_button_border_radius( '' ) . 'px;';
 			}
 			if ( isset( $settings->button_border_color ) ) {
 				echo ( '' != $settings->button_border_color ) ? 'border-color:#' . $settings->button_border_color . ';' : 'border-color:' . uabb_theme_border_color( '' ) . ';';
@@ -324,7 +324,9 @@ if ( 'custom' == $settings->width && '' != $settings->custom_height ) :
 	<?php if ( 'transparent' != $settings->style && 'gradient' != $settings->style ) { ?>
 		background: <?php echo $settings->bg_hover_color; ?>;
 	<?php } ?>
-	border: <?php echo $border_size; ?>px solid <?php echo $border_hover_color; ?>;
+	<?php if ( 'default' !== $settings->style ) { ?>
+		border: <?php echo $border_size; ?>px solid <?php echo $border_hover_color; ?>;
+	<?php } ?>
 	<?php if ( 'gradient' == $settings->style ) : // Gradient. ?>
 	background: -moz-linear-gradient(top,  <?php echo $bg_hover_grad_start; ?> 0%, <?php echo $settings->bg_hover_color; ?> 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,<?php echo $bg_hover_grad_start; ?>), color-stop(100%,<?php echo $settings->bg_hover_color; ?>)); /* Chrome,Safari4+ */

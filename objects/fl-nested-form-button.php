@@ -285,7 +285,7 @@ if ( ! $version_bb_check ) {
 								),
 								'button_border_radius'     => array(
 									'type'        => 'unit',
-									'label'       => __( 'Border Width', 'uabb' ),
+									'label'       => __( 'Border Radius', 'uabb' ),
 									'placeholder' => '1',
 									'description' => 'px',
 									'maxlength'   => '2',
@@ -293,14 +293,14 @@ if ( ! $version_bb_check ) {
 									'preview'     => array(
 										'type'     => 'css',
 										'selector' => '.uabb-creative-button-wrap a',
-										'property' => 'border-width',
+										'property' => 'border-radius',
 										'unit'     => 'px',
 									),
 								),
 								'button_border_color'      => array(
 									'type'       => 'color',
 									'label'      => __( 'Border Color', 'uabb' ),
-									'default'    => 'cccccc',
+									'default'    => '',
 									'show_reset' => true,
 									'show_alpha' => true,
 									'preview'    => array(
@@ -312,7 +312,7 @@ if ( ! $version_bb_check ) {
 								'border_hover_color'       => array(
 									'type'       => 'color',
 									'label'      => __( 'Border Color', 'uabb' ),
-									'default'    => 'cccccc',
+									'default'    => '',
 									'show_reset' => true,
 									'show_alpha' => true,
 								),
