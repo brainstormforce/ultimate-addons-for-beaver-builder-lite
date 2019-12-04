@@ -93,7 +93,6 @@
             	form.find( "#fl-field-button_gradient" ).hide();
             	form.find( "#fl-field-button_gradient" ).hide();
             	form.find( "#fl-field-hover_attribute" ).hide();
-            	form.find( "#fl-field-width" ).show();
             	form.find('#fl-field-flat_button_options').hide();
             } else {
             	form.find("#fl-field-hover_attribute").hide();
