@@ -11,6 +11,18 @@ ob_start();
 /* Theme Button
 ------------------------------------------------------ */
 <?php $uabb_theme_btn_family = apply_filters( 'uabb/theme/button_font_family', '' ); // @codingStandardsIgnoreLine. ?>
+<?php 
+$font_size_array = array();
+$font_size = '';
+$font_size_unit ='';
+$font_size_array = uabb_theme_button_font_size( '' );
+if ( is_array( $font_size_array ) && ! empty( $font_size_array ) ) {
+
+$font_size = ( array_key_exists( 'desktop', $font_size_array ) && ! empty( $font_size_array['desktop'] ) ) ? $font_size_array['desktop'] : '';
+
+$font_size_unit = ( array_key_exists( 'desktop-unit', $font_size_array ) && ! empty( $font_size_array['desktop-unit'] ) ) ? $font_size_array['desktop-unit'] : '';
+}
+?>
 /*.fl-builder-content a.uabb-button,
 .fl-builder-content a.uabb-button:visited,
 .fl-builder-content a.uabb-creative-button,
@@ -27,8 +39,8 @@ ob_start();
 	font-weight: <?php echo $uabb_theme_btn_family['weight']; ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_font_size( '' ) != '' ) { ?>
-	font-size: <?php echo uabb_theme_button_font_size( '' ); ?>;
+	<?php if ( $font_size != '' ) { ?>
+	font-size: <?php echo $font_size . $font_size_unit; ?>;
 	<?php } ?>
 
 	<?php if ( uabb_theme_button_line_height( '' ) != '' ) { ?>
@@ -54,8 +66,8 @@ ob_start();
 	font-weight: <?php echo $uabb_theme_btn_family['weight']; ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_font_size( '' ) != '' ) { ?>
-	font-size: <?php echo uabb_theme_button_font_size( '' ); ?>;
+	<?php if ( $font_size != '' ) { ?>
+	font-size: <?php echo $font_size . $font_size_unit; ?>;
 	<?php } ?>
 
 	<?php if ( uabb_theme_button_line_height( '' ) != '' ) { ?>

@@ -492,7 +492,74 @@ function uabb_theme_button_border_radius( $default ) {
 
 	return $radius;
 }
+/**
+ * Provide option to override the element defaults from theme options.
+ *
+ * @param var $default Checks if user has set the radius, if yes, returns users value else checks
+ * for filtered value.
+ * @return string - width value
+ */
+function uabb_theme_button_border_width( $default ) {
+	$width = array();
 
+	if ( '' == $default ) {
+
+		$width = apply_filters( 'uabb_global_button_border_width', $default );
+
+		if ( '' == $width ) {
+			$width = apply_filters( 'uabb_theme_button_border_width', $default );
+		}
+	} else {
+		$width = $default;
+	}
+	return $width;
+}
+/**
+ * Provide option to override the element defaults from theme options.
+ *
+ * @param var $default Checks if user has set the color, if yes, returns users value else checks for
+ * filtered value.
+ * @return string - hex value for the border color
+ */
+function uabb_theme_border_color( $default ) {
+	$color = '';
+
+	if ( '' == $default ) {
+
+		$color = apply_filters( 'uabb_global_border_color', $default );
+
+		if ( '' == $color ) {
+			$color = apply_filters( 'uabb_theme_border_color', $default );
+		}
+	} else {
+		$color = $default;
+	}
+
+	return $color;
+}
+/**
+ * Provide option to override the element defaults from theme options.
+ *
+ * @param var $default Checks if user has set the color, if yes, returns users value else checks for
+ * filtered value.
+ * @return string - hex value for the border color
+ */
+function uabb_theme_border_hover_color( $default ) {
+	$color = '';
+
+	if ( '' == $default ) {
+
+		$color = apply_filters( 'uabb_global_border_hover_color', $default );
+
+		if ( '' == $color ) {
+			$color = apply_filters( 'uabb_theme_border_hover_color', $default );
+		}
+	} else {
+		$color = $default;
+	}
+
+	return $color;
+}
 /**
  * Provide option to parse a color code.
  *
@@ -516,4 +583,131 @@ function uabb_parse_color_to_hex( $code = '' ) {
 		}
 	}
 	return $color;
+}
+/**
+ * Provide option to parse a color code.
+ *
+ * @param var $code Returns a hex value for color from rgba or #hex color.
+ * @return string - hex value for the color
+ */
+function uabb_theme_border( $default ) {
+
+	$border_width  = uabb_theme_button_border_width( '' );
+	$border_color  = uabb_theme_border_color( '' );
+	$border_radius = uabb_theme_button_border_radius( '' );
+	$border = array();
+
+	if ( is_array( $default ) && ( ! empty( $default['style'] ) || ! empty( $default['color'] ) || ! empty( $default['width']['top'] ) || ! empty( $default['width']['bottom'] ) || ! empty( $default['width']['left'] ) || ! empty( $default['width']['right'] ) || ! empty( $default['radius']['top_left'] ) || ! empty( $default['radius']['top_right'] ) || ! empty( $default['radius']['bottom_left'] ) || ! empty( $default['radius']['bottom_right'] ) ) ) {
+
+		$border = $default;
+	} elseif ( is_object( $default ) &&  ( ! empty( $default->style ) || ! empty( $default->color ) || ! empty( $default->width->top ) || ! empty( $default->width->bottom ) || ! empty( $default->width->left ) || ! empty( $default->width->right ) || ! empty( $default->radius->top_left ) || ! empty( $default->radius->top_right ) || ! empty( $default->radius->bottom_left ) || ! empty( $default->radius->bottom_right ) ) ) {
+
+		$border = $default;
+
+	} else {
+
+		if ( is_array( $border_width ) && ! empty( $border_width ) ) {
+
+			$border['width'] = array(
+				'top'    => ( array_key_exists( 'top', $border_width ) ) ? $border_width['top'] : '',
+				'right'  => ( array_key_exists( 'right', $border_width ) ) ? $border_width['right'] : '',
+				'bottom' => ( array_key_exists( 'bottom', $border_width ) ) ? $border_width['bottom'] : '',
+				'left'   => ( array_key_exists( 'left', $border_width ) ) ? $border_width['left'] : '',
+			);
+		}
+
+		$border['color'] = ( ! empty( $border_color ) ) ? substr( $border_color, 1 )  : '';
+
+		$border['style'] = 'solid';
+
+		if ( ! empty( $border_radius ) ) {
+
+			$border['radius'] = array(
+				'top_left'     => $border_radius,
+				'top_right'    => $border_radius,
+				'bottom_left'  => $border_radius,
+				'bottom_right' => $border_radius,
+			);
+		}
+	} 
+	return $border;
+}
+/**
+ * Provide option to override the element defaults from theme options.
+ *
+ * @param var $default Checks if user has set the radius, if yes, returns users value else checks
+ * for filtered value.
+ * @return array - typography value
+ */
+function uabb_theme_button_typography( $default ) {
+
+	$typography = array();
+	$font_family = array(
+		'family' => '',
+		'font_weight' => '',
+	);
+	$font_size = uabb_theme_button_font_size( '' );
+	$line_height = uabb_theme_button_line_height( '' );
+	$text_transform = uabb_theme_button_text_transform( '' );
+	$font_family = uabb_theme_button_font_family( $font_family );
+
+	$typography['desktop-font_size'] = array();
+	$typography['desktop_font_family'] = array();
+	$typography['desktop_line_transform'] = array();
+
+
+	if ( is_array( $default ) && ( ( array_key_exists( 'font_family', $default ) && 'Default' !== $default['font_family'] ) || (array_key_exists( 'default', $default ) && 'default' !== $default['font_weight'] ) || ! empty( $default['font_size']['length'] ) || ! empty( $default['line_height']['length'] ) || ! empty( $default['text_transform'] ) ) ) {
+
+		$typography['desktop'] = $default;
+
+	} elseif ( ''!== $default && is_object( $default ) && ( property_exists( $default, 'font_family' ) && ( 'Default' !== $default->font_family ) ||( property_exists( $default, 'font_weight' ) && 'default' !== $default->font_weight ) || ! empty( $default->font_size->length ) || ! empty( $default->line_height->length ) || ! empty( $default->text_transform ) ) ) {
+
+		$typography['desktop'] = $default;
+
+	} else {
+
+		if ( ! empty( $font_size ) && is_array( $font_size ) ) {
+
+			$typography['desktop-font_size'] = array(
+				'font_size' => array(
+					'length' => ( array_key_exists( 'desktop', $font_size ) && ! empty( $font_size['desktop'] ) ) ? $font_size['desktop'] : '',
+					'unit'	 => ( array_key_exists( 'desktop-unit', $font_size ) && ! empty( $font_size['desktop-unit'] ) ) ? $font_size['desktop-unit'] : '',
+				),
+			);
+
+			$typography['tablet'] = array(
+				'font_size' => array(
+					'length' => ( array_key_exists( 'tablet', $font_size ) && ! empty( $font_size['tablet'] ) ) ? $font_size['tablet'] : '',
+					'unit'	 => ( array_key_exists( 'tablet-unit', $font_size ) && ! empty( $font_size['tablet-unit'] ) ) ? $font_size['tablet-unit'] : '',
+				),
+			);
+
+			$typography['mobile'] = array(
+				'font_size' => array(
+					'length' => ( array_key_exists( 'mobile', $font_size ) && ! empty( $font_size['mobile'] ) ) ? $font_size['mobile'] : '',
+					'unit'	 => ( array_key_exists( 'mobile-unit', $font_size ) && ! empty( $font_size['mobile-unit'] ) ) ? $font_size['mobile-unit'] : '',
+				),
+			);
+		}
+		if ( ! empty( $font_family ) && is_array( $font_family ) ) {
+
+			$typography['desktop_font_family'] = array(
+				'font_family' => ( array_key_exists( 'family', $font_family ) && ! empty( $font_family['family'] ) ) ? $font_family['family'] : '',
+				'font_weight' => ( array_key_exists( 'weight', $font_family ) && ! empty( $font_family['weight'] ) ) ? $font_family['weight'] : '',
+			);
+		}
+
+		$typography['desktop_line_transform'] = array(
+
+			'line_height' => array(
+				'length' => ( ! empty( $line_height ) ) ? $line_height : '',
+				'unit'	 => '',
+			),
+			'text_transform' => ( ! empty( $text_transform ) ) ? $text_transform : '',
+		);
+
+		$typography['desktop'] = array_merge( $typography['desktop-font_size'], $typography['desktop_font_family'], $typography['desktop_line_transform'] );
+	}
+
+	return $typography;
 }
