@@ -650,6 +650,7 @@ function uabb_theme_button_typography( $default ) {
 	$line_height    = uabb_theme_button_line_height( '' );
 	$text_transform = uabb_theme_button_text_transform( '' );
 	$font_family    = uabb_theme_button_font_family( $font_family );
+	$letter_spacing = uabb_theme_button_letter_spacing( '' );
 
 	$typography['desktop-font_size']      = array();
 	$typography['desktop_font_family']    = array();
@@ -703,6 +704,10 @@ function uabb_theme_button_typography( $default ) {
 				'unit'   => '',
 			),
 			'text_transform' => ( ! empty( $text_transform ) ) ? $text_transform : '',
+			'letter_spacing' => array(
+				'length' => ( ! empty( $letter_spacing ) ) ? $letter_spacing : '',
+				'unit'   => 'px',
+			),
 		);
 
 		$typography['desktop'] = array_merge( $typography['desktop-font_size'], $typography['desktop_font_family'], $typography['desktop_line_transform'] );
