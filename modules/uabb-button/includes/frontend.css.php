@@ -132,7 +132,15 @@ if ( ! $version_bb_check ) {
 			padding-right: <?php echo $padding_left_right; ?>px;
 			<?php
 		} else {
-			echo 'padding:' . uabb_theme_button_padding( '' ) . ';';
+			if ( is_array( uabb_theme_button_padding( '' ) ) ) {
+
+				echo 'padding-top:' . uabb_theme_padding_button( 'desktop', 'top' ) . ';';
+				echo 'padding-left:' . uabb_theme_padding_button( 'desktop', 'left' ) . ';';
+				echo 'padding-bottom:' . uabb_theme_padding_button( 'desktop', 'bottom' ) . ';';
+				echo 'padding-right:' . uabb_theme_padding_button( 'desktop', 'right' ) . ';';
+			} else {
+				echo 'padding:' . uabb_theme_button_padding( '' ) . ';';
+			}
 		}
 
 		$settings->border_radius = uabb_theme_button_border_radius( $settings->border_radius );
@@ -184,16 +192,16 @@ if ( ! $version_bb_check ) {
 	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
 		<?php
 		if ( isset( $settings->button_padding_dimension_top ) ) {
-			echo ( '' != $settings->button_padding_dimension_top ) ? 'padding-top:' . $settings->button_padding_dimension_top . 'px;' : 'padding-top:' . uabb_theme_button_vertical_padding( '' ) . 'px;';
+			echo ( '' != $settings->button_padding_dimension_top ) ? 'padding-top:' . $settings->button_padding_dimension_top . 'px;' : 'padding-top:' . uabb_theme_padding_button( 'desktop', 'top' ) . ';';
 		}
 		if ( isset( $settings->button_padding_dimension_bottom ) ) {
-			echo ( '' != $settings->button_padding_dimension_bottom ) ? 'padding-bottom:' . $settings->button_padding_dimension_bottom . 'px;' : 'padding-bottom:' . uabb_theme_button_vertical_padding( '' ) . 'px;';
+			echo ( '' != $settings->button_padding_dimension_bottom ) ? 'padding-bottom:' . $settings->button_padding_dimension_bottom . 'px;' : 'padding-bottom:' . uabb_theme_padding_button( 'desktop', 'bottom' ) . ';';
 		}
 		if ( isset( $settings->button_padding_dimension_left ) ) {
-			echo ( '' != $settings->button_padding_dimension_left ) ? 'padding-left:' . $settings->button_padding_dimension_left . 'px;' : 'padding-left:' . uabb_theme_button_horizontal_padding( '' ) . 'px;';
+			echo ( '' != $settings->button_padding_dimension_left ) ? 'padding-left:' . $settings->button_padding_dimension_left . 'px;' : 'padding-left:' . uabb_theme_padding_button( 'desktop', 'left' ) . ';';
 		}
 		if ( isset( $settings->button_padding_dimension_right ) ) {
-			echo ( '' != $settings->button_padding_dimension_right ) ? 'padding-right:' . $settings->button_padding_dimension_right . 'px;' : 'padding-right:' . uabb_theme_button_horizontal_padding( '' ) . 'px;';
+			echo ( '' != $settings->button_padding_dimension_right ) ? 'padding-right:' . $settings->button_padding_dimension_right . 'px;' : 'padding-right:' . uabb_theme_padding_button( 'desktop', 'right' ) . ';';
 		}
 		if ( isset( $settings->bg_color ) ) {
 			echo ( '' != $settings->bg_color ) ? 'background:' . $settings->bg_color . ';' : '';
@@ -356,16 +364,16 @@ if ( $global_settings->responsive_enabled ) :
 			.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
 				<?php 
 				if ( isset( $settings->button_padding_dimension_top_medium  ) ) {
-					echo ( '' != $settings->button_padding_dimension_top_medium ) ? 'padding-top:' . $settings->button_padding_dimension_top_medium . 'px;' : 'padding-top:' . uabb_theme_button_vertical_padding( '' ) . 'px;';
+					echo ( '' != $settings->button_padding_dimension_top_medium ) ? 'padding-top:' . $settings->button_padding_dimension_top_medium . 'px;' : 'padding-top:' . uabb_theme_padding_button( 'tablet', 'top' ) . ';';
 				}
 				if ( isset( $settings->button_padding_dimension_bottom_medium ) ) {
-					echo ( '' != $settings->button_padding_dimension_bottom_medium ) ? 'padding-bottom:' . $settings->button_padding_dimension_bottom_medium . 'px;' : 'padding-bottom:' . uabb_theme_button_vertical_padding( '' ) . 'px;';
+					echo ( '' != $settings->button_padding_dimension_bottom_medium ) ? 'padding-bottom:' . $settings->button_padding_dimension_bottom_medium . 'px;' : 'padding-bottom:' . uabb_theme_padding_button( 'tablet', 'bottom' ) . ';';
 				}
 				if ( isset( $settings->button_padding_dimension_left_medium ) ) {
-					echo ( '' != $settings->button_padding_dimension_left_medium ) ? 'padding-left:' . $settings->button_padding_dimension_left_medium . 'px;' : 'padding-left:' . uabb_theme_button_horizontal_padding( '' ) . 'px;';
+					echo ( '' != $settings->button_padding_dimension_left_medium ) ? 'padding-left:' . $settings->button_padding_dimension_left_medium . 'px;' : 'padding-left:' . uabb_theme_padding_button( 'tablet', 'left' ) . ';';
 				}
 				if ( isset( $settings->button_padding_dimension_right_medium ) ) {
-					echo ( '' != $settings->button_padding_dimension_right_medium ) ? 'padding-right:' . $settings->button_padding_dimension_right_medium . 'px;' : 'padding-right:' . uabb_theme_button_horizontal_padding( '' ) . 'px;';
+					echo ( '' != $settings->button_padding_dimension_right_medium ) ? 'padding-right:' . $settings->button_padding_dimension_right_medium . 'px;' : 'padding-right:' . uabb_theme_padding_button( 'tablet', 'right' ) . ';';
 				} 
 				?> 
 			}
@@ -380,16 +388,16 @@ if ( $global_settings->responsive_enabled ) :
 			.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
 				<?php 
 				if ( isset( $settings->button_padding_dimension_top_responsive  ) ) {
-					echo ( '' != $settings->button_padding_dimension_top_responsive ) ? 'padding-top:' . $settings->button_padding_dimension_top_responsive . 'px;' : 'padding-top:' . uabb_theme_button_vertical_padding( '' ) . 'px;';
+					echo ( '' != $settings->button_padding_dimension_top_responsive ) ? 'padding-top:' . $settings->button_padding_dimension_top_responsive . 'px;' : 'padding-top:' . uabb_theme_padding_button( 'mobile', 'top' ) . ';';
 				}
 				if ( isset( $settings->button_padding_dimension_bottom_responsive ) ) {
-					echo ( '' != $settings->button_padding_dimension_bottom_responsive ) ? 'padding-bottom:' . $settings->button_padding_dimension_bottom_responsive . 'px;' : 'padding-bottom:' . uabb_theme_button_vertical_padding( '' ) . 'px;';
+					echo ( '' != $settings->button_padding_dimension_bottom_responsive ) ? 'padding-bottom:' . $settings->button_padding_dimension_bottom_responsive . 'px;' : 'padding-bottom:' . uabb_theme_padding_button( 'mobile', 'bottom' ) . 'px;';
 				}
 				if ( isset( $settings->button_padding_dimension_left_responsive ) ) {
-					echo ( '' != $settings->button_padding_dimension_left_responsive ) ? 'padding-left:' . $settings->button_padding_dimension_left_responsive . 'px;' : 'padding-left:' . uabb_theme_button_horizontal_padding( '' ) . 'px;';
+					echo ( '' != $settings->button_padding_dimension_left_responsive ) ? 'padding-left:' . $settings->button_padding_dimension_left_responsive . 'px;' : 'padding-left:' . uabb_theme_padding_button( 'mobile', 'left' ) . 'px;';
 				}
 				if ( isset( $settings->button_padding_dimension_right_responsive ) ) {
-					echo ( '' != $settings->button_padding_dimension_right_responsive ) ? 'padding-right:' . $settings->button_padding_dimension_right_responsive . 'px;' : 'padding-right:' . uabb_theme_button_horizontal_padding( '' ) . 'px;';
+					echo ( '' != $settings->button_padding_dimension_right_responsive ) ? 'padding-right:' . $settings->button_padding_dimension_right_responsive . 'px;' : 'padding-right:' . uabb_theme_padding_button( 'mobile', 'right' ) . 'px;';
 				} 
 				?> 
 			}

@@ -715,3 +715,21 @@ function uabb_theme_button_typography( $default ) {
 
 	return $typography;
 }
+function uabb_theme_padding_button( $mode, $value ) {
+
+	$padding = uabb_theme_button_padding( '' );
+
+	$new_padding = '';
+
+	$unit = $mode . '-unit';
+
+	if ( is_array( $padding ) && array_key_exists( $mode, $padding ) && array_key_exists( $value, $padding[$mode] ) ) {
+
+		$padding_unit = array_key_exists( $unit, $padding ) ? $padding[$unit] : 'px;';
+
+		$new_padding = $padding[$mode][$value] . $padding[$unit]; 
+	}
+	
+	return $new_padding;
+}
+
