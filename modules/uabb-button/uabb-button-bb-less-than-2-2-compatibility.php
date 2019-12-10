@@ -70,11 +70,11 @@ FLBuilder::register_module(
 							'default' => 'default',
 							'class'   => 'creative_button_styles',
 							'options' => array(
+								'default'     => __( 'Default', 'uabb' ),
 								'flat'        => __( 'Flat', 'uabb' ),
 								'gradient'    => __( 'Gradient', 'uabb' ),
 								'transparent' => __( 'Transparent', 'uabb' ),
 								'threed'      => __( '3D', 'uabb' ),
-								'default'     => __( 'Default', 'uabb' ),
 							),
 						),
 						'border_size'                => array(
