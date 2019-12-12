@@ -390,9 +390,9 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 			}
 		<?php } ?>
 
-		<?php if ( '' != $settings->btn_text_hover_color ) { ?>
+		<?php if ( isset( $settings->btn_text_hover_color ) ) { ?>
 		.fl-node-<?php echo $id; ?> .info-table-wrap .info-table-button a:hover {
-			color: <?php echo $settings->btn_text_hover_color; ?>;
+			color: <?php echo uabb_theme_button_text_hover_color( $settings->btn_text_hover_color ) ; ?>;
 		}
 		<?php } if ( isset( $settings->btn_bg_hover_color ) ) { ?>
 			.fl-node-<?php echo $id; ?> .info-table-wrap .info-table-button a:hover {
