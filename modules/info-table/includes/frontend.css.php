@@ -390,11 +390,14 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 			}
 		<?php } ?>
 
-		<?php if ( '' != $settings->btn_text_hover_color || '' != $settings->btn_bg_hover_color ) { ?>
+		<?php if ( '' != $settings->btn_text_hover_color ) { ?>
 		.fl-node-<?php echo $id; ?> .info-table-wrap .info-table-button a:hover {
 			color: <?php echo $settings->btn_text_hover_color; ?>;
-			background: <?php echo $settings->btn_bg_hover_color; ?>;
 		}
+		<?php } if ( isset( $settings->btn_bg_hover_color ) ) { ?>
+			.fl-node-<?php echo $id; ?> .info-table-wrap .info-table-button a:hover {
+				background:<?php echo uabb_theme_button_bg_hover_color( $settings->btn_bg_hover_color ); ?>
+			}
 		<?php } ?>
 
 		<?php if ( 'design01' == $settings->box_design ) { ?>
@@ -626,11 +629,13 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 				border-radius: <?php echo ( '' != $settings->btn_radius ) ? $settings->btn_radius : '3'; ?>px;
 			}
 		<?php } ?>
-
-		<?php if ( '' != $settings->btn_text_hover_color || '' != $settings->btn_bg_hover_color ) { ?>
+		<?php if ( '' != $settings->btn_text_hover_color ) { ?>
 			.fl-node-<?php echo $id; ?> .info-table-wrap .info-table-button a:hover {
 				color: <?php echo $settings->btn_text_hover_color; ?>;
-				background: <?php echo $settings->btn_bg_hover_color; ?>;
+			}
+		<?php } if ( isset( $settings->btn_bg_hover_color ) ) { ?>
+			.fl-node-<?php echo $id; ?> .info-table-wrap .info-table-button a:hover {
+				background:<?php echo uabb_theme_button_bg_hover_color( $settings->btn_bg_hover_color ); ?>
 			}
 		<?php } ?>
 

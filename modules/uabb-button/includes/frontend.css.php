@@ -391,13 +391,13 @@ if ( $global_settings->responsive_enabled ) :
 					echo ( '' != $settings->button_padding_dimension_top_responsive ) ? 'padding-top:' . $settings->button_padding_dimension_top_responsive . 'px;' : 'padding-top:' . uabb_theme_padding_button( 'mobile', 'top' ) . ';';
 				}
 				if ( isset( $settings->button_padding_dimension_bottom_responsive ) ) {
-					echo ( '' != $settings->button_padding_dimension_bottom_responsive ) ? 'padding-bottom:' . $settings->button_padding_dimension_bottom_responsive . 'px;' : 'padding-bottom:' . uabb_theme_padding_button( 'mobile', 'bottom' ) . 'px;';
+					echo ( '' != $settings->button_padding_dimension_bottom_responsive ) ? 'padding-bottom:' . $settings->button_padding_dimension_bottom_responsive . 'px;' : 'padding-bottom:' . uabb_theme_padding_button( 'mobile', 'bottom' ) . ';';
 				}
 				if ( isset( $settings->button_padding_dimension_left_responsive ) ) {
-					echo ( '' != $settings->button_padding_dimension_left_responsive ) ? 'padding-left:' . $settings->button_padding_dimension_left_responsive . 'px;' : 'padding-left:' . uabb_theme_padding_button( 'mobile', 'left' ) . 'px;';
+					echo ( '' != $settings->button_padding_dimension_left_responsive ) ? 'padding-left:' . $settings->button_padding_dimension_left_responsive . 'px;' : 'padding-left:' . uabb_theme_padding_button( 'mobile', 'left' ) . ';';
 				}
 				if ( isset( $settings->button_padding_dimension_right_responsive ) ) {
-					echo ( '' != $settings->button_padding_dimension_right_responsive ) ? 'padding-right:' . $settings->button_padding_dimension_right_responsive . 'px;' : 'padding-right:' . uabb_theme_padding_button( 'mobile', 'right' ) . 'px;';
+					echo ( '' != $settings->button_padding_dimension_right_responsive ) ? 'padding-right:' . $settings->button_padding_dimension_right_responsive . 'px;' : 'padding-right:' . uabb_theme_padding_button( 'mobile', 'right' ) . ';';
 				} 
 				?> 
 			}
