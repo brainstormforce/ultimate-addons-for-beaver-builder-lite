@@ -652,6 +652,7 @@ function uabb_theme_button_typography( $default ) {
 	$font_family    = uabb_theme_button_font_family( $font_family );
 	$letter_spacing = uabb_theme_button_letter_spacing( '' );
 
+
 	$typography['desktop-font_size']      = array();
 	$typography['desktop_font_family']    = array();
 	$typography['desktop_line_transform'] = array();
@@ -711,8 +712,10 @@ function uabb_theme_button_typography( $default ) {
 		);
 
 		$typography['desktop'] = array_merge( $typography['desktop-font_size'], $typography['desktop_font_family'], $typography['desktop_line_transform'] );
+		unset( $typography['desktop-font_size'] );
+		unset( $typography['desktop_font_family'] );
+		unset( $typography['desktop_line_transform'] );
 	}
-
 	return $typography;
 }
 function uabb_theme_padding_button( $mode, $value ) {
