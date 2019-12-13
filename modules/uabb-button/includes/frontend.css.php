@@ -135,15 +135,7 @@ if ( ! $version_bb_check ) {
 			padding-right: <?php echo $padding_left_right; ?>px;
 			<?php
 		} else {
-			if ( is_array( uabb_theme_button_padding( '' ) ) ) {
-
-				echo 'padding-top:' . uabb_theme_padding_button( 'desktop', 'top' ) . ';';
-				echo 'padding-left:' . uabb_theme_padding_button( 'desktop', 'left' ) . ';';
-				echo 'padding-bottom:' . uabb_theme_padding_button( 'desktop', 'bottom' ) . ';';
-				echo 'padding-right:' . uabb_theme_padding_button( 'desktop', 'right' ) . ';';
-			} else {
-				echo 'padding:' . uabb_theme_button_padding( '' ) . ';';
-			}
+			echo 'padding:' . uabb_theme_button_padding( '' ) . ';';
 		}
 
 		$settings->border_radius = uabb_theme_button_border_radius( $settings->border_radius );
@@ -206,9 +198,6 @@ if ( ! $version_bb_check ) {
 		if ( isset( $settings->button_padding_dimension_right ) ) {
 			echo ( '' != $settings->button_padding_dimension_right ) ? 'padding-right:' . $settings->button_padding_dimension_right . 'px;' : 'padding-right:' . uabb_theme_padding_button( 'desktop', 'right' ) . ';';
 		}
-		if ( isset( $settings->bg_color ) ) {
-			echo ( '' != $settings->bg_color ) ? 'background:' . uabb_theme_default_button_bg_color( $settings->bg_color ) . ';' : '';
-		}
 		?>
 		 
 	}
@@ -254,11 +243,16 @@ if ( ! $version_bb_check ) {
 		}
 	}
 	?>
+	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
+	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+		background: <?php echo uabb_theme_default_button_bg_color( $settings->bg_color );?>;
+
+	}
 	.fl-node-<?php echo $id; ?> .uabb-module-content.uabb-creative-button-wrap a:hover {
 		<?php echo ( '' != $settings->border_hover_color ) ? 'border-color:#' . $settings->border_hover_color . ';' : 'border-color:' . uabb_theme_border_hover_color( '' ) . ';'; ?>
 	}
 	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:hover {
-		<?php echo ( '' != $settings->bg_hover_color ) ? 'background:' . uabb_theme_default_button_bg_hover_color( $settings->bg_hover_color ) . ';' : ''; ?>
+		background:<?php echo uabb_theme_default_button_bg_hover_color( $settings->bg_hover_color ); ?>;
 	}
 	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
 	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a *,

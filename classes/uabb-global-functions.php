@@ -576,10 +576,33 @@ function uabb_theme_button_padding( $default ) {
 		$padding = apply_filters( 'uabb/global/button_padding', $default );// @codingStandardsIgnoreLine.
 
 		if ( '' == $padding ) {
-			$padding = apply_filters( 'uabb_theme_button_padding', $default );// @codingStandardsIgnoreLine.
+			$padding = apply_filters( 'uabb/theme/button_padding', $default );// @codingStandardsIgnoreLine.
 			if ( '' == $padding ) {
 				$padding = '12px 24px';
 			}
+		}
+	} else {
+		$padding = $default;
+	}
+
+	return $padding;
+}
+/**
+ * Provide option to override the element defaults from theme options.
+ *
+ * @param var $default Checks if user has set the color, if yes, returns users value else checks
+ * for filtered value.
+ * @return string - padding value
+ */
+function uabb_theme_default_button_padding( $default ) {
+	$padding = '';
+
+	if ( '' == $default ) {
+
+		$padding = apply_filters( 'uabb/global/button_padding', $default );// @codingStandardsIgnoreLine.
+
+		if ( '' == $padding ) {
+			$padding = apply_filters( 'uabb_theme_default_button_padding', $default );// @codingStandardsIgnoreLine.
 		}
 	} else {
 		$padding = $default;
@@ -894,7 +917,7 @@ function uabb_theme_button_typography( $default ) {
 }
 function uabb_theme_padding_button( $mode, $value ) {
 
-	$padding = uabb_theme_button_padding( '' );
+	$padding = uabb_theme_default_button_padding( '' );
 
 	$new_padding = '';
 
