@@ -100,11 +100,14 @@ if ( ! $version_bb_check ) {
 	}
 	<?php
 } else {
-	$button_typo = uabb_theme_button_typography( $settings->button_typo );
+	if ( 'default' === $settings->style ) {
 
-	$settings->button_typo            = ( array_key_exists( 'desktop', $button_typo ) ) ? $button_typo['desktop'] : $settings->button_typo;
-	$settings->button_typo_medium     = ( array_key_exists( 'tablet', $button_typo ) ) ? $button_typo['tablet'] : $settings->button_typo_medium;
-	$settings->button_typo_responsive = ( array_key_exists( 'mobile', $button_typo ) ) ? $button_typo['mobile'] : $settings->button_typo_responsive;
+		$button_typo = uabb_theme_button_typography( $settings->button_typo );
+
+		$settings->button_typo            = ( array_key_exists( 'desktop', $button_typo ) ) ? $button_typo['desktop'] : $settings->button_typo;
+		$settings->button_typo_medium     = ( array_key_exists( 'tablet', $button_typo ) ) ? $button_typo['tablet'] : $settings->button_typo_medium;
+		$settings->button_typo_responsive = ( array_key_exists( 'mobile', $button_typo ) ) ? $button_typo['mobile'] : $settings->button_typo_responsive;
+	}
 
 	if ( class_exists( 'FLBuilderCSS' ) ) {
 		FLBuilderCSS::typography_field_rule(
@@ -186,7 +189,7 @@ if ( ! $version_bb_check ) {
 	}
 	<?php
 } else {
-	$padding_top_bottom = ( isset( $settings->button_padding_dimension_top ) && '' != $settings->button_padding_dimension_top ) ? $settings->button_padding_dimension_top : uabb_theme_button_vertical_padding( '' );
+	$padding_top_bottom = ( isset( $settings->button_padding_dimension_top ) && '' != $settings->button_padding_dimension_top ) ? $settings->button_padding_dimension_top : uabb_theme_padding_button( 'desktop', 'top' );
 	?>
 	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
 	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
