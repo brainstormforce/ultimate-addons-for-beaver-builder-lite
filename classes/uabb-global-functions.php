@@ -399,7 +399,28 @@ function uabb_theme_button_bg_color( $default ) {
 
 	return $color;
 }
+/**
+ * Provide option to override the element defaults from theme options.
+ *
+ * @param var $default Checks if user has set the color, if yes, returns users value else checks for filtered value.
+ * @return string - hex value for the color
+ */
+function uabb_theme_default_button_bg_color( $default ) {
+	$color = '';
 
+	if ( '' == $default ) {
+
+		$color = apply_filters( 'uabb/global/button_bg_color', $default );// @codingStandardsIgnoreLine.
+
+		if ( '' == $color ) {
+			$color = apply_filters( 'uabb_theme_default_button_bg_color', $default );
+		}
+	} else {
+		$color = $default;
+	}
+
+	return $color;
+}
 /**
  * Provide option to override the element defaults from theme options.
  *
@@ -423,7 +444,29 @@ function uabb_theme_button_bg_hover_color( $default ) {
 
 	return $color;
 }
+/**
+ * Provide option to override the element defaults from theme options.
+ *
+ * @param var $default Checks if user has set the color, if yes, returns users value else checks
+ * for filtered value.
+ * @return string - hex value for the color
+ */
+function uabb_theme_default_button_bg_hover_color( $default ) {
+	$color = '';
 
+	if ( '' == $default ) {
+
+		$color = apply_filters( 'uabb/global/button_bg_hover_color', $default );// @codingStandardsIgnoreLine.
+
+		if ( '' == $color ) {
+			$color = apply_filters( 'uabb_theme_default_button_bg_hover_color', $default );
+		}
+	} else {
+		$color = $default;
+	}
+
+	return $color;
+}
 /**
  * Provide option to override the element defaults from theme options.
  *
@@ -447,7 +490,29 @@ function uabb_theme_button_text_color( $default ) {
 
 	return $color;
 }
+/**
+ * Provide option to override the element defaults from theme options.
+ *
+ * @param var $default Checks if user has set the color, if yes, returns users value else checks
+ * for filtered value.
+ * @return string - hex value for the color
+ */
+function uabb_theme_default_button_text_color( $default ) {
+	$color = '';
 
+	if ( '' == $default ) {
+
+		$color = apply_filters( 'uabb_global_default_button_text_color', $default );// @codingStandardsIgnoreLine.
+
+		if ( '' == $color ) {
+			$color = apply_filters( 'uabb_theme_default_button_text_color', $default );
+		}
+	} else {
+		$color = $default;
+	}
+
+	return $color;
+}
 /**
  * Provide option to override the element defaults from theme options.
  *
@@ -472,7 +537,30 @@ function uabb_theme_button_text_hover_color( $default ) {
 
 	return $color;
 }
+/**
+ * Provide option to override the element defaults from theme options.
+ *
+ * @param var $default Checks if user has set the color, if yes, returns users value else checks
+ * for filtered value.
+ *
+ * @return string - hex value for the color
+ */
+function uabb_theme_default_button_text_hover_color( $default ) {
+	$color = '';
 
+	if ( '' == $default ) {
+
+		$color = apply_filters( 'uabb_global_default_button_text_hover_color', $default );// @codingStandardsIgnoreLine.
+
+		if ( '' == $color ) {
+			$color = apply_filters( 'uabb_theme_default_button_text_hover_color', $default );
+		}
+	} else {
+		$color = $default;
+	}
+
+	return $color;
+}
 /**
  * Provide option to override the element defaults from theme options.
  *
