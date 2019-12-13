@@ -220,7 +220,29 @@ function uabb_theme_button_font_size( $default ) {
 
 	return $font_size;
 }
+/**
+ * Button Font Size
+ *
+ * @param var $default Checks if the user has set Font Size values.
+ */
+function uabb_theme_default_button_font_size( $default ) {
+	$font_size = '';
 
+	if ( '' == $default ) {
+
+		$font_size = apply_filters( 'uabb_global_default_button_font_size', $default );// @codingStandardsIgnoreLine.
+
+		if ( '' == $font_size ) {
+			$font_size = apply_filters( 'uabb_theme_default_button_font_size', $default );
+		} else {
+			$font_size = $font_size . 'px';
+		}
+	} else {
+		$font_size = $default;
+	}
+
+	return $font_size;
+}
 /**
  * Button Line Height
  *
@@ -244,7 +266,29 @@ function uabb_theme_button_line_height( $default ) {
 
 	return $line_height;
 }
+/**
+ * Button Line Height
+ *
+ * @param var $default Checks if the user has set text transform values.
+ */
+function uabb_theme_default_button_line_height( $default ) {
+	$line_height = '';
 
+	if ( '' == $default ) {
+
+		$line_height = apply_filters( 'uabb_global_default_button_line_height', $default );// @codingStandardsIgnoreLine.
+
+		if ( '' == $line_height ) {
+			$line_height = apply_filters( 'uabb_theme_default_button_line_height', $default );
+		} else {
+			$line_height = $line_height . 'px';
+		}
+	} else {
+		$line_height = $default;
+	}
+
+	return $line_height;
+}
 /**
  * Button Letter Spacing
  *
@@ -268,7 +312,29 @@ function uabb_theme_button_letter_spacing( $default ) {
 
 	return $letter_spacing;
 }
+/**
+ * Button Letter Spacing
+ *
+ * @param var $default Checks if the user has set letter spacing values.
+ */
+function uabb_theme_default_button_letter_spacing( $default ) {
+	$letter_spacing = '';
 
+	if ( '' == $default ) {
+
+		$letter_spacing = apply_filters( 'uabb_global_default_button_letter_spacing', $default );// @codingStandardsIgnoreLine.
+
+		if ( '' == $letter_spacing ) {
+			$letter_spacing = apply_filters( 'uabb_theme_default_button_letter_spacing', $default );
+		} else {
+			$letter_spacing = $letter_spacing . 'px';
+		}
+	} else {
+		$letter_spacing = $default;
+	}
+
+	return $letter_spacing;
+}
 /**
  * Button Text Transform
  *
@@ -290,7 +356,27 @@ function uabb_theme_button_text_transform( $default ) {
 
 	return $text_transform;
 }
+/**
+ * Button Text Transform
+ *
+ * @param var $default Checks if the user has set text transform values.
+ */
+function uabb_theme_default_button_text_transform( $default ) {
+	$text_transform = '';
 
+	if ( '' == $default ) {
+
+		$text_transform = apply_filters( 'uabb_global_default_button_text_transform', $default );// @codingStandardsIgnoreLine.
+
+		if ( '' == $text_transform ) {
+			$text_transform = apply_filters( 'uabb_theme_deafult_button_text_transform', $default );
+		}
+	} else {
+		$text_transform = $default;
+	}
+
+	return $text_transform;
+}
 /**
  * Provide option to override the element defaults from theme options.
  *
@@ -646,11 +732,11 @@ function uabb_theme_button_typography( $default ) {
 		'family'      => '',
 		'font_weight' => '',
 	);
-	$font_size      = uabb_theme_button_font_size( '' );
-	$line_height    = uabb_theme_button_line_height( '' );
-	$text_transform = uabb_theme_button_text_transform( '' );
+	$font_size      = uabb_theme_default_button_font_size( '' );
+	$line_height    = uabb_theme_default_button_line_height( '' );
+	$text_transform = uabb_theme_default_button_text_transform( '' );
 	$font_family    = uabb_theme_button_font_family( $font_family );
-	$letter_spacing = uabb_theme_button_letter_spacing( '' );
+	$letter_spacing = uabb_theme_default_button_letter_spacing( '' );
 
 
 	$typography['desktop-font_size']      = array();
