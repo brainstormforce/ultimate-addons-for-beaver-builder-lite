@@ -369,7 +369,7 @@ function uabb_theme_default_button_text_transform( $default ) {
 		$text_transform = apply_filters( 'uabb_global_default_button_text_transform', $default );// @codingStandardsIgnoreLine.
 
 		if ( '' == $text_transform ) {
-			$text_transform = apply_filters( 'uabb_theme_deafult_button_text_transform', $default );
+			$text_transform = apply_filters( 'uabb_theme_default_button_text_transform', $default );
 		}
 	} else {
 		$text_transform = $default;

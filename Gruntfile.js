@@ -46,19 +46,19 @@ module.exports = function( grunt ) {
 	                '!package-lock.json',
 	                '!phpcs.xml.dist',
 	            ],
-	            dest: 'bb-ultimate-addon/'
+	            dest: 'ultimate-addons-for-beaver-builder-lite/'
 	        }
 	    },
 	    compress: {
 	        main: {
 	            options: {
-	                archive: 'bb-ultimate-addon.zip',
+	                archive: 'ultimate-addons-for-beaver-builder-lite.zip',
 	                mode: 'zip'
 	            },
 	            files: [
 	                {
 	                    src: [
-	                        './bb-ultimate-addon/**'
+	                        './ultimate-addons-for-beaver-builder-lite/**'
 	                    ]
 
 	                }
@@ -67,8 +67,8 @@ module.exports = function( grunt ) {
 	    },
 
 	    clean: {
-	        main: ["bb-ultimate-addon"],
-	        zip: ["bb-ultimate-addon.zip"],
+	        main: ["ultimate-addons-for-beaver-builder-lite"],
+	        zip: ["ultimate-addons-for-beaver-builder-lite.zip"],
 	    },
 
 	    makepot: {
