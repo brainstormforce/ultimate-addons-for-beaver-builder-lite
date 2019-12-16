@@ -677,16 +677,15 @@ function uabb_theme_button_border_radius( $default ) {
 
 		$radius = apply_filters( 'uabb/global/button_border_radius', $default ); // @codingStandardsIgnoreLine.
 
-		if ( '' == $radius ) {
+		if ( '' === $radius ) {
 			$radius = apply_filters( 'uabb_theme_button_border_radius', $default );
-			if ( '' == $radius ) {
+			if ( '' === $radius ) {
 				$radius = '4';
 			}
 		}
 	} else {
 		$radius = $default;
 	}
-
 	return $radius;
 }
 /**
@@ -817,7 +816,7 @@ function uabb_theme_border( $default ) {
 
 		$border['style'] = 'solid';
 
-		if ( ! empty( $border_radius ) ) {
+		if ( '' !== $border_radius ) {
 
 			$border['radius'] = array(
 				'top_left'     => $border_radius,
