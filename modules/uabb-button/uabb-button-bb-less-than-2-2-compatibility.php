@@ -234,12 +234,11 @@ FLBuilder::register_module(
 							),
 						),
 						'button_padding_dimension' => array(
-							'type'       => 'dimension',
-							'label'      => __( 'Padding', 'uabb' ),
-							'slider'     => true,
-							'units'      => array( 'px' ),
-							'responsive' => true,
-							'preview'    => array(
+							'type'        => 'dimension',
+							'label'       => __( 'Padding', 'uabb' ),
+							'description' => 'px',
+							'responsive'  => true,
+							'preview'     => array(
 								'type'      => 'css',
 								'selector'  => '.uabb-creative-button-wrap a',
 								'property'  => 'padding',
@@ -297,6 +296,7 @@ FLBuilder::register_module(
 							'label'      => __( 'Border Color', 'uabb' ),
 							'default'    => '',
 							'show_reset' => true,
+							'show_alpha' => true,
 							'preview'    => array(
 								'type'     => 'css',
 								'selector' => '.uabb-creative-button-wrap a',

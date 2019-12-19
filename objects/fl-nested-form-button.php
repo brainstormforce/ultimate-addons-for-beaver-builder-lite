@@ -239,12 +239,12 @@ if ( ! $version_bb_check ) {
 									),
 								),
 								'button_padding_dimension' => array(
-									'type'       => 'dimension',
-									'label'      => __( 'Padding', 'uabb' ),
-									'slider'     => true,
-									'units'      => array( 'px' ),
-									'responsive' => true,
-									'preview'    => array(
+									'type'        => 'dimension',
+									'label'       => __( 'Padding', 'uabb' ),
+									'slider'      => true,
+									'description' => 'px',
+									'responsive'  => true,
+									'preview'     => array(
 										'type'      => 'css',
 										'selector'  => '.uabb-creative-button-wrap a',
 										'property'  => 'padding',
