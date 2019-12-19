@@ -218,7 +218,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 ## Changelog ##
 
 ### 1.3.1 ###
-* Improvement: Added Astra Theme Button  compatibility from v2.2.0 for Button module
+* Improvement: Added Astra Theme Button compatibility from v2.2.0 for Button module
 * Improvement: Added new style type Default for Button module
 * Improvement: Added Background Color and Padding setting options in Heading module.
 * Fixed: Info List - Non Numeric value notice for Image Size in rare cases
