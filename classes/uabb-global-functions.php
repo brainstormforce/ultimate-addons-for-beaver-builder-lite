@@ -223,16 +223,17 @@ function uabb_theme_button_font_size( $default ) {
 /**
  * Button Font Size
  *
+ * @since 1.3.1
  * @param var $default Checks if the user has set Font Size values.
  */
 function uabb_theme_default_button_font_size( $default ) {
 	$font_size = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$font_size = apply_filters( 'uabb_global_default_button_font_size', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $font_size ) {
+		if ( '' === $font_size ) {
 			$font_size = apply_filters( 'uabb_theme_default_button_font_size', $default );
 		} else {
 			$font_size = $font_size . 'px';
@@ -269,16 +270,17 @@ function uabb_theme_button_line_height( $default ) {
 /**
  * Button Line Height
  *
+ * @since 1.3.1
  * @param var $default Checks if the user has set text transform values.
  */
 function uabb_theme_default_button_line_height( $default ) {
 	$line_height = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$line_height = apply_filters( 'uabb_global_default_button_line_height', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $line_height ) {
+		if ( '' === $line_height ) {
 			$line_height = apply_filters( 'uabb_theme_default_button_line_height', $default );
 		} else {
 			$line_height = $line_height . 'px';
@@ -315,16 +317,17 @@ function uabb_theme_button_letter_spacing( $default ) {
 /**
  * Button Letter Spacing
  *
+ * @since 1.3.1
  * @param var $default Checks if the user has set letter spacing values.
  */
 function uabb_theme_default_button_letter_spacing( $default ) {
 	$letter_spacing = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$letter_spacing = apply_filters( 'uabb_global_default_button_letter_spacing', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $letter_spacing ) {
+		if ( '' === $letter_spacing ) {
 			$letter_spacing = apply_filters( 'uabb_theme_default_button_letter_spacing', $default );
 		} else {
 			$letter_spacing = $letter_spacing . 'px';
@@ -359,16 +362,17 @@ function uabb_theme_button_text_transform( $default ) {
 /**
  * Button Text Transform
  *
+ * @since 1.3.1
  * @param var $default Checks if the user has set text transform values.
  */
 function uabb_theme_default_button_text_transform( $default ) {
 	$text_transform = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$text_transform = apply_filters( 'uabb_global_default_button_text_transform', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $text_transform ) {
+		if ( '' === $text_transform ) {
 			$text_transform = apply_filters( 'uabb_theme_default_button_text_transform', $default );
 		}
 	} else {
@@ -402,17 +406,18 @@ function uabb_theme_button_bg_color( $default ) {
 /**
  * Provide option to override the element defaults from theme options.
  *
+ * @since 1.3.1
  * @param var $default Checks if user has set the color, if yes, returns users value else checks for filtered value.
  * @return string - hex value for the color
  */
 function uabb_theme_default_button_bg_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb/global/button_bg_color', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_default_button_bg_color', $default );
 		}
 	} else {
@@ -447,6 +452,7 @@ function uabb_theme_button_bg_hover_color( $default ) {
 /**
  * Provide option to override the element defaults from theme options.
  *
+ * @since 1.3.1
  * @param var $default Checks if user has set the color, if yes, returns users value else checks
  * for filtered value.
  * @return string - hex value for the color
@@ -454,11 +460,11 @@ function uabb_theme_button_bg_hover_color( $default ) {
 function uabb_theme_default_button_bg_hover_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb/global/button_bg_hover_color', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_default_button_bg_hover_color', $default );
 		}
 	} else {
@@ -493,18 +499,19 @@ function uabb_theme_button_text_color( $default ) {
 /**
  * Provide option to override the element defaults from theme options.
  *
- * @param var $default Checks if user has set the color, if yes, returns users value else checks
+ * @since 1.3.1
+ * @param var $default Checks if user has set the text color, if yes, returns users value else checks
  * for filtered value.
- * @return string - hex value for the color
+ * @return string - hex value for the text color
  */
 function uabb_theme_default_button_text_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb_global_default_button_text_color', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_default_button_text_color', $default );
 		}
 	} else {
@@ -516,10 +523,10 @@ function uabb_theme_default_button_text_color( $default ) {
 /**
  * Provide option to override the element defaults from theme options.
  *
- * @param var $default Checks if user has set the color, if yes, returns users value else checks
+ * @param var $default Checks if user has set the text hover color, if yes, returns users value else checks
  * for filtered value.
  *
- * @return string - hex value for the color
+ * @return string - hex value for the text hover color
  */
 function uabb_theme_button_text_hover_color( $default ) {
 	$color = '';
@@ -540,19 +547,20 @@ function uabb_theme_button_text_hover_color( $default ) {
 /**
  * Provide option to override the element defaults from theme options.
  *
- * @param var $default Checks if user has set the color, if yes, returns users value else checks
+ * @since 1.3.1
+ * @param var $default Checks if user has set the text hover color, if yes, returns users value else checks
  * for filtered value.
  *
- * @return string - hex value for the color
+ * @return string - hex value for the text hover color
  */
 function uabb_theme_default_button_text_hover_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb_global_default_button_text_hover_color', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_default_button_text_hover_color', $default );
 		}
 	} else {
@@ -575,7 +583,7 @@ function uabb_theme_button_padding( $default ) {
 
 		$padding = apply_filters( 'uabb/global/button_padding', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $padding ) {
+		if ( '' === $padding ) {
 			$padding = apply_filters( 'uabb/theme/button_padding', $default );// @codingStandardsIgnoreLine.
 			if ( '' == $padding ) {
 				$padding = '12px 24px';
@@ -590,18 +598,19 @@ function uabb_theme_button_padding( $default ) {
 /**
  * Provide option to override the element defaults from theme options.
  *
- * @param var $default Checks if user has set the color, if yes, returns users value else checks
+ * @since 1.3.1
+ * @param var $default Checks if user has set the padding, if yes, returns users value else checks
  * for filtered value.
  * @return string - padding value
  */
 function uabb_theme_default_button_padding( $default ) {
 	$padding = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$padding = apply_filters( 'uabb/global/button_padding', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $padding ) {
+		if ( '' === $padding ) {
 			$padding = apply_filters( 'uabb_theme_default_button_padding', $default );// @codingStandardsIgnoreLine.
 		}
 	} else {
@@ -691,18 +700,19 @@ function uabb_theme_button_border_radius( $default ) {
 /**
  * Provide option to override the element defaults from theme options.
  *
- * @param var $default Checks if user has set the radius, if yes, returns users value else checks
+ * @since 1.3.1
+ * @param var $default Checks if user has set the width, if yes, returns users value else checks
  * for filtered value.
  * @return string - width value
  */
 function uabb_theme_button_border_width( $default ) {
 	$width = array();
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$width = apply_filters( 'uabb_global_button_border_width', $default );
 
-		if ( '' == $width ) {
+		if ( '' === $width ) {
 			$width = apply_filters( 'uabb_theme_button_border_width', $default );
 		}
 	} else {
@@ -713,6 +723,7 @@ function uabb_theme_button_border_width( $default ) {
 /**
  * Provide option to override the element defaults from theme options.
  *
+ * @since 1.3.1
  * @param var $default Checks if user has set the color, if yes, returns users value else checks for
  * filtered value.
  * @return string - hex value for the border color
@@ -736,9 +747,10 @@ function uabb_theme_border_color( $default ) {
 /**
  * Provide option to override the element defaults from theme options.
  *
- * @param var $default Checks if user has set the color, if yes, returns users value else checks for
+ * @since 1.3.1 
+ * @param var $default Checks if user has set the hover color, if yes, returns users value else checks for
  * filtered value.
- * @return string - hex value for the border color
+ * @return string - hex value for the border hover color
  */
 function uabb_theme_border_hover_color( $default ) {
 	$color = '';
@@ -781,10 +793,12 @@ function uabb_parse_color_to_hex( $code = '' ) {
 	return $color;
 }
 /**
- * Provide option to parse a color code.
+ * Provide option to parse a Border param.
  *
- * @param var $code Returns a hex value for color from rgba or #hex color.
- * @return string - hex value for the color
+ * @since 1.3.1
+ * @param var $default Checks if user has set the Border, if yes, returns users value else checks for
+ * filtered value.
+ * @return array - Border value for the Button
  */
 function uabb_theme_border( $default ) {
 
@@ -830,7 +844,7 @@ function uabb_theme_border( $default ) {
 }
 /**
  * Provide option to override the element defaults from theme options.
- *
+ * @since 1.3.1
  * @param var $default Checks if user has set the radius, if yes, returns users value else checks
  * for filtered value.
  * @return array - typography value
@@ -914,6 +928,14 @@ function uabb_theme_button_typography( $default ) {
 	}
 	return $typography;
 }
+/**
+ * Provide option to override the element defaults from theme options.
+ *
+ * @since 1.3.1
+ * @param var $value Checks if user has set the Padding, if yes, returns users value else checks
+ * for filtered value.
+ * @return array - Padding value
+ */
 function uabb_theme_padding_button( $mode, $value ) {
 
 	$padding = uabb_theme_default_button_padding( '' );
