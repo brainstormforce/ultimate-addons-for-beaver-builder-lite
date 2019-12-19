@@ -117,7 +117,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 			if ( is_plugin_active_for_network( 'ultimate-addons-for-beaver-builder-lite/bb-ultimate-addon.php' ) ) {
 				$deactivate_url = network_admin_url( 'plugins.php' );
 			}
-			$slug = 'bb-ultimate-addon';
+			$slug           = 'bb-ultimate-addon';
 			$deactivate_url = add_query_arg(
 				array(
 					'action'        => 'deactivate',
@@ -125,7 +125,8 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 					'plugin_status' => 'all',
 					'paged'         => '1',
 					'_wpnonce'      => wp_create_nonce( 'deactivate-plugin_ultimate-addons-for-beaver-builder-lite/' . $slug . '.php' ),
-				), $deactivate_url
+				),
+				$deactivate_url
 			);
 			echo '<div class="notice notice-error"><p>';
 			echo sprintf( __( "You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='%s'>deactivate one</a> before continuing.", 'uabb' ), $deactivate_url );

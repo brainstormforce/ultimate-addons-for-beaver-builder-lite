@@ -432,8 +432,8 @@ FLBuilder::register_module(
 							),
 						),
 						'heading_padding'       => array(
-							'type'       => 'dimension',
-							'label'      => __( 'Padding', 'uabb' ),
+							'type'        => 'dimension',
+							'label'       => __( 'Padding', 'uabb' ),
 							'description' => 'px',
 							'responsive'  => array(
 								'placeholder' => array(
@@ -442,7 +442,7 @@ FLBuilder::register_module(
 									'responsive' => '',
 								),
 							),
-							'preview'    => array(
+							'preview'     => array(
 								'type'      => 'css',
 								'selector'  => '.fl-module-content.fl-node-content .uabb-heading  .uabb-heading-text',
 								'property'  => 'padding',
