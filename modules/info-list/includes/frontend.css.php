@@ -376,7 +376,7 @@ foreach ( $settings->add_list_item as $item ) {
 				$img_size = getimagesize( $item->photo_url );
 			endif;
 
-			if ( isset( $img_size[0] ) && isset( $img_size[1] ) ) :
+			if ( isset( $img_size[0] ) && isset( $img_size[1] ) && 0 !== $img_size[0] ) :
 				$actual_height = ( $settings->icon_image_size * $img_size[1] ) / $img_size[0];
 
 				if ( $actual_height > $settings->icon_image_size ) :

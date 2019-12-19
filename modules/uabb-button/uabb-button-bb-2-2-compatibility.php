@@ -58,13 +58,19 @@ FLBuilder::register_module(
 						'style'                      => array(
 							'type'    => 'select',
 							'label'   => __( 'Style', 'uabb' ),
-							'default' => 'flat',
+							'default' => 'default',
 							'class'   => 'creative_button_styles',
 							'options' => array(
+								'default'     => __( 'Default', 'uabb' ),
 								'flat'        => __( 'Flat', 'uabb' ),
 								'gradient'    => __( 'Gradient', 'uabb' ),
 								'transparent' => __( 'Transparent', 'uabb' ),
 								'threed'      => __( '3D', 'uabb' ),
+							),
+							'toggle'  => array(
+								'default' => array(
+									'fields' => array( 'button_padding_dimension', 'button_border', 'border_hover_color' ),
+								),
 							),
 						),
 						'border_size'                => array(
@@ -195,7 +201,7 @@ FLBuilder::register_module(
 				'formatting' => array(
 					'title'  => __( 'Structure', 'uabb' ),
 					'fields' => array(
-						'width'              => array(
+						'width'                    => array(
 							'type'    => 'select',
 							'label'   => __( 'Width', 'uabb' ),
 							'default' => 'auto',
@@ -216,7 +222,45 @@ FLBuilder::register_module(
 								),
 							),
 						),
-						'custom_width'       => array(
+						'button_padding_dimension' => array(
+							'type'       => 'dimension',
+							'label'      => __( 'Padding', 'uabb' ),
+							'slider'     => true,
+							'units'      => array( 'px' ),
+							'responsive' => true,
+							'preview'    => array(
+								'type'      => 'css',
+								'selector'  => '.uabb-creative-button-wrap a',
+								'property'  => 'padding',
+								'unit'      => 'px',
+								'important' => true,
+							),
+						),
+						'button_border'            => array(
+							'type'    => 'border',
+							'label'   => __( 'Border', 'uabb' ),
+							'slider'  => true,
+							'units'   => array( 'px' ),
+							'preview' => array(
+								'type'      => 'css',
+								'selector'  => '.uabb-creative-button-wrap a',
+								'property'  => 'border',
+								'unit'      => 'px',
+								'important' => true,
+							),
+						),
+						'border_hover_color'       => array(
+							'type'        => 'color',
+							'label'       => __( 'Border Hover Color', 'uabb' ),
+							'default'     => '',
+							'show_reset'  => true,
+							'connections' => array( 'color' ),
+							'show_alpha'  => true,
+							'preview'     => array(
+								'type' => 'none',
+							),
+						),
+						'custom_width'             => array(
 							'type'      => 'unit',
 							'label'     => __( 'Custom Width', 'uabb' ),
 							'default'   => '200',
@@ -225,7 +269,7 @@ FLBuilder::register_module(
 							'slider'    => true,
 							'units'     => array( 'px' ),
 						),
-						'custom_height'      => array(
+						'custom_height'            => array(
 							'type'      => 'unit',
 							'label'     => __( 'Custom Height', 'uabb' ),
 							'default'   => '45',
@@ -234,7 +278,7 @@ FLBuilder::register_module(
 							'slider'    => true,
 							'units'     => array( 'px' ),
 						),
-						'padding_top_bottom' => array(
+						'padding_top_bottom'       => array(
 							'type'        => 'unit',
 							'label'       => __( 'Padding Top/Bottom', 'uabb' ),
 							'placeholder' => '0',
@@ -243,7 +287,7 @@ FLBuilder::register_module(
 							'slider'      => true,
 							'units'       => array( 'px' ),
 						),
-						'padding_left_right' => array(
+						'padding_left_right'       => array(
 							'type'        => 'unit',
 							'label'       => __( 'Padding Left/Right', 'uabb' ),
 							'placeholder' => '0',
@@ -252,7 +296,7 @@ FLBuilder::register_module(
 							'slider'      => true,
 							'units'       => array( 'px' ),
 						),
-						'border_radius'      => array(
+						'border_radius'            => array(
 							'type'      => 'unit',
 							'label'     => __( 'Round Corners', 'uabb' ),
 							'maxlength' => '3',
@@ -260,7 +304,7 @@ FLBuilder::register_module(
 							'slider'    => true,
 							'units'     => array( 'px' ),
 						),
-						'align'              => array(
+						'align'                    => array(
 							'type'    => 'align',
 							'label'   => __( 'Alignment', 'uabb' ),
 							'default' => 'center',
@@ -270,7 +314,7 @@ FLBuilder::register_module(
 								'right'  => __( 'Right', 'uabb' ),
 							),
 						),
-						'mob_align'          => array(
+						'mob_align'                => array(
 							'type'    => 'align',
 							'label'   => __( 'Mobile Alignment', 'uabb' ),
 							'default' => 'center',

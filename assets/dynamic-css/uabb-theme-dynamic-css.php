@@ -4,7 +4,6 @@
  *
  * @package UABB Theme Dynamic CSS file
  */
-
 ob_start();
 ?>
 
@@ -97,6 +96,5 @@ ob_start();
 /**
  * Write Your Dynamic CSS Above This
  */
-
 	return ob_get_clean();
 ?>
