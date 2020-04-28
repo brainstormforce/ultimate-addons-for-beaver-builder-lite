@@ -599,12 +599,9 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 
 				global $wpdb;
 
-				$get_posts = $wpdb->prepare( "SELECT count(*) FROM $wpdb->posts wpp INNER JOIN $wpdb->postmeta wppm WHERE wpp.ID = wppm.post_id AND wpp.post_status = '%s' AND wppm.meta_key = %s AND wppm.meta_value REGEXP '%s' LIMIT %d ", 'publish', '_fl_builder_data', '|uabb-advanced-menu(.*)|flip-box(.*)|info-list(.*)|info-table(.*)|ribbon(.*)|slide-box(.*)|uabb-button(.*)|spacer-gap(.*)|image-separator(.*)|uabb-separator(.*)|image-icon(.*)|uabb-heading(.*)', 5 );
-
+				$get_posts = $wpdb->prepare( "SELECT count(*) FROM $wpdb->posts wpp INNER JOIN $wpdb->postmeta wppm WHERE wpp.ID = wppm.post_id AND wpp.post_status = '%s' AND wppm.meta_key = %s AND wppm.meta_value REGEXP '%s'", 'publish', '_fl_builder_data', 'uabb-advanced-menu(.*)|flip-box(.*)|info-list(.*)|info-table(.*)|ribbon(.*)|slide-box(.*)|uabb-button(.*)|spacer-gap(.*)|image-separator(.*)|uabb-separator(.*)|image-icon(.*)|uabb-heading(.*)' );
 
 				$uabb_post_count = $wpdb->get_var( $get_posts );
-
-				var_dump($uabb_post_count);
 
 				if ( $uabb_post_count == 5 ) {
 
