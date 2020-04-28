@@ -118,15 +118,14 @@ final class UABBBuilderAdminSettings {
 					__( 'Would you please mind sharing your views and give it a 5 star rating on the WordPress repository?', 'ultimate-addon-for-beaver-builder' ),
 					'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/?filter=5',
 					__( 'Ok, you deserve it', 'ultimate-addon-for-beaver-builder' ),
-					MONTH_IN_SECONDS,
+					1296000,
 					__( 'Nope, maybe later', 'ultimate-addon-for-beaver-builder' ),
 					__( 'I already did', 'ultimate-addon-for-beaver-builder' )
 				),
-				'repeat-notice-after'        => MONTH_IN_SECONDS,
-				'display-notice-after'       => WEEK_IN_SECONDS,
+				'repeat-notice-after'        => 1296000,
+				'display-notice-after'       => 1296000,
 				'priority'                   => 25,
 				'display-with-other-notices' => false,
-				'show_if'                    => BB_Ultimate_Addon_Helper::show_rating_notice(),
 			)
 		);
 	}

@@ -581,38 +581,6 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 			echo 'rel="' . $attr . '"';
 		}
 
-		/**
-		 * Get flag if more than 5 pages are build using UABB.
-		 *
-		 * @since  1.3.0
-		 * @return boolean true/false Flag if more than 5 pages are build using UABB.
-		 */
-		public static function show_rating_notice() {
-
-			$posts_created_with_uabb = intval( get_option( 'posts-created-with-uabb' ) );
-
-			if ( ! empty( $posts_created_with_uabb ) && 5 === $posts_created_with_uabb ) {
-
-				return true;
-
-			} else {
-
-				global $wpdb;
-
-				$get_posts = $wpdb->prepare( "SELECT count(*) FROM $wpdb->posts wpp INNER JOIN $wpdb->postmeta wppm WHERE wpp.ID = wppm.post_id AND wpp.post_status = '%s' AND wppm.meta_key = %s AND wppm.meta_value REGEXP '%s'", 'publish', '_fl_builder_data', 'uabb-advanced-menu(.*)|flip-box(.*)|info-list(.*)|info-table(.*)|ribbon(.*)|slide-box(.*)|uabb-button(.*)|spacer-gap(.*)|image-separator(.*)|uabb-separator(.*)|image-icon(.*)|uabb-heading(.*)' );
-
-				$uabb_post_count = $wpdb->get_var( $get_posts );
-
-				if ( $uabb_post_count == 5 ) {
-
-					update_option( 'posts-created-with-uabb', $uabb_post_count );
-
-					return true;
-				}
-			}
-
-			return false;
-		}
 	}
 	new BB_Ultimate_Addon_Helper();
 }
