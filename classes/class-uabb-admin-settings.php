@@ -122,9 +122,8 @@ final class UABBBuilderAdminSettings {
 					__( 'Nope, maybe later', 'ultimate-addon-for-beaver-builder' ),
 					__( 'I already did', 'ultimate-addon-for-beaver-builder' )
 				),
-				// Display notice after 15 days
 				'repeat-notice-after'        => 1296000,
-				'display-notice-after'       => 1296000,
+				'display-notice-after'       => 1296000, // Display notice after 15 days
 				'priority'                   => 25,
 				'display-with-other-notices' => false,
 			)
