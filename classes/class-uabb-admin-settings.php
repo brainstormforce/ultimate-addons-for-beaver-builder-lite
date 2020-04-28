@@ -123,10 +123,9 @@ final class UABBBuilderAdminSettings {
 					__( 'I already did', 'ultimate-addon-for-beaver-builder' )
 				),
 				'repeat-notice-after'        => MONTH_IN_SECONDS,
-				'display-notice-after'       => WEEK_IN_SECONDS,
+				'display-notice-after'       => (2* WEEK_IN_SECONDS), // Display notice after 2 weeks
 				'priority'                   => 25,
 				'display-with-other-notices' => false,
-				'show_if'                    => BB_Ultimate_Addon_Helper::show_rating_notice(),
 			)
 		);
 	}
