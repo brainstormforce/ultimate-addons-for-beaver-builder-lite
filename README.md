@@ -217,6 +217,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ## Changelog ##
 
+### 1.3.2 ###
+* Improvement: Optimised the query loading time for Notices.
+
 ### 1.3.1 ###
 * Improvement: Added Astra Theme Button compatibility from v2.2.0 for Button module
 * Improvement: Added new style type Default for Button module
