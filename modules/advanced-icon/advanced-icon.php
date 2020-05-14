@@ -41,7 +41,9 @@ class UABBAdvancedIconModule extends FLBuilderModule {
  * And accordingly render the required form settings file.
  *
  */
-if ( UABB_Compatibility::$version_bb_check ) {
+
+
+if ( UABB_Lite_Compatibility::Check_BB_Version() ) {
 	require_once BB_ULTIMATE_ADDON_DIR . 'modules/advanced-icon/advanced-icon-bb-2-2-compatibility.php';
 } else {
 	require_once BB_ULTIMATE_ADDON_DIR . 'modules/advanced-icon/advanced-icon-bb-less-than-2-2-compatibility.php';
