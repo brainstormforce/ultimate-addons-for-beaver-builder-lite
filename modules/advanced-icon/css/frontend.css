@@ -1,0 +1,24 @@
+/* Horizontal Pos */
+.adv-icon-horizontal .adv-icon-link {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.adv-icon-vertical .adv-icon-link {
+	display: block;
+}
+
+/* Left */
+.adv-icon-left {
+	text-align: left;
+}
+
+/* Center */
+.adv-icon-center {
+	text-align: center;
+}
+
+/* Right */
+.adv-icon-right {
+	text-align: right;
+}

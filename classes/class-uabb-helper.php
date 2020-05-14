@@ -161,6 +161,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'image-icon'      => 'Image / Icon',
 				'uabb-button'     => 'Button',
 				'uabb-heading'    => 'Heading',
+				'advanced-icon'   => 'Advanced Icons',
 			);
 
 			return $modules_array;
