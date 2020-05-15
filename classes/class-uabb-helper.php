@@ -563,15 +563,15 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		static public function get_link_rel( $target, $is_nofollow = 0, $echo = 0 ) {
 
 			$attr = '';
-			if ( '_blank' == $target ) {
+			if ( '_blank' === $target ) {
 				$attr .= 'noopener';
 			}
 
-			if ( 1 == $is_nofollow ) {
+			if ( 1 === $is_nofollow || 'yes' === $is_nofollow ) {
 				$attr .= ' nofollow';
 			}
 
-			if ( '' == $attr ) {
+			if ( '' === $attr ) {
 				return;
 			}
 
