@@ -1,0 +1,59 @@
+/**
+ * This file should contain frontend styles that
+ * will be applied to all module instances.
+ */
+
+.uabb-rating i {
+	font-style: normal;
+	display: inline-block;
+    position: relative;
+    font-style: normal;
+    cursor: default;
+}
+
+.uabb-rating i:before {
+	content: "\f005";
+    display: inline;
+    font-size: inherit;
+    font-family: inherit;
+    position: absolute;
+    overflow: hidden;
+}
+
+.uabb-rating i.uabb-star-empty:before {
+    width:0;
+}
+.uabb-rating i.uabb-star-0:before {
+    width:0;
+}
+.uabb-rating i.uabb-star-1:before {
+    width:10%;
+}
+.uabb-rating i.uabb-star-2:before {
+    width:20%;
+}
+.uabb-rating i.uabb-star-3:before {
+    width:30%;
+}
+.uabb-rating i.uabb-star-4:before {
+    width:40%;
+}
+.uabb-rating i.uabb-star-5:before {
+    width:50%;
+}
+.uabb-rating i.uabb-star-6:before {
+    width:60%;
+}
+.uabb-rating i.uabb-star-7:before {
+    width:70%;
+}
+.uabb-rating i.uabb-star-8:before {
+    width:80%;
+}
+.uabb-rating i.uabb-star-9:before {
+    width:90%;
+}
+.uabb-rating i.uabb-star-10:before {
+    width:100%;
+}
+
