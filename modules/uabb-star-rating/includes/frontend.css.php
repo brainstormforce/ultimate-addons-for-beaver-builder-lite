@@ -1,4 +1,10 @@
 <?php
+
+$settings->title_color = UABB_Helper::uabb_colorpicker( $settings, 'title_color' );
+$settings->rating_unmarked_color  = UABB_Helper::uabb_colorpicker( $settings, 'rating_unmarked_color' );
+$settings->rating_color    = UABB_Helper::uabb_colorpicker( $settings, 'rating_color' );
+
+
 FLBuilderCSS::typography_field_rule(
 	array(
 		'settings'     => $settings,
@@ -10,7 +16,7 @@ FLBuilderCSS::typography_field_rule(
 
 .fl-module-uabb-star-rating.fl-node-<?php echo $id; ?> .uabb-rating i {
 	font-size: <?php echo $settings->star_icon_size . 'px'; ?>;
-	color: <?php echo pp_get_color_value( $settings->rating_unmarked_color ); ?>;
+	color: <?php echo ( $settings->rating_unmarked_color ); ?>;
 }
 
 
@@ -29,7 +35,7 @@ if ( '' !== $settings->star_icon_spacing ) {
 ?>
 
 .fl-module-uabb-star-rating.fl-node-<?php echo $id; ?> .uabb-rating i:before {
-	color: <?php echo pp_get_color_value( $settings->rating_color ); ?>;
+	color: <?php echo ( $settings->rating_color ); ?>;
 }
 
 .fl-module-uabb-star-rating.fl-node-<?php echo $id; ?> .uabb-rating-content {
@@ -65,7 +71,7 @@ if ( 'justify' !== $settings->alignment ) {
 }
 ?>
 .fl-module-uabb-star-rating.fl-node-<?php echo $id; ?> .uabb-rating-content .uabb-rating-title {
-	color: <?php echo pp_get_color_value( $settings->title_color ); ?>;
+	color: <?php echo ( $settings->title_color ); ?>;
 
 	<?php
 	if ( 'inline' === $settings->rating_layout ) {
