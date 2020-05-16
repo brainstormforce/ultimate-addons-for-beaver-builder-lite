@@ -26,7 +26,8 @@ class UABBAdvancedIconModule extends FLBuilderModule {
 				'group'           => UABB_CAT,
 				'dir'             => BB_ULTIMATE_ADDON_DIR . 'modules/advanced-icon/',
 				'url'             => BB_ULTIMATE_ADDON_URL . 'modules/advanced-icon/',
-				'editor_export'   => false,
+				'editor_export'   => false, // Defaults to true and can be omitted.
+				'enabled'         => true, // Defaults to true and can be omitted.
 				'partial_refresh' => true,
 				'icon'            => 'star-filled.svg',
 			)
@@ -83,6 +84,7 @@ FLBuilder::register_module(
 							'type'        => 'unit',
 							'label'       => __( 'Image / Icon Size', 'uabb' ),
 							'placeholder' => '40',
+							'responsive'  => 'true',
 							'units'       => array( 'px' ),
 							'slider'      => array(
 								'px' => array(
@@ -98,6 +100,7 @@ FLBuilder::register_module(
 							'placeholder' => '10',
 							'maxlength'   => '2',
 							'size'        => '4',
+							'responsive'  => 'true',
 							'help'        => __( 'To manage the space between Icons / Image use this option', 'uabb' ),
 							'preview'     => array(
 								'type'     => 'css',
