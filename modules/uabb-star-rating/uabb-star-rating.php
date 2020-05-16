@@ -1,7 +1,14 @@
 <?php
+/**
+ *  UABB Star Rating Module file
+ *
+ *  @package UABB Star Rating
+ */
 
 /**
- * @class PPStarRatingModule
+ * Function that initializes UABB Table of Content Module
+ *
+ * @class UABBStarRatingModule
  */
 class UABBStarRatingModule extends FLBuilderModule {
 
@@ -16,8 +23,8 @@ class UABBStarRatingModule extends FLBuilderModule {
 			array(
 				'name'            => __( 'Star Rating', 'uabb' ),
 				'description'     => __( 'A module for Star Rating.', 'uabb' ),
-				'category'    => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'       => UABB_CAT,
+				'category'        => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
+				'group'           => UABB_CAT,
 				'dir'             => BB_ULTIMATE_ADDON_DIR . 'modules/uabb-star-rating/',
 				'url'             => BB_ULTIMATE_ADDON_URL . 'modules/uabb-star-rating/',
 				'editor_export'   => true, // Defaults to true and can be omitted.
@@ -32,15 +39,15 @@ class UABBStarRatingModule extends FLBuilderModule {
 	}
 
 		/**
-	 * Function to get the icon for the Info List
-	 *
-	 * @method get_icons
-	 * @param string $icon gets the icon for the module.
-	 */
+		 * Function to get the icon for the Star Rating
+		 *
+		 * @method get_icons
+		 * @param string $icon gets the icon for the module.
+		 */
 	public function get_icon( $icon = '' ) {
 
 		// check if $icon is referencing an included icon.
-		if ( '' != $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/uabb-star-rating/icon/' . $icon ) ) {
+		if ( '' !== $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/uabb-star-rating/icon/' . $icon ) ) {
 			$path = BB_ULTIMATE_ADDON_DIR . 'modules/uabb-star-rating/icon/' . $icon;
 		}
 
@@ -58,23 +65,12 @@ class UABBStarRatingModule extends FLBuilderModule {
 FLBuilder::register_module(
 	'UABBStarRatingModule',
 	array(
-		'star_rating_tab'  => array( // Tab
-			'title'    => __( 'General', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
-				'heading_section' => array(// Section
-					'title'  => __( 'Star Rating', 'uabb' ), // Section Title
-					'fields' => array( // Section Fields
-						'rating_title'  => array(
-							'type'        => 'text',
-							'label'       => __( 'Title', 'uabb' ),
-							'class'       => '',
-							'default'     => __( 'Star Rating !!!', 'uabb' ),
-							'connections' => array( 'string', 'html', 'url' ),
-							'preview'     => array(
-								'type'     => 'text',
-								'selector' => '.uabb-rating-title',
-							),
-						),
+		'star_rating_tab'  => array( // Tab.
+			'title'    => __( 'General', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'heading_section' => array(// Section.
+					'title'  => __( 'Star Rating', 'uabb' ), // Section Title.
+					'fields' => array( // Section Fields.
 						'rating_scale'  => array(
 							'type'    => 'select',
 							'label'   => __( 'Scale', 'uabb' ),
@@ -85,18 +81,33 @@ FLBuilder::register_module(
 							),
 						),
 						'rating'        => array(
-							'type'        => 'unit',
-							'label'       => __( 'Rating', 'uabb' ),
-							'default'     => '3',
-							'connections' => array( 'string' ),
+							'type'    => 'unit',
+							'label'   => __( 'Rating', 'uabb' ),
+							'default' => '4',
+							'slider'  => array(
+								'step' => .5,
+								'min'  => 0,
+								'max'  => 10,
+							),
 						),
 						'star_style'    => array(
 							'type'    => 'select',
-							'label'   => __( 'Style', 'uabb' ),
+							'label'   => __( 'Unmarked Style', 'uabb' ),
 							'default' => 'solid',
 							'options' => array(
 								'solid'   => __( 'Solid', 'uabb' ),
 								'outline' => __( 'Outline', 'uabb' ),
+							),
+						),
+						'rating_title'  => array(
+							'type'        => 'text',
+							'label'       => __( 'Title', 'uabb' ),
+							'class'       => '',
+							'default'     => __( 'Ratings !!!', 'uabb' ),
+							'connections' => array( 'string', 'html', 'url' ),
+							'preview'     => array(
+								'type'     => 'text',
+								'selector' => '.uabb-rating-title',
 							),
 						),
 						'rating_layout' => array(
@@ -126,39 +137,12 @@ FLBuilder::register_module(
 				),
 			),
 		),
-		'title_style'      => array( // Tab
-			'title'    => __( 'Style', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
-				'title_style'  => array(
-					'collapsed' => false,
-					'title'     => __( 'Title', 'uabb' ),
-					'fields'    => array(
-						'title_color'   => array(
-							'type'        => 'color',
-							'label'       => __( 'Color', 'uabb' ),
-							'default'     => '000000',
-							'show_reset'  => true,
-							'show_alpha'  => false,
-							'connections' => array( 'color' ),
-							'preview'     => array(
-								'type'     => 'css',
-								'selector' => '.uabb-rating-content .uabb-rating-title',
-								'property' => 'color',
-							),
-						),
-						'title_spacing' => array(
-							'type'    => 'unit',
-							'label'   => __( 'Spacing', 'uabb' ),
-							'default' => '',
-							'units'   => array( 'px' ),
-							'slider'  => true,
-						),
-					),
-				),
+		'title_style'      => array( // Tab.
+			'title'    => __( 'Style', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
 				'rating_style' => array(
-					'collapsed' => false,
-					'title'     => __( 'Rating', 'uabb' ),
-					'fields'    => array(
+					'title'  => __( 'Rating', 'uabb' ),
+					'fields' => array(
 						'rating_color'          => array(
 							'type'        => 'color',
 							'label'       => __( 'Color', 'uabb' ),
@@ -176,12 +160,16 @@ FLBuilder::register_module(
 							'connections' => array( 'color' ),
 						),
 						'star_icon_size'        => array(
-							'type'    => 'unit',
-							'label'   => __( 'Size', 'uabb' ),
-							'default' => '20',
-							'units'   => array( 'px' ),
-							'slider'  => true,
-							'preview' => array(
+							'type'       => 'unit',
+							'label'      => __( 'Size', 'uabb' ),
+							'default'    => '30',
+							'responsive' => true,
+							'units'      => array( 'px' ),
+							'slider'     => array(
+								'min' => 10,
+								'max' => 100,
+							),
+							'preview'    => array(
 								'type'     => 'css',
 								'selector' => '.uabb-rating i',
 								'property' => 'font-size',
@@ -189,12 +177,15 @@ FLBuilder::register_module(
 							),
 						),
 						'star_icon_spacing'     => array(
-							'type'    => 'unit',
-							'label'   => __( 'Spacing', 'uabb' ),
-							'default' => '',
-							'units'   => array( 'px' ),
-							'slider'  => true,
-							'preview' => array(
+							'type'       => 'unit',
+							'label'      => __( 'Spacing', 'uabb' ),
+							'responsive' => true,
+							'units'      => array( 'px' ),
+							'slider'     => array(
+								'min' => 0,
+								'max' => 100,
+							),
+							'preview'    => array(
 								'type'     => 'css',
 								'selector' => '.uabb-rating-content .uabb-rating > i',
 								'property' => 'margin-right',
@@ -214,15 +205,39 @@ FLBuilder::register_module(
 						),
 					),
 				),
+				'title_style'  => array(
+					'title'  => __( 'Title', 'uabb' ),
+					'fields' => array(
+						'title_color'   => array(
+							'type'        => 'color',
+							'label'       => __( 'Color', 'uabb' ),
+							'default'     => '000000',
+							'show_reset'  => true,
+							'show_alpha'  => false,
+							'connections' => array( 'color' ),
+							'preview'     => array(
+								'type'     => 'css',
+								'selector' => '.uabb-rating-content .uabb-rating-title',
+								'property' => 'color',
+							),
+						),
+						'title_spacing' => array(
+							'type'    => 'unit',
+							'label'   => __( 'Spacing', 'uabb' ),
+							'default' => '10',
+							'units'   => array( 'px' ),
+							'slider'  => true,
+						),
+					),
+				),
 			),
 		),
-		'title_typography' => array( // Tab
-			'title'    => __( 'Typography', 'uabb' ), // Tab title
-			'sections' => array( // Tab Sections
+		'title_typography' => array( // Tab.
+			'title'    => __( 'Typography', 'uabb' ), // Tab title.
+			'sections' => array( // Tab Sections.
 				'title_style' => array(
-					'collapsed' => false,
-					'title'     => __( 'Title', 'uabb' ),
-					'fields'    => array(
+					'title'  => __( 'Title', 'uabb' ),
+					'fields' => array(
 						'title_typography' => array(
 							'type'       => 'typography',
 							'label'      => __( 'Title', 'uabb' ),

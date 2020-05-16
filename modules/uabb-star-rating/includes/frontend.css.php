@@ -1,8 +1,13 @@
 <?php
+/**
+ *  UABB Star Ratting Module front-end CSS php file
+ *
+ *  @package UABB Star Ratting Module
+ */
 
-$settings->title_color = UABB_Helper::uabb_colorpicker( $settings, 'title_color' );
-$settings->rating_unmarked_color  = UABB_Helper::uabb_colorpicker( $settings, 'rating_unmarked_color' );
-$settings->rating_color    = UABB_Helper::uabb_colorpicker( $settings, 'rating_color' );
+$settings->title_color           = UABB_Helper::uabb_colorpicker( $settings, 'title_color' );
+$settings->rating_unmarked_color = UABB_Helper::uabb_colorpicker( $settings, 'rating_unmarked_color' );
+$settings->rating_color          = UABB_Helper::uabb_colorpicker( $settings, 'rating_color' );
 
 
 FLBuilderCSS::typography_field_rule(
@@ -12,33 +17,42 @@ FLBuilderCSS::typography_field_rule(
 		'selector'     => ".fl-node-$id .uabb-rating-title",
 	)
 );
+
+FLBuilderCSS::responsive_rule(
+	array(
+		'settings'     => $settings,
+		'setting_name' => 'star_icon_size',
+		'selector'     => ".fl-node-$id .uabb-rating i",
+		'prop'         => 'font-size',
+		'unit'         => 'px',
+	)
+);
+
+FLBuilderCSS::responsive_rule(
+	array(
+		'settings'     => $settings,
+		'setting_name' => 'star_icon_spacing',
+		'selector'     => ".fl-node-$id .uabb-rating i:not(:last-of-type)",
+		'prop'         => 'margin-right',
+		'unit'         => 'px',
+	)
+);
 ?>
 
-.fl-module-uabb-star-rating.fl-node-<?php echo $id; ?> .uabb-rating i {
-	font-size: <?php echo $settings->star_icon_size . 'px'; ?>;
-	color: <?php echo ( $settings->rating_unmarked_color ); ?>;
+.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating i {
+	color: <?php echo esc_attr( $settings->rating_unmarked_color ); ?>;
 }
 
 
-.fl-module-uabb-star-rating.fl-node-<?php echo $id; ?> .uabb-rating i:not(.uabb-star-empty):before {
+.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating i:not(.uabb-star-empty):before {
 	content: "\002605";
 }
 
-<?php
-if ( '' !== $settings->star_icon_spacing ) {
-	?>
-	.fl-module-uabb-star-rating.fl-node-<?php echo $id; ?> .uabb-rating i:not(:last-of-type) {
-		margin-right: <?php echo $settings->star_icon_spacing . 'px'; ?>;
-	}
-	<?php
-}
-?>
-
-.fl-module-uabb-star-rating.fl-node-<?php echo $id; ?> .uabb-rating i:before {
-	color: <?php echo ( $settings->rating_color ); ?>;
+.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating i:before {
+	color: <?php echo esc_attr( $settings->rating_color ); ?>;
 }
 
-.fl-module-uabb-star-rating.fl-node-<?php echo $id; ?> .uabb-rating-content {
+.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating-content {
 
 	<?php
 	if ( 'inline' === $settings->rating_layout && 'justify' === $settings->alignment ) {
@@ -64,14 +78,14 @@ if ( '' !== $settings->star_icon_spacing ) {
 <?php
 if ( 'justify' !== $settings->alignment ) {
 	?>
-	.fl-module-uabb-star-rating.fl-node-<?php echo $id; ?> .uabb-rating-content {
-		text-align: <?php echo $settings->alignment; ?>;
+	.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating-content {
+		text-align: <?php echo esc_attr( $settings->alignment ); ?>;
 	}
 	<?php
 }
 ?>
-.fl-module-uabb-star-rating.fl-node-<?php echo $id; ?> .uabb-rating-content .uabb-rating-title {
-	color: <?php echo ( $settings->title_color ); ?>;
+.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating-content .uabb-rating-title {
+	color: <?php echo esc_attr( $settings->title_color ); ?>;
 
 	<?php
 	if ( 'inline' === $settings->rating_layout ) {
@@ -83,11 +97,11 @@ if ( 'justify' !== $settings->alignment ) {
 
 			if ( 'top' === $settings->star_position ) {
 				?>
-				margin-left: <?php echo $settings->title_spacing . 'px'; ?>;
+				margin-left: <?php echo esc_attr( $settings->title_spacing ) . 'px'; ?>;
 				<?php
 			} else {
 				?>
-				margin-right: <?php echo $settings->title_spacing . 'px'; ?>;
+				margin-right: <?php echo esc_attr( $settings->title_spacing ) . 'px'; ?>;
 				<?php
 			}
 		}
@@ -98,7 +112,7 @@ if ( 'justify' !== $settings->alignment ) {
 <?php
 if ( 'inline' === $settings->rating_layout && 'justify' !== $settings->alignment ) {
 	?>
-	.fl-module-uabb-star-rating.fl-node-<?php echo $id; ?> .uabb-rating-content > div {
+	.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating-content > div {
 		display: inline-block;
 	}
 	<?php
