@@ -86,7 +86,6 @@ FLBuilder::register_module(
 							'default' => '4',
 							'slider'  => array(
 								'step' => .5,
-								'min'  => 0,
 								'max'  => 10,
 							),
 						),
