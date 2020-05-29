@@ -118,3 +118,39 @@ if ( 'inline' === $settings->rating_layout && 'justify' !== $settings->alignment
 	<?php
 }
 ?>
+<?php /* Global Setting If started */ ?>
+<?php if ( $global_settings->responsive_enabled ) { ?>
+
+		<?php /* Medium Breakpoint media query */ ?>
+		@media ( max-width: <?php echo esc_attr( $global_settings->medium_breakpoint ) . 'px'; ?> ) {
+
+			<?php
+			if ( 'justify' !== $settings->alignment_medium ) {
+				?>
+	.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating-content {
+		text-align: <?php echo esc_attr( $settings->alignment_medium ); ?>;
+	}
+				<?php
+			}
+			?>
+
+}
+
+
+	<?php /* Small Breakpoint media query */ ?>
+		@media ( max-width: <?php echo esc_attr( $global_settings->responsive_breakpoint ) . 'px'; ?> ) {
+		<?php
+		if ( 'justify' !== $settings->alignment_responsive ) {
+			?>
+	.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating-content {
+		text-align: <?php echo esc_attr( $settings->alignment_responsive ); ?>;
+	}
+			<?php
+		}
+		?>
+
+	}
+
+		<?php
+}
+?>

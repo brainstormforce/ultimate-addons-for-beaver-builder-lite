@@ -195,6 +195,7 @@ FLBuilder::register_module(
 							'type'    => 'select',
 							'label'   => __( 'Alignment', 'uabb' ),
 							'default' => 'left',
+							'responsive' => true,
 							'options' => array(
 								'left'    => __( 'Left', 'uabb' ),
 								'center'  => __( 'Center', 'uabb' ),
