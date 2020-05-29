@@ -6,11 +6,23 @@
  */
 
 ?>
-
 <?php
 
-	$settings->size    = ( '' !== $settings->size ) ? $settings->size : '40';
-	$settings->spacing = ( '' !== $settings->spacing ) ? $settings->spacing : '10';
+FLBuilderCSS::responsive_rule(
+	array(
+		'settings'     => $settings,
+		'setting_name' => 'size',
+		'selector'     => ".fl-node-$id .adv-icon-wrap .uabb-icon-wrap .uabb-icon i",
+		'prop'         => 'font-size',
+		'unit'         => 'px',
+	)
+);
+
+?>
+<?php
+
+	$settings->size    = ( '' !== $settings->size ) ? $settings->size : '';
+	$settings->spacing = ( '' !== $settings->spacing ) ? $settings->spacing : '';
 ?>
 
 <?php if ( 'horizontal' === $settings->icon_struc_align ) { ?>
@@ -50,7 +62,7 @@
 <?php
 $icon_count                 = 1;
 $settings->bg_border_radius = ( '' !== $settings->bg_border_radius ) ? $settings->bg_border_radius : '0';
-$settings->bg_size          = ( '' !== $settings->bg_size ) ? (int) trim( $settings->bg_size ) : 0;
+$settings->bg_size          = ( '' !== $settings->bg_size ) ? (int) trim( $settings->bg_size ) : 10;
 
 foreach ( $settings->icons as $i => $icon ) :
 

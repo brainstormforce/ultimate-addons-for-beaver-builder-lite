@@ -82,8 +82,8 @@ FLBuilder::register_module(
 						),
 						'size'             => array(
 							'type'        => 'unit',
-							'label'       => __( 'Image / Icon Size', 'uabb' ),
-							'placeholder' => '40',
+							'label'       => __( 'Icon Size', 'uabb' ),
+							'default' => '40',
 							'responsive'  => 'true',
 							'units'       => array( 'px' ),
 							'slider'      => array(
@@ -97,17 +97,12 @@ FLBuilder::register_module(
 						'spacing'          => array(
 							'type'        => 'unit',
 							'label'       => __( 'Spacing', 'uabb' ),
-							'placeholder' => '10',
+							'default' => '10',
 							'maxlength'   => '2',
 							'size'        => '4',
 							'responsive'  => 'true',
-							'help'        => __( 'To manage the space between Icons / Image use this option', 'uabb' ),
-							'preview'     => array(
-								'type'     => 'css',
-								'selector' => '.adv-icon-link',
-								'property' => 'margin-right',
-								'units'    => array( 'px' ),
-							),
+							'units'    => array( 'px' ),
+							'help'        => __( 'To manage the space between Icons use this option', 'uabb' ),
 							'slider'      => array(
 								'px' => array(
 									'min'  => 0,
@@ -118,7 +113,7 @@ FLBuilder::register_module(
 						),
 						'icoimage_style'   => array(
 							'type'    => 'select',
-							'label'   => __( 'Image / Icon Background Style', 'uabb' ),
+							'label'   => __( 'Icon Background Style', 'uabb' ),
 							'default' => 'simple',
 							'options' => array(
 								'simple' => __( 'Simple', 'uabb' ),
@@ -141,8 +136,8 @@ FLBuilder::register_module(
 						'bg_size'          => array(
 							'type'        => 'unit',
 							'label'       => __( 'Background Size', 'uabb' ),
-							'help'        => __( 'Spacing between Icon / Photo & Background edge', 'uabb' ),
-							'placeholder' => '0',
+							'help'        => __( 'Spacing between Icon & Background edge', 'uabb' ),
+							'default' => '10',
 							'maxlength'   => '3',
 							'size'        => '6',
 							'units'       => array( 'px' ),
@@ -215,7 +210,7 @@ FLBuilder::register_module(
 							'type'    => 'align',
 							'label'   => __( 'Alignment', 'uabb' ),
 							'default' => 'center',
-							'help'    => __( 'The overall alignment of Image / Icon', 'uabb' ),
+							'help'    => __( 'The overall alignment of Icon', 'uabb' ),
 						),
 						'responsive_align' => array(
 							'type'    => 'align',
