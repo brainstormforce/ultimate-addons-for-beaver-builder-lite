@@ -26,7 +26,6 @@
 					form.find('#fl-field-border_hover_color').show();
 				}
 			}else {
-				//alert();
 				form.find('#fl-field-border_width').hide();
 				form.find('#fl-field-border_color').hide();
 				form.find('#fl-field-border_hover_color').hide();
