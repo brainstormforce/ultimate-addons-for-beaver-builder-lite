@@ -218,6 +218,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 == Changelog ==
 
 = 1.4.0 =
+* New: Introduced Advanced Icon
 * New: Introduced Star Rating
 
 = 1.3.2 =
