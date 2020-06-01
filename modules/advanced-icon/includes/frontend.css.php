@@ -8,16 +8,18 @@
 ?>
 <?php
 
-FLBuilderCSS::responsive_rule(
-	array(
-		'settings'     => $settings,
-		'setting_name' => 'size',
-		'selector'     => ".fl-node-$id .adv-icon-wrap .uabb-icon-wrap .uabb-icon i",
-		'prop'         => 'font-size',
-		'unit'         => 'px',
-	)
-);
+if ( class_exists( 'FLBuilderCSS' ) ) {
 
+	FLBuilderCSS::responsive_rule(
+		array(
+			'settings'     => $settings,
+			'setting_name' => 'size',
+			'selector'     => ".fl-node-$id .adv-icon-wrap .uabb-icon-wrap .uabb-icon i",
+			'prop'         => 'font-size',
+			'unit'         => 'px',
+		)
+	);
+}
 ?>
 <?php
 
