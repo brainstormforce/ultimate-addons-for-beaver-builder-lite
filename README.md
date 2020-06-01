@@ -219,6 +219,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ### 1.4.0 ###
 * New: Introduced Advanced Icon
+* New: Introduced Star Rating
 
 ### 1.3.2 ###
 * Improvement: Optimised the query loading time for Notices.
