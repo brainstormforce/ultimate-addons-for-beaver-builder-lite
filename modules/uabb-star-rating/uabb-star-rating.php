@@ -30,7 +30,7 @@ class UABBStarRatingModule extends FLBuilderModule {
 				'editor_export'   => true, // Defaults to true and can be omitted.
 				'enabled'         => true, // Defaults to true and can be omitted.
 				'partial_refresh' => true,
-				'icon'            => 'icon.svg',
+				'icon'            => 'star.svg',
 			)
 		);
 

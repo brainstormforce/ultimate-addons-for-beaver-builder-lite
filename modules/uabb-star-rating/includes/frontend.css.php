@@ -9,34 +9,36 @@ $settings->title_color           = UABB_Helper::uabb_colorpicker( $settings, 'ti
 $settings->rating_unmarked_color = UABB_Helper::uabb_colorpicker( $settings, 'rating_unmarked_color' );
 $settings->rating_color          = UABB_Helper::uabb_colorpicker( $settings, 'rating_color' );
 
+if ( class_exists( 'FLBuilderCSS' ) ) {
 
-FLBuilderCSS::typography_field_rule(
-	array(
-		'settings'     => $settings,
-		'setting_name' => 'title_typography',
-		'selector'     => ".fl-node-$id .uabb-rating-title",
-	)
-);
+	FLBuilderCSS::typography_field_rule(
+		array(
+			'settings'     => $settings,
+			'setting_name' => 'title_typography',
+			'selector'     => ".fl-node-$id .uabb-rating-title",
+		)
+	);
 
-FLBuilderCSS::responsive_rule(
-	array(
-		'settings'     => $settings,
-		'setting_name' => 'star_icon_size',
-		'selector'     => ".fl-node-$id .uabb-rating i",
-		'prop'         => 'font-size',
-		'unit'         => 'px',
-	)
-);
+	FLBuilderCSS::responsive_rule(
+		array(
+			'settings'     => $settings,
+			'setting_name' => 'star_icon_size',
+			'selector'     => ".fl-node-$id .uabb-rating i",
+			'prop'         => 'font-size',
+			'unit'         => 'px',
+		)
+	);
 
-FLBuilderCSS::responsive_rule(
-	array(
-		'settings'     => $settings,
-		'setting_name' => 'star_icon_spacing',
-		'selector'     => ".fl-node-$id .uabb-rating i:not(:last-of-type)",
-		'prop'         => 'margin-right',
-		'unit'         => 'px',
-	)
-);
+	FLBuilderCSS::responsive_rule(
+		array(
+			'settings'     => $settings,
+			'setting_name' => 'star_icon_spacing',
+			'selector'     => ".fl-node-$id .uabb-rating i:not(:last-of-type)",
+			'prop'         => 'margin-right',
+			'unit'         => 'px',
+		)
+	);
+}
 ?>
 
 .fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating i {
