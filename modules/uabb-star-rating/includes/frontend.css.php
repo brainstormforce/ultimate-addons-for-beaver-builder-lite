@@ -91,11 +91,7 @@ if ( 'justify' !== $settings->alignment ) {
 
 	<?php
 	if ( 'inline' === $settings->rating_layout ) {
-		if ( 'justify' === $settings->alignment ) {
-			?>
-		margin-right: auto;
-			<?php
-		} else {
+		if ( 'justify' !== $settings->alignment ) {
 
 			if ( 'top' === $settings->star_position ) {
 				?>
@@ -110,6 +106,16 @@ if ( 'justify' !== $settings->alignment ) {
 	}
 	?>
 }
+
+<?php
+if ( 'inline' === $settings->rating_layout && 'justify' === $settings->alignment ) {
+	?>
+	.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating-content {
+		justify-content: space-between;
+	}
+	<?php
+}
+?>
 
 <?php
 if ( 'inline' === $settings->rating_layout && 'justify' !== $settings->alignment ) {
