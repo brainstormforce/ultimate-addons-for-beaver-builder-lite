@@ -68,6 +68,7 @@ if ( class_exists( 'FLBuilderCSS' ) ) {
 		-ms-flex-align: center;
 		align-items: center;
 		flex-direction: row;
+		justify-content: space-between;
 		<?php
 	} elseif ( 'inline' === $settings->rating_layout && 'justify' !== $settings->alignment ) {
 		?>
@@ -106,16 +107,6 @@ if ( 'justify' !== $settings->alignment ) {
 	}
 	?>
 }
-
-<?php
-if ( 'inline' === $settings->rating_layout && 'justify' === $settings->alignment ) {
-	?>
-	.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating-content {
-		justify-content: space-between;
-	}
-	<?php
-}
-?>
 
 <?php
 if ( 'inline' === $settings->rating_layout && 'justify' !== $settings->alignment ) {
