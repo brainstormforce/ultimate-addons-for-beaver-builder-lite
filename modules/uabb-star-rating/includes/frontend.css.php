@@ -68,6 +68,7 @@ if ( class_exists( 'FLBuilderCSS' ) ) {
 		-ms-flex-align: center;
 		align-items: center;
 		flex-direction: row;
+		justify-content: space-between;
 		<?php
 	} elseif ( 'inline' === $settings->rating_layout && 'justify' !== $settings->alignment ) {
 		?>
@@ -91,11 +92,7 @@ if ( 'justify' !== $settings->alignment ) {
 
 	<?php
 	if ( 'inline' === $settings->rating_layout ) {
-		if ( 'justify' === $settings->alignment ) {
-			?>
-		margin-right: auto;
-			<?php
-		} else {
+		if ( 'justify' !== $settings->alignment ) {
 
 			if ( 'top' === $settings->star_position ) {
 				?>
