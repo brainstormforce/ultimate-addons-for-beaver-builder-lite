@@ -161,7 +161,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'image-icon'      => 'Image / Icon',
 				'uabb-button'     => 'Button',
 				'uabb-heading'    => 'Heading',
-        'advanced-icon'   => 'Advanced Icons',
+        		'advanced-icon'   => 'Advanced Icons',
 				'uabb-star-rating' => 'Star Rating',
 			);
 
@@ -179,8 +179,8 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'advanced-accordion'       => array(
 					'label'     => 'Advanced Accordion',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/advanced-accordion/',
-					'class'     => '',
-					'tag_title' => '',
+					'class'     => 'uabb-premium-flyout-green',
+					'tag_title' => 'Updated',
 				),
 				'advanced-icon'            => array(
 					'label'     => 'Advanced Icons',
@@ -191,14 +191,14 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'uabb-advanced-menu'       => array(
 					'label'     => 'Advanced Menu',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/advanced-menu/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'New!',
+					'class'     => 'uabb-premium-flyout-purple',
+					'tag_title' => 'Popular'
 				),
 				'blog-posts'               => array(
 					'label'     => 'Advanced Posts',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/advanced-posts/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'Updated',
+					'class'     => 'uabb-premium-flyout-purple',
+					'tag_title' => 'Popular'
 				),
 				'advanced-separator'       => array(
 					'label'     => 'Advanced Separator',
@@ -209,8 +209,8 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'advanced-tabs'            => array(
 					'label'     => 'Advanced Tabs',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/advanced-tabs/',
-					'class'     => '',
-					'tag_title' => '',
+					'class'     => 'uabb-premium-flyout-green',
+					'tag_title' => 'Updated',
 				),
 				'uabb-beforeafterslider'   => array(
 					'label'     => 'Before After Slider',
@@ -221,8 +221,8 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'uabb-business-hours'      => array(
 					'label'     => 'Business Hours',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/business-reviews/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'New!',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-business-reviews'      => array(
 					'label'     => 'Business Reviews',
@@ -233,8 +233,8 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'uabb-caldera-form-styler'      => array(
 					'label'     => 'Caldera Forms Styler',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/caldera-forms-styler/',
-					'class'     => '',
-					'tag_title' => '',
+					'class'     => 'uabb-premium-flyout-green',
+					'tag_title' => 'New',
 				),
 				'uabb-call-to-action'      => array(
 					'label'     => 'Call To Action',
@@ -245,32 +245,32 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'uabb-col-gradient'        => array(
 					'label'     => 'Column Gradient',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/row-column-gradient/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'New!',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-col-shadow'          => array(
 					'label'     => 'Column Shadow',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/column-shadow/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'New!',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-col-particle'          => array(
 					'label'     => 'Column Particle Backgrounds',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/particle-backgrounds/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'New!',
+					'class'     => 'uabb-premium-flyout-purple',
+					'tag_title' => 'Popular',
 				),
 				'uabb-content-toggle'      => array(
 					'label'     => 'Content Toggle',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/content-toggle/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'New!',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-contact-form7'       => array(
 					'label'     => 'CF7 Styler',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/contact-form7-styler/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'New!',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-contact-form'        => array(
 					'label'     => 'Contact Form',
@@ -287,8 +287,8 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'uabb-numbers'             => array(
 					'label'     => 'Counter',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/counter/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'Updated',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'creative-link'            => array(
 					'label'     => 'Creative Link',
@@ -311,26 +311,26 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'fancy-text'               => array(
 					'label'     => 'Fancy Text',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/fancy-text/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'New',
+					'class'     => 'uabb-premium-flyout-purple',
+					'tag_title' => 'Popular',
 				),
 				'uabb-faq'               => array(
 					'label'     => 'FAQ',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/faq/',
-					'class'     => 'uabb-premium-flyout-purple',
-					'tag_title' => 'Popular',
+					'class'     => 'uabb-premium-flyout-green',
+					'tag_title' => 'New & Unique',
 				),
 				'google-map'               => array(
 					'label'     => 'Google Map',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/google-map/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'Updated',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-gravity-form'        => array(
 					'label'     => 'Gravity Forms Styler',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/gravity-forms/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'Popular',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-heading'             => array(
 					'label'     => 'Heading',
@@ -347,14 +347,14 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'uabb-how-to'             => array(
 					'label'     => 'How To Schema',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/how-to-schema/',
-					'class'     => 'uabb-premium-flyout-purple',
-					'tag_title' => 'Popular',
+					'class'     => 'uabb-premium-flyout-green',
+					'tag_title' => 'New & Unique',
 				),
 				'uabb-image-carousel'      => array(
 					'label'     => 'Image Carousel',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/image-carousel/',
 					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'NEW!',
+					'tag_title' => 'Updated',
 				),
 				'info-banner'              => array(
 					'label'     => 'Info Banner',
@@ -407,26 +407,26 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'uabb-login-form'                => array(
 					'label'     => 'Login Form',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/login-form/',
-					'class'     => '',
-					'tag_title' => '',
+					'class'     => 'uabb-premium-flyout-green',
+					'tag_title' => 'New',
 				),
 				'mailchimp-subscribe-form' => array(
 					'label'     => 'Subscription Form',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/mailchimp-subscribe-form/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'Updated',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-marketing-button' => array(
 					'label'     => 'Marketing Button',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/marketing-button/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'Updated',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'modal-popup'              => array(
 					'label'     => 'Modal Popup',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/modal-popup/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'Updated',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-off-canvas'               => array(
 					'label'     => 'Off Canvas',
@@ -443,8 +443,8 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'photo-gallery'            => array(
 					'label'     => 'Photo Gallery',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/photo-gallery/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'Updated',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'pricing-box'              => array(
 					'label'     => 'Price Box',
@@ -461,26 +461,32 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'progress-bar'             => array(
 					'label'     => 'Progress Bar',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/progress-bar/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'Updated',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-retina-image'            => array(
 					'label'     => 'Retina Image',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/retina-image/',
-					'class'     => '',
-					'tag_title' => '',
+					'class'     => 'uabb-premium-flyout-red',
+					'tag_title' => 'Unique',
+				),
+				'uabb-row-particle'            => array(
+					'label'     => 'Row Particle Background',
+					'demo_url'  => 'https://www.ultimatebeaver.com/modules/row-separators/',
+					'class'     => 'uabb-premium-flyout-purple',
+					'tag_title' => 'Popular',
 				),
 				'row-separator'            => array(
 					'label'     => 'Row Separator',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/row-separators/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'Updated',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-row-gradient'        => array(
 					'label'     => 'Row Gradient',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/row-column-gradient/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'New!',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-social-share'        => array(
 					'label'     => 'Social Share',
@@ -497,8 +503,8 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'uabb-table-of-contents'   => array(
 					'label'     => 'Table of Contents',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/table-of-contents/',
-					'class'     => '',
-					'tag_title' => '',
+					'class'     => 'uabb-premium-flyout-green',
+					'tag_title' => 'New',
 				),
 				'team'                     => array(
 					'label'     => 'Team',
@@ -512,17 +518,11 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 					'class'     => '',
 					'tag_title' => '',
 				),
-				'adv-testimonials'         => array(
-					'label'     => 'Testimonials',
-					'demo_url'  => 'https://www.ultimatebeaver.com/modules/testimonials/',
-					'class'     => '',
-					'tag_title' => '',
-				),
 				'uabb-registration-form'         => array(
 					'label'     => 'User Registration Form',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/user-registration-form/',
-					'class'     => '',
-					'tag_title' => '',
+					'class'     => 'uabb-premium-flyout-green',
+					'tag_title' => 'New',
 				),
 				'uabb-video'         => array(
 					'label'     => 'Video',
@@ -533,32 +533,32 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'uabb-video-gallery'         => array(
 					'label'     => 'Video Gallery',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/video-gallery/',
-					'class'     => 'uabb-premium-flyout-purple',
-					'tag_title' => 'Popular',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-woo-add-to-cart'     => array(
 					'label'     => 'Woo Add to Cart',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/woo-add-to-cart/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'New!',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-woo-categories'      => array(
 					'label'     => 'Woo Categories',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/woo-categories/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'New!',
+					'class'     => '',
+					'tag_title' => '',
 				),
 				'uabb-woo-products'        => array(
 					'label'     => 'Woo Products',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/woo-products/',
 					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'New!',
+					'tag_title' => 'Updated',
 				),
 				'uabb-wp-forms-styler'        => array(
 					'label'     => 'WPForms Styler',
 					'demo_url'  => 'https://www.ultimatebeaver.com/modules/wpforms-styler/',
-					'class'     => 'uabb-premium-flyout-green',
-					'tag_title' => 'New!',
+					'class'     => '',
+					'tag_title' => '',
 				),
 			);
 
