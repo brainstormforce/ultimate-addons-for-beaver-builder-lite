@@ -101,6 +101,7 @@ class UABB_Init {
 
 		// wpml.
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-wpml.php';
+		require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
 
 		// Load the appropriate text-domain.
 		$this->load_plugin_textdomain();
