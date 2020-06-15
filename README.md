@@ -216,7 +216,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 ## Changelog ##
 
 ### 1.5.0 ###
-* New: New: Users can now share non-personal usage data to help us test and develop better products. ( https://store.brainstormforce.com/usage-tracking/?utm_source=wp_dashboard&utm_medium=general_settings&utm_campaign=usage_tracking )
+* New: New: Users can now share non-personal usage data to help us test and develop better products.
 
 ### 1.4.0 ###
 * New: Introduced Advanced Icon
