@@ -4,7 +4,7 @@
 **Tags:** beaver builder, beaver builder free, beaver addons, beaver builder addon, beaver builder add ons, beaver builder lite, beaver builder modules, beaver builder addons, beaver builder extensions, beaver addon, beaver builder plugin, beaver builder wordpress  
 **Requires at least:** 4.6  
 **Tested up to:** 5.4
-**Stable tag:** 1.4.0
+**Stable tag:** 1.5.0
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -14,7 +14,7 @@ The Ultimate Addons for Beaver Builder extends the Beaver Builder functionality 
 
 <strong>The Ultimate Addons for Beaver Builder</strong>
 
-Supercharge Beaver Builder with 55+ powerful modules & 200+ templates to build WordPress websites in record time! This <a href=" https://www.ultimatebeaver.com/?utm_source=wprepo&utm_campaign=Lite&utm_medium=description">Beaver Builder Addon</a> is here to make website building an ultimate journey for you all.
+Supercharge Beaver Builder with 60+ powerful modules, 200+ section templates & 100+ page templates to build WordPress websites in record time! This <a href=" https://www.ultimatebeaver.com/?utm_source=wprepo&utm_campaign=Lite&utm_medium=description">Beaver Builder Addon</a> is here to make website building an ultimate journey for you all.
 
 Simply drag &amp; drop custom modules and pre-designed row &amp; page templates to reduce your website development time by around 30%!
 
@@ -26,11 +26,11 @@ See the Ultimate Addons for Beaver Builder in action! - <a href="https://www.ult
 
 <blockquote><strong>Ultimate Addons Pro &amp; Premium Support: </strong>
 
-This plugin is the lite version of the Ultimate Addons for Beaver Builder that is available for free. If you wish to avail all the time-saving features you'll ever need, including premium support, white label branding, 30+ modules & 200+ page & section templates and more, upgrade the Ultimate Addons to the pro version. <a href="https://www.ultimatebeaver.com/pricing/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Support" target="_blank">Click Here to Get Pro Copy now</a>!.<p></p></blockquote>
+This plugin is the lite version of the Ultimate Addons for Beaver Builder that is available for free. If you wish to avail all the time-saving features you'll ever need, including premium support, white label branding, 60+ powerful modules, 200+ section templates & 100+ page templates and more, upgrade the Ultimate Addons to the pro version. <a href="https://www.ultimatebeaver.com/pricing/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Support" target="_blank">Click Here to Get Pro Copy now</a>!.<p></p></blockquote>
 
 <strong>Learn From Tutorials</strong>
 
-Not sure of how things work? With over 60+ helpful articles, we are here to help and guide you at every step. <a href="https://www.ultimatebeaver.com/docs/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Docs" target="_blank">Ultimate Addons Knowledge Base</a>
+Not sure of how things work? With over 170+ helpful articles, we are here to help and guide you at every step. <a href="https://www.ultimatebeaver.com/docs/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Docs" target="_blank">Ultimate Addons Knowledge Base</a>
 
 <strong>Join our Facebook Group</strong>
 
@@ -49,14 +49,16 @@ Want to connect with us to know more? Or have some suggestions we can take forwa
  	<li><a href="https://www.ultimatebeaver.com/modules/image-separator/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Simple Separator</a>: A simple content module that allows you to add a separator between the title and the description of a particular content. You’ll love the styling options given here!</li>
  	<li>Spacer: A very simple, yet useful module that allows you to insert extra space between modules or anywhere on a page.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/heading/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Heading</a>: The Heading module allows you to add a heading anywhere on the page. Next time you want to add a single line, remember, you have the heading module.</li>
+ 	<li><a href="https://www.ultimatebeaver.com/modules/advanced-icon/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Advanced Icons</a>: Pick an icon from the icon library that comes with the Ultimate Addons. Customize and use them as per your needs.</li>
+ 	<li>Star Rating: A simple content module that allows you to display star ratings on your site along with a title.</li>
  	<li>100% SEO Friendly and quick loading modules.</li>
  	<li>A translation friendly interface that makes working easy and fun.</li>
  	<li>Built with responsive designs.</li>
 </ul>
 <strong>Ultimate Addons Pro Features</strong>
 <ul>
- 	<li>All the above-mentioned modules included in a pack of highly performing and creative 45+ modules that make building websites both, easy and fun.</li>
- 	<li>200+ well-designed, conversion oriented, responsive and beautiful section and page templates created with your requirements in mind. All these are loaded in a Template Cloud.</li>
+ 	<li>All the above-mentioned modules included in a pack of highly performing and creative 50+ modules that make building websites both, easy and fun.</li>
+ 	<li>300+ well-designed, conversion oriented, responsive and beautiful section and page templates created with your requirements in mind. All these are loaded in a Template Cloud.</li>
  	<li>Easy enable and disable options for modules; to reduce unnecessary server requests.</li>
  	<li>Live Preview options while you are still editing a page.</li>
  	<li>White Label Branding</li>
@@ -83,7 +85,6 @@ With the Ultimate Addons for Beaver Builder you get a collection of over 35+ cus
 <ul>
  	<li><a href="https://www.ultimatebeaver.com/modules/modal-popup/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">The Modal Popup Module</a>: A lead generation module that can be used to display forms, offers, videos, images and a lot more. Modal popups can be displayed when a user clicks on text or an element or by using the exit intent trigger, the well-timed trigger. Modal popups can contain, text, images, videos and other modules too.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/photo-gallery/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">The Photo Gallery</a>: A content module that can be used to display a set of images together. You can add captions and custom links for all your images.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/ribbon/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Ribbon</a>: An attractive lead generation module that allows you to display headings, titles and offers within an attractive ribbon that can be customized as per your needs.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/info-circle/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Info Circle</a>: A creative and interactive module in which you can add images or icons on the circumference and display the content within the circle.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/dual-button/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Dual Button</a>: An attractive module with a pair of fancy buttons connected to each other. You can style and customize the buttons as per your needs.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/counter/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Counter</a>: A simple counter with a lot of creativity! This module lets you display counters in the form of numbers, bars and circles. Pair them up with icons to make them more attractive.</li>
@@ -91,34 +92,24 @@ With the Ultimate Addons for Beaver Builder you get a collection of over 35+ cus
  	<li><a href="https://www.ultimatebeaver.com/modules/fancy-text/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Fancy Text</a>: Bid farewell to the old boring text! With the fancy text module, you can add in a tinge of creativity and fun into a plain line of text.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/row-separators/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Row Separator</a>: A popular module that lets you explore your creativity and add some beautiful row separators to make your web page look as awesome as ever.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/creative-link/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Creative Link</a>: You can use this new and creative way to highlight links. With over 18 styling options, you are sure to have some eye-catching links on your webpage.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/image-separator/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Image Separator</a>: A creative module that allows you to add relevant and attractive looking images between rows.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/flip-box/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Flip Box</a>: Another creative module that acts similar to a slide box; just that the box is flipped around to display the content on the back.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/slide-box/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Slide Box</a>: A creative module that allows you to add content on the front and back of a box. The content on the back slides out when you hover or click on the box.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/dual-color-heading/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Dual Color Heading</a>: Wish to add a little creativity in your headings too? You can do that with the dual color headings.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/progress-bar/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Progress Bar</a>: The progress bar module allows you to display developments and progress in horizontal and circular progress bars with a number of styling options.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/ihover/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">iHover</a>: A creative module that allows you to display some text with beautiful animations seen when a user hovers on an image.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/advanced-separator/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Advanced Separators</a>: A separator that can be used between two pieces of content. This could be a single stylish line, a line with an icon or an image, or a line with text.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/simple-separator/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Simple Separator</a>: A simple content module that allows you to add a separator between the title and the description of a particular content. You’ll love the styling options given here!</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/advanced-tabs/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Advanced Tabs</a>: An advanced content module that lets you add a number of tabs with images, icons, text and other modules that makes navigation easier.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/team/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Team</a>: A content module that lets you introduce the people you are working with. Simply drag and drop; add photos and text that best suits your team.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/price-box/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Price Box</a>: The price box module not only allows you to display the price but, gives you a number of styles that can be used to compare a number of pricing options, products and more.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/advanced-posts/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Advanced Posts</a>: Have a blog on your website? The Advanced Posts module lets you display your blog posts in a single section on a page. With various layouts and styling options, you are sure to entice your users.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/info-banner/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Info Banners</a>: Banners can be boring with simple text and images. The Info banners can be customized with attractive images, great text, clickable links and animations you’ll love!</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/info-list/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Info List</a>: Another content module that allows you to display a list of items with their respective information along with an image or icon.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/info-box/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Info Box</a>: An information box as it is called; contains a title and description. We let you add an image or an icon too, to make it look attractive.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/info-table/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Info Table</a>: A wonderful content module that can be used to display content in a descriptive manner with a title, description, links and image to accompany them all.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/advanced-accordion/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Advanced Accordion</a>: Avoid endless scrolling making navigation easier with the Advanced Accordion. You can add text, images, or other modules within an accordion.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/advanced-icon/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Advanced Icons</a>: Pick an icon from the icon library that comes with the Ultimate Addons. Customize and use them as per your needs.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/image-icon/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Image/Icon</a>: A lively content module that allows you to add an image of your choice and an icon among the hundreds available in the free library that comes with the Ultimate Addons for Beaver Builder.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/list-icon/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">List Icon</a>: Have a list to display? Pick an icon that best suits your theme and use it like a bullet for each list item. You can customize them too!</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/testimonials/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Testimonial</a>: You no longer need to design a section especially to pull in your testimonials. The testimonial module allows you to simply paste the testimonial text, with the user's name and pics. You can select from the various testimonial styles.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/heading/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Heading</a>: The Heading module allows you to add a heading anywhere on the page. Next time you want to add a single line, remember, you have the heading module.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/photo/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Photo</a>: Although it sounds simple, this photo module allows you to create wonders! You can add on hover effects on the photos displayed on your website.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/google-map/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Google Maps</a>: The Google Maps module allows you to display locations with various custom styling options you’ll love to try.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/call-to-action/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Call To Action</a>: Call-to-actions play an important role when it comes to conversions. The call-to-action module lets you create high converting sections that are both stylish and trendy.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/mailchimp-subscribe-form/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">MailChimp Subscription Form</a>: You can now use a beautifully designed form with a few settings. Just drag and drop and integrate with your MailChimp account.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/contact-form/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Contact Form</a>: Want more users to get in touch with you? Use the Contact Form module to display a beautiful form, users would want to contact you through.</li>
- 	<li><a href="https://www.ultimatebeaver.com/modules/button/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Button</a>: A button can act as an effective lead generation module paired with your call-to-action. This module comes with several ways to make it look stylish and trendy.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/before-after-slider/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Before After Slider</a>: The Before After Slider is a fully responsive module to display two different versions of an image by simply sliding over it. You can add custom text and colors too.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/social-share/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Social Share</a>: A powerful module that lets visitors share your content across various social media platforms without installing a new plugin for the same.</li>
  	<li><a href="https://www.ultimatebeaver.com/modules/hotspot/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Hotspot</a>: Want to highlight a particular part of an image? Use the Hotspot module to add a hotspot with an icon, text or image.</li>
@@ -138,11 +129,18 @@ With the Ultimate Addons for Beaver Builder you get a collection of over 35+ cus
 	<li><a href="https://www.ultimatebeaver.com/modules/video-gallery/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Video Gallery</a>: Flaunt all your beautiful videos within the highly optimized video gallery Module of the Ultimate Addons for Beaver Builder.</li>
 	<li><a href="https://www.ultimatebeaver.com/modules/price-list/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Price List</a>: Simply drag and drop Price List module to design pixel-perfect menus, catalogs, product list or any other list of featured items Price List Module of the Ultimate Addons for Beaver Builder.</li>
 	<li><a href="https://www.ultimatebeaver.com/modules/marketing-button/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Marketing Button</a>: Create trending and appealing call-to-actions with the Ultimate Addon’s Marketing Button that lets you add additional text with a fully customizable button.</li>
-	<li><a href=https://www.ultimatebeaver.com/modules/particle-backgrounds/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Particle Backgrounds</a>: Add interactive row and column backgrounds with animated particles using Particles background of the Ultimate Addons.</li>
-	<li><a href=https://www.ultimatebeaver.com/modules/business-reviews/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Business Reviews</a>: Build trust and authority by fetching real reviews from Google and Yelp directly on to your website!.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/particle-backgrounds/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Particle Backgrounds</a>: Add interactive row and column backgrounds with animated particles using Particles background of the Ultimate Addons.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/business-reviews/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Business Reviews</a>: Build trust and authority by fetching real reviews from Google and Yelp directly on to your website!.</li>
 	>
-	<li><a href=https://www.ultimatebeaver.com/modules/off-canvas/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Off-Canvas</a>: Display creative flyout panels with menus, additional content, reference links, forms, etc. in a responsive off-canvas panel built with Beaver Builder.</li>
-	<li><a href=https://www.ultimatebeaver.com/modules/wpforms-styler/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">WPForms Styler</a>: Display stylish and engaging WPForms with advanced styling options through Beaver Builder itself!.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/off-canvas/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Off-Canvas</a>: Display creative flyout panels with menus, additional content, reference links, forms, etc. in a responsive off-canvas panel built with Beaver Builder.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/wpforms-styler/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">WPForms Styler</a>: Display stylish and engaging WPForms with advanced styling options through Beaver Builder itself!.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/retina-image/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Retina Image</a>: Add high definition images and logos on your WordPress website with this Beaver Builder module that makes them look great on all retina display devices.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/user-registration-form/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">User Registration Form</a>: Build customized user registration forms with additional fields and more styling options through Beaver Builder itself!</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/table-of-contents/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Table of Contents</a>: Introducing the easiest way to add navigation in your long posts or pages. It's now just a few-click job with Table of Contents module in Beaver Builder!</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/login-form/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Login Form</a>: Create custom login pages with unique social login support. Present attractive login pages and ease down the login process.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/how-to-schema/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">How-to Schema</a>: Create a how-to page or an article using the How-to module and get schema markup implemented automatically on to it.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/faq/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">FAQ with Schema Support</a>: Put up an elegant FAQ section that will provide prompt and needful information to your website visitors. With the inbuilt schema support feature, a module will help your page/post rank higher in search results.</li>
+	<li><a href="https://www.ultimatebeaver.com/modules/caldera-forms-styler/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO" target="_blank">Caldera Forms Styler</a>: Caldera Form Styler module lets you turn simple form design into an attractive one. You can creatively present form fields, submit button as well as enhance error messages and take Caldera forms to the next level.</li>
 </ul>
 <strong>Template Cloud with Page and Section Templates</strong>
 
@@ -171,7 +169,7 @@ The Ultimate Addons for Beaver Builder comes from our team of knowledgeable prof
 
 1. Install Ultimate Addon for Beaver Builder (Lite) either via the WordPress plugin directory or by uploading the files to your server at wp-content/plugins.
 
-2. After activating Ultimate Addon for Beaver Builder, navigate to the settings page at Settings > UABB to configure the post types you would like it to work with.
+2. After activating Ultimate Addon for Beaver Builder, navigate to the settings page at Settings > Beaver Builder to configure the post types you would like it to work with.
 
 3. A Page Builder tab will appear on the Edit Page/Post area. Also, a Page Builder option will appear in the WordPress Admin Bar on the front end of your website.
 
@@ -216,6 +214,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 4. /assets/screenshots/4.png
 
 ## Changelog ##
+
+### 1.5.0 ###
+* New: New: Users can now share non-personal usage data to help us test and develop better products. ( https://store.brainstormforce.com/usage-tracking/?utm_source=wp_dashboard&utm_medium=general_settings&utm_campaign=usage_tracking )
 
 ### 1.4.0 ###
 * New: Introduced Advanced Icon
