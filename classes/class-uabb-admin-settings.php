@@ -40,7 +40,7 @@ final class UABBBuilderAdminSettings {
 	 * @return void
 	 */
 	static public function init_hooks() {
-		if ( ! is_admin() || ! current_user_can( 'manage_options' ) ) {
+		if ( ! is_admin() ) {
 			return;
 		}
 
@@ -123,7 +123,7 @@ final class UABBBuilderAdminSettings {
 					__( 'I already did', 'ultimate-addon-for-beaver-builder' )
 				),
 				'repeat-notice-after'        => MONTH_IN_SECONDS,
-				'display-notice-after'       => ( 2 * WEEK_IN_SECONDS ), // Display notice after 2 weeks.
+				'display-notice-after'       => (2* WEEK_IN_SECONDS), // Display notice after 2 weeks
 				'priority'                   => 25,
 				'display-with-other-notices' => false,
 			)
