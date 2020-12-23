@@ -276,3 +276,25 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 = 1.0 =
 * Initial release
+
+== Credits ==
+
+= Animate CSS =
+Repo - https://github.com/animate-css/animate.css
+Licensed under MIT - https://github.com/animate-css/animate.css/blob/main/LICENSE
+
+= Bowser JS =
+Bowser - a browser detector - https://github.com/lancedikson/bowser
+Licensed under MIT - https://github.com/lancedikson/bowser/blob/master/LICENSE
+
+= JQuery LazyLoad =
+Repo - https://github.com/tuupola/lazyload
+Licensed under MIT - https://github.com/tuupola/lazyload/blob/2.x/LICENSE.md
+
+= JQuery Shuffle =
+Repo - https://github.com/Vestride/Shuffle
+Licensed under MIT - https://github.com/Vestride/Shuffle/blob/master/LICENSE
+
+= JQuery throttle / debounce =
+URL - http://benalman.com/projects/jquery-throttle-debounce-plugin/
+Licensed under MIT & GPL - http://benalman.com/about/license/

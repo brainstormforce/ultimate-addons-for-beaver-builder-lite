@@ -228,7 +228,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 ### 1.3.1 ###
 * Improvement: Added Astra Theme Button compatibility from v2.2.0 for Button module
 * Improvement: Added new style type Default for Button module
-* Improvement: Added Background Color and Padding setting options in Heading module.
+* Improvement: Added Background Color and Padding setting options in Heading module
 * Fixed: Info List - Non Numeric value notice for Image Size in rare cases
 
 ### 1.3.0 ###
@@ -237,10 +237,6 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 * New: Added Link field compatibility with Beaver Builder 2.2
 * Improvement: Added color connections to all color fields
 * Improvement: Added slider support to all unit fields
-
-### 1.2.4 ###
-* Fixed: Improved performance of the field replacement functionality
-* Fixed: Reduced the frontend data render calls to help with performance
 
 ### 1.2.4 ###
 * Fixed: Improved performance of the field replacement functionality
@@ -280,3 +276,25 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ### 1.0 ###
 * Initial release
+
+## Credits ##
+
+### Animate CSS ###
+Repo - https://github.com/animate-css/animate.css
+Licensed under MIT - https://github.com/animate-css/animate.css/blob/main/LICENSE
+
+### Bowser JS ###
+Bowser - a browser detector - https://github.com/lancedikson/bowser
+Licensed under MIT - https://github.com/lancedikson/bowser/blob/master/LICENSE
+
+### JQuery LazyLoad ###
+Repo - https://github.com/tuupola/lazyload
+Licensed under MIT - https://github.com/tuupola/lazyload/blob/2.x/LICENSE.md
+
+### JQuery Shuffle ###
+Repo - https://github.com/Vestride/Shuffle
+Licensed under MIT - https://github.com/Vestride/Shuffle/blob/master/LICENSE
+
+### JQuery throttle / debounce ###
+URL - http://benalman.com/projects/jquery-throttle-debounce-plugin/
+Licensed under MIT & GPL - http://benalman.com/about/license/
