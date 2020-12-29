@@ -276,3 +276,25 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 = 1.0 =
 * Initial release
+
+== Credits ==
+
+= Animate CSS =
+* Repo - <a href= "https://github.com/animate-css/animate.css">https://github.com/animate-css/animate.css</a>
+* Licensed under MIT - <a href= "https://github.com/animate-css/animate.css/blob/main/LICENSE">https://github.com/animate-css/animate.css/blob/main/LICENSE</a>
+
+= Bowser JS =
+* Bowser - a browser detector - <a href= "https://github.com/lancedikson/bowser">https://github.com/lancedikson/bowser</a>
+* Licensed under MIT - <a href= "https://github.com/lancedikson/bowser/blob/master/LICENSE">https://github.com/lancedikson/bowser/blob/master/LICENSE</a>
+
+= JQuery LazyLoad =
+* Repo - <a href= "https://github.com/tuupola/lazyload">https://github.com/tuupola/lazyload</a>
+* Licensed under MIT - <a href= "https://github.com/tuupola/lazyload/blob/2.x/LICENSE.md">https://github.com/tuupola/lazyload/blob/2.x/LICENSE.md</a>
+
+= JQuery Shuffle =
+* Repo - <a href= "https://github.com/Vestride/Shuffle">https://github.com/Vestride/Shuffle</a>
+* Licensed under MIT - <a href= "https://github.com/Vestride/Shuffle/blob/master/LICENSE">https://github.com/Vestride/Shuffle/blob/master/LICENSE</a>
+
+= JQuery throttle / debounce =
+* URL - <a href= "http://benalman.com/projects/jquery-throttle-debounce-plugin/">http://benalman.com/projects/jquery-throttle-debounce-plugin/</a>
+* Licensed under MIT & GPL - <a href= "http://benalman.com/about/license/">http://benalman.com/about/license/</a>
