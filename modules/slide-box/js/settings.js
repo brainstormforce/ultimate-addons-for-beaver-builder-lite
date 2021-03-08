@@ -19,7 +19,7 @@ jQuery(document).on( 'click' , '.fl-lightbox-footer span', function(){
     }
 });
 
-jQuery(document).load(function(){
+jQuery(document).on('load', function(){
 	jQuery(".cs-wp-color-picker").cs_wpColorPicker();
 });
 
