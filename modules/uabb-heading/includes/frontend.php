@@ -4,7 +4,7 @@
  *
  *  @package UABB Heading Module
  */
-
+global $wp_embed;
 ?>
 <div class="uabb-module-content uabb-heading-wrapper uabb-heading-align-<?php echo $settings->alignment; ?> <?php echo ( 'line_text' == $settings->separator_style ) ? $settings->responsive_compatibility : ''; ?>">
 	<?php if ( 'top' == $settings->separator_position ) { ?>
@@ -71,7 +71,7 @@
 
 	<?php if ( '' != $settings->description ) : ?>
 		<div class="uabb-subheading uabb-text-editor">
-			<?php echo $settings->description; ?>
+			<?php echo wpautop( $wp_embed->autoembed( $settings->description ) ); ?>
 		</div>
 	<?php endif; ?>
 
