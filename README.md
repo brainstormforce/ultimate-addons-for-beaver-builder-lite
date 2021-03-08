@@ -217,6 +217,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ### 1.5.1 ###
 * Improvement: Compatibility with Wordpress 5.7.
+* Improvement: Heading - Parsed the description in the heading in a better way by using `$wp_embed->autoembed`.
 
 ### 1.5.0 ###
 * New: New: Users can now share non-personal usage data to help us test and develop better products.
