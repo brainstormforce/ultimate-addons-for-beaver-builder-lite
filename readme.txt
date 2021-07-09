@@ -215,6 +215,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 == Changelog ==
 
+= 1.5.2 =
+* Fixed: Flip Box - Repeat setting not working for Front and Back Background Images.
+
 = 1.5.1 =
 * Improvement: Compatibility with Wordpress 5.7.
 * Improvement: Heading - Parsed the description in the heading in a better way by using `$wp_embed->autoembed`.
