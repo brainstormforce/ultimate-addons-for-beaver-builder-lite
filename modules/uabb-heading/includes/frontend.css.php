@@ -371,7 +371,7 @@ if ( 'line_text' == $settings->separator_style || 'line_image' == $settings->sep
 			<?php } ?>
 			<?php if ( '' != $settings->responsive_img_size ) { ?>
 			.fl-node-<?php echo $id; ?> .uabb-image-outter-wrap {
-				width: <?php echo ( 2 * ( $settings->img_border_width ) ) + ( 2 * ( $settings->img_size ) ) + ( $settings->responsive_img_size ); ?>px;
+				width: <?php echo ( $settings->responsive_img_size ); ?>px;
 			}
 			<?php } ?>
 
