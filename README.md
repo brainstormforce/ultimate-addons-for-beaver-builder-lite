@@ -216,6 +216,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 ## Changelog ##
 
 ### 1.5.2 ###
+* Fixed: Flip Box - Repeat setting not working for Front and Back Background Images.
 * Fixed: Heading - Resolved PHP warning for undefined property.
 
 ### 1.5.1 ###

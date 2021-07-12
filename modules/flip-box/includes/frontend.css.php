@@ -60,7 +60,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 		echo ( '' != $settings->front_background_color ) ? 'background-color: ' . $settings->front_background_color . ';' : '';
 	} else {
 		echo ( '' != $settings->front_bg_image_src ) ? 'background: url( "' . $settings->front_bg_image_src . '");' : '';
-		echo ( $settings->front_bg_image_repeat ) ? 'background-repeat: repeat;' : 'background-repeat: no-repeat;';
+		echo ( 'no' != $settings->front_bg_image_repeat ) ? 'background-repeat: repeat;' : 'background-repeat: no-repeat;';
 		echo ( '' != $settings->front_bg_image_display ) ? 'background-size: ' . $settings->front_bg_image_display . ';' : '';
 		echo ( '' != $settings->front_bg_image_pos ) ? 'background-position: ' . $settings->front_bg_image_pos . ';' : '';
 	}
@@ -94,7 +94,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 		echo ( '' != $settings->back_background_color ) ? 'background-color: ' . $settings->back_background_color . ';' : '';
 	} else {
 		echo ( '' != $settings->back_bg_image_src ) ? 'background: url( "' . $settings->back_bg_image_src . '");' : '';
-		echo ( 'no' != $settings->back_bg_imag ) ? 'background-repeat: repeat;' : 'background-repeat: no-repeat;';
+		echo ( 'no' != $settings->back_bg_image_repeat ) ? 'background-repeat: repeat;' : 'background-repeat: no-repeat;';
 		echo ( '' != $settings->back_bg_image_display ) ? 'background-size: ' . $settings->back_bg_image_display . ';' : '';
 		echo ( '' != $settings->back_bg_image_pos ) ? 'background-position: ' . $settings->back_bg_image_pos . ';' : '';
 	}
