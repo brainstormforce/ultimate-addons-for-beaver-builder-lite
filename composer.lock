@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5bca4e1f92abc57d60d5534019a9f759",
+    "content-hash": "5456482e681d059f0a4fe9b4f47e3d70",
     "packages": [
         {
             "name": "brainstormforce/astra-notices",
@@ -31,17 +31,7 @@
                 "wp-coding-standards/wpcs": "^2.3"
             },
             "type": "wordpress-plugin",
-            "scripts": {
-                "format": [
-                    "vendor/bin/phpcbf"
-                ],
-                "lint": [
-                    "vendor/bin/phpcs"
-                ],
-                "test": [
-                    "vendor/bin/phpunit"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL v3"
             ],
@@ -53,8 +43,8 @@
             ],
             "description": "Easily create admin notices",
             "support": {
-                "source": "https://github.com/brainstormforce/astra-notices/tree/1.1.8",
-                "issues": "https://github.com/brainstormforce/astra-notices/issues"
+                "issues": "https://github.com/brainstormforce/astra-notices/issues",
+                "source": "https://github.com/brainstormforce/astra-notices/tree/1.1.8"
             },
             "time": "2021-07-07T09:51:07+00:00"
         },
