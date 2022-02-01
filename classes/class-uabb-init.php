@@ -99,8 +99,6 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/helper.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-ui-panel.php';
 
-		// wpml.
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-wpml.php';
 		// BSF Analytics Tracker.
 		require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
 
@@ -159,6 +157,9 @@ class UABB_Init {
 				require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-bbtheme-global-integration.php';
 			}
 		}
+
+		// wpml.
+		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-wpml.php';
 
 		// Nested forms.
 		require_once BB_ULTIMATE_ADDON_DIR . 'objects/fl-nested-form-button.php';
