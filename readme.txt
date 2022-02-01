@@ -216,7 +216,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 == Changelog ==
 
 = 1.5.3 =
-* Fixed: Info List - Issue with WPML Fatal error
+* Fixed: Info List - PHP Fatal error while using with WPML plugin.
 
 = 1.5.2 =
 * Fixed: Flip Box - Repeat setting not working for Front and Back Background Images.
