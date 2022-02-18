@@ -66,7 +66,9 @@ class UABBInfoList extends FLBuilderModule {
 	 * @param object $settings gets the settings for the module.
 	 */
 	public function render_image( $item, $settings ) {
-		$settings->icon_image_size = isset( $settings->icon_image_size ) ? $settings->icon_image_size : 75;
+
+		$infolist_icon_size = isset( $settings->icon_image_size ) ? $settings->icon_image_size : 75;
+
 		if ( 'circle' == $settings->list_icon_style ) {
 			if ( is_numeric( $settings->icon_image_size ) ) {
 				$infolist_icon_size = $settings->icon_image_size / 2;
