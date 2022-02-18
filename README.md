@@ -215,6 +215,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ## Changelog ##
 
+### 1.5.4 ###
+* Fixed: Info List - Resolved PHP notice error in Info List module.
+
 ### 1.5.3 ###
 * Fixed: Info List - PHP Fatal error while using with WPML plugin.
 
