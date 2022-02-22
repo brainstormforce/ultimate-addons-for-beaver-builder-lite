@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/BrainstormForce
 Tags: beaver builder, beaver builder free, beaver addons, beaver builder addon, beaver builder add ons, beaver builder lite, beaver builder modules, beaver builder addons, beaver builder extensions, beaver addon, beaver builder plugin, beaver builder wordpress
 Requires at least: 4.6
 Tested up to: 5.9
-Stable tag: 1.5.3
+Stable tag: 1.5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -214,6 +214,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 4. /assets/screenshots/4.png
 
 == Changelog ==
+
+= 1.5.4 =
+* Fixed: Info List - Resolved PHP notice error in Info List module.
 
 = 1.5.3 =
 * Fixed: Info List - PHP Fatal error while using with WPML plugin.
