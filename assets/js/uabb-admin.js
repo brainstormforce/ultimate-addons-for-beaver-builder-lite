@@ -56,13 +56,13 @@ jQuery(document).ready(function( $ ) {
 		jQuery(this).find('i').addClass('uabb-reloading-iconfonts');
 
 		var data = {
-			'action': 'uabb_reload_icons'
+			'action': 'uabb_reload_icons',
+			'nonce': uabb['reload-icon-nonce'] 
 		};
 
 		//	Reloading IconFonts
 		jQuery.post( uabb.ajax_url, data, function(response) {
-			if( response == 'success' ) {
-				console.log('Reloading: ');
+			if( response.success ) {
 				location.reload(true);
 			}
 		});

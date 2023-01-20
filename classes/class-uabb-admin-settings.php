@@ -156,7 +156,10 @@ final class UABBBuilderAdminSettings {
 	static public function styles_scripts( $hook ) {
 		wp_register_style( 'uabb-admin-css', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-admin.css', array() );
 		wp_register_script( 'uabb-admin-js', BB_ULTIMATE_ADDON_URL . 'assets/js/uabb-admin.js', array( 'jquery' ), '', true );
-		wp_localize_script( 'uabb-admin-js', 'uabb', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+		wp_localize_script( 'uabb-admin-js', 'uabb', array( 
+			'ajax_url'          => admin_url( 'admin-ajax.php' ),
+			'reload-icon-nonce' => wp_create_nonce('uabb-reload-icons')  
+		) );
 
 		// Load AJAX script only on Builder UI Panel.
 		wp_register_script( 'uabb-lazyload', BB_ULTIMATE_ADDON_URL . 'assets/js/jquery.lazyload.min.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-tabs' ), null, true );
