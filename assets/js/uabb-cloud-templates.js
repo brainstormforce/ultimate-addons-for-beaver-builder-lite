@@ -214,6 +214,7 @@ jQuery( function( $ ) {
 			errorMessage        = UABBCloudTemplates.errorMessage,
 			successMessage      = UABBCloudTemplates.successMessage,
 			processAJAX         = true;
+			form_nonce = jQuery( '#uabb-cloud-templates-form' ).data( 'uabb-cloud-nonce' );
 
 		//	add processing class
 		if( meta_id != 'undefined' ) {
@@ -234,6 +235,7 @@ jQuery( function( $ ) {
 					btn.parents('.uabb-cloud-templates-not-found').find('.uabb-cloud-process i').show();
 					var dataAJAX	=  	{
 											action: 'uabb_cloud_dat_file_fetch',
+											form_nonce:form_nonce,
 										};
 
 					break;
@@ -250,12 +252,6 @@ jQuery( function( $ ) {
 					type: 'POST',
 					data: dataAJAX,
 					success: function(data){
-
-						/**
-						 * Parse response
-						 */
-						data = JSON.parse( data );
-						// console.log('data: ' + JSON.stringify( data ) );
 
 						var status                 = ( data.hasOwnProperty('status') ) ? data['status'] : '';
 						var msg                    = ( data.hasOwnProperty('msg') ) ? data['msg'] : '';

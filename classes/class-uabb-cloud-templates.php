@@ -252,13 +252,12 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 * @since 1.0
 		 */
 		function fetch_cloud_templates() {
+			check_ajax_referer( 'uabb_cloud_nonce', 'form_nonce' );
 			self::reset_cloud_transient();
 			$ajaxResult['status'] = 'success'; // @codingStandardsIgnoreLine.
 
 			// Result.
-			echo json_encode( $ajaxResult ); // @codingStandardsIgnoreLine.
-
-			die();
+			wp_send_json( $ajaxResult );
 		}
 
 		/**
