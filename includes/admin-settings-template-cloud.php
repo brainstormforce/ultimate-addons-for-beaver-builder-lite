@@ -12,7 +12,7 @@
 
 	<div class="uabb-go-premium"><?php _e( '<a href="' . BB_ULTIMATE_ADDON_UPGRADE_URL . '" target="_blank">Go Premium</a> and get access to all Page Templates and Sections.', 'uabb' ); // @codingStandardsIgnoreLine. ?></div>
 
-	<form id="uabb-cloud-templates-form" action="<?php UABBBuilderAdminSettings::render_form_action( 'uabb-cloud-templates' ); ?>" method="post" data-uabb-cloud-nonce="<?php echo esc_attr( wp_create_nonce( 'uabb_cloud_nonce' ) ); ?>">
+	<form id="uabb-cloud-templates-form" action="<?php UABBBuilderAdminSettings::render_form_action( 'uabb-cloud-templates' ); ?>" method="post">
 
 		<?php if ( FLBuilderAdminSettings::multisite_support() && ! is_network_admin() ) : ?>
 		<label>

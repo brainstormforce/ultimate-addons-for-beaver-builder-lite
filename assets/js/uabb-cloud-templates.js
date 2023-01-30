@@ -214,7 +214,7 @@ jQuery( function( $ ) {
 			errorMessage        = UABBCloudTemplates.errorMessage,
 			successMessage      = UABBCloudTemplates.successMessage,
 			processAJAX         = true;
-			form_nonce = jQuery( '#uabb-cloud-templates-form' ).data( 'uabb-cloud-nonce' );
+			form_nonce          = UABBCloudTemplates.uabb_cloud_nonce;
 
 		//	add processing class
 		if( meta_id != 'undefined' ) {
@@ -253,12 +253,7 @@ jQuery( function( $ ) {
 					data: dataAJAX,
 					success: function(data){
 
-						var status                 = ( data.hasOwnProperty('status') ) ? data['status'] : '';
-						var msg                    = ( data.hasOwnProperty('msg') ) ? data['msg'] : '';
-						var template_id            = ( data.hasOwnProperty('id') ) ? data['id'] : '';
-						var template_type          = ( data.hasOwnProperty('type') ) ? data['type'] : '';
-
-						if( status == 'success' ) {
+						if( data.success ) {
 
 							//	remove processing class
 							if( meta_id != 'undefined' ) {
@@ -286,17 +281,11 @@ jQuery( function( $ ) {
 							/**
 							 * Something went wrong
 							 */
-							if( '' != msg ) {
-	
-								btn.find('.msg').html( UABBCloudTemplates.errorMessageTryAgain );
-								btn.find('i').removeClass('uabb-reloading-iconfonts');
+							btn.find('.msg').html( UABBCloudTemplates.errorMessageTryAgain );
+							btn.find('i').removeClass('uabb-reloading-iconfonts');
 
-								var message = '<div class="notice notice-error uct-notice is-dismissible"><p>' + msg + '	</p></div>';
-								btn_template_image.append( message );
-
-							} else {
-								btn.find('.msg').html( status );
-							}
+							var message = '<div class="notice notice-error uct-notice is-dismissible"><p>' + data.message + '	</p></div>';
+							btn_template_image.append( message );
 						}
 					}
 				});
