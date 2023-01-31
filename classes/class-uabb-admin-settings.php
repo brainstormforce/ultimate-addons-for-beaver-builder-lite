@@ -170,6 +170,7 @@ final class UABBBuilderAdminSettings {
 
 		$UABBCloudTemplates = array( // @codingStandardsIgnoreLine.
 			'ajaxurl'                => admin_url( 'admin-ajax.php' ),
+			'uabb_cloud_nonce'       => wp_create_nonce( 'uabb_cloud_nonce' ),
 			'errorMessage'           => __( 'Something went wrong!', 'uabb' ),
 			'successMessage'         => __( 'Complete', 'uabb' ),
 			'successMessageFetch'    => __( 'Refreshed!', 'uabb' ),
