@@ -215,6 +215,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 == Changelog ==
 
+= 1.5.6.1 = 
+* Fixed: Info List - Undefined variable issue with PHP 8.
+
 = 1.5.6 = 
 * Security - Added nonce check to refresh cloud templates.
 
