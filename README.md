@@ -22,7 +22,6 @@ With the Ultimate Addons for Beaver Builder, we took the pain out of the website
 
 The Ultimate Addons for Beaver Builder, free up your time from all the complex website development process with easy to use drag and drop modules and templates that make the process quick and easy.
 
-See the Ultimate Addons for Beaver Builder in action! - <a href="https://www.ultimatebeaver.com/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Description" target="_blank">Launch the Demo</a>
 
 [Try it out on a free dummy site](https://bsf.io/uabb-lite-demo)
 
