@@ -24,6 +24,8 @@ The Ultimate Addons for Beaver Builder, free up your time from all the complex w
 
 See the Ultimate Addons for Beaver Builder in action! - <a href="https://www.ultimatebeaver.com/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Description" target="_blank">Launch the Demo</a>
 
+[Try it out on a free dummy site](https://bsf.io/uabb-lite-demo)
+
 <blockquote><strong>Ultimate Addons Pro &amp; Premium Support: </strong>
 
 This plugin is the lite version of the Ultimate Addons for Beaver Builder that is available for free. If you wish to avail all the time-saving features you'll ever need, including premium support, white label branding, 60+ powerful modules, 200+ section templates & 100+ page templates and more, upgrade the Ultimate Addons to the pro version. <a href="https://www.ultimatebeaver.com/pricing/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Support" target="_blank">Click Here to Get Pro Copy now</a>!.<p></p></blockquote>
