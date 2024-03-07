@@ -3,8 +3,8 @@
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Tags:** beaver builder, beaver builder free, beaver addons, beaver builder addon, beaver builder add ons, beaver builder lite, beaver builder modules, beaver builder addons, beaver builder extensions, beaver addon, beaver builder plugin, beaver builder wordpress  
 **Requires at least:** 4.6  
-**Tested up to:** 6.2  
-**Stable tag:** 1.5.6  
+**Tested up to:** 6.4.1  
+**Stable tag:** 1.5.7  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -22,7 +22,7 @@ With the Ultimate Addons for Beaver Builder, we took the pain out of the website
 
 The Ultimate Addons for Beaver Builder, free up your time from all the complex website development process with easy to use drag and drop modules and templates that make the process quick and easy.
 
-See the Ultimate Addons for Beaver Builder in action! - <a href="https://www.ultimatebeaver.com/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Description" target="_blank">Launch the Demo</a>
+[Try it out on a free dummy site](https://bsf.io/uabb-lite-demo)
 
 <blockquote><strong>Ultimate Addons Pro &amp; Premium Support: </strong>
 
@@ -215,10 +215,16 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ## Changelog ##
 
+### 1.5.6.1 ###
+* Fixed: Info List - Undefined variable issue with PHP 8.
+
+### 1.5.7 ###
+* Improvement: Compatibility with WordPress 6.3.
+
 ### 1.5.6 ###
 * Security - Added nonce check to refresh cloud templates.
 
-## 1.5.5 ###
+### 1.5.5 ###
 * Security - Added nonce check to reload icon action.
 
 ### 1.5.4 ###
