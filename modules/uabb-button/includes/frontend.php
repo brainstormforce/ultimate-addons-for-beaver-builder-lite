@@ -22,7 +22,7 @@ if ( isset( $settings->link_nofollow ) ) {
 		<?php
 	}
 	?>
-		<a href="<?php echo $settings->link; ?>" target="<?php echo $settings->link_target; ?>" <?php UABB_Helper::get_link_rel( $settings->link_target, $link_nofollow, 1 ); ?>class="uabb-button uabb-creative-button <?php echo 'uabb-creative-' . $settings->style . '-btn'; ?> <?php echo $module->get_button_style(); ?> <?php echo ( isset( $settings->a_class ) ) ? $settings->a_class : ''; ?> " <?php echo ( isset( $settings->a_data ) ) ? $settings->a_data : ''; ?> role="button">
+		<a href="<?php echo esc_url( $settings->link ); ?>" target="<?php echo esc_attr( $settings->link_target ); ?>" <?php UABB_Helper::get_link_rel( esc_attr( $settings->link_target ), $link_nofollow, 1 ); ?>class="uabb-button uabb-creative-button <?php echo 'uabb-creative-' . esc_attr( $settings->style ) . '-btn'; ?> <?php echo esc_attr( $module->get_button_style() ); ?> <?php echo ( isset( $settings->a_class ) ) ? esc_attr( $settings->a_class ) : ''; ?> " <?php echo ( isset( $settings->a_data ) ) ? esc_attr( $settings->a_data ) : ''; ?> role="button">
 			<?php
 			if ( ! empty( $settings->icon ) && ( 'before' == $settings->icon_position || ! isset( $settings->icon_position ) ) ) :
 
