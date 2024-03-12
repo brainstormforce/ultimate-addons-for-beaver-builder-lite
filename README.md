@@ -217,6 +217,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ### 1.5.7.1 ###
 * Improvement: This update addressed a security bug. Props to Patchstack for privately reporting it to our team.
+* Improvement: Multiple Security Improvements.
 * Fixed: Info List - Undefined variable issue with PHP 8.
 
 ### 1.5.7 ###
