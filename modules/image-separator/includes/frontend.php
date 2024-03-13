@@ -11,7 +11,7 @@
 ?>
 <div class="uabb-module-content uabb-imgseparator-wrap">
 	<?php if ( 'yes' == $settings->enable_link ) : ?>
-	<a class="imgseparator-link" href="<?php echo $settings->link; ?>" target="<?php echo $settings->link_target; ?>"></a>
+	<a class="imgseparator-link" href="<?php echo esc_url( $settings->link ); ?>" target="<?php echo esc_attr( $settings->link_target ); ?>"></a>
 	<?php endif; ?>
 	<div class="uabb-image-separator uabb-image
 	<?php
