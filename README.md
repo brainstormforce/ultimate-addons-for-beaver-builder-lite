@@ -3,8 +3,8 @@
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Tags:** beaver builder, beaver builder free, beaver addons, beaver builder addon, beaver builder add ons, beaver builder lite, beaver builder modules, beaver builder addons, beaver builder extensions, beaver addon, beaver builder plugin, beaver builder wordpress  
 **Requires at least:** 4.6  
-**Tested up to:** 6.4.1  
-**Stable tag:** 1.5.7  
+**Tested up to:** 6.5  
+**Stable tag:** 1.5.8  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -215,7 +215,8 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ## Changelog ##
 
-### 1.5.7.1 ###
+### 1.5.8 ###
+* Improvement: This update addressed a security bug. Props to Patchstack for privately reporting it to our team.
 * Fixed: Info List - Undefined variable issue with PHP 8.
 
 ### 1.5.7 ###

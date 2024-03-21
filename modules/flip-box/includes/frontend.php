@@ -33,7 +33,7 @@
 					<?php
 					if ( '' != $settings->title_back ) {
 						?>
-					<<?php echo $settings->back_title_typography_tag_selection; ?> class="uabb-back-text-title"><?php echo $settings->title_back; ?></<?php echo $settings->back_title_typography_tag_selection; ?>>
+					<<?php echo esc_attr( $settings->back_title_typography_tag_selection ); ?> class="uabb-back-text-title"><?php echo esc_attr( $settings->title_back ); ?></<?php echo esc_attr( $settings->back_title_typography_tag_selection ); ?>>
 						<?php
 					}
 					if ( '' != $settings->desc_back ) {
