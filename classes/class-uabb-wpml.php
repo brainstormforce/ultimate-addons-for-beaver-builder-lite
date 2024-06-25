@@ -177,6 +177,27 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 					),
 				),
 			);
+			// Heading Module.
+			$form['uabb-heading'] = array(
+				'conditions' => array( 'type' => 'uabb-heading' ),
+				'fields'     => array(
+					array(
+						'field'       => 'heading',
+						'type'        => __( 'Heading : Heading', 'uabb' ),
+						'editor_type' => 'LINE',
+					),
+					array(
+						'field'       => 'link',
+						'type'        => __( 'Link', 'uabb' ),
+						'editor_type' => 'LINK',
+					),
+					array(
+						'field'       => 'description',
+						'type'        => __( 'Heading : Description', 'uabb' ),
+						'editor_type' => 'LINE',
+					),
+				),
+			);
 
 			return $form;
 		}
