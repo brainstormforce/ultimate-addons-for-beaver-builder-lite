@@ -183,7 +183,7 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 				'fields'     => array(
 					array(
 						'field'       => 'heading',
-						'type'        => __( 'Heading : Heading', 'uabb' ),
+						'type'        => __( 'Heading : Heading Text', 'uabb' ),
 						'editor_type' => 'LINE',
 					),
 					array(
@@ -193,7 +193,7 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 					),
 					array(
 						'field'       => 'description',
-						'type'        => __( 'Heading : Description', 'uabb' ),
+						'type'        => __( 'Heading : Description Text', 'uabb' ),
 						'editor_type' => 'LINE',
 					),
 				),
