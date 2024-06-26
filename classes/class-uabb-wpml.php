@@ -199,6 +199,18 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 				),
 			);
 
+			// Ribbon.
+			$form['ribbon'] = array(
+				'conditions' => array( 'type' => 'ribbon' ),
+				'fields'     => array(
+					array(
+						'field'       => 'title',
+						'type'        => __( 'Ribbon Message', 'uabb' ),
+						'editor_type' => 'LINE',
+					),
+				),
+			);
+
 			return $form;
 		}
 	}
