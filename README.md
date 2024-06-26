@@ -215,6 +215,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ## Changelog ##
 
+### 1.5.9 ###
+* Improvement: WPML compatibility for the Heading and Ribbon module.
+
 ### 1.5.8 ###
 * Improvement: This update addressed a security bug. Props to Patchstack for privately reporting it to our team.
 * Fixed: Info List - Undefined variable issue with PHP 8.
