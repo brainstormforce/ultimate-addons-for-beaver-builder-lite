@@ -12,7 +12,7 @@
 	<?php if ( 'icon' == $settings->image_type ) { ?>
 		<span class="uabb-icon-wrap">
 			<span class="uabb-icon">
-			<i class="<?php echo esc_attr($settings->icon); ?>"></i>
+				<i class="<?php echo esc_attr($settings->icon); ?>"></i>
 			</span>
 		</span>
 	<?php } // Icon Html End. ?>
