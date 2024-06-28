@@ -19,6 +19,6 @@
 		echo ' uabb-image-crop-' . $settings->image_style;}
 	?>
 	" itemscope itemtype="http://schema.org/ImageObject">
-		<img class="<?php echo $classes; ?> <?php echo ( '0' == $settings->img_animation_repeat ) ? 'infinite' : ''; ?>" src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" itemprop="image"/>
+		<img class="<?php echo $classes; ?> <?php echo ( '0' == $settings->img_animation_repeat ) ? 'infinite' : ''; ?>" src="<?php echo esc_url($src); ?>" alt="<?php echo esc_attr($alt); ?>" itemprop="image"/>
 	</div>
 </div>

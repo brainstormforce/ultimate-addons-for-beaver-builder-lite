@@ -325,6 +325,7 @@ FLBuilder::register_module(
 							'type'    => 'select',
 							'label'   => __( 'HTML Tag', 'uabb' ),
 							'default' => 'h3',
+							'sanitize' => array( 'FLBuilderUtils::esc_tags', 'h3' ),
 							'options' => array(
 								'h1' => 'h1',
 								'h2' => 'h2',
