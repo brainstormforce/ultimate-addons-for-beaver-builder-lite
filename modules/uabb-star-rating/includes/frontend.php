@@ -14,7 +14,7 @@ $layout = 0;
 <?php
 if ( 'bottom' === $settings->star_position ) {
 	?>
-	<div class="uabb-rating-title"><?php echo $title; ?></div>
+	<div class="uabb-rating-title"><?php echo esc_html($title); ?></div>
 	<?php
 }
 ?>
@@ -47,7 +47,7 @@ if ( 'bottom' === $settings->star_position ) {
 <?php
 if ( 'top' === $settings->star_position ) {
 	?>
-	<div class="uabb-rating-title"><?php echo $title; ?></div>
+	<div class="uabb-rating-title"><?php echo esc_html($title); ?></div>
 	<?php
 }
 ?>
