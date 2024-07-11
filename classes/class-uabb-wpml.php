@@ -177,6 +177,39 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 					),
 				),
 			);
+			// Heading Module.
+			$form['uabb-heading'] = array(
+				'conditions' => array( 'type' => 'uabb-heading' ),
+				'fields'     => array(
+					array(
+						'field'       => 'heading',
+						'type'        => __( 'Heading Text', 'uabb' ),
+						'editor_type' => 'LINE',
+					),
+					array(
+						'field'       => 'link',
+						'type'        => __( 'Link', 'uabb' ),
+						'editor_type' => 'LINK',
+					),
+					array(
+						'field'       => 'description',
+						'type'        => __( 'Description Text', 'uabb' ),
+						'editor_type' => 'LINE',
+					),
+				),
+			);
+
+			// Ribbon.
+			$form['ribbon'] = array(
+				'conditions' => array( 'type' => 'ribbon' ),
+				'fields'     => array(
+					array(
+						'field'       => 'title',
+						'type'        => __( 'Ribbon Message', 'uabb' ),
+						'editor_type' => 'LINE',
+					),
+				),
+			);
 
 			return $form;
 		}
