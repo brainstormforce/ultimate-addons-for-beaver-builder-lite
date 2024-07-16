@@ -6,7 +6,7 @@
  */
 
 $title  = $settings->rating_title;
-$rating = !empty( $settings->rating ) ? $settings->rating : 0;
+$rating = ! empty( $settings->rating ) ? $settings->rating : 0;
 $layout = 0;
 ?>
 <div class="uabb-rating-content">
@@ -14,7 +14,7 @@ $layout = 0;
 <?php
 if ( 'bottom' === $settings->star_position ) {
 	?>
-	<div class="uabb-rating-title"><?php echo esc_html($title); ?></div>
+	<div class="uabb-rating-title"><?php echo esc_html( $title ); ?></div>
 	<?php
 }
 ?>
@@ -25,7 +25,7 @@ if ( 'bottom' === $settings->star_position ) {
 	if ( 'outline' === $settings->star_style ) {
 		$icon = '&#9734;';
 	}
-	$rating_scale =   (int) $settings->rating_scale;
+	$rating_scale   = (int) $settings->rating_scale;
 	$rating         = (float) $rating > $rating_scale ? $rating_scale : $rating;
 	$floored_rating = (int) $rating;
 	$stars_html     = '';
@@ -47,7 +47,7 @@ if ( 'bottom' === $settings->star_position ) {
 <?php
 if ( 'top' === $settings->star_position ) {
 	?>
-	<div class="uabb-rating-title"><?php echo esc_html($title); ?></div>
+	<div class="uabb-rating-title"><?php echo esc_html( $title ); ?></div>
 	<?php
 }
 ?>

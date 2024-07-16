@@ -376,8 +376,8 @@ foreach ( $settings->add_list_item as $item ) {
 				$img_size = getimagesize( $item->photo_url );
 			endif;
 
-			if ( (null !== intval($img_size[0]) ) && ( null !== intval($img_size[1]) ) && (0 !== intval($img_size[0]) )) :
-				$actual_height = ( intval($settings->icon_image_size) * intval($img_size[1] )) / intval($img_size[0]);
+			if ( ( null !== intval( $img_size[0] ) ) && ( null !== intval( $img_size[1] ) ) && ( 0 !== intval( $img_size[0] ) ) ) :
+				$actual_height = ( intval( $settings->icon_image_size ) * intval( $img_size[1] ) ) / intval( $img_size[0] );
 
 				if ( $actual_height > $settings->icon_image_size ) :
 					$need_to_add = $actual_height - $settings->icon_image_size;

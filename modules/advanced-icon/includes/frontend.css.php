@@ -120,20 +120,20 @@ foreach ( $settings->icons as $i => $icon ) :
 		);
 
 
-	FLBuilder::render_module_css( 'image-icon', $id . ' .adv-icon-' . $icon_count, $imageicon_array );
+		FLBuilder::render_module_css( 'image-icon', $id . ' .adv-icon-' . $icon_count, $imageicon_array );
 
-	if ( isset( $settings->responsive_align ) ) {
-		if ( '' !== $settings->responsive_align && 'default' !== $settings->responsive_align ) {
-			?>
+		if ( isset( $settings->responsive_align ) ) {
+			if ( '' !== $settings->responsive_align && 'default' !== $settings->responsive_align ) {
+				?>
 	@media ( max-width: <?php echo esc_attr( $global_settings->responsive_breakpoint ); ?>px ) {
 		.fl-node-<?php echo esc_attr( $id ); ?> .adv-icon-<?php echo esc_attr( $icon_count ); ?> .uabb-imgicon-wrap {
 			text-align: <?php echo esc_attr( $settings->responsive_align ); ?>;
 		}
 	}
-			<?php
+				<?php
+			}
 		}
-	}
-	$icon_count++;
+		$icon_count++;
 endforeach;
 ?>
 

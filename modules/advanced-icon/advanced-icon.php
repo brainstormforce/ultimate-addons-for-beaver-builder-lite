@@ -81,12 +81,12 @@ FLBuilder::register_module(
 							'width'   => '70px',
 						),
 						'size'             => array(
-							'type'        => 'unit',
-							'label'       => __( 'Icon Size', 'uabb' ),
-							'default' => '40',
-							'responsive'  => 'true',
-							'units'       => array( 'px' ),
-							'slider'      => array(
+							'type'       => 'unit',
+							'label'      => __( 'Icon Size', 'uabb' ),
+							'default'    => '40',
+							'responsive' => 'true',
+							'units'      => array( 'px' ),
+							'slider'     => array(
 								'px' => array(
 									'min'  => 0,
 									'max'  => 1000,
@@ -95,15 +95,15 @@ FLBuilder::register_module(
 							),
 						),
 						'spacing'          => array(
-							'type'        => 'unit',
-							'label'       => __( 'Spacing', 'uabb' ),
-							'default' => '10',
-							'maxlength'   => '2',
-							'size'        => '4',
-							'responsive'  => 'true',
-							'units'    => array( 'px' ),
-							'help'        => __( 'To manage the space between Icons use this option', 'uabb' ),
-							'slider'      => array(
+							'type'       => 'unit',
+							'label'      => __( 'Spacing', 'uabb' ),
+							'default'    => '10',
+							'maxlength'  => '2',
+							'size'       => '4',
+							'responsive' => 'true',
+							'units'      => array( 'px' ),
+							'help'       => __( 'To manage the space between Icons use this option', 'uabb' ),
+							'slider'     => array(
 								'px' => array(
 									'min'  => 0,
 									'max'  => 1000,
@@ -134,14 +134,14 @@ FLBuilder::register_module(
 							),
 						),
 						'bg_size'          => array(
-							'type'        => 'unit',
-							'label'       => __( 'Background Size', 'uabb' ),
-							'help'        => __( 'Spacing between Icon & Background edge', 'uabb' ),
-							'default' => '10',
-							'maxlength'   => '3',
-							'size'        => '6',
-							'units'       => array( 'px' ),
-							'slider'      => array(
+							'type'      => 'unit',
+							'label'     => __( 'Background Size', 'uabb' ),
+							'help'      => __( 'Spacing between Icon & Background edge', 'uabb' ),
+							'default'   => '10',
+							'maxlength' => '3',
+							'size'      => '6',
+							'units'     => array( 'px' ),
+							'slider'    => array(
 								'px' => array(
 									'min'  => 0,
 									'max'  => 1000,
