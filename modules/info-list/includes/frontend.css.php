@@ -26,8 +26,8 @@ $settings->list_icon_bg_border_radius = ( '' !== $settings->list_icon_bg_border_
 /* If connector Yes execute this */
 if ( 'yes' == $settings->list_connector_option ) {
 	?>
-	.fl-node-<?php echo $id; ?> .uabb-info-list-connector,
-	.fl-node-<?php echo $id; ?> .uabb-info-list-connector-top {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-connector,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-connector-top {
 		<?php if ( '' != $settings->list_connector_color ) { ?>
 			color: <?php echo $settings->list_connector_color; ?>;
 		<?php } ?>
@@ -55,7 +55,7 @@ if ( 'yes' == $settings->list_connector_option ) {
 		$space_element_top += $settings->space_between_elements / 2;
 	}
 	?>
-	.fl-node-<?php echo $id; ?> .uabb-info-list-connector {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-connector {
 		<?php
 			$settings->icon_image_size = (int) $settings->icon_image_size;
 			$icon_extra_padding_top    = (int) $icon_extra_padding_top;
@@ -69,15 +69,15 @@ if ( 'yes' == $settings->list_connector_option ) {
 		<?php endif; ?>
 	}
 	<?php if ( 'center' == $settings->align_items ) : ?>
-	.fl-node-<?php echo $id; ?> .uabb-info-list-connector-top {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-connector-top {
 		height: calc( 50% - <?php echo ( ( $settings->icon_image_size / 2 ) + $icon_extra_padding + $space_element ); ?>px );
 	}
-	.fl-node-<?php echo $id; ?> .uabb-info-list-item:last-child .uabb-info-list-connector-top {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-item:last-child .uabb-info-list-connector-top {
 		height: calc( 50% - <?php echo ( ( $settings->icon_image_size / 2 ) + $icon_extra_padding ); ?>px );
 	}
 	<?php endif; ?>
 
-	.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper.uabb-info-list-top li .uabb-info-list-connector {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-top li .uabb-info-list-connector {
 		border-top-width: 1px;
 	}
 
@@ -89,10 +89,10 @@ if ( 'yes' == $settings->list_connector_option ) {
 if ( 'left' == $settings->icon_position || 'right' == $settings->icon_position ) {
 	if ( 'center' == $settings->align_items ) {
 		?>
-	.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-icon {
+	.fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-icon {
 		vertical-align: middle;
 	}
-	.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content {
+	.fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-content {
 		vertical-align: middle;
 	}
 		<?php
@@ -100,7 +100,7 @@ if ( 'left' == $settings->icon_position || 'right' == $settings->icon_position )
 }
 ?>
 
-.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper .uabb-info-list-item:last-child {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper .uabb-info-list-item:last-child {
 	padding-bottom: 0;
 }
 
@@ -110,7 +110,7 @@ if ( 'left' == $settings->icon_position || 'right' == $settings->icon_position )
 if ( 'left' == $settings->icon_position ) {
 	?>
 
-	.fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper.uabb-info-list-left .uabb-info-list-content {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-content-wrapper.uabb-info-list-left .uabb-info-list-content {
 		<?php
 		if ( 'custom' === $settings->list_icon_style && '' != $settings->list_icon_bg_padding ) {
 			$extra_padding = $settings->list_icon_bg_padding * 2;
@@ -125,8 +125,8 @@ if ( 'left' == $settings->icon_position ) {
 		?>
 		width: calc( 100% - <?php echo $icon_image_size + 20 + $extra_padding; ?>px );
 	}
-	.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector,
-	.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector-top {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector-top {
 		<?php
 		if ( 'custom' === $settings->list_icon_style && '' != $settings->list_icon_bg_padding ) {
 			$extra_padding = $settings->list_icon_bg_padding * 2 / 2;
@@ -142,14 +142,14 @@ if ( 'left' == $settings->icon_position ) {
 	}
 
 	<?php if ( '' != $settings->space_between_elements ) { ?>
-		.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper .uabb-info-list-item {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper .uabb-info-list-item {
 			padding-bottom: <?php echo $settings->space_between_elements; ?>px;
 		}
 	<?php } ?>
 	<?php
 } if ( 'right' == $settings->icon_position ) {
 	?>
-	.fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper.uabb-info-list-right .uabb-info-list-content {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-content-wrapper.uabb-info-list-right .uabb-info-list-content {
 		<?php
 		if ( 'custom' === $settings->list_icon_style && '' != $settings->list_icon_bg_padding ) {
 			$extra_padding = $settings->list_icon_bg_padding * 2;
@@ -163,8 +163,8 @@ if ( 'left' == $settings->icon_position ) {
 		?>
 		width: calc( 100% - <?php echo $icon_image_size + 20 + $extra_padding; ?>px );
 	}
-	.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector,
-	.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector-top {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector-top {
 		<?php
 		if ( 'custom' === $settings->list_icon_style && '' != $settings->list_icon_bg_padding ) {
 			$extra_padding = $settings->list_icon_bg_padding * 2 / 2;
@@ -181,14 +181,14 @@ if ( 'left' == $settings->icon_position ) {
 	}
 
 	<?php if ( '' != $settings->space_between_elements ) { ?>
-		.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper .uabb-info-list-item {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper .uabb-info-list-item {
 			padding-bottom: <?php echo $settings->space_between_elements; ?>px;
 		}
 	<?php } ?>
 	<?php
 } if ( 'top' == $settings->icon_position ) {
 	?>
-	.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper.uabb-info-list-top li .uabb-info-list-connector {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-top li .uabb-info-list-connector {
 
 		<?php
 		if ( 'custom' === $settings->list_icon_style && '' != $settings->list_icon_bg_padding ) {
@@ -220,18 +220,18 @@ if ( 'left' == $settings->icon_position ) {
 	}
 
 	<?php if ( '' != $settings->space_between_elements ) { ?>
-		.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper .uabb-info-list-item {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper .uabb-info-list-item {
 			padding-bottom: <?php echo ( $settings->space_between_elements ); ?>px;
 		}
 	<?php } ?>
 
 	@media all and (min-width:768px) {
-		.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper.uabb-info-list-top li{
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-top li{
 			width: <?php echo round( 100 / count( $settings->add_list_item ), 3 ); ?>%;
 			display: inline-block;
 		}
 		<?php if ( '' != $settings->space_between_elements ) { ?>
-			.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper .uabb-info-list-item {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper .uabb-info-list-item {
 				padding-right: <?php echo ( $settings->space_between_elements / 2 ); ?>px;
 				padding-left: <?php echo ( $settings->space_between_elements / 2 ); ?>px;
 				padding-bottom: 0;
@@ -311,7 +311,7 @@ foreach ( $settings->add_list_item as $item ) {
 	/* If No image no Icon selected than run this */
 	if ( ( isset( $item->image_type ) && 'none' == $item->image_type ) && ( ! isset( $item->icon ) || ! isset( $item->photo_src ) || ! isset( $item->photo_url ) ) ) {
 		?>
-		.fl-node-<?php echo $id; ?> .info-list-icon-dynamic<?php echo $list_item_counter; ?> .uabb-imgicon-wrap {
+		.fl-node-<?php echo esc_attr( $id ); ?> .info-list-icon-dynamic<?php echo $list_item_counter; ?> .uabb-imgicon-wrap {
 
 		<?php
 		if ( 'custom' == $settings->list_icon_style ) {
@@ -352,7 +352,7 @@ foreach ( $settings->add_list_item as $item ) {
 	}
 	if ( 'none' != $item->image_type || ( ( isset( $item->icon ) && '' != $item->icon ) || ( isset( $item->photo_src ) && '' != $item->photo_src ) || ( isset( $item->photo_url ) && '' != $item->photo_url ) ) ) {
 		?>
-			.fl-node-<?php echo $id; ?> .info-list-icon-dynamic<?php echo $list_item_counter; ?> .uabb-imgicon-wrap .uabb-photo-img {
+			.fl-node-<?php echo esc_attr( $id ); ?> .info-list-icon-dynamic<?php echo $list_item_counter; ?> .uabb-imgicon-wrap .uabb-photo-img {
 			<?php if ( 'simple' != $settings->list_icon_style && 'none' != $item->image_type && ( '' != $item->icon || '' != $item->photo || '' != $item->photo_url ) ) { ?>
 				background: <?php echo uabb_theme_base_color( $settings->list_icon_bg_color ); ?>;
 				<?php } ?>
@@ -361,7 +361,7 @@ foreach ( $settings->add_list_item as $item ) {
 	}
 	if ( 'none' == $item->image_type && 'top' != $settings->icon_position ) {
 		?>
-			.fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper.<?php echo $settings->icon_position; ?> .info-list-content-dynamic<?php echo $list_item_counter; ?> {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-content-wrapper.<?php echo $settings->icon_position; ?> .info-list-content-dynamic<?php echo $list_item_counter; ?> {
 				width: 100%;
 			}
 		<?php
@@ -388,7 +388,7 @@ foreach ( $settings->add_list_item as $item ) {
 				if ( 'yes' == $settings->list_connector_option ) :
 					?>
 
-					.fl-node-<?php echo $id; ?> .info-list-item-dynamic<?php echo $list_item_counter; ?> .uabb-info-list-connector {
+					.fl-node-<?php echo esc_attr( $id ); ?> .info-list-item-dynamic<?php echo $list_item_counter; ?> .uabb-info-list-connector {
 						<?php if ( 'center' == $settings->align_items ) : ?>
 						top: calc( 50% + <?php echo ( ( $settings->icon_image_size - $need_to_add ) / 2 ) + $icon_extra_padding - $space_element; ?>px );
 						height: calc( 50% - <?php echo ( ( $settings->icon_image_size - $need_to_add ) / 2 ) + $icon_extra_padding - $space_element; ?>px );
@@ -399,7 +399,7 @@ foreach ( $settings->add_list_item as $item ) {
 					}
 
 					<?php if ( 'center' == $settings->align_items ) : ?>
-					.fl-node-<?php echo $id; ?> .info-list-item-dynamic<?php echo $list_item_counter; ?> .uabb-info-list-connector-top {
+					.fl-node-<?php echo esc_attr( $id ); ?> .info-list-item-dynamic<?php echo $list_item_counter; ?> .uabb-info-list-connector-top {
 						height: calc( 50% - <?php echo ( ( ( $settings->icon_image_size - $need_to_add ) / 2 ) + $icon_extra_padding + $space_element ); ?>px );
 					}
 						<?php
@@ -412,13 +412,13 @@ foreach ( $settings->add_list_item as $item ) {
 }
 ?>
 
-.fl-node-<?php echo $id; ?> .uabb-icon i {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-icon i {
 	float: none;	
 }
-.fl-node-<?php echo $id; ?> .uabb-icon {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-icon {
 	display: block;	
 }
-.fl-node-<?php echo $id; ?> .uabb-info-list-content .uabb-info-list-title{
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-content .uabb-info-list-title{
 	<?php if ( '' != $settings->heading_color ) : ?>
 		color: <?php echo $settings->heading_color; ?>;
 	<?php endif; ?>
@@ -435,7 +435,7 @@ foreach ( $settings->add_list_item as $item ) {
 if ( ! $version_bb_check ) {
 	if ( 'Default' != $settings->heading_font_family['family'] || isset( $settings->heading_font_size['desktop'] ) && '' != $settings->heading_font_size['desktop'] || isset( $settings->heading_line_height['desktop'] ) && '' != $settings->heading_line_height['desktop'] || isset( $settings->heading_font_size_unit ) || isset( $settings->heading_line_height_unit ) || '' != $settings->heading_color || '' != $settings->heading_margin_top || '' != $settings->heading_margin_bottom ) {
 		?>
-		.fl-node-<?php echo $id; ?> .uabb-info-list-content .uabb-info-list-title{
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-content .uabb-info-list-title{
 			<?php if ( 'Default' != $settings->heading_font_family['family'] ) : ?>
 				<?php UABB_Helper::uabb_font_css( $settings->heading_font_family ); ?>
 			<?php endif; ?>
@@ -472,7 +472,7 @@ if ( ! $version_bb_check ) {
 	}
 }
 ?>
-.fl-node-<?php echo $id; ?> .uabb-info-list-content .uabb-info-list-description {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-content .uabb-info-list-description {
 	<?php if ( '' != $settings->description_color ) : ?>
 		color: <?php echo $settings->description_color; ?>;
 	<?php endif; ?>
@@ -481,7 +481,7 @@ if ( ! $version_bb_check ) {
 if ( ! $version_bb_check ) {
 	if ( 'Default' != $settings->description_font_family['family'] || isset( $settings->description_font_size['desktop'] ) && '' != $settings->description_font_size['desktop'] || isset( $settings->description_line_height['desktop'] ) && '' != $settings->description_line_height['desktop'] || isset( $settings->description_font_size_unit ) && '' != $settings->description_font_size_unit || isset( $settings->description_line_height_unit ) && '' != $settings->description_line_height_unit || '' != $settings->description_color ) {
 		?>
-	.fl-node-<?php echo $id; ?> .uabb-info-list-content .uabb-info-list-description {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-content .uabb-info-list-description {
 			<?php if ( 'Default' != $settings->description_font_family['family'] ) : ?>
 				<?php UABB_Helper::uabb_font_css( $settings->description_font_family ); ?>
 		<?php endif; ?>
@@ -531,7 +531,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 
 			@media ( max-width: <?php echo $global_settings->medium_breakpoint . 'px'; ?> ) {
 
-				.fl-node-<?php echo $id; ?> .uabb-info-list .uabb-info-list-content .uabb-info-list-title {
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list .uabb-info-list-content .uabb-info-list-title {
 
 					<?php if ( 'yes' === $converted || isset( $settings->heading_font_size_unit_medium ) && '' != $settings->heading_font_size_unit_medium ) { ?>
 						font-size: <?php echo $settings->heading_font_size_unit_medium; ?>px;
@@ -554,7 +554,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 				}
 
 				<?php if ( isset( $settings->description_font_size['medium'] ) || isset( $settings->description_line_height['medium'] ) || isset( $settings->description_font_size_unit_medium ) || isset( $settings->description_line_height_unit_medium ) ) { ?>
-					.fl-node-<?php echo $id; ?> .uabb-info-list .uabb-info-list-content .uabb-info-list-description {
+					.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list .uabb-info-list-content .uabb-info-list-description {
 
 						<?php if ( 'yes' === $converted || isset( $settings->description_font_size_unit_medium ) && '' != $settings->description_font_size_unit_medium ) { ?>
 							font-size: <?php echo $settings->description_font_size_unit_medium; ?>px;
@@ -587,7 +587,7 @@ if ( ! $version_bb_check ) {
 		?>
 			@media ( max-width: <?php echo $global_settings->responsive_breakpoint . 'px'; ?> ) {
 
-				.fl-node-<?php echo $id; ?> .uabb-info-list .uabb-info-list-content .uabb-info-list-title {
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list .uabb-info-list-content .uabb-info-list-title {
 
 				<?php if ( 'yes' === $converted || isset( $settings->heading_font_size_unit_responsive ) && '' != $settings->heading_font_size_unit_responsive ) { ?>
 						font-size: <?php echo $settings->heading_font_size_unit_responsive; ?>px;   
@@ -608,7 +608,7 @@ if ( ! $version_bb_check ) {
 				}
 
 			<?php if ( isset( $settings->description_font_size['small'] ) && '' != $settings->description_font_size['small'] || isset( $settings->description_line_height['small'] ) && '' != $settings->description_line_height['small'] || isset( $settings->description_font_size_unit_responsive ) || isset( $settings->description_line_height_unit_responsive ) ) { ?>
-					.fl-node-<?php echo $id; ?> .uabb-info-list .uabb-info-list-content .uabb-info-list-description {
+					.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list .uabb-info-list-content .uabb-info-list-description {
 
 					<?php if ( 'yes' === $converted || isset( $settings->description_font_size_unit_responsive ) && '' != $settings->description_font_size_unit_responsive ) { ?>
 						font-size: <?php echo $settings->description_font_size_unit_responsive; ?>px;   
@@ -633,22 +633,22 @@ if ( ! $version_bb_check ) {
 	?>
 	@media ( max-width: <?php echo $global_settings->responsive_breakpoint . 'px'; ?> ) {
 		<?php if ( 'stack' == $settings->mobile_view ) { ?>
-			.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-icon {
+			.fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-content-wrapper .uabb-info-list-icon {
 				padding: 0;
 				margin-bottom: 20px;
 			}
 
-			.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-content,
-			.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-info-list-content-wrapper .uabb-info-list-icon {
+			.fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-content-wrapper .uabb-info-list-content,
+			.fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-content-wrapper .uabb-info-list-icon {
 				display: block;
 				width: 100%;
 				text-align: center;
 			}
 
-			.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector,
-			.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector,
-			.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector-top,
-			.fl-node-<?php echo $id; ?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector-top {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector,
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector,
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector-top,
+			.fl-node-<?php echo esc_attr( $id ) ; ?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector-top {
 				display: none;
 			}
 		<?php } ?>

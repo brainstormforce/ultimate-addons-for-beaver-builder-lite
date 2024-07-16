@@ -17,7 +17,7 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 	$settings->gutter    = ( '' != $settings->gutter ) ? $settings->gutter : '50';
 	$settings->gutter_lr = ( '' != $settings->gutter_lr ) ? $settings->gutter_lr : '50';
 ?>
-.fl-node-<?php echo $id; ?> {
+.fl-node-<?php echo esc_attr( $id ); ?> {
 	max-width: 100%;
 	<?php
 	if ( ! empty( $settings->img_size ) ) :
@@ -28,7 +28,7 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 	<?php endif; ?>
 }
 <?php if ( 'bottom' == $settings->image_position ) { ?>
-	.fl-node-<?php echo $id; ?> {
+	.fl-node-<?php echo esc_attr( $id ); ?> {
 		bottom: 0;
 		top: auto;
 		<?php if ( 'left' == $settings->image_position_lr ) { ?>
@@ -52,7 +52,7 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 <?php } ?>
 
 <?php if ( 'top' == $settings->image_position ) { ?>
-	.fl-node-<?php echo $id; ?> {
+	.fl-node-<?php echo esc_attr( $id ); ?> {
 		top: 0;
 		bottom: auto;
 		<?php if ( 'left' == $settings->image_position_lr ) { ?>
@@ -76,8 +76,8 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 <?php } ?>
 
 
-/*.fl-node-<?php echo $id; ?>,*/
-.fl-node-<?php echo $id; ?> .uabb-image .uabb-photo-img {
+/*.fl-node-<?php echo esc_attr( $id ); ?>,*/
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-image .uabb-photo-img {
 	<?php if ( ! empty( $settings->img_size ) ) : ?>
 		width: <?php echo $settings->img_size; ?>px;
 	<?php endif; ?>
@@ -109,7 +109,7 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 <?php if ( $global_settings->responsive_enabled ) { // Global Setting If started. ?> 
 		@media ( max-width: <?php echo $global_settings->medium_breakpoint . 'px'; ?> ) {
 			<?php if ( '' != $settings->medium_img_size ) { ?>
-				.fl-node-<?php echo $id; ?> {
+				.fl-node-<?php echo esc_attr( $id ); ?> {
 					<?php
 					$margin_left  = '' != $settings->margin_left ? $settings->margin_left : '20';
 					$margin_right = '' != $settings->margin_right ? $settings->margin_right : '20';
@@ -118,7 +118,7 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 					width: <?php echo $settings->medium_img_size + $margin_left + $margin_right; ?>px;
 					}
 
-				.fl-node-<?php echo $id; ?> .uabb-image .uabb-photo-img {
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-image .uabb-photo-img {
 					width: <?php echo $settings->medium_img_size; ?>px;
 				}
 			<?php } ?>
@@ -127,7 +127,7 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 			if ( ( 'left' == $settings->image_position_lr || 'right' == $settings->image_position_lr ) && 'both' == $settings->responsive_center ) {
 				if ( 'bottom' == $settings->image_position ) {
 					?>
-				.fl-node-<?php echo $id; ?> {
+				.fl-node-<?php echo esc_attr( $id ); ?> {
 					/*bottom: 0;
 					top: auto;*/
 					right: auto;
@@ -139,7 +139,7 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 					<?php
 				} elseif ( 'top' == $settings->image_position ) {
 					?>
-					.fl-node-<?php echo $id; ?> {
+					.fl-node-<?php echo esc_attr( $id ); ?> {
 						/*bottom: 0;
 						top: auto;*/
 						right: auto;
@@ -156,7 +156,7 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 
 		@media ( max-width: <?php echo $global_settings->responsive_breakpoint . 'px'; ?> ) {
 			<?php if ( '' != $settings->small_img_size ) { ?>
-				.fl-node-<?php echo $id; ?> {
+				.fl-node-<?php echo esc_attr( $id ); ?> {
 					<?php
 					$margin_left  = '' != $settings->margin_left ? $settings->margin_left : '20';
 					$margin_right = '' != $settings->margin_right ? $settings->margin_right : '20';
@@ -165,7 +165,7 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 					width: <?php echo $settings->small_img_size + $margin_left + $margin_right; ?>px;
 					}
 
-				.fl-node-<?php echo $id; ?> .uabb-image .uabb-photo-img {
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-image .uabb-photo-img {
 					width: <?php echo $settings->small_img_size; ?>px;
 				}
 			<?php } ?>
@@ -174,7 +174,7 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 			if ( ( 'left' == $settings->image_position_lr || 'right' == $settings->image_position_lr ) && 'small' == $settings->responsive_center ) {
 				if ( 'bottom' == $settings->image_position ) {
 					?>
-				.fl-node-<?php echo $id; ?> {
+				.fl-node-<?php echo esc_attr( $id ); ?> {
 					/*bottom: 0;
 					top: auto;*/
 					right: auto;
@@ -186,7 +186,7 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 					<?php
 				} elseif ( 'top' == $settings->image_position ) {
 					?>
-					.fl-node-<?php echo $id; ?> {
+					.fl-node-<?php echo esc_attr( $id ); ?> {
 						right: auto;
 						left: 50%;
 						-webkit-transform: translate(-50%, -50%);
@@ -203,13 +203,13 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 
 /* Animation CSS */
 <?php if ( '' != $settings->img_animation_repeat && '0' != $settings->img_animation_repeat && '1' != $settings->img_animation_repeat ) { ?>
-.fl-node-<?php echo $id; ?> .animated {
+.fl-node-<?php echo esc_attr( $id ); ?> .animated {
 	-webkit-animation-iteration-count: <?php echo $settings->img_animation_repeat; ?>;
 			animation-iteration-count: <?php echo $settings->img_animation_repeat; ?>;
 }
 <?php } ?>
 
-.fl-node-<?php echo $id; ?> .imgseparator-link:hover ~ .uabb-image .uabb-photo-img {
+.fl-node-<?php echo esc_attr( $id ); ?> .imgseparator-link:hover ~ .uabb-image .uabb-photo-img {
 
 	<?php if ( 'custom' == $settings->image_style ) : ?>
 		<?php if ( ! empty( $settings->img_bg_hover_color ) ) : ?>

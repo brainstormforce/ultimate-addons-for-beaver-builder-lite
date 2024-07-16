@@ -40,11 +40,11 @@
 	$settings->dropdown_icon_size     = ( '' !== trim( $settings->dropdown_icon_size ) ) ? $settings->dropdown_icon_size : '20';
 ?>
 
-.fl-node-<?php echo $id; ?> {
+.fl-node-<?php echo esc_attr( $id ); ?> {
 	width: 100%;
 }
 
-.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-slide-front {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-slide-front {
 
 	<?php
 	if ( 'yes' === $converted || isset( $settings->front_padding_dimension_top ) && isset( $settings->front_padding_dimension_bottom ) && '' != $settings->front_padding_dimension_top && '' != $settings->front_padding_dimension_bottom && isset( $settings->front_padding_dimension_left ) && '' != $settings->front_padding_dimension_left && isset( $settings->front_padding_dimension_right ) && '' != $settings->front_padding_dimension_right ) {
@@ -68,7 +68,7 @@
 	?>
 }
 
-.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-slide-down {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-slide-down {
 	<?php
 	if ( 'yes' === $converted || isset( $settings->back_padding_dimension_top ) && '' != $settings->back_padding_dimension_top && isset( $settings->back_padding_dimension_bottom ) && '' != $settings->back_padding_dimension_bottom && isset( $settings->back_padding_dimension_left ) && '' != $settings->back_padding_dimension_left && isset( $settings->back_padding_dimension_right ) && '' != $settings->back_padding_dimension_right ) {
 		if ( isset( $settings->back_padding_dimension_top ) ) {
@@ -200,7 +200,7 @@ if ( ! $version_bb_check ) {
 	FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 ?>
 
-.fl-node-<?php echo $id; ?> .uabb-icon-wrap .uabb-icon i {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-icon-wrap .uabb-icon i {
 <?php if ( 'above-title' == $settings->front_img_icon_position ) : ?>
 	width: auto;
 <?php elseif ( 'right-title' == $settings->front_img_icon_position || 'right' == $settings->front_img_icon_position ) : ?>
@@ -214,8 +214,8 @@ if ( ! $version_bb_check ) {
 	<?php
 	if ( '' != $settings->icon_hover_color ) {
 		?>
-.fl-node-<?php echo $id; ?> .uabb-<?php echo $settings->slide_type; ?>.open-slidedown .uabb-slide-box-section .uabb-imgicon-wrap .uabb-icon i,
-.fl-node-<?php echo $id; ?> .uabb-<?php echo $settings->slide_type; ?>.open-slidedown .uabb-slide-box-section .uabb-imgicon-wrap .uabb-icon i:before {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-<?php echo $settings->slide_type; ?>.open-slidedown .uabb-slide-box-section .uabb-imgicon-wrap .uabb-icon i,
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-<?php echo $settings->slide_type; ?>.open-slidedown .uabb-slide-box-section .uabb-imgicon-wrap .uabb-icon i:before {
 	color: <?php echo $settings->icon_hover_color; ?>;
 }
 		<?php
@@ -232,13 +232,13 @@ if ( 'button' == $settings->cta_type ) {
 ?>
 
 <?php if ( '' != $settings->overlay_color ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-slide-box-overlay {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-overlay {
 		background: <?php echo $settings->overlay_color; ?>;
 	}
 <?php } ?>
 
-.fl-node-<?php echo $id; ?> .fl-module-content .uabb-slide-dropdown .uabb-icon i, 
-.fl-node-<?php echo $id; ?> .fl-module-content .uabb-slide-dropdown .uabb-icon i:before {
+.fl-node-<?php echo esc_attr( $id ); ?> .fl-module-content .uabb-slide-dropdown .uabb-icon i, 
+.fl-node-<?php echo esc_attr( $id ); ?> .fl-module-content .uabb-slide-dropdown .uabb-icon i:before {
 	font-size: <?php echo $settings->dropdown_icon_size; ?>px;
 	<?php if ( 'style2' == $settings->slide_type ) { ?>
 		color: <?php echo $settings->dropdown_icon_color; ?>;
@@ -259,8 +259,8 @@ if ( 'button' == $settings->cta_type ) {
 	?>
 }
 
-.fl-node-<?php echo $id; ?> .uabb-slide-box-overlay .uabb-icon i, 
-.fl-node-<?php echo $id; ?> .uabb-slide-box-overlay .uabb-icon i:before {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-overlay .uabb-icon i, 
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-overlay .uabb-icon i:before {
 	color: <?php echo uabb_theme_base_color( $settings->overlay_icon_color ); ?>;
 	font-size: <?php echo $settings->overlay_icon_size; ?>px;
 	<?php if ( isset( $settings->overlay_icon_bg_color ) && trim( $settings->overlay_icon_bg_color ) != '' ) : ?>
@@ -275,7 +275,7 @@ if ( 'button' == $settings->cta_type ) {
 	<?php endif; ?>
 }
 
-.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-down {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-down {
 	text-align: <?php echo $settings->back_alignment; ?>;
 	<?php echo ( '' != $settings->back_background_color ) ? 'background:' . $settings->back_background_color . ';' : ''; ?>
 	<?php if ( 'default' != $settings->set_min_height && ! empty( $settings->slide_min_height ) ) { ?>
@@ -285,7 +285,7 @@ if ( 'button' == $settings->cta_type ) {
 }
 
 /*  Front Slide Vertical Alignment */
-.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-front {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-front {
 	background: <?php echo $settings->front_background_color; ?>;
 	<?php if ( 'above-title' == $settings->front_img_icon_position ) { ?>
 		text-align: <?php echo $settings->front_alignment; ?>;
@@ -317,59 +317,59 @@ if ( 'button' == $settings->cta_type ) {
 
 	<?php if ( 'left' == $settings->front_img_icon_position || 'right' == $settings->front_img_icon_position ) { ?>
 
-		.fl-node-<?php echo $id; ?> .uabb-slide-front-right-text {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front-right-text {
 			width: calc( 100% - <?php echo $extra_width; ?>px );
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-slide-front-right-text,
-		.fl-node-<?php echo $id; ?> .uabb-slide-front-left-img,
-		.fl-node-<?php echo $id; ?> .uabb-slide-front-right-img {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front-right-text,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front-left-img,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front-right-img {
 			vertical-align: <?php echo $settings->front_align_items; ?>;
 		}
 
 		<?php if ( 'yes' == $settings->front_icon_border ) { ?>
-		.fl-node-<?php echo $id; ?> .uabb-slide-icon-border {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-icon-border {
 			position: absolute; 
 			height: 100%; 
 			top: 0;
 			transition: all linear 300ms;
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-slide-front-right-text {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front-right-text {
 			width: calc( 100% - <?php echo ( $extra_width + $settings->front_icon_border_size ); ?>px );
 		}
-		.fl-node-<?php echo $id; ?> .open-slidedown .uabb-slide-icon-border {
+		.fl-node-<?php echo esc_attr( $id ); ?> .open-slidedown .uabb-slide-icon-border {
 			<?php echo ( '' != $settings->front_icon_border_hover_color ) ? 'border-color: ' . $settings->front_icon_border_hover_color . ';' : ''; ?>
 		}
-		.fl-node-<?php echo $id; ?> .uabb-slide-icon-left .uabb-slide-icon-border,
-		.fl-node-<?php echo $id; ?> .uabb-slide-photo-left .uabb-slide-icon-border {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-icon-left .uabb-slide-icon-border,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-photo-left .uabb-slide-icon-border {
 			border-right-style: solid; 
 			<?php echo ( '' != $settings->front_icon_border_color ) ? 'border-right-color: ' . $settings->front_icon_border_color . ';' : ''; ?>
 			border-right-width: <?php echo $settings->front_icon_border_size; ?>px;
 		}
-		.fl-node-<?php echo $id; ?> .uabb-slide-icon-right .uabb-slide-icon-border,
-		.fl-node-<?php echo $id; ?> .uabb-slide-photo-right .uabb-slide-icon-border {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-icon-right .uabb-slide-icon-border,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-photo-right .uabb-slide-icon-border {
 			border-left-style: solid; 
 			<?php echo ( '' != $settings->front_icon_border_color ) ? 'border-left-color: ' . $settings->front_icon_border_color . ';' : ''; ?>
 			border-left-width: <?php echo $settings->front_icon_border_size; ?>px;
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-slide-icon-left .uabb-slide-front-right-text,
-		.fl-node-<?php echo $id; ?> .uabb-slide-photo-left .uabb-slide-front-right-text {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-icon-left .uabb-slide-front-right-text,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-photo-left .uabb-slide-front-right-text {
 			<?php if ( '' != $settings->front_icon_border_size ) { ?>
 			padding-left: <?php echo ( $settings->front_icon_border_size + 15 ); ?>px;
 			<?php } else { ?>
 			padding-left: 15px;
 			<?php } ?>
 		}
-		.fl-node-<?php echo $id; ?> .uabb-slide-icon-right .uabb-slide-front-right-text,
-		.fl-node-<?php echo $id; ?> .uabb-slide-photo-right .uabb-slide-front-right-text {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-icon-right .uabb-slide-front-right-text,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-photo-right .uabb-slide-front-right-text {
 			padding-right: 15px;
 		}
 
 
-		.fl-node-<?php echo $id; ?> .uabb-slide-icon-right .uabb-slide-front-right-img,
-		.fl-node-<?php echo $id; ?> .uabb-slide-photo-right .uabb-slide-front-right-img {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-icon-right .uabb-slide-front-right-img,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-photo-right .uabb-slide-front-right-img {
 			<?php if ( '' != $settings->front_icon_border_size ) { ?>
 			padding-left: <?php echo ( $settings->front_icon_border_size + 15 ); ?>px
 			<?php } else { ?>
@@ -382,10 +382,10 @@ if ( 'button' == $settings->cta_type ) {
 
 	<?php if ( 'left-title' == $settings->front_img_icon_position || 'right-title' == $settings->front_img_icon_position ) { ?>
 
-		.fl-node-<?php echo $id; ?> .uabb-slide-front-right-text {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front-right-text {
 			width: 100%;
 		}
-		.fl-node-<?php echo $id; ?> .uabb-slide-face-text-title {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-face-text-title {
 			width: calc( 100% - <?php echo $extra_width; ?>px );
 		}
 	<?php } ?>
@@ -396,28 +396,28 @@ if ( 'button' == $settings->cta_type ) {
 if ( 'style1' == $settings->slide_type ) {
 	?>
 
-	.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-style1.open-slidedown .uabb-slide-front {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-style1.open-slidedown .uabb-slide-front {
 		background: <?php echo $settings->focused_front_background_color; ?>;
 		transition: all linear 300ms;
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-style1.open-slidedown .uabb-slide-box .uabb-slide-box-section-content {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style1.open-slidedown .uabb-slide-box .uabb-slide-box-section-content {
 		color: <?php echo uabb_theme_text_color( $settings->front_desc_focused_color ); ?>;
 		transition: all linear 300ms;
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-style1.open-slidedown .uabb-slide-box .uabb-slide-face-text-title {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style1.open-slidedown .uabb-slide-box .uabb-slide-face-text-title {
 		color: <?php echo $settings->front_title_focused_color; ?>;
 		transition: all linear 300ms;
 	}
 
 
-	.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-style1.open-slidedown .uabb-slide-down {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-style1.open-slidedown .uabb-slide-down {
 		opacity:1;
 		pointer-events: visible;
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-style1 .uabb-button-wrap {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-style1 .uabb-button-wrap {
 		position: absolute;
 		top: 100%;
 		left: 50%;
@@ -425,7 +425,7 @@ if ( 'style1' == $settings->slide_type ) {
 	}
 
 	<?php if ( 'button' == $settings->cta_type && '' != $settings->button && 'full' == $settings->button->width ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-button-wrap {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-button-wrap {
 		width: 100%;
 	}
 	<?php } ?>
@@ -434,29 +434,29 @@ if ( 'style1' == $settings->slide_type ) {
 ?>
 
 <?php if ( 'style2' == $settings->slide_type ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap {
 		<?php echo ( '' != $settings->dropdown_icon_size ) ? 'margin-bottom: ' . ( ( $settings->dropdown_icon_size * 1.75 ) / 2 ) . 'px;' : ''; ?>
 	}
-	.fl-node-<?php echo $id; ?> .uabb-style2 .uabb-slide-front-right-text {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style2 .uabb-slide-front-right-text {
 		<?php echo ( '' != $settings->dropdown_icon_size ) ? 'padding-bottom: ' . ( $settings->dropdown_icon_size * 0.75 ) . 'px;' : ''; ?>
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-style2.open-slidedown .uabb-slide-box .uabb-slide-box-section-content {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style2.open-slidedown .uabb-slide-box .uabb-slide-box-section-content {
 		color: <?php echo uabb_theme_text_color( $settings->front_desc_focused_color ); ?>;
 		transition: all linear 300ms;
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-style2.open-slidedown .uabb-slide-box .uabb-slide-face-text-title {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style2.open-slidedown .uabb-slide-box .uabb-slide-face-text-title {
 		color: <?php echo $settings->front_title_focused_color; ?>;
 		transition: all linear 300ms;
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-style2.open-slidedown .uabb-slide-front {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-style2.open-slidedown .uabb-slide-front {
 		background: <?php echo $settings->focused_front_background_color; ?>;
 		transition: all linear 300ms;
 	}
 	<?php if ( 'center' != $settings->dropdown_icon_align ) { ?>
-		.fl-node-<?php echo $id; ?> .fl-module-content .uabb-style2 .uabb-slide-dropdown {
+		.fl-node-<?php echo esc_attr( $id ); ?> .fl-module-content .uabb-style2 .uabb-slide-dropdown {
 			<?php if ( 'left' == $settings->dropdown_icon_align ) { ?>
 				left: 0;
 				transform: translate(0%,50%);
@@ -468,38 +468,38 @@ if ( 'style1' == $settings->slide_type ) {
 	<?php } ?>
 <?php } ?>
 <?php if ( 'style3' == $settings->slide_type ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-style3 .uabb-slide-dropdown .uabb-icon i, 
-	.fl-node-<?php echo $id; ?> .uabb-style3 .uabb-slide-dropdown .uabb-icon i:before {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style3 .uabb-slide-dropdown .uabb-icon i, 
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style3 .uabb-slide-dropdown .uabb-icon i:before {
 		line-height: 1em;
 		height: 1em;
 		width: 1em;
 		text-align: center;
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-style3 .uabb-slide-front-right-text {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style3 .uabb-slide-front-right-text {
 		<?php echo ( '' != $settings->dropdown_icon_size ) ? 'padding-bottom: ' . ( $settings->dropdown_icon_size + 10 ) . 'px;' : ''; ?>
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-style3.open-slidedown .uabb-slide-box .uabb-slide-box-section-content {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style3.open-slidedown .uabb-slide-box .uabb-slide-box-section-content {
 		color: <?php echo uabb_theme_text_color( $settings->front_desc_focused_color ); ?>;
 		transition: all linear 300ms;
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-style3.open-slidedown .uabb-slide-box .uabb-slide-face-text-title {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style3.open-slidedown .uabb-slide-box .uabb-slide-face-text-title {
 		color: <?php echo $settings->front_title_focused_color; ?>;
 		transition: all linear 300ms;
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-style3.open-slidedown .uabb-slide-front {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-style3.open-slidedown .uabb-slide-front {
 		background: <?php echo $settings->focused_front_background_color; ?>;
 		transition: all linear 300ms;
 	}
 
-	.fl-node-<?php echo $id; ?> .fl-module-content .uabb-style3 .uabb-slide-dropdown {
+	.fl-node-<?php echo esc_attr( $id ); ?> .fl-module-content .uabb-style3 .uabb-slide-dropdown {
 		justify-content: <?php echo ( 'left' == $settings->dropdown_icon_align ) ? 'flex-start' : ( ( 'right' == $settings->dropdown_icon_align ) ? 'flex-end' : '' ); ?>;
 	}
 <?php } ?>
-.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-face-text-title {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-face-text-title {
 	<?php
 		echo ( '' != $settings->front_title_color ) ? 'color: ' . $settings->front_title_color . ';' : '';
 		echo ( '' != $settings->front_title_margin_top ) ? 'margin-top: ' . $settings->front_title_margin_top . 'px;' : '';
@@ -508,7 +508,7 @@ if ( 'style1' == $settings->slide_type ) {
 }
 /* Font Front Slide Heading (Desktop). */
 <?php if ( ! $version_bb_check ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-face-text-title {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-face-text-title {
 		<?php if ( 'Default' != $settings->front_title_font_family['family'] ) : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->front_title_font_family ); ?>
 		<?php endif; ?>
@@ -542,14 +542,14 @@ if ( 'style1' == $settings->slide_type ) {
 	}
 }
 ?>
-.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-box-section-content {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-box-section-content {
 	<?php echo ( '' != $settings->front_desc_margin_top ) ? 'margin-top: ' . $settings->front_desc_margin_top . 'px;' : ''; ?>
 	<?php echo ( '' != $settings->front_desc_margin_bottom ) ? 'margin-bottom: ' . $settings->front_desc_margin_bottom . 'px;' : ''; ?>
 	<?php echo ( '' != $settings->front_desc_color ) ? 'color: ' . $settings->front_desc_color . ';' : ''; ?>
 }
 /* Font Front Slide Description (Desktop) */
 <?php if ( ! $version_bb_check ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-box-section-content {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-box-section-content {
 
 		<?php if ( 'Default' != $settings->front_desc_font_family['family'] ) : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->front_desc_font_family ); ?>
@@ -585,7 +585,7 @@ if ( 'style1' == $settings->slide_type ) {
 }
 ?>
 /* Font Back Slide Heading (Desktop) */
-.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-back-text-title {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-back-text-title {
 		<?php
 		echo ( '' != $settings->back_title_color ) ? 'color: ' . $settings->back_title_color . ';' : '';
 		echo ( '' != $settings->back_title_margin_top ) ? 'margin-top: ' . $settings->back_title_margin_top . 'px;' : '';
@@ -593,7 +593,7 @@ if ( 'style1' == $settings->slide_type ) {
 		?>
 }
 <?php if ( ! $version_bb_check ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-back-text-title {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-back-text-title {
 		<?php if ( 'Default' != $settings->back_title_font_family['family'] ) : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->back_title_font_family ); ?>
 		<?php endif; ?>
@@ -628,13 +628,13 @@ if ( 'style1' == $settings->slide_type ) {
 }
 ?>
 /* Font Back Slide Description (Desktop) */
-.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-down-box-section-content {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-down-box-section-content {
 	<?php echo ( '' != $settings->back_desc_margin_top ) ? 'margin-top: ' . $settings->back_desc_margin_top . 'px;' : ''; ?>
 	<?php echo ( '' != $settings->back_desc_margin_bottom ) ? 'margin-bottom: ' . $settings->back_desc_margin_bottom . 'px;' : 'margin-bottom: 10px;'; ?>
 	<?php echo ( '' != $settings->back_desc_color ) ? 'color: ' . $settings->back_desc_color . ';' : ''; ?>
 }
 <?php if ( ! $version_bb_check ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-down-box-section-content {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-down-box-section-content {
 
 		<?php if ( 'Default' != $settings->back_desc_font_family['family'] ) : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->back_desc_font_family ); ?>
@@ -671,16 +671,16 @@ if ( 'style1' == $settings->slide_type ) {
 ?>
 /* Link Color. */
 <?php if ( ! empty( $settings->link_color ) ) : ?> 
-.fl-builder-content .fl-node-<?php echo $id; ?> a.uabb-callout-cta-link,
-.fl-builder-content .fl-node-<?php echo $id; ?> a.uabb-callout-cta-link *,
-.fl-builder-content .fl-node-<?php echo $id; ?> a.uabb-callout-cta-link:visited {
+.fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> a.uabb-callout-cta-link,
+.fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> a.uabb-callout-cta-link *,
+.fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> a.uabb-callout-cta-link:visited {
 	color: <?php echo uabb_theme_text_color( $settings->link_color ); ?>;
 }
 <?php endif; ?>
 
 /* Typography Options for Link Text. */
 <?php if ( ! $version_bb_check ) { ?>
-	.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-callout-cta-link {
+	.fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> .uabb-callout-cta-link {
 		<?php if ( 'Default' != $settings->link_font_family['family'] ) : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->link_font_family ); ?>
 		<?php endif; ?>
@@ -717,7 +717,7 @@ if ( 'style1' == $settings->slide_type ) {
 <?php if ( $global_settings->responsive_enabled ) { // Global Setting If started. ?>
 	@media ( max-width: <?php echo $global_settings->medium_breakpoint; ?>px ) {
 
-		.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-slide-front {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-slide-front {
 			<?php
 			if ( isset( $settings->front_padding_dimension_top_medium ) ) {
 				echo ( '' != $settings->front_padding_dimension_top_medium ) ? 'padding-top:' . $settings->front_padding_dimension_top_medium . 'px;' : '';
@@ -734,7 +734,7 @@ if ( 'style1' == $settings->slide_type ) {
 			?>
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-slide-down {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-slide-down {
 			<?php
 			if ( isset( $settings->back_padding_dimension_top_medium ) ) {
 				echo ( '' != $settings->back_padding_dimension_top_medium ) ? 'padding-top:' . $settings->back_padding_dimension_top_medium . 'px;' : '';
@@ -751,7 +751,7 @@ if ( 'style1' == $settings->slide_type ) {
 			?>
 		}
 		<?php if ( ! $version_bb_check ) { ?>
-			.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-box-section-content {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-box-section-content {
 
 				<?php if ( 'yes' === $converted || isset( $settings->front_desc_font_size_unit_medium ) && '' != $settings->front_desc_font_size_unit_medium ) { ?>
 					font-size: <?php echo $settings->front_desc_font_size_unit_medium; ?>px;
@@ -771,7 +771,7 @@ if ( 'style1' == $settings->slide_type ) {
 			}
 		<?php } ?>
 		<?php if ( ! $version_bb_check ) { ?>
-			.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-face-text-title {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-face-text-title {
 
 				<?php if ( 'yes' === $converted || isset( $settings->front_title_font_size_unit_medium ) && '' != $settings->front_title_font_size_unit_medium ) { ?>
 					font-size: <?php echo $settings->front_title_font_size_unit_medium; ?>px;
@@ -791,7 +791,7 @@ if ( 'style1' == $settings->slide_type ) {
 			}
 		<?php } ?>
 		<?php if ( ! $version_bb_check ) { ?>
-			.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-down-box-section-content {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-down-box-section-content {
 
 				<?php if ( 'yes' === $converted || isset( $settings->back_desc_font_size_unit_medium ) && '' != $settings->back_desc_font_size_unit_medium ) { ?>
 					font-size: <?php echo $settings->back_desc_font_size_unit_medium; ?>px;
@@ -811,7 +811,7 @@ if ( 'style1' == $settings->slide_type ) {
 			}
 		<?php } ?>
 		<?php if ( ! $version_bb_check ) { ?>
-			.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-back-text-title {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-back-text-title {
 
 				<?php if ( 'yes' === $converted || isset( $settings->back_title_font_size_unit_medium ) && '' != $settings->back_title_font_size_unit_medium ) { ?>
 					font-size: <?php echo $settings->back_title_font_size_unit_medium; ?>px;
@@ -830,7 +830,7 @@ if ( 'style1' == $settings->slide_type ) {
 				<?php } ?>
 			}
 
-			.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-callout-cta-link {
+			.fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> .uabb-callout-cta-link {
 
 				<?php if ( 'yes' === $converted || isset( $settings->link_font_size_unit_medium ) && '' != $settings->link_font_size_unit_medium ) { ?>
 					font-size: <?php echo $settings->link_font_size_unit_medium; ?>px;
@@ -851,7 +851,7 @@ if ( 'style1' == $settings->slide_type ) {
 	<?php } ?>
 	}
 	@media ( max-width: <?php echo $global_settings->responsive_breakpoint; ?>px ) {
-		.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-slide-front {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-slide-front {
 			<?php
 			if ( isset( $settings->front_padding_dimension_top_responsive ) ) {
 				echo ( '' != $settings->front_padding_dimension_top_responsive ) ? 'padding-top:' . $settings->front_padding_dimension_top_responsive . 'px;' : '';
@@ -868,7 +868,7 @@ if ( 'style1' == $settings->slide_type ) {
 			?>
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-slide-down {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-slide-down {
 			<?php
 			if ( isset( $settings->back_padding_dimension_top_responsive ) ) {
 				echo ( '' != $settings->back_padding_dimension_top_responsive ) ? 'padding-top:' . $settings->back_padding_dimension_top_responsive . 'px;' : '';
@@ -885,7 +885,7 @@ if ( 'style1' == $settings->slide_type ) {
 			?>
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-slide-front {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-slide-front {
 			<?php
 			if ( isset( $settings->front_padding_dimension_top_responsive ) ) {
 				echo ( '' != $settings->front_padding_dimension_top_responsive ) ? 'padding-top:' . $settings->front_padding_dimension_top_responsive . 'px;' : '';
@@ -902,7 +902,7 @@ if ( 'style1' == $settings->slide_type ) {
 			?>
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-slide-box-wrap .uabb-slide-down {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-slide-down {
 			<?php
 			if ( isset( $settings->back_padding_dimension_top_responsive ) ) {
 				echo ( '' != $settings->back_padding_dimension_top_responsive ) ? 'padding-top:' . $settings->back_padding_dimension_top_responsive . 'px;' : '';
@@ -919,7 +919,7 @@ if ( 'style1' == $settings->slide_type ) {
 			?>
 		}
 		<?php if ( ! $version_bb_check ) { ?>
-		.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-box-section-content {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-box-section-content {
 			<?php if ( 'yes' === $converted || isset( $settings->front_desc_font_size_unit_responsive ) && '' != $settings->front_desc_font_size_unit_responsive ) { ?>
 				font-size: <?php echo $settings->front_desc_font_size_unit_responsive; ?>px;
 				<?php if ( '' == $settings->front_desc_line_height_unit_responsive && '' != $settings->front_desc_font_size_unit_responsive ) { ?>
@@ -941,7 +941,7 @@ if ( 'style1' == $settings->slide_type ) {
 			<?php } ?>
 			}
 
-			.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-face-text-title {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-face-text-title {
 
 				<?php if ( 'yes' === $converted || isset( $settings->front_title_font_size_unit_responsive ) && '' != $settings->front_title_font_size_unit_responsive ) { ?>
 					font-size: <?php echo $settings->front_title_font_size_unit_responsive; ?>px;
@@ -964,7 +964,7 @@ if ( 'style1' == $settings->slide_type ) {
 				<?php } ?>
 			}
 
-			.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-down-box-section-content {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-down-box-section-content {
 
 				<?php if ( 'yes' === $converted || isset( $settings->back_desc_font_size_unit_responsive ) && '' != $settings->back_desc_font_size_unit_responsive ) { ?>
 					font-size: <?php echo $settings->back_desc_font_size_unit_responsive; ?>px;
@@ -987,7 +987,7 @@ if ( 'style1' == $settings->slide_type ) {
 				<?php } ?>
 			}
 
-			.fl-node-<?php echo $id; ?> .uabb-slide-box .uabb-slide-back-text-title {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-back-text-title {
 
 				<?php if ( 'yes' === $converted || isset( $settings->back_title_font_size_unit_responsive ) && '' != $settings->back_title_font_size_unit_responsive ) { ?>
 					font-size: <?php echo $settings->back_title_font_size_unit_responsive; ?>px;
@@ -1010,7 +1010,7 @@ if ( 'style1' == $settings->slide_type ) {
 				<?php } ?>
 			}
 
-			.fl-builder-content .fl-node-<?php echo $id; ?> .uabb-callout-cta-link {
+			.fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> .uabb-callout-cta-link {
 				<?php if ( 'yes' === $converted || isset( $settings->link_font_size_unit_responsive ) && '' != $settings->link_font_size_unit_responsive ) { ?>
 					font-size: <?php echo $settings->link_font_size_unit_responsive; ?>px;
 					<?php if ( '' == $settings->link_line_height_unit_responsive && '' != $settings->link_font_size_unit_responsive ) { ?>
@@ -1033,49 +1033,49 @@ if ( 'style1' == $settings->slide_type ) {
 			}
 	<?php } ?>
 		<?php if ( 'none' != $settings->image_type && 'stack' == $settings->mobile_view && ( 'left' == $settings->front_img_icon_position || 'right' == $settings->front_img_icon_position ) ) : ?>
-			.fl-node-<?php echo $id; ?> .uabb-slide-icon-border {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-icon-border {
 				display: none;
 			}
 
-			.fl-node-<?php echo $id; ?> .uabb-slide-front .uabb-slide-front-right-text,
-			.fl-node-<?php echo $id; ?> .uabb-slide-front .uabb-slide-front-left-img,
-			.fl-node-<?php echo $id; ?> .uabb-slide-front .uabb-slide-front-right-img {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front .uabb-slide-front-right-text,
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front .uabb-slide-front-left-img,
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front .uabb-slide-front-right-img {
 				padding: 0;
 			}
-			.fl-node-<?php echo $id; ?> .uabb-slide-front .uabb-slide-front-right-img {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front .uabb-slide-front-right-img {
 				font-size: 0;
 				line-height: 0;
 			}
-			.fl-node-<?php echo $id; ?> .uabb-slide-front-left-img,
-			.fl-node-<?php echo $id; ?> .uabb-slide-front-right-img,
-			.fl-node-<?php echo $id; ?> .uabb-slide-front-right-text {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front-left-img,
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front-right-img,
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front-right-text {
 				display: block;
 				width: 100%;
 				text-align: center;
 			}
 			<?php if ( 'left' == $settings->front_img_icon_position ) : ?>
-			.fl-node-<?php echo $id; ?> .uabb-slide-front .uabb-slide-front-right-text {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front .uabb-slide-front-right-text {
 				padding-top: 15px;
 			}
 			<?php else : ?>
-			.fl-node-<?php echo $id; ?> .uabb-slide-front .uabb-slide-front-right-text {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front .uabb-slide-front-right-text {
 				padding-bottom: 15px;
 			}
 			<?php endif; ?>
 
 			<?php if ( 'left' == $settings->front_img_icon_position || 'reversed' == $settings->stacking_order ) : ?>
-				.fl-node-<?php echo $id; ?> .uabb-style2 .uabb-slide-front-right-text {
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style2 .uabb-slide-front-right-text {
 					<?php echo ( '' != $settings->dropdown_icon_size ) ? 'padding-bottom: ' . ( $settings->dropdown_icon_size * 0.75 ) . 'px;' : ''; ?>
 				}
-				.fl-node-<?php echo $id; ?> .uabb-style3 .uabb-slide-front-right-text {
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style3 .uabb-slide-front-right-text {
 					<?php echo ( '' != $settings->dropdown_icon_size ) ? 'padding-bottom: ' . ( $settings->dropdown_icon_size + 10 ) . 'px;' : ''; ?>
 				}
 
 				<?php if ( 'right' == $settings->front_img_icon_position ) : ?>
-				.fl-node-<?php echo $id; ?> .uabb-slide-front .uabb-slide-front-right-text {
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-front .uabb-slide-front-right-text {
 					padding-top: 15px;
 				}
-				.fl-node-<?php echo $id; ?> .uabb-slide-box-section {
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-section {
 					display: -webkit-box;
 					display: -ms-flexbox;
 					display: flex;
@@ -1087,10 +1087,10 @@ if ( 'style1' == $settings->slide_type ) {
 				<?php endif; ?>
 
 			<?php else : ?>
-				.fl-node-<?php echo $id; ?> .uabb-style2 .uabb-slide-front-right-img {
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style2 .uabb-slide-front-right-img {
 					<?php echo ( '' != $settings->dropdown_icon_size ) ? 'padding-bottom: ' . ( $settings->dropdown_icon_size * 0.75 ) . 'px;' : ''; ?>
 				}
-				.fl-node-<?php echo $id; ?> .uabb-style3 .uabb-slide-front-right-img {
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-style3 .uabb-slide-front-right-img {
 					<?php echo ( '' != $settings->dropdown_icon_size ) ? 'padding-bottom: ' . ( $settings->dropdown_icon_size + 10 ) . 'px;' : ''; ?>
 				}
 			<?php endif; ?>

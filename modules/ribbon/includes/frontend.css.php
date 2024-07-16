@@ -21,11 +21,11 @@ $settings->end_color         = UABB_Helper::uabb_colorpicker( $settings, 'end_co
 $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 ?>
 
-.fl-node-<?php echo $id; ?> .uabb-ribbon-wrap {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon-wrap {
 	text-align: <?php echo $settings->ribbon_align; ?>
 }
 
-.fl-node-<?php echo $id; ?> .uabb-ribbon-wrap .uabb-ribbon-text {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon-wrap .uabb-ribbon-text {
 	<?php if ( 'color' == $settings->ribbon_bg_type ) { ?>
 		background: <?php echo ( '' != uabb_theme_base_color( $settings->ribbon_color ) ) ? uabb_theme_base_color( $settings->ribbon_color ) : '#f7f7f7'; ?>;
 		<?php
@@ -35,7 +35,7 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 	?>
 }
 <?php if ( ! $version_bb_check ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-ribbon-wrap .uabb-ribbon {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon-wrap .uabb-ribbon {
 
 		<?php if ( 'yes' === $converted || isset( $settings->text_font_size_unit ) && '' != $settings->text_font_size_unit ) { ?>
 				font-size: <?php echo $settings->text_font_size_unit; ?>px;      
@@ -71,7 +71,7 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 	}
 }
 ?>
-.fl-node-<?php echo $id; ?> .uabb-ribbon-wrap .uabb-ribbon {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon-wrap .uabb-ribbon {
 	/*background: <?php echo ( '' != uabb_theme_base_color( $settings->ribbon_color ) ) ? uabb_theme_base_color( $settings->ribbon_color ) : '#f7f7f7'; ?>;*/
 	<?php
 	echo ( '' != $settings->text_color ) ? 'color: ' . $settings->text_color . ';' : '';
@@ -96,26 +96,26 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 	max-width: calc(100% - 7em);
 }
 
-.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb i,
-.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb i {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb i,
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb i {
 	color: <?php echo uabb_theme_text_color( $settings->icon_color ); ?>;
 }
 
 <?php if ( 'none' == $settings->ribbon_resp ) : ?>
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:before,
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:after {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 		border-style: solid;
 		border-color: <?php echo uabb_theme_text_color( $settings->fold_color ); ?> transparent transparent transparent;
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb,
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb {
 		border: 1em solid <?php echo uabb_theme_base_color( $settings->end_color ); ?>;
 		z-index: -1;
 	}
 
 	/* Left Ribbon */
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb {
 		left: -3.5em;
 		border-right-width: 3em;
 		border-left-width: 1.5em;
@@ -130,7 +130,7 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 	}
 
 	/* Right Ribbon */
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb {
 		right: -3.5em;
 		border-left-width: 3em;
 		border-right-width: 1.5em;
@@ -144,7 +144,7 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 		?>
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-ribbon-wrap .uabb-ribbon {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon-wrap .uabb-ribbon {
 		<?php if ( 'left' == $settings->ribbon_align ) { ?>
 			left: 3.5em;
 		<?php } elseif ( 'right' == $settings->ribbon_align ) { ?>
@@ -154,18 +154,18 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 
 	/* For Icon
 	*=============*/
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb i,
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb i {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb i,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb i {
 		top: initial;
 		transform: none;
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb i {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb i {
 		transform: translate(-1.5em,-50%);
 		right: initial;
 	}
 
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb i {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb i {
 		transform: translate(0.5em,-50%);
 		left: initial;
 	}
@@ -173,10 +173,10 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 
 	/*  Common Code
 	*================ */
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb,
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb,
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:before,
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:after {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 		content: "";
 		bottom: -1em;
 		position: absolute;
@@ -184,39 +184,39 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 	}
 
 	/* Inner Shadow Commonn */
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:before,
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:after {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 		border-style: solid;
 	}
 
 	/* Inner Shadow Left */
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:before {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before {
 		left: 0;
 		border-width: 1em 0 0 1em;
 	}
 
 	/* Inner Shadow Right */
-	.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:after {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 		right: 0;
 		border-width: 1em 1em 0 0;
 	}
 
 <?php elseif ( 'small' == $settings->ribbon_resp ) : ?>
 	@media all and ( min-width: <?php echo $global_settings->responsive_breakpoint; ?>px ) {
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:before,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:after {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 			border-style: solid;
 			border-color: <?php echo uabb_theme_text_color( $settings->fold_color ); ?> transparent transparent transparent;
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb {
 			border: 1em solid <?php echo uabb_theme_base_color( $settings->end_color ); ?>;
 			z-index: -1;
 		}
 
 		/* Left Ribbon */
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb {
 			left: -3.5em;
 			border-right-width: 3em;
 			border-left-width: 1.5em;
@@ -231,7 +231,7 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 		}
 
 		/* Right Ribbon */
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb {
 			right: -3.5em;
 			border-left-width: 3em;
 			border-right-width: 1.5em;
@@ -245,7 +245,7 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 			?>
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-ribbon-wrap .uabb-ribbon {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon-wrap .uabb-ribbon {
 			<?php if ( 'left' == $settings->ribbon_align ) { ?>
 				left: 3.5em;
 			<?php } elseif ( 'right' == $settings->ribbon_align ) { ?>
@@ -256,18 +256,18 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 
 		/* For Icon
 		*=============*/
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb i,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb i {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb i,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb i {
 			top: initial;
 			transform: none;
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb i {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb i {
 			transform: translate(-1.5em,-50%);
 			right: initial;
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb i {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb i {
 			transform: translate(0.5em,-50%);
 			left: initial;
 		}
@@ -275,10 +275,10 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 
 		/*  Common Code
 		*================ */
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:before,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:after {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 			content: "";
 			bottom: -1em;
 			position: absolute;
@@ -286,25 +286,25 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 		}
 
 		/* Inner Shadow Commonn */
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:before,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:after {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 			border-style: solid;
 		}
 
 		/* Inner Shadow Left */
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:before {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before {
 			left: 0;
 			border-width: 1em 0 0 1em;
 		}
 
 		/* Inner Shadow Right */
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:after {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 			right: 0;
 			border-width: 1em 1em 0 0;
 		}
 	}
 	@media ( max-width: <?php echo $global_settings->responsive_breakpoint; ?>px ) {
-		.fl-node-<?php echo $id; ?> .uabb-ribbon-wrap .uabb-ribbon {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon-wrap .uabb-ribbon {
 			<?php if ( 'full' == $settings->ribbon_width ) { ?>
 				width: 100%;
 			<?php } elseif ( 'auto' == $settings->ribbon_width ) { ?>
@@ -317,27 +317,27 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 		}
 
 		<?php if ( '' == $settings->left_icon && '' == $settings->right_icon ) : ?>
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text {
 			padding: 0.5em 1em;
 		}
 		<?php endif; ?>
 	}
 <?php else : ?>
 	@media all and ( min-width: <?php echo $global_settings->medium_breakpoint; ?>px ) {
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:before,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:after {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 			border-style: solid;
 			border-color: <?php echo uabb_theme_text_color( $settings->fold_color ); ?> transparent transparent transparent;
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb {
 			border: 1em solid <?php echo uabb_theme_base_color( $settings->end_color ); ?>;
 			z-index: -1;
 		}
 
 		/* Left Ribbon */
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb {
 			left: -3.5em;
 			border-right-width: 3em;
 			border-left-width: 1.5em;
@@ -352,7 +352,7 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 		}
 
 		/* Right Ribbon */
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb {
 			right: -3.5em;
 			border-left-width: 3em;
 			border-right-width: 1.5em;
@@ -366,7 +366,7 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 			?>
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-ribbon-wrap .uabb-ribbon {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon-wrap .uabb-ribbon {
 			<?php if ( 'left' == $settings->ribbon_align ) { ?>
 				left: 3.5em;
 			<?php } elseif ( 'right' == $settings->ribbon_align ) { ?>
@@ -376,18 +376,18 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 
 		/* For Icon
 		*=============*/
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb i,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb i {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb i,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb i {
 			top: initial;
 			transform: none;
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb i {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb i {
 			transform: translate(-1.5em,-50%);
 			right: initial;
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb i {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb i {
 			transform: translate(0.5em,-50%);
 			left: initial;
 		}
@@ -395,10 +395,10 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 
 		/*  Common Code
 		*================ */
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-left-ribb,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-right-ribb,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:before,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:after {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 			content: "";
 			bottom: -1em;
 			position: absolute;
@@ -406,25 +406,25 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 		}
 
 		/* Inner Shadow Commonn */
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:before,
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:after {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 			border-style: solid;
 		}
 
 		/* Inner Shadow Left */
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:before {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before {
 			left: 0;
 			border-width: 1em 0 0 1em;
 		}
 
 		/* Inner Shadow Right */
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text:after {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 			right: 0;
 			border-width: 1em 1em 0 0;
 		}
 	}
 	@media ( max-width: <?php echo $global_settings->medium_breakpoint; ?>px ) {
-		.fl-node-<?php echo $id; ?> .uabb-ribbon-wrap .uabb-ribbon {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon-wrap .uabb-ribbon {
 			<?php if ( 'full' == $settings->ribbon_width ) { ?>
 				width: 100%;
 			<?php } elseif ( 'auto' == $settings->ribbon_width ) { ?>
@@ -436,7 +436,7 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 		}
 
 		<?php if ( '' == $settings->left_icon && '' == $settings->right_icon ) : ?>
-		.fl-node-<?php echo $id; ?> .uabb-ribbon .uabb-ribbon-text {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text {
 			padding: 0.5em 1em;
 		}
 		<?php endif; ?>
@@ -453,7 +453,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 			if ( isset( $settings->text_line_height['medium'] ) && '' != $settings->text_line_height['medium'] || isset( $settings->text_font_size['medium'] ) && '' != $settings->text_font_size['medium'] || isset( $settings->text_line_height_unit ) || 'auto' == $settings->ribbon_width ) {
 				?>
 
-				.fl-node-<?php echo $id; ?> .uabb-ribbon-wrap .uabb-ribbon {
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon-wrap .uabb-ribbon {
 				<?php if ( 'yes' === $converted || isset( $settings->text_font_size_unit_medium ) && '' != $settings->text_font_size_unit_medium ) { ?>
 					font-size: <?php echo $settings->text_font_size_unit_medium; ?>px;
 				<?php } elseif ( isset( $settings->text_font_size_unit_medium ) && '' == $settings->text_font_size_unit_medium && isset( $settings->text_font_size['medium'] ) && '' != $settings->text_font_size['medium'] ) { ?>
@@ -477,7 +477,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 
 	@media ( max-width: <?php echo $global_settings->responsive_breakpoint; ?>px ) {
 		<?php if ( ! $version_bb_check ) { ?>
-			.fl-node-<?php echo $id; ?> .uabb-ribbon-wrap .uabb-ribbon {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon-wrap .uabb-ribbon {
 
 				<?php if ( 'yes' === $converted || isset( $settings->text_font_size_unit_responsive ) && '' != $settings->text_font_size_unit_responsive ) { ?>
 					font-size: <?php echo $settings->text_font_size_unit_responsive; ?>px;   
