@@ -251,56 +251,56 @@ if ( ! $version_bb_check ) {
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-module-content.uabb-creative-button-wrap a:hover {
 		<?php echo ( '' != $settings->border_hover_color ) ? 'border-color:#' . $settings->border_hover_color . ';' : 'border-color:' . uabb_theme_border_hover_color( '' ) . ';'; ?>
 	}
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:hover {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:hover {
 		background:<?php echo uabb_theme_default_button_bg_hover_color( $settings->bg_hover_color ); ?>;
 	}
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a *,
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited,
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited * {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a *,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited * {
 		color: <?php echo uabb_theme_default_button_text_color( $settings->text_color ); ?>;
 	}
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:hover,
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:hover * {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:hover,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:hover * {
 		color: <?php echo uabb_theme_default_button_text_hover_color( $settings->text_hover_color ); ?>;
 	}
 <?php } ?>
 <?php if ( ! $version_bb_check ) { ?>
 	<?php if ( isset( $settings->line_height ) && is_array( $settings->line_height ) && 'custom' == $settings->width && '' != $settings->custom_height && ( isset( $settings->line_height['desktop'] ) && '' == $settings->line_height['desktop'] || ( intval( $settings->custom_height ) > intval( $settings->line_height['desktop'] ) ) ) ) { ?>
 
-		html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-		html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+		html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+		html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 		line-height: <?php echo $settings->custom_height; ?>px;
 		}
 
 	<?php } elseif ( isset( $settings->line_height ) && is_object( $settings->line_height ) && 'custom' == $settings->width && '' != $settings->custom_height && ( isset( $settings->line_height->desktop ) && '' == $settings->line_height->desktop || ( intval( $settings->custom_height ) > intval( $settings->line_height->desktop ) ) ) ) { ?>
-		html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-		html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+		html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+		html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 		line-height: <?php echo $settings->custom_height; ?>px;
 		}
 	<?php } ?>
 <?php } else { ?>
 	<?php if ( is_array( $settings->button_typo ) ) { ?>
 		<?php if ( isset( $settings->button_typo['line_height'] ) && is_array( $settings->button_typo['line_height'] ) && 'custom' == $settings->width && '' != $settings->custom_height ) { ?>
-			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+			html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+			html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 				line-height: <?php echo $settings->custom_height; ?>px;
 			}
 		<?php } elseif ( isset( $settings->button_typo['line_height'] ) && is_object( $settings->button_typo['line_height'] ) && 'custom' == $settings->width && '' != $settings->custom_height ) { ?>
-			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+			html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+			html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 				line-height: <?php echo $settings->custom_height; ?>px;
 			}
 		<?php } ?>
 	<?php } elseif ( is_object( $settings->button_typo ) ) { ?>
 			<?php if ( isset( $settings->button_typo->line_height ) && is_object( $settings->button_typo->line_height ) && 'custom' == $settings->width && '' != $settings->custom_height ) { ?>
-			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+			html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+			html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 				line-height: <?php echo $settings->custom_height; ?>px;
 			}
 		<?php } elseif ( isset( $settings->button_typo->line_height ) && is_object( $settings->button_typo->line_height ) && 'custom' == $settings->width && '' != $settings->custom_height ) { ?>
-			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-			html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+			html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+			html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 				line-height: <?php echo $settings->custom_height; ?>px;
 			}
 		<?php } ?>
@@ -311,7 +311,7 @@ if ( ! $version_bb_check ) {
 if ( 'custom' == $settings->width && '' != $settings->custom_height ) :
 	$translateText = intval( $settings->custom_height ) + ( $padding_top_bottom * 2 ) + 50; // @codingStandardsIgnoreLine.
 	?>
-.fl-node-<?php echo $id; ?> .uabb-creative-flat-btn.uabb-animate_from_top-btn:hover .uabb-button-text {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-flat-btn.uabb-animate_from_top-btn:hover .uabb-button-text {
 	-webkit-transform: translateY(<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
 	-moz-transform: translateY(<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
 	-ms-transform: translateY(<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
@@ -319,7 +319,7 @@ if ( 'custom' == $settings->width && '' != $settings->custom_height ) :
 	transform: translateY(<?php echo $translateText; ?>px);  <?php // @codingStandardsIgnoreLine. ?>
 }
 
-.fl-node-<?php echo $id; ?> .uabb-creative-flat-btn.uabb-animate_from_bottom-btn:hover .uabb-button-text {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-flat-btn.uabb-animate_from_bottom-btn:hover .uabb-button-text {
 	-webkit-transform: translateY(-<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
 	-moz-transform: translateY(-<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
 	-ms-transform: translateY(-<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
@@ -329,16 +329,16 @@ if ( 'custom' == $settings->width && '' != $settings->custom_height ) :
 <?php endif; ?>
 
 <?php if ( ! empty( $settings->text_color ) && 'default' !== $settings->style ) : ?>
-.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a *,
-.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited,
-.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited * {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a *,
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited,
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited * {
 	color: <?php echo $settings->text_color; ?>;
 }
 <?php endif; ?>
 
 <?php if ( ! empty( $settings->bg_hover_color ) ) : ?>
-.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:hover {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:hover {
 	<?php if ( 'transparent' != $settings->style && 'gradient' != $settings->style && 'default' != $settings->style ) { ?>
 		background: <?php echo $settings->bg_hover_color; ?>;
 	<?php } ?>
@@ -358,8 +358,8 @@ if ( 'custom' == $settings->width && '' != $settings->custom_height ) :
 <?php endif; ?>
 
 <?php if ( ! empty( $settings->text_hover_color ) && 'default' !== $settings->style ) : ?>
-.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:hover,
-.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:hover * {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:hover,
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:hover * {
 	color: <?php echo $settings->text_hover_color; ?>;
 }
 <?php endif; ?>
@@ -370,8 +370,8 @@ if ( $global_settings->responsive_enabled ) :
 	?>
 	@media ( max-width: <?php echo $global_settings->medium_breakpoint . 'px'; ?> ) {
 		<?php if ( 'default' === $settings->style ) { ?>
-			.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-			.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 				<?php
 				if ( isset( $settings->button_padding_dimension_top_medium ) ) {
 					echo ( '' != $settings->button_padding_dimension_top_medium ) ? 'padding-top:' . $settings->button_padding_dimension_top_medium . 'px;' : 'padding-top:' . uabb_theme_padding_button( 'tablet', 'top' ) . ';';
@@ -391,12 +391,12 @@ if ( $global_settings->responsive_enabled ) :
 		<?php } ?>
 	}
 	@media ( max-width: <?php echo $global_settings->responsive_breakpoint; ?>px ) {
-		.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap.uabb-creative-button-reponsive-<?php echo $settings->mob_align; ?> {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap.uabb-creative-button-reponsive-<?php echo $settings->mob_align; ?> {
 			text-align: <?php echo $settings->mob_align; ?>;
 		}
 		<?php if ( 'default' === $settings->style ) { ?>
-			.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-			.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 				<?php
 				if ( isset( $settings->button_padding_dimension_top_responsive ) ) {
 					echo ( '' != $settings->button_padding_dimension_top_responsive ) ? 'padding-top:' . $settings->button_padding_dimension_top_responsive . 'px;' : 'padding-top:' . uabb_theme_padding_button( 'mobile', 'top' ) . ';';
@@ -425,8 +425,8 @@ if ( $global_settings->responsive_enabled ) :
 			/* Medium Breakpoint media query */
 			?>
 			@media ( max-width: <?php echo $global_settings->medium_breakpoint . 'px'; ?> ) {
-				.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-				.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 
 					<?php if ( 'yes' === $converted || isset( $settings->font_size_unit_medium ) && '' != $settings->font_size_unit_medium ) { ?>
 						font-size: <?php echo $settings->font_size_unit_medium; ?>px;
@@ -459,13 +459,13 @@ if ( $global_settings->responsive_enabled ) :
 					<?php } ?>
 				}
 				<?php if ( 'custom' == $settings->width && '' != $settings->custom_height && ( '' == $settings->line_height->medium || ( intval( $settings->custom_height ) > intval( $settings->line_height->medium ) ) ) ) : ?>
-				html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-				html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+				html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+				html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 					line-height: <?php echo $settings->custom_height; ?>px;
 				}
 				<?php else : ?>
-				html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-				html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+				html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+				html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 
 					<?php if ( isset( $settings->font_size->medium ) && '' == $settings->font_size->medium && isset( $settings->line_height->medium ) && '' != $settings->line_height->medium && '' == $settings->line_height_unit && '' == $settings->line_height_unit_medium ) { ?>
 					line-height: <?php echo $settings->line_height->medium; ?>px;
@@ -486,8 +486,8 @@ if ( $global_settings->responsive_enabled ) :
 			/* Small Breakpoint media query */
 			?>
 			@media ( max-width: <?php echo $global_settings->responsive_breakpoint . 'px'; ?> ) {
-				.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-				.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+				.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 
 					<?php if ( 'yes' === $converted || isset( $settings->font_size_unit_responsive ) && '' != $settings->font_size_unit_responsive ) { ?>
 						font-size: <?php echo $settings->font_size_unit_responsive; ?>px;
@@ -522,13 +522,13 @@ if ( $global_settings->responsive_enabled ) :
 				}
 
 				<?php if ( 'custom' == $settings->width && '' != $settings->custom_height && ( '' == $settings->line_height->small || ( intval( $settings->custom_height ) > intval( $settings->line_height->small ) ) ) ) : ?>
-				html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-				html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+				html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+				html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 					line-height: <?php echo $settings->custom_height; ?>px;
 				}
 				<?php else : ?>
-				html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-				html.internet-explorer .fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+				html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+				html.internet-explorer .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 
 					<?php if ( isset( $settings->font_size->small ) && '' == $settings->font_size->small && isset( $settings->line_height->small ) && '' != $settings->line_height->small && '' == $settings->line_height_unit && '' == $settings->line_height_unit_medium && '' == $settings->line_height_unit_responsive ) { ?>
 						line-height: <?php echo $settings->line_height->small; ?>px;
@@ -554,7 +554,7 @@ if ( $global_settings->responsive_enabled ) :
 <?php
 if ( ! empty( $settings->style ) && 'transparent' == $settings->style ) {
 	?>
-	.fl-node-<?php echo $id; ?> a.uabb-creative-transparent-btn.uabb-none-btn:hover{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-transparent-btn.uabb-none-btn:hover{
 		<?php
 		if ( 'none' == $settings->transparent_button_options ) {
 			if ( 'border' == $settings->hover_attribute ) {
@@ -573,62 +573,62 @@ if ( ! empty( $settings->style ) && 'transparent' == $settings->style ) {
 		}
 		?>
 	}
-	.fl-node-<?php echo $id; ?> a.uabb-creative-transparent-btn.uabb-none-btn:hover .uabb-creative-button-icon {
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-transparent-btn.uabb-none-btn:hover .uabb-creative-button-icon {
 		<?php if ( '' != $settings->text_hover_color && 'FFFFFF' != $settings->text_hover_color && 'none' == $settings->transparent_button_options ) { ?>
 			color: <?php echo $settings->text_hover_color; ?>
 		<?php } else { ?>
 			color: <?php echo $settings->text_color; ?>;
 		<?php } ?>
 	}
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a.uabb-creative-transparent-btn.uabb-none-btn:hover .uabb-creative-button-text {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a.uabb-creative-transparent-btn.uabb-none-btn:hover .uabb-creative-button-text {
 		<?php if ( '' != $settings->text_hover_color && 'FFFFFF' != $settings->text_hover_color && 'none' == $settings->transparent_button_options ) { ?>
 			color: <?php echo $settings->text_hover_color; ?>
 		<?php } else { ?>
 			color: <?php echo $settings->text_color; ?>;
 		<?php } ?>
 	}
-	.fl-node-<?php echo $id; ?> a.uabb-creative-transparent-btn.uabb-transparent-fade-btn:hover{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-transparent-btn.uabb-transparent-fade-btn:hover{
 		background: <?php echo uabb_theme_base_color( $settings->bg_hover_color ); ?>;
 	}
 
 	/*transparent-fill-top*/
-	.fl-node-<?php echo $id; ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-top-btn:hover:after{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-top-btn:hover:after{
 		background: <?php echo uabb_theme_base_color( $settings->bg_hover_color ); ?>;
 		height: 100%;
 	}
 
 	/*transparent-fill-bottom*/
-	.fl-node-<?php echo $id; ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-bottom-btn:hover:after{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-bottom-btn:hover:after{
 		background: <?php echo uabb_theme_base_color( $settings->bg_hover_color ); ?>;
 		height: 100%;
 	}
 
 	/*transparent-fill-left*/
-	.fl-node-<?php echo $id; ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-left-btn:hover:after{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-left-btn:hover:after{
 		background: <?php echo uabb_theme_base_color( $settings->bg_hover_color ); ?>;
 		width: 100%;
 	}
 	/*transparent-fill-right*/
-	.fl-node-<?php echo $id; ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-right-btn:hover:after{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-right-btn:hover:after{
 		background: <?php echo uabb_theme_base_color( $settings->bg_hover_color ); ?>;
 		width: 100%;
 	}
 
 	/*transparent-fill-center*/
-	.fl-node-<?php echo $id; ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-center-btn:hover:after{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-center-btn:hover:after{
 		background: <?php echo uabb_theme_base_color( $settings->bg_hover_color ); ?>;
 		height: calc( 100% + <?php echo $border_size . 'px'; ?> );
 		width: calc( 100% + <?php echo $border_size . 'px'; ?> );
 	}
 
 	/* transparent-fill-diagonal */
-	.fl-node-<?php echo $id; ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-diagonal-btn:hover:after{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-diagonal-btn:hover:after{
 		background: <?php echo uabb_theme_base_color( $settings->bg_hover_color ); ?>;
 		height: 260%;
 	}
 
 	/*transparent-fill-horizontal*/
-	.fl-node-<?php echo $id; ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-horizontal-btn:hover:after{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-transparent-btn.uabb-transparent-fill-horizontal-btn:hover:after{
 		background: <?php echo uabb_theme_base_color( $settings->bg_hover_color ); ?>;
 		height: calc( 100% + <?php echo $border_size . 'px'; ?> );
 		width: calc( 100% + <?php echo $border_size . 'px'; ?> );
@@ -636,17 +636,17 @@ if ( ! empty( $settings->style ) && 'transparent' == $settings->style ) {
 
 
 
-	.fl-node-<?php echo $id; ?> a.uabb-transparent-fill-diagonal-btn:hover {
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-transparent-fill-diagonal-btn:hover {
 		background: none;
 	}
 
-	.fl-node-<?php echo $id; ?> a.uabb-creative-transparent-btn.uabb-<?php echo $settings->transparent_button_options; ?>-btn:hover .uabb-creative-button-text{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-transparent-btn.uabb-<?php echo $settings->transparent_button_options; ?>-btn:hover .uabb-creative-button-text{
 		color: <?php echo uabb_theme_button_text_color( $settings->text_hover_color ); ?>;
 
 		position: relative;
 		z-index: 9;
 	}
-	.fl-node-<?php echo $id; ?> .uabb-<?php echo $settings->transparent_button_options; ?>-btn:hover .uabb-creative-button-icon {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-<?php echo $settings->transparent_button_options; ?>-btn:hover .uabb-creative-button-icon {
 		color: <?php echo uabb_theme_button_text_color( $settings->text_hover_color ); ?>;
 		position: relative;
 		z-index: 9;
@@ -660,17 +660,17 @@ if ( ! empty( $settings->style ) && 'transparent' == $settings->style ) {
 if ( ! empty( $settings->style ) && 'threed' == $settings->style ) {
 	?>
 	<?php /* 3D Move Down*/ ?>
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-threed_down-btn{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_down-btn{
 		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_color ), 10, 'darken' ); ?>
 		box-shadow: 0 6px <?php echo uabb_theme_base_color( $shadow_color ); ?>;
 	}
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-threed_down-btn:hover{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_down-btn:hover{
 		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_hover_color ), 10, 'darken' ); ?>
 		top: 2px;
 		box-shadow: 0 4px <?php echo uabb_theme_base_color( $shadow_color ); ?>;
 	}
 
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-threed_down-btn:active{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_down-btn:active{
 		box-shadow:none!important;
 		-webkit-transition:all 50ms linear;
 		-moz-transition:all 50ms linear;
@@ -680,17 +680,17 @@ if ( ! empty( $settings->style ) && 'threed' == $settings->style ) {
 
 
 	<?php /* 3D Move Up*/ ?>
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-threed_up-btn{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_up-btn{
 		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_color ), 10, 'darken' ); ?>
 		box-shadow: 0 -6px <?php echo uabb_theme_base_color( $shadow_color ); ?>;
 	}
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-threed_up-btn:hover{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_up-btn:hover{
 		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_hover_color ), 10, 'darken' ); ?>
 		top: -2px;
 		box-shadow: 0 -4px <?php echo uabb_theme_base_color( $shadow_color ); ?>;
 	}
 
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-threed_up-btn:active{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_up-btn:active{
 		box-shadow:none!important;
 		-webkit-transition:all 50ms linear;
 		-moz-transition:all 50ms linear;
@@ -699,17 +699,17 @@ if ( ! empty( $settings->style ) && 'threed' == $settings->style ) {
 	}
 
 	<?php /* 3D Move Left*/ ?>
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-threed_left-btn{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_left-btn{
 		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_color ), 10, 'darken' ); ?>
 		box-shadow: -6px 0 <?php echo uabb_theme_base_color( $shadow_color ); ?>;
 	}
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-threed_left-btn:hover{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_left-btn:hover{
 		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_hover_color ), 10, 'darken' ); ?>
 		left: -2px;
 		box-shadow: -4px 0 <?php echo uabb_theme_base_color( $shadow_color ); ?>;
 	}
 
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-threed_left-btn:active {
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_left-btn:active {
 		box-shadow:none!important;
 		-webkit-transition:all 50ms linear;
 		-moz-transition:all 50ms linear;
@@ -719,18 +719,18 @@ if ( ! empty( $settings->style ) && 'threed' == $settings->style ) {
 
 
 	<?php /* 3D Move Right*/ ?>
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-threed_right-btn{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_right-btn{
 		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_color ), 10, 'darken' ); ?>
 		box-shadow: 6px 0 <?php echo uabb_theme_base_color( $shadow_color ); ?>;
 	}
 
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-threed_right-btn:hover{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_right-btn:hover{
 		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_hover_color ), 10, 'darken' ); ?>
 		left: 2px;
 		box-shadow: 4px 0 <?php echo uabb_theme_base_color( $shadow_color ); ?>;
 	}
 
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-threed_right-btn:active {
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_right-btn:active {
 		box-shadow:none!important;
 		-webkit-transition:all 50ms linear;
 		-moz-transition:all 50ms linear;
@@ -739,19 +739,19 @@ if ( ! empty( $settings->style ) && 'threed' == $settings->style ) {
 	}
 
 	<?php /* Animate Background Color */ ?>
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-<?php echo $settings->threed_button_options; ?>-btn:hover:after{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-<?php echo $settings->threed_button_options; ?>-btn:hover:after{
 		<?php $background_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_hover_color ), 10, 'darken' ); ?>
 		background: <?php echo $background_color; ?>;
 	}
 
 
 	<?php /* Text Color*/ ?>
-	.fl-node-<?php echo $id; ?> a.uabb-creative-threed-btn.uabb-<?php echo $settings->threed_button_options; ?>-btn:hover .uabb-creative-button-text{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-<?php echo $settings->threed_button_options; ?>-btn:hover .uabb-creative-button-text{
 		color: <?php echo uabb_theme_base_color( $settings->text_hover_color ); ?>;
 	}
 
 	<?php /* 3D Padding for Shadow */ ?>
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap {
 		<?php if ( 'threed_down' == $settings->threed_button_options ) : ?>
 			padding-bottom: 6px;
 		<?php elseif ( 'threed_up' == $settings->threed_button_options ) : ?>
