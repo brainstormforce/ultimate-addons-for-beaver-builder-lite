@@ -28,7 +28,7 @@ if ( 'yes' == $settings->show_button ) {
 
 	if ( 'flat' == $settings->button->style && 'none' != $settings->button->flat_button_options ) {
 		?>
-	.fl-node-<?php echo $id; ?> .uabb-button-wrap .uabb-creative-flat-btn .uabb-button-text {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-button-wrap .uabb-creative-flat-btn .uabb-button-text {
 		-webkit-backface-visibility: visible;
 		-moz-backface-visibility: visible;
 		backface-visibility: visible;
@@ -47,14 +47,14 @@ if ( '' != $settings->smile_icon && '' != $settings->smile_icon->icon ) {
 <?php
 if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 	?>
-	.fl-node-<?php echo $id; ?> .uabb-flip-box {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-flip-box {
 		height: <?php echo ( '' != $settings->flip_box_min_height ) ? $settings->flip_box_min_height : '300'; ?>px;
 	}
 	<?php
 }
 ?>
 
-.fl-node-<?php echo $id; ?> .uabb-front {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-front {
 	<?php
 	if ( 'color' == $settings->front_background_type ) {
 		echo ( '' != $settings->front_background_color ) ? 'background-color: ' . $settings->front_background_color . ';' : '';
@@ -67,7 +67,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 	?>
 }
 <?php if ( ! $version_bb_check ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-front {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-front {
 		<?php
 		echo ( '' != $settings->front_border_color ) ? 'border-color: ' . $settings->front_border_color . ';' : '';
 		echo ( '' != $settings->front_border_size ) ? 'border-width: ' . $settings->front_border_size . 'px;' : 'border-width: 1px;';
@@ -88,7 +88,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 	}
 }
 ?>
-.fl-node-<?php echo $id; ?> .uabb-back {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-back {
 	<?php
 	if ( 'color' == $settings->back_background_type ) {
 		echo ( '' != $settings->back_background_color ) ? 'background-color: ' . $settings->back_background_color . ';' : '';
@@ -101,7 +101,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 	?>
 }
 <?php if ( ! $version_bb_check ) { ?>
-.fl-node-<?php echo $id; ?> .uabb-back {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-back {
 	<?php
 	echo ( '' != $settings->back_border_color ) ? 'border-color: ' . $settings->back_border_color . ';' : '';
 	echo ( '' != $settings->back_border_size ) ? 'border-width: ' . $settings->back_border_size . 'px;' : 'border-width: 1px;';
@@ -123,7 +123,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 }
 ?>
 
-.fl-node-<?php echo $id; ?> .uabb-front .uabb-text-editor {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-front .uabb-text-editor {
 	<?php
 		echo ( '' != $settings->front_desc_typography_margin_top ) ? 'margin-top: ' . $settings->front_desc_typography_margin_top . 'px;' : 'margin-top: 0;';
 
@@ -132,7 +132,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 	color : <?php echo uabb_theme_text_color( $settings->front_desc_typography_color ); ?>;
 }
 <?php if ( ! $version_bb_check ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-front .uabb-text-editor {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-front .uabb-text-editor {
 		<?php
 		if ( 'yes' === $converted || isset( $settings->front_desc_typography_font_size_unit ) && '' != $settings->front_desc_typography_font_size_unit ) {
 			?>
@@ -170,7 +170,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 	}
 }
 ?>
-.fl-node-<?php echo $id; ?> .uabb-flip-box-section {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-flip-box-section {
 		<?php
 		if ( 'yes' === $converted || isset( $settings->inner_padding_dimension_top ) && isset( $settings->inner_padding_dimension_bottom ) && isset( $settings->inner_padding_dimension_left ) && isset( $settings->inner_padding_dimension_right ) ) {
 			if ( isset( $settings->inner_padding ) && '' == $settings->inner_padding ) {
@@ -199,7 +199,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 		;
 		<?php } ?>
 }
-.fl-node-<?php echo $id; ?> .uabb-front .uabb-face-text-title {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-front .uabb-face-text-title {
 	<?php
 	echo ( '' != $settings->front_title_typography_color ) ? 'color: ' . $settings->front_title_typography_color . ';' : '';
 
@@ -209,7 +209,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 	?>
 }
 <?php if ( ! $version_bb_check ) { ?>
-.fl-node-<?php echo $id; ?> .uabb-front .uabb-face-text-title {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-front .uabb-face-text-title {
 
 	<?php
 	if ( 'yes' === $converted || isset( $settings->front_title_typography_font_size_unit ) && '' != $settings->front_title_typography_font_size_unit ) {
@@ -248,7 +248,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 	}
 }
 ?>
-.fl-node-<?php echo $id; ?> .uabb-back .uabb-text-editor {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-back .uabb-text-editor {
 	color : <?php echo uabb_theme_text_color( $settings->back_desc_typography_color ); ?>;
 	<?php
 	echo ( '' != $settings->back_desc_typography_margin_top ) ? 'margin-top: ' . $settings->back_desc_typography_margin_top . 'px;' : 'margin-top: 0;';
@@ -257,7 +257,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 	?>
 }
 <?php if ( ! $version_bb_check ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-back .uabb-text-editor {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-back .uabb-text-editor {
 
 		<?php
 		if ( 'yes' === $converted || isset( $settings->back_desc_typography_font_size_unit ) && '' != $settings->back_desc_typography_font_size_unit ) {
@@ -296,20 +296,20 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 	}
 }
 ?>
-.fl-node-<?php echo $id; ?> .uabb-button-wrap {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-button-wrap {
 	<?php
 	echo ( '' != $settings->button_margin_top ) ? 'margin-top: ' . $settings->button_margin_top . 'px;' : 'margin-top: 15px;';
 	echo ( '' != $settings->button_margin_bottom ) ? 'margin-bottom: ' . $settings->button_margin_bottom . 'px;' : 'margin-bottom: 0;';
 	?>
 }
 
-.fl-node-<?php echo $id; ?> .uabb-imgicon-wrap {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-imgicon-wrap {
 	<?php
 	echo ( '' != $settings->icon_margin_top ) ? 'margin-top: ' . $settings->icon_margin_top . 'px;' : 'margin-top: 25px;';
 	echo ( '' != $settings->icon_margin_bottom ) ? 'margin-bottom: ' . $settings->icon_margin_bottom . 'px;' : 'margin-bottom: 15px;';
 	?>
 }
-.fl-node-<?php echo $id; ?> .uabb-back .uabb-back-text-title {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-back .uabb-back-text-title {
 	<?php
 	echo ( '' != $settings->back_title_typography_color ) ? 'color: ' . $settings->back_title_typography_color . ';' : '';
 
@@ -319,7 +319,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 	?>
 }
 <?php if ( ! $version_bb_check ) { ?>
-.fl-node-<?php echo $id; ?> .uabb-back .uabb-back-text-title {
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-back .uabb-back-text-title {
 
 	<?php
 	if ( 'yes' === $converted || isset( $settings->back_title_typography_font_size_unit ) && '' != $settings->back_title_typography_font_size_unit ) {
@@ -367,7 +367,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 		if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 			if ( '' != $settings->flip_box_min_height_medium ) {
 				?>
-			.fl-node-<?php echo $id; ?> .uabb-flip-box {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-flip-box {
 				height: <?php echo $settings->flip_box_min_height_medium; ?>px;
 			}
 				<?php
@@ -375,7 +375,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 		}
 		?>
 
-		.fl-node-<?php echo $id; ?> .uabb-flip-box-section {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-flip-box-section {
 			<?php
 			if ( isset( $settings->inner_padding_dimension_top_medium ) ) {
 				echo ( '' != $settings->inner_padding_dimension_top_medium ) ? 'padding-top:' . $settings->inner_padding_dimension_top_medium . 'px;' : '';
@@ -392,7 +392,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 			?>
 		}
 		<?php if ( ! $version_bb_check ) { ?>
-			.fl-node-<?php echo $id; ?> .uabb-front .uabb-text-editor {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-front .uabb-text-editor {
 
 				<?php if ( 'yes' === $converted || isset( $settings->front_desc_typography_font_size_unit_medium ) && '' != $settings->front_desc_typography_font_size_unit_medium ) { ?>
 					font-size: <?php echo $settings->front_desc_typography_font_size_unit_medium; ?>px;
@@ -412,7 +412,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 
 			}
 
-			.fl-node-<?php echo $id; ?> .uabb-front .uabb-face-text-title {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-front .uabb-face-text-title {
 
 				<?php if ( 'yes' === $converted || isset( $settings->front_title_typography_font_size_unit_medium ) && '' != $settings->front_title_typography_font_size_unit_medium ) { ?>
 					font-size: <?php echo $settings->front_title_typography_font_size_unit_medium; ?>px;
@@ -433,7 +433,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 				<?php } ?>
 			}
 
-			.fl-node-<?php echo $id; ?> .uabb-back .uabb-text-editor {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-back .uabb-text-editor {
 
 				<?php if ( 'yes' === $converted || isset( $settings->back_desc_typography_font_size_unit_medium ) && '' != $settings->back_desc_typography_font_size_unit_medium ) { ?>
 					font-size: <?php echo $settings->back_desc_typography_font_size_unit_medium; ?>px;
@@ -455,7 +455,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 
 			}
 
-			.fl-node-<?php echo $id; ?> .uabb-back .uabb-back-text-title {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-back .uabb-back-text-title {
 
 				<?php if ( 'yes' === $converted || isset( $settings->back_title_typography_font_size_unit_medium ) && '' != $settings->back_title_typography_font_size_unit_medium ) { ?>
 					font-size: <?php echo $settings->back_title_typography_font_size_unit_medium; ?>px;
@@ -482,14 +482,14 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 		if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 			if ( 'yes' == $settings->responsive_compatibility ) {
 				?>
-			.fl-node-<?php echo $id; ?> .uabb-flip-box {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-flip-box {
 				height: 100%;
 			}
 				<?php
 			}
 			if ( '' != $settings->flip_box_min_height_small ) {
 				?>
-			.fl-node-<?php echo $id; ?> .uabb-flip-box {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-flip-box {
 				height: <?php echo $settings->flip_box_min_height_small; ?>px;
 			}
 				<?php
@@ -497,7 +497,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 		}
 		?>
 
-		.fl-node-<?php echo $id; ?> .uabb-flip-box-section {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-flip-box-section {
 			<?php
 			if ( isset( $settings->inner_padding_dimension_top_responsive ) ) {
 				echo ( '' != $settings->inner_padding_dimension_top_responsive ) ? 'padding-top:' . $settings->inner_padding_dimension_top_responsive . 'px;' : '';
@@ -514,7 +514,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 			?>
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-flip-box-section {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-flip-box-section {
 			<?php
 			if ( isset( $settings->inner_padding_dimension_top_responsive ) ) {
 				echo ( '' != $settings->inner_padding_dimension_top_responsive ) ? 'padding-top:' . $settings->inner_padding_dimension_top_responsive . 'px;' : '';
@@ -531,7 +531,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 			?>
 		}
 		<?php if ( ! $version_bb_check ) { ?>
-			.fl-node-<?php echo $id; ?> .uabb-front .uabb-text-editor {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-front .uabb-text-editor {
 
 				<?php if ( 'yes' === $converted || isset( $settings->front_desc_typography_font_size_unit_responsive ) && '' != $settings->front_desc_typography_font_size_unit_responsive ) { ?>
 					font-size: <?php echo $settings->front_desc_typography_font_size_unit_responsive; ?>px;   
@@ -551,7 +551,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 
 			}
 
-			.fl-node-<?php echo $id; ?> .uabb-front .uabb-face-text-title {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-front .uabb-face-text-title {
 
 				<?php if ( 'yes' === $converted || isset( $settings->front_title_typography_font_size_unit_responsive ) && '' != $settings->front_title_typography_font_size_unit_responsive ) { ?>
 					font-size: <?php echo $settings->front_title_typography_font_size_unit_responsive; ?>px;   
@@ -571,7 +571,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 
 			}
 
-			.fl-node-<?php echo $id; ?> .uabb-back .uabb-text-editor {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-back .uabb-text-editor {
 
 				<?php if ( 'yes' === $converted || isset( $settings->back_desc_typography_font_size_unit_responsive ) && '' != $settings->back_desc_typography_font_size_unit_responsive ) { ?>
 					font-size: <?php echo $settings->back_desc_typography_font_size_unit_responsive; ?>px;   
@@ -591,7 +591,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 
 			}
 
-			.fl-node-<?php echo $id; ?> .uabb-back .uabb-back-text-title {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-back .uabb-back-text-title {
 
 				<?php if ( 'yes' === $converted || isset( $settings->back_title_typography_font_size_unit_responsive ) && '' != $settings->back_title_typography_font_size_unit_responsive ) { ?>
 					font-size: <?php echo $settings->back_title_typography_font_size_unit_responsive; ?>px;   
