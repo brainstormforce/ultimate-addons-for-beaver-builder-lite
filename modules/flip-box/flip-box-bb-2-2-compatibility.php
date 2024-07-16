@@ -578,6 +578,7 @@ FLBuilder::register_module(
 							'type'    => 'select',
 							'label'   => __( 'Title Tag', 'uabb' ),
 							'default' => 'h2',
+							'sanitize' => array( 'FLBuilderUtils::esc_tags', 'h2' ),
 							'options' => array(
 								'h1'   => __( 'H1', 'uabb' ),
 								'h2'   => __( 'H2', 'uabb' ),
@@ -672,6 +673,7 @@ FLBuilder::register_module(
 							'type'    => 'select',
 							'label'   => __( 'Title Tag', 'uabb' ),
 							'default' => 'h2',
+							'sanitize' => array( 'FLBuilderUtils::esc_tags', 'h2' ),
 							'options' => array(
 								'h1'   => __( 'H1', 'uabb' ),
 								'h2'   => __( 'H2', 'uabb' ),
