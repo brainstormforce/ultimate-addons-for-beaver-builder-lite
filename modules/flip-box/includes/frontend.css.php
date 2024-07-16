@@ -48,7 +48,7 @@ if ( '' != $settings->smile_icon && '' != $settings->smile_icon->icon ) {
 if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 	?>
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-flip-box {
-		height: <?php echo ( '' != $settings->flip_box_min_height ) ? $settings->flip_box_min_height : '300'; ?>px;
+		height: <?php echo ( '' != $settings->flip_box_min_height ) ? esc_attr( $settings->flip_box_min_height ) : '300'; ?>px;
 	}
 	<?php
 }
@@ -57,21 +57,21 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-front {
 	<?php
 	if ( 'color' == $settings->front_background_type ) {
-		echo ( '' != $settings->front_background_color ) ? 'background-color: ' . $settings->front_background_color . ';' : '';
+		echo ( '' != $settings->front_background_color ) ? 'background-color: ' . esc_attr( $settings->front_background_color ) . ';' : '';
 	} else {
-		echo ( '' != $settings->front_bg_image_src ) ? 'background: url( "' . $settings->front_bg_image_src . '");' : '';
+		echo ( '' != $settings->front_bg_image_src ) ? 'background: url( "' . esc_url( $settings->front_bg_image_src  ). '");' : '';
 		echo ( 'no' != $settings->front_bg_image_repeat ) ? 'background-repeat: repeat;' : 'background-repeat: no-repeat;';
-		echo ( '' != $settings->front_bg_image_display ) ? 'background-size: ' . $settings->front_bg_image_display . ';' : '';
-		echo ( '' != $settings->front_bg_image_pos ) ? 'background-position: ' . $settings->front_bg_image_pos . ';' : '';
+		echo ( '' != $settings->front_bg_image_display ) ? 'background-size: ' . esc_attr( $settings->front_bg_image_display ) . ';' : '';
+		echo ( '' != $settings->front_bg_image_pos ) ? 'background-position: ' . esc_attr( $settings->front_bg_image_pos ) . ';' : '';
 	}
 	?>
 }
 <?php if ( ! $version_bb_check ) { ?>
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-front {
 		<?php
-		echo ( '' != $settings->front_border_color ) ? 'border-color: ' . $settings->front_border_color . ';' : '';
-		echo ( '' != $settings->front_border_size ) ? 'border-width: ' . $settings->front_border_size . 'px;' : 'border-width: 1px;';
-		echo ( '' != $settings->front_box_border_style ) ? 'border-style: ' . $settings->front_box_border_style . ';' : '';
+		echo ( '' != $settings->front_border_color ) ? 'border-color: ' . esc_attr( $settings->front_border_color ) . ';' : '';
+		echo ( '' != $settings->front_border_size ) ? 'border-width: ' . esc_attr( $settings->front_border_size ) . 'px;' : 'border-width: 1px;';
+		echo ( '' != $settings->front_box_border_style ) ? 'border-style: ' . esc_attr( $settings->front_box_border_style ) . ';' : '';
 		?>
 	}
 	<?php
@@ -91,21 +91,21 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-back {
 	<?php
 	if ( 'color' == $settings->back_background_type ) {
-		echo ( '' != $settings->back_background_color ) ? 'background-color: ' . $settings->back_background_color . ';' : '';
+		echo ( '' != $settings->back_background_color ) ? 'background-color: ' . esc_attr( $settings->back_background_color ) . ';' : '';
 	} else {
-		echo ( '' != $settings->back_bg_image_src ) ? 'background: url( "' . $settings->back_bg_image_src . '");' : '';
+		echo ( '' != $settings->back_bg_image_src ) ? 'background: url( "' . esc_url( $settings->back_bg_image_src ) . '");' : '';
 		echo ( 'no' != $settings->back_bg_image_repeat ) ? 'background-repeat: repeat;' : 'background-repeat: no-repeat;';
-		echo ( '' != $settings->back_bg_image_display ) ? 'background-size: ' . $settings->back_bg_image_display . ';' : '';
-		echo ( '' != $settings->back_bg_image_pos ) ? 'background-position: ' . $settings->back_bg_image_pos . ';' : '';
+		echo ( '' != $settings->back_bg_image_display ) ? 'background-size: ' . esc_attr( $settings->back_bg_image_display ) . ';' : '';
+		echo ( '' != $settings->back_bg_image_pos ) ? 'background-position: ' . esc_attr( $settings->back_bg_image_pos ) . ';' : '';
 	}
 	?>
 }
 <?php if ( ! $version_bb_check ) { ?>
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-back {
 	<?php
-	echo ( '' != $settings->back_border_color ) ? 'border-color: ' . $settings->back_border_color . ';' : '';
-	echo ( '' != $settings->back_border_size ) ? 'border-width: ' . $settings->back_border_size . 'px;' : 'border-width: 1px;';
-	echo ( '' != $settings->back_box_border_style ) ? 'border-style: ' . $settings->back_box_border_style . ';' : '';
+	echo ( '' != $settings->back_border_color ) ? 'border-color: ' . esc_attr( $settings->back_border_color ) . ';' : '';
+	echo ( '' != $settings->back_border_size ) ? 'border-width: ' . esc_attr( $settings->back_border_size ) . 'px;' : 'border-width: 1px;';
+	echo ( '' != $settings->back_box_border_style ) ? 'border-style: ' . esc_attr( $settings->back_box_border_style ) . ';' : '';
 	?>
 }
 	<?php

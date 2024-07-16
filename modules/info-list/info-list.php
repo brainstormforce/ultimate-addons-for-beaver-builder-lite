@@ -144,31 +144,31 @@ class UABBInfoList extends FLBuilderModule {
 				$nofollow = $item->list_item_url_nofollow;
 			}
 		}
-		echo '<li class="uabb-info-list-item info-list-item-dynamic' . $list_item_counter . '">';
-		echo '<div class="uabb-info-list-content-wrapper uabb-info-list-' . $this->settings->icon_position . '">';
+		echo '<li class="uabb-info-list-item info-list-item-dynamic' . esc_attr( $list_item_counter ) . '">';
+		echo '<div class="uabb-info-list-content-wrapper uabb-info-list-' . esc_attr( $this->settings->icon_position ) . '">';
 
 		if ( ! empty( $item->list_item_link ) && 'complete' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
-			echo '<a href="' . $item->list_item_url . '" class="uabb-info-list-link" target="' . $target . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '></a>';
+			echo '<a href="' . esc_attr( $item->list_item_url ) . '" class="uabb-info-list-link" target="' . esc_attr( $target ) . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '></a>';
 		}
 
 		if ( 'none' != $item->image_type ) {
-			echo '<div class="uabb-info-list-icon info-list-icon-dynamic' . $list_item_counter . '">';
+			echo '<div class="uabb-info-list-icon info-list-icon-dynamic' . esc_attr( $list_item_counter ) . '">';
 
 			if ( ! empty( $item->list_item_link ) && 'icon' == $item->list_item_link ) {
-				echo '<a href="' . $item->list_item_url . '" class="uabb-info-list-link" target="' . $target . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '></a>';
+				echo '<a href="' . esc_attr( $item->list_item_url ) . '" class="uabb-info-list-link" target="' . esc_attr( $target ) . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '></a>';
 			}
 				$this->render_image( $item, $this->settings );
 
 			echo '</div>';
 		}
 
-		echo '<div class="uabb-info-list-content uabb-info-list-' . $this->settings->icon_position . ' info-list-content-dynamic' . $list_item_counter . '">';
+		echo '<div class="uabb-info-list-content uabb-info-list-' . esc_attr( $this->settings->icon_position ) . ' info-list-content-dynamic' . esc_attr( $list_item_counter ) . '">';
 
-		echo '<' . $this->settings->heading_tag_selection . ' class="uabb-info-list-title">';
+		echo '<' . esc_attr( $this->settings->heading_tag_selection ) . ' class="uabb-info-list-title">';
 		if ( ! empty( $item->list_item_link ) && 'list-title' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
-			echo '<a href="' . $item->list_item_url . '" target="' . $target . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '>';
+			echo '<a href="' . esc_attr( $item->list_item_url ) . '" target="' . esc_attr( $target ) . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '>';
 
 		}
 		echo $item->list_item_title;
@@ -179,7 +179,7 @@ class UABBInfoList extends FLBuilderModule {
 		}
 		echo '</' . $this->settings->heading_tag_selection . ' >';
 
-		echo '<div class="uabb-info-list-description uabb-text-editor info-list-description-dynamic' . $list_item_counter . '">';
+		echo '<div class="uabb-info-list-description uabb-text-editor info-list-description-dynamic' . esc_attr( $list_item_counter ) . '">';
 		if ( strpos( $item->list_item_description, '</p>' ) > 0 ) {
 			echo $item->list_item_description;
 		} else {
@@ -194,9 +194,9 @@ class UABBInfoList extends FLBuilderModule {
 		echo '</div>';
 		if ( 'none' != $item->image_type ) {
 			if ( 'center' == $this->settings->align_items && 'top' != $this->settings->icon_position ) {
-				echo '<div class="uabb-info-list-connector-top uabb-info-list-' . $this->settings->icon_position . '"></div>';
+				echo '<div class="uabb-info-list-connector-top uabb-info-list-' . esc_attr( $this->settings->icon_position ) . '"></div>';
 			}
-			echo '<div class="uabb-info-list-connector uabb-info-list-' . $this->settings->icon_position . '"></div>';
+			echo '<div class="uabb-info-list-connector uabb-info-list-' . esc_attr( $this->settings->icon_position ) . '"></div>';
 		}
 
 		echo '</li>';

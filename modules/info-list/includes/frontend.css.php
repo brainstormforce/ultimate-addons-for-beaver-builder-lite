@@ -29,10 +29,10 @@ if ( 'yes' == $settings->list_connector_option ) {
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-connector,
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-connector-top {
 		<?php if ( '' != $settings->list_connector_color ) { ?>
-			color: <?php echo $settings->list_connector_color; ?>;
+			color: <?php echo esc_attr( $settings->list_connector_color ); ?>;
 		<?php } ?>
 		<?php if ( '' != $settings->list_connector_style ) { ?>
-			border-style: <?php echo $settings->list_connector_style; ?>;
+			border-style: <?php echo esc_attr( $settings->list_connector_style ); ?>;
 		<?php } ?>
 	}
 	<?php
@@ -61,19 +61,19 @@ if ( 'yes' == $settings->list_connector_option ) {
 			$icon_extra_padding_top    = (int) $icon_extra_padding_top;
 		?>
 		<?php if ( 'center' == $settings->align_items ) : ?>
-		top: calc( 50% + <?php echo ( $settings->icon_image_size / 2 ) + $icon_extra_padding - $space_element; ?>px );
-		height: calc( 50% - <?php echo ( $settings->icon_image_size / 2 ) + $icon_extra_padding - $space_element; ?>px );
+		top: calc( 50% + <?php echo esc_attr( $settings->icon_image_size / 2 ) + $icon_extra_padding - $space_element; ?>px );
+		height: calc( 50% - <?php echo esc_attr( $settings->icon_image_size / 2 ) + $icon_extra_padding - $space_element; ?>px );
 		<?php else : ?>
-		top: <?php echo $settings->icon_image_size + $icon_extra_padding_top; ?>px;
-		height: calc( 100% - <?php echo ( $settings->icon_image_size ) + $icon_extra_padding_top; ?>px );
+		top: <?php echo esc_attr( $settings->icon_image_size + $icon_extra_padding_top ); ?>px;
+		height: calc( 100% - <?php echo esc_attr( $settings->icon_image_size ) + $icon_extra_padding_top; ?>px );
 		<?php endif; ?>
 	}
 	<?php if ( 'center' == $settings->align_items ) : ?>
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-connector-top {
-		height: calc( 50% - <?php echo ( ( $settings->icon_image_size / 2 ) + $icon_extra_padding + $space_element ); ?>px );
+		height: calc( 50% - <?php echo ( esc_attr( $settings->icon_image_size / 2 ) + $icon_extra_padding + $space_element ); ?>px );
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-item:last-child .uabb-info-list-connector-top {
-		height: calc( 50% - <?php echo ( ( $settings->icon_image_size / 2 ) + $icon_extra_padding ); ?>px );
+		height: calc( 50% - <?php echo ( esc_attr( $settings->icon_image_size / 2 ) + $icon_extra_padding ); ?>px );
 	}
 	<?php endif; ?>
 
@@ -123,7 +123,7 @@ if ( 'left' == $settings->icon_position ) {
 		$icon_image_size = $settings->icon_image_size;
 
 		?>
-		width: calc( 100% - <?php echo $icon_image_size + 20 + $extra_padding; ?>px );
+		width: calc( 100% - <?php echo esc_attr( $icon_image_size + 20 + $extra_padding ); ?>px );
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector,
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector-top {
@@ -138,12 +138,12 @@ if ( 'left' == $settings->icon_position ) {
 		}
 		$icon_image_size = $settings->icon_image_size;
 		?>
-		left: <?php echo $icon_image_size / 2 + $extra_padding; ?>px;
+		left: <?php echo esc_attr( $icon_image_size / 2 + $extra_padding ); ?>px;
 	}
 
 	<?php if ( '' != $settings->space_between_elements ) { ?>
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper .uabb-info-list-item {
-			padding-bottom: <?php echo $settings->space_between_elements; ?>px;
+			padding-bottom: <?php echo esc_attr( $settings->space_between_elements ); ?>px;
 		}
 	<?php } ?>
 	<?php
@@ -161,7 +161,7 @@ if ( 'left' == $settings->icon_position ) {
 		}
 		$icon_image_size = $settings->icon_image_size;
 		?>
-		width: calc( 100% - <?php echo $icon_image_size + 20 + $extra_padding; ?>px );
+		width: calc( 100% - <?php echo esc_attr( $icon_image_size + 20 + $extra_padding ); ?>px );
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector,
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector-top {
@@ -177,12 +177,12 @@ if ( 'left' == $settings->icon_position ) {
 
 		$icon_image_size = $settings->icon_image_size;
 		?>
-		right: <?php echo $icon_image_size / 2 + $extra_padding; ?>px;
+		right: <?php echo esc_attr( $icon_image_size / 2 + $extra_padding ); ?>px;
 	}
 
 	<?php if ( '' != $settings->space_between_elements ) { ?>
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper .uabb-info-list-item {
-			padding-bottom: <?php echo $settings->space_between_elements; ?>px;
+			padding-bottom: <?php echo esc_attr( $settings->space_between_elements ); ?>px;
 		}
 	<?php } ?>
 	<?php
@@ -204,8 +204,8 @@ if ( 'left' == $settings->icon_position ) {
 		}
 		?>
 
-		left: calc(50% + <?php echo $settings->icon_image_size / 2 + $extra_padding; ?>px);
-		width: calc(100% - <?php echo $settings->icon_image_size + $extra_padding_top; ?>px);
+		left: calc(50% + <?php echo esc_attr( $settings->icon_image_size / 2 + $extra_padding ); ?>px);
+		width: calc(100% - <?php echo esc_attr( $settings->icon_image_size + $extra_padding_top ); ?>px);
 		<?php
 		if ( 'custom' === $settings->list_icon_style && '' != $settings->list_icon_bg_padding ) {
 			$extra_padding = $settings->list_icon_bg_padding;
@@ -216,24 +216,24 @@ if ( 'left' == $settings->icon_position ) {
 			$extra_padding = 0;
 		}
 		?>
-		top: <?php echo ( $settings->icon_image_size / 2 ) + $extra_padding; ?>px;
+		top: <?php echo esc_attr( $settings->icon_image_size / 2 ) + $extra_padding; ?>px;
 	}
 
 	<?php if ( '' != $settings->space_between_elements ) { ?>
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper .uabb-info-list-item {
-			padding-bottom: <?php echo ( $settings->space_between_elements ); ?>px;
+			padding-bottom: <?php echo esc_attr( $settings->space_between_elements ); ?>px;
 		}
 	<?php } ?>
 
 	@media all and (min-width:768px) {
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-top li{
-			width: <?php echo round( 100 / count( $settings->add_list_item ), 3 ); ?>%;
+			width: <?php echo round( 100 / count( esc_attr( $settings->add_list_item ) ), 3 ); ?>%;
 			display: inline-block;
 		}
 		<?php if ( '' != $settings->space_between_elements ) { ?>
 			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper .uabb-info-list-item {
-				padding-right: <?php echo ( $settings->space_between_elements / 2 ); ?>px;
-				padding-left: <?php echo ( $settings->space_between_elements / 2 ); ?>px;
+				padding-right: <?php echo ( esc_attr( $settings->space_between_elements ) / 2 ); ?>px;
+				padding-left: <?php echo  ( esc_attr( $settings->space_between_elements ) / 2 ); ?>px;
 				padding-bottom: 0;
 			}
 		<?php } ?>
@@ -311,7 +311,7 @@ foreach ( $settings->add_list_item as $item ) {
 	/* If No image no Icon selected than run this */
 	if ( ( isset( $item->image_type ) && 'none' == $item->image_type ) && ( ! isset( $item->icon ) || ! isset( $item->photo_src ) || ! isset( $item->photo_url ) ) ) {
 		?>
-		.fl-node-<?php echo esc_attr( $id ); ?> .info-list-icon-dynamic<?php echo $list_item_counter; ?> .uabb-imgicon-wrap {
+		.fl-node-<?php echo esc_attr( $id ); ?> .info-list-icon-dynamic<?php echo esc_attr( $list_item_counter ); ?> .uabb-imgicon-wrap {
 
 		<?php
 		if ( 'custom' == $settings->list_icon_style ) {
@@ -320,17 +320,17 @@ foreach ( $settings->add_list_item as $item ) {
 				$custom_extra_width = $custom_extra_width + $settings->list_icon_border_width * 2;
 			}
 			?>
-			border-radius: <?php echo $settings->list_icon_bg_border_radius; ?>px;
+			border-radius: <?php echo esc_attr( $settings->list_icon_bg_border_radius ); ?>px;
 			<?php if ( 'none' != $settings->list_icon_border_style ) { ?>
-				border: <?php echo $settings->list_icon_border_width; ?>px <?php echo $settings->list_icon_border_style; ?> <?php echo uabb_theme_text_color( $settings->list_icon_border_color ); ?>;
+				border: <?php echo esc_attr( $settings->list_icon_border_width ); ?>px <?php echo esc_attr( $settings->list_icon_border_style ); ?> <?php echo uabb_theme_text_color( $settings->list_icon_border_color ); ?>;
 			<?php } ?>
 			<?php
 		} else {
 			$custom_extra_width = 0; }
 		?>
 
-			width: <?php echo $settings->icon_image_size + $custom_extra_width; ?>px;
-			height: <?php echo $settings->icon_image_size + $custom_extra_width; ?>px;
+			width: <?php echo esc_attr( $settings->icon_image_size + $custom_extra_width ); ?>px;
+			height: <?php echo esc_attr( $settings->icon_image_size + $custom_extra_width ); ?>px;
 			<?php if ( 'none' == $item->image_type && ( '' == $item->icon || $item->photo || '' == $item->photo_url ) ) { ?>
 				<?php if ( 'simple' == $settings->list_icon_style ) { ?> 			
 			background: <?php echo uabb_theme_base_color( '' ); ?>;
