@@ -51,8 +51,8 @@ if ( ! empty( $settings->bg_hover_color ) ) {
 <?php if ( 'animate_top' == $settings->threed_button_options || 'animate_bottom' == $settings->threed_button_options ) { ?>
 /* 3D Fix */
 
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap.uabb-creative-button-width-auto .perspective, 
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap.uabb-creative-button-width-custom .perspective {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap.uabb-creative-button-width-auto .perspective, 
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap.uabb-creative-button-width-custom .perspective {
 		display: inline-block;
 		max-width: 100%;
 	}
@@ -62,40 +62,40 @@ if ( ! empty( $settings->bg_hover_color ) ) {
 if ( ! $version_bb_check ) {
 	$settings->font_family = (array) $settings->font_family;
 	?>
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 		<?php if ( 'Default' != $settings->font_family['family'] ) : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->font_family ); ?>
 		<?php endif; ?>
 		<?php if ( 'yes' === $converted || isset( $settings->font_size_unit ) && '' != $settings->font_size_unit ) { ?>
-			font-size: <?php echo $settings->font_size_unit; ?>px;
+			font-size: <?php echo esc_attr( $settings->font_size_unit ); ?>px;
 			<?php if ( '' == $settings->line_height_unit && '' != $settings->font_size_unit ) { ?>
-				line-height: <?php echo $settings->font_size_unit + 2; ?>px;
+				line-height: <?php echo esc_attr( $settings->font_size_unit + 2 ); ?>px;
 			<?php } ?>		
 		<?php } elseif ( isset( $settings->font_size_unit ) && '' == $settings->font_size_unit && isset( $settings->font_size ) && is_array( $settings->font_size ) && isset( $settings->font_size['desktop'] ) && '' != $settings->font_size['desktop'] ) { ?>
-			font-size: <?php echo $settings->font_size['desktop']; ?>px;
-			line-height: <?php echo $settings->font_size['desktop'] + 2; ?>px;
+			font-size: <?php echo esc_attr( $settings->font_size['desktop'] ); ?>px;
+			line-height: <?php echo esc_attr( $settings->font_size['desktop'] + 2 ); ?>px;
 		<?php } elseif ( isset( $settings->font_size_unit ) && '' == $settings->font_size_unit && isset( $settings->font_size ) && is_object( $settings->font_size ) && isset( $settings->font_size->desktop ) && '' != $settings->font_size->desktop ) { ?>
-			font-size: <?php echo $settings->font_size->desktop; ?>px;
-			line-height: <?php echo $settings->font_size->desktop + 2; ?>px; ?>
+			font-size: <?php echo esc_attr( $settings->font_size->desktop ); ?>px;
+			line-height: <?php echo esc_attr( $settings->font_size->desktop + 2 ); ?>px; ?>
 		<?php } ?>
 
 		<?php if ( isset( $settings->font_size ) && is_array( $settings->font_size ) ) { ?>
 			<?php if ( isset( $settings->font_size['desktop'] ) && '' == $settings->font_size['desktop'] && isset( $settings->line_height['desktop'] ) && '' != $settings->line_height['desktop'] && '' == $settings->line_height_unit ) { ?>
-					line-height: <?php echo $settings->line_height['desktop']; ?>px;
+					line-height: <?php echo esc_attr( $settings->line_height['desktop'] ); ?>px;
 			<?php } ?>
 		<?php } elseif ( isset( $settings->font_size ) && is_object( $settings->font_size ) ) { ?>
 			<?php if ( isset( $settings->font_size->desktop ) && '' == $settings->font_size->desktop && isset( $settings->line_height->desktop ) && '' != $settings->line_height->desktop && '' == $settings->line_height_unit ) { ?>
-					line-height: <?php echo $settings->line_height->desktop; ?>px;
+					line-height: <?php echo esc_attr( $settings->line_height->desktop ); ?>px;
 			<?php } ?>
 		<?php } ?>
 
 		<?php if ( 'yes' === $converted || isset( $settings->line_height_unit ) && '' != $settings->line_height_unit ) { ?>
-			line-height: <?php echo $settings->line_height_unit; ?>em;	
+			line-height: <?php echo esc_attr( $settings->line_height_unit ); ?>em;	
 		<?php } elseif ( isset( $settings->line_height_unit ) && '' == $settings->line_height_unit && isset( $settings->line_height ) && is_array( $settings->line_height ) && isset( $settings->line_height['desktop'] ) && '' != $settings->line_height['desktop'] ) { ?>
-			line-height: <?php echo $settings->line_height['desktop']; ?>px;
+			line-height: <?php echo esc_attr( $settings->line_height['desktop'] ); ?>px;
 		<?php } elseif ( isset( $settings->line_height_unit ) && '' == $settings->line_height_unit && isset( $settings->line_height ) && is_object( $settings->line_height ) && isset( $settings->line_height->desktop ) && '' != $settings->line_height->desktop ) { ?>
-			line-height: <?php echo $settings->line_height->desktop; ?>px;
+			line-height: <?php echo esc_attr( $settings->line_height->desktop ); ?>px;
 		<?php } ?>
 	}
 	<?php
@@ -121,18 +121,18 @@ if ( ! $version_bb_check ) {
 }
 ?>
 <?php if ( 'default' !== $settings->style ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 		<?php
 		if ( 'custom' == $settings->width ) {
 				$padding_top_bottom = ( '' !== $settings->padding_top_bottom ) ? $settings->padding_top_bottom : '0';
 				$padding_left_right = ( '' !== $settings->padding_left_right ) ? $settings->padding_left_right : '0';
 			?>
 
-			padding-top: <?php echo $padding_top_bottom; ?>px;
-			padding-bottom: <?php echo $padding_top_bottom; ?>px;
-			padding-left: <?php echo $padding_left_right; ?>px;
-			padding-right: <?php echo $padding_left_right; ?>px;
+			padding-top: <?php echo esc_attr( $padding_top_bottom ); ?>px;
+			padding-bottom: <?php echo esc_attr( $padding_top_bottom ); ?>px;
+			padding-left: <?php echo esc_attr( $padding_left_right ); ?>px;
+			padding-right: <?php echo esc_attr( $padding_left_right ); ?>px;
 			<?php
 		} else {
 			echo 'padding:' . uabb_theme_button_padding( '' ) . ';';
@@ -141,13 +141,13 @@ if ( ! $version_bb_check ) {
 		$settings->border_radius = uabb_theme_button_border_radius( $settings->border_radius );
 		if ( '' != $settings->border_radius ) :
 			?>
-		border-radius: <?php echo $settings->border_radius; ?>px;
-		-moz-border-radius: <?php echo $settings->border_radius; ?>px;
-		-webkit-border-radius: <?php echo $settings->border_radius; ?>px;
+		border-radius: <?php echo esc_attr( $settings->border_radius ); ?>px;
+		-moz-border-radius: <?php echo esc_attr( $settings->border_radius ); ?>px;
+		-webkit-border-radius: <?php echo esc_attr( $settings->border_radius ); ?>px;
 		<?php endif; ?>
 		<?php if ( 'custom' == $settings->width ) : ?>
-		width: <?php echo $settings->custom_width; ?>px;
-		min-height: <?php echo $settings->custom_height; ?>px;
+		width: <?php echo esc_attr( $settings->custom_width ); ?>px;
+		min-height: <?php echo esc_attr( $settings->custom_height ); ?>px;
 		display: -webkit-inline-box;
 		display: -ms-inline-flexbox;
 		display: inline-flex;
@@ -160,8 +160,8 @@ if ( ! $version_bb_check ) {
 		<?php endif; ?>
 
 		<?php if ( ! empty( $settings->bg_color ) ) : ?>
-		background: <?php echo $settings->bg_color; ?>;
-		border: <?php echo $border_size; ?>px solid <?php echo $border_color; ?>;
+		background: <?php echo esc_attr( $settings->bg_color ); ?>;
+		border: <?php echo esc_attr( $border_size ); ?>px solid <?php echo $border_color; ?>;
 			<?php
 			if ( 'transparent' == $settings->style ) : // Transparent.
 				?>
@@ -169,13 +169,13 @@ if ( ! $version_bb_check ) {
 			<?php endif; ?>
 
 			<?php if ( 'gradient' == $settings->style ) : // Gradient. ?>
-			background: -moz-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%, <?php echo $settings->bg_color; ?> 100%); /* FF3.6+ */
+			background: -moz-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%, <?php echo $settings->bg_color; ?> 100%); /* FF3.6+ */
 			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,<?php echo $bg_grad_start; ?>), color-stop(100%,<?php echo $settings->bg_color; ?>)); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%,<?php echo $settings->bg_color; ?> 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%,<?php echo $settings->bg_color; ?> 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%,<?php echo $settings->bg_color; ?> 100%); /* IE10+ */
-			background: linear-gradient(to bottom,  <?php echo $bg_grad_start; ?> 0%,<?php echo $settings->bg_color; ?> 100%); /* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $bg_grad_start; ?>', endColorstr='<?php echo $settings->bg_color; ?>',GradientType=0 ); /* IE6-9 */
+			background: -webkit-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo $settings->bg_color; ?> 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo $settings->bg_color; ?> 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo $settings->bg_color; ?> 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo $settings->bg_color; ?> 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo esc_attr( $bg_grad_start ); ?>', endColorstr='<?php echo $settings->bg_color; ?>',GradientType=0 ); /* IE6-9 */
 			<?php endif; ?>
 		<?php endif; ?>
 	}
@@ -183,8 +183,8 @@ if ( ! $version_bb_check ) {
 } else {
 	$padding_top_bottom = ( isset( $settings->button_padding_dimension_top ) && '' != $settings->button_padding_dimension_top ) ? $settings->button_padding_dimension_top : uabb_theme_padding_button( 'desktop', 'top' );
 	?>
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 		<?php
 		if ( isset( $settings->button_padding_dimension_top ) ) {
 			echo ( '' != $settings->button_padding_dimension_top ) ? 'padding-top:' . $settings->button_padding_dimension_top . 'px;' : 'padding-top:' . uabb_theme_padding_button( 'desktop', 'top' ) . ';';
@@ -202,14 +202,14 @@ if ( ! $version_bb_check ) {
 		 
 	}
 	<?php if ( ! $version_bb_check ) { ?>
-		.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-		.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 			<?php
 			if ( isset( $settings->button_border_style ) ) {
 				echo ( '' != $settings->button_border_style && 'none' !== $settings->button_border_style ) ? 'border-style:' . $settings->button_border_style . ';' : 'border-style:solid;';
 			}
 			if ( isset( $settings->button_border_width ) && ! empty( $settings->button_border_width ) ) {
-				echo ( '' != $settings->button_border_width ) ? 'border-width:' . $settings->button_border_width . 'px;' : '';
+				echo ( '' != $settings->button_border_width ) ? 'border-width:' . esc_attr( $settings->button_border_width ) . 'px;' : '';
 			} else {
 
 				$border_width = uabb_theme_button_border_width( '' );
@@ -243,12 +243,12 @@ if ( ! $version_bb_check ) {
 		}
 	}
 	?>
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
-	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:visited {
 		background: <?php echo uabb_theme_default_button_bg_color( $settings->bg_color ); ?>;
 
 	}
-	.fl-node-<?php echo $id; ?> .uabb-module-content.uabb-creative-button-wrap a:hover {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-module-content.uabb-creative-button-wrap a:hover {
 		<?php echo ( '' != $settings->border_hover_color ) ? 'border-color:#' . $settings->border_hover_color . ';' : 'border-color:' . uabb_theme_border_hover_color( '' ) . ';'; ?>
 	}
 	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:hover {
