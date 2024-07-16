@@ -15,7 +15,7 @@
 					<?php
 					if ( '' != $settings->title_front ) {
 						?>
-					<<?php echo esc_attr( $settings->front_title_typography_tag_selection ); ?> class="uabb-face-text-title"><?php echo esc_attr( $settings->title_front ); ?></<?php echo $settings->front_title_typography_tag_selection; ?>>
+					<<?php echo esc_attr( $settings->front_title_typography_tag_selection ); ?> class="uabb-face-text-title"><?php echo esc_attr( $settings->title_front ); ?></<?php echo esc_attr( $settings->front_title_typography_tag_selection ); ?>>
 						<?php
 					}
 					if ( '' != $settings->desc_front ) {
