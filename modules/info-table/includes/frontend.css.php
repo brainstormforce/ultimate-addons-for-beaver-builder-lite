@@ -257,7 +257,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-heading {
 		background: <?php echo $bg_head_color_code; ?>;
 	}
-	.fl-node-<?php echo $id; ?> .info-table-design02.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-icon {
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-icon {
 		background: <?php echo $icon_bg_color; ?>;
 		border-bottom: 4px double <?php echo $border_color; ?>;
 	}

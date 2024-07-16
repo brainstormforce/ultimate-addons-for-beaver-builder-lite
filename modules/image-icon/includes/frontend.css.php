@@ -29,7 +29,7 @@ if ( 'none' != $settings->image_type ) :
 	?>
 
 	/* Global Alignment Css */
-	.fl-node-<?php echo $id; ?> .uabb-imgicon-wrap {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-imgicon-wrap {
 		<?php if ( 'icon' == $settings->image_type ) { ?>
 			text-align: <?php echo $settings->icon_align; ?>;
 		<?php } elseif ( 'photo' == $settings->image_type ) { ?>
@@ -69,8 +69,8 @@ if ( 'none' != $settings->image_type ) :
 		?>
 
 		/* Icon Css */
-		.fl-node-<?php echo $id; ?> .uabb-icon-wrap .uabb-icon i,
-		.fl-node-<?php echo $id; ?> .uabb-icon-wrap .uabb-icon i:before {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-icon-wrap .uabb-icon i,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-icon-wrap .uabb-icon i:before {
 
 			<?php
 			if ( ! empty( $settings->icon_color ) ) {
@@ -154,12 +154,12 @@ if ( 'none' != $settings->image_type ) :
 			<?php endif; ?>
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-icon-wrap .uabb-icon i:before {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-icon-wrap .uabb-icon i:before {
 			background: none;
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-icon-wrap .uabb-icon i:hover,
-		.fl-node-<?php echo $id; ?> .uabb-icon-wrap .uabb-icon i:hover:before {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-icon-wrap .uabb-icon i:hover,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-icon-wrap .uabb-icon i:hover:before {
 			<?php if ( 'simple' != $settings->icon_style ) : ?>
 				<?php if ( ! empty( $settings->icon_bg_hover_color ) ) : ?>
 				background: <?php echo $settings->icon_bg_hover_color; ?>;
@@ -188,7 +188,7 @@ if ( 'none' != $settings->image_type ) :
 			<?php endif; ?>
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-icon-wrap .uabb-icon i:hover:before {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-icon-wrap .uabb-icon i:hover:before {
 			background: none;
 		}
 		/* Icon Css End */
@@ -196,7 +196,7 @@ if ( 'none' != $settings->image_type ) :
 	} elseif ( 'photo' == $settings->image_type ) {
 		?>
 
-		.fl-node-<?php echo $id; ?> .uabb-image .uabb-photo-img {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-image .uabb-photo-img {
 			<?php if ( '' !== $settings->img_size ) : ?>
 				width: <?php echo $settings->img_size; ?>px;
 			<?php endif; ?>
@@ -205,7 +205,7 @@ if ( 'none' != $settings->image_type ) :
 			<?php endif; ?>
 		}
 
-		.fl-node-<?php echo $id; ?> .uabb-image .uabb-image-content{
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-image .uabb-image-content{
 			<?php /* Border Style */ ?>
 			<?php if ( 'custom' == $settings->image_style ) : ?>
 
@@ -228,7 +228,7 @@ if ( 'none' != $settings->image_type ) :
 		/* Responsive Photo Size */
 		<?php if ( isset( $settings->responsive_img_size ) && ! empty( $settings->responsive_img_size ) && $global_settings->responsive_enabled ) { // Global Setting If started. ?> 
 				@media ( max-width: <?php echo $global_settings->responsive_breakpoint . 'px'; ?> ) {
-					.fl-node-<?php echo $id; ?> .uabb-image .uabb-photo-img{
+					.fl-node-<?php echo esc_attr( $id ); ?> .uabb-image .uabb-photo-img{
 					<?php if ( is_numeric( $settings->responsive_img_size ) ) : ?>
 						width: <?php echo $settings->responsive_img_size; ?>px;
 					<?php endif; ?>
@@ -237,7 +237,7 @@ if ( 'none' != $settings->image_type ) :
 		<?php } ?>
 
 		<?php if ( 'custom' == $settings->image_style ) : ?>
-		.fl-node-<?php echo $id; ?> .uabb-image-content:hover {
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-image-content:hover {
 
 			<?php if ( ! empty( $settings->img_bg_hover_color ) ) : ?>
 				background: <?php echo $settings->img_bg_hover_color; ?>;

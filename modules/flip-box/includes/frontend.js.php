@@ -11,7 +11,7 @@
 	var document_width, document_height;
 
 	var args = {
-		id: '<?php echo $id; ?>',
+		id: '<?php echo esc_attr( $id ); ?>',
 		flip_box_min_height_options: '<?php echo $settings->flip_box_min_height_options; ?>',
 		display_vertically_center: '<?php echo $settings->display_vertically_center; ?>',
 		flip_box_min_height: '<?php echo $settings->flip_box_min_height; ?>',
@@ -28,7 +28,7 @@
 		document_height = $( document ).height();
 
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			$('.fl-node-<?php echo $id; ?> .uabb-flip-box-outter').click(function(){
+			$('.fl-node-<?php echo esc_attr( $id ); ?> .uabb-flip-box-outter').click(function(){
 				if( $(this).hasClass( 'uabb-hover' ) ){
 					$(this).removeClass('uabb-hover');
 				} else {
