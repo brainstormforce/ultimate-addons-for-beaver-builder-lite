@@ -227,7 +227,7 @@ if ( 'left' == $settings->icon_position ) {
 
 	@media all and (min-width:768px) {
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-top li{
-			width: <?php echo round( 100 / count( esc_attr( $settings->add_list_item ) ), 3 ); ?>%;
+			width: <?php echo round( 100 / count( ( $settings->add_list_item ) ), 3 ); ?>%;
 			display: inline-block;
 		}
 		<?php if ( '' != $settings->space_between_elements ) { ?>
