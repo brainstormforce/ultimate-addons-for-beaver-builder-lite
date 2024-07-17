@@ -426,7 +426,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 
 	if ( 'design01' == $settings->box_design || 'design03' == $settings->box_design || 'design04' == $settings->box_design || 'design05' == $settings->box_design || 'design06' == $settings->box_design ) {
 		?>
-		.fl-node-<?php echo esc_attr( $id ); ?> .info-table-<?php echo esc_attr( $settings->box_design ); ?>.info-table-cs-<?php echo $settings->color_scheme; ?> {
+		.fl-node-<?php echo esc_attr( $id ); ?> .info-table-<?php echo esc_attr( $settings->box_design ); ?>.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> {
 			background: -moz-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%, <?php echo esc_attr( $bg_color_code ); ?> 100%); /* FF3.6+ */
 			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,<?php echo esc_attr( $bg_grad_start ); ?>), color-stop(100%,<?php echo esc_attr( $bg_color_code ); ?>)); /* Chrome,Safari4+ */
 			background: -webkit-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* Chrome10+,Safari5.1+ */
@@ -506,7 +506,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table {
 		border: 1px solid <?php echo esc_attr( $border_color ); ?>;
 	}
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-heading {
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-heading {
 		background: <?php echo esc_attr( $bg_head_color_code ); ?>;
 	}
 
@@ -579,7 +579,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 		<?php if ( 'design01' == $settings->box_design ) { ?>
 			.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design01 .info-table-button {
 				background: #333333;
-				<?php echo ( '' != $settings->heading_back_color ) ? 'background: ' . $settings->heading_back_color . ';' : ''; ?>
+				<?php echo ( '' != $settings->heading_back_color ) ? 'background: ' . esc_attr( $settings->heading_back_color ) . ';' : ''; ?>
 			}
 		<?php } elseif ( 'design02' == $settings->box_design ) { ?>
 			.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02 .info-table-button a {
@@ -627,7 +627,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 if ( 'design02' != $settings->box_design ) {
 	?>
 .fl-node-<?php echo esc_attr( $id ); ?> .info-table-wrap .info-table .info-table-button {
-	padding: <?php echo ( '' != $settings->btn_top_margin ) ? $settings->btn_top_margin : '15'; ?>px 0 <?php echo ( '' != $settings->btn_bottom_margin ) ? $settings->btn_bottom_margin : '15'; ?>px;
+	padding: <?php echo ( '' != $settings->btn_top_margin ) ? esc_attr( $settings->btn_top_margin ) : '15'; ?>px 0 <?php echo ( '' != $settings->btn_bottom_margin ) ? esc_attr( $settings->btn_bottom_margin ) : '15'; ?>px;
 }
 	<?php
 }

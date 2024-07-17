@@ -472,9 +472,9 @@ if ( $global_settings->responsive_enabled ) :
 				<?php } ?>
 
 					<?php if ( 'yes' === $converted || isset( $settings->line_height_unit_medium ) && '' != $settings->line_height_unit_medium ) { ?>
-					line-height: <?php echo $settings->line_height_unit_medium; ?>em;   
+					line-height: <?php echo esc_attr( $settings->line_height_unit_medium ); ?>em;   
 				<?php } elseif ( isset( $settings->line_height_unit_medium ) && '' == $settings->line_height_unit_medium && isset( $settings->line_height->medium ) && '' != $settings->line_height->medium ) { ?>
-					line-height: <?php echo $settings->line_height->medium; ?>px;
+					line-height: <?php echo esc_attr( $settings->line_height->medium ); ?>px;
 				<?php } ?>
 
 				}
@@ -746,7 +746,7 @@ if ( ! empty( $settings->style ) && 'threed' == $settings->style ) {
 
 
 	<?php /* Text Color*/ ?>
-	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-<?php echo $settings->threed_button_options; ?>-btn:hover .uabb-creative-button-text{
+	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-<?php echo esc_attr( $settings->threed_button_options ); ?>-btn:hover .uabb-creative-button-text{
 		color: <?php echo uabb_theme_base_color( $settings->text_hover_color ); ?>;
 	}
 
