@@ -21,7 +21,7 @@
 					if ( '' != $settings->desc_front ) {
 						?>
 					<div class="uabb-flip-box-section-content uabb-text-editor" >
-						<?php echo esc_html( $settings->desc_front ); ?>
+						<?php echo wp_kses_post( $settings->desc_front ); ?>
 					</div>
 						<?php
 					}
@@ -39,7 +39,7 @@
 					if ( '' != $settings->desc_back ) {
 						?>
 					<div class="uabb-back-flip-box-section-content uabb-text-editor">
-						<?php echo esc_html( $settings->desc_back ); ?>
+						<?php echo wp_kses_post( $settings->desc_back ); ?>
 					</div>
 						<?php
 					}

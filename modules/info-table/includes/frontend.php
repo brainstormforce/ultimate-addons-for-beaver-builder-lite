@@ -69,7 +69,7 @@ if ( isset( $settings->it_link_nofollow ) ) {
 			?>
 		</div>
 		<div class="info-table-description uabb-text-editor">
-			<?php echo esc_html( $settings->it_long_desc ); ?>
+			<?php echo wp_kses_post( $settings->it_long_desc ); ?>
 		</div>
 		<?php if ( 'cta' == $settings->it_link_type && 'design02' != $settings->box_design ) { ?>
 		<div class="info-table-button">
