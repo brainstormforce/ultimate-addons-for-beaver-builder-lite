@@ -97,7 +97,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 ?>
 
 .fl-node-<?php echo esc_attr( $id ); ?> .info-table {
-	min-height: <?php echo $settings->min_height; ?>px;
+	min-height: <?php echo esc_attr( $settings->min_height ); ?>px;
 }
 
 
@@ -243,23 +243,23 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 		$bg_grad_start = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $bg_color_code ), 30, 'lighten' );
 	}
 	?>
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-<?php echo $settings->box_design; ?>.info-table-cs-<?php echo $settings->color_scheme; ?> {
-		background: -moz-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%, <?php echo $bg_color_code; ?> 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,<?php echo $bg_grad_start; ?>), color-stop(100%,<?php echo $bg_color_code; ?>)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%,<?php echo $bg_color_code; ?> 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%,<?php echo $bg_color_code; ?> 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%,<?php echo $bg_color_code; ?> 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  <?php echo $bg_grad_start; ?> 0%,<?php echo $bg_color_code; ?> 100%); /* W3C */
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-<?php echo esc_attr( $settings->box_design ); ?>.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> {
+		background: -moz-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%, <?php echo esc_attr( $bg_color_code ); ?> 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,<?php echo esc_attr( $bg_grad_start ); ?>), color-stop(100%,<?php echo esc_attr( $bg_color_code ); ?>)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $bg_grad_start; ?>', endColorstr='<?php echo $bg_color_code; ?>',GradientType=0 ); /* IE6-9 */
 	}
 
 	/* Design Two */
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-heading {
-		background: <?php echo $bg_head_color_code; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-heading {
+		background: <?php echo esc_attr( $bg_head_color_code ); ?>;
 	}
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-icon {
-		background: <?php echo $icon_bg_color; ?>;
-		border-bottom: 4px double <?php echo $border_color; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-icon {
+		background: <?php echo esc_attr( $icon_bg_color ); ?>;
+		border-bottom: 4px double <?php echo esc_attr( $border_color ); ?>;
 	}
 
 	<?php if ( 'shadow' == $settings->hover_effect ) { ?>
@@ -269,38 +269,38 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 	<?php } ?>
 
 	/* Design Three */
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design03.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-icon {
-		background: <?php echo $icon_bg_color; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design03.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-icon {
+		background: <?php echo esc_attr( $icon_bg_color ); ?>;
 	}
 	/* Design Four */
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design04.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table {
-		border-top: 5px solid <?php echo $border_color_top; ?>;
-		border-bottom: 5px solid <?php echo $border_color; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design04.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table {
+		border-top: 5px solid <?php echo esc_attr( $border_color_top ); ?>;
+		border-bottom: 5px solid <?php echo esc_attr( $border_color ); ?>;
 	}
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design04.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-icon {
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design04.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-icon {
 		border-bottom: 2px solid #e5e5e5;
 	}
 
 
 	/* Design Five */
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design05.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-heading,
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design05.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-icon {
-		background: <?php echo $bg_head_color_code; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design05.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-heading,
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design05.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-icon {
+		background: <?php echo esc_attr( $bg_head_color_code ); ?>;
 	}
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design05.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table {
-		border-bottom: 5px solid <?php echo $border_color; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design05.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table {
+		border-bottom: 5px solid <?php echo esc_attr( $border_color ); ?>;
 	}
 
 
 	/* Design Six */
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table {
-		border: 1px solid <?php echo $border_color; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table {
+		border: 1px solid <?php echo esc_attr( $border_color ); ?>;
 	}
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-heading {
-		background: <?php echo $bg_head_color_code; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-heading {
+		background: <?php echo esc_attr( $bg_head_color_code ); ?>;
 	}
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-icon {
-		background: <?php echo $bg_head_color_code; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-icon {
+		background: <?php echo esc_attr( $bg_head_color_code ); ?>;
 		<?php
 		if ( 'icon' == $settings->image_type ) {
 			$spacing = ( $settings->icon_size / 2 ) + 25;
@@ -320,8 +320,8 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 			$spacing = $spacing;
 		}
 		?>
-		height: <?php echo $spacing; ?>px;
-		margin-bottom: <?php echo $spacing; ?>px;
+		height: <?php echo esc_attr( $spacing ); ?>px;
+		margin-bottom: <?php echo esc_attr( $spacing ); ?>px;
 	}
 
 
@@ -335,14 +335,14 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 
 		<?php if ( 'design02' != $settings->box_design ) { ?>
 			.fl-node-<?php echo esc_attr( $id ); ?> .info-table-wrap .info-table-button a {
-				border-radius: <?php echo ( '' != $settings->btn_radius ) ? $settings->btn_radius : '3'; ?>px;
+				border-radius: <?php echo ( '' != $settings->btn_radius ) ? esc_attr( $settings->btn_radius ) : '3'; ?>px;
 			}
 		<?php } ?>
 
 		<?php if ( '' != $settings->btn_text_hover_color || '' != $settings->btn_bg_hover_color ) { ?>
 		.fl-node-<?php echo esc_attr( $id ); ?> .info-table-wrap .info-table-button a:hover {
-			color: <?php echo $settings->btn_text_hover_color; ?>;
-			background: <?php echo $settings->btn_bg_hover_color; ?>;
+			color: <?php echo esc_attr( $settings->btn_text_hover_color ); ?>;
+			background: <?php echo esc_attr( $settings->btn_bg_hover_color ); ?>;
 		}
 		<?php } ?>
 
@@ -385,7 +385,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 
 			<?php if ( '' != $settings->btn_bg_hover_color ) { ?>
 			.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02 .info-table-button a:hover::after {
-				border-left: 8px solid <?php echo $settings->btn_bg_hover_color; ?>;
+				border-left: 8px solid <?php echo esc_attr( $settings->btn_bg_hover_color ); ?>;
 			}
 			<?php } ?>
 		<?php } elseif ( 'design04' == $settings->box_design ) { ?>
@@ -426,27 +426,27 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 
 	if ( 'design01' == $settings->box_design || 'design03' == $settings->box_design || 'design04' == $settings->box_design || 'design05' == $settings->box_design || 'design06' == $settings->box_design ) {
 		?>
-		.fl-node-<?php echo esc_attr( $id ); ?> .info-table-<?php echo $settings->box_design; ?>.info-table-cs-<?php echo $settings->color_scheme; ?> {
-			background: -moz-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%, <?php echo $bg_color_code; ?> 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,<?php echo $bg_grad_start; ?>), color-stop(100%,<?php echo $bg_color_code; ?>)); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%,<?php echo $bg_color_code; ?> 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%,<?php echo $bg_color_code; ?> 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%,<?php echo $bg_color_code; ?> 100%); /* IE10+ */
-			background: linear-gradient(to bottom,  <?php echo $bg_grad_start; ?> 0%,<?php echo $bg_color_code; ?> 100%); /* W3C */
+		.fl-node-<?php echo esc_attr( $id ); ?> .info-table-<?php echo esc_attr( $settings->box_design ); ?>.info-table-cs-<?php echo $settings->color_scheme; ?> {
+			background: -moz-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%, <?php echo esc_attr( $bg_color_code ); ?> 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,<?php echo esc_attr( $bg_grad_start ); ?>), color-stop(100%,<?php echo esc_attr( $bg_color_code ); ?>)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* W3C */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $bg_grad_start; ?>', endColorstr='<?php echo $bg_color_code; ?>',GradientType=0 ); /* IE6-9 */
 		}
 	<?php } ?>
 
 	/* Design Two */
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-heading {
-		background: <?php echo $bg_head_color_code; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-heading {
+		background: <?php echo esc_attr( $bg_head_color_code ); ?>;
 	}
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-icon {
-		background: <?php echo $icon_bg_color; ?>;
-		border-bottom: 4px double <?php echo $border_color; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-icon {
+		background: <?php echo esc_attr( $icon_bg_color ); ?>;
+		border-bottom: 4px double <?php echo esc_attr( $border_color ); ?>;
 	}
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-description {
-		background: <?php echo $bg_color_code; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-description {
+		background: <?php echo esc_attr( $bg_color_code ); ?>;
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-wrap.info-table-design02 .info-table-heading {
 		position: relative;
@@ -459,7 +459,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 		transform: translateY(-50%);
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02 .info-table-button a {
-		/*background: <?php echo $bg_head_color_code; ?>;*/
+		/*background: <?php echo esc_attr( $bg_head_color_code ); ?>;*/
 		border-radius: 3px;
 		padding: 7px;
 		position: absolute;
@@ -479,35 +479,35 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 	<?php } ?>
 
 	/* Design Three */
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design03.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-icon {
-		background: <?php echo $icon_bg_color; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design03.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-icon {
+		background: <?php echo esc_attr( $icon_bg_color ); ?>;
 	}
 
 	/* Design Four */
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design04.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table {
-		border-top: 5px solid <?php echo $border_color_top; ?>;
-		border-bottom: 5px solid <?php echo $border_color; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design04.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table {
+		border-top: 5px solid <?php echo esc_attr( $border_color_top ); ?>;
+		border-bottom: 5px solid <?php echo esc_attr( $border_color ); ?>;
 	}
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design04.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-icon {
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design04.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-icon {
 		border-bottom: 2px solid #e5e5e5;
 	}
 
 
 	/* Design Five */
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design05.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-heading,
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design05.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-icon {
-		background: <?php echo $bg_head_color_code; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design05.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-heading,
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design05.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-icon {
+		background: <?php echo esc_attr( $bg_head_color_code ); ?>;
 	}
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design05.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table {
-		border-bottom: 5px solid <?php echo $border_color; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design05.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table {
+		border-bottom: 5px solid <?php echo esc_attr( $border_color ); ?>;
 	}
 
 	/* Design Six */
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table {
-		border: 1px solid <?php echo $border_color; ?>;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table {
+		border: 1px solid <?php echo esc_attr( $border_color ); ?>;
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-heading {
-		background: <?php echo $bg_head_color_code; ?>;
+		background: <?php echo esc_attr( $bg_head_color_code ); ?>;
 	}
 
 	<?php
@@ -544,35 +544,35 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 	<?php if ( 'design06' == $settings->box_design ) { ?>
 		.fl-node-<?php echo esc_attr( $id ); ?> .info-table .uabb-imgicon-wrap {
 			<?php if ( 'icon' == $settings->image_type || 'photo' == $settings->image_type ) { ?>
-			width: <?php echo $original_width; ?>px;
+			width: <?php echo esc_attr( $original_width ); ?>px;
 			<?php } ?>
 		}
 	<?php } ?>
 
-	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo $settings->color_scheme; ?> .info-table-icon {
-		background: <?php echo $bg_head_color_code; ?>;
-		height: <?php echo $cal_width; ?>px;
-		margin-bottom: <?php echo $cal_width; ?>px;
+	.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design06.info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?> .info-table-icon {
+		background: <?php echo esc_attr( $bg_head_color_code ); ?>;
+		height: <?php echo esc_attr( $cal_width ); ?>px;
+		margin-bottom: <?php echo esc_attr( $cal_width ); ?>px;
 	}
 
 
 	/* Button Design */
 	<?php if ( 'cta' == $settings->it_link_type ) { ?>
 		.fl-node-<?php echo esc_attr( $id ); ?> .info-table-wrap .info-table-button a {
-			color: <?php echo $settings->btn_text_color; ?>;
+			color: <?php echo esc_attr( $settings->btn_text_color ); ?>;
 			background: <?php echo uabb_theme_base_color( $settings->btn_bg_color ); ?>;
 			padding: <?php echo uabb_theme_button_padding( '' ); ?>;
 		}
 		<?php if ( 'design02' != $settings->box_design ) { ?>
 			.fl-node-<?php echo esc_attr( $id ); ?> .info-table-wrap .info-table-button a {
-				border-radius: <?php echo ( '' != $settings->btn_radius ) ? $settings->btn_radius : '3'; ?>px;
+				border-radius: <?php echo ( '' != $settings->btn_radius ) ? esc_attr( $settings->btn_radius ) : '3'; ?>px;
 			}
 		<?php } ?>
 
 		<?php if ( '' != $settings->btn_text_hover_color || '' != $settings->btn_bg_hover_color ) { ?>
 			.fl-node-<?php echo esc_attr( $id ); ?> .info-table-wrap .info-table-button a:hover {
-				color: <?php echo $settings->btn_text_hover_color; ?>;
-				background: <?php echo $settings->btn_bg_hover_color; ?>;
+				color: <?php echo esc_attr( $settings->btn_text_hover_color ); ?>;
+				background: <?php echo esc_attr( $settings->btn_bg_hover_color ); ?>;
 			}
 		<?php } ?>
 
@@ -606,7 +606,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 
 			<?php if ( '' != $settings->btn_bg_hover_color ) { ?>
 			.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design02 .info-table-button a:hover::after {
-				border-left: 8px solid <?php echo $settings->btn_bg_hover_color; ?>;
+				border-left: 8px solid <?php echo esc_attr( $settings->btn_bg_hover_color ); ?>;
 			}
 			<?php } ?>
 		<?php } elseif ( 'design03' == $settings->box_design ) { ?>
@@ -634,17 +634,17 @@ if ( 'design02' != $settings->box_design ) {
 ?>
 .info-table-heading .info-table-main-heading {
 	<?php if ( '' != $settings->heading_color ) : ?>
-		color: <?php echo $settings->heading_color; ?>;
+		color: <?php echo esc_attr( $settings->heading_color ); ?>;
 	<?php endif; ?>
 }
 .fl-node-<?php echo esc_attr( $id ); ?> .info-table-heading .info-table-sub-heading {
 	<?php if ( isset( $settings->sub_heading_color ) ) { ?>
-		color:<?php echo  $settings->sub_heading_color; ?>;
+		color:<?php echo  esc_attr( $settings->sub_heading_color ); ?>;
 	<?php } ?>
 }
 .fl-node-<?php echo esc_attr( $id ); ?> .info-table .info-table-description {
 	<?php if ( isset( $settings->description_color ) ) { ?>
-		color:<?php echo  $settings->description_color; ?>;
+		color:<?php echo  esc_attr( $settings->description_color ); ?>;
 	<?php } ?>
 }
 <?php
@@ -661,19 +661,19 @@ if ( ! $version_bb_check ) {
 			<?php
 			if ( 'yes' === $converted || isset( $settings->heading_font_size_unit ) && '' != $settings->heading_font_size_unit ) {
 				?>
-				font-size: <?php echo $settings->heading_font_size_unit; ?>px;
+				font-size: <?php echo esc_attr( $settings->heading_font_size_unit ); ?>px;
 			<?php } elseif ( isset( $settings->heading_font_size_unit ) && '' == $settings->heading_font_size_unit && isset( $settings->heading_font_size['desktop'] ) && '' != $settings->heading_font_size['desktop'] ) { ?>
-				font-size: <?php echo $settings->heading_font_size['desktop']; ?>px;
+				font-size: <?php echo esc_attr( $settings->heading_font_size['desktop'] ); ?>px;
 			<?php } ?>
 
 			<?php if ( isset( $settings->heading_font_size['desktop'] ) && '' == $settings->heading_font_size['desktop'] && isset( $settings->heading_line_height['desktop'] ) && '' != $settings->heading_line_height['desktop'] && '' == $settings->heading_line_height_unit ) { ?>
-				line-height: <?php echo $settings->heading_line_height['desktop']; ?>px;
+				line-height: <?php echo esc_attr( $settings->heading_line_height['desktop'] ); ?>px;
 			<?php } ?>
 
 			<?php if ( 'yes' === $converted || isset( $settings->heading_line_height_unit ) && '' != $settings->heading_line_height_unit ) { ?>
-				line-height: <?php echo $settings->heading_line_height_unit; ?>em;
+				line-height: <?php echo esc_attr( $settings->heading_line_height_unit ); ?>em;
 			<?php } elseif ( isset( $settings->heading_line_height_unit ) && '' == $settings->heading_line_height_unit && isset( $settings->heading_line_height['desktop'] ) && '' != $settings->heading_line_height['desktop'] ) { ?>
-				line-height: <?php echo $settings->heading_line_height['desktop']; ?>px;
+				line-height: <?php echo esc_attr( $settings->heading_line_height['desktop'] ); ?>px;
 			<?php } ?>
 		}
 		<?php
@@ -700,18 +700,18 @@ if ( ! $version_bb_check ) {
 			<?php
 			if ( 'yes' === $converted || isset( $settings->sub_heading_font_size_unit ) && '' != $settings->sub_heading_font_size_unit ) {
 				?>
-				font-size: <?php echo $settings->sub_heading_font_size_unit; ?>px;
+				font-size: <?php echo esc_attr( $settings->sub_heading_font_size_unit ); ?>px;
 			<?php } elseif ( isset( $settings->sub_heading_font_size_unit ) && '' == $settings->sub_heading_font_size_unit && isset( $settings->sub_heading_font_size['desktop'] ) && '' != $settings->sub_heading_font_size['desktop'] ) { ?>
-				font-size: <?php echo $settings->sub_heading_font_size['desktop']; ?>px;
+				font-size: <?php echo esc_attr( $settings->sub_heading_font_size['desktop'] ); ?>px;
 			<?php } ?>
 
 			<?php if ( isset( $settings->sub_heading_font_size['desktop'] ) && '' == $settings->sub_heading_font_size['desktop'] && isset( $settings->sub_heading_line_height['desktop'] ) && '' != $settings->sub_heading_line_height['desktop'] && '' == $settings->sub_heading_line_height_unit ) { ?>
-				line-height: <?php echo $settings->sub_heading_line_height['desktop']; ?>px;
+				line-height: <?php echo esc_attr( $settings->sub_heading_line_height['desktop'] ); ?>px;
 			<?php } ?>
 			<?php if ( 'yes' === $converted || isset( $settings->sub_heading_line_height_unit ) && '' != $settings->sub_heading_line_height_unit ) { ?>
-				line-height: <?php echo $settings->sub_heading_line_height_unit; ?>em;
+				line-height: <?php echo esc_attr( $settings->sub_heading_line_height_unit ); ?>em;
 			<?php } elseif ( isset( $settings->sub_heading_line_height_unit ) && '' == $settings->sub_heading_line_height_unit && isset( $settings->sub_heading_line_height['desktop'] ) && '' != $settings->sub_heading_line_height['desktop'] ) { ?>
-				line-height: <?php echo $settings->sub_heading_line_height['desktop']; ?>px;
+				line-height: <?php echo esc_attr( $settings->sub_heading_line_height['desktop'] ); ?>px;
 			<?php } ?>
 
 		}
@@ -740,19 +740,19 @@ if ( ! $version_bb_check ) {
 			<?php
 			if ( 'yes' === $converted || isset( $settings->description_font_size_unit ) && '' != $settings->description_font_size_unit ) {
 				?>
-				font-size: <?php echo $settings->description_font_size_unit; ?>px;
+				font-size: <?php echo esc_attr( $settings->description_font_size_unit ); ?>px;
 			<?php } elseif ( isset( $settings->description_font_size_unit ) && '' == $settings->description_font_size_unit && isset( $settings->description_font_size['desktop'] ) && '' != $settings->description_font_size['desktop'] ) { ?>
-				font-size: <?php echo $settings->description_font_size['desktop']; ?>px;
+				font-size: <?php echo esc_attr( $settings->description_font_size['desktop'] ); ?>px;
 			<?php } ?>
 
 			<?php if ( isset( $settings->description_font_size['desktop'] ) && '' == $settings->description_font_size['desktop'] && isset( $settings->description_line_height['desktop'] ) && '' != $settings->description_line_height['desktop'] && '' == $settings->description_line_height_unit ) { ?>
-				line-height: <?php echo $settings->description_line_height['desktop']; ?>px;
+				line-height: <?php echo esc_attr( $settings->description_line_height['desktop'] ); ?>px;
 			<?php } ?>
 
 			<?php if ( 'yes' === $converted || isset( $settings->description_line_height_unit ) && '' != $settings->description_line_height_unit ) { ?>
-				line-height: <?php echo $settings->description_line_height_unit; ?>em;
+				line-height: <?php echo esc_attr( $settings->description_line_height_unit ); ?>em;
 			<?php } elseif ( isset( $settings->description_line_height_unit ) && '' == $settings->description_line_height_unit && isset( $settings->description_line_height['desktop'] ) && '' != $settings->description_line_height['desktop'] ) { ?>
-				line-height: <?php echo $settings->description_line_height['desktop']; ?>px;
+				line-height: <?php echo esc_attr( $settings->description_line_height['desktop'] ); ?>px;
 			<?php } ?>
 
 		}
@@ -778,23 +778,23 @@ if ( ! $version_bb_check ) {
 				<?php UABB_Helper::uabb_font_css( $settings->btn_font_family ); ?>
 			<?php endif; ?>
 			<?php if ( 'yes' === $converted || isset( $settings->btn_font_size_unit ) && '' != $settings->btn_font_size_unit ) { ?>
-				font-size: <?php echo $settings->btn_font_size_unit; ?>px;
+				font-size: <?php echo esc_attr( $settings->btn_font_size_unit ); ?>px;
 				<?php if ( '' == $settings->btn_line_height_unit && '' != $settings->btn_font_size_unit ) { ?>
-					line-height: <?php echo $settings->btn_font_size_unit + 5; ?>px;
+					line-height: <?php echo esc_attr( $settings->btn_font_size_unit ) + 5; ?>px;
 				<?php } ?>		
 			<?php } elseif ( isset( $settings->btn_font_size_unit ) && '' == $settings->btn_font_size_unit && isset( $settings->btn_font_size['desktop'] ) && '' != $settings->btn_font_size['desktop'] ) { ?>
-				font-size: <?php echo $settings->btn_font_size['desktop']; ?>px;
-				line-height: <?php echo $settings->btn_font_size['desktop'] + 5; ?>px;
+				font-size: <?php echo esc_attr( $settings->btn_font_size['desktop'] ); ?>px;
+				line-height: <?php echo esc_attr( $settings->btn_font_size['desktop'] ) + 5; ?>px;
 			<?php } ?>
 
 			<?php if ( isset( $settings->btn_font_size['desktop'] ) && '' == $settings->btn_font_size['desktop'] && isset( $settings->btn_line_height['desktop'] ) && '' != $settings->btn_line_height['desktop'] && '' == $settings->btn_line_height_unit ) { ?>
-				line-height: <?php echo $settings->btn_line_height['desktop']; ?>px;
+				line-height: <?php echo esc_attr( $settings->btn_line_height['desktop'] ); ?>px;
 			<?php } ?>
 
 			<?php if ( 'yes' === $converted || isset( $settings->btn_line_height_unit ) && '' != $settings->btn_line_height_unit ) { ?>
-				line-height: <?php echo $settings->btn_line_height_unit; ?>em;	
+				line-height: <?php echo esc_attr( $settings->btn_line_height_unit ); ?>em;	
 			<?php } elseif ( isset( $settings->btn_line_height_unit ) && '' == $settings->btn_line_height_unit && isset( $settings->btn_line_height['desktop'] ) && '' != $settings->btn_line_height['desktop'] ) { ?>
-				line-height: <?php echo $settings->btn_line_height['desktop']; ?>px;
+				line-height: <?php echo esc_attr( $settings->btn_line_height['desktop'] ); ?>px;
 			<?php } ?>
 
 		}
@@ -813,25 +813,25 @@ if ( ! $version_bb_check ) {
 }
 if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 	?>
-		@media ( max-width: <?php echo $global_settings->medium_breakpoint . 'px'; ?> ) {
+		@media ( max-width: <?php echo esc_attr( $global_settings->medium_breakpoint ) . 'px'; ?> ) {
 			<?php if ( ! $version_bb_check ) { ?>
 				<?php if ( isset( $settings->heading_font_size['medium'] ) || isset( $settings->heading_line_height['medium'] ) || isset( $settings->heading_font_size_unit_medium ) || isset( $settings->heading_line_height_unit_medium ) || isset( $settings->heading_line_height_unit ) ) { ?>
 					.fl-node-<?php echo esc_attr( $id ); ?> .info-table-heading .info-table-main-heading {
 
 						<?php if ( 'yes' === $converted || isset( $settings->heading_font_size_unit_medium ) && '' != $settings->heading_font_size_unit_medium ) { ?>
-							font-size: <?php echo $settings->heading_font_size_unit_medium; ?>px;
+							font-size: <?php echo esc_attr( $settings->heading_font_size_unit_medium ); ?>px;
 						<?php } elseif ( isset( $settings->heading_font_size_unit_medium ) && '' == $settings->heading_font_size_unit_medium && isset( $settings->heading_font_size['medium'] ) && '' != $settings->heading_font_size['medium'] ) { ?>
-							font-size: <?php echo $settings->heading_font_size['medium']; ?>px;
+							font-size: <?php echo esc_attr( $settings->heading_font_size['medium'] ); ?>px;
 						<?php } ?>          
 
 						<?php if ( isset( $settings->heading_font_size['medium'] ) && '' == $settings->heading_font_size['medium'] && isset( $settings->heading_line_height['medium'] ) && '' != $settings->heading_line_height['medium'] && '' == $settings->heading_line_height_unit_medium && '' == $settings->heading_line_height_unit ) { ?>
-							line-height: <?php echo $settings->heading_line_height['medium']; ?>px;
+							line-height: <?php echo esc_attr( $settings->heading_line_height['medium'] ); ?>px;
 						<?php } ?>
 
 						<?php if ( 'yes' === $converted || isset( $settings->heading_line_height_unit_medium ) && '' != $settings->heading_line_height_unit_medium ) { ?>
-							line-height: <?php echo $settings->heading_line_height_unit_medium; ?>em;   
+							line-height: <?php echo esc_attr( $settings->heading_line_height_unit_medium ); ?>em;   
 						<?php } elseif ( isset( $settings->heading_line_height_unit_medium ) && '' == $settings->heading_line_height_unit_medium && isset( $settings->heading_line_height['medium'] ) && '' != $settings->heading_line_height['medium'] ) { ?>
-							line-height: <?php echo $settings->heading_line_height['medium']; ?>px;
+							line-height: <?php echo esc_attr( $settings->heading_line_height['medium'] ); ?>px;
 						<?php } ?>					
 
 					}
@@ -842,19 +842,19 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 					.fl-node-<?php echo esc_attr( $id ); ?> .info-table-heading .info-table-sub-heading {
 
 						<?php if ( 'yes' === $converted || isset( $settings->sub_heading_font_size_unit_medium ) && '' != $settings->sub_heading_font_size_unit_medium ) { ?>
-							font-size: <?php echo $settings->sub_heading_font_size_unit_medium; ?>px;
+							font-size: <?php echo esc_attr( $settings->sub_heading_font_size_unit_medium ); ?>px;
 						<?php } elseif ( isset( $settings->sub_heading_font_size_unit_medium ) && '' == $settings->sub_heading_font_size_unit_medium && isset( $settings->sub_heading_font_size['medium'] ) && '' != $settings->sub_heading_font_size['medium'] ) { ?>
-							font-size: <?php echo $settings->sub_heading_font_size['medium']; ?>px;
+							font-size: <?php echo esc_attr( $settings->sub_heading_font_size['medium'] ); ?>px;
 						<?php } ?>
 
 						<?php if ( isset( $settings->sub_heading_font_size['medium'] ) && '' == $settings->sub_heading_font_size['medium'] && isset( $settings->sub_heading_line_height['medium'] ) && '' != $settings->sub_heading_line_height['medium'] && '' == $settings->sub_heading_line_height_unit && '' == $settings->sub_heading_line_height_unit_medium ) { ?>
-							line-height: <?php echo $settings->sub_heading_line_height['medium']; ?>px;
+							line-height: <?php echo esc_attr( $settings->sub_heading_line_height['medium'] ); ?>px;
 						<?php } ?>
 
 						<?php if ( 'yes' === $converted || isset( $settings->sub_heading_line_height_unit_medium ) && '' != $settings->sub_heading_line_height_unit_medium ) { ?>
-							line-height: <?php echo $settings->sub_heading_line_height_unit_medium; ?>em;   
+							line-height: <?php echo esc_attr( $settings->sub_heading_line_height_unit_medium ); ?>em;   
 						<?php } elseif ( isset( $settings->sub_heading_line_height_unit_medium ) && '' == $settings->sub_heading_line_height_unit_medium && isset( $settings->sub_heading_line_height['medium'] ) && '' != $settings->sub_heading_line_height['medium'] ) { ?>
-							line-height: <?php echo $settings->sub_heading_line_height['medium']; ?>px;
+							line-height: <?php echo esc_attr( $settings->sub_heading_line_height['medium'] ); ?>px;
 						<?php } ?>
 
 					}
@@ -865,19 +865,19 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 					.fl-node-<?php echo esc_attr( $id ); ?> .info-table .info-table-description {
 
 						<?php if ( 'yes' === $converted || isset( $settings->description_font_size_unit_medium ) && '' != $settings->description_font_size_unit_medium ) { ?>
-							font-size: <?php echo $settings->description_font_size_unit_medium; ?>px;
+							font-size: <?php echo esc_attr( $settings->description_font_size_unit_medium ); ?>px;
 						<?php } elseif ( isset( $settings->description_font_size_unit_medium ) && '' == $settings->description_font_size_unit_medium && isset( $settings->description_font_size['medium'] ) && '' != $settings->description_font_size['medium'] ) { ?>
-							font-size: <?php echo $settings->description_font_size['medium']; ?>px;
+							font-size: <?php echo esc_attr( $settings->description_font_size['medium'] ); ?>px;
 						<?php } ?>  
 
 						<?php if ( isset( $settings->description_font_size['medium'] ) && '' == $settings->description_font_size['medium'] && isset( $settings->description_line_height['medium'] ) && '' != $settings->description_line_height['medium'] && '' == $settings->description_line_height_unit && '' == $settings->description_line_height_unit_medium ) { ?>
-							line-height: <?php echo $settings->description_line_height['medium']; ?>px;
+							line-height: <?php echo esc_attr( $settings->description_line_height['medium'] ); ?>px;
 						<?php } ?>
 
 						<?php if ( 'yes' === $converted || isset( $settings->description_line_height_unit_medium ) && '' != $settings->description_line_height_unit_medium ) { ?>
-							line-height: <?php echo $settings->description_line_height_unit_medium; ?>em;   
+							line-height: <?php echo esc_attr( $settings->description_line_height_unit_medium ); ?>em;   
 						<?php } elseif ( isset( $settings->description_line_height_unit_medium ) && '' == $settings->description_line_height_unit_medium && isset( $settings->description_line_height['medium'] ) && '' != $settings->description_line_height['medium'] ) { ?>
-							line-height: <?php echo $settings->description_line_height['medium']; ?>px;
+							line-height: <?php echo esc_attr( $settings->description_line_height['medium'] ); ?>px;
 						<?php } ?>
 
 					}
@@ -888,19 +888,19 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 					.fl-node-<?php echo esc_attr( $id ); ?> .info-table-wrap .info-table-button a {
 
 						<?php if ( 'yes' === $converted || isset( $settings->btn_font_size_unit_medium ) && '' != $settings->btn_font_size_unit_medium ) { ?>
-							font-size: <?php echo $settings->btn_font_size_unit_medium; ?>px;
+							font-size: <?php echo esc_attr( $settings->btn_font_size_unit_medium ); ?>px;
 						<?php } elseif ( isset( $settings->btn_font_size_unit_medium ) && '' == $settings->btn_font_size_unit_medium && isset( $settings->btn_font_size['medium'] ) && '' != $settings->btn_font_size['medium'] ) { ?>
-							font-size: <?php echo $settings->btn_font_size['medium']; ?>px;
+							font-size: <?php echo esc_attr( $settings->btn_font_size['medium'] ); ?>px;
 						<?php } ?> 
 
 						<?php if ( isset( $settings->btn_font_size['medium'] ) && '' == $settings->btn_font_size['medium'] && isset( $settings->btn_line_height['medium'] ) && '' != $settings->btn_line_height['medium'] && '' == $settings->btn_line_height_unit && '' == $settings->btn_line_height_unit_medium ) { ?>
-							line-height: <?php echo $settings->btn_line_height['medium']; ?>px;
+							line-height: <?php echo esc_attr( $settings->btn_line_height['medium'] ); ?>px;
 						<?php } ?>
 
 						<?php if ( 'yes' === $converted || isset( $settings->btn_line_height_unit_medium ) && '' != $settings->btn_line_height_unit_medium ) { ?>
-							line-height: <?php echo $settings->btn_line_height_unit_medium; ?>em;   
+							line-height: <?php echo esc_attr( $settings->btn_line_height_unit_medium ); ?>em;   
 						<?php } elseif ( isset( $settings->btn_line_height_unit_medium ) && '' == $settings->btn_line_height_unit_medium && isset( $settings->btn_line_height['medium'] ) && '' != $settings->btn_line_height['medium'] ) { ?>
-							line-height: <?php echo $settings->btn_line_height['medium']; ?>px;
+							line-height: <?php echo esc_attr( $settings->btn_line_height['medium'] ); ?>px;
 						<?php } ?>
 
 					}
@@ -911,23 +911,23 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 	if ( ! $version_bb_check ) {
 		if ( isset( $settings->heading_font_size['small'] ) || isset( $settings->heading_line_height['small'] ) || isset( $settings->sub_heading_font_size['small'] ) || isset( $settings->sub_heading_line_height['small'] ) || isset( $settings->description_font_size['small'] ) || isset( $settings->description_line_height['small'] ) || isset( $settings->btn_font_size['small'] ) || isset( $settings->btn_line_height['small'] ) || isset( $settings->heading_font_size_unit_responsive ) || isset( $settings->heading_line_height_unit_responsive ) || isset( $settings->sub_heading_font_size_unit_responsive ) || isset( $settings->sub_heading_line_height_unit_responsive ) || isset( $settings->description_font_size_unit_responsive ) || isset( $settings->description_line_height_unit_responsive ) || isset( $settings->btn_font_size_unit_responsive ) || isset( $settings->btn_line_height_unit_responsive ) || isset( $settings->heading_line_height_unit ) || isset( $settings->heading_line_height_unit_medium ) || isset( $settings->sub_heading_line_height_unit ) || isset( $settings->sub_heading_line_height_unit_medium ) ) {
 			?>
-			@media ( max-width: <?php echo $global_settings->responsive_breakpoint . 'px'; ?> ) {
+			@media ( max-width: <?php echo esc_attr( $global_settings->responsive_breakpoint ) . 'px'; ?> ) {
 
 				.fl-node-<?php echo esc_attr( $id ); ?> .info-table-heading .info-table-main-heading { 
 
 					<?php if ( 'yes' === $converted || isset( $settings->heading_font_size_unit_responsive ) && '' != $settings->heading_font_size_unit_responsive ) { ?>
-						font-size: <?php echo $settings->heading_font_size_unit_responsive; ?>px;   
+						font-size: <?php echo esc_attr( $settings->heading_font_size_unit_responsive ); ?>px;   
 					<?php } elseif ( $settings->heading_font_size_unit_responsive && '' == $settings->heading_font_size_unit_responsive && isset( $settings->heading_font_size['small'] ) && '' != $settings->heading_font_size['small'] ) { ?>
-						font-size: <?php echo $settings->heading_font_size['small']; ?>px;
+						font-size: <?php echo esc_attr( $settings->heading_font_size['small'] ); ?>px;
 					<?php } ?>
 
 					<?php if ( isset( $settings->heading_font_size['small'] ) && '' == $settings->heading_font_size['small'] && isset( $settings->heading_line_height['small'] ) && '' != $settings->heading_line_height['small'] && '' == $settings->heading_line_height_unit && '' == $settings->heading_line_height_unit_medium && '' == $settings->heading_line_height_unit_responsive ) { ?>
-						line-height: <?php echo $settings->heading_line_height['small']; ?>px;
+						line-height: <?php echo esc_attr( $settings->heading_line_height['small'] ); ?>px;
 					<?php } ?>
 					<?php if ( 'yes' === $converted || isset( $settings->heading_line_height_unit_responsive ) && '' != $settings->heading_line_height_unit_responsive ) { ?>
-						line-height: <?php echo $settings->heading_line_height_unit_responsive; ?>em;
+						line-height: <?php echo esc_attr( $settings->heading_line_height_unit_responsive ); ?>em;
 					<?php } elseif ( isset( $settings->heading_line_height_unit_responsive ) && '' == $settings->heading_line_height_unit_responsive && isset( $settings->heading_line_height['small'] ) && '' != $settings->heading_line_height['small'] ) { ?>
-						line-height: <?php echo $settings->heading_line_height['small']; ?>px;
+						line-height: <?php echo esc_attr( $settings->heading_line_height['small'] ); ?>px;
 					<?php } ?> 
 
 				}
@@ -935,19 +935,19 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 				.fl-node-<?php echo esc_attr( $id ); ?> .info-table-heading .info-table-sub-heading {
 
 					<?php if ( 'yes' === $converted || isset( $settings->sub_heading_font_size_unit_responsive ) && '' != $settings->sub_heading_font_size_unit_responsive ) { ?>
-						font-size: <?php echo $settings->sub_heading_font_size_unit_responsive; ?>px;   
+						font-size: <?php echo esc_attr( $settings->sub_heading_font_size_unit_responsive ); ?>px;   
 					<?php } elseif ( $settings->sub_heading_font_size_unit_responsive && '' == $settings->sub_heading_font_size_unit_responsive && isset( $settings->sub_heading_font_size['small'] ) && '' != $settings->sub_heading_font_size['small'] ) { ?>
-						font-size: <?php echo $settings->sub_heading_font_size['small']; ?>px;
+						font-size: <?php echo esc_attr( $settings->sub_heading_font_size['small'] ); ?>px;
 					<?php } ?>
 
 					<?php if ( isset( $settings->sub_heading_font_size['small'] ) && '' == $settings->sub_heading_font_size['small'] && isset( $settings->sub_heading_line_height['small'] ) && '' != $settings->sub_heading_line_height['small'] && '' == $settings->sub_heading_line_height_unit && '' == $settings->sub_heading_line_height_unit_medium && '' == $settings->sub_heading_line_height_unit_responsive ) { ?>
-						line-height: <?php echo $settings->sub_heading_line_height['small']; ?>px;
+						line-height: <?php echo esc_attr( $settings->sub_heading_line_height['small'] ); ?>px;
 					<?php } ?>
 
 					<?php if ( 'yes' === $converted || isset( $settings->sub_heading_line_height_unit_responsive ) && '' != $settings->sub_heading_line_height_unit_responsive ) { ?>
-						line-height: <?php echo $settings->sub_heading_line_height_unit_responsive; ?>em;
+						line-height: <?php echo esc_attr( $settings->sub_heading_line_height_unit_responsive ); ?>em;
 					<?php } elseif ( isset( $settings->sub_heading_line_height_unit_responsive ) && '' == $settings->sub_heading_line_height_unit_responsive && isset( $settings->sub_heading_line_height['small'] ) && '' != $settings->sub_heading_line_height['small'] ) { ?>
-						line-height: <?php echo $settings->sub_heading_line_height['small']; ?>px;
+						line-height: <?php echo esc_attr( $settings->sub_heading_line_height['small'] ); ?>px;
 					<?php } ?>
 
 				}
@@ -955,19 +955,19 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 					.fl-node-<?php echo esc_attr( $id ); ?> .info-table .info-table-description {
 
 						<?php if ( 'yes' === $converted || isset( $settings->description_font_size_unit_responsive ) && '' != $settings->description_font_size_unit_responsive ) { ?>
-							font-size: <?php echo $settings->description_font_size_unit_responsive; ?>px;   
+							font-size: <?php echo esc_attr( $settings->description_font_size_unit_responsive ); ?>px;   
 						<?php } elseif ( $settings->description_font_size_unit_responsive && '' == $settings->description_font_size_unit_responsive && isset( $settings->description_font_size['small'] ) && '' != $settings->description_font_size['small'] ) { ?>
-							font-size: <?php echo $settings->description_font_size['small']; ?>px;
+							font-size: <?php echo esc_attr( $settings->description_font_size['small'] ); ?>px;
 						<?php } ?>
 
 						<?php if ( isset( $settings->description_font_size['small'] ) && '' == $settings->description_font_size['small'] && isset( $settings->description_line_height['small'] ) && '' != $settings->description_line_height['small'] && '' == $settings->description_line_height_unit && '' == $settings->description_line_height_unit_medium && '' == $settings->description_line_height_unit_responsive ) { ?>
-							line-height: <?php echo $settings->description_line_height['small']; ?>px;
+							line-height: <?php echo esc_attr( $settings->description_line_height['small'] ); ?>px;
 						<?php } ?>
 
 						<?php if ( 'yes' === $converted || isset( $settings->description_line_height_unit_responsive ) && '' != $settings->description_line_height_unit_responsive ) { ?>
-							line-height: <?php echo $settings->description_line_height_unit_responsive; ?>em;
+							line-height: <?php echo esc_attr( $settings->description_line_height_unit_responsive ); ?>em;
 						<?php } elseif ( isset( $settings->description_line_height_unit_responsive ) && '' == $settings->description_line_height_unit_responsive && isset( $settings->description_line_height['small'] ) && '' != $settings->description_line_height['small'] ) { ?>
-							line-height: <?php echo $settings->description_line_height['small']; ?>px;
+							line-height: <?php echo esc_attr( $settings->description_line_height['small'] ); ?>px;
 						<?php } ?>
 					}
 
@@ -985,19 +985,19 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 					.fl-node-<?php echo esc_attr( $id ); ?> .info-table-wrap .info-table-button a {
 
 						<?php if ( 'yes' === $converted || isset( $settings->btn_font_size_unit_responsive ) && '' != $settings->btn_font_size_unit_responsive ) { ?>
-							font-size: <?php echo $settings->btn_font_size_unit_responsive; ?>px;   
+							font-size: <?php echo esc_attr( $settings->btn_font_size_unit_responsive ); ?>px;   
 						<?php } elseif ( $settings->btn_font_size_unit_responsive && '' == $settings->btn_font_size_unit_responsive && isset( $settings->btn_font_size['small'] ) && '' != $settings->btn_font_size['small'] ) { ?>
-							font-size: <?php echo $settings->btn_font_size['small']; ?>px;
+							font-size: <?php echo esc_attr( $settings->btn_font_size['small'] ); ?>px;
 						<?php } ?>
 
 						<?php if ( isset( $settings->btn_font_size['small'] ) && '' == $settings->btn_font_size['small'] && isset( $settings->btn_line_height['small'] ) && '' != $settings->btn_line_height['small'] && '' == $settings->btn_line_height_unit && '' == $settings->btn_line_height_unit_medium && '' == $settings->btn_line_height_unit_responsive ) { ?>
-							line-height: <?php echo $settings->btn_line_height['small']; ?>px;
+							line-height: <?php echo esc_attr( $settings->btn_line_height['small'] ); ?>px;
 						<?php } ?>
 
 						<?php if ( 'yes' === $converted || isset( $settings->btn_line_height_unit_responsive ) && '' != $settings->btn_line_height_unit_responsive ) { ?>
-							line-height: <?php echo $settings->btn_line_height_unit_responsive; ?>em;
+							line-height: <?php echo esc_attr( $settings->btn_line_height_unit_responsive ); ?>em;
 						<?php } elseif ( isset( $settings->btn_line_height_unit_responsive ) && '' == $settings->btn_line_height_unit_responsive && isset( $settings->btn_line_height['small'] ) && '' != $settings->btn_line_height['small'] ) { ?>
-							line-height: <?php echo $settings->btn_line_height['small']; ?>px;
+							line-height: <?php echo esc_attr( $settings->btn_line_height['small'] ); ?>px;
 						<?php } ?> 
 					}
 

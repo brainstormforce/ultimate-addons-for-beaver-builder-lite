@@ -90,7 +90,7 @@ if ( '' != $settings->separator_style ) {
 		<?php } ?>
 
 		<?php if ( isset( $settings->new_font_size['desktop'] ) && '' == $settings->new_font_size['desktop'] && isset( $settings->line_height['desktop'] ) && '' != $settings->line_height['desktop'] && '' == $settings->line_height_unit ) { ?>
-			line-height: <?php echo $settings->line_height['desktop']; ?>px;
+			line-height: <?php echo esc_attr( $settings->line_height['desktop'] ); ?>px;
 		<?php } ?>
 		<?php if ( 'yes' === $converted || isset( $settings->line_height_unit ) && '' != $settings->line_height_unit ) { ?> 
 			line-height: <?php echo esc_attr( $settings->line_height_unit ); ?>em;
