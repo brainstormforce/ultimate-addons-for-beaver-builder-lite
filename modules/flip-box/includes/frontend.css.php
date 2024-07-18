@@ -129,7 +129,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 
 		echo ( '' != $settings->front_desc_typography_margin_bottom ) ? 'margin-bottom: ' . esc_attr( $settings->front_desc_typography_margin_bottom ) . 'px;' : 'margin-bottom: 25px;';
 	?>
-	color : <?php echo uabb_theme_text_color( $settings->front_desc_typography_color ); ?>;
+	color : <?php echo esc_attr( uabb_theme_text_color( $settings->front_desc_typography_color ) ); ?>;
 }
 <?php if ( ! $version_bb_check ) { ?>
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-front .uabb-text-editor {
@@ -249,7 +249,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 }
 ?>
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-back .uabb-text-editor {
-	color : <?php echo uabb_theme_text_color( $settings->back_desc_typography_color ); ?>;
+	color : <?php echo esc_attr( uabb_theme_text_color( $settings->back_desc_typography_color ) ); ?>;
 	<?php
 	echo ( '' != $settings->back_desc_typography_margin_top ) ? 'margin-top: ' . esc_attr( $settings->back_desc_typography_margin_top ). 'px;' : 'margin-top: 0;';
 
@@ -476,7 +476,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 	<?php } ?>
 	}
 
-	@media ( max-width: <?php echo $global_settings->responsive_breakpoint; ?>px ) {
+	@media ( max-width: <?php echo esc_attr( $global_settings->responsive_breakpoint ); ?>px ) {
 
 		<?php
 		if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {

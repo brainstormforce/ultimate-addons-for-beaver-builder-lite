@@ -288,7 +288,7 @@ if ( '' != $settings->separator_style ) {
 	}
 
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-separator-line > span {
-		border-top:<?php echo esc_attr( $settings->separator_line_height ); ?>px <?php echo esc_attr( $settings->separator_line_style ); ?> <?php echo uabb_theme_base_color( $settings->separator_line_color ); ?>;
+		border-top:<?php echo esc_attr( $settings->separator_line_height ); ?>px <?php echo esc_attr( $settings->separator_line_style ); ?> <?php echo esc_attr( uabb_theme_base_color( $settings->separator_line_color ) ); ?>;
 		display: block;
 		margin-top: 0 !important;
 	}

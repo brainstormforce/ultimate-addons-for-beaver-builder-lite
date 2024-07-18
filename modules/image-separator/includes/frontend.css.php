@@ -89,7 +89,7 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 			border-style: <?php echo esc_attr( $settings->img_border_style ); ?>;
 		<?php endif; ?>
 
-		background: <?php echo uabb_theme_base_color( $settings->img_bg_color ); ?>;
+		background: <?php echo esc_attr( uabb_theme_base_color( $settings->img_bg_color ) ); ?>;
 
 		<?php if ( ! empty( $settings->img_bg_size ) ) : ?>
 			padding: <?php echo esc_attr( $settings->img_bg_size ); ?>px;

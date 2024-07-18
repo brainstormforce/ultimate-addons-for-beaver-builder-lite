@@ -40,7 +40,7 @@ if ( 'bottom' === $settings->star_position ) {
 		}
 	}
 
-		echo $stars_html;
+		echo wp_kses_post( $stars_html );
 	?>
 	</div>
 
