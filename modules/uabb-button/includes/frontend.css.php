@@ -206,7 +206,7 @@ if ( ! $version_bb_check ) {
 		.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
 			<?php
 			if ( isset( $settings->button_border_style ) ) {
-				echo ( '' != $settings->button_border_style &&  'none' !== $settings->button_border_style ) ? 'border-style:' . $settings->button_border_style . ';' : 'border-style:solid;';
+				echo ( '' != $settings->button_border_style && 'none' !== $settings->button_border_style ) ? 'border-style:' . $settings->button_border_style . ';' : 'border-style:solid;';
 			}
 			if ( isset( $settings->button_border_width ) && ! empty( $settings->button_border_width ) ) {
 				echo ( '' != $settings->button_border_width ) ? 'border-width:' . $settings->button_border_width . 'px;' : '';
@@ -245,7 +245,7 @@ if ( ! $version_bb_check ) {
 	?>
 	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
 	.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
-		background: <?php echo uabb_theme_default_button_bg_color( $settings->bg_color );?>;
+		background: <?php echo uabb_theme_default_button_bg_color( $settings->bg_color ); ?>;
 
 	}
 	.fl-node-<?php echo $id; ?> .uabb-module-content.uabb-creative-button-wrap a:hover {
@@ -372,8 +372,8 @@ if ( $global_settings->responsive_enabled ) :
 		<?php if ( 'default' === $settings->style ) { ?>
 			.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
 			.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
-				<?php 
-				if ( isset( $settings->button_padding_dimension_top_medium  ) ) {
+				<?php
+				if ( isset( $settings->button_padding_dimension_top_medium ) ) {
 					echo ( '' != $settings->button_padding_dimension_top_medium ) ? 'padding-top:' . $settings->button_padding_dimension_top_medium . 'px;' : 'padding-top:' . uabb_theme_padding_button( 'tablet', 'top' ) . ';';
 				}
 				if ( isset( $settings->button_padding_dimension_bottom_medium ) ) {
@@ -384,8 +384,9 @@ if ( $global_settings->responsive_enabled ) :
 				}
 				if ( isset( $settings->button_padding_dimension_right_medium ) ) {
 					echo ( '' != $settings->button_padding_dimension_right_medium ) ? 'padding-right:' . $settings->button_padding_dimension_right_medium . 'px;' : 'padding-right:' . uabb_theme_padding_button( 'tablet', 'right' ) . ';';
-				} 
-				?> 
+				}
+				?>
+				 
 			}
 		<?php } ?>
 	}
@@ -396,8 +397,8 @@ if ( $global_settings->responsive_enabled ) :
 		<?php if ( 'default' === $settings->style ) { ?>
 			.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a,
 			.fl-node-<?php echo $id; ?> .uabb-creative-button-wrap a:visited {
-				<?php 
-				if ( isset( $settings->button_padding_dimension_top_responsive  ) ) {
+				<?php
+				if ( isset( $settings->button_padding_dimension_top_responsive ) ) {
 					echo ( '' != $settings->button_padding_dimension_top_responsive ) ? 'padding-top:' . $settings->button_padding_dimension_top_responsive . 'px;' : 'padding-top:' . uabb_theme_padding_button( 'mobile', 'top' ) . ';';
 				}
 				if ( isset( $settings->button_padding_dimension_bottom_responsive ) ) {
@@ -408,8 +409,9 @@ if ( $global_settings->responsive_enabled ) :
 				}
 				if ( isset( $settings->button_padding_dimension_right_responsive ) ) {
 					echo ( '' != $settings->button_padding_dimension_right_responsive ) ? 'padding-right:' . $settings->button_padding_dimension_right_responsive . 'px;' : 'padding-right:' . uabb_theme_padding_button( 'mobile', 'right' ) . ';';
-				} 
-				?> 
+				}
+				?>
+				 
 			}
 		<?php } ?>
 	}

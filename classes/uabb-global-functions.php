@@ -747,7 +747,7 @@ function uabb_theme_border_color( $default ) {
 /**
  * Provide option to override the element defaults from theme options.
  *
- * @since 1.3.1 
+ * @since 1.3.1
  * @param var $default Checks if user has set the hover color, if yes, returns users value else checks for
  * filtered value.
  * @return string - hex value for the border hover color
@@ -844,6 +844,7 @@ function uabb_theme_border( $default ) {
 }
 /**
  * Provide option to override the element defaults from theme options.
+ *
  * @since 1.3.1
  * @param var $default Checks if user has set the radius, if yes, returns users value else checks
  * for filtered value.
@@ -861,7 +862,6 @@ function uabb_theme_button_typography( $default ) {
 	$text_transform = uabb_theme_default_button_text_transform( '' );
 	$font_family    = uabb_theme_button_font_family( $font_family );
 	$letter_spacing = uabb_theme_default_button_letter_spacing( '' );
-
 
 	$typography['desktop-font_size']      = array();
 	$typography['desktop_font_family']    = array();
@@ -944,13 +944,13 @@ function uabb_theme_padding_button( $mode, $value ) {
 
 	$unit = $mode . '-unit';
 
-	if ( is_array( $padding ) && array_key_exists( $mode, $padding ) && array_key_exists( $value, $padding[$mode] ) ) {
+	if ( is_array( $padding ) && array_key_exists( $mode, $padding ) && array_key_exists( $value, $padding[ $mode ] ) ) {
 
-		$padding_unit = array_key_exists( $unit, $padding ) ? $padding[$unit] : 'px;';
+		$padding_unit = array_key_exists( $unit, $padding ) ? $padding[ $unit ] : 'px;';
 
-		$new_padding = $padding[$mode][$value] . $padding[$unit]; 
+		$new_padding = $padding[ $mode ][ $value ] . $padding[ $unit ];
 	}
-	
+
 	return $new_padding;
 }
 
