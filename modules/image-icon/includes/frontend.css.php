@@ -5,7 +5,7 @@
  *  @package UABB Image Icon Module
  */
 
-if ( 'none' != $settings->image_type ) :
+if ( 'none' !== $settings->image_type ) :
 
 	$settings->icon_color       = UABB_Helper::uabb_colorpicker( $settings, 'icon_color' );
 	$settings->icon_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'icon_hover_color' );
@@ -30,23 +30,23 @@ if ( 'none' != $settings->image_type ) :
 
 	/* Global Alignment Css */
 	.fl-node-<?php echo $id; ?> .uabb-imgicon-wrap {
-		<?php if ( 'icon' == $settings->image_type ) { ?>
+		<?php if ( 'icon' === $settings->image_type ) { ?>
 			text-align: <?php echo $settings->icon_align; ?>;
-		<?php } elseif ( 'photo' == $settings->image_type ) { ?>
+		<?php } elseif ( 'photo' === $settings->image_type ) { ?>
 			text-align: <?php echo $settings->img_align; ?>;
 		<?php } ?>   
 	}
 
 	<?php
-	if ( 'icon' == $settings->image_type ) {
+	if ( 'icon' === $settings->image_type ) {
 		/* Icon Color Toggle */
-		if ( 'simple' == $settings->icon_style ) {
+		if ( 'simple' === $settings->icon_style ) {
 			$settings->icon_color = uabb_theme_base_color( $settings->icon_color );
 		} else {
-			if ( 'preset1' == $settings->icon_color_preset ) {
+			if ( 'preset1' === $settings->icon_color_preset ) {
 				$settings->icon_color    = ( empty( $settings->icon_color ) ) ? '#fff' : $settings->icon_color;
 				$settings->icon_bg_color = uabb_theme_base_color( $settings->icon_bg_color );
-			} elseif ( 'preset2' == $settings->icon_color_preset ) {
+			} elseif ( 'preset2' === $settings->icon_color_preset ) {
 				$settings->icon_color    = uabb_theme_base_color( $settings->icon_color );
 				$settings->icon_bg_color = ( empty( $settings->icon_bg_color ) ) ? '#fafafa' : $settings->icon_bg_color;
 			}
@@ -82,38 +82,38 @@ if ( 'none' != $settings->image_type ) :
 			font-size: <?php echo $settings->icon_size; ?>px;
 			height: auto;
 			width: auto;
-			<?php if ( 'simple' != $settings->icon_style ) { // Rounded Styles. ?>
+			<?php if ( 'simple' !== $settings->icon_style ) { // Rounded Styles. ?>
 				<?php echo 'background: ' . $settings->icon_bg_color; ?>;
 				<?php
-				if ( 'circle' == $settings->icon_style || 'custom' == $settings->icon_style ) {
+				if ( 'circle' === $settings->icon_style || 'custom' === $settings->icon_style ) {
 					?>
-				border-radius: <?php echo ( 'custom' == $settings->icon_style ) ? $settings->icon_bg_border_radius . 'px' : '100%'; ?>;
-				-moz-border-radius: <?php echo ( 'custom' == $settings->icon_style ) ? $settings->icon_bg_border_radius . 'px' : '100%'; ?>;
-				-webkit-border-radius: <?php echo ( 'custom' == $settings->icon_style ) ? $settings->icon_bg_border_radius . 'px' : '100%'; ?>;
-				<?php } if ( 'circle' == $settings->icon_style || 'square' == $settings->icon_style || 'custom' == $settings->icon_style ) { ?>
+				border-radius: <?php echo ( 'custom' === $settings->icon_style ) ? $settings->icon_bg_border_radius . 'px' : '100%'; ?>;
+				-moz-border-radius: <?php echo ( 'custom' === $settings->icon_style ) ? $settings->icon_bg_border_radius . 'px' : '100%'; ?>;
+				-webkit-border-radius: <?php echo ( 'custom' === $settings->icon_style ) ? $settings->icon_bg_border_radius . 'px' : '100%'; ?>;
+				<?php } if ( 'circle' === $settings->icon_style || 'square' === $settings->icon_style || 'custom' === $settings->icon_style ) { ?>
 				line-height:
 					<?php
 					echo (
-					( ( 'custom' != $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
+					( ( 'custom' !== $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
 					+
-					( ( 'custom' == $settings->icon_style ) ? $settings->icon_bg_size : 0 )
+					( ( 'custom' === $settings->icon_style ) ? $settings->icon_bg_size : 0 )
 							. 'px;' );
 					?>
 
 				height:
 					<?php
 					echo (
-					( ( 'custom' != $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
+					( ( 'custom' !== $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
 					+
-					( ( 'custom' == $settings->icon_style ) ? $settings->icon_bg_size : 0 )
+					( ( 'custom' === $settings->icon_style ) ? $settings->icon_bg_size : 0 )
 						. 'px;' );
 					?>
 				width:
 					<?php
 					echo (
-					( ( 'custom' != $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
+					( ( 'custom' !== $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
 					+
-					( ( 'custom' == $settings->icon_style ) ? $settings->icon_bg_size : 0 )
+					( ( 'custom' === $settings->icon_style ) ? $settings->icon_bg_size : 0 )
 					. 'px;' );
 					?>
 				text-align: center;
@@ -128,7 +128,7 @@ if ( 'none' != $settings->image_type ) :
 			<?php }; ?>
 
 			<?php /* Border Style */ ?>
-			<?php if ( 'custom' == $settings->icon_style && 'none' != $settings->icon_border_style ) : ?>
+			<?php if ( 'custom' === $settings->icon_style && 'none' !== $settings->icon_border_style ) : ?>
 				border-style: <?php echo $settings->icon_border_style; ?>;
 				box-sizing:content-box;
 
@@ -140,7 +140,7 @@ if ( 'none' != $settings->image_type ) :
 			<?php endif; ?>
 
 			/* Gradient Style */
-			<?php if ( 'simple' != $settings->icon_style && $settings->icon_three_d ) : // 3D Styles. ?>
+			<?php if ( 'simple' !== $settings->icon_style && $settings->icon_three_d ) : // 3D Styles. ?>
 				background: -moz-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%, <?php echo $settings->icon_bg_color; ?> 100%); /* FF3.6+ */
 				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,<?php echo $bg_grad_start; ?>), color-stop(100%,<?php echo $settings->icon_bg_color; ?>)); /* Chrome,Safari4+ */
 				background: -webkit-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%,<?php echo $settings->icon_bg_color; ?> 100%); /* Chrome10+,Safari5.1+ */
@@ -148,7 +148,7 @@ if ( 'none' != $settings->image_type ) :
 				background: -ms-linear-gradient(top,  <?php echo $bg_grad_start; ?> 0%,<?php echo $settings->icon_bg_color; ?> 100%); /* IE10+ */
 				background: linear-gradient(to bottom,  <?php echo $bg_grad_start; ?> 0%,<?php echo $settings->icon_bg_color; ?> 100%); /* W3C */
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $bg_grad_start; ?>', endColorstr='<?php echo $settings->icon_bg_color; ?>',GradientType=0 ); /* IE6-9 */
-				/*<?php if ( 'circle' == $settings->icon_style || 'square' == $settings->icon_style ) : ?>
+				/*<?php if ( 'circle' === $settings->icon_style || 'square' === $settings->icon_style ) : ?>
 					border: 1px solid <?php echo $border_color; ?>;
 				<?php endif; ?>*/
 			<?php endif; ?>
@@ -160,7 +160,7 @@ if ( 'none' != $settings->image_type ) :
 
 		.fl-node-<?php echo $id; ?> .uabb-icon-wrap .uabb-icon i:hover,
 		.fl-node-<?php echo $id; ?> .uabb-icon-wrap .uabb-icon i:hover:before {
-			<?php if ( 'simple' != $settings->icon_style ) : ?>
+			<?php if ( 'simple' !== $settings->icon_style ) : ?>
 				<?php if ( ! empty( $settings->icon_bg_hover_color ) ) : ?>
 				background: <?php echo $settings->icon_bg_hover_color; ?>;
 				<?php endif; ?>
@@ -172,7 +172,7 @@ if ( 'none' != $settings->image_type ) :
 				background: -ms-linear-gradient(top,  <?php echo $bg_hover_grad_start; ?> 0%,<?php echo $settings->icon_bg_hover_color; ?> 100%); /* IE10+ */
 				background: linear-gradient(to bottom,  <?php echo $bg_hover_grad_start; ?> 0%,<?php echo $settings->icon_bg_hover_color; ?> 100%); /* W3C */
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $bg_hover_grad_start; ?>', endColorstr='<?php echo $settings->icon_bg_hover_color; ?>',GradientType=0 ); /* IE6-9 */
-				/*<?php if ( 'circle' == $settings->icon_style || 'square' == $settings->icon_style ) : ?>
+				/*<?php if ( 'circle' === $settings->icon_style || 'square' === $settings->icon_style ) : ?>
 					border: 1px solid <?php echo $border_hover_color; ?>;
 				<?php endif; ?>  */  
 				<?php endif; ?>
@@ -181,7 +181,7 @@ if ( 'none' != $settings->image_type ) :
 			color: <?php echo $settings->icon_hover_color; ?>;
 
 			<?php /* Border Style */ ?>
-			<?php if ( 'custom' == $settings->icon_style && 'none' != $settings->icon_border_style ) : ?>
+			<?php if ( 'custom' === $settings->icon_style && 'none' !== $settings->icon_border_style ) : ?>
 				<?php if ( ! empty( $settings->icon_border_color ) ) : ?>
 					border-color: <?php echo $settings->icon_border_hover_color; ?>;
 				<?php endif; ?>
@@ -193,23 +193,23 @@ if ( 'none' != $settings->image_type ) :
 		}
 		/* Icon Css End */
 		<?php
-	} elseif ( 'photo' == $settings->image_type ) {
+	} elseif ( 'photo' === $settings->image_type ) {
 		?>
 
 		.fl-node-<?php echo $id; ?> .uabb-image .uabb-photo-img {
 			<?php if ( '' !== $settings->img_size ) : ?>
 				width: <?php echo $settings->img_size; ?>px;
 			<?php endif; ?>
-			<?php if ( 'custom' == $settings->image_style && '' !== $settings->img_bg_size ) : ?>
+			<?php if ( 'custom' === $settings->image_style && '' !== $settings->img_bg_size ) : ?>
 				padding: <?php echo $settings->img_bg_size; ?>px;
 			<?php endif; ?>
 		}
 
 		.fl-node-<?php echo $id; ?> .uabb-image .uabb-image-content{
 			<?php /* Border Style */ ?>
-			<?php if ( 'custom' == $settings->image_style ) : ?>
+			<?php if ( 'custom' === $settings->image_style ) : ?>
 
-				<?php if ( 'none' != $settings->img_border_style ) : ?>
+				<?php if ( 'none' !== $settings->img_border_style ) : ?>
 					border-style: <?php echo $settings->img_border_style; ?>;
 				<?php endif; ?>
 
@@ -236,7 +236,7 @@ if ( 'none' != $settings->image_type ) :
 				}
 		<?php } ?>
 
-		<?php if ( 'custom' == $settings->image_style ) : ?>
+		<?php if ( 'custom' === $settings->image_style ) : ?>
 		.fl-node-<?php echo $id; ?> .uabb-image-content:hover {
 
 			<?php if ( ! empty( $settings->img_bg_hover_color ) ) : ?>

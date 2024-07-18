@@ -101,10 +101,10 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 }
 
 
-<?php if ( 'custom' != $settings->color_scheme ) { ?>
+<?php if ( 'custom' !== $settings->color_scheme ) { ?>
 	<?php
-	if ( 'black' == $settings->color_scheme ) {
-		if ( 'design01' == $settings->box_design || 'design03' == $settings->box_design ) {
+	if ( 'black' === $settings->color_scheme ) {
+		if ( 'design01' === $settings->box_design || 'design03' === $settings->box_design ) {
 			$bg_color_code = '#333333';
 			$icon_bg_color = '#333333';
 		} elseif ( 'design02' == $settings->box_design ) {

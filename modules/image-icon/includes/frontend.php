@@ -6,10 +6,10 @@
  */
 
 ?>
-<?php if ( 'none' != $settings->image_type && '' != $settings->image_type ) { ?>
+<?php if ( 'none' !== $settings->image_type && '' !== $settings->image_type ) { ?>
 <div class="uabb-module-content uabb-imgicon-wrap"><?php /* Module Wrap */ ?>
 	<?php /*Icon Html */ ?>
-	<?php if ( 'icon' == $settings->image_type ) { ?>
+	<?php if ( 'icon' === $settings->image_type ) { ?>
 		<span class="uabb-icon-wrap">
 			<span class="uabb-icon">
 				<i class="<?php echo esc_attr( $settings->icon ); ?>"></i>
@@ -17,7 +17,7 @@
 		</span>
 	<?php } // Icon Html End. ?>
 
-	<?php if ( 'photo' == $settings->image_type ) { // Photo Html. ?>
+	<?php if ( 'photo' === $settings->image_type ) { // Photo Html. ?>
 		<?php
 			$classes = $module->get_classes();
 			$src     = $module->get_src();

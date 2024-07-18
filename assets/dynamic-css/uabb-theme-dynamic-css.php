@@ -4,6 +4,7 @@
  *
  * @package UABB Theme Dynamic CSS file
  */
+
 ob_start();
 ?>
 
@@ -26,19 +27,19 @@ ob_start();
 	font-weight: <?php echo $uabb_theme_btn_family['weight']; ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_font_size( '' ) != '' ) { ?>
+	<?php if ( uabb_theme_button_font_size( '' ) !== '' ) { ?>
 	font-size: <?php echo uabb_theme_button_font_size( '' ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_line_height( '' ) != '' ) { ?>
+	<?php if ( uabb_theme_button_line_height( '' ) !== '' ) { ?>
 	line-height: <?php echo uabb_theme_button_line_height( '' ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_letter_spacing( '' ) != '' ) { ?>
+	<?php if ( uabb_theme_button_letter_spacing( '' ) !== '' ) { ?>
 	letter-spacing: <?php echo uabb_theme_button_letter_spacing( '' ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_text_transform( '' ) != '' ) { ?>
+	<?php if ( uabb_theme_button_text_transform( '' ) !== '' ) { ?>
 	text-transform: <?php echo uabb_theme_button_text_transform( '' ); ?>;
 	<?php } ?>
 }
@@ -53,19 +54,19 @@ ob_start();
 	font-weight: <?php echo $uabb_theme_btn_family['weight']; ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_font_size( '' ) != '' ) { ?>
+	<?php if ( uabb_theme_button_font_size( '' ) !== '' ) { ?>
 	font-size: <?php echo uabb_theme_button_font_size( '' ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_line_height( '' ) != '' ) { ?>
+	<?php if ( uabb_theme_button_line_height( '' ) !== '' ) { ?>
 	line-height: <?php echo uabb_theme_button_line_height( '' ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_letter_spacing( '' ) != '' ) { ?>
+	<?php if ( uabb_theme_button_letter_spacing( '' ) !== '' ) { ?>
 	letter-spacing: <?php echo uabb_theme_button_letter_spacing( '' ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_text_transform( '' ) != '' ) { ?>
+	<?php if ( uabb_theme_button_text_transform( '' ) !== '' ) { ?>
 	text-transform: <?php echo uabb_theme_button_text_transform( '' ); ?>;
 	<?php } ?>
 }
