@@ -18,7 +18,7 @@ if ( isset( $settings->it_link_nofollow ) ) {
 	<div class="info-table">
 		<div class="info-table-heading">
 			<?php echo '<' . esc_attr( $settings->heading_tag_selection ) . " class='info-table-main-heading'>"; ?>
-			<?php echo esc_html( $settings->it_title );  ?>
+			<?php echo esc_html( $settings->it_title ); ?>
 			<?php echo '</' . esc_attr( $settings->heading_tag_selection ) . '>'; ?>
 
 			<?php echo '<' . esc_attr( $settings->sub_heading_tag_selection ) . " class='info-table-sub-heading'>"; ?>

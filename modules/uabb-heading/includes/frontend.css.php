@@ -118,7 +118,7 @@ if ( '' != $settings->separator_style ) {
 
 <?php /* Heading's Description Typography */ ?>
 <?php if ( ! $version_bb_check ) { ?>
-	.fl-node-<?php echo esc_attr( $id ) ; ?> .uabb-text-editor {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-text-editor {
 		<?php if ( ! empty( $settings->desc_font_family ) && 'Default' != $settings->desc_font_family['family'] ) : ?>
 			<?php UABB_Helper::uabb_font_css( $settings->desc_font_family ); ?>
 		<?php endif; ?>
@@ -302,7 +302,7 @@ if ( '' != $settings->separator_style ) {
 		width: <?php echo esc_attr( $position ); ?>%;
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-side-right{
-		width: <?php echo esc_attr ( 100 - $position ); ?>%;
+		width: <?php echo esc_attr( 100 - $position ); ?>%;
 	}
 
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-divider-content {
@@ -460,7 +460,7 @@ if ( 'line_text' == $settings->separator_style || 'line_image' == $settings->sep
 					echo ( '' !== $settings->heading_padding_bottom_medium ) ? 'padding-bottom:' . esc_attr( $settings->heading_padding_bottom_medium ) . 'px;' : '';
 				}
 				if ( isset( $settings->heading_padding_left_medium ) ) {
-					echo ( '' !== $settings->heading_padding_left_medium ) ? 'padding-left:' . esc_attr( $settings->heading_padding_left_medium ). 'px;' : '';
+					echo ( '' !== $settings->heading_padding_left_medium ) ? 'padding-left:' . esc_attr( $settings->heading_padding_left_medium ) . 'px;' : '';
 				}
 				?>
 			}

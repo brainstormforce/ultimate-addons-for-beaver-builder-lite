@@ -648,7 +648,7 @@ if ( ! $version_bb_check ) {
 			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector,
 			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector,
 			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-left li .uabb-info-list-connector-top,
-			.fl-node-<?php echo esc_attr( $id ) ; ?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector-top {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-right li .uabb-info-list-connector-top {
 				display: none;
 			}
 		<?php } ?>

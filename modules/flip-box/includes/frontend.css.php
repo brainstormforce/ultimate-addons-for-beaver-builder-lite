@@ -59,7 +59,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 	if ( 'color' == $settings->front_background_type ) {
 		echo ( '' != $settings->front_background_color ) ? 'background-color: ' . esc_attr( $settings->front_background_color ) . ';' : '';
 	} else {
-		echo ( '' != $settings->front_bg_image_src ) ? 'background: url( "' . esc_url( $settings->front_bg_image_src  ). '");' : '';
+		echo ( '' != $settings->front_bg_image_src ) ? 'background: url( "' . esc_url( $settings->front_bg_image_src ) . '");' : '';
 		echo ( 'no' != $settings->front_bg_image_repeat ) ? 'background-repeat: repeat;' : 'background-repeat: no-repeat;';
 		echo ( '' != $settings->front_bg_image_display ) ? 'background-size: ' . esc_attr( $settings->front_bg_image_display ) . ';' : '';
 		echo ( '' != $settings->front_bg_image_pos ) ? 'background-position: ' . esc_attr( $settings->front_bg_image_pos ) . ';' : '';
@@ -251,9 +251,9 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-back .uabb-text-editor {
 	color : <?php echo esc_attr( uabb_theme_text_color( $settings->back_desc_typography_color ) ); ?>;
 	<?php
-	echo ( '' != $settings->back_desc_typography_margin_top ) ? 'margin-top: ' . esc_attr( $settings->back_desc_typography_margin_top ). 'px;' : 'margin-top: 0;';
+	echo ( '' != $settings->back_desc_typography_margin_top ) ? 'margin-top: ' . esc_attr( $settings->back_desc_typography_margin_top ) . 'px;' : 'margin-top: 0;';
 
-	echo ( '' != $settings->back_desc_typography_margin_bottom ) ? 'margin-bottom: ' . esc_attr( $settings->back_desc_typography_margin_bottom ). 'px;' : 'margin-bottom: 0;';
+	echo ( '' != $settings->back_desc_typography_margin_bottom ) ? 'margin-bottom: ' . esc_attr( $settings->back_desc_typography_margin_bottom ) . 'px;' : 'margin-bottom: 0;';
 	?>
 }
 <?php if ( ! $version_bb_check ) { ?>
@@ -306,7 +306,7 @@ if ( 'uabb-custom-height' == $settings->flip_box_min_height_options ) {
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-imgicon-wrap {
 	<?php
 	echo ( '' != $settings->icon_margin_top ) ? 'margin-top: ' . esc_attr( $settings->icon_margin_top ) . 'px;' : 'margin-top: 25px;';
-	echo ( '' != $settings->icon_margin_bottom ) ? 'margin-bottom: ' . esc_attr( $settings->icon_margin_bottom ). 'px;' : 'margin-bottom: 15px;';
+	echo ( '' != $settings->icon_margin_bottom ) ? 'margin-bottom: ' . esc_attr( $settings->icon_margin_bottom ) . 'px;' : 'margin-bottom: 15px;';
 	?>
 }
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-back .uabb-back-text-title {
@@ -509,7 +509,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 				echo ( '' != $settings->inner_padding_dimension_left_responsive ) ? 'padding-left:' . esc_attr( $settings->inner_padding_dimension_left_responsive ) . 'px;' : '';
 			}
 			if ( isset( $settings->inner_padding_dimension_right_responsive ) ) {
-				echo ( '' != $settings->inner_padding_dimension_right_responsive ) ? 'padding-right:' . esc_attr( $settings->inner_padding_dimension_right_responsive ). 'px;' : '';
+				echo ( '' != $settings->inner_padding_dimension_right_responsive ) ? 'padding-right:' . esc_attr( $settings->inner_padding_dimension_right_responsive ) . 'px;' : '';
 			}
 			?>
 		}

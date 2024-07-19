@@ -18,7 +18,7 @@ global $wp_embed;
 						<?php $module->render_image(); ?>
 						<?php
 						if ( 'line_text' == $settings->separator_style ) {
-							echo '<' . esc_attr( $settings->separator_text_tag_selection ) . ' class="uabb-divider-text">' . esc_attr( $settings->text_inline ) . '</' . esc_attr( $settings->separator_text_tag_selection ). '>';
+							echo '<' . esc_attr( $settings->separator_text_tag_selection ) . ' class="uabb-divider-text">' . esc_attr( $settings->text_inline ) . '</' . esc_attr( $settings->separator_text_tag_selection ) . '>';
 						}
 						?>
 					</div>			 		    

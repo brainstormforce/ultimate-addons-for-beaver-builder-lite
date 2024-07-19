@@ -94,27 +94,30 @@ if ( 'none' !== $settings->image_type ) :
 				line-height:
 					<?php
 					echo esc_attr(
-					( ( 'custom' != $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
-					+
-					( ( 'custom' === $settings->icon_style ) ? $settings->icon_bg_size : 0 )
-							. 'px;' );
+						( ( 'custom' != $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
+						+
+						( ( 'custom' === $settings->icon_style ) ? $settings->icon_bg_size : 0 )
+						. 'px;'
+					);
 					?>
 
 				height:
 					<?php
 					echo esc_attr(
-					( ( 'custom' != $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
-					+
-					( ( 'custom' === $settings->icon_style ) ? $settings->icon_bg_size : 0 )
-						. 'px;' );
+						( ( 'custom' != $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
+						+
+						( ( 'custom' === $settings->icon_style ) ? $settings->icon_bg_size : 0 )
+						. 'px;'
+					);
 					?>
 				width:
 					<?php
 					echo esc_attr(
-					( ( 'custom' != $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
-					+
-					( ( 'custom' === $settings->icon_style ) ? $settings->icon_bg_size : 0 )
-					. 'px;' );
+						( ( 'custom' != $settings->icon_style ) ? ( $settings->icon_size * 2 ) : $settings->icon_size )
+						+
+						( ( 'custom' === $settings->icon_style ) ? $settings->icon_bg_size : 0 )
+						. 'px;'
+					);
 					?>
 				text-align: center;
 					<?php

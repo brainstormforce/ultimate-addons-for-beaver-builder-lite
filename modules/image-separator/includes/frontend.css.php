@@ -62,7 +62,7 @@ $settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'i
 		-moz-transform: translate(0%, -<?php echo esc_attr( $settings->gutter ); ?>%);
 				transform: translate(0%, -<?php echo esc_attr( $settings->gutter ); ?>%);
 		<?php } elseif ( 'right' == $settings->image_position_lr ) { ?>
-		right: <?php echo esc_attr ( $settings->gutter_lr ); ?>%;
+		right: <?php echo esc_attr( $settings->gutter_lr ); ?>%;
 		left: auto;
 		-webkit-transform: translate(0%, -<?php echo esc_attr( $settings->gutter ); ?>%);
 		-moz-transform: translate(0%, -<?php echo esc_attr( $settings->gutter ); ?>%);

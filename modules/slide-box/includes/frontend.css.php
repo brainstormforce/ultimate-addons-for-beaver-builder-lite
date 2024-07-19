@@ -503,7 +503,7 @@ if ( 'style1' == $settings->slide_type ) {
 	<?php
 		echo ( '' != $settings->front_title_color ) ? 'color: ' . esc_attr( $settings->front_title_color ) . ';' : '';
 		echo ( '' != $settings->front_title_margin_top ) ? 'margin-top: ' . esc_attr( $settings->front_title_margin_top ) . 'px;' : '';
-		echo ( '' != $settings->front_title_margin_bottom ) ? 'margin-bottom: ' . esc_attr( $settings->front_title_margin_bottom ). 'px;' : 'margin-bottom: 15px;';
+		echo ( '' != $settings->front_title_margin_bottom ) ? 'margin-bottom: ' . esc_attr( $settings->front_title_margin_bottom ) . 'px;' : 'margin-bottom: 15px;';
 	?>
 }
 /* Font Front Slide Heading (Desktop). */
@@ -524,7 +524,7 @@ if ( 'style1' == $settings->slide_type ) {
 		<?php } ?>
 
 		<?php if ( 'yes' === $converted || isset( $settings->front_title_line_height_unit ) && '' != $settings->front_title_line_height_unit ) { ?>
-			line-height: <?php echo  esc_attr($settings->front_title_line_height_unit ); ?>em;  
+			line-height: <?php echo  esc_attr( $settings->front_title_line_height_unit ); ?>em;  
 		<?php } elseif ( isset( $settings->front_title_line_height_unit ) && '' == $settings->front_title_line_height_unit && isset( $settings->front_title_line_height['desktop'] ) && '' != $settings->front_title_line_height['desktop'] ) { ?>
 			line-height: <?php echo esc_attr( $settings->front_title_line_height['desktop'] ); ?>px;
 		<?php } ?>
@@ -854,7 +854,7 @@ if ( 'style1' == $settings->slide_type ) {
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-wrap .uabb-slide-front {
 			<?php
 			if ( isset( $settings->front_padding_dimension_top_responsive ) ) {
-				echo ( '' != $settings->front_padding_dimension_top_responsive ) ? 'padding-top:' . esc_attr( $settings->front_padding_dimension_top_responsive ). 'px;' : '';
+				echo ( '' != $settings->front_padding_dimension_top_responsive ) ? 'padding-top:' . esc_attr( $settings->front_padding_dimension_top_responsive ) . 'px;' : '';
 			}
 			if ( isset( $settings->front_padding_dimension_bottom_responsive ) ) {
 				echo ( '' != $settings->front_padding_dimension_bottom_responsive ) ? 'padding-bottom:' . esc_attr( $settings->front_padding_dimension_bottom_responsive ) . 'px;' : '';
@@ -946,7 +946,7 @@ if ( 'style1' == $settings->slide_type ) {
 				<?php if ( 'yes' === $converted || isset( $settings->front_title_font_size_unit_responsive ) && '' != $settings->front_title_font_size_unit_responsive ) { ?>
 					font-size: <?php echo esc_attr( $settings->front_title_font_size_unit_responsive ); ?>px;
 					<?php if ( '' == $settings->front_title_line_height_unit_responsive && '' != $settings->front_title_font_size_unit_responsive ) { ?>
-						line-height: <?php echo esc_attr( $settings->front_title_font_size_unit_responsive )+ 2; ?>px;
+						line-height: <?php echo esc_attr( $settings->front_title_font_size_unit_responsive ) + 2; ?>px;
 					<?php } ?>      
 				<?php } elseif ( isset( $settings->front_title_font_size_unit_responsive ) && '' == $settings->front_title_font_size_unit_responsive && isset( $settings->front_title_font_size['small'] ) && '' != $settings->front_title_font_size['small'] ) { ?>
 					font-size: <?php echo esc_attr( $settings->front_title_font_size['small'] ); ?>px;
