@@ -38,11 +38,11 @@ class UABBHeadingModule extends FLBuilderModule {
 	 * @method render_image
 	 */
 	public function render_image() {
-		if ( 'line_image' == $this->settings->separator_style || 'line_icon' == $this->settings->separator_style ) {
+		if ( 'line_image' === $this->settings->separator_style || 'line_icon' === $this->settings->separator_style ) {
 			$imageicon_array = array(
 
 				/* General Section */
-				'image_type'   => ( 'line_image' == $this->settings->separator_style ) ? 'photo' : ( ( 'line_icon' == $this->settings->separator_style ) ? 'icon' : '' ),
+				'image_type'   => ( 'line_image' === $this->settings->separator_style ) ? 'photo' : ( ( 'line_icon' === $this->settings->separator_style ) ? 'icon' : '' ),
 
 				/* Icon Basics */
 				'icon'         => $this->settings->icon,
@@ -59,13 +59,13 @@ class UABBHeadingModule extends FLBuilderModule {
 			);
 
 			/* Render HTML Function */
-			if ( 'line_image' == $this->settings->separator_style ) {
+			if ( 'line_image' === $this->settings->separator_style ) {
 				echo '<div class="uabb-image-outter-wrap">';
 			}
 
 			FLBuilder::render_module_html( 'image-icon', $imageicon_array );
 
-			if ( 'line_image' == $this->settings->separator_style ) {
+			if ( 'line_image' === $this->settings->separator_style ) {
 				echo '</div>';
 			}
 		}
@@ -84,7 +84,7 @@ class UABBHeadingModule extends FLBuilderModule {
 		$page_migrated           = UABB_Lite_Compatibility::check_old_page_migration();
 		$stable_version_new_page = UABB_Lite_Compatibility::check_stable_version_new_page();
 
-		if ( $version_bb_check && ( 'yes' == $page_migrated || 'yes' == $stable_version_new_page ) ) {
+		if ( $version_bb_check && ( 'yes' === $page_migrated || 'yes' === $stable_version_new_page ) ) {
 
 			if ( ! isset( $settings->font_typo ) || ! is_array( $settings->font_typo ) ) {
 
@@ -101,7 +101,7 @@ class UABBHeadingModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->font['weight'] ) ) {
 
-					if ( 'regular' == $settings->font['weight'] ) {
+					if ( 'regular' === $settings->font['weight'] ) {
 						$settings->font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->font_typo['font_weight'] = $settings->font['weight'];
@@ -168,7 +168,7 @@ class UABBHeadingModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->desc_font_family['weight'] ) ) {
 
-					if ( 'regular' == $settings->desc_font_family['weight'] ) {
+					if ( 'regular' === $settings->desc_font_family['weight'] ) {
 						$settings->desc_font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->desc_font_typo['font_weight'] = $settings->desc_font_family['weight'];
@@ -236,7 +236,7 @@ class UABBHeadingModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->separator_text_font_family['weight'] ) ) {
 
-					if ( 'regular' == $settings->separator_text_font_family['weight'] ) {
+					if ( 'regular' === $settings->separator_text_font_family['weight'] ) {
 						$settings->separator_font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->separator_font_typo['font_weight'] = $settings->separator_text_font_family['weight'];
@@ -288,7 +288,7 @@ class UABBHeadingModule extends FLBuilderModule {
 				);
 				unset( $settings->separator_text_line_height_unit_responsive );
 			}
-		} elseif ( $version_bb_check && 'yes' != $page_migrated ) {
+		} elseif ( $version_bb_check && 'yes' !== $page_migrated ) {
 			if ( ! isset( $settings->font_typo ) || ! is_array( $settings->font_typo ) ) {
 
 				$settings->font_typo            = array();
@@ -304,7 +304,7 @@ class UABBHeadingModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->font['weight'] ) ) {
 
-					if ( 'regular' == $settings->font['weight'] ) {
+					if ( 'regular' === $settings->font['weight'] ) {
 						$settings->font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->font_typo['font_weight'] = $settings->font['weight'];
@@ -333,7 +333,7 @@ class UABBHeadingModule extends FLBuilderModule {
 					'unit'   => 'px',
 				);
 			}
-			if ( isset( $settings->heading_line_height['desktop'] ) && isset( $settings->heading_font_size['desktop'] ) && 0 != $settings->heading_font_size['desktop'] && ! isset( $settings->font_typo['line_height'] ) ) {
+			if ( isset( $settings->heading_line_height['desktop'] ) && isset( $settings->heading_font_size['desktop'] ) && 0 !== $settings->heading_font_size['desktop'] && ! isset( $settings->font_typo['line_height'] ) ) {
 				if ( is_numeric( $settings->heading_line_height['desktop'] ) && is_numeric( $settings->heading_font_size['desktop'] ) ) {
 					$settings->font_typo['line_height'] = array(
 						'length' => round( $settings->heading_line_height['desktop'] / $settings->heading_font_size['desktop'], 2 ),
@@ -341,7 +341,7 @@ class UABBHeadingModule extends FLBuilderModule {
 					);
 				}
 			}
-			if ( isset( $settings->heading_line_height['medium'] ) && isset( $settings->heading_font_size['medium'] ) && 0 != $settings->heading_font_size['medium'] && ! isset( $settings->font_typo_medium['line_height'] ) ) {
+			if ( isset( $settings->heading_line_height['medium'] ) && isset( $settings->heading_font_size['medium'] ) && 0 !== $settings->heading_font_size['medium'] && ! isset( $settings->font_typo_medium['line_height'] ) ) {
 				if ( is_numeric( $settings->heading_line_height['medium'] ) && is_numeric( $settings->heading_font_size['medium'] ) ) {
 					$settings->font_typo_medium['line_height'] = array(
 						'length' => round( $settings->heading_line_height['medium'] / $settings->heading_font_size['medium'], 2 ),
@@ -349,7 +349,7 @@ class UABBHeadingModule extends FLBuilderModule {
 					);
 				}
 			}
-			if ( isset( $settings->heading_line_height['small'] ) && isset( $settings->heading_font_size['small'] ) && 0 != $settings->heading_font_size['small'] && ! isset( $settings->font_typo_responsive['line_height'] ) ) {
+			if ( isset( $settings->heading_line_height['small'] ) && isset( $settings->heading_font_size['small'] ) && 0 !== $settings->heading_font_size['small'] && ! isset( $settings->font_typo_responsive['line_height'] ) ) {
 				if ( is_numeric( $settings->heading_line_height['small'] ) && is_numeric( $settings->heading_font_size['small'] ) ) {
 					$settings->font_typo_responsive['line_height'] = array(
 						'length' => round( $settings->heading_line_height['small'] / $settings->heading_font_size['small'], 2 ),
@@ -372,7 +372,7 @@ class UABBHeadingModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->desc_font_family['weight'] ) ) {
 
-					if ( 'regular' == $settings->desc_font_family['weight'] ) {
+					if ( 'regular' === $settings->desc_font_family['weight'] ) {
 						$settings->desc_font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->desc_font_typo['font_weight'] = $settings->desc_font_family['weight'];
@@ -399,7 +399,7 @@ class UABBHeadingModule extends FLBuilderModule {
 					'unit'   => 'px',
 				);
 			}
-			if ( isset( $settings->description_line_height['desktop'] ) && isset( $settings->description_font_size['desktop'] ) && 0 != $settings->description_font_size['desktop'] && ! isset( $settings->description_line_height_unit ) ) {
+			if ( isset( $settings->description_line_height['desktop'] ) && isset( $settings->description_font_size['desktop'] ) && 0 !== $settings->description_font_size['desktop'] && ! isset( $settings->description_line_height_unit ) ) {
 				if ( is_numeric( $settings->description_line_height['desktop'] ) && is_numeric( $settings->description_font_size['desktop'] ) ) {
 					$settings->desc_font_typo['line_height'] = array(
 						'length' => round( $settings->description_line_height['desktop'] / $settings->description_font_size['desktop'], 2 ),
@@ -407,7 +407,7 @@ class UABBHeadingModule extends FLBuilderModule {
 					);
 				}
 			}
-			if ( isset( $settings->description_line_height['medium'] ) && isset( $settings->description_font_size['medium'] ) && 0 != $settings->description_font_size['medium'] && ! isset( $settings->description_line_height_unit_medium ) ) {
+			if ( isset( $settings->description_line_height['medium'] ) && isset( $settings->description_font_size['medium'] ) && 0 !== $settings->description_font_size['medium'] && ! isset( $settings->description_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->description_line_height['medium'] ) && is_numeric( $settings->description_font_size['medium'] ) ) {
 					$settings->desc_font_typo_medium['line_height'] = array(
 						'length' => round( $settings->description_line_height['medium'] / $settings->description_font_size['medium'], 2 ),
@@ -415,7 +415,7 @@ class UABBHeadingModule extends FLBuilderModule {
 					);
 				}
 			}
-			if ( isset( $settings->description_line_height['small'] ) && isset( $settings->description_font_size['small'] ) && 0 != $settings->description_font_size['small'] && ! isset( $settings->description_line_height_unit_responsive ) ) {
+			if ( isset( $settings->description_line_height['small'] ) && isset( $settings->description_font_size['small'] ) && 0 !== $settings->description_font_size['small'] && ! isset( $settings->description_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->description_line_height['small'] ) && is_numeric( $settings->description_font_size['small'] ) ) {
 					$settings->desc_font_typo_responsive['line_height'] = array(
 						'length' => round( $settings->description_line_height['small'] / $settings->description_font_size['small'], 2 ),
@@ -438,7 +438,7 @@ class UABBHeadingModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->separator_text_font_family['weight'] ) ) {
 
-					if ( 'regular' == $settings->separator_text_font_family['weight'] ) {
+					if ( 'regular' === $settings->separator_text_font_family['weight'] ) {
 						$settings->separator_font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->separator_font_typo['font_weight'] = $settings->separator_text_font_family['weight'];
@@ -464,7 +464,7 @@ class UABBHeadingModule extends FLBuilderModule {
 					'unit'   => 'px',
 				);
 			}
-			if ( isset( $settings->separator_text_line_height['desktop'] ) && isset( $settings->separator_text_font_size['desktop'] ) && 0 != $settings->separator_text_font_size['desktop'] && ! isset( $settings->separator_text_line_height_unit ) ) {
+			if ( isset( $settings->separator_text_line_height['desktop'] ) && isset( $settings->separator_text_font_size['desktop'] ) && 0 !== $settings->separator_text_font_size['desktop'] && ! isset( $settings->separator_text_line_height_unit ) ) {
 				if ( is_numeric( $settings->separator_text_line_height['desktop'] ) && is_numeric( $settings->separator_text_font_size['desktop'] ) ) {
 					$settings->separator_font_typo['line_height'] = array(
 						'length' => round( $settings->separator_text_line_height['desktop'] / $settings->separator_text_font_size['desktop'], 2 ),
@@ -472,7 +472,7 @@ class UABBHeadingModule extends FLBuilderModule {
 					);
 				}
 			}
-			if ( isset( $settings->separator_text_line_height['medium'] ) && isset( $settings->separator_text_font_size['medium'] ) && 0 != $settings->separator_text_font_size['medium'] && ! isset( $settings->separator_text_line_height_unit_medium ) ) {
+			if ( isset( $settings->separator_text_line_height['medium'] ) && isset( $settings->separator_text_font_size['medium'] ) && 0 !== $settings->separator_text_font_size['medium'] && ! isset( $settings->separator_text_line_height_unit_medium ) ) {
 				if ( is_numeric( $settings->separator_text_line_height['medium'] ) && is_numeric( $settings->separator_text_font_size['medium'] ) ) {
 					$settings->separator_font_typo_medium['line_height'] = array(
 						'length' => round( $settings->separator_text_line_height['medium'] / $settings->separator_text_font_size['medium'], 2 ),
@@ -480,7 +480,7 @@ class UABBHeadingModule extends FLBuilderModule {
 					);
 				}
 			}
-			if ( isset( $settings->separator_text_line_height['small'] ) && isset( $settings->separator_text_font_size['small'] ) && 0 != $settings->separator_text_font_size['small'] && ! isset( $settings->separator_text_line_height_unit_responsive ) ) {
+			if ( isset( $settings->separator_text_line_height['small'] ) && isset( $settings->separator_text_font_size['small'] ) && 0 !== $settings->separator_text_font_size['small'] && ! isset( $settings->separator_text_line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->separator_text_line_height['small'] ) && is_numeric( $settings->separator_text_font_size['small'] ) ) {
 					$settings->separator_font_typo_responsive['line_height'] = array(
 						'length' => round( $settings->separator_text_line_height['small'] / $settings->separator_text_font_size['small'], 2 ),
