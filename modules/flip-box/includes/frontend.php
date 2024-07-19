@@ -29,11 +29,15 @@
 				</div>
 			</div><!-- END .front -->
 			<div class="uabb-face uabb-back">
+				<?php
+					$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'span' );
+					$tag = in_array( $settings->back_title_typography_tag_selection, $allowed_tags ) ? $settings->back_title_typography_tag_selection : 'h2';
+				?>
 				<div class="uabb-flip-box-section <?php echo ( 'no' != $settings->display_vertically_center ) ? 'uabb-flip-box-section-vertical-middle' : ''; ?>">
 					<?php
 					if ( '' != $settings->title_back ) {
 						?>
-					<<?php echo esc_attr( $settings->back_title_typography_tag_selection ); ?> class="uabb-back-text-title"><?php echo esc_attr( $settings->title_back ); ?></<?php echo esc_attr( $settings->back_title_typography_tag_selection ); ?>>
+					<<?php echo esc_attr( $tag ); ?> class="uabb-back-text-title"><?php echo esc_attr( $settings->title_back ); ?></<?php echo esc_attr( $tag ); ?>>
 						<?php
 					}
 					if ( '' != $settings->desc_back ) {
