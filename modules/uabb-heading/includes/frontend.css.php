@@ -83,13 +83,13 @@ if ( '' !== $settings->separator_style ) {
 			<?php UABB_Helper::uabb_font_css( $settings->font ); ?>
 		<?php endif; ?>
 
-		<?php if ( 'yes' === $converted || isset( $settings->new_font_size_unit ) && '' != $settings->new_font_size_unit ) { ?>
+		<?php if ( 'yes' === $converted || isset( $settings->new_font_size_unit ) && '' !== $settings->new_font_size_unit ) { ?>
 			font-size: <?php echo esc_attr( $settings->new_font_size_unit ); ?>px; 
-		<?php } elseif ( isset( $settings->new_font_size_unit ) && '' == $settings->new_font_size_unit && isset( $settings->new_font_size['desktop'] ) && '' != $settings->new_font_size['desktop'] ) { ?>
+		<?php } elseif ( isset( $settings->new_font_size_unit ) && '' === $settings->new_font_size_unit && isset( $settings->new_font_size['desktop'] ) && '' !== $settings->new_font_size['desktop'] ) { ?>
 			font-size: <?php echo esc_attr( $settings->new_font_size['desktop'] ); ?>px;
 		<?php } ?>
 
-		<?php if ( isset( $settings->new_font_size['desktop'] ) && '' === $settings->new_font_size['desktop'] && isset( $settings->line_height['desktop'] ) && '' !== $settings->line_height['desktop'] && '' == $settings->line_height_unit ) { ?>
+		<?php if ( isset( $settings->new_font_size['desktop'] ) && '' === $settings->new_font_size['desktop'] && isset( $settings->line_height['desktop'] ) && '' !== $settings->line_height['desktop'] && '' === $settings->line_height_unit ) { ?>
 			line-height: <?php echo esc_attr( $settings->line_height['desktop'] ); ?>px;
 		<?php } ?>
 		<?php if ( 'yes' === $converted || isset( $settings->line_height_unit ) && '' !== $settings->line_height_unit ) { ?> 
@@ -129,7 +129,7 @@ if ( '' !== $settings->separator_style ) {
 			font-size: <?php echo esc_attr( $settings->desc_font_size['desktop'] ); ?>px;
 		<?php } ?>
 
-		<?php if ( isset( $settings->desc_font_size['desktop'] ) && '' === $settings->desc_font_size['desktop'] && isset( $settings->desc_line_height['desktop'] ) && '' !== $settings->desc_line_height['desktop'] && '' == $settings->desc_line_height_unit ) { ?>
+		<?php if ( isset( $settings->desc_font_size['desktop'] ) && '' === $settings->desc_font_size['desktop'] && isset( $settings->desc_line_height['desktop'] ) && '' !== $settings->desc_line_height['desktop'] && '' === $settings->desc_line_height_unit ) { ?>
 			line-height: <?php echo esc_attr( $settings->desc_line_height['desktop'] ); ?>px;
 		<?php } ?>
 
@@ -176,7 +176,7 @@ if ( '' !== $settings->separator_style ) {
 <?php if ( 'line_icon' === $settings->separator_style || 'line_image' === $settings->separator_style || 'line_text' === $settings->separator_style ) { ?>
 
 	<?php
-	if ( 'line_image' == $settings->separator_style || 'line_icon' == $settings->separator_style ) {
+	if ( 'line_image' === $settings->separator_style || 'line_icon' === $settings->separator_style ) {
 
 		$imageicon_array = array(
 
@@ -231,7 +231,7 @@ if ( '' !== $settings->separator_style ) {
 					font-size: <?php echo esc_attr( $settings->separator_text_font_size['desktop'] ); ?>px;
 				<?php } ?>
 
-				<?php if ( isset( $settings->separator_text_font_size['desktop'] ) && '' === $settings->separator_text_font_size['desktop'] && isset( $settings->separator_text_line_height['desktop'] ) && '' !== $settings->separator_text_line_height['desktop'] && '' == $settings->separator_text_line_height_unit ) { ?>
+				<?php if ( isset( $settings->separator_text_font_size['desktop'] ) && '' === $settings->separator_text_font_size['desktop'] && isset( $settings->separator_text_line_height['desktop'] ) && '' !== $settings->separator_text_line_height['desktop'] && '' === $settings->separator_text_line_height_unit ) { ?>
 					line-height: <?php echo esc_attr( $settings->separator_text_line_height['desktop'] ); ?>px;
 				<?php } ?>
 				<?php if ( 'yes' === $converted || isset( $settings->separator_text_line_height_unit ) && '' !== $settings->separator_text_line_height_unit ) { ?>
@@ -327,7 +327,7 @@ if ( 'line_text' === $settings->separator_style || 'line_image' === $settings->s
 					<?php } elseif ( isset( $settings->separator_text_font_size_unit_medium ) && '' === $settings->separator_text_font_size_unit_medium && isset( $settings->separator_text_font_size['medium'] ) && '' !== $settings->separator_text_font_size['medium'] ) { ?>
 						font-size: <?php echo esc_attr( $settings->separator_text_font_size['medium'] ); ?>px;
 						<?php } ?>
-					<?php if ( isset( $settings->separator_text_font_size['medium'] ) && '' === $settings->separator_text_font_size['medium'] && isset( $settings->separator_text_line_height['medium'] ) && '' !== $settings->separator_text_line_height['medium'] && '' == $settings->separator_text_line_height_unit_medium && '' == $settings->separator_text_line_height_unit ) { ?>
+					<?php if ( isset( $settings->separator_text_font_size['medium'] ) && '' === $settings->separator_text_font_size['medium'] && isset( $settings->separator_text_line_height['medium'] ) && '' !== $settings->separator_text_line_height['medium'] && '' === $settings->separator_text_line_height_unit_medium && '' === $settings->separator_text_line_height_unit ) { ?>
 						line-height: <?php echo esc_attr( $settings->separator_text_line_height['medium'] ); ?>px;
 					<?php } ?>
 
@@ -356,10 +356,10 @@ if ( 'line_text' === $settings->separator_style || 'line_image' === $settings->s
 
 					<?php if ( 'yes' === $converted || isset( $settings->separator_text_font_size_unit_responsive ) && '' !== $settings->separator_text_font_size_unit_responsive ) { ?>
 						font-size: <?php echo esc_attr( $settings->separator_text_font_size_unit_responsive ); ?>px;
-					<?php } elseif ( isset( $settings->separator_text_font_size_unit_responsive ) && '' === $settings->separator_text_font_size_unit_responsive && isset( $settings->separator_text_font_size['small'] ) && '' != $settings->separator_text_font_size['small'] ) { ?>
+					<?php } elseif ( isset( $settings->separator_text_font_size_unit_responsive ) && '' === $settings->separator_text_font_size_unit_responsive && isset( $settings->separator_text_font_size['small'] ) && '' !== $settings->separator_text_font_size['small'] ) { ?>
 						font-size: <?php echo esc_attr( $settings->separator_text_font_size['small'] ); ?>px;
 					<?php } ?>
-					<?php if ( isset( $settings->separator_text_font_size['small'] ) && '' === $settings->separator_text_font_size['small'] && isset( $settings->separator_text_line_height['small'] ) && '' !== $settings->separator_text_line_height['small'] && '' == $settings->separator_text_line_height_unit_responsive && '' === $settings->separator_text_line_height_unit_medium && '' == $settings->separator_text_line_height_unit ) : ?>
+					<?php if ( isset( $settings->separator_text_font_size['small'] ) && '' === $settings->separator_text_font_size['small'] && isset( $settings->separator_text_line_height['small'] ) && '' !== $settings->separator_text_line_height['small'] && '' === $settings->separator_text_line_height_unit_responsive && '' === $settings->separator_text_line_height_unit_medium && '' === $settings->separator_text_line_height_unit ) : ?>
 							line-height: <?php echo esc_attr( $settings->separator_text_line_height['small'] ); ?>px;
 					<?php endif; ?>
 					<?php if ( 'yes' === $converted || isset( $settings->separator_text_line_height_unit_responsive ) && '' !== $settings->separator_text_line_height_unit_responsive ) { ?> 
@@ -487,7 +487,7 @@ if ( 'line_text' === $settings->separator_style || 'line_image' === $settings->s
 					<?php } elseif ( isset( $settings->new_font_size_unit_responsive ) && '' === $settings->new_font_size_unit_responsive && isset( $settings->new_font_size['small'] ) && '' !== $settings->new_font_size['small'] ) { ?>
 						font-size: <?php echo esc_attr( $settings->new_font_size['small'] ); ?>px;
 					<?php } ?>
-					<?php if ( isset( $settings->new_font_size['small'] ) && '' === $settings->new_font_size['small'] && isset( $settings->line_height['small'] ) && '' !== $settings->line_height['small'] && '' == $settings->line_height_unit_responsive && '' === $settings->line_height_unit_medium && '' === $settings->line_height_unit ) : ?>
+					<?php if ( isset( $settings->new_font_size['small'] ) && '' === $settings->new_font_size['small'] && isset( $settings->line_height['small'] ) && '' !== $settings->line_height['small'] && '' === $settings->line_height_unit_responsive && '' === $settings->line_height_unit_medium && '' === $settings->line_height_unit ) : ?>
 						line-height: <?php echo esc_attr( $settings->line_height['small'] ); ?>px;
 					<?php endif; ?>
 					<?php if ( 'yes' === $converted || isset( $settings->line_height_unit_responsive ) && '' !== $settings->line_height_unit_responsive ) { ?> 
@@ -505,7 +505,7 @@ if ( 'line_text' === $settings->separator_style || 'line_image' === $settings->s
 					<?php } elseif ( isset( $settings->desc_font_size_unit_responsive ) && '' === $settings->desc_font_size_unit_responsive && isset( $settings->desc_font_size['small'] ) && '' !== $settings->desc_font_size['small'] ) { ?>
 						font-size: <?php echo esc_attr( $settings->desc_font_size['small'] ); ?>px;
 					<?php } ?>
-					<?php if ( isset( $settings->desc_font_size['small'] ) && '' === $settings->desc_font_size['small'] && isset( $settings->desc_line_height['small'] ) && '' !== $settings->desc_line_height['small'] && '' === $settings->desc_line_height_unit_responsive && '' === $settings->desc_line_height_unit_medium && '' == $settings->desc_line_height_unit ) : ?>
+					<?php if ( isset( $settings->desc_font_size['small'] ) && '' === $settings->desc_font_size['small'] && isset( $settings->desc_line_height['small'] ) && '' !== $settings->desc_line_height['small'] && '' === $settings->desc_line_height_unit_responsive && '' === $settings->desc_line_height_unit_medium && '' === $settings->desc_line_height_unit ) : ?>
 							line-height: <?php echo esc_attr( $settings->desc_line_height['small'] ); ?>px;
 					<?php endif; ?>
 					<?php if ( 'yes' === $converted || isset( $settings->desc_line_height_unit_responsive ) && '' !== $settings->desc_line_height_unit_responsive ) { ?> 
