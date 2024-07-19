@@ -12,11 +12,11 @@
 	$settings->width  = ( '' !== trim( $settings->width ) ) ? $settings->width : '100';
 
 ?>
-.fl-node-<?php echo $id; ?> .uabb-separator {
-	border-top:<?php echo $settings->height; ?>px <?php echo $settings->style; ?> <?php echo $settings->color; ?>;
-	width: <?php echo $settings->width; ?>%;
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-separator {
+	border-top:<?php echo esc_attr( $settings->height ); ?>px <?php echo esc_attr( $settings->style ); ?> <?php echo esc_attr( $settings->color ); ?>;
+	width: <?php echo esc_attr( $settings->width ); ?>%;
 	display: inline-block;
 }
-.fl-node-<?php echo $id; ?> .uabb-separator-parent {
-	text-align: <?php echo $settings->alignment; ?>;
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-separator-parent {
+	text-align: <?php echo esc_attr( $settings->alignment ); ?>;
 }
