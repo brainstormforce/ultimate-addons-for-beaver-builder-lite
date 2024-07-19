@@ -39,7 +39,7 @@ $pos = $settings->front_img_icon_position;
 						<?php endif; ?>
 						<?php
 							// Define a whitelist of allowed tags
-							$allowed_tags    = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'span' );
+							$allowed_tags    = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
 							$front_title_tag = in_array( $settings->front_title_tag_selection, $allowed_tags ) ? $settings->front_title_tag_selection : 'h3';
 						?>
 						<?php if ( '' != $settings->title_front ) { ?>
@@ -75,7 +75,7 @@ $pos = $settings->front_img_icon_position;
 				<div class="uabb-slide-box-section- ">
 				<?php
 				// Define a whitelist of allowed tags
-					$allowed_tags   = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'span' );
+					$allowed_tags   = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
 					$back_title_tag = in_array( $settings->back_title_tag_selection, $allowed_tags ) ? $settings->back_title_tag_selection : 'h3';
 				?>
 				<?php

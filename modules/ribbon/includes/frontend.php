@@ -12,7 +12,7 @@
 ?>
 <?php
 // Define a whitelist of allowed tags
-	$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'span' );
+	$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
 	$ribbon_tag   = in_array( $settings->text_tag_selection, $allowed_tags ) ? $settings->text_tag_selection : 'h3';
 ?>
 <div class="uabb-ribbon-wrap">
