@@ -12,9 +12,9 @@
 $pos = $settings->front_img_icon_position;
 ?>
 <div class="uabb-module-content uabb-slide-box-wrap">
-	<div class="uabb-slide-type uabb-<?php echo $settings->slide_type; ?>" data-style="<?php echo $settings->slide_type; ?>">
-		<div id="uabb-slide-box-wrap-<?php echo $module->node; ?>" class="uabb-slide-box">
-			<div class="uabb-slide-face uabb-slide-front uabb-slide-<?php echo $settings->image_type . '-' . $pos; ?>">
+	<div class="uabb-slide-type uabb-<?php echo esc_attr( $settings->slide_type ); ?>" data-style="<?php echo esc_attr( $settings->slide_type ); ?>">
+		<div id="uabb-slide-box-wrap-<?php echo esc_attr( $module->node ); ?>" class="uabb-slide-box">
+			<div class="uabb-slide-face uabb-slide-front uabb-slide-<?php echo esc_attr( $settings->image_type ) . '-' . $pos; ?>">
 				<div class="uabb-slide-box-section "><!-- Inline Block Space Fix
 					<?php if ( 'none' != $settings->image_type ) : ?>
 						<?php if ( 'left' == $pos ) { ?>
@@ -38,7 +38,7 @@ $pos = $settings->front_img_icon_position;
 							</div><!-- Inline Block Space Fix
 						<?php endif; ?>
 						<?php if ( '' != $settings->title_front ) { ?>
-							--><<?php echo $settings->front_title_tag_selection; ?> class="uabb-slide-face-text-title"><?php echo $settings->title_front; ?></<?php echo $settings->front_title_tag_selection; ?>><!-- Inline Block Space Fix
+							--><<?php echo esc_attr( $settings->front_title_tag_selection ); ?> class="uabb-slide-face-text-title"><?php echo esc_attr( $settings->title_front ); ?></<?php echo esc_attr( $settings->front_title_tag_selection ); ?>><!-- Inline Block Space Fix
 						<?php } ?>
 						<?php if ( 'none' != $settings->image_type && 'right-title' == $pos ) : ?>
 							--><div class="uabb-slide-front-right-title-img">
@@ -71,7 +71,7 @@ $pos = $settings->front_img_icon_position;
 				<?php
 				if ( '' != $settings->title_back ) {
 					?>
-					<<?php echo $settings->back_title_tag_selection; ?> class="uabb-slide-back-text-title"><?php echo $settings->title_back; ?></<?php echo $settings->back_title_tag_selection; ?>>
+					<<?php echo esc_attr( $settings->back_title_tag_selection ); ?> class="uabb-slide-back-text-title"><?php echo esc_attr( $settings->title_back ); ?></<?php echo esc_attr( $settings->back_title_tag_selection ); ?>>
 					<?php
 				}
 				if ( '' != $settings->desc_back ) {
