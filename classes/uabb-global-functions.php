@@ -91,11 +91,11 @@ if ( ! function_exists( 'array_replace_recursive' ) ) {
 function uabb_theme_base_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb/global/theme_color', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_theme_color', $default );
 		}
 	} else {
@@ -115,11 +115,11 @@ function uabb_theme_base_color( $default ) {
 function uabb_theme_text_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb/global/text_color', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_text_color', $default );
 		}
 	} else {
@@ -139,11 +139,11 @@ function uabb_theme_text_color( $default ) {
 function uabb_theme_link_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb/global/link_color', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_link_color', $default );
 		}
 	} else {
@@ -162,11 +162,11 @@ function uabb_theme_link_color( $default ) {
 function uabb_theme_link_hover_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb/global/link_hover_color', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_link_hover_color', $default );
 		}
 	} else {
@@ -186,7 +186,7 @@ function uabb_theme_link_hover_color( $default ) {
 function uabb_theme_button_font_family( $default ) {
 	$btn_font_family = array();
 
-	if ( '' == $default['family'] || 'Default' == $default['family'] ) {
+	if ( '' === $default['family'] || 'Default' === $default['family'] ) {
 
 		$btn_font_family = apply_filters( 'uabb_theme_button_font_family', $default );
 
@@ -205,11 +205,11 @@ function uabb_theme_button_font_family( $default ) {
 function uabb_theme_button_font_size( $default ) {
 	$font_size = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$font_size = apply_filters( 'uabb/global/button_font_size', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $font_size ) {
+		if ( '' === $font_size ) {
 			$font_size = apply_filters( 'uabb_theme_button_font_size', $default );
 		} else {
 			$font_size = $font_size . 'px';
@@ -252,11 +252,11 @@ function uabb_theme_default_button_font_size( $default ) {
 function uabb_theme_button_line_height( $default ) {
 	$line_height = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$line_height = apply_filters( 'uabb/global/button_line_height', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $line_height ) {
+		if ( '' === $line_height ) {
 			$line_height = apply_filters( 'uabb_theme_button_line_height', $default );
 		} else {
 			$line_height = $line_height . 'px';
@@ -299,11 +299,11 @@ function uabb_theme_default_button_line_height( $default ) {
 function uabb_theme_button_letter_spacing( $default ) {
 	$letter_spacing = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$letter_spacing = apply_filters( 'uabb/global/button_letter_spacing', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $letter_spacing ) {
+		if ( '' === $letter_spacing ) {
 			$letter_spacing = apply_filters( 'uabb_theme_button_letter_spacing', $default );
 		} else {
 			$letter_spacing = $letter_spacing . 'px';
@@ -346,11 +346,11 @@ function uabb_theme_default_button_letter_spacing( $default ) {
 function uabb_theme_button_text_transform( $default ) {
 	$text_transform = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$text_transform = apply_filters( 'uabb/global/button_text_transform', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $text_transform ) {
+		if ( '' === $text_transform ) {
 			$text_transform = apply_filters( 'uabb_theme_button_text_transform', $default );
 		}
 	} else {
@@ -390,11 +390,11 @@ function uabb_theme_default_button_text_transform( $default ) {
 function uabb_theme_button_bg_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb/global/button_bg_color', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_button_bg_color', $default );
 		}
 	} else {
@@ -436,11 +436,11 @@ function uabb_theme_default_button_bg_color( $default ) {
 function uabb_theme_button_bg_hover_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb/global/button_bg_hover_color', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_button_bg_hover_color', $default );
 		}
 	} else {
@@ -483,11 +483,11 @@ function uabb_theme_default_button_bg_hover_color( $default ) {
 function uabb_theme_button_text_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb/global/button_text_color', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_button_text_color', $default );
 		}
 	} else {
@@ -531,11 +531,11 @@ function uabb_theme_default_button_text_color( $default ) {
 function uabb_theme_button_text_hover_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb/global/button_text_hover_color', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_button_text_hover_color', $default );
 		}
 	} else {
@@ -579,13 +579,13 @@ function uabb_theme_default_button_text_hover_color( $default ) {
 function uabb_theme_button_padding( $default ) {
 	$padding = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$padding = apply_filters( 'uabb/global/button_padding', $default );// @codingStandardsIgnoreLine.
 
 		if ( '' === $padding ) {
 			$padding = apply_filters( 'uabb/theme/button_padding', $default );// @codingStandardsIgnoreLine.
-			if ( '' == $padding ) {
+			if ( '' === $padding ) {
 				$padding = '12px 24px';
 			}
 		}
@@ -629,13 +629,13 @@ function uabb_theme_default_button_padding( $default ) {
 function uabb_theme_button_vertical_padding( $default ) {
 	$padding = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$padding = apply_filters( 'uabb/global/button_vertical_padding', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $padding ) {
+		if ( '' === $padding ) {
 			$padding = apply_filters( 'uabb_theme_button_vertical_padding', $default );
-			if ( '' == $padding ) {
+			if ( '' === $padding ) {
 				$padding = '12';
 			}
 		}
@@ -655,13 +655,13 @@ function uabb_theme_button_vertical_padding( $default ) {
 function uabb_theme_button_horizontal_padding( $default ) {
 	$padding = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$padding = apply_filters( 'uabb/global/button_horizontal_padding', $default );// @codingStandardsIgnoreLine.
 
-		if ( '' == $padding ) {
+		if ( '' === $padding ) {
 			$padding = apply_filters( 'uabb_theme_button_horizontal_padding', $default );
-			if ( '' == $padding ) {
+			if ( '' === $padding ) {
 				$padding = '24';
 			}
 		}
@@ -682,7 +682,7 @@ function uabb_theme_button_horizontal_padding( $default ) {
 function uabb_theme_button_border_radius( $default ) {
 	$radius = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$radius = apply_filters( 'uabb/global/button_border_radius', $default ); // @codingStandardsIgnoreLine.
 
@@ -731,11 +731,11 @@ function uabb_theme_button_border_width( $default ) {
 function uabb_theme_border_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb_global_border_color', $default );
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_border_color', $default );
 		}
 	} else {
@@ -747,7 +747,7 @@ function uabb_theme_border_color( $default ) {
 /**
  * Provide option to override the element defaults from theme options.
  *
- * @since 1.3.1 
+ * @since 1.3.1
  * @param var $default Checks if user has set the hover color, if yes, returns users value else checks for
  * filtered value.
  * @return string - hex value for the border hover color
@@ -755,11 +755,11 @@ function uabb_theme_border_color( $default ) {
 function uabb_theme_border_hover_color( $default ) {
 	$color = '';
 
-	if ( '' == $default ) {
+	if ( '' === $default ) {
 
 		$color = apply_filters( 'uabb_global_border_hover_color', $default );
 
-		if ( '' == $color ) {
+		if ( '' === $color ) {
 			$color = apply_filters( 'uabb_theme_border_hover_color', $default );
 		}
 	} else {
@@ -777,7 +777,7 @@ function uabb_theme_border_hover_color( $default ) {
 function uabb_parse_color_to_hex( $code = '' ) {
 	$color = '';
 	$hex   = '';
-	if ( '' != $code ) {
+	if ( '' !== $code ) {
 		if ( false !== strpos( $code, 'rgba' ) ) {
 			$code  = ltrim( $code, 'rgba(' );
 			$code  = rtrim( $code, ')' );
@@ -844,6 +844,7 @@ function uabb_theme_border( $default ) {
 }
 /**
  * Provide option to override the element defaults from theme options.
+ *
  * @since 1.3.1
  * @param var $default Checks if user has set the radius, if yes, returns users value else checks
  * for filtered value.
@@ -861,7 +862,6 @@ function uabb_theme_button_typography( $default ) {
 	$text_transform = uabb_theme_default_button_text_transform( '' );
 	$font_family    = uabb_theme_button_font_family( $font_family );
 	$letter_spacing = uabb_theme_default_button_letter_spacing( '' );
-
 
 	$typography['desktop-font_size']      = array();
 	$typography['desktop_font_family']    = array();
@@ -944,13 +944,13 @@ function uabb_theme_padding_button( $mode, $value ) {
 
 	$unit = $mode . '-unit';
 
-	if ( is_array( $padding ) && array_key_exists( $mode, $padding ) && array_key_exists( $value, $padding[$mode] ) ) {
+	if ( is_array( $padding ) && array_key_exists( $mode, $padding ) && array_key_exists( $value, $padding[ $mode ] ) ) {
 
-		$padding_unit = array_key_exists( $unit, $padding ) ? $padding[$unit] : 'px;';
+		$padding_unit = array_key_exists( $unit, $padding ) ? $padding[ $unit ] : 'px;';
 
-		$new_padding = $padding[$mode][$value] . $padding[$unit]; 
+		$new_padding = $padding[ $mode ][ $value ] . $padding[ $unit ];
 	}
-	
+
 	return $new_padding;
 }
 

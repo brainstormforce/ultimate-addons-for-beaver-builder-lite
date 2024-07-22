@@ -41,7 +41,7 @@
 						foreach ( $uabb_row_templates['categorized'] as $cat ) :
 
 							// avoid 'Uncategorized'.
-							if ( 'Uncategorized' != trim( $cat['name'] ) ) :
+							if ( 'Uncategorized' !== trim( $cat['name'] ) ) :
 								?>
 								<div class="fl-builder-blocks-section">
 									<span class="fl-builder-blocks-section-title">

@@ -65,7 +65,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 			$value    = (array) $value;
 			$preview  = json_encode( array( 'type' => 'refresh' ) );
 
-			$default   = ( isset( $field['default'] ) && '' != $field['default'] ) ? $field['default'] : '';
+			$default   = ( isset( $field['default'] ) && '' !== $field['default'] ) ? $field['default'] : '';
 			$direction = array(
 				'left_right' => 'Left to Right',
 				'right_left' => 'Right to Left',
@@ -105,7 +105,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 			$html .= '<select name="' . $name . '[][direction]' . '" class="uabb-gradient-direction-select">';
 			foreach ( $direction as $direction_key => $direction_value ) {
 				$selected = '';
-				if ( $direction_key == $value['direction'] ) {
+				if ( $direction_key === $value['direction'] ) {
 					$selected = 'selected="selected"';
 				}
 				$html .= '<option value="' . $direction_key . '" ' . $selected . '>' . $direction_value . '</option>';

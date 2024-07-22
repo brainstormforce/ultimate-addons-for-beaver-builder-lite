@@ -10,7 +10,7 @@
 	$alt     = $module->get_alt();
 ?>
 <div class="uabb-module-content uabb-imgseparator-wrap">
-	<?php if ( 'yes' == $settings->enable_link ) : ?>
+	<?php if ( 'yes' === $settings->enable_link ) : ?>
 	<a class="imgseparator-link" href="<?php echo esc_url( $settings->link ); ?>" target="<?php echo esc_attr( $settings->link_target ); ?>"></a>
 	<?php endif; ?>
 	<div class="uabb-image-separator uabb-image
@@ -19,6 +19,6 @@
 		echo ' uabb-image-crop-' . esc_attr( $settings->image_style );}
 	?>
 	" itemscope itemtype="http://schema.org/ImageObject">
-		<img class="<?php echo esc_attr( $classes ); ?> <?php echo ( '0' == $settings->img_animation_repeat ) ? 'infinite' : ''; ?>" src="<?php echo esc_url( $src ); ?>" alt="<?php echo esc_attr( $alt ); ?>" itemprop="image"/>
+		<img class="<?php echo esc_attr( $classes ); ?> <?php echo ( '0' === $settings->img_animation_repeat ) ? 'infinite' : ''; ?>" src="<?php echo esc_url( $src ); ?>" alt="<?php echo esc_attr( $alt ); ?>" itemprop="image"/>
 	</div>
 </div>

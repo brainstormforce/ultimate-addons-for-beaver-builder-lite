@@ -307,7 +307,7 @@ FLBuilder::register_module(
 							'media_buttons' => false,
 							'rows'          => 10,
 							'label'         => __( 'Description', 'uabb' ),
-							'default'       => __( '<ul><li>Enter description text here.</li><li>Enter description text here.</li></ul>', 'uabb' ),
+							'default'       => __( '<ul><li>Enter description text here.</li><li>Enter description text here.</li></ul>', 'uabb' ), //phpcs:ignore	WordPress.WP.I18n.NoHtmlWrappedStrings
 						),
 					),
 				),

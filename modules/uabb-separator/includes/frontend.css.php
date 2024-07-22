@@ -8,8 +8,8 @@
 ?>
 <?php
 	$settings->color  = uabb_theme_base_color( UABB_Helper::uabb_colorpicker( $settings, 'color' ) );
-	$settings->height = ( '' != trim( $settings->height ) ) ? $settings->height : '1';
-	$settings->width  = ( '' != trim( $settings->width ) ) ? $settings->width : '100';
+	$settings->height = ( '' !== trim( $settings->height ) ) ? $settings->height : '1';
+	$settings->width  = ( '' !== trim( $settings->width ) ) ? $settings->width : '100';
 
 ?>
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-separator {
