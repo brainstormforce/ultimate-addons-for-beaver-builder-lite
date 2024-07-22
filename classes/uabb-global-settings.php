@@ -31,7 +31,7 @@ class UABB_Global_Styling {
 
 		$global_options = UABB_Init::$uabb_options['uabb_global_settings'];
 
-		if ( ! isset( $global_options ) || '' == $global_options || ! is_array( $global_options ) ) {
+		if ( ! isset( $global_options ) || '' === $global_options || ! is_array( $global_options ) ) {
 
 			$default = array(
 				'enable_global'          => 'yes',

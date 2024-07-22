@@ -43,12 +43,12 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 			$branding_modules    = __( 'UABB Modules', 'uabb' );
 
 			// Branding - %s.
-			if ( is_array( $branding ) && array_key_exists( 'uabb-plugin-short-name', $branding ) && '' != $branding['uabb-plugin-short-name'] ) {
+			if ( is_array( $branding ) && array_key_exists( 'uabb-plugin-short-name', $branding ) && '' !== $branding['uabb-plugin-short-name'] ) {
 				$branding_name = $branding['uabb-plugin-short-name'];
 			}
 
 			// Branding - %s Modules.
-			if ( 'UABB' != $branding_name ) {
+			if ( 'UABB' !== $branding_name ) {
 				$branding_modules = sprintf( __( '%s Modules', 'uabb' ), $branding_name ); // @codingStandardsIgnoreLine.
 			}
 
@@ -590,7 +590,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				}
 			}
 
-			if ( false == $is_all_modules && isset( $uabb['all'] ) ) {
+			if ( false === $is_all_modules && isset( $uabb['all'] ) ) {
 				unset( $uabb['all'] );
 			}
 
@@ -627,7 +627,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 							/**
 							 *  Check [status] & [dat_url_local] exist
 							 */
-							if ( isset( $template_data['status'] ) && true == $template_data['status'] &&
+							if ( isset( $template_data['status'] ) && true === $template_data['status'] &&
 								isset( $template_data['dat_url_local'] ) && ! empty( $template_data['dat_url_local'] ) ) {
 								if ( is_array( $exist_templates[ $type ] ) ) {
 									$exist_templates[ $type ] = ( count( $exist_templates[ $type ] ) + 1 );

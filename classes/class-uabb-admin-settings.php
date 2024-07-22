@@ -47,7 +47,7 @@ final class UABBBuilderAdminSettings {
 		add_action( 'network_admin_menu', __CLASS__ . '::menu' );
 		add_action( 'admin_menu', __CLASS__ . '::menu' );
 
-		if ( isset( $_REQUEST['page'] ) && 'uabb-builder-settings' == $_REQUEST['page'] ) {
+		if ( isset( $_REQUEST['page'] ) && 'uabb-builder-settings' === $_REQUEST['page'] ) {
 			add_action( 'admin_enqueue_scripts', __CLASS__ . '::styles_scripts' );
 			self::save();
 		}
@@ -123,7 +123,7 @@ final class UABBBuilderAdminSettings {
 					__( 'I already did', 'ultimate-addon-for-beaver-builder' )
 				),
 				'repeat-notice-after'        => MONTH_IN_SECONDS,
-				'display-notice-after'       => ( 2 * WEEK_IN_SECONDS ), // Display notice after 2 weeks
+				'display-notice-after'       => ( 2 * WEEK_IN_SECONDS ), // Display notice after 2 weeks.
 				'priority'                   => 25,
 				'display-with-other-notices' => false,
 			)
@@ -187,7 +187,7 @@ final class UABBBuilderAdminSettings {
 		); // @codingStandardsIgnoreLine.
 		wp_localize_script( 'uabb-cloud-templates', 'UABBCloudTemplates', $UABBCloudTemplates ); // @codingStandardsIgnoreLine.
 
-		if ( 'settings_page_uabb-builder-settings' == $hook || 'settings_page_uabb-builder-multisite-settings' == $hook ) {
+		if ( 'settings_page_uabb-builder-settings' === $hook || 'settings_page_uabb-builder-multisite-settings' === $hook ) {
 
 			wp_enqueue_style( 'wp-color-picker' );
 			wp_enqueue_script( 'wp-color-picker' );

@@ -29,7 +29,7 @@ final class UABBGlobalSetting {
 	 */
 	static public function add_js_string( $js_strings ) {
 
-		if ( 'UABB' == UABB_PREFIX ) {
+		if ( 'UABB' === UABB_PREFIX ) {
 			$js_strings['uabbGlobalSettings'] = esc_attr__( 'UABB - Global Settings', 'uabb' );
 			$js_strings['uabbKnowledgeBase']  = esc_attr__( 'UABB - Knowledge Base', 'uabb' );
 			$js_strings['uabbContactSupport'] = esc_attr__( 'UABB - Contact Support', 'uabb' );
@@ -52,8 +52,8 @@ final class UABBGlobalSetting {
 
 		$uabb = BB_Ultimate_Addon_Helper::get_builder_uabb_branding();
 		if ( is_array( $uabb ) ) {
-			$uabb_knowledge_base_url             = ( array_key_exists( 'uabb-knowledge-base-url', $uabb ) && '' != $uabb['uabb-knowledge-base-url'] ) ? $uabb['uabb-knowledge-base-url'] : 'https://www.ultimatebeaver.com/docs/';
-			$uabb_contact_support_url            = ( array_key_exists( 'uabb-contact-support-url', $uabb ) && '' != $uabb['uabb-contact-support-url'] ) ? $uabb['uabb-contact-support-url'] : 'https://www.ultimatebeaver.com/contact/';
+			$uabb_knowledge_base_url             = ( array_key_exists( 'uabb-knowledge-base-url', $uabb ) && '' !== $uabb['uabb-knowledge-base-url'] ) ? $uabb['uabb-knowledge-base-url'] : 'https://www.ultimatebeaver.com/docs/';
+			$uabb_contact_support_url            = ( array_key_exists( 'uabb-contact-support-url', $uabb ) && '' !== $uabb['uabb-contact-support-url'] ) ? $uabb['uabb-contact-support-url'] : 'https://www.ultimatebeaver.com/contact/';
 			$js_strings['uabbKnowledgeBaseUrl']  = $uabb_knowledge_base_url;
 			$js_strings['uabbContactSupportUrl'] = $uabb_contact_support_url;
 		} else {

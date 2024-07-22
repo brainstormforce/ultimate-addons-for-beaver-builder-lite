@@ -489,7 +489,7 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 					line-height: <?php echo esc_attr( $settings->text_line_height['small'] ); ?>px;
 				<?php } ?>
 
-				<?php if ( 'yes' === $converted || isset( $settings->text_line_height_unit_responsive ) && '' != $settings->text_line_height_unit_responsive ) { ?>
+				<?php if ( 'yes' === $converted || isset( $settings->text_line_height_unit_responsive ) && '' !== $settings->text_line_height_unit_responsive ) { ?>
 					line-height: <?php echo esc_attr( $settings->text_line_height_unit_responsive ); ?>em;
 				<?php } elseif ( isset( $settings->text_line_height_unit_responsive ) && '' === $settings->text_line_height_unit_responsive && isset( $settings->text_line_height['small'] ) && '' !== $settings->text_line_height['small'] ) { ?>
 					line-height: <?php echo esc_attr( $settings->text_line_height['small'] ); ?>px;
