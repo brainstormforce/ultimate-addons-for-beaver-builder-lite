@@ -165,7 +165,7 @@ class UABBInfoList extends FLBuilderModule {
 
 		echo '<div class="uabb-info-list-content uabb-info-list-' . esc_attr( $this->settings->icon_position ) . ' info-list-content-dynamic' . esc_attr( $list_item_counter ) . '">';
 
-		// Define a whitelist of allowed tags
+		// Define a whitelist of allowed tags.
 		$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
 		$infolist_tag = in_array( $this->settings->heading_tag_selection, $allowed_tags ) ? $this->settings->heading_tag_selection : 'h3';
 
