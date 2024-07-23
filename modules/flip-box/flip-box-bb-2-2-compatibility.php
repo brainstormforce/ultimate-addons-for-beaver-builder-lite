@@ -152,6 +152,7 @@ FLBuilder::register_settings_form(
 								'label'      => __( 'Icon Color', 'uabb' ),
 								'default'    => '',
 								'show_reset' => true,
+								'connections' => array( 'color' ),
 							),
 
 							/* Background Color Dependent on Icon Style **/

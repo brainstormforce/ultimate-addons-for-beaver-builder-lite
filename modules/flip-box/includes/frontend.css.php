@@ -9,17 +9,18 @@ global $post;
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
-$settings->front_background_color = UABB_Helper::uabb_colorpicker( $settings, 'front_background_color', true );
+$settings->front_background_color = FLBuilderColor::hex_or_rgb( $settings->front_background_color );
 
-$settings->back_background_color = UABB_Helper::uabb_colorpicker( $settings, 'back_background_color', true );
+$settings->back_background_color = FLBuilderColor::hex_or_rgb( $settings->back_background_color );
 
-$settings->front_title_typography_color = UABB_Helper::uabb_colorpicker( $settings, 'front_title_typography_color' );
-$settings->front_desc_typography_color  = UABB_Helper::uabb_colorpicker( $settings, 'front_desc_typography_color' );
-$settings->back_title_typography_color  = UABB_Helper::uabb_colorpicker( $settings, 'back_title_typography_color' );
-$settings->back_desc_typography_color   = UABB_Helper::uabb_colorpicker( $settings, 'back_desc_typography_color' );
+$settings->front_title_typography_color = FLBuilderColor::hex_or_rgb( $settings->front_title_typography_color );
+$settings->front_desc_typography_color  = FLBuilderColor::hex_or_rgb( $settings->front_desc_typography_color );
+$settings->back_title_typography_color  = FLBuilderColor::hex_or_rgb( $settings->back_title_typography_color );
+$settings->back_desc_typography_color   = FLBuilderColor::hex_or_rgb( $settings->back_desc_typography_color );
+
 if ( ! $version_bb_check ) {
-	$settings->back_border_color  = UABB_Helper::uabb_colorpicker( $settings, 'back_border_color' );
-	$settings->front_border_color = UABB_Helper::uabb_colorpicker( $settings, 'front_border_color' );
+	$settings->front_border_color = FLBuilderColor::hex_or_rgb( $settings->front_border_color );
+	$settings->back_border_color  = FLBuilderColor::hex_or_rgb( $settings->back_border_color );
 }
 ?>
 <?php
