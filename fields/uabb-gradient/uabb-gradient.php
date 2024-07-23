@@ -122,7 +122,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 			$html .= '</div>';
 			$html .= '</div>';
 
-			echo $html;
+			echo wp_kses_post( $html );
 		}
 	}
 	new UABB_Gradient();

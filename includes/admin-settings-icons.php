@@ -8,7 +8,7 @@
 ?>
 <div id="fl-uabb-icons-form" class="fl-settings-form uabb-fl-settings-form">
 
-	<h3 class="fl-settings-form-header"><?php _e( 'Reload Icons', 'uabb' ); ?></h3>
+	<h3 class="fl-settings-form-header"><?php esc_html_e( 'Reload Icons', 'uabb' ); ?></h3>
 
 	<form id="uabb-icons-form" action="<?php UABBBuilderAdminSettings::render_form_action( 'uabb-icons' ); ?>" method="post">
 
@@ -21,7 +21,7 @@
 			</p>
 			<span class="button uabb-reload-icons">
 				<i class="dashicons dashicons-update" style="padding: 3px;"></i>
-				<?php _e( 'Reload Icons', 'uabb' ); ?>
+				<?php esc_html_e( 'Reload Icons', 'uabb' ); ?>
 			</span>
 
 		</div>

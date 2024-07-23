@@ -227,7 +227,7 @@ if ( 'left' === $settings->icon_position ) {
 
 	@media all and (min-width:768px) {
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper.uabb-info-list-top li{
-			width: <?php echo round( 100 / count( ( $settings->add_list_item ) ), 3 ); ?>%;
+			width: <?php echo esc_attr( round( 100 / count( ( $settings->add_list_item ) ), 3 ) ); ?>%;
 			display: inline-block;
 		}
 		<?php if ( '' !== $settings->space_between_elements ) { ?>
@@ -322,7 +322,7 @@ foreach ( $settings->add_list_item as $item ) {
 			?>
 			border-radius: <?php echo esc_attr( $settings->list_icon_bg_border_radius ); ?>px;
 			<?php if ( 'none' !== $settings->list_icon_border_style ) { ?>
-				border: <?php echo esc_attr( $settings->list_icon_border_width ); ?>px <?php echo esc_attr( $settings->list_icon_border_style ); ?> <?php echo uabb_theme_text_color( $settings->list_icon_border_color ); ?>;
+				border: <?php echo esc_attr( $settings->list_icon_border_width ); ?>px <?php echo esc_attr( $settings->list_icon_border_style ); ?> <?php echo esc_attr( uabb_theme_text_color( $settings->list_icon_border_color ) ); ?>;
 			<?php } ?>
 			<?php
 		} else {
@@ -333,9 +333,9 @@ foreach ( $settings->add_list_item as $item ) {
 			height: <?php echo esc_attr( $settings->icon_image_size + $custom_extra_width ); ?>px;
 			<?php if ( 'none' === $item->image_type && ( '' === $item->icon || $item->photo || '' === $item->photo_url ) ) { ?>
 				<?php if ( 'simple' === $settings->list_icon_style ) { ?> 			
-			background: <?php echo uabb_theme_base_color( '' ); ?>;
+			background: <?php echo esc_attr( uabb_theme_base_color( '' ) ); ?>;
 			<?php } else { ?>
-				background: <?php echo uabb_theme_base_color( $settings->list_icon_bg_color ); ?>;
+				background: <?php echo esc_attr( uabb_theme_base_color( $settings->list_icon_bg_color ) ); ?>;
 					<?php
 			}
 			}
@@ -352,9 +352,9 @@ foreach ( $settings->add_list_item as $item ) {
 	}
 	if ( 'none' !== $item->image_type || ( ( isset( $item->icon ) && '' !== $item->icon ) || ( isset( $item->photo_src ) && '' !== $item->photo_src ) || ( isset( $item->photo_url ) && '' !== $item->photo_url ) ) ) {
 		?>
-			.fl-node-<?php echo esc_attr( $id ); ?> .info-list-icon-dynamic<?php echo $list_item_counter; ?> .uabb-imgicon-wrap .uabb-photo-img {
+			.fl-node-<?php echo esc_attr( $id ); ?> .info-list-icon-dynamic<?php echo esc_attr( $list_item_counter ); ?> .uabb-imgicon-wrap .uabb-photo-img {
 			<?php if ( 'simple' !== $settings->list_icon_style && 'none' !== $item->image_type && ( '' !== $item->icon || '' !== $item->photo || '' !== $item->photo_url ) ) { ?>
-				background: <?php echo uabb_theme_base_color( $settings->list_icon_bg_color ); ?>;
+				background: <?php echo esc_attr( uabb_theme_base_color( $settings->list_icon_bg_color ) ); ?>;
 				<?php } ?>
 			}
 		<?php
@@ -388,7 +388,7 @@ foreach ( $settings->add_list_item as $item ) {
 				if ( 'yes' === $settings->list_connector_option ) :
 					?>
 
-					.fl-node-<?php echo esc_attr( $id ); ?> .info-list-item-dynamic<?php echo $list_item_counter; ?> .uabb-info-list-connector {
+					.fl-node-<?php echo esc_attr( $id ); ?> .info-list-item-dynamic<?php echo esc_attr( $list_item_counter ); ?> .uabb-info-list-connector {
 						<?php if ( 'center' === $settings->align_items ) : ?>
 						top: calc( 50% + <?php echo ( esc_attr( $settings->icon_image_size - $need_to_add ) / 2 ) + $icon_extra_padding - $space_element; ?>px );
 						height: calc( 50% - <?php echo ( esc_attr( $settings->icon_image_size - $need_to_add ) / 2 ) + $icon_extra_padding - $space_element; ?>px );

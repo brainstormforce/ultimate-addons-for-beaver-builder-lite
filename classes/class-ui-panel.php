@@ -252,7 +252,7 @@ class UABB_UI_Panels {
 		?>
 			<!-- Search Module -->
 			<div id="fl-builder-blocks-rows" class="fl-builder-blocks-section">
-				<input type="text" id="module_search" placeholder="<?php _e( 'Search Module...', 'uabb' ); ?>" style="width: 100%;">
+			<input type="text" id="module_search" placeholder="<?php esc_attr_e( 'Search Module...', 'uabb' ); ?>" style="width: 100%;">
 				<div class="filter-count"></div>
 			</div><!-- Search Module -->
 		<?php
@@ -395,7 +395,7 @@ class UABB_UI_Panels {
 				/* Live Preview HTML */
 				$live_preview = '<span class="uabb-live-preview-button fl-builder-button-primary fl-builder-button" >Live Preview</span>';
 
-				echo $live_preview;
+				echo esc_html( $live_preview );
 			}
 		}
 	}

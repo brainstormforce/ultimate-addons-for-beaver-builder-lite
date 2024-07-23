@@ -242,7 +242,21 @@ class UABB_Init {
 		}
 
 		echo '<div class="notice notice-error">';
-		echo '<p>The <strong>Ultimate Addon for Beaver Builder</strong> ' . __( 'plugin requires', 'uabb' ) . " <strong><a href='" . $url . "'>Beaver Builder</strong></a>" . __( ' plugin installed & activated.', 'uabb' ) . '</p>';
+		echo wp_kses(
+			sprintf(
+				'<p>The <strong>Ultimate Addon for Beaver Builder</strong> %s <strong><a href="%s">Beaver Builder</strong></a> %s</p>',
+				__( 'plugin requires', 'uabb' ),
+				esc_url( $url ),
+				__( ' plugin installed & activated.', 'uabb' )
+			),
+			array(
+				'p' => array(),
+				'strong' => array(),
+				'a' => array(
+					'href' => array(),
+				),
+			)
+		);
 		echo '</div>';
 	}
 
