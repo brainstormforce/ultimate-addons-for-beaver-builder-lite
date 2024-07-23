@@ -16,10 +16,15 @@ if ( isset( $settings->it_link_nofollow ) ) {
 <?php } ?>
 <div class="uabb-module-content info-table-wrap info-table-<?php echo $settings->box_design; ?> info-table-cs-<?php echo $settings->color_scheme; ?>">
 	<div class="info-table">
+		<?php
+		// Define a whitelist of allowed tags.
+		$allowed_tags  = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
+		$infotable_tag = in_array( $settings->heading_tag_selection, $allowed_tags ) ? $settings->heading_tag_selection : 'h3';
+		?>
 		<div class="info-table-heading">
-			<?php echo '<' . $settings->heading_tag_selection . " class='info-table-main-heading'>"; ?>
+			<?php echo '<' . esc_attr( $infotable_tag ) . " class='info-table-main-heading'>"; ?>
 			<?php echo $settings->it_title; ?>
-			<?php echo '</' . $settings->heading_tag_selection . '>'; ?>
+			<?php echo '</' . esc_attr( $infotable_tag ) . '>'; ?>
 
 			<?php echo '<' . $settings->sub_heading_tag_selection . " class='info-table-sub-heading'>"; ?>
 			<?php echo $settings->sub_heading; ?>
