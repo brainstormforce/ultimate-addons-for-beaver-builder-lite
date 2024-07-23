@@ -7,20 +7,20 @@
 
 if ( 'none' != $settings->image_type ) :
 
-	$settings->icon_color       = UABB_Helper::uabb_colorpicker( $settings, 'icon_color' );
-	$settings->icon_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'icon_hover_color' );
+	$settings->icon_color       = FLBuilderColor::hex_or_rgb( $settings->icon_color );
+	$settings->icon_hover_color = FLBuilderColor::hex_or_rgb( $settings->icon_hover_color );
 
-	$settings->icon_bg_color       = UABB_Helper::uabb_colorpicker( $settings, 'icon_bg_color', true );
-	$settings->icon_bg_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'icon_bg_hover_color', true );
+	$settings->icon_bg_color       = FLBuilderColor::hex_or_rgb( $settings->icon_bg_color );
+	$settings->icon_bg_hover_color = FLBuilderColor::hex_or_rgb( $settings->icon_bg_hover_color );
 
-	$settings->icon_border_color       = UABB_Helper::uabb_colorpicker( $settings, 'icon_border_color' );
-	$settings->icon_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'icon_border_hover_color' );
+	$settings->icon_border_color       = FLBuilderColor::hex_or_rgb( $settings->icon_border_color );
+	$settings->icon_border_hover_color = FLBuilderColor::hex_or_rgb( $settings->icon_border_hover_color );
 
-	$settings->img_bg_color       = UABB_Helper::uabb_colorpicker( $settings, 'img_bg_color', true );
-	$settings->img_bg_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'img_bg_hover_color', true );
+	$settings->img_bg_color       = FLBuilderColor::hex_or_rgb( $settings->img_bg_color );
+	$settings->img_bg_hover_color = FLBuilderColor::hex_or_rgb( $settings->img_bg_hover_color );
 
-	$settings->img_border_color       = UABB_Helper::uabb_colorpicker( $settings, 'img_border_color' );
-	$settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'img_border_hover_color' );
+	$settings->img_border_color       = FLBuilderColor::hex_or_rgb( $settings->img_border_color );
+	$settings->img_border_hover_color = FLBuilderColor::hex_or_rgb( $settings->img_border_hover_color );
 
 	$settings->icon_size             = ( '' !== trim( $settings->icon_size ) ) ? $settings->icon_size : '30';
 	$settings->icon_bg_size          = ( '' !== trim( $settings->icon_bg_size ) ) ? $settings->icon_bg_size : '30';
@@ -54,16 +54,12 @@ if ( 'none' != $settings->image_type ) :
 
 		/* Gradient Color */
 		if ( $settings->icon_three_d ) {
-			$settings->icon_bg_color = $settings->icon_bg_color;
-			$bg_color                = ( ! empty( $settings->icon_bg_color ) ) ? uabb_parse_color_to_hex( $settings->icon_bg_color ) : uabb_parse_color_to_hex( $settings->icon_bg_color );
-			$bg_grad_start           = '#' . FLBuilderColor::adjust_brightness( $bg_color, 40, 'lighten' );
-			$border_color            = '#' . FLBuilderColor::adjust_brightness( $bg_color, 20, 'darken' );
+			$bg_grad_start           = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->icon_bg_color, 40, 'lighten' ) );
+			$border_color            = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->icon_bg_color, 20, 'darken' ) );
 		}
 		if ( $settings->icon_three_d && ! empty( $settings->icon_bg_hover_color ) ) {
-			$bg_hover_color = ( ! empty( $settings->icon_bg_hover_color ) ) ? uabb_parse_color_to_hex( $settings->icon_bg_hover_color ) : '';
-
-			$bg_hover_grad_start = '#' . FLBuilderColor::adjust_brightness( $bg_hover_color, 40, 'lighten' );
-			$border_hover_color  = '#' . FLBuilderColor::adjust_brightness( $bg_hover_color, 20, 'darken' );
+			$bg_hover_grad_start = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->icon_bg_hover_color, 40, 'lighten' ) );
+			$border_hover_color  = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->icon_bg_hover_color, 20, 'darken' ) );
 		}
 
 		?>
