@@ -43,7 +43,7 @@ $pos = $settings->front_img_icon_position;
 							$front_title_tag = in_array( $settings->front_title_tag_selection, $allowed_tags ) ? $settings->front_title_tag_selection : 'h3';
 						?>
 						<?php if ( '' != $settings->title_front ) { ?>
-							--><<?php echo esc_attr( $front_title_tag ) ; ?> class="uabb-slide-face-text-title"><?php echo $settings->title_front; ?></<?php echo esc_attr( $front_title_tag ); ?>><!-- Inline Block Space Fix
+							--><<?php echo esc_attr( $front_title_tag ); ?> class="uabb-slide-face-text-title"><?php echo $settings->title_front; ?></<?php echo esc_attr( $front_title_tag ); ?>><!-- Inline Block Space Fix
 						<?php } ?>
 						<?php if ( 'none' != $settings->image_type && 'right-title' == $pos ) : ?>
 							--><div class="uabb-slide-front-right-title-img">

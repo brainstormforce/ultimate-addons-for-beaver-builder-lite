@@ -16,7 +16,7 @@
 	$ribbon_tag   = in_array( $settings->text_tag_selection, $allowed_tags ) ? $settings->text_tag_selection : 'h3';
 ?>
 <div class="uabb-ribbon-wrap">
-	<<?php echo esc_attr( $ribbon_tag ) ; ?> class="uabb-ribbon">		
+	<<?php echo esc_attr( $ribbon_tag ); ?> class="uabb-ribbon">		
 		<span class="uabb-left-ribb flips"><i class="<?php echo $settings->left_icon; ?>"></i></span>
 		<span class="uabb-ribbon-text">
 			<?php
@@ -30,5 +30,5 @@
 				<div class="uabb-ribbon-stitches-bottom"></div> <?php } ?>
 		</span>		
 		<span class="uabb-right-ribb flips"><i class="<?php echo $settings->right_icon; ?>"></i></span>
-	</<?php echo esc_attr( $ribbon_tag ) ; ?>>
+	</<?php echo esc_attr( $ribbon_tag ); ?>>
 </div>
