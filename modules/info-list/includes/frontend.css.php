@@ -10,12 +10,12 @@ $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
 /* Variable settings */
-$settings->heading_color          = UABB_Helper::uabb_colorpicker( $settings, 'heading_color' );
-$settings->description_color      = UABB_Helper::uabb_colorpicker( $settings, 'description_color' );
-$settings->list_icon_border_color = UABB_Helper::uabb_colorpicker( $settings, 'list_icon_border_color' );
-$settings->list_connector_color   = UABB_Helper::uabb_colorpicker( $settings, 'list_connector_color' );
+$settings->heading_color          = FLBuilderColor::hex_or_rgb( $settings->heading_color );
+$settings->description_color      = FLBuilderColor::hex_or_rgb( $settings->description_color );
+$settings->list_icon_border_color = FLBuilderColor::hex_or_rgb( $settings->list_icon_border_color );
+$settings->list_connector_color   = FLBuilderColor::hex_or_rgb( $settings->list_connector_color );
 
-$settings->list_icon_bg_color = UABB_Helper::uabb_colorpicker( $settings, 'list_icon_bg_color', true );
+$settings->list_icon_bg_color = FLBuilderColor::hex_or_rgb( $settings->list_icon_bg_color );
 
 $settings->icon_image_size            = ( '' !== $settings->icon_image_size ) ? $settings->icon_image_size : '75';
 $settings->list_icon_bg_padding       = ( '' !== $settings->list_icon_bg_padding ) ? $settings->list_icon_bg_padding : '10';
@@ -70,10 +70,10 @@ if ( 'yes' == $settings->list_connector_option ) {
 	}
 	<?php if ( 'center' == $settings->align_items ) : ?>
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-connector-top {
-		height: calc( 50% - <?php echo ( esc_attr( $settings->icon_image_size / 2 ) + $icon_extra_padding + $space_element ); ?>px );
+		height: calc( 50% - <?php echo esc_attr( $settings->icon_image_size / 2 ) + $icon_extra_padding + $space_element; ?>px );
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-item:last-child .uabb-info-list-connector-top {
-		height: calc( 50% - <?php echo ( esc_attr( $settings->icon_image_size / 2 ) + $icon_extra_padding ); ?>px );
+		height: calc( 50% - <?php echo esc_attr( $settings->icon_image_size / 2 ) + $icon_extra_padding; ?>px );
 	}
 	<?php endif; ?>
 
