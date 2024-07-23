@@ -129,7 +129,7 @@ if ( ! $version_bb_check ) {
 		'icon_color_preset'       => 'preset1',
 
 		/* Icon Colors */
-		'icon_color'              => $settings->icon_color,
+		'icon_color'              => '',
 		'icon_hover_color'        => '',
 		'icon_bg_color'           => '',
 		'icon_bg_hover_color'     => '',
@@ -179,7 +179,7 @@ if ( ! $version_bb_check ) {
 		'icon_color_preset'       => 'preset1',
 
 		/* Icon Colors */
-		'icon_color'              => $settings->icon_color,
+		'icon_color'              => '',
 		'icon_hover_color'        => '',
 		'icon_bg_color'           => '',
 		'icon_bg_hover_color'     => '',
@@ -212,6 +212,16 @@ if ( ! $version_bb_check ) {
 /* Icon */
 
 	<?php
+
+	if( '' !== $settings->icon_color ) { ?>
+
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-icon-wrap .uabb-icon i, 
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-icon-wrap .uabb-icon i:before {
+			color: <?php echo esc_attr( $settings->icon_color ); ?>;
+		}
+
+	<?php		
+	}
 	if ( '' != $settings->icon_hover_color ) {
 		?>
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-<?php echo esc_attr( $settings->slide_type ); ?>.open-slidedown .uabb-slide-box-section .uabb-imgicon-wrap .uabb-icon i,
