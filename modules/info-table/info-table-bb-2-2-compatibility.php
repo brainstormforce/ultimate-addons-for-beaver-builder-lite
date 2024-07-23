@@ -131,6 +131,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 						'heading_back_color_opc' => array(
 							'type'        => 'text',
@@ -147,6 +148,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 						'desc_back_color_opc'    => array(
 							'type'        => 'text',
@@ -186,6 +188,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 						'btn_text_hover_color'   => array(
 							'type'       => 'color',
@@ -193,6 +196,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 							'preview'    => array(
 								'type' => 'none',
 							),
@@ -203,6 +207,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 						'btn_bg_color_opc'       => array(
 							'type'        => 'text',
@@ -219,6 +224,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 						'btn_bg_hover_color_opc' => array(
 							'type'        => 'text',
@@ -595,6 +601,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 						'icon_hover_color'        => array(
 							'type'       => 'color',
@@ -602,6 +609,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 							'preview'    => array(
 								'type' => 'none',
 							),
@@ -614,6 +622,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 						'icon_bg_color_opc'       => array(
 							'type'        => 'text',
@@ -628,6 +637,7 @@ FLBuilder::register_module(
 							'label'      => __( 'Background Hover Color', 'uabb' ),
 							'default'    => '',
 							'show_reset' => true,
+							'connections' => array( 'color' ),
 							'preview'    => array(
 								'type' => 'none',
 							),
@@ -648,6 +658,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 						'icon_border_hover_color' => array(
 							'type'       => 'color',
@@ -655,6 +666,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 
 						/* Gradient Color Option */
@@ -679,6 +691,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 						'img_bg_color_opc'       => array(
 							'type'        => 'text',
@@ -694,6 +707,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 							'preview'    => array(
 								'type' => 'none',
 							),
@@ -714,6 +728,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 						'img_border_hover_color' => array(
 							'type'       => 'color',
@@ -721,6 +736,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 					),
 				),
@@ -765,6 +781,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 					),
 				),
@@ -804,6 +821,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 					),
 				),
@@ -826,6 +844,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 					),
 				),
