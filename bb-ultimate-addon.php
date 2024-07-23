@@ -6,7 +6,7 @@
  * Version: 1.5.9
  * Author: Brainstorm Force
  * Author URI: http://www.brainstormforce.com
- * Text Domain: ultimate-addons-for-beaver-builder-lite
+ * Text Domain: uabb
  *
  * @package Ultimate Addons For Beaver Builder
  */

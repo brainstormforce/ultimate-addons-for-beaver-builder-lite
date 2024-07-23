@@ -217,6 +217,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ### 1.5.9.1 ###
 * Improvement: This update addressed a security bug. Props to Patchstack for privately reporting it to our team.
+* Improvement: Hardened the security of plugin.
 
 ### 1.5.9 ###
 * Improvement: WPML compatibility for the Heading and Ribbon module.
