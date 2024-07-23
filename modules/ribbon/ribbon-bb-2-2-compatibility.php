@@ -135,7 +135,9 @@ FLBuilder::register_module(
 							'type'       => 'color',
 							'label'      => __( 'Ribbon Color', 'uabb' ),
 							'default'    => '',
-							'show_reset' => true,
+							'show_reset'  => true,
+							'connections' => array( 'color' ),
+							'show_alpha'  => true,
 						),
 						'gradient_color' => array(
 							'type'    => 'uabb-gradient',
@@ -153,6 +155,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 						'fold_color'     => array(
 							'type'       => 'color',
@@ -160,6 +163,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 						'end_color'      => array(
 							'type'       => 'color',
@@ -167,6 +171,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 					),
 				),
@@ -210,6 +215,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 						'text_shadow_color'  => array(
 							'type'       => 'color',
@@ -217,6 +223,7 @@ FLBuilder::register_module(
 							'default'    => '',
 							'show_reset' => true,
 							'show_alpha' => true,
+							'connections' => array( 'color' ),
 						),
 					),
 				),
