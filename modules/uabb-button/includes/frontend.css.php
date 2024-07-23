@@ -224,7 +224,7 @@ if ( ! $version_bb_check ) {
 				echo ( '' != $settings->button_border_radius ) ? 'border-radius:' . esc_attr( $settings->button_border_radius ) . 'px;' : 'border-radius:' . esc_attr( uabb_theme_button_border_radius( '' ) ) . 'px;';
 			}
 			if ( isset( $settings->button_border_color ) ) {
-				echo ( '' != $settings->button_border_color ) ? 'border-color:#' . esc_attr( $settings->button_border_color ) . ';' : 'border-color:' . esc_attr( uabb_theme_border_color( '' ) ) . ';';
+				echo ( '' != $settings->button_border_color ) ? 'border-color:' . esc_attr( $settings->button_border_color ) . ';' : 'border-color:' . esc_attr( uabb_theme_border_color( '' ) ) . ';';
 			}
 			?>
 		}
