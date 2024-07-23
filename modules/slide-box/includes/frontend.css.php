@@ -11,27 +11,27 @@
 	$version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 	$converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
-	$settings->icon_color                     = UABB_Helper::uabb_colorpicker( $settings, 'icon_color' );
-	$settings->icon_hover_color               = UABB_Helper::uabb_colorpicker( $settings, 'icon_hover_color' );
-	$settings->overlay_icon_color             = UABB_Helper::uabb_colorpicker( $settings, 'overlay_icon_color' );
-	$settings->dropdown_icon_color            = UABB_Helper::uabb_colorpicker( $settings, 'dropdown_icon_color' );
-	$settings->front_title_focused_color      = UABB_Helper::uabb_colorpicker( $settings, 'front_title_focused_color' );
-	$settings->front_title_color              = UABB_Helper::uabb_colorpicker( $settings, 'front_title_color' );
-	$settings->back_title_color               = UABB_Helper::uabb_colorpicker( $settings, 'back_title_color' );
-	$settings->front_desc_focused_color       = UABB_Helper::uabb_colorpicker( $settings, 'front_desc_focused_color' );
-	$settings->front_desc_color               = UABB_Helper::uabb_colorpicker( $settings, 'front_desc_color' );
-	$settings->back_desc_color                = UABB_Helper::uabb_colorpicker( $settings, 'back_desc_color' );
-	$settings->link_color                     = UABB_Helper::uabb_colorpicker( $settings, 'link_color' );
-	$settings->dropdown_plus_icon_color       = UABB_Helper::uabb_colorpicker( $settings, 'dropdown_plus_icon_color' );
-	$settings->img_bg_color                   = UABB_Helper::uabb_colorpicker( $settings, 'img_bg_color', true );
-	$settings->front_icon_border_color        = UABB_Helper::uabb_colorpicker( $settings, 'front_icon_border_color', true );
-	$settings->front_icon_border_hover_color  = UABB_Helper::uabb_colorpicker( $settings, 'front_icon_border_hover_color', true );
-	$settings->front_background_color         = UABB_Helper::uabb_colorpicker( $settings, 'front_background_color', true );
-	$settings->focused_front_background_color = UABB_Helper::uabb_colorpicker( $settings, 'focused_front_background_color', true );
-	$settings->back_background_color          = UABB_Helper::uabb_colorpicker( $settings, 'back_background_color', true );
-	$settings->overlay_color                  = UABB_Helper::uabb_colorpicker( $settings, 'overlay_color', true );
-	$settings->overlay_icon_bg_color          = UABB_Helper::uabb_colorpicker( $settings, 'overlay_icon_bg_color', true );
-	$settings->dropdown_icon_bg_color         = UABB_Helper::uabb_colorpicker( $settings, 'dropdown_icon_bg_color', true );
+	$settings->icon_color                     = FLBuilderColor::hex_or_rgb( $settings->icon_color );
+	$settings->icon_hover_color               = FLBuilderColor::hex_or_rgb( $settings->icon_hover_color );
+	$settings->overlay_icon_color             = FLBuilderColor::hex_or_rgb( $settings->overlay_icon_color );
+	$settings->dropdown_icon_color            = FLBuilderColor::hex_or_rgb( $settings->dropdown_icon_color );
+	$settings->front_title_focused_color      = FLBuilderColor::hex_or_rgb( $settings->front_title_focused_color );
+	$settings->front_title_color              = FLBuilderColor::hex_or_rgb( $settings->front_title_color );
+	$settings->back_title_color               = FLBuilderColor::hex_or_rgb( $settings->back_title_color );
+	$settings->front_desc_focused_color       = FLBuilderColor::hex_or_rgb( $settings->front_desc_focused_color );
+	$settings->front_desc_color               = FLBuilderColor::hex_or_rgb( $settings->front_desc_color );
+	$settings->back_desc_color                = FLBuilderColor::hex_or_rgb( $settings->back_desc_color );
+	$settings->link_color                     = FLBuilderColor::hex_or_rgb( $settings->link_color );
+	$settings->dropdown_plus_icon_color       = FLBuilderColor::hex_or_rgb( $settings->dropdown_plus_icon_color );
+	$settings->img_bg_color                   = FLBuilderColor::hex_or_rgb( $settings->img_bg_color );
+	$settings->front_icon_border_color        = FLBuilderColor::hex_or_rgb( $settings->front_icon_border_color );
+	$settings->front_icon_border_hover_color  = FLBuilderColor::hex_or_rgb( $settings->front_icon_border_hover_color );
+	$settings->front_background_color         = FLBuilderColor::hex_or_rgb( $settings->front_background_color );
+	$settings->focused_front_background_color = FLBuilderColor::hex_or_rgb( $settings->focused_front_background_color );
+	$settings->back_background_color          = FLBuilderColor::hex_or_rgb( $settings->back_background_color );
+	$settings->overlay_color                  = FLBuilderColor::hex_or_rgb( $settings->overlay_color );
+	$settings->overlay_icon_bg_color          = FLBuilderColor::hex_or_rgb( $settings->overlay_icon_bg_color );
+	$settings->dropdown_icon_bg_color         = FLBuilderColor::hex_or_rgb( $settings->dropdown_icon_bg_color );
 
 	$settings->icon_size              = ( '' !== trim( $settings->icon_size ) ) ? $settings->icon_size : '32';
 	$settings->img_size               = ( '' !== trim( $settings->img_size ) ) ? $settings->img_size : '60';
@@ -599,7 +599,7 @@ if ( 'style1' == $settings->slide_type ) {
 		<?php endif; ?>
 
 		<?php if ( 'yes' === $converted || isset( $settings->back_title_font_size_unit ) && '' != $settings->back_title_font_size_unit ) { ?>
-			font-size: <?php echo esc_attr( $settings->back_title_font_size_unit ); ?>px;      
+			font-size: <?php echo esc_attr( $settings->back_title_font_size_unit ); ?>px;
 		<?php } elseif ( isset( $settings->back_title_font_size_unit ) && '' == $settings->back_title_font_size_unit && isset( $settings->back_title_font_size['desktop'] ) && '' != $settings->back_title_font_size['desktop'] ) { ?>
 			font-size: <?php echo esc_attr( $settings->back_title_font_size['desktop'] ); ?>px;
 		<?php } ?>
