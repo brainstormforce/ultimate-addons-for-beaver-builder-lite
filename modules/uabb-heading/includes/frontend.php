@@ -32,8 +32,12 @@ global $wp_embed;
 			<?php } ?>
 		</div> 
 	<?php } ?>
-
-	<<?php echo $settings->tag; ?> class="uabb-heading">
+	<?php
+	// Define a whitelist of allowed tags.
+		$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' );
+		$heading_tag  = in_array( $settings->tag, $allowed_tags ) ? $settings->tag : 'h3';
+	?>
+	<<?php echo esc_attr( $heading_tag ); ?> class="uabb-heading">
 		<?php if ( ! empty( $settings->link ) ) : ?>
 			<a href="<?php echo esc_url( $settings->link ); ?>" title="<?php echo esc_attr( $settings->heading ); ?>" target="<?php echo esc_attr( $settings->link_target ); ?>" <?php BB_Ultimate_Addon_Helper::get_link_rel( esc_attr( $settings->link_target ), $settings->link_nofollow, 1 ); ?>>
 			<?php endif; ?>
@@ -41,7 +45,7 @@ global $wp_embed;
 			<?php if ( ! empty( $settings->link ) ) : ?>
 			</a>
 		<?php endif; ?>
-	</<?php echo $settings->tag; ?>>
+	</<?php echo esc_attr( $heading_tag ); ?>>
 
 	<?php if ( 'center' == $settings->separator_position ) { ?>
 		<div class="uabb-module-content uabb-separator-parent">			

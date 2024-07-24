@@ -37,8 +37,13 @@ $pos = $settings->front_img_icon_position;
 								<?php $module->render_image( 'left-title' ); ?>
 							</div><!-- Inline Block Space Fix
 						<?php endif; ?>
+						<?php
+							// Define a whitelist of allowed tags.
+							$allowed_tags    = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
+							$front_title_tag = in_array( $settings->front_title_tag_selection, $allowed_tags ) ? $settings->front_title_tag_selection : 'h3';
+						?>
 						<?php if ( '' != $settings->title_front ) { ?>
-							--><<?php echo $settings->front_title_tag_selection; ?> class="uabb-slide-face-text-title"><?php echo $settings->title_front; ?></<?php echo $settings->front_title_tag_selection; ?>><!-- Inline Block Space Fix
+							--><<?php echo esc_attr( $front_title_tag ); ?> class="uabb-slide-face-text-title"><?php echo $settings->title_front; ?></<?php echo esc_attr( $front_title_tag ); ?>><!-- Inline Block Space Fix
 						<?php } ?>
 						<?php if ( 'none' != $settings->image_type && 'right-title' == $pos ) : ?>
 							--><div class="uabb-slide-front-right-title-img">
@@ -69,9 +74,14 @@ $pos = $settings->front_img_icon_position;
 			<div class="uabb-slide-face uabb-slide-down">
 				<div class="uabb-slide-box-section- ">
 				<?php
+				// Define a whitelist of allowed tags.
+					$allowed_tags   = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
+					$back_title_tag = in_array( $settings->back_title_tag_selection, $allowed_tags ) ? $settings->back_title_tag_selection : 'h3';
+				?>
+				<?php
 				if ( '' != $settings->title_back ) {
 					?>
-					<<?php echo $settings->back_title_tag_selection; ?> class="uabb-slide-back-text-title"><?php echo $settings->title_back; ?></<?php echo $settings->back_title_tag_selection; ?>>
+					<<?php echo esc_attr( $back_title_tag ); ?> class="uabb-slide-back-text-title"><?php echo $settings->title_back; ?></<?php echo esc_attr( $back_title_tag ); ?>>
 					<?php
 				}
 				if ( '' != $settings->desc_back ) {

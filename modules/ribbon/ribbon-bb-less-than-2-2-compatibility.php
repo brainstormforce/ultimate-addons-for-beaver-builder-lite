@@ -174,10 +174,11 @@ FLBuilder::register_module(
 					'title'  => __( 'Ribbon Text', 'uabb' ),
 					'fields' => array(
 						'text_tag_selection'    => array(
-							'type'    => 'select',
-							'label'   => __( 'Tag', 'uabb' ),
-							'default' => 'h3',
-							'options' => array(
+							'type'     => 'select',
+							'label'    => __( 'Tag', 'uabb' ),
+							'default'  => 'h3',
+							'sanitize' => array( 'FLBuilderUtils::esc_tags', 'h3' ),
+							'options'  => array(
 								'h1'   => __( 'H1', 'uabb' ),
 								'h2'   => __( 'H2', 'uabb' ),
 								'h3'   => __( 'H3', 'uabb' ),

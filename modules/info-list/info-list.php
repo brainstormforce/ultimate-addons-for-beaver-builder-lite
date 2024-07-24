@@ -164,8 +164,10 @@ class UABBInfoList extends FLBuilderModule {
 		}
 
 		echo '<div class="uabb-info-list-content uabb-info-list-' . $this->settings->icon_position . ' info-list-content-dynamic' . $list_item_counter . '">';
-
-		echo '<' . $this->settings->heading_tag_selection . ' class="uabb-info-list-title">';
+		// Define a whitelist of allowed tags.
+		$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
+		$infolist_tag = in_array( $this->settings->heading_tag_selection, $allowed_tags ) ? $this->settings->heading_tag_selection : 'h3';
+		echo '<' . esc_attr( $infolist_tag ) . ' class="uabb-info-list-title">';
 		if ( ! empty( $item->list_item_link ) && 'list-title' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
 			echo '<a href="' . $item->list_item_url . '" target="' . $target . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '>';
@@ -177,7 +179,7 @@ class UABBInfoList extends FLBuilderModule {
 			echo '</a>';
 
 		}
-		echo '</' . $this->settings->heading_tag_selection . ' >';
+		echo '</' . esc_attr( $infolist_tag ) . ' >';
 
 		echo '<div class="uabb-info-list-description uabb-text-editor info-list-description-dynamic' . $list_item_counter . '">';
 		if ( strpos( $item->list_item_description, '</p>' ) > 0 ) {
