@@ -35,10 +35,9 @@ global $wp_embed;
 	<?php } ?>
 	<?php
 	// Define a whitelist of allowed tags.
-	$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' );
-	$heading_tag  = in_array( $settings->tag, $allowed_tags, true ) ? $settings->tag : 'h3';
+		$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' );
+		$heading_tag  = in_array( $settings->tag, $allowed_tags ) ? $settings->tag : 'h3';
 	?>
-
 	<<?php echo esc_attr( $heading_tag ); ?> class="uabb-heading">
 		<?php if ( ! empty( $settings->link ) ) : ?>
 			<a href="<?php echo esc_url( $settings->link ); ?>" title="<?php echo esc_attr( $settings->heading ); ?>" target="<?php echo esc_attr( $settings->link_target ); ?>" <?php BB_Ultimate_Addon_Helper::get_link_rel( esc_attr( $settings->link_target ), $settings->link_nofollow, 1 ); ?>>
