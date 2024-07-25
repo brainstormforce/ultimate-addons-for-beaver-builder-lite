@@ -85,7 +85,7 @@ class ImageIconModule extends FLBuilderModule {
 		$cropped_path = $this->_get_cropped_path();
 
 		if ( file_exists( $cropped_path['path'] ) ) {
-			unlink( $cropped_path['path'] );
+			unlink( $cropped_path['path'] ); //phpcs:ignore WordPress.WP.AlternativeFunctions.unlink_unlink
 		}
 	}
 

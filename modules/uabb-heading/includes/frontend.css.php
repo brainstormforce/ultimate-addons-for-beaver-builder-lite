@@ -213,7 +213,7 @@ if ( '' !== $settings->separator_style ) {
 			width: 1.3em;
 			height: 1.3em;
 			line-height: 1.3em;
-			color: <?php echo ( $settings->separator_icon_color ); ?>;
+			color: <?php echo esc_attr( $settings->separator_icon_color ); ?>;
 		}
 	<?php } ?>
 

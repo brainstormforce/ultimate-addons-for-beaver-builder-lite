@@ -63,7 +63,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 
 			$name_new = 'uabb_' . $name;
 			$value    = (array) $value;
-			$preview  = json_encode( array( 'type' => 'refresh' ) );
+			$preview  = json_encode( array( 'type' => 'refresh' ) ); //	phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode	
 
 			$default   = ( isset( $field['default'] ) && '' !== $field['default'] ) ? $field['default'] : '';
 			$direction = array(
