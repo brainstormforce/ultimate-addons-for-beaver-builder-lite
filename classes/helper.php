@@ -35,7 +35,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				$css .= 'font-weight: ' . $font['weight'] . ';';
 			}
 
-			echo esc_html ( $css, array() );
+			echo esc_attr ( $css, array() );
 		}
 
 		/**
@@ -200,7 +200,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				$css .= 'background: -moz-linear-gradient(' . $gradient_angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';
 				$css .= 'background: linear-gradient(' . $angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';
 			}
-			echo wp_kses( $css, array() );
+			echo esc_attr( $css, array() );
 		}
 		/**
 		 *  Get link rel attribute

@@ -149,14 +149,14 @@ class UABBInfoList extends FLBuilderModule {
 
 		if ( ! empty( $item->list_item_link ) && 'complete' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
-			echo '<a href="' . esc_attr( $item->list_item_url ) . '" class="uabb-info-list-link" target="' . esc_attr( $target ) . '" ' . esc_attr( UABB_Helper::get_link_rel( $target, $nofollow, 0 ) ) . '></a>';
+			echo '<a href="' . esc_url( $item->list_item_url ) . '" class="uabb-info-list-link" target="' . esc_attr( $target ) . '" ' . esc_attr( UABB_Helper::get_link_rel( $target, $nofollow, 0 ) ) . '></a>';
 		}
 
 		if ( 'none' !== $item->image_type ) {
 			echo '<div class="uabb-info-list-icon info-list-icon-dynamic' . esc_attr( $list_item_counter ) . '">';
 
 			if ( ! empty( $item->list_item_link ) && 'icon' === $item->list_item_link ) {
-				echo '<a href="' . esc_attr( $item->list_item_url ) . '" class="uabb-info-list-link" target="' . esc_attr( $target ) . '" ' . esc_attr( UABB_Helper::get_link_rel( esc_attr( $target ), esc_attr( $nofollow ), 0 ) ) . '></a>';
+				echo '<a href="' . esc_url( $item->list_item_url ) . '" class="uabb-info-list-link" target="' . esc_attr( $target ) . '" ' . esc_attr( UABB_Helper::get_link_rel( esc_attr( $target ), esc_attr( $nofollow ), 0 ) ) . '></a>';
 			}
 				$this->render_image( $item, $this->settings );
 
