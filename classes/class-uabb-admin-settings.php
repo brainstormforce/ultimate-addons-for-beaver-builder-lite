@@ -335,7 +335,7 @@ final class UABBBuilderAdminSettings {
 		$sorted_data = array();
 
 		foreach ( $item_data as $key => $data ) {
-			echo esc_html( $data['key'] );
+			$data['key']                      = $key;
 			$sorted_data[ $data['priority'] ] = $data;
 		}
 

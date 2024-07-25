@@ -35,7 +35,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				$css .= 'font-weight: ' . $font['weight'] . ';';
 			}
 
-			echo wp_kses( $css, array() );
+			echo esc_html ( $css, array() );
 		}
 
 		/**
