@@ -19,7 +19,7 @@ if ( isset( $settings->it_link_nofollow ) ) {
 		<?php
 		// Define a whitelist of allowed tags.
 		$allowed_tags  = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
-		$infotable_tag = in_array( $settings->heading_tag_selection, $allowed_tags ) ? $settings->heading_tag_selection : 'h3';
+		$infotable_tag = in_array( $settings->heading_tag_selection, $allowed_tags, true ) ? $settings->heading_tag_selection : 'h3';
 		?>
 		<div class="info-table-heading">
 			<?php echo '<' . esc_attr( $infotable_tag ) . " class='info-table-main-heading'>"; ?>
