@@ -5,11 +5,11 @@
  *  @package UABB Image Separator Module
  */
 
-$settings->img_bg_color       = UABB_Helper::uabb_colorpicker( $settings, 'img_bg_color', true );
-$settings->img_bg_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'img_bg_hover_color', true );
+$settings->img_bg_color       = FLBuilderColor::hex_or_rgb( $settings->img_bg_color );
+$settings->img_bg_hover_color = FLBuilderColor::hex_or_rgb( $settings->img_bg_hover_color );
 
-$settings->img_border_color       = UABB_Helper::uabb_colorpicker( $settings, 'img_border_color' );
-$settings->img_border_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'img_border_hover_color' );
+$settings->img_border_color       = FLBuilderColor::hex_or_rgb( $settings->img_border_color );
+$settings->img_border_hover_color = FLBuilderColor::hex_or_rgb( $settings->img_border_hover_color );
 
 ?>
 

@@ -9,18 +9,19 @@ global $post;
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
-	$settings->title_color = UABB_Helper::uabb_colorpicker( $settings, 'color' );
-	$settings->desc_color  = UABB_Helper::uabb_colorpicker( $settings, 'desc_color' );
-	$settings->bg_color    = UABB_Helper::uabb_colorpicker( $settings, 'bg_color' );
+	$settings->title_color = FLBuilderColor::hex_or_rgb( $settings->color );
+	$settings->desc_color  = FLBuilderColor::hex_or_rgb( $settings->desc_color );
+	$settings->bg_color    = FLBuilderColor::hex_or_rgb( $settings->bg_color );
 
 	$settings->heading_margin_top    = ( '' !== trim( $settings->heading_margin_top ) ) ? $settings->heading_margin_top : '0';
 	$settings->heading_margin_bottom = ( '' !== trim( $settings->heading_margin_bottom ) ) ? $settings->heading_margin_bottom : '15';
 	$settings->desc_margin_top       = ( '' !== trim( $settings->desc_margin_top ) ) ? $settings->desc_margin_top : '15';
 	$settings->desc_margin_bottom    = ( '' !== trim( $settings->desc_margin_bottom ) ) ? $settings->desc_margin_bottom : '0';
 	$settings->img_size              = ( '' !== trim( $settings->img_size ) ) ? $settings->img_size : '50';
-	$settings->separator_line_color  = UABB_Helper::uabb_colorpicker( $settings, 'separator_line_color' );
-	$settings->separator_text_color  = UABB_Helper::uabb_colorpicker( $settings, 'separator_text_color' );
-	$settings->color                 = UABB_Helper::uabb_colorpicker( $settings, 'color' );
+	$settings->separator_line_color  = FLBuilderColor::hex_or_rgb( $settings->separator_line_color );
+	$settings->separator_text_color  = FLBuilderColor::hex_or_rgb( $settings->separator_text_color );
+	$settings->separator_icon_color  = FLBuilderColor::hex_or_rgb( $settings->separator_icon_color );
+	$settings->color                 = FLBuilderColor::hex_or_rgb( $settings->color );
 	$settings->img_size              = ( '' !== trim( $settings->img_size ) ) ? $settings->img_size : '50';
 	$settings->separator_line_height = ( '' !== trim( $settings->separator_line_height ) ) ? $settings->separator_line_height : '1';
 	$settings->separator_line_width  = ( '' !== trim( $settings->separator_line_width ) ) ? $settings->separator_line_width : '30';
@@ -196,7 +197,7 @@ if ( '' !== $settings->separator_style ) {
 			'photo_src'           => ( isset( $settings->photo_src ) ) ? $settings->photo_src : '',
 
 			/* Icon color */
-			'icon_color'          => $settings->separator_icon_color,
+			// 'icon_color'          => $settings->separator_icon_color,
 		);
 
 		/* CSS Render Function */
@@ -211,6 +212,7 @@ if ( '' !== $settings->separator_style ) {
 			width: 1.3em;
 			height: 1.3em;
 			line-height: 1.3em;
+			color: <?php echo ( $settings->separator_icon_color ); ?>;
 		}
 	<?php } ?>
 

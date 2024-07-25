@@ -11,12 +11,12 @@ global $post;
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
-$settings->text_color        = UABB_Helper::uabb_colorpicker( $settings, 'text_color' );
-$settings->ribbon_color      = UABB_Helper::uabb_colorpicker( $settings, 'ribbon_color' );
-$settings->text_shadow_color = UABB_Helper::uabb_colorpicker( $settings, 'text_shadow_color' );
-$settings->icon_color        = UABB_Helper::uabb_colorpicker( $settings, 'icon_color' );
-$settings->fold_color        = UABB_Helper::uabb_colorpicker( $settings, 'fold_color' );
-$settings->end_color         = UABB_Helper::uabb_colorpicker( $settings, 'end_color' );
+$settings->text_color        = FLBuilderColor::hex_or_rgb( $settings->text_color );
+$settings->ribbon_color      = FLBuilderColor::hex_or_rgb( $settings->ribbon_color );
+$settings->text_shadow_color = FLBuilderColor::hex_or_rgb( $settings->text_shadow_color );
+$settings->icon_color        = FLBuilderColor::hex_or_rgb( $settings->icon_color );
+$settings->fold_color        = FLBuilderColor::hex_or_rgb( $settings->fold_color );
+$settings->end_color         = FLBuilderColor::hex_or_rgb( $settings->end_color );
 
 $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 ?>

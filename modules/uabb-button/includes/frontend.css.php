@@ -14,10 +14,11 @@ $settings->bg_hover_color   = uabb_theme_button_bg_hover_color( $settings->bg_ho
 $settings->text_color       = uabb_theme_button_text_color( $settings->text_color );
 $settings->text_hover_color = uabb_theme_button_text_hover_color( $settings->text_hover_color );
 
-$settings->bg_color         = UABB_Helper::uabb_colorpicker( $settings, 'bg_color', true );
-$settings->bg_hover_color   = UABB_Helper::uabb_colorpicker( $settings, 'bg_hover_color', true );
-$settings->text_color       = UABB_Helper::uabb_colorpicker( $settings, 'text_color' );
-$settings->text_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'text_hover_color' );
+$settings->bg_color         = FLBuilderColor::hex_or_rgb( $settings->bg_color );
+$settings->bg_hover_color   = FLBuilderColor::hex_or_rgb( $settings->bg_hover_color );
+$settings->text_color       = FLBuilderColor::hex_or_rgb( $settings->text_color );
+$settings->text_hover_color = FLBuilderColor::hex_or_rgb( $settings->text_hover_color );
+$settings->border_hover_color = FLBuilderColor::hex_or_rgb( $settings->border_hover_color );
 
 // Border Size.
 if ( 'transparent' === $settings->style ) {
@@ -40,10 +41,10 @@ if ( isset( $settings->three_d ) && $settings->three_d ) {
 
 // Background Gradient.
 if ( ! empty( $settings->bg_color ) ) {
-	$bg_grad_start = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_color ), 30, 'lighten' );
+	$bg_grad_start = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->bg_color, 30, 'lighten' ) );
 }
 if ( ! empty( $settings->bg_hover_color ) ) {
-	$bg_hover_grad_start = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_hover_color ), 30, 'lighten' );
+	$bg_hover_grad_start = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->bg_hover_color, 30, 'lighten' ) );
 }
 
 ?>
@@ -223,7 +224,7 @@ if ( ! $version_bb_check ) {
 				echo ( '' !== $settings->button_border_radius ) ? 'border-radius:' . esc_attr( $settings->button_border_radius ) . 'px;' : 'border-radius:' . esc_attr( uabb_theme_button_border_radius( '' ) ) . 'px;';
 			}
 			if ( isset( $settings->button_border_color ) ) {
-				echo ( '' !== $settings->button_border_color ) ? 'border-color:#' . esc_attr( $settings->button_border_color ) . ';' : 'border-color:' . esc_attr( uabb_theme_border_color( '' ) ) . ';';
+				echo ( '' !== $settings->button_border_color ) ? 'border-color:' . esc_attr( $settings->button_border_color ) . ';' : 'border-color:' . esc_attr( uabb_theme_border_color( '' ) ) . ';';
 			}
 			?>
 		}
@@ -249,7 +250,7 @@ if ( ! $version_bb_check ) {
 
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-module-content.uabb-creative-button-wrap a:hover {
-		<?php echo ( '' !== $settings->border_hover_color ) ? 'border-color:#' . esc_attr( $settings->border_hover_color ) . ';' : 'border-color:' . esc_attr( uabb_theme_border_hover_color( '' ) ) . ';'; ?>
+		<?php echo ( '' !== $settings->border_hover_color ) ? 'border-color:' . esc_attr( $settings->border_hover_color ) . ';' : 'border-color:' . esc_attr( uabb_theme_border_hover_color( '' ) ) . ';'; ?>
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-button-wrap a:hover {
 		background:<?php echo esc_attr( uabb_theme_default_button_bg_hover_color( $settings->bg_hover_color ) ); ?>;
@@ -661,11 +662,11 @@ if ( ! empty( $settings->style ) && 'threed' === $settings->style ) {
 	?>
 	<?php /* 3D Move Down*/ ?>
 	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_down-btn{
-		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_color ), 10, 'darken' ); ?>
+		<?php $shadow_color = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->bg_color, 10, 'darken' ) ); ?>
 		box-shadow: 0 6px <?php echo esc_attr( uabb_theme_base_color( $shadow_color ) ); ?>;
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_down-btn:hover{
-		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_hover_color ), 10, 'darken' ); ?>
+		<?php $shadow_color = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->bg_hover_color, 10, 'darken' ) ); ?>
 		top: 2px;
 		box-shadow: 0 4px <?php echo esc_attr( uabb_theme_base_color( $shadow_color ) ); ?>;
 	}
@@ -681,11 +682,11 @@ if ( ! empty( $settings->style ) && 'threed' === $settings->style ) {
 
 	<?php /* 3D Move Up*/ ?>
 	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_up-btn{
-		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_color ), 10, 'darken' ); ?>
+		<?php $shadow_color = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->bg_color, 10, 'darken' ) ); ?>
 		box-shadow: 0 -6px <?php echo esc_attr( uabb_theme_base_color( $shadow_color ) ); ?>;
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_up-btn:hover{
-		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_hover_color ), 10, 'darken' ); ?>
+		<?php $shadow_color = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->bg_hover_color, 10, 'darken' ) ); ?>
 		top: -2px;
 		box-shadow: 0 -4px <?php echo esc_attr( uabb_theme_base_color( $shadow_color ) ); ?>;
 	}
@@ -700,11 +701,11 @@ if ( ! empty( $settings->style ) && 'threed' === $settings->style ) {
 
 	<?php /* 3D Move Left*/ ?>
 	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_left-btn{
-		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_color ), 10, 'darken' ); ?>
+		<?php $shadow_color = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->bg_color, 10, 'darken' ) ); ?>
 		box-shadow: -6px 0 <?php echo esc_attr( uabb_theme_base_color( $shadow_color ) ); ?>;
 	}
 	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_left-btn:hover{
-		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_hover_color ), 10, 'darken' ); ?>
+		<?php $shadow_color = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->bg_hover_color, 10, 'darken' ) ); ?>
 		left: -2px;
 		box-shadow: -4px 0 <?php echo esc_attr( uabb_theme_base_color( $shadow_color ) ); ?>;
 	}
@@ -720,12 +721,12 @@ if ( ! empty( $settings->style ) && 'threed' === $settings->style ) {
 
 	<?php /* 3D Move Right*/ ?>
 	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_right-btn{
-		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_color ), 10, 'darken' ); ?>
+		<?php $shadow_color = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->bg_color, 10, 'darken' ) ); ?>
 		box-shadow: 6px 0 <?php echo esc_attr( uabb_theme_base_color( $shadow_color ) ); ?>;
 	}
 
 	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-threed_right-btn:hover{
-		<?php $shadow_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_hover_color ), 10, 'darken' ); ?>
+		<?php $shadow_color = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->bg_hover_color, 10, 'darken' ) ); ?>
 		left: 2px;
 		box-shadow: 4px 0 <?php echo esc_attr( uabb_theme_base_color( $shadow_color ) ); ?>;
 	}
@@ -740,7 +741,7 @@ if ( ! empty( $settings->style ) && 'threed' === $settings->style ) {
 
 	<?php /* Animate Background Color */ ?>
 	.fl-node-<?php echo esc_attr( $id ); ?> a.uabb-creative-threed-btn.uabb-<?php echo esc_attr( $settings->threed_button_options ); ?>-btn:hover:after{
-		<?php $background_color = '#' . FLBuilderColor::adjust_brightness( uabb_parse_color_to_hex( $settings->bg_hover_color ), 10, 'darken' ); ?>
+		<?php $background_color = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->bg_hover_color, 10, 'darken' ) ); ?>
 		background: <?php echo esc_attr( $background_color ); ?>;
 	}
 

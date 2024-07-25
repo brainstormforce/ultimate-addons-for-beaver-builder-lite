@@ -581,6 +581,7 @@ if ( ! $version_bb_check ) {
 									'type'       => 'color',
 									'label'      => __( 'Text Color', 'uabb' ),
 									'default'    => '',
+									'connections' => array( 'color' ),
 									'show_reset' => true,
 									'show_alpha' => true,
 								),
@@ -588,6 +589,7 @@ if ( ! $version_bb_check ) {
 									'type'       => 'color',
 									'label'      => __( 'Text Hover Color', 'uabb' ),
 									'default'    => '',
+									'connections' => array( 'color' ),
 									'show_reset' => true,
 									'show_alpha' => true,
 									'preview'    => array(
@@ -598,6 +600,7 @@ if ( ! $version_bb_check ) {
 									'type'       => 'color',
 									'label'      => __( 'Background Color', 'uabb' ),
 									'default'    => '',
+									'connections' => array( 'color' ),
 									'show_reset' => true,
 									'show_alpha' => true,
 								),
@@ -614,6 +617,7 @@ if ( ! $version_bb_check ) {
 									'type'       => 'color',
 									'label'      => __( 'Background Hover Color', 'uabb' ),
 									'default'    => '',
+									'connections' => array( 'color' ),
 									'show_reset' => true,
 									'show_alpha' => true,
 									'preview'    => array(
