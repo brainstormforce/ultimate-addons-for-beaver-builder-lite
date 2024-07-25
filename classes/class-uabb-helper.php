@@ -688,7 +688,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 			if ( ! $echo ) {
 				return 'rel="' . $attr . '"';
 			}
-			echo 'rel="' . $attr . '"';
+			echo 'rel="' . esc_attr( $attr ) . '"';
 		}
 
 	}

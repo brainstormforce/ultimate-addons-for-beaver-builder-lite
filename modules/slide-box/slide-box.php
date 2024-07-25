@@ -1020,7 +1020,7 @@ class SlideBoxModule extends FLBuilderModule {
 			$link_nofollow = '';
 		}
 		if ( 'link' === $this->settings->cta_type ) {
-			echo '<a href="' . $this->settings->link . '" target="' . $this->settings->link_target . '" ' . UABB_Helper::get_link_rel( $this->settings->link_target, $link_nofollow, 0 ) . ' class="uabb-callout-cta-link">' . $this->settings->cta_text . '</a>';
+			echo '<a href="' . esc_url( $this->settings->link ) . '" target="' . esc_attr( $this->settings->link_target ) . '" ' . esc_attr( UABB_Helper::get_link_rel( $this->settings->link_target, $link_nofollow, 0 ) ) . ' class="uabb-callout-cta-link">' . esc_html( $this->settings->cta_text ) . '</a>';
 		}
 	}
 
@@ -1112,7 +1112,7 @@ class SlideBoxModule extends FLBuilderModule {
 			echo '<div class="uabb-slide-box-overlay">';
 			echo    '<span class="uabb-icon-wrap">
                         <span class="uabb-icon">
-                            <i class="' . $this->settings->overlay_icon . '"></i> 
+                            <i class="' . esc_attr( $this->settings->overlay_icon ) . '"></i>
                         </span>
                     </span>';
 			echo '</div>';

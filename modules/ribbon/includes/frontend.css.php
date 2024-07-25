@@ -27,7 +27,7 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon-wrap .uabb-ribbon-text {
 	<?php if ( 'color' === $settings->ribbon_bg_type ) { ?>
-		background: <?php echo ( '' !== uabb_theme_base_color( $settings->ribbon_color ) ) ? uabb_theme_base_color( $settings->ribbon_color ) : '#f7f7f7'; ?>;
+		background: <?php echo esc_attr( ( '' !== uabb_theme_base_color( $settings->ribbon_color ) ) ? uabb_theme_base_color( $settings->ribbon_color ) : '#f7f7f7' ); ?>;
 		<?php
 	} elseif ( 'gradient' === $settings->ribbon_bg_type ) {
 		UABB_Helper::uabb_gradient_css( $settings->gradient_color );
@@ -72,7 +72,7 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 }
 ?>
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon-wrap .uabb-ribbon {
-	/*background: <?php echo ( '' !== uabb_theme_base_color( $settings->ribbon_color ) ) ? uabb_theme_base_color( $settings->ribbon_color ) : '#f7f7f7'; ?>;*/
+	/*background: <?php echo esc_attr( ( '' !== uabb_theme_base_color( $settings->ribbon_color ) ) ? uabb_theme_base_color( $settings->ribbon_color ) : '#f7f7f7' ); ?>;*/
 	<?php
 	echo ( '' !== $settings->text_color ) ? 'color: ' . esc_attr( $settings->text_color ) . ';' : '';
 	?>
@@ -98,19 +98,19 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb i,
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb i {
-	color: <?php echo uabb_theme_text_color( $settings->icon_color ); ?>;
+	color: <?php echo esc_attr( uabb_theme_text_color( $settings->icon_color ) ); ?>;
 }
 
 <?php if ( 'none' === $settings->ribbon_resp ) : ?>
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before,
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 		border-style: solid;
-		border-color: <?php echo uabb_theme_text_color( $settings->fold_color ); ?> transparent transparent transparent;
+		border-color: <?php echo esc_attr( uabb_theme_text_color( $settings->fold_color ) ); ?> transparent transparent transparent;
 	}
 
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb,
 	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb {
-		border: 1em solid <?php echo uabb_theme_base_color( $settings->end_color ); ?>;
+		border: 1em solid <?php echo esc_attr( uabb_theme_base_color( $settings->end_color ) ); ?>;
 		z-index: -1;
 	}
 
@@ -206,12 +206,12 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before,
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 			border-style: solid;
-			border-color: <?php echo uabb_theme_text_color( $settings->fold_color ); ?> transparent transparent transparent;
+			border-color: <?php echo esc_attr( uabb_theme_text_color( $settings->fold_color ) ); ?> transparent transparent transparent;
 		}
 
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb,
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb {
-			border: 1em solid <?php echo uabb_theme_base_color( $settings->end_color ); ?>;
+			border: 1em solid <?php echo esc_attr( uabb_theme_base_color( $settings->end_color ) ); ?>;
 			z-index: -1;
 		}
 
@@ -327,12 +327,12 @@ $settings->icon_color = uabb_theme_text_color( $settings->icon_color );
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:before,
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-ribbon-text:after {
 			border-style: solid;
-			border-color: <?php echo uabb_theme_text_color( $settings->fold_color ); ?> transparent transparent transparent;
+			border-color: <?php echo esc_attr( uabb_theme_text_color( $settings->fold_color ) ); ?> transparent transparent transparent;
 		}
 
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-left-ribb,
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-ribbon .uabb-right-ribb {
-			border: 1em solid <?php echo uabb_theme_base_color( $settings->end_color ); ?>;
+			border: 1em solid <?php echo esc_attr( uabb_theme_base_color( $settings->end_color ) ); ?>;
 			z-index: -1;
 		}
 

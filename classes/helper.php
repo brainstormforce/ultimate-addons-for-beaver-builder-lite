@@ -35,7 +35,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				$css .= 'font-weight: ' . $font['weight'] . ';';
 			}
 
-			echo $css;
+			echo esc_attr ( $css, array() );
 		}
 
 		/**
@@ -200,7 +200,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				$css .= 'background: -moz-linear-gradient(' . $gradient_angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';
 				$css .= 'background: linear-gradient(' . $angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';
 			}
-			echo $css;
+			echo esc_attr( $css, array() );
 		}
 		/**
 		 *  Get link rel attribute
@@ -230,7 +230,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			if ( ! $echo ) {
 				return 'rel="' . $attr . '"';
 			}
-			echo 'rel="' . $attr . '"';
+			echo 'rel="' . esc_attr( $attr ) . '"';
 		}
 	}
 }

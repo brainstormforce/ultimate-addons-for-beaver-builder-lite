@@ -76,7 +76,7 @@ global $wp_embed;
 
 	<?php if ( '' !== $settings->description ) : ?>
 		<div class="uabb-subheading uabb-text-editor">
-			<?php echo wpautop( $wp_embed->autoembed( $settings->description ) ); ?>
+			<?php echo wp_kses_post( wpautop( $wp_embed->autoembed( $settings->description ) ) ); ?>
 		</div>
 	<?php endif; ?>
 
