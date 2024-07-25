@@ -25,7 +25,7 @@ var field   = data.field,
 		'bottom_top' : '<?php _e( 'Bottom to Top', 'uabb' ); ?>',
 		'custom'     : '<?php _e( 'Custom', 'uabb' ); ?>'
 	},
-	yr = parseInt( '<?php echo date( 'Y' ); ?>' );
+	yr = parseInt( '<?php echo date( 'Y' ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date ?>' );
 #>
 
 <div class="uabb-gradient-wrapper bb-colorpick">

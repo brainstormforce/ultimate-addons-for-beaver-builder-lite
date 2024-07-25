@@ -18,7 +18,7 @@ if(! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
 else
 	var is_touch_device = true;
 
-<?php if ( 'style1' == $settings->slide_type ) { ?>
+<?php if ( 'style1' === $settings->slide_type ) { ?>
 var isMobile = { 
 	Android: function() { 
 		return navigator.userAgent.match(/Android/i);

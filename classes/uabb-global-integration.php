@@ -60,7 +60,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		function uabb_get_global_option( $option, $color = false, $opc = false ) {
 			$uabb_setting_options = $this->uabb_setting_options;
 
-			if ( isset( $uabb_setting_options->enable_global ) && ( 'no' == $uabb_setting_options->enable_global ) ) {
+			if ( isset( $uabb_setting_options->enable_global ) && ( 'no' === $uabb_setting_options->enable_global ) ) {
 				return '';
 			} elseif ( isset( $uabb_setting_options->$option ) && ! empty( $uabb_setting_options->$option ) ) {
 
@@ -221,7 +221,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 			$v_padding = $this->uabb_get_global_option( 'btn_vertical_padding' );
 			$h_padding = $this->uabb_get_global_option( 'btn_horizontal_padding' );
 
-			if ( '' != $v_padding && '' != $h_padding ) {
+			if ( '' !== $v_padding && '' !== $h_padding ) {
 				$padding = $v_padding . 'px ' . $h_padding . 'px';
 			}
 

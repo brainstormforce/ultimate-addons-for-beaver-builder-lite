@@ -24,8 +24,8 @@
 				$is_load_panels    = '';
 				$uabb_live_preview = '';
 			if ( is_array( $uabb ) ) {
-				$is_load_panels    = ( array_key_exists( 'load_panels', $uabb ) && 1 == $uabb['load_panels'] ) ? ' checked' : '';
-				$uabb_live_preview = ( array_key_exists( 'uabb-live-preview', $uabb ) && 1 == $uabb['uabb-live-preview'] ) ? ' checked' : '';
+				$is_load_panels    = ( array_key_exists( 'load_panels', $uabb ) && 1 === $uabb['load_panels'] ) ? ' checked' : '';
+				$uabb_live_preview = ( array_key_exists( 'uabb-live-preview', $uabb ) && 1 === $uabb['uabb-live-preview'] ) ? ' checked' : '';
 			}
 			?>
 
