@@ -140,7 +140,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 				),
 				array(
 					'strong' => array(),
-					'a' => array(
+					'a'      => array(
 						'href' => array(),
 					),
 				)

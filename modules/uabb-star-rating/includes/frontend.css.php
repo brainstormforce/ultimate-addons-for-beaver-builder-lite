@@ -4,6 +4,7 @@
  *
  *  @package UABB Star Rating Module
  */
+
 $settings->title_color           = FLBuilderColor::hex_or_rgb( $settings->title_color );
 $settings->rating_unmarked_color = FLBuilderColor::hex_or_rgb( $settings->rating_unmarked_color );
 $settings->rating_color          = FLBuilderColor::hex_or_rgb( $settings->rating_color );

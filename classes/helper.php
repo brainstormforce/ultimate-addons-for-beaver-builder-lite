@@ -35,7 +35,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				$css .= 'font-weight: ' . $font['weight'] . ';';
 			}
 
-			echo esc_attr ( $css, array() );
+			echo esc_attr( $css, array() );
 		}
 
 		/**

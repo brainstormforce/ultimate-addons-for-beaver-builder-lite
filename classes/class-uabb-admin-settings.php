@@ -265,7 +265,7 @@ final class UABBBuilderAdminSettings {
 						'div' => array(
 							'class' => array(),
 						),
-						'p' => array(),
+						'p'   => array(),
 					)
 				);
 			}
@@ -276,7 +276,7 @@ final class UABBBuilderAdminSettings {
 					'div' => array(
 						'class' => array(),
 					),
-					'p' => array(),
+					'p'   => array(),
 				)
 			);
 		}

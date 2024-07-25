@@ -14,10 +14,10 @@ $settings->btn_text_hover_color = FLBuilderColor::hex_or_rgb( $settings->btn_tex
 $settings->heading_color        = FLBuilderColor::hex_or_rgb( $settings->heading_color );
 $settings->sub_heading_color    = FLBuilderColor::hex_or_rgb( $settings->sub_heading_color );
 $settings->description_color    = FLBuilderColor::hex_or_rgb( $settings->description_color );
-$settings->btn_bg_color       = FLBuilderColor::hex_or_rgb( $settings->btn_bg_color );
-$settings->btn_bg_hover_color = FLBuilderColor::hex_or_rgb( $settings->btn_bg_hover_color );
-$settings->heading_back_color = FLBuilderColor::hex_or_rgb( $settings->heading_back_color );
-$settings->desc_back_color    = FLBuilderColor::hex_or_rgb( $settings->desc_back_color );
+$settings->btn_bg_color         = FLBuilderColor::hex_or_rgb( $settings->btn_bg_color );
+$settings->btn_bg_hover_color   = FLBuilderColor::hex_or_rgb( $settings->btn_bg_hover_color );
+$settings->heading_back_color   = FLBuilderColor::hex_or_rgb( $settings->heading_back_color );
+$settings->desc_back_color      = FLBuilderColor::hex_or_rgb( $settings->desc_back_color );
 
 $settings->icon_size             = ( '' !== trim( $settings->icon_size ) ) ? $settings->icon_size : '75';
 $settings->icon_bg_size          = ( '' !== trim( $settings->icon_bg_size ) ) ? $settings->icon_bg_size : '30';

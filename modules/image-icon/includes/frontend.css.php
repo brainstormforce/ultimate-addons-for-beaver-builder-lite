@@ -54,8 +54,8 @@ if ( 'none' !== $settings->image_type ) :
 
 		/* Gradient Color */
 		if ( $settings->icon_three_d ) {
-			$bg_grad_start           = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->icon_bg_color, 40, 'lighten' ) );
-			$border_color            = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->icon_bg_color, 20, 'darken' ) );
+			$bg_grad_start = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->icon_bg_color, 40, 'lighten' ) );
+			$border_color  = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->icon_bg_color, 20, 'darken' ) );
 		}
 		if ( $settings->icon_three_d && ! empty( $settings->icon_bg_hover_color ) ) {
 			$bg_hover_grad_start = FLBuilderColor::hex_or_rgb( FLBuilderColor::adjust_brightness( $settings->icon_bg_hover_color, 40, 'lighten' ) );

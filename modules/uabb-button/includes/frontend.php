@@ -34,7 +34,7 @@ if ( isset( $settings->link_nofollow ) ) {
 				?>
 				<i class="uabb-button-icon uabb-creative-button-icon <?php echo esc_attr( $add_class_to_icon ); ?> fa <?php echo esc_attr( $settings->icon ); ?>"></i>
 			<?php endif; ?>
-			<span class="uabb-button-text uabb-creative-button-text"><?php echo esc_html( $settings->text ); ?></span>
+			<span class="uabb-button-text uabb-creative-button-text"><?php echo wp_kses_post( $settings->text ); ?></span>
 			<?php
 			if ( ! empty( $settings->icon ) && 'after' === $settings->icon_position ) :
 
