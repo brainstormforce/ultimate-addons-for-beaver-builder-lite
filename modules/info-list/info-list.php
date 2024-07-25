@@ -170,7 +170,7 @@ class UABBInfoList extends FLBuilderModule {
 		echo '<' . esc_attr( $infolist_tag ) . ' class="uabb-info-list-title">';
 		if ( ! empty( $item->list_item_link ) && 'list-title' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
-			echo '<a href="' . esc_url( $item->list_item_url ) . '" class="uabb-info-list-link" target="' . esc_attr( $target ) . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '>';
+			echo '<a href="' . esc_url( $item->list_item_url ) . '" target="' . esc_attr( $target ) . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '>';
 
 		}
 		echo esc_html( $item->list_item_title );
