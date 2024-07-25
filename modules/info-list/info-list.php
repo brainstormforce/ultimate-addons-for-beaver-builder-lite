@@ -149,14 +149,14 @@ class UABBInfoList extends FLBuilderModule {
 
 		if ( ! empty( $item->list_item_link ) && 'complete' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
-			echo '<a href="' . esc_attr( $item->list_item_url ) . '" class="uabb-info-list-link" target="' . esc_attr( $target ) . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '></a>';
+			echo '<a href="' . esc_url( $item->list_item_url ) . '" class="uabb-info-list-link" target="' . esc_attr( $target ) . '" ' . esc_attr( UABB_Helper::get_link_rel( $target, $nofollow, 0 ) ) . '></a>';
 		}
 
 		if ( 'none' !== $item->image_type ) {
 			echo '<div class="uabb-info-list-icon info-list-icon-dynamic' . esc_attr( $list_item_counter ) . '">';
 
 			if ( ! empty( $item->list_item_link ) && 'icon' === $item->list_item_link ) {
-				echo '<a href="' . esc_attr( $item->list_item_url ) . '" class="uabb-info-list-link" target="' . esc_attr( $target ) . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '></a>';
+				echo '<a href="' . esc_url( $item->list_item_url ) . '" class="uabb-info-list-link" target="' . esc_attr( $target ) . '" ' . esc_attr( UABB_Helper::get_link_rel( esc_attr( $target ), esc_attr( $nofollow ), 0 ) ) . '></a>';
 			}
 				$this->render_image( $item, $this->settings );
 
@@ -170,10 +170,10 @@ class UABBInfoList extends FLBuilderModule {
 		echo '<' . esc_attr( $infolist_tag ) . ' class="uabb-info-list-title">';
 		if ( ! empty( $item->list_item_link ) && 'list-title' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
-			echo '<a href="' . esc_attr( $item->list_item_url ) . '" target="' . esc_attr( $target ) . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '>';
+			echo '<a href="' . esc_url( $item->list_item_url ) . '" target="' . esc_attr( $target ) . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '>';
 
 		}
-		echo $item->list_item_title;
+		echo esc_html( $item->list_item_title );
 		if ( ! empty( $item->list_item_link ) && 'list-title' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
 			echo '</a>';
@@ -183,9 +183,9 @@ class UABBInfoList extends FLBuilderModule {
 
 		echo '<div class="uabb-info-list-description uabb-text-editor info-list-description-dynamic' . esc_attr( $list_item_counter ) . '">';
 		if ( strpos( $item->list_item_description, '</p>' ) > 0 ) {
-			echo $item->list_item_description;
+			echo esc_html( $item->list_item_description );
 		} else {
-			echo '<p>' . $item->list_item_description . '</p>';
+			echo '<p>' . esc_html( $item->list_item_description ) . '</p>';
 		}
 
 		echo '</div>';

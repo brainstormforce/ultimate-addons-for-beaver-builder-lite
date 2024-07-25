@@ -8,7 +8,7 @@
 ?>
 <div id="fl-uabb-cloud-templates-form" class="fl-settings-form uabb-cloud-templates-fl-settings-form">
 
-	<h3 class="fl-settings-form-header"><?php _e( 'Template Cloud', 'uabb' ); ?></h3>
+	<h3 class="fl-settings-form-header"><?php esc_html_e( 'Template Cloud', 'uabb' ); ?></h3>
 
 	<div class="uabb-go-premium"><?php _e( '<a href="' . BB_ULTIMATE_ADDON_UPGRADE_URL . '" target="_blank">Go Premium</a> and get access to all Page Templates and Sections.', 'uabb' ); // @codingStandardsIgnoreLine. ?></div>
 
@@ -22,7 +22,7 @@
 				echo 'checked="checked"';}
 			?>
 			/>
-			<?php _e( 'Override network settings?', 'uabb' ); ?>
+			<?php esc_html_e( 'Override network settings?', 'uabb' ); ?>
 		</label>
 		<?php endif; ?>
 
@@ -34,16 +34,16 @@
 				<div id="uabb-cloud-templates-inner" class="wp-filter">
 
 					<div class="filter-count">
-						<span class="count"><?php echo UABB_Cloud_Templates::get_cloud_templates_count( 'page-templates' ); ?></span>
+						<span class="count"><?php echo esc_html( UABB_Cloud_Templates::get_cloud_templates_count( 'page-templates' ) ); ?></span>
 					</div>
 					<ul class="uabb-filter-links">
-						<li><a href="#uabb-cloud-templates-page-templates" data-count="<?php echo UABB_Cloud_Templates::get_cloud_templates_count( 'page-templates' ); ?>"> <?php _e( 'Page Templates', 'uabb' ); ?> </a></li>
-						<li><a href="#uabb-cloud-templates-sections" data-count="<?php echo UABB_Cloud_Templates::get_cloud_templates_count( 'sections' ); ?>"> <?php _e( 'Sections', 'uabb' ); ?> </a></li>
+						<li><a href="#uabb-cloud-templates-page-templates" data-count="<?php echo esc_attr( UABB_Cloud_Templates::get_cloud_templates_count( 'page-templates' ) ); ?>"> <?php esc_html_e( 'Page Templates', 'uabb' ); ?> </a></li>
+						<li><a href="#uabb-cloud-templates-sections" data-count="<?php echo esc_attr( UABB_Cloud_Templates::get_cloud_templates_count( 'sections' ) ); ?>"> <?php esc_html_e( 'Sections', 'uabb' ); ?> </a></li>
 					</ul>
 					<div class="uabb-fetch-templates">
 						<span class="button button-secondary uabb-cloud-process" data-operation="fetch">
 							<i class="dashicons dashicons-update " style="padding: 3px;"></i>
-							<span class="msg"> <?php _e( 'Refresh', 'uabb' ); ?> </span>
+							<span class="msg"> <?php esc_html_e( 'Refresh', 'uabb' ); ?> </span>
 						</span>
 					</div>
 

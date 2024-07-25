@@ -250,7 +250,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 		background: -o-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* Opera 11.10+ */
 		background: -ms-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* IE10+ */
 		background: linear-gradient(to bottom,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $bg_grad_start; ?>', endColorstr='<?php echo $bg_color_code; ?>',GradientType=0 ); /* IE6-9 */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo esc_attr( $bg_grad_start ); ?>', endColorstr='<?php echo esc_attr( $bg_color_code ); ?>',GradientType=0 ); /* IE6-9 */
 	}
 
 	/* Design Two */
@@ -328,9 +328,9 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 	/* Button Design */
 	<?php if ( 'cta' === $settings->it_link_type ) { ?>
 		.fl-node-<?php echo esc_attr( $id ); ?> .info-table-wrap .info-table-button a {
-			color: <?php echo uabb_theme_button_text_color( $settings->btn_text_color ); ?>;
-			background: <?php echo uabb_theme_base_color( $settings->btn_bg_color ); ?>;
-			padding: <?php echo uabb_theme_button_padding( '' ); ?>
+			color: <?php echo esc_attr( uabb_theme_button_text_color( $settings->btn_text_color ) ); ?>;
+			background: <?php echo esc_attr( uabb_theme_base_color( $settings->btn_bg_color ) ); ?>;
+			padding: <?php echo esc_attr( uabb_theme_button_padding( '' ) ); ?>
 		}
 
 		<?php if ( 'design02' !== $settings->box_design ) { ?>
@@ -374,7 +374,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 				bottom: -6px;
 				right: 0;
 				border-bottom: 8px solid transparent;
-				border-left: 8px solid <?php echo uabb_theme_base_color( $settings->btn_bg_color ); ?>;
+				border-left: 8px solid <?php echo esc_attr( uabb_theme_base_color( $settings->btn_bg_color ) ); ?>;
 				-webkit-transition: all 200ms ease-in-out;
 					-moz-transition: all 200ms ease-in-out;
 					transition: all 200ms ease-in-out
@@ -433,7 +433,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 			background: -o-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* Opera 11.10+ */
 			background: -ms-linear-gradient(top,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* IE10+ */
 			background: linear-gradient(to bottom,  <?php echo esc_attr( $bg_grad_start ); ?> 0%,<?php echo esc_attr( $bg_color_code ); ?> 100%); /* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $bg_grad_start; ?>', endColorstr='<?php echo $bg_color_code; ?>',GradientType=0 ); /* IE6-9 */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo esc_attr( $bg_grad_start ); ?>', endColorstr='<?php echo esc_attr( $bg_color_code ); ?>',GradientType=0 ); /* IE6-9 */
 		}
 	<?php } ?>
 
@@ -560,8 +560,8 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 	<?php if ( 'cta' === $settings->it_link_type ) { ?>
 		.fl-node-<?php echo esc_attr( $id ); ?> .info-table-wrap .info-table-button a {
 			color: <?php echo esc_attr( $settings->btn_text_color ); ?>;
-			background: <?php echo uabb_theme_base_color( $settings->btn_bg_color ); ?>;
-			padding: <?php echo uabb_theme_button_padding( '' ); ?>;
+			background: <?php echo esc_attr( uabb_theme_base_color( $settings->btn_bg_color ) ); ?>;
+			padding: <?php echo esc_attr( uabb_theme_button_padding( '' ) ); ?>;
 		}
 		<?php if ( 'design02' !== $settings->box_design ) { ?>
 			.fl-node-<?php echo esc_attr( $id ); ?> .info-table-wrap .info-table-button a {
@@ -598,7 +598,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 				bottom: -6px;
 				right: 0;
 				border-bottom: 8px solid transparent;
-				border-left: 8px solid <?php echo uabb_theme_base_color( $settings->btn_bg_color ); ?>;
+				border-left: 8px solid <?php echo esc_attr( uabb_theme_base_color( $settings->btn_bg_color ) ); ?>;
 				-webkit-transition: all 200ms ease-in-out;
 					-moz-transition: all 200ms ease-in-out;
 						transition: all 200ms ease-in-out
@@ -612,7 +612,7 @@ FLBuilder::render_module_css( 'image-icon', $id, $imageicon_array );
 		<?php } elseif ( 'design03' === $settings->box_design ) { ?>
 		<?php } elseif ( 'design04' === $settings->box_design ) { ?>
 			.fl-node-<?php echo esc_attr( $id ); ?> .info-table-design04 .info-table-button a {
-				background: <?php echo $border_color_top; ?>;*/
+				background: <?php echo esc_attr( $border_color_top ); ?>;*/
 			}
 		<?php } elseif ( 'design05' === $settings->box_design ) { ?>
 		<?php } elseif ( 'design06' === $settings->box_design ) { ?>

@@ -9,7 +9,7 @@
 
 <div id="fl-uabb-welcome-form" class="fl-settings-form">
 
-	<h3 class="fl-settings-form-header"><?php _e( 'Welcome to the Ultimate Addon for Beaver Builder!', 'uabb' ); ?></h3>
+	<h3 class="fl-settings-form-header"><?php esc_html_e( 'Welcome to the Ultimate Addon for Beaver Builder!', 'uabb' ); ?></h3>
 
 	<div class="fl-settings-form-content fl-welcome-page-content">
 
@@ -33,11 +33,11 @@
 			</div>
 
 			<div class="fl-welcome-col">
-				<img class="fl-welcome-img" src="<?php echo BB_ULTIMATE_ADDON_URL; ?>/assets/images/welcome-uabb.jpg" alt="">
+				<img class="fl-welcome-img" src="<?php echo esc_url( BB_ULTIMATE_ADDON_URL ); ?>/assets/images/welcome-uabb.jpg" alt="">
 			</div>
 		</div>
 
-		<h4><?php _e( 'Join our Community!', 'uabb' ); ?></h4>
+		<h4><?php esc_html_e( 'Join our Community!', 'uabb' ); ?></h4>
 		<p><?php printf( __( 'Want to connect with us to know more? Or have some suggestions we can take forward? <a href="%s" target="_blank">Join our Facebook community</a>, where a number of professional and newbie Beavers share their views and suggestions for the Ultimate Addons.', 'uabb' ), BB_ULTIMATE_ADDON_FB_URL );  // @codingStandardsIgnoreLine. ?></p>
 
 	</div>

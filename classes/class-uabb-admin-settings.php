@@ -244,7 +244,7 @@ final class UABBBuilderAdminSettings {
 	static public function render_page_heading() {
 
 		if ( ! empty( $icon ) ) {
-			echo '<img src="' . $icon . '" />';
+			echo '<img src="' . esc_url( $icon ) . '" />';
 		}
 
 		echo '<span>' . sprintf( _x( '%s Settings', '%s stands for custom branded "UABB" name.', 'uabb' ), UABB_PREFIX ) . '</span>'; // @codingStandardsIgnoreLine.
@@ -259,10 +259,26 @@ final class UABBBuilderAdminSettings {
 	static public function render_update_message() {
 		if ( ! empty( self::$errors ) ) {
 			foreach ( self::$errors as $message ) {
-				echo '<div class="error"><p>' . $message . '</p></div>';
+				echo wp_kses(
+					'<div class="error"><p>' . $message . '</p></div>',
+					array(
+						'div' => array(
+							'class' => array(),
+						),
+						'p' => array(),
+					)
+				);
 			}
 		} elseif ( ! empty( $_POST ) && ! isset( $_POST['email'] ) ) {
-			echo '<div class="updated"><p>' . __( 'Settings updated!', 'uabb' ) . '</p></div>';
+			echo wp_kses(
+				'<div class="updated"><p>' . __( 'Settings updated!', 'uabb' ) . '</p></div>',
+				array(
+					'div' => array(
+						'class' => array(),
+					),
+					'p' => array(),
+				)
+			);
 		}
 	}
 
@@ -327,7 +343,7 @@ final class UABBBuilderAdminSettings {
 
 		foreach ( $sorted_data as $data ) {
 			if ( $data['show'] ) {
-				echo '<li><a href="#' . $data['key'] . '">' . $data['title'] . '</a></li>';
+				echo '<li><a href="#' . esc_attr( $data['key'] ) . '">' . esc_html( $data['title'] ) . '</a></li>';
 			}
 		}
 
@@ -373,9 +389,9 @@ final class UABBBuilderAdminSettings {
 	 */
 	static public function render_form_action( $type = '' ) {
 		if ( is_network_admin() ) {
-			echo network_admin_url( '/settings.php?page=uabb-builder-multisite-settings#' . $type );
+			echo esc_url( network_admin_url( '/settings.php?page=uabb-builder-multisite-settings#' . $type ) );
 		} else {
-			echo admin_url( '/options-general.php?page=uabb-builder-settings#' . $type );
+			echo esc_url( admin_url( '/options-general.php?page=uabb-builder-settings#' . $type ) );
 		}
 	}
 
