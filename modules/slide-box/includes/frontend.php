@@ -14,7 +14,11 @@ $pos = $settings->front_img_icon_position;
 <div class="uabb-module-content uabb-slide-box-wrap">
 	<div class="uabb-slide-type uabb-<?php echo esc_attr( $settings->slide_type ); ?>" data-style="<?php echo esc_attr( $settings->slide_type ); ?>">
 		<div id="uabb-slide-box-wrap-<?php echo esc_attr( $module->node ); ?>" class="uabb-slide-box">
-			<div class="uabb-slide-face uabb-slide-front uabb-slide-<?php echo esc_attr( $settings->image_type ) . '-' . esc_attr( $pos );; ?>">
+			<div class="uabb-slide-face uabb-slide-front uabb-slide-
+			<?php
+			echo esc_attr( $settings->image_type ) . '-' . esc_attr( $pos );
+			?>
+ ">
 				<div class="uabb-slide-box-section "><!-- Inline Block Space Fix
 					<?php if ( 'none' !== $settings->image_type ) : ?>
 						<?php if ( 'left' === $pos ) { ?>
@@ -52,7 +56,7 @@ $pos = $settings->front_img_icon_position;
 						<?php endif; ?>
 						<?php if ( '' !== $settings->desc_front ) { ?>
 							--><div class="uabb-slide-box-section-content uabb-text-editor">
-								<?php echo esc_html( trim( $settings->desc_front ) ); ?>
+								<?php echo wp_kses_post( trim( $settings->desc_front ) ); ?>
 							</div><!-- Inline Block Space Fix
 						<?php } ?>
 					--></div><!-- Inline Block Space Fix
@@ -87,7 +91,7 @@ $pos = $settings->front_img_icon_position;
 				if ( '' !== $settings->desc_back ) {
 					?>
 					<div class="uabb-slide-down-box-section-content uabb-text-editor">
-						<?php echo esc_html( trim( $settings->desc_back ) ); ?>
+						<?php echo wp_kses_post( trim( $settings->desc_back ) ); ?>
 					</div>
 					<?php
 				}

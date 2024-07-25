@@ -42,7 +42,7 @@ global $wp_embed;
 		<?php if ( ! empty( $settings->link ) ) : ?>
 			<a href="<?php echo esc_url( $settings->link ); ?>" title="<?php echo esc_attr( $settings->heading ); ?>" target="<?php echo esc_attr( $settings->link_target ); ?>" <?php BB_Ultimate_Addon_Helper::get_link_rel( esc_attr( $settings->link_target ), $settings->link_nofollow, 1 ); ?>>
 			<?php endif; ?>
-			<span class="uabb-heading-text"><?php echo esc_attr( $settings->heading ); ?></span>
+			<span class="uabb-heading-text"><?php echo wp_kses_post( $settings->heading ); ?></span>
 			<?php if ( ! empty( $settings->link ) ) : ?>
 			</a>
 		<?php endif; ?>

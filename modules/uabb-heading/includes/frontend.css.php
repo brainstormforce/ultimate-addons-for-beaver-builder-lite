@@ -196,7 +196,8 @@ if ( '' !== $settings->separator_style ) {
 			'img_align'           => 'center', // $settings->img_align,
 			'photo_src'           => ( isset( $settings->photo_src ) ) ? $settings->photo_src : '',
 
-			/* Icon color */
+			/*
+			 Icon color */
 			// 'icon_color'          => $settings->separator_icon_color,
 		);
 

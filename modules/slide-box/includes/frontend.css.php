@@ -213,14 +213,15 @@ if ( ! $version_bb_check ) {
 
 	<?php
 
-	if( '' !== $settings->icon_color ) { ?>
+	if ( '' !== $settings->icon_color ) {
+		?>
 
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-icon-wrap .uabb-icon i, 
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-icon-wrap .uabb-icon i:before {
 			color: <?php echo esc_attr( $settings->icon_color ); ?>;
 		}
 
-	<?php		
+		<?php
 	}
 	if ( '' !== $settings->icon_hover_color ) {
 		?>

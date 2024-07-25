@@ -250,9 +250,9 @@ class UABB_Init {
 				__( ' plugin installed & activated.', 'uabb' )
 			),
 			array(
-				'p' => array(),
+				'p'      => array(),
 				'strong' => array(),
-				'a' => array(
+				'a'      => array(
 					'href' => array(),
 				),
 			)

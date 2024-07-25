@@ -19,7 +19,7 @@
 					<?php
 					if ( '' !== $settings->title_front ) {
 						?>
-					<<?php echo esc_attr( $front_tag ); ?> class="uabb-face-text-title"><?php echo $settings->title_front; ?></<?php echo esc_attr( $front_tag ); ?>>
+					<<?php echo esc_attr( $front_tag ); ?> class="uabb-face-text-title"><?php echo wp_kses_post( $settings->title_front ); ?></<?php echo esc_attr( $front_tag ); ?>>
 						<?php
 					}
 					if ( '' !== $settings->desc_front ) {
@@ -41,7 +41,7 @@
 					<?php
 					if ( '' !== $settings->title_back ) {
 						?>
-					<<?php echo esc_attr( $tag ); ?> class="uabb-back-text-title"><?php echo esc_attr( $settings->title_back ); ?></<?php echo esc_attr( $tag ); ?>>
+					<<?php echo esc_attr( $tag ); ?> class="uabb-back-text-title"><?php echo wp_kses_post( $settings->title_back ); ?></<?php echo esc_attr( $tag ); ?>>
 						<?php
 					}
 					if ( '' !== $settings->desc_back ) {

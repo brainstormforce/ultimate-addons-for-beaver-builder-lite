@@ -23,7 +23,7 @@
 			if ( 'yes' === $settings->stitching ) {
 				?>
 				<div class="uabb-ribbon-stitches-top"></div> <?php } ?>
-				<span class="uabb-ribbon-text-title"><?php echo esc_attr( $settings->title ); ?></span>
+				<span class="uabb-ribbon-text-title"><?php echo wp_kses_post( $settings->title ); ?></span>
 			<?php
 			if ( 'yes' === $settings->stitching ) {
 				?>

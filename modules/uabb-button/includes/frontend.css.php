@@ -14,10 +14,10 @@ $settings->bg_hover_color   = uabb_theme_button_bg_hover_color( $settings->bg_ho
 $settings->text_color       = uabb_theme_button_text_color( $settings->text_color );
 $settings->text_hover_color = uabb_theme_button_text_hover_color( $settings->text_hover_color );
 
-$settings->bg_color         = FLBuilderColor::hex_or_rgb( $settings->bg_color );
-$settings->bg_hover_color   = FLBuilderColor::hex_or_rgb( $settings->bg_hover_color );
-$settings->text_color       = FLBuilderColor::hex_or_rgb( $settings->text_color );
-$settings->text_hover_color = FLBuilderColor::hex_or_rgb( $settings->text_hover_color );
+$settings->bg_color           = FLBuilderColor::hex_or_rgb( $settings->bg_color );
+$settings->bg_hover_color     = FLBuilderColor::hex_or_rgb( $settings->bg_hover_color );
+$settings->text_color         = FLBuilderColor::hex_or_rgb( $settings->text_color );
+$settings->text_hover_color   = FLBuilderColor::hex_or_rgb( $settings->text_hover_color );
 $settings->border_hover_color = FLBuilderColor::hex_or_rgb( $settings->border_hover_color );
 
 // Border Size.

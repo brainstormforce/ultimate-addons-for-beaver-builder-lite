@@ -173,7 +173,7 @@ class UABBInfoList extends FLBuilderModule {
 			echo '<a href="' . esc_url( $item->list_item_url ) . '" target="' . esc_attr( $target ) . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '>';
 
 		}
-		echo esc_html( $item->list_item_title );
+		echo wp_kses_post( $item->list_item_title );
 		if ( ! empty( $item->list_item_link ) && 'list-title' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
 			echo '</a>';
@@ -183,9 +183,9 @@ class UABBInfoList extends FLBuilderModule {
 
 		echo '<div class="uabb-info-list-description uabb-text-editor info-list-description-dynamic' . esc_attr( $list_item_counter ) . '">';
 		if ( strpos( $item->list_item_description, '</p>' ) > 0 ) {
-			echo esc_html( $item->list_item_description );
+			echo wp_kses_post( $item->list_item_description );
 		} else {
-			echo '<p>' . esc_html( $item->list_item_description ) . '</p>';
+			echo '<p>' . wp_kses_post( $item->list_item_description ) . '</p>';
 		}
 
 		echo '</div>';
