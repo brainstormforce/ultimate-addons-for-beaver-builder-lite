@@ -96,7 +96,7 @@ class UABB_IconFonts {
 
 		// Create directory if not exist.
 		if ( ! is_dir( $dst ) ) {
-			@mkdir( $dst );
+			@mkdir( $dst ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_mkdir
 		}
 
 		while ( false !== ( $file = readdir( $dir ) ) ) {

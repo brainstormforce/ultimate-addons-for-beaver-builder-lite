@@ -23,7 +23,7 @@ if ( isset( $settings->it_link_nofollow ) ) {
 		?>
 		<div class="info-table-heading">
 			<?php echo '<' . esc_attr( $infotable_tag ) . " class='info-table-main-heading'>"; ?>
-			<?php echo $settings->it_title; ?>
+			<?php echo wp_kses_post( $settings->it_title ); ?>
 			<?php echo '</' . esc_attr( $infotable_tag ) . '>'; ?>
 
 			<?php echo '<' . esc_attr( $settings->sub_heading_tag_selection ) . " class='info-table-sub-heading'>"; ?>

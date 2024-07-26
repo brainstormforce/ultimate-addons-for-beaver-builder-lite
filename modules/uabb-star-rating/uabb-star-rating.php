@@ -52,7 +52,7 @@ class UABBStarRatingModule extends FLBuilderModule {
 		}
 
 		if ( file_exists( $path ) ) {
-			return file_get_contents( $path );
+			return file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		} else {
 			return '';
 		}
