@@ -47,7 +47,7 @@ final class UABBBuilderAdminSettings {
 		add_action( 'network_admin_menu', __CLASS__ . '::menu' );
 		add_action( 'admin_menu', __CLASS__ . '::menu' );
 
-		if ( isset( $_REQUEST['page'] ) && 'uabb-builder-settings' == $_REQUEST['page'] ) {
+		if ( isset( $_REQUEST['page'] ) && 'uabb-builder-settings' === $_REQUEST['page'] ) {
 			add_action( 'admin_enqueue_scripts', __CLASS__ . '::styles_scripts' );
 			self::save();
 		}
@@ -117,13 +117,13 @@ final class UABBBuilderAdminSettings {
 					__( 'Hello! Thank you for choosing the Ultimate Addon for Beaver Builder to build this website!', 'ultimate-addon-for-beaver-builder' ),
 					__( 'Would you please mind sharing your views and give it a 5 star rating on the WordPress repository?', 'ultimate-addon-for-beaver-builder' ),
 					'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/?filter=5',
-					__( 'Ok, you deserve it', 'ultimate-addon-for-beaver-builder' ),
+					__( 'Ok, you deserve it', 'ultimate-addon-for-beaver-builder'),
 					MONTH_IN_SECONDS,
-					__( 'Nope, maybe later', 'ultimate-addon-for-beaver-builder' ),
+					__( 'Nope, maybe later', 'ultimate-addon-for-beaver-builder'),
 					__( 'I already did', 'ultimate-addon-for-beaver-builder' )
 				),
 				'repeat-notice-after'        => MONTH_IN_SECONDS,
-				'display-notice-after'       => (2* WEEK_IN_SECONDS), // Display notice after 2 weeks
+				'display-notice-after'       => ( 2 * WEEK_IN_SECONDS ), // Display notice after 2 weeks.
 				'priority'                   => 25,
 				'display-with-other-notices' => false,
 			)
@@ -156,10 +156,14 @@ final class UABBBuilderAdminSettings {
 	static public function styles_scripts( $hook ) {
 		wp_register_style( 'uabb-admin-css', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-admin.css', array() );
 		wp_register_script( 'uabb-admin-js', BB_ULTIMATE_ADDON_URL . 'assets/js/uabb-admin.js', array( 'jquery' ), '', true );
-		wp_localize_script( 'uabb-admin-js', 'uabb', array( 
-			'ajax_url'          => admin_url( 'admin-ajax.php' ),
-			'reload-icon-nonce' => wp_create_nonce('uabb-reload-icons')  
-		) );
+		wp_localize_script(
+			'uabb-admin-js',
+			'uabb',
+			array(
+				'ajax_url'          => admin_url( 'admin-ajax.php' ),
+				'reload-icon-nonce' => wp_create_nonce( 'uabb-reload-icons' ),
+			)
+		);
 
 		// Load AJAX script only on Builder UI Panel.
 		wp_register_script( 'uabb-lazyload', BB_ULTIMATE_ADDON_URL . 'assets/js/jquery.lazyload.min.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-tabs' ), null, true );
@@ -183,7 +187,7 @@ final class UABBBuilderAdminSettings {
 		); // @codingStandardsIgnoreLine.
 		wp_localize_script( 'uabb-cloud-templates', 'UABBCloudTemplates', $UABBCloudTemplates ); // @codingStandardsIgnoreLine.
 
-		if ( 'settings_page_uabb-builder-settings' == $hook || 'settings_page_uabb-builder-multisite-settings' == $hook ) {
+		if ( 'settings_page_uabb-builder-settings' === $hook || 'settings_page_uabb-builder-multisite-settings' === $hook ) {
 
 			wp_enqueue_style( 'wp-color-picker' );
 			wp_enqueue_script( 'wp-color-picker' );
@@ -240,7 +244,7 @@ final class UABBBuilderAdminSettings {
 	static public function render_page_heading() {
 
 		if ( ! empty( $icon ) ) {
-			echo '<img src="' . $icon . '" />';
+			echo '<img src="' . esc_url( $icon ) . '" />';
 		}
 
 		echo '<span>' . sprintf( _x( '%s Settings', '%s stands for custom branded "UABB" name.', 'uabb' ), UABB_PREFIX ) . '</span>'; // @codingStandardsIgnoreLine.
@@ -255,10 +259,26 @@ final class UABBBuilderAdminSettings {
 	static public function render_update_message() {
 		if ( ! empty( self::$errors ) ) {
 			foreach ( self::$errors as $message ) {
-				echo '<div class="error"><p>' . $message . '</p></div>';
+				echo wp_kses(
+					'<div class="error"><p>' . $message . '</p></div>',
+					array(
+						'div' => array(
+							'class' => array(),
+						),
+						'p'   => array(),
+					)
+				);
 			}
 		} elseif ( ! empty( $_POST ) && ! isset( $_POST['email'] ) ) {
-			echo '<div class="updated"><p>' . __( 'Settings updated!', 'uabb' ) . '</p></div>';
+			echo wp_kses(
+				'<div class="updated"><p>' . __( 'Settings updated!', 'uabb' ) . '</p></div>',
+				array(
+					'div' => array(
+						'class' => array(),
+					),
+					'p'   => array(),
+				)
+			);
 		}
 	}
 
@@ -323,7 +343,7 @@ final class UABBBuilderAdminSettings {
 
 		foreach ( $sorted_data as $data ) {
 			if ( $data['show'] ) {
-				echo '<li><a href="#' . $data['key'] . '">' . $data['title'] . '</a></li>';
+				echo '<li><a href="#' . esc_attr( $data['key'] ) . '">' . esc_html( $data['title'] ) . '</a></li>';
 			}
 		}
 
@@ -369,9 +389,9 @@ final class UABBBuilderAdminSettings {
 	 */
 	static public function render_form_action( $type = '' ) {
 		if ( is_network_admin() ) {
-			echo network_admin_url( '/settings.php?page=uabb-builder-multisite-settings#' . $type );
+			echo esc_url( network_admin_url( '/settings.php?page=uabb-builder-multisite-settings#' . $type ) );
 		} else {
-			echo admin_url( '/options-general.php?page=uabb-builder-settings#' . $type );
+			echo esc_url( admin_url( '/options-general.php?page=uabb-builder-settings#' . $type ) );
 		}
 	}
 

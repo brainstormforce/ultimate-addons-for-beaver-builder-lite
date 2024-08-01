@@ -63,9 +63,9 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 
 			$name_new = 'uabb_' . $name;
 			$value    = (array) $value;
-			$preview  = json_encode( array( 'type' => 'refresh' ) );
+			$preview  = json_encode( array( 'type' => 'refresh' ) ); //	phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode	
 
-			$default   = ( isset( $field['default'] ) && '' != $field['default'] ) ? $field['default'] : '';
+			$default   = ( isset( $field['default'] ) && '' !== $field['default'] ) ? $field['default'] : '';
 			$direction = array(
 				'left_right' => 'Left to Right',
 				'right_left' => 'Right to Left',
@@ -105,7 +105,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 			$html .= '<select name="' . $name . '[][direction]' . '" class="uabb-gradient-direction-select">';
 			foreach ( $direction as $direction_key => $direction_value ) {
 				$selected = '';
-				if ( $direction_key == $value['direction'] ) {
+				if ( $direction_key === $value['direction'] ) {
 					$selected = 'selected="selected"';
 				}
 				$html .= '<option value="' . $direction_key . '" ' . $selected . '>' . $direction_value . '</option>';
@@ -122,7 +122,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 			$html .= '</div>';
 			$html .= '</div>';
 
-			echo $html;
+			echo wp_kses_post( $html );
 		}
 	}
 	new UABB_Gradient();

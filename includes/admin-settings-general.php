@@ -8,7 +8,7 @@
 ?>
 <div id="fl-uabb-form" class="fl-settings-form uabb-fl-settings-form">
 
-	<h3 class="fl-settings-form-header"><?php _e( 'General Settings', 'uabb' ); ?></h3>
+	<h3 class="fl-settings-form-header"><?php esc_html_e( 'General Settings', 'uabb' ); ?></h3>
 
 	<form id="uabb-form" action="<?php UABBBuilderAdminSettings::render_form_action( 'uabb' ); ?>" method="post">
 
@@ -24,37 +24,37 @@
 				$is_load_panels    = '';
 				$uabb_live_preview = '';
 			if ( is_array( $uabb ) ) {
-				$is_load_panels    = ( array_key_exists( 'load_panels', $uabb ) && 1 == $uabb['load_panels'] ) ? ' checked' : '';
-				$uabb_live_preview = ( array_key_exists( 'uabb-live-preview', $uabb ) && 1 == $uabb['uabb-live-preview'] ) ? ' checked' : '';
+				$is_load_panels    = ( array_key_exists( 'load_panels', $uabb ) && 1 === $uabb['load_panels'] ) ? ' checked' : '';
+				$uabb_live_preview = ( array_key_exists( 'uabb-live-preview', $uabb ) && 1 === $uabb['uabb-live-preview'] ) ? ' checked' : '';
 			}
 			?>
 
 			<!-- Load Panels -->
 			<div class="uabb-form-setting">
-				<h4><?php _e( 'Enable UI Design', 'uabb' ); ?></h4>
+				<h4><?php esc_html_e( 'Enable UI Design', 'uabb' ); ?></h4>
 				<p class="uabb-admin-help">
-					<?php _e( 'Enable this setting for applying UI effects such as - Section panel, Search box etc. to frontend page builder. ', 'uabb' ); ?>
+					<?php esc_html_e( 'Enable this setting for applying UI effects such as - Section panel, Search box etc. to frontend page builder. ', 'uabb' ); ?>
 					<?php
 					if ( empty( $branding_name ) && empty( $branding_short_name ) ) :
-						_e( 'Read ', 'uabb' );
+						esc_html_e( 'Read ', 'uabb' );
 						?>
-						<a target="_blank" href="https://www.ultimatebeaver.com/docs/how-to-enable-disable-beaver-builders-ui/"><?php _e( 'this article', 'uabb' ); ?></a>
+						<a target="_blank" href="https://www.ultimatebeaver.com/docs/how-to-enable-disable-beaver-builders-ui/"><?php esc_html_e( 'this article', 'uabb' ); ?></a>
 						<?php
-						_e( ' for more information.', 'uabb' );
+						esc_html_e( ' for more information.', 'uabb' );
 					endif;
 					?>
 				</p>
 				<label>					
-					<input type="checkbox" class="uabb-enabled-panels" name="uabb-enabled-panels" value="" <?php echo $is_load_panels; ?> ><?php _e( 'Enable UI Design', 'uabb' ); ?>
+					<input type="checkbox" class="uabb-enabled-panels" name="uabb-enabled-panels" value="" <?php echo esc_attr( $is_load_panels ); ?> ><?php esc_html_e( 'Enable UI Design', 'uabb' ); ?>
 				</label>
 			</div>
 
 			<!-- Load Panels -->
 			<div class="uabb-form-setting">
-				<h4><?php _e( 'Enable Live Preview', 'uabb' ); ?></h4>
-				<p class="uabb-admin-help"><?php _e( 'Enable this setting to see live preview of a page without leaving the editor.', 'uabb' ); ?></p>
+				<h4><?php esc_html_e( 'Enable Live Preview', 'uabb' ); ?></h4>
+				<p class="uabb-admin-help"><?php esc_html_e( 'Enable this setting to see live preview of a page without leaving the editor.', 'uabb' ); ?></p>
 				<label>					
-					<input type="checkbox" class="uabb-live-preview" name="uabb-live-preview" value="" <?php echo $uabb_live_preview; ?> ><?php _e( 'Enable Live Preview', 'uabb' ); ?>
+					<input type="checkbox" class="uabb-live-preview" name="uabb-live-preview" value="" <?php echo esc_attr( $uabb_live_preview ); ?> ><?php esc_html_e( 'Enable Live Preview', 'uabb' ); ?>
 				</label>
 			</div>
 		</div>

@@ -1,13 +1,13 @@
 <?php
 /**
- *  UABB Star Ratting Module front-end CSS php file
+ *  UABB Star Rating Module front-end CSS php file
  *
- *  @package UABB Star Ratting Module
+ *  @package UABB Star Rating Module
  */
 
-$settings->title_color           = UABB_Helper::uabb_colorpicker( $settings, 'title_color' );
-$settings->rating_unmarked_color = UABB_Helper::uabb_colorpicker( $settings, 'rating_unmarked_color' );
-$settings->rating_color          = UABB_Helper::uabb_colorpicker( $settings, 'rating_color' );
+$settings->title_color           = FLBuilderColor::hex_or_rgb( $settings->title_color );
+$settings->rating_unmarked_color = FLBuilderColor::hex_or_rgb( $settings->rating_unmarked_color );
+$settings->rating_color          = FLBuilderColor::hex_or_rgb( $settings->rating_color );
 
 if ( class_exists( 'FLBuilderCSS' ) ) {
 

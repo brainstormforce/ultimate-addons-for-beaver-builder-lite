@@ -35,7 +35,7 @@ class UABB_IconFonts {
 	 * @since 1.0
 	 */
 	function reload_icons() {
-		
+
 		if ( ! wp_verify_nonce( $_POST['nonce'], 'uabb-reload-icons' ) || ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error(
 				array(
@@ -59,7 +59,7 @@ class UABB_IconFonts {
 		// Update initially.
 		$uabb_icons = get_option( '_uabb_enabled_icons', 0 );
 
-		if ( 0 == $uabb_icons ) {
+		if ( 0 === $uabb_icons ) {
 
 			// Copy IconFonts from UABB to BB.
 			$dir = FLBuilderModel::get_cache_dir( 'icons' );
@@ -73,7 +73,7 @@ class UABB_IconFonts {
 			foreach ( $folders as $folder ) {
 				$folder = trailingslashit( $folder );
 				$key    = basename( $folder );
-				if ( is_array( $enabled_icons ) && ! in_array( $key, $enabled_icons ) ) {
+				if ( is_array( $enabled_icons ) && ! in_array( $key, $enabled_icons ) ) { //phpcs:ignore WordPress.PHP.StrictInArray.MissingTrueStrict
 					$enabled_icons[] = $key;
 				}
 			}
@@ -96,11 +96,11 @@ class UABB_IconFonts {
 
 		// Create directory if not exist.
 		if ( ! is_dir( $dst ) ) {
-			@mkdir( $dst );
+			@mkdir( $dst ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_mkdir
 		}
 
 		while ( false !== ( $file = readdir( $dir ) ) ) {
-			if ( ( '.' != $file ) && ( '..' != $file ) ) {
+			if ( ( '.' !== $file ) && ( '..' !== $file ) ) {
 				if ( is_dir( $src . '/' . $file ) ) {
 					$this->recurse_copy( $src . '/' . $file, $dst . '/' . $file );
 				} else {

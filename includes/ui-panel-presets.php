@@ -40,7 +40,7 @@
 						foreach ( $uabb_module_templates['categorized'] as $cat ) :
 
 							// avoid 'Uncategorized'.
-							if ( trim( $cat['name'] ) != 'Uncategorized' ) :
+							if ( trim( $cat['name'] ) !== 'Uncategorized' ) :
 								?>
 								<div class="fl-builder-blocks-section">
 									<span class="fl-builder-blocks-section-title">
@@ -59,11 +59,11 @@
 											}
 											?>
 
-											<span class="fl-builder-block fl-builder-block-template fl-builder-block-module-template" data-id="<?php echo $template['id']; ?>" data-type="<?php echo $template['type']; ?>">
+											<span class="fl-builder-block fl-builder-block-template fl-builder-block-module-template" data-id="<?php echo esc_attr( $template['id'] ); ?>" data-type="<?php echo esc_attr( $template['type'] ); ?>">
 												<?php if ( ! stristr( $template['image'], 'blank.jpg' ) ) : ?>
-												<img class="fl-builder-block-template-image" src="<?php echo $template['image']; ?>" />
+												<img class="fl-builder-block-template-image" src="<?php echo esc_url( $template['image'] ); ?>" />
 												<?php endif; ?>
-												<span class="fl-builder-block-title" data-tags="<?php echo $tags; ?>" data-cat-name="<?php echo $cat['name']; ?>"><?php echo $template['name']; ?></span>
+												<span class="fl-builder-block-title" data-tags="<?php echo esc_attr( $tags ); ?>" data-cat-name="<?php echo esc_attr( $cat['name'] ); ?>"><?php echo esc_html( $template['name'] ); ?></span>
 											</span>
 										<?php endforeach; ?>
 									</div>
@@ -81,7 +81,7 @@
 					<a href="#" onclick="window.open('<?php echo admin_url(); ?>options-general.php?page=fl-builder-settings#uabb-template-manager');" target="_blank"><i class="fa fa-external-link-square"></i> <?php echo sprintf( __( 'Note - You can enable, disable and manage %s presets here.', 'uabb' ), UABB_PREFIX ); // @codingStandardsIgnoreLine. ?></a>
 				</div>
 				<div class="fl-builder-modules-cta">
-					<a href="#" target="_self"><?php echo __( 'Note - Images used in the templates are hotlinked from our server and are subject to copyright. It is strongly recommended that you replace them with your own.', 'uabb' ); ?></a>
+					<a href="#" target="_self"><?php echo esc_html__( 'Note - Images used in the templates are hotlinked from our server and are subject to copyright. It is strongly recommended that you replace them with your own.', 'uabb' ); ?></a>
 				</div>
 			</div>
 		</div>

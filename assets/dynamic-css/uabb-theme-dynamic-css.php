@@ -4,6 +4,7 @@
  *
  * @package UABB Theme Dynamic CSS file
  */
+
 ob_start();
 ?>
 
@@ -19,54 +20,54 @@ ob_start();
 .uabb-creative-button-wrap a:visited {
 
 	<?php if ( isset( $uabb_theme_btn_family['family'] ) ) { ?>
-	font-family: <?php echo $uabb_theme_btn_family['family']; ?>;
+	font-family: <?php echo esc_attr( $uabb_theme_btn_family['family'] ); ?>;
 	<?php } ?> 
 
 	<?php if ( isset( $uabb_theme_btn_family['weight'] ) ) { ?>
-	font-weight: <?php echo $uabb_theme_btn_family['weight']; ?>;
+	font-weight: <?php echo esc_attr( $uabb_theme_btn_family['weight'] ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_font_size( '' ) != '' ) { ?>
-	font-size: <?php echo uabb_theme_button_font_size( '' ); ?>;
+	<?php if ( uabb_theme_button_font_size( '' ) !== '' ) { ?>
+	font-size: <?php echo esc_attr( uabb_theme_button_font_size( '' ) ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_line_height( '' ) != '' ) { ?>
-	line-height: <?php echo uabb_theme_button_line_height( '' ); ?>;
+	<?php if ( uabb_theme_button_line_height( '' ) !== '' ) { ?>
+	line-height: <?php echo esc_attr( uabb_theme_button_line_height( '' ) ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_letter_spacing( '' ) != '' ) { ?>
-	letter-spacing: <?php echo uabb_theme_button_letter_spacing( '' ); ?>;
+	<?php if ( uabb_theme_button_letter_spacing( '' ) !== '' ) { ?>
+	letter-spacing: <?php echo esc_attr( uabb_theme_button_letter_spacing( '' ) ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_text_transform( '' ) != '' ) { ?>
-	text-transform: <?php echo uabb_theme_button_text_transform( '' ); ?>;
+	<?php if ( uabb_theme_button_text_transform( '' ) !== '' ) { ?>
+	text-transform: <?php echo esc_attr( uabb_theme_button_text_transform( '' ) ); ?>;
 	<?php } ?>
 }
 
 .uabb-dual-button .uabb-btn,
 .uabb-dual-button .uabb-btn:visited {
 	<?php if ( isset( $uabb_theme_btn_family['family'] ) ) { ?>
-	font-family: <?php echo $uabb_theme_btn_family['family']; ?>;
+	font-family: <?php echo esc_attr( $uabb_theme_btn_family['family'] ); ?>;
 	<?php } ?> 
 
 	<?php if ( isset( $uabb_theme_btn_family['weight'] ) ) { ?>
-	font-weight: <?php echo $uabb_theme_btn_family['weight']; ?>;
+	font-weight: <?php echo esc_attr( $uabb_theme_btn_family['weight'] ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_font_size( '' ) != '' ) { ?>
-	font-size: <?php echo uabb_theme_button_font_size( '' ); ?>;
+	<?php if ( uabb_theme_button_font_size( '' ) !== '' ) { ?>
+	font-size: <?php echo esc_attr( uabb_theme_button_font_size( '' ) ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_line_height( '' ) != '' ) { ?>
-	line-height: <?php echo uabb_theme_button_line_height( '' ); ?>;
+	<?php if ( uabb_theme_button_line_height( '' ) !== '' ) { ?>
+	line-height: <?php echo esc_attr( uabb_theme_button_line_height( '' ) ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_letter_spacing( '' ) != '' ) { ?>
-	letter-spacing: <?php echo uabb_theme_button_letter_spacing( '' ); ?>;
+	<?php if ( uabb_theme_button_letter_spacing( '' ) !== '' ) { ?>
+	letter-spacing: <?php echo esc_attr( uabb_theme_button_letter_spacing( '' ) ); ?>;
 	<?php } ?>
 
-	<?php if ( uabb_theme_button_text_transform( '' ) != '' ) { ?>
-	text-transform: <?php echo uabb_theme_button_text_transform( '' ); ?>;
+	<?php if ( uabb_theme_button_text_transform( '' ) !== '' ) { ?>
+	text-transform: <?php echo esc_attr( uabb_theme_button_text_transform( '' ) ); ?>;
 	<?php } ?>
 }
 
@@ -78,15 +79,15 @@ ob_start();
 	display:none;
 }
 <?php if ( $global_settings->responsive_enabled ) { ?>
-@media screen and (max-width: <?php echo $global_settings->medium_breakpoint . 'px'; ?>) {
+@media screen and (max-width: <?php echo esc_attr( $global_settings->medium_breakpoint ) . 'px'; ?>) {
 	#uabb-js-breakpoint {
-		content:"<?php echo $global_settings->medium_breakpoint; ?>";
+		content:"<?php echo esc_attr( $global_settings->medium_breakpoint ); ?>";
 	}
 }
 
-@media screen and (max-width: <?php echo $global_settings->responsive_breakpoint . 'px'; ?>) {
+@media screen and (max-width: <?php echo esc_attr( $global_settings->responsive_breakpoint ) . 'px'; ?>) {
 	#uabb-js-breakpoint {
-		content:"<?php echo $global_settings->responsive_breakpoint; ?>";
+		content:"<?php echo esc_attr( $global_settings->responsive_breakpoint ); ?>";
 	}
 }
 <?php } ?>

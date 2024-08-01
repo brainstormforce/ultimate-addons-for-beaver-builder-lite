@@ -32,7 +32,7 @@ final class UABBBuilderMultisiteSettings {
 	 * @param string $url gets the activate redirect URL.
 	 */
 	static public function uabb_lite_redirect_on_activation( $url ) {
-		if ( true == get_option( 'uabb_lite_redirect' ) ) {
+		if ( true === get_option( 'uabb_lite_redirect' ) ) {
 			update_option( 'uabb_lite_redirect', false );
 			if ( ! is_multisite() ) :
 				wp_redirect( admin_url( 'options-general.php?page=uabb-builder-settings#uabb-welcome' ) );
@@ -48,7 +48,7 @@ final class UABBBuilderMultisiteSettings {
 	 * @return void
 	 */
 	static public function admin_init() {
-		if ( is_network_admin() && isset( $_REQUEST['page'] ) && 'uabb-builder-multisite-settings' == $_REQUEST['page'] ) {
+		if ( is_network_admin() && isset( $_REQUEST['page'] ) && 'uabb-builder-multisite-settings' === $_REQUEST['page'] ) {
 			add_action( 'admin_enqueue_scripts', 'UABBBuilderAdminSettings::styles_scripts' );
 			UABBBuilderAdminSettings::save();
 		}

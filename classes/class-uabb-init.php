@@ -130,7 +130,7 @@ class UABB_Init {
 	 */
 	function uabb_global_settings_form_defaults( $defaults, $form_type ) {
 
-		if ( class_exists( 'FLCustomizer' ) && 'uabb-global' == $form_type ) {
+		if ( class_exists( 'FLCustomizer' ) && 'uabb-global' === $form_type ) {
 
 			$defaults->enable_global = 'no';
 		}
@@ -153,7 +153,7 @@ class UABB_Init {
 		if ( class_exists( 'FLCustomizer' ) ) {
 			$uabb_global_style = UABB_Global_Styling::get_uabb_global_settings();
 
-			if ( ( isset( $uabb_global_style->enable_global ) && ( 'no' == $uabb_global_style->enable_global ) ) ) {
+			if ( ( isset( $uabb_global_style->enable_global ) && ( 'no' === $uabb_global_style->enable_global ) ) ) {
 				require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-bbtheme-global-integration.php';
 			}
 		}
@@ -213,7 +213,7 @@ class UABB_Init {
 
 				$uabb = UABB_Global_Styling::get_uabb_global_settings();
 
-				if ( isset( $uabb->enable_global ) && ( 'no' == $uabb->enable_global ) ) {
+				if ( isset( $uabb->enable_global ) && ( 'no' === $uabb->enable_global ) ) {
 					wp_localize_script( 'uabb-builder-js', 'uabb_presets', array( 'show_presets' => true ) );
 				}
 			}
@@ -242,7 +242,21 @@ class UABB_Init {
 		}
 
 		echo '<div class="notice notice-error">';
-		echo '<p>The <strong>Ultimate Addon for Beaver Builder</strong> ' . __( 'plugin requires', 'uabb' ) . " <strong><a href='" . $url . "'>Beaver Builder</strong></a>" . __( ' plugin installed & activated.', 'uabb' ) . '</p>';
+		echo wp_kses(
+			sprintf(
+				'<p>The <strong>Ultimate Addon for Beaver Builder</strong> %s <strong><a href="%s">Beaver Builder</strong></a> %s</p>',
+				__( 'plugin requires', 'uabb' ),
+				esc_url( $url ),
+				__( ' plugin installed & activated.', 'uabb' )
+			),
+			array(
+				'p'      => array(),
+				'strong' => array(),
+				'a'      => array(
+					'href' => array(),
+				),
+			)
+		);
 		echo '</div>';
 	}
 
@@ -256,7 +270,7 @@ class UABB_Init {
 		$enable_modules = BB_Ultimate_Addon_Helper::get_builder_uabb_modules();
 		foreach ( $enable_modules as $file => $name ) {
 
-			if ( 'false' == $name ) {
+			if ( 'false' === $name ) {
 				continue;
 			}
 

@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/BrainstormForce
 Tags: beaver builder, beaver builder free, beaver addons, beaver builder addon, beaver builder add ons, beaver builder lite, beaver builder modules, beaver builder addons, beaver builder extensions, beaver addon, beaver builder plugin, beaver builder wordpress
 Requires at least: 4.6
 Tested up to: 6.6
-Stable tag: 1.5.10
+Stable tag: 1.5.11
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -214,6 +214,11 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 4. /assets/screenshots/4.png
 
 == Changelog ==
+
+= 1.5.11 = 
+* Improvement: Hardened the security of plugin.
+* Improvement: Compatibility with Beaver Builder 2.9
+* Improvement: Added support for Global Colors selection in UABB lite modules.
 
 = 1.5.10 = 
 * Improvement: This update addressed a security bug. Props to Patchstack for privately reporting it to our team.

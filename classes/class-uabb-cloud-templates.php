@@ -142,7 +142,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 								 *  Add if 'status' == 'true' &&
 								 *  Add if not empty 'dat_url_local'
 								 */
-								if ( ( 'true' == $downloaded_templates[ $type ][ $key ]['status'] ) && ( ! empty( $downloaded_templates[ $type ][ $key ]['dat_url_local'] ) )
+								if ( ( 'true' === $downloaded_templates[ $type ][ $key ]['status'] ) && ( ! empty( $downloaded_templates[ $type ][ $key ]['dat_url_local'] ) )
 								) {
 									$type_templates[ $key ] = $downloaded_templates[ $type ][ $key ];
 								}
@@ -157,7 +157,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 					 *
 					 *  Then, keep cloud.
 					 */
-				} elseif ( ( is_array( $type_templates ) && count( $type_templates ) > 0 ) && ( 0 == count( $downloaded_templates[ $type ] ) )
+				} elseif ( ( is_array( $type_templates ) && count( $type_templates ) > 0 ) && ( 0 === count( $downloaded_templates[ $type ] ) )
 					) {
 
 					$cloud_templates[ $type ] = $type_templates;
@@ -167,7 +167,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 					 *
 					 *  Then, keep downloaded.
 					 */
-				} elseif ( 0 == $type_templates && count( $downloaded_templates[ $type ] ) > 0 ) {
+				} elseif ( 0 === $type_templates && count( $downloaded_templates[ $type ] ) > 0 ) {
 
 					$cloud_templates[ $type ] = $downloaded_templates[ $type ];
 				}
@@ -273,13 +273,13 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		function get_right_type_key( $dat_file_type ) {
 
 			// Update the key.
-			if ( 'module' == $dat_file_type ) {
+			if ( 'module' === $dat_file_type ) {
 				$dat_file_type = 'presets';
 			}
-			if ( 'layout' == $dat_file_type ) {
+			if ( 'layout' === $dat_file_type ) {
 				$dat_file_type = 'page-templates';
 			}
-			if ( 'row' == $dat_file_type ) {
+			if ( 'row' === $dat_file_type ) {
 				$dat_file_type = 'sections';
 			}
 
@@ -307,7 +307,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 */
 		static function message( $msg ) {
 			if ( ! empty( $msg ) ) {
-				if ( 'not-found' == $msg ) { ?>
+				if ( 'not-found' === $msg ) { ?>
 					<div class="uabb-cloud-templates-not-found">
 
 						<h3> <?php printf( __( 'Welcome to %s Template Cloud!', 'uabb' ), UABB_PREFIX ); // @codingStandardsIgnoreLine. ?> </h3>
@@ -332,12 +332,12 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 			if ( is_array( $templates ) && count( $templates ) > 0 ) {
 				?>
 
-				<div class="uabb-templates-showcase-<?php echo $type; ?>">
+				<div class="uabb-templates-showcase-<?php echo esc_attr( $type ); ?>">
 
-					<?php if ( 'page-templates' == $type ) { ?>
+					<?php if ( 'page-templates' === $type ) { ?>
 
 						<ul class="uabb-templates-filter">
-							<li><a class="active" href="#" data-group="all"><?php _e( 'All', 'uabb' ); ?> </a></li>
+						<li><a class="active" href="#" data-group="all"><?php esc_html_e( 'All', 'uabb' ); ?> </a></li>
 							<?php
 
 								$tags = array();
@@ -355,7 +355,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 
 							foreach ( $tags as $key => $tag ) {
 								$tag_title = strtolower( str_replace( ' ', '-', $tag ) );
-								if ( 'home-pages' == $tag_title ) {
+								if ( 'home-pages' === $tag_title ) {
 									echo '<li><a href="#" data-group="home-pages" class="home-pages">Home Pages</a></li>';
 									unset( $tags[ $key ] );
 								}
@@ -364,12 +364,12 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 							foreach ( $tags as $tag ) {
 								$tag_title = strtolower( str_replace( ' ', '-', $tag ) );
 								?>
-									<li><a href="#" data-group='<?php echo $tag_title; ?>' class="<?php echo $tag_title; ?>"><?php echo $tag; ?></a></li>
+									<li><a href="#" data-group='<?php echo esc_attr( $tag_title ); ?>' class="<?php echo esc_attr( $tag_title ); ?>"><?php echo esc_html( $tag ); ?></a></li>
 								<?php } ?>
 						</ul><!-- #uabb-templates-filter -->
 					<?php } ?>
 
-					<div id="uabb-templates-<?php echo $type; ?>" class="uabb-templates-<?php echo $type; ?>">
+					<div id="uabb-templates-<?php echo esc_attr( $type ); ?>" class="uabb-templates-<?php echo esc_attr( $type ); ?>">
 
 						<?php
 						foreach ( $templates as $template_id => $single_post ) {
@@ -383,7 +383,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 							$data['count']       = ( isset( $single_post['count'] ) ) ? $single_post['count'] : '';
 							$data['tags']        = ( isset( $single_post['tags'] ) ) ? $single_post['tags'] : '';
 
-							$template_class = ( 'true' == $data['status'] ) ? 'uabb-downloaded' : '';
+							$template_class = ( 'true' === $data['status'] ) ? 'uabb-downloaded' : '';
 
 							// get all single template tags.
 							$tags = array();
@@ -395,36 +395,36 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 							}
 
 							/* Add downloaded tag */
-							if ( 'true' == $data['status'] ) {
+							if ( 'true' === $data['status'] ) {
 								$tags[] = 'installed';
 							}
 
 							$tags = array_unique( $tags );
 							$tags = implode( '", "', $tags );
 							?>
-							<div id="<?php echo $data['id']; ?>" data-groups='["<?php echo $tags; ?>"]' class="uabb-template-block uabb-single-<?php echo $type; ?> <?php echo $template_class; ?>" data-is-downloaded="<?php echo $data['status']; ?>">
+							<div id="<?php echo esc_attr( $data['id'] ); ?>" data-groups='["<?php echo esc_attr( $tags ); ?>"]' class="uabb-template-block uabb-single-<?php echo esc_attr( $type ); ?> <?php echo esc_attr( $template_class ); ?>" data-is-downloaded="<?php echo esc_attr( $data['status'] ); ?>">
 								<div class="uabb-template">
 
-									<div class="uabb-template-screenshot" data-template-name="<?php echo $data['name']; ?>" data-preview-url="<?php echo $data['preview_url']; ?>" data-template-id='<?php echo $data['id']; ?>' data-template-type='<?php echo $type; ?>'>
+								<div class="uabb-template-screenshot" data-template-name="<?php echo esc_attr( $data['name'] ); ?>" data-preview-url="<?php echo esc_url( $data['preview_url'] ); ?>" data-template-id='<?php echo esc_attr( $data['id'] ); ?>' data-template-type='<?php echo esc_attr( $type ); ?>'>
 
-										<?php if ( 'page-templates' == $type ) { ?>
-											<img data-original="<?php echo $data['image']; ?>" alt="">
+										<?php if ( 'page-templates' === $type ) { ?>
+											<img data-original="<?php echo esc_url( $data['image'] ); ?>" alt="">
 											<noscript>
-												<img src="<?php echo $data['image']; ?>" alt="">
+												<img src="<?php echo esc_url( $data['image'] ); ?>" alt="">
 											</noscript>
-											<span class="more-details"> <?php _e( 'Preview', 'uabb' ); ?> </span>
+											<span class="more-details"> <?php esc_html_e( 'Preview', 'uabb' ); ?> </span>
 										<?php } else { ?>
-											<h2 class="uabb-template-name"> <?php echo $data['name']; ?> </h2>
-											<div class="uabb-count"><?php echo $data['count']; ?></div>
+											<h2 class="uabb-template-name"> <?php echo esc_html( $data['name'] ); ?> </h2>
+											<div class="uabb-count"><?php echo esc_html( $data['count'] ); ?></div>
 										<?php } ?>
 
 									</div>
 									<div class="uabb-template-info">
-										<h2 class="uabb-template-name"> <?php echo $data['name']; ?> </h2>
+									<h2 class="uabb-template-name"> <?php echo esc_html( $data['name'] ); ?> </h2>
 										<div class="uabb-template-actions">
 											<span class="button button-sucess uabb-installed-btn">
 												<i class="dashicons dashicons-yes" style="padding: 3px;"></i>
-												<span class="msg"> <?php _e( 'Upgrade', 'uabb' ); ?> </span>
+												<span class="msg"> <?php esc_html_e( 'Upgrade', 'uabb' ); ?> </span>
 											</span>
 										</div>
 									</div>
@@ -445,7 +445,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 				if ( isset( $_GET['debug'] ) ) {
 					if ( count( $templates ) < 1 ) {
 						?>
-						<h2> <?php _e( 'Templates are disabled from RestAPI.', 'uabb' ); ?> </h2>
+						<h2> <?php esc_html_e( 'Templates are disabled from RestAPI.', 'uabb' ); ?> </h2>
 						<?php
 						print_r( $templates );
 					}

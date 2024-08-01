@@ -122,7 +122,7 @@ class UABB_UI_Panels {
 		$branding_name       = BB_Ultimate_Addon_Helper::get_builder_uabb_branding( 'uabb-plugin-name' );
 		$branding_short_name = BB_Ultimate_Addon_Helper::get_builder_uabb_branding( 'uabb-plugin-short-name' );
 
-		if ( 'bsf-license-not-active-uabb' == $license_status_class ) {
+		if ( 'bsf-license-not-active-uabb' === $license_status_class ) {
 			if ( empty( $branding_name ) && empty( $branding_short_name ) ) {
 				$license_string = '<a href="https://store.brainstormforce.com/purchase-history/" target="_blank">license key</a>';
 			} else {
@@ -196,7 +196,7 @@ class UABB_UI_Panels {
 
 			// Load UI Panel if option exist.
 			if ( array_key_exists( 'load_panels', $uabb ) ) {
-				if ( 1 == $uabb['load_panels'] ) {
+				if ( 1 === $uabb['load_panels'] ) {
 					$this->toggle_uabb_ui();
 				}
 			}
@@ -231,7 +231,7 @@ class UABB_UI_Panels {
 						 *  Check [status] & [dat_url_local] exist
 						 */
 						if (
-							isset( $template_data['status'] ) && true == $template_data['status'] &&
+							isset( $template_data['status'] ) && true === $template_data['status'] &&
 							isset( $template_data['dat_url_local'] ) && ! empty( $template_data['dat_url_local'] )
 						) {
 							FLBuilder::register_templates( $template_data['dat_url_local'] );
@@ -252,7 +252,7 @@ class UABB_UI_Panels {
 		?>
 			<!-- Search Module -->
 			<div id="fl-builder-blocks-rows" class="fl-builder-blocks-section">
-				<input type="text" id="module_search" placeholder="<?php _e( 'Search Module...', 'uabb' ); ?>" style="width: 100%;">
+			<input type="text" id="module_search" placeholder="<?php esc_attr_e( 'Search Module...', 'uabb' ); ?>" style="width: 100%;">
 				<div class="filter-count"></div>
 			</div><!-- Search Module -->
 		<?php
@@ -275,15 +275,15 @@ class UABB_UI_Panels {
 				foreach ( $cat['templates'] as $cat_id => $cat_data ) {
 
 					// Return all templates 'excluding' UABB templates.
-					if ( 'exclude' == $status ) {
-						if ( ( isset( $cat_data['author'] ) && 'brainstormforce' == $cat_data['author'] )
+					if ( 'exclude' === $status ) {
+						if ( ( isset( $cat_data['author'] ) && 'brainstormforce' === $cat_data['author'] )
 						) {
 							unset( $templates['categorized'][ $ind ]['templates'][ $cat_id ] );
 						}
 
 						// Return ONLY UABB templates.
 					} else {
-						if ( ( isset( $cat_data['author'] ) && 'brainstormforce' != $cat_data['author'] )
+						if ( ( isset( $cat_data['author'] ) && 'brainstormforce' !== $cat_data['author'] )
 						) {
 							unset( $templates['categorized'][ $ind ]['templates'][ $cat_id ] );
 						}
@@ -390,12 +390,12 @@ class UABB_UI_Panels {
 			/* Live Preview */
 			$uabb = BB_Ultimate_Addon_Helper::get_builder_uabb();
 
-			if ( is_array( $uabb ) && array_key_exists( 'uabb-live-preview', $uabb ) && 1 == $uabb['uabb-live-preview'] ) {
+			if ( is_array( $uabb ) && array_key_exists( 'uabb-live-preview', $uabb ) && 1 === $uabb['uabb-live-preview'] ) {
 
 				/* Live Preview HTML */
 				$live_preview = '<span class="uabb-live-preview-button fl-builder-button-primary fl-builder-button" >Live Preview</span>';
 
-				echo $live_preview;
+				echo esc_html( $live_preview );
 			}
 		}
 	}

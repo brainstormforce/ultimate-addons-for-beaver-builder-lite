@@ -47,12 +47,12 @@ class UABBInfoList extends FLBuilderModule {
 	public function get_icon( $icon = '' ) {
 
 		// check if $icon is referencing an included icon.
-		if ( '' != $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/info-list/icon/' . $icon ) ) {
+		if ( '' !== $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/info-list/icon/' . $icon ) ) {
 			$path = BB_ULTIMATE_ADDON_DIR . 'modules/info-list/icon/' . $icon;
 		}
 
 		if ( file_exists( $path ) ) {
-			return file_get_contents( $path );
+			return file_get_contents( $path ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		} else {
 			return '';
 		}
@@ -69,15 +69,15 @@ class UABBInfoList extends FLBuilderModule {
 
 		$infolist_icon_size = isset( $settings->icon_image_size ) ? $settings->icon_image_size : 75;
 
-		if ( 'circle' == $settings->list_icon_style ) {
+		if ( 'circle' === $settings->list_icon_style ) {
 			if ( is_numeric( $infolist_icon_size ) ) {
 				$infolist_icon_size = $infolist_icon_size / 2;
 			}
-		} elseif ( 'square' == $settings->list_icon_style ) {
+		} elseif ( 'square' === $settings->list_icon_style ) {
 			if ( is_numeric( $infolist_icon_size ) ) {
 				$infolist_icon_size = $infolist_icon_size / 2;
 			}
-		} elseif ( 'custom' == $settings->list_icon_style ) {
+		} elseif ( 'custom' === $settings->list_icon_style ) {
 			$infolist_icon_size = $infolist_icon_size;
 		} else {
 			$infolist_icon_size = $infolist_icon_size;
@@ -144,36 +144,36 @@ class UABBInfoList extends FLBuilderModule {
 				$nofollow = $item->list_item_url_nofollow;
 			}
 		}
-		echo '<li class="uabb-info-list-item info-list-item-dynamic' . $list_item_counter . '">';
-		echo '<div class="uabb-info-list-content-wrapper uabb-info-list-' . $this->settings->icon_position . '">';
+		echo '<li class="uabb-info-list-item info-list-item-dynamic' . esc_attr( $list_item_counter ) . '">';
+		echo '<div class="uabb-info-list-content-wrapper uabb-info-list-' . esc_attr( $this->settings->icon_position ) . '">';
 
 		if ( ! empty( $item->list_item_link ) && 'complete' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
-			echo '<a href="' . $item->list_item_url . '" class="uabb-info-list-link" target="' . $target . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '></a>';
+			echo '<a href="' . esc_url( $item->list_item_url ) . '" class="uabb-info-list-link" target="' . esc_attr( $target ) . '" ' . esc_attr( UABB_Helper::get_link_rel( $target, $nofollow, 0 ) ) . '></a>';
 		}
 
-		if ( 'none' != $item->image_type ) {
-			echo '<div class="uabb-info-list-icon info-list-icon-dynamic' . $list_item_counter . '">';
+		if ( 'none' !== $item->image_type ) {
+			echo '<div class="uabb-info-list-icon info-list-icon-dynamic' . esc_attr( $list_item_counter ) . '">';
 
-			if ( ! empty( $item->list_item_link ) && 'icon' == $item->list_item_link ) {
-				echo '<a href="' . $item->list_item_url . '" class="uabb-info-list-link" target="' . $target . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '></a>';
+			if ( ! empty( $item->list_item_link ) && 'icon' === $item->list_item_link ) {
+				echo '<a href="' . esc_url( $item->list_item_url ) . '" class="uabb-info-list-link" target="' . esc_attr( $target ) . '" ' . esc_attr( UABB_Helper::get_link_rel( esc_attr( $target ), esc_attr( $nofollow ), 0 ) ) . '></a>';
 			}
 				$this->render_image( $item, $this->settings );
 
 			echo '</div>';
 		}
 
-		echo '<div class="uabb-info-list-content uabb-info-list-' . $this->settings->icon_position . ' info-list-content-dynamic' . $list_item_counter . '">';
+		echo '<div class="uabb-info-list-content uabb-info-list-' . esc_attr( $this->settings->icon_position ) . ' info-list-content-dynamic' . esc_attr( $list_item_counter ) . '">';
 		// Define a whitelist of allowed tags.
 		$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
-		$infolist_tag = in_array( $this->settings->heading_tag_selection, $allowed_tags ) ? $this->settings->heading_tag_selection : 'h3';
+		$infolist_tag = in_array( $this->settings->heading_tag_selection, $allowed_tags, true ) ? $this->settings->heading_tag_selection : 'h3';
 		echo '<' . esc_attr( $infolist_tag ) . ' class="uabb-info-list-title">';
 		if ( ! empty( $item->list_item_link ) && 'list-title' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
-			echo '<a href="' . $item->list_item_url . '" target="' . $target . '" ' . UABB_Helper::get_link_rel( $target, $nofollow, 0 ) . '>';
+			echo '<a href="' . esc_url( $item->list_item_url ) . '" target="' . esc_attr( $target ) . '" ' . esc_attr( UABB_Helper::get_link_rel( $target, $nofollow, 0 ) ) . '>';
 
 		}
-		echo $item->list_item_title;
+		echo wp_kses_post( $item->list_item_title );
 		if ( ! empty( $item->list_item_link ) && 'list-title' === $item->list_item_link && ! empty( $item->list_item_url ) ) {
 
 			echo '</a>';
@@ -181,11 +181,11 @@ class UABBInfoList extends FLBuilderModule {
 		}
 		echo '</' . esc_attr( $infolist_tag ) . ' >';
 
-		echo '<div class="uabb-info-list-description uabb-text-editor info-list-description-dynamic' . $list_item_counter . '">';
+		echo '<div class="uabb-info-list-description uabb-text-editor info-list-description-dynamic' . esc_attr( $list_item_counter ) . '">';
 		if ( strpos( $item->list_item_description, '</p>' ) > 0 ) {
-			echo $item->list_item_description;
+			echo wp_kses_post( $item->list_item_description );
 		} else {
-			echo '<p>' . $item->list_item_description . '</p>';
+			echo '<p>' . wp_kses_post( $item->list_item_description ) . '</p>';
 		}
 
 		echo '</div>';
@@ -194,11 +194,11 @@ class UABBInfoList extends FLBuilderModule {
 
 		$list_item_counter = $list_item_counter + 1;
 		echo '</div>';
-		if ( 'none' != $item->image_type ) {
-			if ( 'center' == $this->settings->align_items && 'top' != $this->settings->icon_position ) {
-				echo '<div class="uabb-info-list-connector-top uabb-info-list-' . $this->settings->icon_position . '"></div>';
+		if ( 'none' !== $item->image_type ) {
+			if ( 'center' === $this->settings->align_items && 'top' !== $this->settings->icon_position ) {
+				echo '<div class="uabb-info-list-connector-top uabb-info-list-' . esc_attr( $this->settings->icon_position ) . '"></div>';
 			}
-			echo '<div class="uabb-info-list-connector uabb-info-list-' . $this->settings->icon_position . '"></div>';
+			echo '<div class="uabb-info-list-connector uabb-info-list-' . esc_attr( $this->settings->icon_position ) . '"></div>';
 		}
 
 		echo '</li>';
@@ -229,7 +229,7 @@ class UABBInfoList extends FLBuilderModule {
 		$page_migrated           = UABB_Lite_Compatibility::check_old_page_migration();
 		$stable_version_new_page = UABB_Lite_Compatibility::check_stable_version_new_page();
 
-		if ( $version_bb_check && ( 'yes' == $page_migrated || 'yes' == $stable_version_new_page ) ) {
+		if ( $version_bb_check && ( 'yes' === $page_migrated || 'yes' === $stable_version_new_page ) ) {
 			/* Heading */
 			if ( ! isset( $settings->heading_font_typo ) || ! is_array( $settings->heading_font_typo ) ) {
 
@@ -246,7 +246,7 @@ class UABBInfoList extends FLBuilderModule {
 				}
 				if ( isset( $settings->heading_font_family['weight'] ) ) {
 
-					if ( 'regular' == $settings->heading_font_family['weight'] ) {
+					if ( 'regular' === $settings->heading_font_family['weight'] ) {
 						$settings->heading_font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->heading_font_typo['font_weight'] = $settings->heading_font_family['weight'];
@@ -314,7 +314,7 @@ class UABBInfoList extends FLBuilderModule {
 				}
 				if ( isset( $settings->description_font_family['weight'] ) ) {
 
-					if ( 'regular' == $settings->description_font_family['weight'] ) {
+					if ( 'regular' === $settings->description_font_family['weight'] ) {
 						$settings->description_font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->description_font_typo['font_weight'] = $settings->description_font_family['weight'];
@@ -373,11 +373,11 @@ class UABBInfoList extends FLBuilderModule {
 					unset( $item->list_item_link_target );
 				}
 				if ( isset( $item->list_item_link_nofollow ) ) {
-					$item->list_item_url_nofollow = ( '1' == $item->list_item_link_nofollow ) ? 'yes' : '';
+					$item->list_item_url_nofollow = ( '1' === $item->list_item_link_nofollow ) ? 'yes' : '';
 					unset( $item->list_item_link_nofollow );
 				}
 			}
-		} elseif ( $version_bb_check && 'yes' != $page_migrated ) {
+		} elseif ( $version_bb_check && 'yes' !== $page_migrated ) {
 
 			if ( ! isset( $settings->heading_font_typo ) || ! is_array( $settings->heading_font_typo ) ) {
 
@@ -393,7 +393,7 @@ class UABBInfoList extends FLBuilderModule {
 				}
 				if ( isset( $settings->heading_font_family['weight'] ) ) {
 
-					if ( 'regular' == $settings->heading_font_family['weight'] ) {
+					if ( 'regular' === $settings->heading_font_family['weight'] ) {
 						$settings->heading_font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->heading_font_typo['font_weight'] = $settings->heading_font_family['weight'];
@@ -421,7 +421,7 @@ class UABBInfoList extends FLBuilderModule {
 					'unit'   => 'px',
 				);
 			}
-			if ( isset( $settings->heading_line_height['desktop'] ) && isset( $settings->heading_font_size['desktop'] ) && 0 != $settings->heading_font_size['desktop'] ) {
+			if ( isset( $settings->heading_line_height['desktop'] ) && isset( $settings->heading_font_size['desktop'] ) && 0 !== $settings->heading_font_size['desktop'] ) {
 				if ( is_numeric( $settings->heading_line_height['desktop'] ) && is_numeric( $settings->heading_font_size['desktop'] ) ) {
 					$settings->heading_font_typo['line_height'] = array(
 						'length' => round( $settings->heading_line_height['desktop'] / $settings->heading_font_size['desktop'], 2 ),
@@ -429,7 +429,7 @@ class UABBInfoList extends FLBuilderModule {
 					);
 				}
 			}
-			if ( isset( $settings->heading_line_height['medium'] ) && isset( $settings->heading_font_size['medium'] ) && 0 != $settings->heading_font_size['medium'] ) {
+			if ( isset( $settings->heading_line_height['medium'] ) && isset( $settings->heading_font_size['medium'] ) && 0 !== $settings->heading_font_size['medium'] ) {
 				if ( is_numeric( $settings->heading_line_height['medium'] ) && is_numeric( $settings->heading_font_size['medium'] ) ) {
 					$settings->heading_font_typo_medium['line_height'] = array(
 						'length' => round( $settings->heading_line_height['medium'] / $settings->heading_font_size['medium'], 2 ),
@@ -437,7 +437,7 @@ class UABBInfoList extends FLBuilderModule {
 					);
 				}
 			}
-			if ( isset( $settings->heading_line_height['small'] ) && isset( $settings->heading_font_size['small'] ) && 0 != $settings->heading_font_size['small'] ) {
+			if ( isset( $settings->heading_line_height['small'] ) && isset( $settings->heading_font_size['small'] ) && 0 !== $settings->heading_font_size['small'] ) {
 				if ( is_numeric( $settings->heading_line_height['small'] ) && is_numeric( $settings->heading_font_size['small'] ) ) {
 					$settings->heading_font_typo_responsive['line_height'] = array(
 						'length' => round( $settings->heading_line_height['small'] / $settings->heading_font_size['small'], 2 ),
@@ -461,7 +461,7 @@ class UABBInfoList extends FLBuilderModule {
 				}
 				if ( isset( $settings->description_font_family['weight'] ) ) {
 
-					if ( 'regular' == $settings->description_font_family['weight'] ) {
+					if ( 'regular' === $settings->description_font_family['weight'] ) {
 						$settings->description_font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->description_font_typo['font_weight'] = $settings->description_font_family['weight'];
@@ -487,7 +487,7 @@ class UABBInfoList extends FLBuilderModule {
 					'unit'   => 'px',
 				);
 			}
-			if ( isset( $settings->description_line_height['desktop'] ) && isset( $settings->description_font_size['desktop'] ) && 0 != $settings->description_font_size['desktop'] ) {
+			if ( isset( $settings->description_line_height['desktop'] ) && isset( $settings->description_font_size['desktop'] ) && 0 !== $settings->description_font_size['desktop'] ) {
 				if ( is_numeric( $settings->description_line_height['desktop'] ) && is_numeric( $settings->description_font_size['desktop'] ) ) {
 					$settings->description_font_typo['line_height'] = array(
 						'length' => round( $settings->description_line_height['desktop'] / $settings->description_font_size['desktop'], 2 ),
@@ -495,7 +495,7 @@ class UABBInfoList extends FLBuilderModule {
 					);
 				}
 			}
-			if ( isset( $settings->description_line_height['medium'] ) && isset( $settings->description_font_size['medium'] ) && 0 != $settings->description_font_size['medium'] ) {
+			if ( isset( $settings->description_line_height['medium'] ) && isset( $settings->description_font_size['medium'] ) && 0 !== $settings->description_font_size['medium'] ) {
 				if ( is_numeric( $settings->description_line_height['medium'] ) && is_numeric( $settings->description_font_size['medium'] ) ) {
 					$settings->description_font_typo_medium['line_height'] = array(
 						'length' => round( $settings->description_line_height['medium'] / $settings->description_font_size['medium'], 2 ),
@@ -503,7 +503,7 @@ class UABBInfoList extends FLBuilderModule {
 					);
 				}
 			}
-			if ( isset( $settings->description_line_height['small'] ) && isset( $settings->description_font_size['small'] ) && 0 != $settings->description_font_size['small'] ) {
+			if ( isset( $settings->description_line_height['small'] ) && isset( $settings->description_font_size['small'] ) && 0 !== $settings->description_font_size['small'] ) {
 				if ( is_numeric( $settings->description_line_height['small'] ) && is_numeric( $settings->description_font_size['small'] ) ) {
 					$settings->description_font_typo_responsive['line_height'] = array(
 						'length' => round( $settings->description_line_height['small'] / $settings->description_font_size['small'], 2 ),
@@ -517,7 +517,7 @@ class UABBInfoList extends FLBuilderModule {
 					unset( $item->list_item_link_target );
 				}
 				if ( isset( $item->list_item_link_nofollow ) ) {
-					$item->list_item_url_nofollow = ( '1' == $item->list_item_link_nofollow ) ? 'yes' : '';
+					$item->list_item_url_nofollow = ( '1' === $item->list_item_link_nofollow ) ? 'yes' : '';
 					unset( $item->list_item_link_nofollow );
 				}
 			}

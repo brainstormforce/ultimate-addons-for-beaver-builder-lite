@@ -88,7 +88,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 		$cropped_path = $this->_get_cropped_path();
 
 		if ( file_exists( $cropped_path['path'] ) ) {
-			unlink( $cropped_path['path'] );
+			unlink( $cropped_path['path'] ); //phpcs:ignore WordPress.WP.AlternativeFunctions.unlink_unlink
 		}
 	}
 
@@ -102,7 +102,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 		$this->delete();
 
 		// Do a crop.
-		if ( ! empty( $this->settings->image_style ) && 'simple' != $this->settings->image_style && 'custom' != $this->settings->image_style ) {
+		if ( ! empty( $this->settings->image_style ) && 'simple' !== $this->settings->image_style && 'custom' !== $this->settings->image_style ) {
 
 			$editor = $this->_get_editor();
 
@@ -116,10 +116,10 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 			$new_height   = $size['height'];
 
 			// Get the crop ratios.
-			if ( 'circle' == $this->settings->image_style ) {
+			if ( 'circle' === $this->settings->image_style ) {
 				$ratio_1 = 1;
 				$ratio_2 = 1;
-			} elseif ( 'square' == $this->settings->image_style ) {
+			} elseif ( 'square' === $this->settings->image_style ) {
 				$ratio_1 = 1;
 				$ratio_2 = 1;
 			}
@@ -190,7 +190,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 
 					foreach ( $data->sizes as $key => $size ) {
 
-						if ( $size->url == $this->settings->photo_src ) {
+						if ( $size->url === $this->settings->photo_src ) {
 							$classes[] = 'size-' . $key;
 							break;
 						}
@@ -367,13 +367,13 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 		$page_migrated           = UABB_Lite_Compatibility::check_old_page_migration();
 		$stable_version_new_page = UABB_Lite_Compatibility::check_stable_version_new_page();
 
-		if ( $version_bb_check && ( 'yes' == $page_migrated || 'yes' == $stable_version_new_page ) ) {
+		if ( $version_bb_check && ( 'yes' === $page_migrated || 'yes' === $stable_version_new_page ) ) {
 
 			// Handle opacity fields.
 			$helper->handle_opacity_inputs( $settings, 'img_bg_color_opc', 'img_bg_color' );
 			$helper->handle_opacity_inputs( $settings, 'img_bg_hover_color_opc', 'img_bg_hover_color' );
 
-		} elseif ( $version_bb_check && 'yes' != $page_migrated ) {
+		} elseif ( $version_bb_check && 'yes' !== $page_migrated ) {
 
 			// Handle opacity fields.
 			$helper->handle_opacity_inputs( $settings, 'img_bg_color_opc', 'img_bg_color' );

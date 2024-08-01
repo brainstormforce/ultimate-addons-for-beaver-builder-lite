@@ -19,18 +19,18 @@ var field   = data.field,
 	color_one_class = ( value.color_one == '' ) ? 'fl-color-picker-empty' : '',
 	color_two_class = ( value.color_two == '' ) ? 'fl-color-picker-empty' : '',
 	direction = {
-		'left_right' : '<?php _e( 'Left to Right', 'uabb' ); ?>',
-		'right_left' : '<?php _e( 'Right to Left', 'uabb' ); ?>',
-		'top_bottom' : '<?php _e( 'Top to Bottom', 'uabb' ); ?>',
-		'bottom_top' : '<?php _e( 'Bottom to Top', 'uabb' ); ?>',
-		'custom'     : '<?php _e( 'Custom', 'uabb' ); ?>'
+		'left_right' : '<?php esc_html_e( 'Left to Right', 'uabb' ); ?>',
+		'right_left' : '<?php esc_html_e( 'Right to Left', 'uabb' ); ?>',
+		'top_bottom' : '<?php esc_html_e( 'Top to Bottom', 'uabb' ); ?>',
+		'bottom_top' : '<?php esc_html_e( 'Bottom to Top', 'uabb' ); ?>',
+		'custom'     : '<?php esc_html_e( 'Custom', 'uabb' ); ?>'
 	},
-	yr = parseInt( '<?php echo date( 'Y' ); ?>' );
+	yr = parseInt( '<?php echo esc_js( date( 'Y' ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date ?>' );
 #>
 
 <div class="uabb-gradient-wrapper bb-colorpick">
 	<div class="uabb-gradient-item bb-color uabb-gradient-color-one fl-field" data-type="color" data-preview="{{preview}}">
-		<label for="uabb-gradient-color-one" class="uabb-gradient-label"><?php _e( 'Color 1', 'uabb' ); ?></label>
+		<label for="uabb-gradient-color-one" class="uabb-gradient-label"><?php esc_html_e( 'Color 1', 'uabb' ); ?></label>
 		<div class="fl-color-picker">
 			<div class="fl-color-picker-color {{color_one_class}}">
 				<svg class="fl-color-picker-icon" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -44,7 +44,7 @@ var field   = data.field,
 		</div>
 	</div>
 	<div class="uabb-gradient-item bb-color uabb-gradient-color-two fl-field" data-type="color" data-preview="{{preview}}">
-		<label for="uabb-gradient-color-two" class="uabb-gradient-label"><?php _e( 'Color 2', 'uabb' ); ?></label>
+		<label for="uabb-gradient-color-two" class="uabb-gradient-label"><?php esc_html_e( 'Color 2', 'uabb' ); ?></label>
 		<div class="fl-color-picker">
 			<div class="fl-color-picker-color {{color_two_class}}">
 				<svg class="fl-color-picker-icon" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -58,7 +58,7 @@ var field   = data.field,
 		</div>
 	</div>
 	<div class="uabb-gradient-item uabb-gradient-direction fl-field" data-type="select" data-preview="{{preview}}">
-		<label for="uabb-gradient-direction" class="uabb-gradient-label"><?php _e( 'Direction', 'uabb' ); ?></label>
+		<label for="uabb-gradient-direction" class="uabb-gradient-label"><?php esc_html_e( 'Direction', 'uabb' ); ?></label>
 		<select name="{{name}}[][direction]" class="uabb-gradient-direction-select">
 		<#
 		for ( var direction_key in direction ) {
@@ -74,8 +74,8 @@ var field   = data.field,
 		</select>
 	</div>
 	<div class="uabb-gradient-item uabb-gradient-angle fl-field" data-type="text" data-preview="{{preview}}">
-		<label for="uabb-gradient-angle" class="uabb-gradient-label"><?php _e( 'Angle', 'uabb' ); ?></label>
+		<label for="uabb-gradient-angle" class="uabb-gradient-label"><?php esc_html_e( 'Angle', 'uabb' ); ?></label>
 		<input type="text" class="uabb-gradient-angle-input" name="{{name}}[][angle]" maxlength="3" size="6" value="{{value.angle}}" />
-		<span class="fl-field-description"><?php _e( 'deg', 'uabb' ); ?></span>
+		<span class="fl-field-description"><?php esc_html_e( 'deg', 'uabb' ); ?></span>
 	</div>
 </div>

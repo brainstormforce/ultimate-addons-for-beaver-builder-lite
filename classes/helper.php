@@ -29,13 +29,13 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				$css .= 'font-family: ' . $font['family'] . ';';
 			}
 
-			if ( 'regular' == $font['weight'] ) {
+			if ( 'regular' === $font['weight'] ) {
 				$css .= 'font-weight: normal;';
 			} else {
 				$css .= 'font-weight: ' . $font['weight'] . ';';
 			}
 
-			echo $css;
+			echo esc_attr( $css, array() );
 		}
 
 		/**
@@ -47,8 +47,8 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 */
 		static public function uabb_get_color( $hex, $opacity ) {
 			$rgba = $hex;
-			if ( '' != $opacity ) {
-				if ( 3 == strlen( $hex ) ) {
+			if ( '' !== $opacity ) {
+				if ( 3 === strlen( $hex ) ) {
 					$r = hexdec( substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) );
 					$g = hexdec( substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) );
 					$b = hexdec( substr( $hex, 2, 1 ) . substr( $hex, 2, 1 ) );
@@ -81,14 +81,14 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			}
 
 			// Sanitize $color if "#" is provided.
-			if ( '#' == $color[0] ) {
+			if ( '#' === $color[0] ) {
 				$color = substr( $color, 1 );
 			}
 
 			// Check if color has 6 or 3 characters and get values.
-			if ( 6 == strlen( $color ) ) {
+			if ( 6 === strlen( $color ) ) {
 					$hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
-			} elseif ( 3 == strlen( $color ) ) {
+			} elseif ( 3 === strlen( $color ) ) {
 					$hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
 			} else {
 					return $default;
@@ -130,9 +130,9 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			$opacity   = '';
 			$hex_color = $settings->$name;
 
-			if ( '' != $hex_color && 'r' != $hex_color[0] && 'R' != $hex_color[0] ) {
+			if ( '' !== $hex_color && 'r' !== $hex_color[0] && 'R' !== $hex_color[0] ) {
 
-				if ( true == $opc && isset( $settings->{ $name . '_opc' } ) ) {
+				if ( true === $opc && isset( $settings->{ $name . '_opc' } ) ) {
 					if ( '' !== $settings->{ $name . '_opc' } ) {
 						$opacity = $settings->{ $name . '_opc' };
 						$rgba    = self::uabb_hex2rgba( $hex_color, $opacity / 100 );
@@ -140,7 +140,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 					}
 				}
 
-				if ( '#' != $hex_color[0] ) {
+				if ( '#' !== $hex_color[0] ) {
 
 					return '#' . $hex_color;
 				}
@@ -163,7 +163,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			$angle          = 0;
 			$css            = '';
 
-			if ( 'custom' != $direction ) {
+			if ( 'custom' !== $direction ) {
 				switch ( $direction ) {
 					case 'left_right':
 						$gradient_angle = 0;
@@ -182,17 +182,17 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				}
 			}
 
-			if ( isset( $gradient['color_one'] ) && '' != $gradient['color_one'] ) {
+			if ( isset( $gradient['color_one'] ) && '' !== $gradient['color_one'] ) {
 				$color1 = self::uabb_hex2rgba( $gradient['color_one'] );
 			}
 
-			if ( isset( $gradient['color_two'] ) && '' != $gradient['color_two'] ) {
+			if ( isset( $gradient['color_two'] ) && '' !== $gradient['color_two'] ) {
 				$color2 = self::uabb_hex2rgba( $gradient['color_two'] );
 			}
 
 			$angle = abs( $gradient_angle - 450 ) % 360;
 
-			if ( '' != $color1 && '' != $color2 ) {
+			if ( '' !== $color1 && '' !== $color2 ) {
 
 				$css .= 'background: -webkit-linear-gradient(' . $gradient_angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';
 				$css .= 'background: -o-linear-gradient(' . $gradient_angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';
@@ -200,7 +200,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				$css .= 'background: -moz-linear-gradient(' . $gradient_angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';
 				$css .= 'background: linear-gradient(' . $angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';
 			}
-			echo $css;
+			echo esc_attr( $css, array() );
 		}
 		/**
 		 *  Get link rel attribute
@@ -214,15 +214,15 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		static public function get_link_rel( $target, $is_nofollow = 0, $echo = 0 ) {
 
 			$attr = '';
-			if ( '_blank' == $target ) {
+			if ( '_blank' === $target ) {
 				$attr .= 'noopener';
 			}
 
-			if ( 1 == $is_nofollow || 'yes' == $is_nofollow ) {
+			if ( 1 === $is_nofollow || 'yes' === $is_nofollow ) {
 				$attr .= ' nofollow';
 			}
 
-			if ( '' == $attr ) {
+			if ( '' === $attr ) {
 				return;
 			}
 
@@ -230,7 +230,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			if ( ! $echo ) {
 				return 'rel="' . $attr . '"';
 			}
-			echo 'rel="' . $attr . '"';
+			echo 'rel="' . esc_attr( $attr ) . '"';
 		}
 	}
 }

@@ -85,7 +85,7 @@ class ImageIconModule extends FLBuilderModule {
 		$cropped_path = $this->_get_cropped_path();
 
 		if ( file_exists( $cropped_path['path'] ) ) {
-			unlink( $cropped_path['path'] );
+			unlink( $cropped_path['path'] ); //phpcs:ignore WordPress.WP.AlternativeFunctions.unlink_unlink
 		}
 	}
 
@@ -99,7 +99,7 @@ class ImageIconModule extends FLBuilderModule {
 		$this->delete();
 
 		// Do a crop.
-		if ( ! empty( $this->settings->image_style ) && 'simple' != $this->settings->image_style && 'custom' != $this->settings->image_style ) {
+		if ( ! empty( $this->settings->image_style ) && 'simple' !== $this->settings->image_style && 'custom' !== $this->settings->image_style ) {
 
 			$editor = $this->_get_editor();
 
@@ -113,10 +113,10 @@ class ImageIconModule extends FLBuilderModule {
 			$new_height   = $size['height'];
 
 			// Get the crop ratios.
-			if ( 'circle' == $this->settings->image_style ) {
+			if ( 'circle' === $this->settings->image_style ) {
 				$ratio_1 = 1;
 				$ratio_2 = 1;
-			} elseif ( 'square' == $this->settings->image_style ) {
+			} elseif ( 'square' === $this->settings->image_style ) {
 				$ratio_1 = 1;
 				$ratio_2 = 1;
 			}
@@ -153,7 +153,7 @@ class ImageIconModule extends FLBuilderModule {
 		if ( ! $this->data ) {
 
 			// Photo source is set to "url".
-			if ( 'url' == $this->settings->photo_source ) {
+			if ( 'url' === $this->settings->photo_source ) {
 				$this->data                = new stdClass();
 				$this->data->url           = $this->settings->photo_url;
 				$this->settings->photo_src = $this->settings->photo_url;
@@ -180,7 +180,7 @@ class ImageIconModule extends FLBuilderModule {
 	public function get_classes() {
 		$classes = array( 'uabb-photo-img' );
 
-		if ( 'library' == $this->settings->photo_source ) {
+		if ( 'library' === $this->settings->photo_source ) {
 
 			if ( ! empty( $this->settings->photo ) ) {
 
@@ -193,7 +193,7 @@ class ImageIconModule extends FLBuilderModule {
 
 						foreach ( $data->sizes as $key => $size ) {
 
-							if ( $size->url == $this->settings->photo_src ) {
+							if ( $size->url === $this->settings->photo_src ) {
 								$classes[] = 'size-' . $key;
 								break;
 							}
@@ -266,9 +266,9 @@ class ImageIconModule extends FLBuilderModule {
 	 * @protected
 	 */
 	protected function _has_source() {
-		if ( 'url' == $this->settings->photo_source && ! empty( $this->settings->photo_url ) ) {
+		if ( 'url' === $this->settings->photo_source && ! empty( $this->settings->photo_url ) ) {
 			return true;
-		} elseif ( 'library' == $this->settings->photo_source && ! empty( $this->settings->photo_src ) ) {
+		} elseif ( 'library' === $this->settings->photo_source && ! empty( $this->settings->photo_src ) ) {
 			return true;
 		}
 
@@ -339,7 +339,7 @@ class ImageIconModule extends FLBuilderModule {
 	 * @protected
 	 */
 	protected function _get_uncropped_url() {
-		if ( 'url' == $this->settings->photo_source ) {
+		if ( 'url' === $this->settings->photo_source ) {
 			$url = $this->settings->photo_url;
 		} elseif ( ! empty( $this->settings->photo_src ) ) {
 			$url = $this->settings->photo_src;
@@ -375,7 +375,7 @@ class ImageIconModule extends FLBuilderModule {
 		$page_migrated           = UABB_Lite_Compatibility::check_old_page_migration();
 		$stable_version_new_page = UABB_Lite_Compatibility::check_stable_version_new_page();
 
-		if ( $version_bb_check && ( 'yes' == $page_migrated || 'yes' == $stable_version_new_page ) ) {
+		if ( $version_bb_check && ( 'yes' === $page_migrated || 'yes' === $stable_version_new_page ) ) {
 
 			// Handle opacity fields.
 			$helper->handle_opacity_inputs( $settings, 'icon_bg_color_opc', 'icon_bg_color' );
@@ -383,7 +383,7 @@ class ImageIconModule extends FLBuilderModule {
 			$helper->handle_opacity_inputs( $settings, 'img_bg_color_opc', 'img_bg_color' );
 			$helper->handle_opacity_inputs( $settings, 'img_bg_hover_color_opc', 'img_bg_hover_color' );
 
-		} elseif ( $version_bb_check && 'yes' != $page_migrated ) {
+		} elseif ( $version_bb_check && 'yes' !== $page_migrated ) {
 
 			// Handle opacity fields.
 			$helper->handle_opacity_inputs( $settings, 'icon_bg_color_opc', 'icon_bg_color' );

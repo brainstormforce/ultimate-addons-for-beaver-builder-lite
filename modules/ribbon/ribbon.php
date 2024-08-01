@@ -45,7 +45,7 @@ class RibbonModule extends FLBuilderModule {
 		$page_migrated           = UABB_Lite_Compatibility::check_old_page_migration();
 		$stable_version_new_page = UABB_Lite_Compatibility::check_stable_version_new_page();
 
-		if ( $version_bb_check && ( 'yes' == $page_migrated || 'yes' == $stable_version_new_page ) ) {
+		if ( $version_bb_check && ( 'yes' === $page_migrated || 'yes' === $stable_version_new_page ) ) {
 
 			if ( ! isset( $settings->font_typo ) || ! is_array( $settings->font_typo ) ) {
 
@@ -62,7 +62,7 @@ class RibbonModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->text_font_family['weight'] ) ) {
 
-					if ( 'regular' == $settings->text_font_family['weight'] ) {
+					if ( 'regular' === $settings->text_font_family['weight'] ) {
 						$settings->font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->font_typo['font_weight'] = $settings->text_font_family['weight'];
@@ -117,7 +117,7 @@ class RibbonModule extends FLBuilderModule {
 				);
 				unset( $settings->text_line_height_unit_responsive );
 			}
-		} elseif ( $version_bb_check && 'yes' != $page_migrated ) {
+		} elseif ( $version_bb_check && 'yes' !== $page_migrated ) {
 
 			if ( ! isset( $settings->font_typo ) || ! is_array( $settings->font_typo ) ) {
 
@@ -134,7 +134,7 @@ class RibbonModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->text_font_family['weight'] ) ) {
 
-					if ( 'regular' == $settings->text_font_family['weight'] ) {
+					if ( 'regular' === $settings->text_font_family['weight'] ) {
 						$settings->font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->font_typo['font_weight'] = $settings->text_font_family['weight'];
@@ -163,7 +163,7 @@ class RibbonModule extends FLBuilderModule {
 					'unit'   => 'px',
 				);
 			}
-			if ( isset( $settings->text_line_height['desktop'] ) && isset( $settings->text_font_size['desktop'] ) && 0 != $settings->text_font_size['desktop'] && ! isset( $settings->font_typo['line_height'] ) ) {
+			if ( isset( $settings->text_line_height['desktop'] ) && isset( $settings->text_font_size['desktop'] ) && 0 !== $settings->text_font_size['desktop'] && ! isset( $settings->font_typo['line_height'] ) ) {
 				if ( is_numeric( $settings->text_line_height['desktop'] ) && is_numeric( $settings->text_font_size['desktop'] ) ) {
 					$settings->font_typo['line_height'] = array(
 						'length' => round( $settings->text_line_height['desktop'] / $settings->text_font_size['desktop'], 2 ),
@@ -171,7 +171,7 @@ class RibbonModule extends FLBuilderModule {
 					);
 				}
 			}
-			if ( isset( $settings->text_line_height['medium'] ) && isset( $settings->text_font_size['medium'] ) && 0 != $settings->text_font_size['medium'] && ! isset( $settings->font_typo_medium['line_height'] ) ) {
+			if ( isset( $settings->text_line_height['medium'] ) && isset( $settings->text_font_size['medium'] ) && 0 !== $settings->text_font_size['medium'] && ! isset( $settings->font_typo_medium['line_height'] ) ) {
 				if ( is_numeric( $settings->text_line_height['medium'] ) && is_numeric( $settings->text_font_size['medium'] ) ) {
 					$settings->font_typo_medium['line_height'] = array(
 						'length' => round( $settings->text_line_height['medium'] / $settings->text_font_size['medium'], 2 ),
@@ -179,7 +179,7 @@ class RibbonModule extends FLBuilderModule {
 					);
 				}
 			}
-			if ( isset( $settings->text_line_height['small'] ) && isset( $settings->text_font_size['small'] ) && 0 != $settings->text_font_size['small'] && ! isset( $settings->font_typo_responsive['line_height'] ) ) {
+			if ( isset( $settings->text_line_height['small'] ) && isset( $settings->text_font_size['small'] ) && 0 !== $settings->text_font_size['small'] && ! isset( $settings->font_typo_responsive['line_height'] ) ) {
 				if ( is_numeric( $settings->text_line_height['small'] ) && is_numeric( $settings->text_font_size['small'] ) ) {
 					$settings->font_typo_responsive['line_height'] = array(
 						'length' => round( $settings->text_line_height['small'] / $settings->text_font_size['small'], 2 ),
@@ -218,12 +218,12 @@ class RibbonModule extends FLBuilderModule {
 	 */
 	public function get_icon( $icon = '' ) {
 		// check if $icon is referencing an included icon.
-		if ( '' != $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/icon/' . $icon ) ) {
+		if ( '' !== $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/icon/' . $icon ) ) {
 			$path = BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/icon/' . $icon;
 		}
 
 		if ( file_exists( $path ) ) {
-			return file_get_contents( $path );
+			return file_get_contents( $path ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents	
 		} else {
 			return '';
 		}
