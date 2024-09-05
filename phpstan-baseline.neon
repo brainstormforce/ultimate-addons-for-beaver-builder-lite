@@ -5,6 +5,11 @@ parameters:
 			message: "#^Call to static method get_setting() on an unknown class FLTheme\\.$#"
 			count: 1
 			path: test
+		-
+			identifier: phpDoc.parseError
+		-
+			identifier: variable.undefined
+
 
 		#common errors
 

@@ -181,7 +181,7 @@ if ( '' !== $settings->separator_style ) {
 
 		$imageicon_array = array(
 
-			'image_type'          => ( 'line_image' === $settings->separator_style ) ? 'photo' : ( ( 'line_icon' === $settings->separator_style ) ? 'icon' : '' ),
+			'image_type'          => ( 'line_image' === $settings->separator_style ) ? 'photo' : 'icon', // Removed unreachable condition
 			/* Icon Basics */
 			'icon'                => $settings->icon,
 			'icon_size'           => $settings->icon_size,

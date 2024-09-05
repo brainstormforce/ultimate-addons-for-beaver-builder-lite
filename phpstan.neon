@@ -24,6 +24,7 @@ parameters:
 		- languages
 		- modules
 
+
 	ignoreErrors:
 		- '#Call to an undefined method [a-zA-Z0-9\\_]+\:\:add_control\(\).$#'
 		- '#Call to an undefined method [^\s]+\.$#'

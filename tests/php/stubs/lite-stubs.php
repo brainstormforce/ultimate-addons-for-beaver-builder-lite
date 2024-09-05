@@ -9,6 +9,14 @@ if (!class_exists('WPML_Beaver_Builder_Module_With_Items')) {
 if (!class_exists('FLBuilderModule')) {
     class FLBuilderModule {
         // Add any necessary properties or methods
+         /**
+     * Constructor function that initializes required actions and hooks
+     *
+     * @since 1.0
+     */
+    function __construct($settings = array())
+    {
+    }
     }
 }
 
@@ -3006,15 +3014,6 @@ function uabb_theme_padding_button($mode, $value)
 *  Kicking this off by calling 'get_instance()' method
 */
 $UABB_Cloud_Templates = \UABB_Cloud_Templates::get_instance();
-/**
- * Get timezone string.
- *
- * @return string timezone string.
- * @since 1.0.0
- */
-function wp_timezone_string()
-{
-}
 /**
  *  FLBuilder Registered Nested Forms - Button Form Field
  *
