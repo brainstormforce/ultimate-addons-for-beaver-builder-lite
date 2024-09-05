@@ -9,6 +9,25 @@ global $post;
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
+// Ensure $settings is defined and initialized
+if (!isset($settings)) {
+    $settings = new stdClass(); // Create an empty object to avoid undefined errors
+}
+
+// Ensure $id is defined and initialized
+if (!isset($id)) {
+    $id = ''; 
+}
+
+// Ensure $global_settings is defined and initialized
+if (!isset($global_settings)) {
+    // Create an empty object to avoid undefined errors
+    $global_settings = new stdClass();
+}
+
+// Ensure $position is defined with a default value
+$position = '0'; // Default to '0' to avoid undefined variable errors
+
 	$settings->title_color = FLBuilderColor::hex_or_rgb( $settings->color );
 	$settings->desc_color  = FLBuilderColor::hex_or_rgb( $settings->desc_color );
 	$settings->bg_color    = FLBuilderColor::hex_or_rgb( $settings->bg_color );

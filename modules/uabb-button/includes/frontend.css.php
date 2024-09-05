@@ -9,6 +9,35 @@ global $post;
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
+// Ensure $settings is defined and initialized
+if (!isset($settings)) {
+    $settings = new stdClass(); // Create an empty object to avoid undefined errors
+}
+
+// Ensure $global_settings is defined and initialized
+if (!isset($global_settings)) {
+    // Create an empty object to avoid undefined errors
+    $global_settings = new stdClass();
+}
+
+// $id = ''; // Ensure $id is always defined
+// Ensure $id is defined and initialized
+if (!isset($id)) {
+    $id = ''; // If we do not provide isset check, styling does mot get applied
+}
+
+$border_color = ''; // Ensure $border_color is always defined
+
+$bg_grad_start = ''; // Ensure $bg_grad_start is always defined
+
+$bg_hover_grad_start = ''; //Ensure $bg_hover_grad_start is always defined
+
+$border_hover_color = ''; // Ensure $border_hover_color is always defined
+
+$padding_top_bottom = ''; // Ensure $padding_top_bottom is always defined
+
+
+
 $settings->bg_color         = uabb_theme_button_bg_color( $settings->bg_color );
 $settings->bg_hover_color   = uabb_theme_button_bg_hover_color( $settings->bg_hover_color );
 $settings->text_color       = uabb_theme_button_text_color( $settings->text_color );

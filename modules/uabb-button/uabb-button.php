@@ -23,7 +23,7 @@ class UABBButtonModule extends FLBuilderModule {
 				'name'          => __( 'Button', 'uabb' ),
 				'description'   => __( 'A simple call to action button.', 'uabb' ),
 				'category'      => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'         => UABB_CAT,
+				'group'         => defined('UABB_CAT') ? UABB_CAT : '',
 				'dir'           => BB_ULTIMATE_ADDON_DIR . 'modules/uabb-button/',
 				'url'           => BB_ULTIMATE_ADDON_URL . 'modules/uabb-button/',
 				'editor_export' => true, // Defaults to true and can be omitted.
@@ -38,8 +38,9 @@ class UABBButtonModule extends FLBuilderModule {
 	 *
 	 * @method update
 	 * @param object $settings gets the settings for the button module.
+	 * @return object Updated settings object
 	 */
-	public function update( $settings ) {
+	public function update( $settings ): object {
 		// Remove the old three_d setting.
 		if ( isset( $settings->three_d ) ) {
 			unset( $settings->three_d );
@@ -52,8 +53,9 @@ class UABBButtonModule extends FLBuilderModule {
 	 * Function that gets the class names.
 	 *
 	 * @method get_classname
+	 * @return string Classname for the button
 	 */
-	public function get_classname() {
+	public function get_classname(): string {
 		$classname = 'uabb-button-wrap uabb-creative-button-wrap';
 
 		if ( ! empty( $this->settings->width ) ) {
@@ -83,8 +85,9 @@ class UABBButtonModule extends FLBuilderModule {
 	 * Function that gets the button styling.
 	 *
 	 * @method get_button_style
+	 * @return string Button styling string
 	 */
-	public function get_button_style() {
+	public function get_button_style(): string {
 		$btn_style = '';
 
 		if ( ! empty( $this->settings->style ) && 'transparent' === $this->settings->style ) {
