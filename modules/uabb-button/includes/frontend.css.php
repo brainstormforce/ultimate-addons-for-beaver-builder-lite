@@ -244,10 +244,14 @@ if ( ! $version_bb_check ) {
 
 				$border_width = uabb_theme_button_border_width( '' );
 
-				echo ( is_array( $border_width ) && array_key_exists( 'top', $border_width ) ) ? 'border-top-width:' . esc_attr( $border_width['top'] ) . 'px;' : '';
-				echo ( is_array( $border_width ) && array_key_exists( 'left', $border_width ) ) ? 'border-left-width:' . esc_attr( $border_width['left'] ) . 'px;' : '';
-				echo ( is_array( $border_width ) && array_key_exists( 'right', $border_width ) ) ? 'border-right-width:' . esc_attr( $border_width['right'] ) . 'px;' : '';
-				echo ( is_array( $border_width ) && array_key_exists( 'bottom', $border_width ) ) ? 'border-bottom-width:' . esc_attr( $border_width['bottom'] ) . 'px;' : '';
+
+				// Ensure $border_width is an array before performing array_key_exists checks
+				if ( is_array( $border_width ) ) {
+					echo array_key_exists( 'top', $border_width ) ? 'border-top-width:' . esc_attr( $border_width['top'] ) . 'px;' : '';
+					echo array_key_exists( 'left', $border_width ) ? 'border-left-width:' . esc_attr( $border_width['left'] ) . 'px;' : '';
+					echo array_key_exists( 'right', $border_width ) ? 'border-right-width:' . esc_attr( $border_width['right'] ) . 'px;' : '';
+					echo array_key_exists( 'bottom', $border_width ) ? 'border-bottom-width:' . esc_attr( $border_width['bottom'] ) . 'px;' : '';
+				}
 			}
 			if ( isset( $settings->button_border_radius ) ) {
 				echo ( '' !== $settings->button_border_radius ) ? 'border-radius:' . esc_attr( $settings->button_border_radius ) . 'px;' : 'border-radius:' . esc_attr( uabb_theme_button_border_radius( '' ) ) . 'px;';
