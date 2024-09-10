@@ -5,6 +5,20 @@
  *  @package UABB Image Icon Module
  */
 
+if ( ! defined( 'FL_BUILDER_DEMO_URL' ) ) {
+	define( 'FL_BUILDER_DEMO_URL', '' );
+}
+
+if ( ! defined( 'FL_BUILDER_OLD_DEMO_URL' ) ) {
+	define( 'FL_BUILDER_OLD_DEMO_URL', '' );
+}
+
+if ( ! defined( 'FL_BUILDER_DEMO_CACHE_URL' ) ) {
+	define( 'FL_BUILDER_DEMO_CACHE_URL', '' );
+}
+
+
+
 /**
  * Function that initializes Image Icon Module
  *
@@ -15,17 +29,15 @@ class ImageIconModule extends FLBuilderModule {
 	/**
 	 * Variable for Image Icon module
 	 *
-	 * @property $data
-	 * @var $data
+	 * @var mixed|null
 	 */
 	public $data = null;
 
 	/**
 	 * Variable for Image Icon module
 	 *
-	 * @property $_editor
 	 * @protected
-	 * @var $_editor
+	 * @var mixed|null
 	 */
 	protected $_editor = null;
 
@@ -40,7 +52,7 @@ class ImageIconModule extends FLBuilderModule {
 				'name'        => __( 'Image / Icon', 'uabb' ),
 				'description' => __( 'Image / Icon with effect', 'uabb' ),
 				'category'    => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'       => UABB_CAT,
+				'group'       => defined( 'UABB_CAT' ) ? UABB_CAT : '',
 				'dir'         => BB_ULTIMATE_ADDON_DIR . 'modules/image-icon/',
 				'url'         => BB_ULTIMATE_ADDON_URL . 'modules/image-icon/',
 				'icon'        => 'format-image.svg',
@@ -56,8 +68,9 @@ class ImageIconModule extends FLBuilderModule {
 	 *
 	 * @method update
 	 * @param object $settings {object}.
+	 * @return object
 	 */
-	public function update( $settings ) {
+	public function update( $settings ): object {
 		// Make sure we have a photo_src property.
 		if ( ! isset( $settings->photo_src ) ) {
 			$settings->photo_src = '';
@@ -80,8 +93,9 @@ class ImageIconModule extends FLBuilderModule {
 	 * Function to delete the path if not required
 	 *
 	 * @method delete
+	 * @return void
 	 */
-	public function delete() {
+	public function delete(): void {
 		$cropped_path = $this->_get_cropped_path();
 
 		if ( file_exists( $cropped_path['path'] ) ) {
@@ -93,6 +107,7 @@ class ImageIconModule extends FLBuilderModule {
 	 * Function for cropping the image
 	 *
 	 * @method crop
+	 * @return string|false
 	 */
 	public function crop() {
 		// Delete an existing crop if it exists.
@@ -111,6 +126,10 @@ class ImageIconModule extends FLBuilderModule {
 			$size         = $editor->get_size();
 			$new_width    = $size['width'];
 			$new_height   = $size['height'];
+
+			// Initialize crop ratios to prevent undefined variables.
+			$ratio_1 = 1;
+			$ratio_2 = 1;
 
 			// Get the crop ratios.
 			if ( 'circle' === $this->settings->image_style ) {
@@ -148,6 +167,7 @@ class ImageIconModule extends FLBuilderModule {
 	 * Function that gets the data for the Image Icon module.
 	 *
 	 * @method get_data
+	 * @return object
 	 */
 	public function get_data() {
 		if ( ! $this->data ) {
@@ -176,8 +196,9 @@ class ImageIconModule extends FLBuilderModule {
 	 * Function that gets classes for the Photo image
 	 *
 	 * @method get_classes
+	 * @return string
 	 */
-	public function get_classes() {
+	public function get_classes(): string {
 		$classes = array( 'uabb-photo-img' );
 
 		if ( 'library' === $this->settings->photo_source ) {
@@ -205,13 +226,13 @@ class ImageIconModule extends FLBuilderModule {
 
 		return implode( ' ', $classes );
 	}
-
 	/**
 	 * Function that gets the src for the Uncropped Image URL
 	 *
 	 * @method get_src
+	 * @return string|null
 	 */
-	public function get_src() {
+	public function get_src(): string|null {
 		$src = $this->_get_uncropped_url();
 
 		// Return a cropped photo.
@@ -244,8 +265,9 @@ class ImageIconModule extends FLBuilderModule {
 	 * Function that gets the alternate value of the Image
 	 *
 	 * @method get_alt
+	 * @return string|null
 	 */
-	public function get_alt() {
+	public function get_alt(): string|null {
 		$photo = $this->get_data();
 
 		if ( ! empty( $photo->alt ) ) {
@@ -257,6 +279,8 @@ class ImageIconModule extends FLBuilderModule {
 		} elseif ( ! empty( $photo->title ) ) {
 			return htmlspecialchars( $photo->title );
 		}
+
+		return null;
 	}
 
 	/**
@@ -264,8 +288,9 @@ class ImageIconModule extends FLBuilderModule {
 	 *
 	 * @method _has_source
 	 * @protected
+	 * @return boolean
 	 */
-	protected function _has_source() {
+	protected function _has_source(): bool {
 		if ( 'url' === $this->settings->photo_source && ! empty( $this->settings->photo_url ) ) {
 			return true;
 		} elseif ( 'library' === $this->settings->photo_source && ! empty( $this->settings->photo_src ) ) {
@@ -301,9 +326,10 @@ class ImageIconModule extends FLBuilderModule {
 	 * Function that gets the cropped path
 	 *
 	 * @method _get_cropped_path
+	 * @return array
 	 * @protected
 	 */
-	protected function _get_cropped_path() {
+	protected function _get_cropped_path(): array {
 		$crop      = empty( $this->settings->image_style ) ? 'simple' : $this->settings->image_style;
 		$url       = $this->_get_uncropped_url();
 		$cache_dir = FLBuilderModel::get_cache_dir();
@@ -336,9 +362,10 @@ class ImageIconModule extends FLBuilderModule {
 	 * Functions that gets the uncropped URL of the Image
 	 *
 	 * @method _get_uncropped_url
+	 * @return string
 	 * @protected
 	 */
-	protected function _get_uncropped_url() {
+	protected function _get_uncropped_url(): string {
 		if ( 'url' === $this->settings->photo_source ) {
 			$url = $this->settings->photo_url;
 		} elseif ( ! empty( $this->settings->photo_src ) ) {
@@ -353,10 +380,10 @@ class ImageIconModule extends FLBuilderModule {
 	/**
 	 * Functions that gets the cropped demo URL
 	 *
-	 * @method _get_cropped_demo_url
 	 * @protected
+	 * @return string
 	 */
-	protected function _get_cropped_demo_url() {
+	protected function _get_cropped_demo_url(): string {
 		$info = $this->_get_cropped_path();
 
 		return FL_BUILDER_DEMO_CACHE_URL . $info['filename'];
