@@ -58,6 +58,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 		 * @param array  $value gets an array of gradient values.
 		 * @param array  $field gets an array of field values.
 		 * @param object $settings gets the object of respective fields.
+		 * @return void
 		 */
 		function uabb_gradient( $name, $value, $field, $settings ) {
 

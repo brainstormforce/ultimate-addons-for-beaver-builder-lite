@@ -36,10 +36,11 @@ if ( ! function_exists( 'array_replace_recursive' ) ) {
 	/**
 	 * Initializes an array to replace recursive function
 	 *
-	 * @param var   $base returns the bas values.
+	 * @param mixed   $base Initial base values, can be an array or any other type.
 	 * @param array $replacements returns the replacements values.
+	 * @return mixed Returns an array if $base is an array, otherwise returns the original $base value.
 	 */
-	function array_replace_recursive( $base, $replacements ) {
+	function array_replace_recursive( $base, $replacements ): mixed {
 
 		$base = recurse( $base, $replacements );
 		// handle the arguments, merge one by one.
@@ -60,10 +61,11 @@ if ( ! function_exists( 'array_replace_recursive' ) ) {
 	/**
 	 * Initializes recurse function
 	 *
-	 * @param var   $base returns the base values.
+	 * @param mixed   $base Initial base values, can be an array or any other type.
 	 * @param array $replacements returns the replacements values.
+	 * @return mixed Returns an array if $base is an array, otherwise returns the original $base value.
 	 */
-	function recurse( $base, $replacements ) {
+	function recurse( $base, $replacements ): mixed {
 		foreach ( $replacements as $key => $value ) {
 			// create new key in $base, if it is empty or not an array.
 			if ( ! isset( $base[ $key ] ) || ( isset( $base[ $key ] ) && ! is_array( $base[ $key ] ) ) ) {
@@ -201,8 +203,9 @@ function uabb_theme_button_font_family( $default ) {
  * Button Font Size
  *
  * @param var $default Checks if the user has set Font Size values.
+ * @return string
  */
-function uabb_theme_button_font_size( $default ) {
+function uabb_theme_button_font_size( $default ): string {
 	$font_size = '';
 
 	if ( '' === $default ) {
@@ -225,8 +228,9 @@ function uabb_theme_button_font_size( $default ) {
  *
  * @since 1.3.1
  * @param var $default Checks if the user has set Font Size values.
+ * @return string
  */
-function uabb_theme_default_button_font_size( $default ) {
+function uabb_theme_default_button_font_size( $default ): string {
 	$font_size = '';
 
 	if ( '' === $default ) {
@@ -247,9 +251,10 @@ function uabb_theme_default_button_font_size( $default ) {
 /**
  * Button Line Height
  *
- * @param var $default Checks if the user has set text transform values.
+ * @param var $default Checks if the user has set text transform values.\
+ * @return string
  */
-function uabb_theme_button_line_height( $default ) {
+function uabb_theme_button_line_height( $default ): string {
 	$line_height = '';
 
 	if ( '' === $default ) {
@@ -272,8 +277,9 @@ function uabb_theme_button_line_height( $default ) {
  *
  * @since 1.3.1
  * @param var $default Checks if the user has set text transform values.
+ * @return string
  */
-function uabb_theme_default_button_line_height( $default ) {
+function uabb_theme_default_button_line_height( $default ): string {
 	$line_height = '';
 
 	if ( '' === $default ) {
@@ -295,8 +301,9 @@ function uabb_theme_default_button_line_height( $default ) {
  * Button Letter Spacing
  *
  * @param var $default Checks if the user has set letter spacing values.
+ * @return string
  */
-function uabb_theme_button_letter_spacing( $default ) {
+function uabb_theme_button_letter_spacing( $default ): string {
 	$letter_spacing = '';
 
 	if ( '' === $default ) {
@@ -319,8 +326,9 @@ function uabb_theme_button_letter_spacing( $default ) {
  *
  * @since 1.3.1
  * @param var $default Checks if the user has set letter spacing values.
+ * @return string
  */
-function uabb_theme_default_button_letter_spacing( $default ) {
+function uabb_theme_default_button_letter_spacing( $default ): string {
 	$letter_spacing = '';
 
 	if ( '' === $default ) {
@@ -342,8 +350,9 @@ function uabb_theme_default_button_letter_spacing( $default ) {
  * Button Text Transform
  *
  * @param var $default Checks if the user has set text transform values.
+ * @return string
  */
-function uabb_theme_button_text_transform( $default ) {
+function uabb_theme_button_text_transform( $default ): string {
 	$text_transform = '';
 
 	if ( '' === $default ) {
@@ -364,8 +373,9 @@ function uabb_theme_button_text_transform( $default ) {
  *
  * @since 1.3.1
  * @param var $default Checks if the user has set text transform values.
+ * @return string
  */
-function uabb_theme_default_button_text_transform( $default ) {
+function uabb_theme_default_button_text_transform( $default ): string {
 	$text_transform = '';
 
 	if ( '' === $default ) {
@@ -771,7 +781,7 @@ function uabb_theme_border_hover_color( $default ) {
 /**
  * Provide option to parse a color code.
  *
- * @param var $code Returns a hex value for color from rgba or #hex color.
+ * @param string $code Returns a hex value for color from rgba or #hex color.
  * @return string - hex value for the color
  */
 function uabb_parse_color_to_hex( $code = '' ) {
@@ -796,7 +806,7 @@ function uabb_parse_color_to_hex( $code = '' ) {
  * Provide option to parse a Border param.
  *
  * @since 1.3.1
- * @param var $default Checks if user has set the Border, if yes, returns users value else checks for
+ * @param mixed $default Checks if user has set the Border, if yes, returns users value else checks for
  * filtered value.
  * @return array - Border value for the Button
  */
@@ -805,14 +815,14 @@ function uabb_theme_border( $default ) {
 	$border_width  = uabb_theme_button_border_width( '' );
 	$border_color  = uabb_theme_border_color( '' );
 	$border_radius = uabb_theme_button_border_radius( '' );
-	$border        = array();
+	$border        = [];
 
 	if ( is_array( $default ) && ( ! empty( $default['style'] ) || ! empty( $default['color'] ) || ! empty( $default['width']['top'] ) || ! empty( $default['width']['bottom'] ) || ! empty( $default['width']['left'] ) || ! empty( $default['width']['right'] ) || ! empty( $default['radius']['top_left'] ) || ! empty( $default['radius']['top_right'] ) || ! empty( $default['radius']['bottom_left'] ) || ! empty( $default['radius']['bottom_right'] ) ) ) {
 
 		$border = $default;
 	} elseif ( is_object( $default ) && ( ! empty( $default->style ) || ! empty( $default->color ) || ! empty( $default->width->top ) || ! empty( $default->width->bottom ) || ! empty( $default->width->left ) || ! empty( $default->width->right ) || ! empty( $default->radius->top_left ) || ! empty( $default->radius->top_right ) || ! empty( $default->radius->bottom_left ) || ! empty( $default->radius->bottom_right ) ) ) {
 
-		$border = $default;
+		$border = (array) $default; //Cast objects to arrays when using them as $default.
 
 	} else {
 
@@ -932,11 +942,11 @@ function uabb_theme_button_typography( $default ) {
  * Provide option to override the element defaults from theme options.
  *
  * @since 1.3.1
- * @param var $value Checks if user has set the Padding, if yes, returns users value else checks
- * for filtered value.
- * @return array - Padding value
+ * @param string $mode  The mode of padding (e.g., 'top', 'bottom', etc.).
+ * @param string $value The padding value to be checked.
+ * @return string - Padding value
  */
-function uabb_theme_padding_button( $mode, $value ) {
+function uabb_theme_padding_button( $mode, $value ): string {
 
 	$padding = uabb_theme_default_button_padding( '' );
 

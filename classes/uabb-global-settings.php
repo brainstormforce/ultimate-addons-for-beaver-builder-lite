@@ -26,6 +26,7 @@ class UABB_Global_Styling {
 	 * Function to add options for UABB Global Settings
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
 	function add_options() {
 
@@ -65,6 +66,7 @@ class UABB_Global_Styling {
 	 * Function that initializes actions for UABB Global Settings
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
 	static public function init_actions() {
 		FLBuilderAJAX::add_action( 'render_uabb_global_settings', 'UABB_Global_Styling::render_uabb_global_settings' );
@@ -75,6 +77,7 @@ class UABB_Global_Styling {
 	 * Function to that renders UABB Global Settings
 	 *
 	 * @since 1.0
+	 * @return string
 	 */
 	static public function render_uabb_global_settings() {
 
@@ -96,6 +99,7 @@ class UABB_Global_Styling {
 	 * Function that gets UABB Global Settings
 	 *
 	 * @since 1.0
+	 * @return object
 	 */
 	static public function get_uabb_global_settings() {
 		$settings = UABB_Init::$uabb_options['uabb_global_settings'];
@@ -113,6 +117,7 @@ class UABB_Global_Styling {
 	 *
 	 * @since 1.0
 	 * @param array $settings gets a array of old and new settings values.
+	 * @return bool
 	 */
 	static public function save_uabb_global_settings( $settings = array() ) {
 		$old_settings = self::get_uabb_global_settings();

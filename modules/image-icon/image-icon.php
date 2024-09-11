@@ -232,7 +232,7 @@ class ImageIconModule extends FLBuilderModule {
 	 * @method get_src
 	 * @return string|null
 	 */
-	public function get_src(): string|null {
+	public function get_src() {
 		$src = $this->_get_uncropped_url();
 
 		// Return a cropped photo.
@@ -267,7 +267,7 @@ class ImageIconModule extends FLBuilderModule {
 	 * @method get_alt
 	 * @return string|null
 	 */
-	public function get_alt(): string|null {
+	public function get_alt() {
 		$photo = $this->get_data();
 
 		if ( ! empty( $photo->alt ) ) {
