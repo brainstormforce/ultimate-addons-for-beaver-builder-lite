@@ -11,3 +11,768 @@ parameters:
 		- '#type has no value type specified in iterable type array\.$#'
 		- '#with no value type specified in iterable type array\.$#'
 		- "#^While loop condition is always true\\.$#"
+	
+		-
+			message: "#^Method BSF_Analytics_Stats\\:\\:format_plugin\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: admin/bsf-analytics/class-bsf-analytics-stats.php
+
+		-
+			message: "#^Method BSF_Analytics_Stats\\:\\:get_active_plugins\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: admin/bsf-analytics/class-bsf-analytics-stats.php
+
+		-
+			message: "#^Method BSF_Analytics_Stats\\:\\:get_default_stats\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: admin/bsf-analytics/class-bsf-analytics-stats.php
+
+		-
+			message: "#^Method BSF_Analytics_Stats\\:\\:get_stats\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: admin/bsf-analytics/class-bsf-analytics-stats.php
+
+		-
+			message: "#^Property BSF_Analytics_Stats\\:\\:\\$plugins type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: admin/bsf-analytics/class-bsf-analytics-stats.php
+
+		-
+			message: "#^Action callback returns array but should not return anything\\.$#"
+			count: 1
+			path: admin/bsf-analytics/class-bsf-analytics.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: admin/bsf-analytics/class-bsf-analytics.php
+
+		-
+			message: "#^Method BSF_Analytics\\:\\:every_two_days_schedule\\(\\) has parameter \\$schedules with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: admin/bsf-analytics/class-bsf-analytics.php
+
+		-
+			message: "#^Method BSF_Analytics\\:\\:every_two_days_schedule\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: admin/bsf-analytics/class-bsf-analytics.php
+
+		-
+			message: "#^Method BSF_Analytics\\:\\:get_plugin_name\\(\\) should return string but return statement is missing\\.$#"
+			count: 1
+			path: admin/bsf-analytics/class-bsf-analytics.php
+
+		-
+			message: "#^Method UABBBuilderAdminSettings\\:\\:add_data_attributes\\(\\) has parameter \\$allowedposttags with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-admin-settings.php
+
+		-
+			message: "#^Method UABBBuilderAdminSettings\\:\\:add_data_attributes\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-admin-settings.php
+
+		-
+			message: "#^Property UABBBuilderAdminSettings\\:\\:\\$errors type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-admin-settings.php
+
+		-
+			message: "#^Undefined variable\\: \\$icon$#"
+			count: 1
+			path: classes/class-uabb-admin-settings.php
+
+		-
+			message: "#^Variable \\$icon in empty\\(\\) is never defined\\.$#"
+			count: 1
+			path: classes/class-uabb-admin-settings.php
+
+		-
+			message: "#^Method UABB_Attachment\\:\\:uabb_attachment_field_cta_save\\(\\) has parameter \\$attachment with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-attachment.php
+
+		-
+			message: "#^Method UABB_Attachment\\:\\:uabb_attachment_field_cta_save\\(\\) has parameter \\$post with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-attachment.php
+
+		-
+			message: "#^Method UABB_Attachment\\:\\:uabb_attachment_field_cta_save\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-attachment.php
+
+		-
+			message: "#^PHPDoc tag @var has invalid value \\(\\$instance Class instance\\.\\)\\: Unexpected token \"\\$instance\", expected type at offset 65$#"
+			count: 1
+			path: classes/class-uabb-backward.php
+
+		-
+			message: "#^Property UABB_lite_Plugin_Backward\\:\\:\\$instance has no type specified\\.$#"
+			count: 1
+			path: classes/class-uabb-backward.php
+
+		-
+			message: "#^Comparison operation \"\\<\" between int\\<1, max\\> and 1 is always false\\.$#"
+			count: 1
+			path: classes/class-uabb-cloud-templates.php
+
+		-
+			message: "#^Function update_site_option invoked with 3 parameters, 2 required\\.$#"
+			count: 1
+			path: classes/class-uabb-cloud-templates.php
+
+		-
+			message: "#^Method UABB_Cloud_Templates\\:\\:create_local_dir\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-cloud-templates.php
+
+		-
+			message: "#^Method UABB_Cloud_Templates\\:\\:get_right_type_key\\(\\) has invalid return type file\\.$#"
+			count: 1
+			path: classes/class-uabb-cloud-templates.php
+
+		-
+			message: "#^PHPDoc tag @var has invalid value \\(\\$cloud_url cloud_url\\)\\: Unexpected token \"\\$cloud_url\", expected type at offset 64$#"
+			count: 1
+			path: classes/class-uabb-cloud-templates.php
+
+		-
+			message: "#^PHPDoc tag @var has invalid value \\(\\$instance instance\\)\\: Unexpected token \"\\$instance\", expected type at offset 82$#"
+			count: 1
+			path: classes/class-uabb-cloud-templates.php
+
+		-
+			message: "#^PHPDoc tag @var has invalid value \\(\\$uabb_filesystem UABB filesystem\\)\\: Unexpected token \"\\$uabb_filesystem\", expected type at offset 71$#"
+			count: 1
+			path: classes/class-uabb-cloud-templates.php
+
+		-
+			message: "#^Property UABB_Cloud_Templates\\:\\:\\$cloud_url has no type specified\\.$#"
+			count: 1
+			path: classes/class-uabb-cloud-templates.php
+
+		-
+			message: "#^Property UABB_Cloud_Templates\\:\\:\\$instance has no type specified\\.$#"
+			count: 1
+			path: classes/class-uabb-cloud-templates.php
+
+		-
+			message: "#^Property UABB_Cloud_Templates\\:\\:\\$uabb_filesystem has no type specified\\.$#"
+			count: 1
+			path: classes/class-uabb-cloud-templates.php
+
+		-
+			message: "#^PHPDoc tag @var has invalid value \\(\\$instance Class instance\\.\\)\\: Unexpected token \"\\$instance\", expected type at offset 65$#"
+			count: 1
+			path: classes/class-uabb-compatibility.php
+
+		-
+			message: "#^PHPDoc tag @var has invalid value \\(\\$stable_version_new_page\\)\\: Unexpected token \"\\$stable_version_new_page\", expected type at offset 72$#"
+			count: 1
+			path: classes/class-uabb-compatibility.php
+
+		-
+			message: "#^PHPDoc tag @var has invalid value \\(\\$uabb_migration\\)\\: Unexpected token \"\\$uabb_migration\", expected type at offset 75$#"
+			count: 1
+			path: classes/class-uabb-compatibility.php
+
+		-
+			message: "#^PHPDoc tag @var has invalid value \\(\\$version_bb_check\\)\\: Unexpected token \"\\$version_bb_check\", expected type at offset 72$#"
+			count: 1
+			path: classes/class-uabb-compatibility.php
+
+		-
+			message: "#^Property UABB_Lite_Compatibility\\:\\:\\$instance has no type specified\\.$#"
+			count: 1
+			path: classes/class-uabb-compatibility.php
+
+		-
+			message: "#^Property UABB_Lite_Compatibility\\:\\:\\$stable_version_new_page has no type specified\\.$#"
+			count: 1
+			path: classes/class-uabb-compatibility.php
+
+		-
+			message: "#^Property UABB_Lite_Compatibility\\:\\:\\$uabb_migration has no type specified\\.$#"
+			count: 1
+			path: classes/class-uabb-compatibility.php
+
+		-
+			message: "#^Property UABB_Lite_Compatibility\\:\\:\\$version_bb_check has no type specified\\.$#"
+			count: 1
+			path: classes/class-uabb-compatibility.php
+
+		-
+			message: "#^Cannot assign offset 'uabbGlobalSettings' to string\\.$#"
+			count: 2
+			path: classes/class-uabb-global-settings.php
+
+		-
+			message: "#^Method UABBGlobalSetting\\:\\:add_js_string\\(\\) should return string but returns array\\<string, mixed\\>\\.$#"
+			count: 1
+			path: classes/class-uabb-global-settings.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between 'UABB' and '' will always evaluate to false\\.$#"
+			count: 1
+			path: classes/class-uabb-global-settings.php
+
+		-
+			message: "#^Call to function is_array\\(\\) with int\\<0, max\\> will always evaluate to false\\.$#"
+			count: 1
+			path: classes/class-uabb-helper.php
+
+		-
+			message: "#^Method BB_Ultimate_Addon_Helper\\:\\:get_all_modules\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-helper.php
+
+		-
+			message: "#^Method BB_Ultimate_Addon_Helper\\:\\:get_link_rel\\(\\) should return string but return statement is missing\\.$#"
+			count: 1
+			path: classes/class-uabb-helper.php
+
+		-
+			message: "#^Method BB_Ultimate_Addon_Helper\\:\\:get_premium_modules\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-helper.php
+
+		-
+			message: "#^Method BB_Ultimate_Addon_Helper\\:\\:module_cat\\(\\) has parameter \\$cat with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-helper.php
+
+		-
+			message: "#^Method BB_Ultimate_Addon_Helper\\:\\:module_cat\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-helper.php
+
+		-
+			message: "#^PHPDoc tag @var has invalid value \\(\\$basic_modules Category Strings\\)\\: Unexpected token \"\\$basic_modules\", expected type at offset 83$#"
+			count: 1
+			path: classes/class-uabb-helper.php
+
+		-
+			message: "#^Property BB_Ultimate_Addon_Helper\\:\\:\\$basic_modules has no type specified\\.$#"
+			count: 1
+			path: classes/class-uabb-helper.php
+
+		-
+			message: "#^Result of && is always false\\.$#"
+			count: 1
+			path: classes/class-uabb-helper.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between false and true will always evaluate to false\\.$#"
+			count: 1
+			path: classes/class-uabb-helper.php
+
+		-
+			message: "#^Argument of an invalid type array\\<int, string\\>\\|false supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: classes/class-uabb-iconfonts.php
+
+		-
+			message: "#^Binary operation \"\\.\" between array and '/' results in an error\\.$#"
+			count: 5
+			path: classes/class-uabb-iconfonts.php
+
+		-
+			message: "#^Method UABB_IconFonts\\:\\:recurse_copy\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: classes/class-uabb-iconfonts.php
+
+		-
+			message: "#^Method UABB_IconFonts\\:\\:recurse_copy\\(\\) has parameter \\$dst with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-iconfonts.php
+
+		-
+			message: "#^Method UABB_IconFonts\\:\\:recurse_copy\\(\\) has parameter \\$src with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-iconfonts.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: classes/class-uabb-init.php
+
+		-
+			message: "#^Cannot assign new offset to string\\.$#"
+			count: 1
+			path: classes/class-uabb-init.php
+
+		-
+			message: "#^Method UABB_Init\\:\\:uabb_global_settings_form_defaults\\(\\) has parameter \\$defaults with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-init.php
+
+		-
+			message: "#^Method UABB_Init\\:\\:uabb_global_settings_form_defaults\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-init.php
+
+		-
+			message: "#^Comparison operation \"\\<\" between 1 and 1 is always false\\.$#"
+			count: 1
+			path: classes/class-uabb-update.php
+
+		-
+			message: "#^Method UABB_lite_Plugin_Update\\:\\:get_instance\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: classes/class-uabb-update.php
+
+		-
+			message: "#^PHPDoc tag @var has invalid value \\(\\$instance Class instance\\.\\)\\: Unexpected token \"\\$instance\", expected type at offset 65$#"
+			count: 1
+			path: classes/class-uabb-update.php
+
+		-
+			message: "#^Property UABB_lite_Plugin_Update\\:\\:\\$instance has no type specified\\.$#"
+			count: 1
+			path: classes/class-uabb-update.php
+
+		-
+			message: "#^Method UABBLite_WPML_Translatable\\:\\:wpml_uabb_modules_translate\\(\\) has parameter \\$form with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-wpml.php
+
+		-
+			message: "#^Method UABBLite_WPML_Translatable\\:\\:wpml_uabb_modules_translate\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-uabb-wpml.php
+
+		-
+			message: "#^Call to function method_exists\\(\\) with 'FLBuilder' and 'register_templates' will always evaluate to false\\.$#"
+			count: 1
+			path: classes/class-ui-panel.php
+
+		-
+			message: "#^Method UABB_UI_Panels\\:\\:builder_ui_bar_buttons\\(\\) has parameter \\$buttons with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-ui-panel.php
+
+		-
+			message: "#^Method UABB_UI_Panels\\:\\:builder_ui_bar_buttons\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-ui-panel.php
+
+		-
+			message: "#^Method UABB_UI_Panels\\:\\:fl_uabb_render_css\\(\\) has parameter \\$nodes with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-ui-panel.php
+
+		-
+			message: "#^Method UABB_UI_Panels\\:\\:fl_uabb_render_js\\(\\) has parameter \\$nodes with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-ui-panel.php
+
+		-
+			message: "#^Method UABB_UI_Panels\\:\\:uabb_fl_builder_template_selector_data\\(\\) has parameter \\$template with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-ui-panel.php
+
+		-
+			message: "#^Method UABB_UI_Panels\\:\\:uabb_fl_builder_template_selector_data\\(\\) has parameter \\$template_data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-ui-panel.php
+
+		-
+			message: "#^Method UABB_UI_Panels\\:\\:uabb_fl_builder_template_selector_data\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-ui-panel.php
+
+		-
+			message: "#^Method UABB_UI_Panels\\:\\:uabb_skip_brainstorm_menu\\(\\) has parameter \\$products with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-ui-panel.php
+
+		-
+			message: "#^Method UABB_UI_Panels\\:\\:uabb_skip_brainstorm_menu\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-ui-panel.php
+
+		-
+			message: "#^Method UABB_UI_Panels\\:\\:uabb_templates_data\\(\\) has parameter \\$templates with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-ui-panel.php
+
+		-
+			message: "#^Method UABB_UI_Panels\\:\\:uabb_templates_data\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/class-ui-panel.php
+
+		-
+			message: "#^Method UABB_Helper\\:\\:get_link_rel\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: classes/helper.php
+
+		-
+			message: "#^Method UABB_Helper\\:\\:uabb_colorpicker\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: classes/helper.php
+
+		-
+			message: "#^Method UABB_Helper\\:\\:uabb_font_css\\(\\) has parameter \\$font with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/helper.php
+
+		-
+			message: "#^Method UABB_Helper\\:\\:uabb_hex2rgba\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: classes/helper.php
+
+		-
+			message: "#^Property UABB_BBThemeGlobalIntegration\\:\\:\\$bb_options type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/uabb-bbtheme-global-integration.php
+
+		-
+			message: "#^Call to function is_array\\(\\) with non\\-falsy\\-string will always evaluate to false\\.$#"
+			count: 1
+			path: classes/uabb-global-functions.php
+
+		-
+			message: "#^Function array_replace_recursive\\(\\) has parameter \\$replacements with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/uabb-global-functions.php
+
+		-
+			message: "#^Function recurse\\(\\) has parameter \\$replacements with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/uabb-global-functions.php
+
+		-
+			message: "#^Function uabb_theme_border\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/uabb-global-functions.php
+
+		-
+			message: "#^Function uabb_theme_button_typography\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/uabb-global-functions.php
+
+		-
+			message: "#^Method UABB_Global_Styling\\:\\:save_uabb_global_settings\\(\\) has parameter \\$settings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/uabb-global-settings.php
+
+		-
+			message: "#^Method WPML_UABB_Infolist\\:\\:get_editor_type\\(\\) has parameter \\$field with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/wpml/class-wpml-uabb-infolist.php
+
+		-
+			message: "#^Method WPML_UABB_Infolist\\:\\:get_fields\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/wpml/class-wpml-uabb-infolist.php
+
+		-
+			message: "#^Method WPML_UABB_Infolist\\:\\:get_title\\(\\) has parameter \\$field with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: classes/wpml/class-wpml-uabb-infolist.php
+
+		-
+			message: "#^Action callback returns array\\<string, mixed\\> but should not return anything\\.$#"
+			count: 1
+			path: fields/uabb-gradient/uabb-gradient.php
+
+		-
+			message: "#^Method UABB_Gradient\\:\\:uabb_gradient\\(\\) has parameter \\$field with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: fields/uabb-gradient/uabb-gradient.php
+
+		-
+			message: "#^Method UABB_Gradient\\:\\:uabb_gradient\\(\\) has parameter \\$value with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: fields/uabb-gradient/uabb-gradient.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 120$#"
+			count: 1
+			path: modules/advanced-icon/advanced-icon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 114$#"
+			count: 1
+			path: modules/flip-box/flip-box.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_icons\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 89$#"
+			count: 1
+			path: modules/flip-box/flip-box.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(render_button\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 88$#"
+			count: 1
+			path: modules/flip-box/flip-box.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(render_icon\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 95$#"
+			count: 1
+			path: modules/flip-box/flip-box.php
+
+		-
+			message: "#^Method ImageIconModule\\:\\:_get_cropped_path\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^Method ImageIconModule\\:\\:_get_editor\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\n\\\\t \", expected '\\(' at offset 113$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(_get_cropped_path\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 77$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(_get_editor\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 65$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(_get_uncropped_url\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 93$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(_has_source\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 71$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(crop\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 60$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(delete\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 74$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_alt\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 83$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_classes\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 82$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_data\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 87$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_src\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 86$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(update\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 63$#"
+			count: 1
+			path: modules/image-icon/image-icon.php
+
+		-
+			message: "#^Method UABBImageSeparatorModule\\:\\:_get_editor\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\n\\\\t \", expected '\\(' at offset 118$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(_get_cropped_path\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 91$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(_get_editor\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 80$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(_get_uncropped_url\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 93$#"
+			count: 2
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(_has_source\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 71$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(crop\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 68$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(delete\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 71$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_alt\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 75$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_classes\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 81$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_data\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 62$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_src\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 69$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(update\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 63$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @property has invalid value \\(\\$_editor\\)\\: Unexpected token \"\\$_editor\", expected type at offset 62$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @property has invalid value \\(\\$data\\)\\: Unexpected token \"\\$data\", expected type at offset 62$#"
+			count: 1
+			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 115$#"
+			count: 1
+			path: modules/info-list/info-list.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_icons\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 79$#"
+			count: 1
+			path: modules/info-list/info-list.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(render_image\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 52$#"
+			count: 1
+			path: modules/info-list/info-list.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(render_text\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 50$#"
+			count: 1
+			path: modules/info-list/info-list.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(render_text\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 55$#"
+			count: 1
+			path: modules/info-list/info-list.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 116$#"
+			count: 1
+			path: modules/info-table/info-table.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 112$#"
+			count: 1
+			path: modules/ribbon/ribbon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_icon\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 81$#"
+			count: 1
+			path: modules/ribbon/ribbon.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 115$#"
+			count: 1
+			path: modules/slide-box/slide-box.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(render_button\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 91$#"
+			count: 1
+			path: modules/slide-box/slide-box.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(render_dropdown_icon\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 104$#"
+			count: 1
+			path: modules/slide-box/slide-box.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(render_image\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 97$#"
+			count: 1
+			path: modules/slide-box/slide-box.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(render_link\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 87$#"
+			count: 1
+			path: modules/slide-box/slide-box.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(render_overlay_icon\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 103$#"
+			count: 1
+			path: modules/slide-box/slide-box.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 116$#"
+			count: 1
+			path: modules/spacer-gap/spacer-gap.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 112$#"
+			count: 1
+			path: modules/uabb-button/uabb-button.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_button_style\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 82$#"
+			count: 1
+			path: modules/uabb-button/uabb-button.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_classname\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 76$#"
+			count: 1
+			path: modules/uabb-button/uabb-button.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(update\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 72$#"
+			count: 1
+			path: modules/uabb-button/uabb-button.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 114$#"
+			count: 1
+			path: modules/uabb-heading/uabb-heading.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(render_image\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 66$#"
+			count: 1
+			path: modules/uabb-heading/uabb-heading.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 116$#"
+			count: 1
+			path: modules/uabb-separator/uabb-separator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 162$#"
+			count: 1
+			path: modules/uabb-star-rating/uabb-star-rating.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(get_icons\\)\\: Unexpected token \"\\\\r\\\\n\\\\t\\\\t \\* \", expected '\\(' at offset 84$#"
+			count: 1
+			path: modules/uabb-star-rating/uabb-star-rating.php
