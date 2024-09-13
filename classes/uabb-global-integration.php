@@ -15,9 +15,9 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		/**
 		 * Constructor function that initializes necessary filters
 		 *
-		 * @var $uabb_setting_options gets the uabb setting options
+		 * @var mixed $uabb_setting_options gets the uabb setting options
 		 */
-		public object $uabb_setting_options;
+		public $uabb_setting_options;
 		/**
 		 * Constructor function that initializes necessary filters
 		 *

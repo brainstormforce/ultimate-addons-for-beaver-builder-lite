@@ -5,6 +5,7 @@
  *  @package UABB Image Separator Module
  */
 
+
 /**
  * Function that initializes Image Separator Module
  *
@@ -16,7 +17,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * Variable for Image Separator module
 	 *
 	 * @property $data
-	 * @var $data
+	 * @var mixed|null $data
 	 */
 	public $data = null;
 
@@ -25,7 +26,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 *
 	 * @property $_editor
 	 * @protected
-	 * @var $_editor
+	 * @var mixed|null $_editor
 	 */
 	protected $_editor = null;
 
@@ -40,7 +41,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 				'name'        => __( 'Image Separator', 'uabb' ),
 				'description' => __( 'Use Image as a separator ', 'uabb' ),
 				'category'    => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'       => UABB_CAT,
+				'group'       => defined('UABB_CAT') ? UABB_CAT : '',
 				'dir'         => BB_ULTIMATE_ADDON_DIR . 'modules/image-separator/',
 				'url'         => BB_ULTIMATE_ADDON_URL . 'modules/image-separator/',
 				'icon'        => 'format-image.svg',
@@ -58,9 +59,10 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * Function to update the Image src
 	 *
 	 * @method update
-	 * @param obejct $settings gets the settings for the object.
+	 * @param object $settings gets the settings for the object.
+	 * @return object
 	 */
-	public function update( $settings ) {
+	public function update( $settings ): object {
 		// Make sure we have a photo_src property.
 		if ( ! isset( $settings->photo_src ) ) {
 			$settings->photo_src = '';
@@ -83,8 +85,10 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * Function to delete the cropped image src
 	 *
 	 * @method delete
+	 * 
+	 * @return void
 	 */
-	public function delete() {
+	public function delete(): void {
 		$cropped_path = $this->_get_cropped_path();
 
 		if ( file_exists( $cropped_path['path'] ) ) {
@@ -96,6 +100,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * Function to crop the the existing image
 	 *
 	 * @method crop
+	 * @return mixed
 	 */
 	public function crop() {
 		// Delete an existing crop if it exists.
@@ -114,6 +119,10 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 			$size         = $editor->get_size();
 			$new_width    = $size['width'];
 			$new_height   = $size['height'];
+
+			// Initialize crop ratios to prevent undefined variables.
+			$ratio_1 = 1;
+			$ratio_2 = 1;
 
 			// Get the crop ratios.
 			if ( 'circle' === $this->settings->image_style ) {
@@ -151,8 +160,10 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * Function to get the Image src
 	 *
 	 * @method get_data
+	 * 
+	 * @return object
 	 */
-	public function get_data() {
+	public function get_data(): object {
 		if ( ! $this->data ) {
 
 			// Photo source is set to "library".
@@ -175,6 +186,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * Function to get the classes for the Image src
 	 *
 	 * @method get_classes
+	 * @return string
 	 */
 	public function get_classes() {
 		$classes = array( 'uabb-photo-img' );
@@ -206,6 +218,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * Function to get src for the Image src
 	 *
 	 * @method get_src
+	 * @return mixed
 	 */
 	public function get_src() {
 		$src = $this->_get_uncropped_url();
@@ -240,6 +253,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * Function to get alternate val for the Image
 	 *
 	 * @method get_alt
+	 * @return string|null
 	 */
 	public function get_alt() {
 		$photo = $this->get_data();
@@ -253,6 +267,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 		} elseif ( ! empty( $photo->title ) ) {
 			return htmlspecialchars( $photo->title );
 		}
+		return null;
 	}
 
 	/**
@@ -260,8 +275,9 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 *
 	 * @method _has_source
 	 * @protected
+	 * @return boolean
 	 */
-	protected function _has_source() {
+	protected function _has_source(): bool {
 		if ( ! empty( $this->settings->photo_src ) ) {
 			return true;
 		}
@@ -296,6 +312,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 *
 	 * @method _get_cropped_path
 	 * @protected
+	 * @return array<string, mixed>
 	 */
 	protected function _get_cropped_path() {
 		$crop      = empty( $this->settings->image_style ) ? 'simple' : $this->settings->image_style;
@@ -331,12 +348,13 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 *
 	 * @method _get_uncropped_url
 	 * @protected
+	 * @return string
 	 */
-	protected function _get_uncropped_url() {
+	protected function _get_uncropped_url(): string {
 		if ( ! empty( $this->settings->photo_src ) ) {
 			$url = $this->settings->photo_src;
 		} else {
-			$url = FL_BUILDER_URL . 'img/pixel.png';
+			$url = (defined('FL_BUILDER_URL') ? FL_BUILDER_URL : '') . 'img/pixel.png';
 		}
 
 		return $url;
@@ -347,8 +365,9 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 *
 	 * @method _get_uncropped_url
 	 * @protected
+	 * @return string
 	 */
-	protected function _get_cropped_demo_url() {
+	protected function _get_cropped_demo_url(): string {
 		$info = $this->_get_cropped_path();
 
 		return FL_BUILDER_DEMO_CACHE_URL . $info['filename'];

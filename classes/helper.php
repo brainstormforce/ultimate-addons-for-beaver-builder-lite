@@ -35,15 +35,17 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				$css .= 'font-weight: ' . $font['weight'] . ';';
 			}
 
-			echo esc_attr( $css, array() );
+			echo esc_attr( $css);
 		}
 
 		/**
 		 * Initializes an array to replace recursive function
 		 *
-		 * @param var   $hex returns the bas values.
+		 * @param string   $hex returns the bas values.
 		 *
-		 * @param array $opacity returns the replacements values.
+		 * @param string $opacity returns the replacements values.
+		 * 
+		 * @return string
 		 */
 		static public function uabb_get_color( $hex, $opacity ) {
 			$rgba = $hex;
@@ -68,8 +70,8 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 *
 		 * @param var   $color returns the bas values.
 		 *
-		 * @param array $opacity returns the replacements values.
-		 * @param array $is_array returns the replacements values.
+		 * @param bool $opacity returns the replacements values.
+		 * @param bool $is_array returns the replacements values.
 		 */
 		static public function uabb_hex2rgba( $color, $opacity = false, $is_array = false ) {
 
@@ -121,8 +123,8 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 *
 		 * @param var   $settings returns the bas values.
 		 *
-		 * @param array $name returns the replacements values.
-		 * @param array $opc returns the replacements values.
+		 * @param string $name returns the replacements values.
+		 * @param bool $opc returns the replacements values.
 		 */
 		static public function uabb_colorpicker( $settings, $name = '', $opc = false ) {
 
@@ -154,6 +156,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 * Initializes an array to replace recursive function
 		 *
 		 * @param var $gradient returns the bas values.
+		 * @return void
 		 */
 		static public function uabb_gradient_css( $gradient ) {
 			$gradient_angle = intval( $gradient['angle'] );
@@ -200,16 +203,15 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				$css .= 'background: -moz-linear-gradient(' . $gradient_angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';
 				$css .= 'background: linear-gradient(' . $angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';
 			}
-			echo esc_attr( $css, array() );
+			echo esc_attr( $css );
 		}
 		/**
 		 *  Get link rel attribute
 		 *
 		 *  @since 1.3.0
 		 *  @param string $target gets an string for the link.
-		 *  @param string $is_nofollow gets an string for is no follow.
-		 *  @param string $echo gets an string for echo.
-		 *  @return string
+		 *  @param int $is_nofollow gets an string for is no follow.
+		 *  @param int $echo gets an string for echo.
 		 */
 		static public function get_link_rel( $target, $is_nofollow = 0, $echo = 0 ) {
 

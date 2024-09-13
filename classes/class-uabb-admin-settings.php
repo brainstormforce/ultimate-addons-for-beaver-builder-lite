@@ -59,6 +59,7 @@ final class UABBBuilderAdminSettings {
 	 * Enqueues the needed CSS/JS for the builder's admin settings page.
 	 *
 	 * @since 1.3.0
+	 * @return void
 	 */
 	static public function notice_styles_scripts() {
 		// Styles.
@@ -82,6 +83,7 @@ final class UABBBuilderAdminSettings {
 	 * Ask Plugin Rating
 	 *
 	 * @since 1.3.0
+	 * @return void
 	 */
 	public static function register_notices() {
 

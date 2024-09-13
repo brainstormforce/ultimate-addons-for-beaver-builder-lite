@@ -943,7 +943,7 @@ function uabb_theme_button_typography( $default ) {
  *
  * @since 1.3.1
  * @param string $mode  The mode of padding (e.g., 'top', 'bottom', etc.).
- * @param string $value The padding value to be checked.
+ * @param string $value Checks if user has set the Padding, if yes, returns users value else checks
  * @return string - Padding value
  */
 function uabb_theme_padding_button( $mode, $value ): string {

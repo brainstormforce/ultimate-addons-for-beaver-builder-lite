@@ -27,9 +27,10 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 		 * Function that renders row's CSS
 		 *
 		 * @since 1.0
-		 * @param array $fields gets the fields for the gradient.
+		 * @param array<string, mixed> $fields gets the fields for the gradient.
+		 * @return array<string, mixed>
 		 */
-		function ui_fields( $fields ) {
+		function ui_fields( array $fields ) {
 			$fields['uabb-gradient'] = BB_ULTIMATE_ADDON_DIR . 'fields/uabb-gradient/ui-field-uabb-gradient.php';
 
 			return $fields;

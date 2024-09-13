@@ -29,8 +29,10 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 		 * Load files.
 		 *
 		 * @since 1.2.2
+		 * 
+		 * @return void
 		 */
-		static public function load_files() {
+		static public function load_files(): void {
 			if ( class_exists( 'WPML_Page_Builders_Defined' ) ) {
 				require_once BB_ULTIMATE_ADDON_DIR . 'classes/wpml/class-wpml-uabb-infolist.php';
 			}

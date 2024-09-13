@@ -25,6 +25,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 
 		/**
 		 * Initiator
+		 * @return self
 		 */
 		public static function get_instance() {
 			if ( ! isset( self::$instance ) ) {

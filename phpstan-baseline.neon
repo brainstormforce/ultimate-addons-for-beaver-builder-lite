@@ -6,8 +6,6 @@ parameters:
 			count: 1
 			path: test
 
-
-
 		#common errors
 
 		- '#type has no value type specified in iterable type array\.$#'

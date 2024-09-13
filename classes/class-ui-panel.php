@@ -45,6 +45,8 @@ class UABB_UI_Panels {
 	 *  Function to add toggle UABB User Interface.
 	 *
 	 *  @since 1.0
+	 * 
+	 * @return void
 	 */
 	function toggle_uabb_ui() {
 
@@ -66,6 +68,8 @@ class UABB_UI_Panels {
 	 *  Function that initializes template selector data.
 	 *
 	 *  @since 1.0
+	 * 
+	 * @return void
 	 */
 	public function init() {
 		add_filter( 'fl_builder_template_selector_data', array( $this, 'uabb_fl_builder_template_selector_data' ), 10, 2 );
@@ -78,6 +82,7 @@ class UABB_UI_Panels {
 	 *  @since 1.0
 	 *  @param array $template_data Gets the tags for the Template Data.
 	 *  @param array $template Gets the author for the Template Data.
+	 * @return array
 	 */
 	function uabb_fl_builder_template_selector_data( $template_data, $template ) {
 		$template_data['tags']   = isset( $template->tags ) ? $template->tags : array();
@@ -89,6 +94,7 @@ class UABB_UI_Panels {
 	 *
 	 * @since 1.0
 	 * @param string $url Returns the URL of the Affiliate URL.
+	 * @return string
 	 */
 	function uabb_affiliate_url( $url ) {
 
@@ -100,8 +106,13 @@ class UABB_UI_Panels {
 	 *
 	 * @since 1.0
 	 * @param string $url Returns the Key shortcut for showUABBGlobalSettings.
+	 * @return string
 	 */
 	function uabb_bsf_registration_page_url( $url ) {
+		 // Defining the constant
+		if (!defined('FL_BUILDER_LITE')) {
+			define('FL_BUILDER_LITE', '');
+		}
 
 		if ( is_multisite() && false === FL_BUILDER_LITE ) {
 			return network_admin_url( '/settings.php?page=uabb-builder-multisite-settings#uabb-license' );
@@ -116,6 +127,7 @@ class UABB_UI_Panels {
 	 * @param string $form_heading Gets the form Heading.
 	 * @param string $license_status_class Gets the license status class.
 	 * @param string $license_status Gets the license status.
+	 * @return string
 	 */
 	function uabb_bsf_license_form_heading( $form_heading, $license_status_class, $license_status ) {
 
@@ -138,6 +150,7 @@ class UABB_UI_Panels {
 	 * Skip Brainstorm Registration screen for UABB users
 	 *
 	 * @param array $products Gets an array of Products.
+	 * @return array
 	 */
 	function uabb_skip_brainstorm_menu( $products ) {
 
@@ -156,6 +169,7 @@ class UABB_UI_Panels {
 	 * @param file   $js Gets the js file contents.
 	 * @param array  $nodes Gets the nodes of the layout builder.
 	 * @param object $global_settings Gets the object for the Layout builder.
+	 * @return string|false
 	 */
 	function fl_uabb_render_js( $js, $nodes, $global_settings ) {
 		$temp = file_get_contents( BB_ULTIMATE_ADDON_DIR . 'assets/js/uabb-frontend.js' ) . $js;
@@ -170,6 +184,7 @@ class UABB_UI_Panels {
 	 * @param file   $css Gets the CSS file contents.
 	 * @param array  $nodes Gets the nodes of the layout builder.
 	 * @param object $global_settings Gets the object for the Layout builder.
+	 * @return string|false
 	 */
 	function fl_uabb_render_css( $css, $nodes, $global_settings ) {
 
@@ -183,6 +198,7 @@ class UABB_UI_Panels {
 	 * Function that renders Config and templates function
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
 	function config() {
 
@@ -211,6 +227,7 @@ class UABB_UI_Panels {
 	 * Load cloud templates
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
 	function load_templates() {
 
@@ -247,6 +264,7 @@ class UABB_UI_Panels {
 	 * Function that renders Before Row Layouts
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
 	function uabb_panel_before_row_layouts() {
 		?>
@@ -264,7 +282,8 @@ class UABB_UI_Panels {
 	 *
 	 * @since 1.0
 	 * @param array $templates Gets the array of UABB templates.
-	 * @param var   $status Checks for the status of UABB templates.
+	 * @param string   $status Checks for the status of UABB templates.
+	 * @return array
 	 */
 	static public function uabb_templates_data( $templates, $status = 'exclude' ) {
 
@@ -307,6 +326,7 @@ class UABB_UI_Panels {
 	 *
 	 * @since 1.0
 	 * @param array $buttons Gets the buttons array for UI panel.
+	 * @return array 
 	 */
 	function builder_ui_bar_buttons( $buttons ) {
 
@@ -343,6 +363,7 @@ class UABB_UI_Panels {
 	 * Row panel showing sections - rows & modules
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
 	function render_ui() {
 
@@ -384,6 +405,7 @@ class UABB_UI_Panels {
 	 * Function that renders live preview
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
 	function render_live_preview() {
 		if ( FLBuilderModel::is_builder_active() ) {
@@ -402,6 +424,7 @@ class UABB_UI_Panels {
 
 	/**
 	 * Enqueue Panel CSS and JS
+	 * @return void
 	 */
 	function uabb_panel_css_js() {
 		if ( FLBuilderModel::is_builder_active() ) {
