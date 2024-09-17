@@ -230,7 +230,7 @@ function uabb_theme_button_font_size( $default ): string {
  * @param var $default Checks if the user has set Font Size values.
  * @return string
  */
-function uabb_theme_default_button_font_size( $default ): string {
+function uabb_theme_default_button_font_size( $default ) {
 	$font_size = '';
 
 	if ( '' === $default ) {
