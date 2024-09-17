@@ -6,7 +6,7 @@
  * @package BB Version Check
  */
 
-if ( ! class_exists( 'FL_BUILDER_VERSION' ) ) {
+if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 
 	if ( ! defined( 'FL_BUILDER_VERSION' ) ) {
 		define( 'FL_BUILDER_VERSION', '' );
