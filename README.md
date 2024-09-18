@@ -215,6 +215,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ## Changelog ##
 
+### 1.5.11.1 ###
+* Improvement: Improved code quality syntax and security checks for better coding standards and practices.
+
 ### 1.5.11 ###
 * Improvement: Hardened the security of plugin.
 * Improvement: Compatibility with Beaver Builder 2.9
