@@ -28,7 +28,7 @@ if ( ! class_exists( 'UABB_Attachment' ) ) {
 		 * Add CTA Link field to media uploader
 		 *
 		 * @param array<string, mixed> $form_fields array, fields to include in attachment form.
-		 * @param object $post object, attachment record in database.
+		 * @param object               $post object, attachment record in database.
 		 * @return array<string, mixed> $form_fields, modified form fields
 		 */
 		function uabb_attachment_field_cta( $form_fields, $post ): array {

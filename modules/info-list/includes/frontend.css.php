@@ -10,17 +10,17 @@ $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
 // Ensure $settings is defined and initialized
-if (!isset($settings)) {
+if ( ! isset( $settings ) ) {
 	$settings = new stdClass(); // Create an empty object to avoid undefined errors
 }
 
 // Ensure $id is defined and initialized
-if (!isset($id)) {
-	$id = ''; 
+if ( ! isset( $id ) ) {
+	$id = '';
 }
 
 // Ensure $global_settings is defined and initialized
-if (!isset($global_settings)) {
+if ( ! isset( $global_settings ) ) {
 	// Create an empty object to avoid undefined errors
 	$global_settings = new stdClass();
 }
@@ -81,7 +81,7 @@ if ( 'yes' === $settings->list_connector_option ) {
 		height: calc( 50% - <?php echo esc_attr( $settings->icon_image_size / 2 ) + $icon_extra_padding - $space_element; ?>px );
 		<?php else : ?>
 		top: <?php echo esc_attr( $settings->icon_image_size + $icon_extra_padding_top ); ?>px;
-		height: calc( 100% - <?php echo esc_attr( $settings->icon_image_size  + $icon_extra_padding_top); ?>px );
+		height: calc( 100% - <?php echo esc_attr( $settings->icon_image_size + $icon_extra_padding_top ); ?>px );
 		<?php endif; ?>
 	}
 	<?php if ( 'center' === $settings->align_items ) : ?>
@@ -249,7 +249,7 @@ if ( 'left' === $settings->icon_position ) {
 		<?php if ( '' !== $settings->space_between_elements ) { ?>
 			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper .uabb-info-list-item {
 				padding-right: <?php echo esc_attr( ( $settings->space_between_elements ) / 2 ); ?>px;
-				padding-left: <?php echo  esc_attr( ( $settings->space_between_elements ) / 2 ); ?>px;
+				padding-left: <?php echo esc_attr( ( $settings->space_between_elements ) / 2 ); ?>px;
 				padding-bottom: 0;
 			}
 		<?php } ?>
@@ -409,8 +409,8 @@ foreach ( $settings->add_list_item as $item ) {
 						top: calc( 50% + <?php echo esc_attr( ( $settings->icon_image_size - $need_to_add ) / 2 ) + $icon_extra_padding - $space_element; ?>px );
 						height: calc( 50% - <?php echo esc_attr( ( $settings->icon_image_size - $need_to_add ) / 2 ) + $icon_extra_padding - $space_element; ?>px );
 						<?php else : ?>
-						top: <?php echo esc_attr( $settings->icon_image_size - $need_to_add + $icon_extra_padding_top); ?>px;
-						height: calc( 100% - <?php echo esc_attr( ( $settings->icon_image_size - $need_to_add ) + $icon_extra_padding_top); ?>px );
+						top: <?php echo esc_attr( $settings->icon_image_size - $need_to_add + $icon_extra_padding_top ); ?>px;
+						height: calc( 100% - <?php echo esc_attr( ( $settings->icon_image_size - $need_to_add ) + $icon_extra_padding_top ); ?>px );
 						<?php endif; ?>
 					}
 

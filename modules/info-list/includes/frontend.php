@@ -6,13 +6,13 @@
  */
 
 // Ensure $settings is defined and initialized
-if (!isset($settings)) {
-    $settings = new stdClass(); // Create an empty object to avoid undefined errors
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors
 }
 
 // Ensure $settings is defined and initialized
-if (!isset($module)) {
-    $module = new stdClass(); // Create an empty object to avoid undefined errors
+if ( ! isset( $module ) ) {
+	$module = new stdClass(); // Create an empty object to avoid undefined errors
 }
 
 ?>

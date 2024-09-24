@@ -5,9 +5,9 @@
  * @package UABB Settings Icons
  */
 
- // Defining the constant
- if (!defined('UABB_PREFIX')) {
-    define('UABB_PREFIX', '');
+// Defining the constant
+if ( ! defined( 'UABB_PREFIX' ) ) {
+	define( 'UABB_PREFIX', '' );
 }
 ?>
 <div id="fl-uabb-icons-form" class="fl-settings-form uabb-fl-settings-form">

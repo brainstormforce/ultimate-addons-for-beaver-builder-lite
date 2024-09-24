@@ -41,7 +41,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 				'name'        => __( 'Image Separator', 'uabb' ),
 				'description' => __( 'Use Image as a separator ', 'uabb' ),
 				'category'    => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'       => defined('UABB_CAT') ? UABB_CAT : '',
+				'group'       => defined( 'UABB_CAT' ) ? UABB_CAT : '',
 				'dir'         => BB_ULTIMATE_ADDON_DIR . 'modules/image-separator/',
 				'url'         => BB_ULTIMATE_ADDON_URL . 'modules/image-separator/',
 				'icon'        => 'format-image.svg',
@@ -85,7 +85,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * Function to delete the cropped image src
 	 *
 	 * @method delete
-	 * 
+	 *
 	 * @return void
 	 */
 	public function delete(): void {
@@ -160,7 +160,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * Function to get the Image src
 	 *
 	 * @method get_data
-	 * 
+	 *
 	 * @return object
 	 */
 	public function get_data(): object {
@@ -354,7 +354,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 		if ( ! empty( $this->settings->photo_src ) ) {
 			$url = $this->settings->photo_src;
 		} else {
-			$url = (defined('FL_BUILDER_URL') ? FL_BUILDER_URL : '') . 'img/pixel.png';
+			$url = ( defined( 'FL_BUILDER_URL' ) ? FL_BUILDER_URL : '' ) . 'img/pixel.png';
 		}
 
 		return $url;

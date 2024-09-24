@@ -6,19 +6,19 @@
  */
 
 // Ensure $settings is defined and initialized
-if (!isset($settings)) {
-    $settings = new stdClass(); // Create an empty object to avoid undefined errors
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors
 }
 
 // Ensure $id is defined and initialized
-if (!isset($id)) {
-    $id = ''; 
+if ( ! isset( $id ) ) {
+	$id = '';
 }
 
 // Ensure $global_settings is defined and initialized
-if (!isset($global_settings)) {
-    // Create an empty object to avoid undefined errors
-    $global_settings = new stdClass();
+if ( ! isset( $global_settings ) ) {
+	// Create an empty object to avoid undefined errors
+	$global_settings = new stdClass();
 }
 
 $settings->title_color           = FLBuilderColor::hex_or_rgb( $settings->title_color );

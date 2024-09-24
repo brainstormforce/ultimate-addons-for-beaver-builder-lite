@@ -53,7 +53,6 @@ class UABB_Init {
 			add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 			add_action( 'network_admin_notices', array( $this, 'admin_notices' ) );
 		}
-
 	}
 	/**
 	 * Function that renders links
@@ -106,12 +105,12 @@ class UABB_Init {
 
 		// Load the appropriate text-domain.
 		$this->load_plugin_textdomain();
-
 	}
 
 	/**
 	 *   For Performance.
 	 *   Set UABB static object to store data from database.
+	 *
 	 * @return void
 	 */
 	static function set_uabb_options() {
@@ -230,7 +229,6 @@ class UABB_Init {
 		if ( is_rtl() ) {
 			wp_enqueue_style( 'uabb-rtl-css', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-rtl.css', array() );
 		}
-
 	}
 
 	/**
@@ -302,6 +300,7 @@ class UABB_Init {
 
 /**
  * Initialize the class only after all the plugins are loaded.
+ *
  * @return void
  */
 function init_uabb() {

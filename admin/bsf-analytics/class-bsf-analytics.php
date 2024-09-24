@@ -34,7 +34,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 
 			define( 'BSF_ANALYTICS_FILE', __FILE__ );
 			define( 'BSF_ANALYTICS_VERSION', '1.0.1' );
-			define( 'BSF_ANALYTICS_PATH', dirname( __FILE__ ) );
+			define( 'BSF_ANALYTICS_PATH', __DIR__ );
 			define( 'BSF_ANALYTICS_URI', $this->bsf_analytics_url() );
 
 			add_action( 'admin_init', array( $this, 'handle_optin_optout' ) );
@@ -64,13 +64,13 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 */
 		public function bsf_analytics_url() {
 
-			$path      = wp_normalize_path( defined('BSF_ANALYTICS_PATH') ? BSF_ANALYTICS_PATH : '' );
+			$path      = wp_normalize_path( defined( 'BSF_ANALYTICS_PATH' ) ? BSF_ANALYTICS_PATH : '' );
 			$theme_dir = wp_normalize_path( get_template_directory() );
 
 			if ( strpos( $path, $theme_dir ) !== false ) {
 				return rtrim( get_template_directory_uri() . '/admin/bsf-analytics/', '/' );
 			} else {
-				return rtrim( plugin_dir_url( defined('BSF_ANALYTICS_FILE') ? BSF_ANALYTICS_FILE : ''  ), '/' );
+				return rtrim( plugin_dir_url( defined( 'BSF_ANALYTICS_FILE' ) ? BSF_ANALYTICS_FILE : '' ), '/' );
 			}
 		}
 
@@ -101,9 +101,9 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 			$file_rtl = ( is_rtl() ) ? '-rtl' : '';
 			$css_ext  = ( SCRIPT_DEBUG ) ? '.css' : '.min.css';
 
-			$css_uri = (defined('BSF_ANALYTICS_URI') ? BSF_ANALYTICS_URI : '') . '/assets/css/' . $dir_name . '/style' . $file_rtl . $css_ext;
+			$css_uri = ( defined( 'BSF_ANALYTICS_URI' ) ? BSF_ANALYTICS_URI : '' ) . '/assets/css/' . $dir_name . '/style' . $file_rtl . $css_ext;
 
-			wp_enqueue_style( 'bsf-analytics-admin-style', $css_uri, false, (defined('BSF_ANALYTICS_VERSION') ? BSF_ANALYTICS_VERSION : ''), 'all' );
+			wp_enqueue_style( 'bsf-analytics-admin-style', $css_uri, false, ( defined( 'BSF_ANALYTICS_VERSION' ) ? BSF_ANALYTICS_VERSION : '' ), 'all' );
 		}
 
 		/**
@@ -411,7 +411,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 */
 		private function get_product_name() {
 
-			$base      = wp_normalize_path( dirname( __FILE__ ) );
+			$base      = wp_normalize_path( __DIR__ );
 			$theme_dir = wp_normalize_path( get_template_directory() );
 
 			if ( false !== strpos( $base, $theme_dir ) ) {

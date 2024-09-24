@@ -16,7 +16,7 @@ class WPML_UABB_Infolist extends WPML_Beaver_Builder_Module_With_Items {
 	 *
 	 * @since 1.6.7
 	 * @param object $settings an object to get values of Info List.
-	 * @return object 
+	 * @return object
 	 */
 	public function &get_items( $settings ): object {
 		return $settings->add_list_item;
@@ -78,4 +78,3 @@ class WPML_UABB_Infolist extends WPML_Beaver_Builder_Module_With_Items {
 		}
 	}
 }
-

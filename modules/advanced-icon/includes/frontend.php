@@ -6,8 +6,8 @@
  */
 
 // Ensure $settings is defined and initialized
-if (!isset($settings)) {
-    $settings = new stdClass(); // Create an empty object to avoid undefined errors
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors
 }
 
 ?>
@@ -78,7 +78,7 @@ foreach ( $settings->icons as $icon ) {
 		FLBuilder::render_module_html( 'image-icon', $imageicon_array );
 		echo '</a>';
 	}
-	$icon_count++;
+	++$icon_count;
 }
 
 ?>

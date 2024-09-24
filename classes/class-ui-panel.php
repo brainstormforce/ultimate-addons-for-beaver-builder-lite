@@ -45,7 +45,7 @@ class UABB_UI_Panels {
 	 *  Function to add toggle UABB User Interface.
 	 *
 	 *  @since 1.0
-	 * 
+	 *
 	 * @return void
 	 */
 	function toggle_uabb_ui() {
@@ -68,7 +68,7 @@ class UABB_UI_Panels {
 	 *  Function that initializes template selector data.
 	 *
 	 *  @since 1.0
-	 * 
+	 *
 	 * @return void
 	 */
 	public function init() {
@@ -109,9 +109,9 @@ class UABB_UI_Panels {
 	 * @return string
 	 */
 	function uabb_bsf_registration_page_url( $url ) {
-		 // Defining the constant
-		if (!defined('FL_BUILDER_LITE')) {
-			define('FL_BUILDER_LITE', '');
+		// Defining the constant
+		if ( ! defined( 'FL_BUILDER_LITE' ) ) {
+			define( 'FL_BUILDER_LITE', '' );
 		}
 
 		if ( is_multisite() && false === FL_BUILDER_LITE ) {
@@ -189,7 +189,7 @@ class UABB_UI_Panels {
 	function fl_uabb_render_css( $css, $nodes, $global_settings ) {
 
 		$css .= file_get_contents( BB_ULTIMATE_ADDON_DIR . 'assets/css/uabb-frontend.css' );
-		$css .= include( BB_ULTIMATE_ADDON_DIR . 'assets/dynamic-css/uabb-theme-dynamic-css.php' );
+		$css .= include BB_ULTIMATE_ADDON_DIR . 'assets/dynamic-css/uabb-theme-dynamic-css.php';
 
 		return $css;
 	}
@@ -281,11 +281,11 @@ class UABB_UI_Panels {
 	 *  2. Return ONLY UABB templates. If variable $status is NOT set to 'exclude'.
 	 *
 	 * @since 1.0
-	 * @param array $templates Gets the array of UABB templates.
-	 * @param string   $status Checks for the status of UABB templates.
+	 * @param array  $templates Gets the array of UABB templates.
+	 * @param string $status Checks for the status of UABB templates.
 	 * @return array
 	 */
-	static public function uabb_templates_data( $templates, $status = 'exclude' ) {
+	public static function uabb_templates_data( $templates, $status = 'exclude' ) {
 
 		if ( isset( $templates['categorized'] ) && count( $templates['categorized'] ) > 0 ) {
 
@@ -326,7 +326,7 @@ class UABB_UI_Panels {
 	 *
 	 * @since 1.0
 	 * @param array $buttons Gets the buttons array for UI panel.
-	 * @return array 
+	 * @return array
 	 */
 	function builder_ui_bar_buttons( $buttons ) {
 
@@ -424,6 +424,7 @@ class UABB_UI_Panels {
 
 	/**
 	 * Enqueue Panel CSS and JS
+	 *
 	 * @return void
 	 */
 	function uabb_panel_css_js() {
@@ -431,7 +432,6 @@ class UABB_UI_Panels {
 			wp_enqueue_script( 'uabb-panel-js', BB_ULTIMATE_ADDON_URL . 'assets/js/uabb-panel.js', array( 'jquery' ), '', true );
 		}
 	}
-
 }
 
 new UABB_UI_Panels();

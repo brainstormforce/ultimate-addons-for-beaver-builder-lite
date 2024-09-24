@@ -8,15 +8,15 @@
 ?>
 <?php
 
-	// Define the $settings 
-	if(!isset($settings)){
-		$settings = new stdClass(); // Create an empty object to avoid undefined errors
-	}
+	// Define the $settings
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors
+}
 
-	//Define and initialize the $id
-	if (!isset($id)) {
-		$id = ''; 
-	}
+	// Define and initialize the $id
+if ( ! isset( $id ) ) {
+	$id = '';
+}
 
 	$settings->color  = uabb_theme_base_color( FLBuilderColor::hex_or_rgb( $settings->color ) );
 	$settings->height = ( '' !== trim( $settings->height ) ) ? $settings->height : '1';

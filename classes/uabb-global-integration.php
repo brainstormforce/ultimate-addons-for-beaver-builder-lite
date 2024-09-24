@@ -54,8 +54,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		 *
 		 * @since 1.0
 		 * @param object $option gets the options for the UABB settings.
-		 * @param bool    $color gets the color.
-		 * @param bool    $opc gets the opacity for the colorpicker.
+		 * @param bool   $color gets the color.
+		 * @param bool   $opc gets the opacity for the colorpicker.
 		 * @return string
 		 */
 		function uabb_get_global_option( $option, $color = false, $opc = false ): string {
@@ -75,7 +75,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		}
 		/**
 		 * Theme Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_theme_color(): string {
@@ -88,7 +88,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Text Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_text_color(): string {
@@ -101,7 +101,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Link Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_link_color(): string {
@@ -114,7 +114,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Link Hover Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_link_hover_color(): string {
@@ -126,7 +126,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Font Family
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_font_family(): string {
@@ -136,7 +136,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Font Size -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_font_size(): string {
@@ -147,7 +147,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Line Height -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_line_height(): string {
@@ -159,7 +159,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Letter Spacing -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_letter_spacing(): string {
@@ -171,7 +171,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Text Transform -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_text_transform(): string {
@@ -183,7 +183,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Text Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_text_color(): string {
@@ -195,7 +195,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Text Hover Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_text_hover_color(): string {
@@ -207,7 +207,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Background Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_bg_color(): string {
@@ -219,7 +219,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Background Hover Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_bg_hover_color(): string {
@@ -231,7 +231,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Border Radius -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_border_radius(): string {
@@ -244,7 +244,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Padding -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_padding(): string {
@@ -261,7 +261,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		}
 		/**
 		 * Button Padding -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_vertical_padding(): string {
@@ -273,7 +273,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		}
 		/**
 		 * Button Padding -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_horizontal_padding(): string {
@@ -283,10 +283,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 			return $h_padding;
 		}
-
 	}
 
 	new UABBGlobalSettingsOptions();
 }
-
-

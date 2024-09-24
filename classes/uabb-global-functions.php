@@ -36,7 +36,7 @@ if ( ! function_exists( 'array_replace_recursive' ) ) {
 	/**
 	 * Initializes an array to replace recursive function
 	 *
-	 * @param mixed   $base Initial base values, can be an array or any other type.
+	 * @param mixed $base Initial base values, can be an array or any other type.
 	 * @param array $replacements returns the replacements values.
 	 * @return mixed Returns an array if $base is an array, otherwise returns the original $base value.
 	 */
@@ -61,7 +61,7 @@ if ( ! function_exists( 'array_replace_recursive' ) ) {
 	/**
 	 * Initializes recurse function
 	 *
-	 * @param mixed   $base Initial base values, can be an array or any other type.
+	 * @param mixed $base Initial base values, can be an array or any other type.
 	 * @param array $replacements returns the replacements values.
 	 * @return mixed Returns an array if $base is an array, otherwise returns the original $base value.
 	 */
@@ -815,14 +815,14 @@ function uabb_theme_border( $default ) {
 	$border_width  = uabb_theme_button_border_width( '' );
 	$border_color  = uabb_theme_border_color( '' );
 	$border_radius = uabb_theme_button_border_radius( '' );
-	$border        = [];
+	$border        = array();
 
 	if ( is_array( $default ) && ( ! empty( $default['style'] ) || ! empty( $default['color'] ) || ! empty( $default['width']['top'] ) || ! empty( $default['width']['bottom'] ) || ! empty( $default['width']['left'] ) || ! empty( $default['width']['right'] ) || ! empty( $default['radius']['top_left'] ) || ! empty( $default['radius']['top_right'] ) || ! empty( $default['radius']['bottom_left'] ) || ! empty( $default['radius']['bottom_right'] ) ) ) {
 
 		$border = $default;
 	} elseif ( is_object( $default ) && ( ! empty( $default->style ) || ! empty( $default->color ) || ! empty( $default->width->top ) || ! empty( $default->width->bottom ) || ! empty( $default->width->left ) || ! empty( $default->width->right ) || ! empty( $default->radius->top_left ) || ! empty( $default->radius->top_right ) || ! empty( $default->radius->bottom_left ) || ! empty( $default->radius->bottom_right ) ) ) {
 
-		$border = (array) $default; //Cast objects to arrays when using them as $default.
+		$border = (array) $default; // Cast objects to arrays when using them as $default.
 
 	} else {
 
@@ -963,4 +963,3 @@ function uabb_theme_padding_button( $mode, $value ): string {
 
 	return $new_padding;
 }
-

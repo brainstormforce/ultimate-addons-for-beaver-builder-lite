@@ -64,12 +64,11 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 			add_filter( 'uabb/global/button_text_color', array( $this, 'uabb_global_button_text_color' ) );
 			add_filter( 'uabb/global/button_text_hover_color', array( $this, 'uabb_global_button_text_hover_color' ) );
-
 		}
 
 		/**
 		 * Theme Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_theme_color(): string {
@@ -80,7 +79,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Theme Text Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_text_color(): string {
@@ -91,7 +90,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Button Background Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_bg_color(): string {
@@ -103,7 +102,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Button Background Hover Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_bg_hover_color(): string {
@@ -114,7 +113,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Button Text Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_text_color(): string {
@@ -126,7 +125,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Button Text Hover Color -
-		 * 
+		 *
 		 * @return string
 		 */
 		function uabb_global_button_text_hover_color(): string {

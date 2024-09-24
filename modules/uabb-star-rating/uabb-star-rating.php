@@ -26,7 +26,7 @@ class UABBStarRatingModule extends FLBuilderModule {
 				'name'            => __( 'Star Rating', 'uabb' ),
 				'description'     => __( 'A module for Star Rating.', 'uabb' ),
 				'category'        => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'           => defined('UABB_CAT') ? UABB_CAT : '',
+				'group'           => defined( 'UABB_CAT' ) ? UABB_CAT : '',
 				'dir'             => BB_ULTIMATE_ADDON_DIR . 'modules/uabb-star-rating/',
 				'url'             => BB_ULTIMATE_ADDON_URL . 'modules/uabb-star-rating/',
 				'editor_export'   => true, // Defaults to true and can be omitted.
@@ -37,7 +37,6 @@ class UABBStarRatingModule extends FLBuilderModule {
 		);
 
 		$this->add_css( 'font-awesome-5' );
-
 	}
 
 		/**
@@ -48,7 +47,7 @@ class UABBStarRatingModule extends FLBuilderModule {
 		 * @return string Icon path or empty string if not found
 		 */
 	public function get_icon( $icon = '' ) {
-		
+
 		$path = ''; // Default Initialization
 
 		// check if $icon is referencing an included icon.
@@ -57,11 +56,11 @@ class UABBStarRatingModule extends FLBuilderModule {
 		}
 
 		if ( file_exists( $path ) ) {
-            $icon_content = file_get_contents( $path );
-            return $icon_content !== false ? $icon_content : '';
-        }
-		
-        return ''; // Return an empty string if no icon found.
+			$icon_content = file_get_contents( $path );
+			return $icon_content !== false ? $icon_content : '';
+		}
+
+		return ''; // Return an empty string if no icon found.
 	}
 }
 

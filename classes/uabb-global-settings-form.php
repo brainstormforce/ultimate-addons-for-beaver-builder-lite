@@ -5,9 +5,9 @@
  *  @package Global Settings Form
  */
 
- // Defining the constant
-if (!defined('UABB_PREFIX')) {
-    define('UABB_PREFIX', '');
+// Defining the constant
+if ( ! defined( 'UABB_PREFIX' ) ) {
+	define( 'UABB_PREFIX', '' );
 }
 
 

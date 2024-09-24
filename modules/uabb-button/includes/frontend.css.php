@@ -10,27 +10,27 @@ $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
 // Ensure $settings is defined and initialized
-if (!isset($settings)) {
-    $settings = new stdClass(); // Create an empty object to avoid undefined errors
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors
 }
 
 // Ensure $global_settings is defined and initialized
-if (!isset($global_settings)) {
-    // Create an empty object to avoid undefined errors
-    $global_settings = new stdClass();
+if ( ! isset( $global_settings ) ) {
+	// Create an empty object to avoid undefined errors
+	$global_settings = new stdClass();
 }
 
 // $id = ''; // Ensure $id is always defined
 // Ensure $id is defined and initialized
-if (!isset($id)) {
-    $id = ''; // If we do not provide isset check, styling does mot get applied
+if ( ! isset( $id ) ) {
+	$id = ''; // If we do not provide isset check, styling does mot get applied
 }
 
 $border_color = ''; // Ensure $border_color is always defined
 
 $bg_grad_start = ''; // Ensure $bg_grad_start is always defined
 
-$bg_hover_grad_start = ''; //Ensure $bg_hover_grad_start is always defined
+$bg_hover_grad_start = ''; // Ensure $bg_hover_grad_start is always defined
 
 $border_hover_color = ''; // Ensure $border_hover_color is always defined
 

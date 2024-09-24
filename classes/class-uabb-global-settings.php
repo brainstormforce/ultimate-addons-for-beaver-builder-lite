@@ -18,7 +18,7 @@ final class UABBGlobalSetting {
 	 * @since 1.0
 	 * @return void
 	 */
-	static public function init() {
+	public static function init() {
 		add_filter( 'fl_builder_ui_js_strings', __CLASS__ . '::add_js_string' );
 	}
 
@@ -29,7 +29,7 @@ final class UABBGlobalSetting {
 	 * @since 1.0
 	 * @return string
 	 */
-	static public function add_js_string( $js_strings ) {
+	public static function add_js_string( $js_strings ) {
 
 		if ( 'UABB' === UABB_PREFIX ) {
 			$js_strings['uabbGlobalSettings'] = esc_attr__( 'UABB - Global Settings', 'uabb' );

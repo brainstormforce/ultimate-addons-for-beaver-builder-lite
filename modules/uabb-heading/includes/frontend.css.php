@@ -10,19 +10,19 @@ $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
 // Ensure $settings is defined and initialized
-if (!isset($settings)) {
-    $settings = new stdClass(); // Create an empty object to avoid undefined errors
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors
 }
 
 // Ensure $id is defined and initialized
-if (!isset($id)) {
-    $id = ''; 
+if ( ! isset( $id ) ) {
+	$id = '';
 }
 
 // Ensure $global_settings is defined and initialized
-if (!isset($global_settings)) {
-    // Create an empty object to avoid undefined errors
-    $global_settings = new stdClass();
+if ( ! isset( $global_settings ) ) {
+	// Create an empty object to avoid undefined errors
+	$global_settings = new stdClass();
 }
 
 // Ensure $position is defined with a default value
@@ -216,7 +216,7 @@ if ( '' !== $settings->separator_style ) {
 			'photo_src'           => ( isset( $settings->photo_src ) ) ? $settings->photo_src : '',
 
 			/*
-			 Icon color */
+			Icon color */
 			// 'icon_color'          => $settings->separator_icon_color,
 		);
 
