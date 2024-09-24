@@ -5,24 +5,24 @@
  *  @package UABB Image Icon Module
  */
 
-// Ensure $settings is defined and initialized
+// Ensure $settings is defined and initialized.
 if ( ! isset( $settings ) ) {
-	$settings = new stdClass(); // Create an empty object to avoid undefined errors
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
 }
 
-// Ensure $id is defined and initialized
+// Ensure $id is defined and initialized.
 if ( ! isset( $id ) ) {
 	$id = '';
 }
 
-// Ensure $global_settings is defined and initialized
+// Ensure $global_settings is defined and initialized.
 if ( ! isset( $global_settings ) ) {
-	// Create an empty object to avoid undefined errors
+	// Create an empty object to avoid undefined errors.
 	$global_settings = new stdClass();
 }
 
-$bg_hover_grad_start = ''; // Ensure $bg_grad_start is always defined
-$border_hover_color  = ''; // Ensure $border_hover_color is always defined
+$bg_hover_grad_start = ''; // Ensure $bg_grad_start is always defined.
+$border_hover_color  = ''; // Ensure $border_hover_color is always defined.
 
 if ( 'none' !== $settings->image_type ) :
 

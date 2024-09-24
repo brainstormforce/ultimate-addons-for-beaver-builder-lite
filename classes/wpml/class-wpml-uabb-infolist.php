@@ -18,7 +18,7 @@ class WPML_UABB_Infolist extends WPML_Beaver_Builder_Module_With_Items {
 	 * @param object $settings an object to get values of Info List.
 	 * @return object
 	 */
-	public function &get_items( $settings ): object {
+	public function &get_items( $settings ) {
 		return $settings->add_list_item;
 	}
 
@@ -28,7 +28,7 @@ class WPML_UABB_Infolist extends WPML_Beaver_Builder_Module_With_Items {
 	 * @since 1.6.7
 	 * @return array
 	 */
-	public function get_fields(): array {
+	public function get_fields() {
 		return array( 'list_item_title', 'list_item_url', 'list_item_description' );
 	}
 
@@ -39,7 +39,7 @@ class WPML_UABB_Infolist extends WPML_Beaver_Builder_Module_With_Items {
 	 * @param array $field gets the translated field values of the Info List.
 	 * @return string
 	 */
-	protected function get_title( $field ): string {
+	protected function get_title( $field ) {
 		switch ( $field ) {
 			case 'list_item_title':
 				return esc_html__( 'Info List : Title', 'uabb' );
@@ -62,7 +62,7 @@ class WPML_UABB_Infolist extends WPML_Beaver_Builder_Module_With_Items {
 	 * @param array $field gets an field type of the WPML editor.
 	 * @return string
 	 */
-	protected function get_editor_type( $field ): string {
+	protected function get_editor_type( $field ) {
 		switch ( $field ) {
 			case 'list_item_title':
 				return 'LINE';

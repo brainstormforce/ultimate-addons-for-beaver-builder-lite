@@ -7,12 +7,12 @@
  *  @package Imported preset templates
  */
 
-// Ensure required variables are set
+// Ensure required variables are set.
 $has_editing_cap    = isset( $has_editing_cap ) ? $has_editing_cap : false;
 $is_module_template = isset( $is_module_template ) ? $is_module_template : false;
 $module_templates   = isset( $module_templates ) ? $module_templates : array();
 
-// Defining the constant
+// Defining the constant.
 if ( ! defined( 'UABB_PREFIX' ) ) {
 	define( 'UABB_PREFIX', '' );
 }

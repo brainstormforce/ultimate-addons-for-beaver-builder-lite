@@ -17,11 +17,11 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		 *
 		 * @var array $bb_options
 		 */
-		public array $bb_options;
+		public $bb_options;
 		/**
 		 * Constructor function that initializes required actions and hooks
 		 */
-		function __construct() {
+		public function __construct() {
 			/**
 			 *  **
 			 *  * Tracing Beaver Builder Theme Colors
@@ -71,7 +71,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		 *
 		 * @return string
 		 */
-		function uabb_global_theme_color(): string {
+		public function uabb_global_theme_color() {
 			$color = $this->bb_options['theme_color'];
 
 			return $color;
@@ -82,7 +82,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		 *
 		 * @return string
 		 */
-		function uabb_global_text_color(): string {
+		public function uabb_global_text_color() {
 			$color = $this->bb_options['theme_text_color'];
 
 			return $color;
@@ -93,7 +93,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		 *
 		 * @return string
 		 */
-		function uabb_global_button_bg_color(): string {
+		public function uabb_global_button_bg_color() {
 			$color = $this->bb_options['btn_bg_color'];
 
 			return $color;
@@ -105,7 +105,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		 *
 		 * @return string
 		 */
-		function uabb_global_button_bg_hover_color(): string {
+		public function uabb_global_button_bg_hover_color() {
 			$color = $this->bb_options['btn_bg_hover_color'];
 
 			return $color;
@@ -116,7 +116,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		 *
 		 * @return string
 		 */
-		function uabb_global_button_text_color(): string {
+		public function uabb_global_button_text_color() {
 			$color = $this->bb_options['btn_text_color'];
 
 			return $color;
@@ -128,7 +128,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		 *
 		 * @return string
 		 */
-		function uabb_global_button_text_hover_color(): string {
+		public function uabb_global_button_text_hover_color() {
 			$color = $this->bb_options['btn_text_hover_color'];
 
 			return $color;

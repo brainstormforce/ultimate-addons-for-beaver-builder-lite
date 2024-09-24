@@ -1,4 +1,10 @@
 <?php
+/**
+ * This file returns an array of package configurations.
+ *
+ * @package UltimateAddonsForBeaverBuilderLite
+ * @since 1.0.0
+ */
 
 return array(
 	'packages' => array(

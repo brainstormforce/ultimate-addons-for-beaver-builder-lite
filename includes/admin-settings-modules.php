@@ -5,7 +5,7 @@
  * @package UABB Settings Modules
  */
 
-// Defining the constant
+// Defining the constant.
 if ( ! defined( 'UABB_PREFIX' ) ) {
 	define( 'UABB_PREFIX', '' );
 }

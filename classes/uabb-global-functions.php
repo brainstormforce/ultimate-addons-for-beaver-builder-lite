@@ -40,7 +40,7 @@ if ( ! function_exists( 'array_replace_recursive' ) ) {
 	 * @param array $replacements returns the replacements values.
 	 * @return mixed Returns an array if $base is an array, otherwise returns the original $base value.
 	 */
-	function array_replace_recursive( $base, $replacements ): mixed {
+	function array_replace_recursive( $base, $replacements ) {
 
 		$base = recurse( $base, $replacements );
 		// handle the arguments, merge one by one.
@@ -65,7 +65,7 @@ if ( ! function_exists( 'array_replace_recursive' ) ) {
 	 * @param array $replacements returns the replacements values.
 	 * @return mixed Returns an array if $base is an array, otherwise returns the original $base value.
 	 */
-	function recurse( $base, $replacements ): mixed {
+	function recurse( $base, $replacements ) {
 		foreach ( $replacements as $key => $value ) {
 			// create new key in $base, if it is empty or not an array.
 			if ( ! isset( $base[ $key ] ) || ( isset( $base[ $key ] ) && ! is_array( $base[ $key ] ) ) ) {
@@ -205,7 +205,7 @@ function uabb_theme_button_font_family( $default ) {
  * @param var $default Checks if the user has set Font Size values.
  * @return string
  */
-function uabb_theme_button_font_size( $default ): string {
+function uabb_theme_button_font_size( $default ) {
 	$font_size = '';
 
 	if ( '' === $default ) {
@@ -251,10 +251,10 @@ function uabb_theme_default_button_font_size( $default ) {
 /**
  * Button Line Height
  *
- * @param var $default Checks if the user has set text transform values.\
+ * @param var $default Checks if the user has set text transform values.
  * @return string
  */
-function uabb_theme_button_line_height( $default ): string {
+function uabb_theme_button_line_height( $default ) {
 	$line_height = '';
 
 	if ( '' === $default ) {
@@ -279,7 +279,7 @@ function uabb_theme_button_line_height( $default ): string {
  * @param var $default Checks if the user has set text transform values.
  * @return string
  */
-function uabb_theme_default_button_line_height( $default ): string {
+function uabb_theme_default_button_line_height( $default ) {
 	$line_height = '';
 
 	if ( '' === $default ) {
@@ -303,7 +303,7 @@ function uabb_theme_default_button_line_height( $default ): string {
  * @param var $default Checks if the user has set letter spacing values.
  * @return string
  */
-function uabb_theme_button_letter_spacing( $default ): string {
+function uabb_theme_button_letter_spacing( $default ) {
 	$letter_spacing = '';
 
 	if ( '' === $default ) {
@@ -328,7 +328,7 @@ function uabb_theme_button_letter_spacing( $default ): string {
  * @param var $default Checks if the user has set letter spacing values.
  * @return string
  */
-function uabb_theme_default_button_letter_spacing( $default ): string {
+function uabb_theme_default_button_letter_spacing( $default ) {
 	$letter_spacing = '';
 
 	if ( '' === $default ) {
@@ -352,7 +352,7 @@ function uabb_theme_default_button_letter_spacing( $default ): string {
  * @param var $default Checks if the user has set text transform values.
  * @return string
  */
-function uabb_theme_button_text_transform( $default ): string {
+function uabb_theme_button_text_transform( $default ) {
 	$text_transform = '';
 
 	if ( '' === $default ) {
@@ -375,7 +375,7 @@ function uabb_theme_button_text_transform( $default ): string {
  * @param var $default Checks if the user has set text transform values.
  * @return string
  */
-function uabb_theme_default_button_text_transform( $default ): string {
+function uabb_theme_default_button_text_transform( $default ) {
 	$text_transform = '';
 
 	if ( '' === $default ) {
@@ -943,10 +943,10 @@ function uabb_theme_button_typography( $default ) {
  *
  * @since 1.3.1
  * @param string $mode  The mode of padding (e.g., 'top', 'bottom', etc.).
- * @param string $value Checks if user has set the Padding, if yes, returns users value else checks
+ * @param string $value Checks if user has set the Padding, if yes, returns users value else checks.
  * @return string - Padding value
  */
-function uabb_theme_padding_button( $mode, $value ): string {
+function uabb_theme_padding_button( $mode, $value ) {
 
 	$padding = uabb_theme_default_button_padding( '' );
 

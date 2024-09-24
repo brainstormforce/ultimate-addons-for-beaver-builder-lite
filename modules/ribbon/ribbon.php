@@ -216,23 +216,23 @@ class RibbonModule extends FLBuilderModule {
 	 * @method get_icon
 	 * @param string $icon gets the icon for the module.
 	 */
-	public function get_icon( $icon = '' ): string {
-		// Initialize $path before the first if statement
+	public function get_icon( $icon = '' ) {
+		// Initialize $path before the first if statement.
 		$path = '';
 
-		// Check if $icon is referencing an included icon
+		// Check if $icon is referencing an included icon.
 		if ( '' !== $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/icon/' . $icon ) ) {
 			$path = BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/icon/' . $icon;
 		}
 
 		if ( file_exists( $path ) ) {
 			$contents = file_get_contents( $path ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
-			if ( $contents !== false ) {
+			if ( false !== $contents ) {
 				return $contents;
 			}
 		}
 
-		// If we reach this point, either the file doesn't exist or file_get_contents failed
+		// If we reach this point, either the file doesn't exist or file_get_contents failed.
 		return '';
 	}
 }

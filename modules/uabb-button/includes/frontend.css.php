@@ -9,32 +9,32 @@ global $post;
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
-// Ensure $settings is defined and initialized
+// Ensure $settings is defined and initialized.
 if ( ! isset( $settings ) ) {
-	$settings = new stdClass(); // Create an empty object to avoid undefined errors
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
 }
 
-// Ensure $global_settings is defined and initialized
+// Ensure $global_settings is defined and initialized.
 if ( ! isset( $global_settings ) ) {
-	// Create an empty object to avoid undefined errors
+	// Create an empty object to avoid undefined errors.
 	$global_settings = new stdClass();
 }
 
-// $id = ''; // Ensure $id is always defined
-// Ensure $id is defined and initialized
+// $id = ''; // Ensure $id is always defined.
+// Ensure $id is defined and initialized.
 if ( ! isset( $id ) ) {
-	$id = ''; // If we do not provide isset check, styling does mot get applied
+	$id = ''; // If we do not provide isset check, styling does mot get applied.
 }
 
-$border_color = ''; // Ensure $border_color is always defined
+$border_color = ''; // Ensure $border_color is always defined.
 
-$bg_grad_start = ''; // Ensure $bg_grad_start is always defined
+$bg_grad_start = ''; // Ensure $bg_grad_start is always defined.
 
-$bg_hover_grad_start = ''; // Ensure $bg_hover_grad_start is always defined
+$bg_hover_grad_start = ''; // Ensure $bg_hover_grad_start is always defined.
 
-$border_hover_color = ''; // Ensure $border_hover_color is always defined
+$border_hover_color = ''; // Ensure $border_hover_color is always defined.
 
-$padding_top_bottom = ''; // Ensure $padding_top_bottom is always defined
+$padding_top_bottom = ''; // Ensure $padding_top_bottom is always defined.
 
 
 
@@ -245,7 +245,7 @@ if ( ! $version_bb_check ) {
 				$border_width = uabb_theme_button_border_width( '' );
 
 
-				// Ensure $border_width is an array before performing array_key_exists checks
+				// Ensure $border_width is an array before performing array_key_exists checks.
 				if ( is_array( $border_width ) ) {
 					echo array_key_exists( 'top', $border_width ) ? 'border-top-width:' . esc_attr( $border_width['top'] ) . 'px;' : '';
 					echo array_key_exists( 'left', $border_width ) ? 'border-left-width:' . esc_attr( $border_width['left'] ) . 'px;' : '';

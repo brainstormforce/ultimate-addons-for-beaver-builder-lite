@@ -10,8 +10,6 @@
  *
  * @class UABBStarRatingModule
  */
-
-
 class UABBStarRatingModule extends FLBuilderModule {
 
 	/**
@@ -48,7 +46,7 @@ class UABBStarRatingModule extends FLBuilderModule {
 		 */
 	public function get_icon( $icon = '' ) {
 
-		$path = ''; // Default Initialization
+		$path = ''; // Default Initialization.
 
 		// check if $icon is referencing an included icon.
 		if ( '' !== $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/uabb-star-rating/icon/' . $icon ) ) {
@@ -57,7 +55,7 @@ class UABBStarRatingModule extends FLBuilderModule {
 
 		if ( file_exists( $path ) ) {
 			$icon_content = file_get_contents( $path );
-			return $icon_content !== false ? $icon_content : '';
+			return false !== $icon_content ? $icon_content : '';
 		}
 
 		return ''; // Return an empty string if no icon found.

@@ -36,7 +36,7 @@ class UABB_IconFonts {
 	 * @since 1.0
 	 * @return void
 	 */
-	function reload_icons() {
+	public function reload_icons() {
 
 		if ( ! wp_verify_nonce( $_POST['nonce'], 'uabb-reload-icons' ) || ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error(
@@ -57,7 +57,7 @@ class UABB_IconFonts {
 	 * @since 1.0
 	 * @return void
 	 */
-	function register_icons() {
+	public function register_icons() {
 
 		// Update initially.
 		$uabb_icons = get_option( '_uabb_enabled_icons', 0 );
@@ -94,7 +94,7 @@ class UABB_IconFonts {
 	 * @param array $src an array to get the src.
 	 * @param array $dst an object to get destination of the file.
 	 */
-	function recurse_copy( $src, $dst ) {
+	public function recurse_copy( $src, $dst ) {
 		$dir = opendir( $src );
 
 		// Create directory if not exist.

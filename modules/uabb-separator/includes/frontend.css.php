@@ -8,12 +8,12 @@
 ?>
 <?php
 
-	// Define the $settings
+	// Define the $settings.
 if ( ! isset( $settings ) ) {
-	$settings = new stdClass(); // Create an empty object to avoid undefined errors
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
 }
 
-	// Define and initialize the $id
+	// Define and initialize the $id.
 if ( ! isset( $id ) ) {
 	$id = '';
 }

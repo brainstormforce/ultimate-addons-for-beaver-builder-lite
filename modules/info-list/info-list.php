@@ -44,9 +44,9 @@ class UABBInfoList extends FLBuilderModule {
 	 * @method get_icons
 	 * @param string $icon gets the icon for the module.
 	 */
-	public function get_icon( $icon = '' ): string {
+	public function get_icon( $icon = '' ) {
 
-		// Initialize $path before the first if statement
+		// Initialize $path before the first if statement.
 		$path = '';
 
 		// check if $icon is referencing an included icon.
@@ -56,12 +56,12 @@ class UABBInfoList extends FLBuilderModule {
 
 		if ( file_exists( $path ) ) {
 			$contents = file_get_contents( $path ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
-			if ( $contents !== false ) {
+			if ( false !== $contents ) {
 				return $contents;
 			}
 		}
 
-		// If we reach this point, either the file doesn't exist or file_get_contents failed
+		// If we reach this point, either the file doesn't exist or file_get_contents failed.
 		return '';
 	}
 
@@ -73,7 +73,7 @@ class UABBInfoList extends FLBuilderModule {
 	 * @param object $settings gets the settings for the module.
 	 * @return void
 	 */
-	public function render_image( $item, $settings ): void {
+	public function render_image( $item, $settings ) {
 
 		$infolist_icon_size = isset( $settings->icon_image_size ) ? $settings->icon_image_size : 75;
 
@@ -133,7 +133,7 @@ class UABBInfoList extends FLBuilderModule {
 	 * @param var    $list_item_counter  counts the list item counter value.
 	 * @return void
 	 */
-	public function render_each_item( $item, $list_item_counter ): void {
+	public function render_each_item( $item, $list_item_counter ) {
 		$target   = '';
 		$nofollow = '';
 		if ( ! UABB_Lite_Compatibility::check_bb_version() ) {
@@ -217,7 +217,7 @@ class UABBInfoList extends FLBuilderModule {
 	 * @method render_text
 	 * @return void
 	 */
-	public function render_list(): void {
+	public function render_list() {
 		$info_list_html    = '';
 		$list_item_counter = 0;
 		foreach ( $this->settings->add_list_item as $item ) {

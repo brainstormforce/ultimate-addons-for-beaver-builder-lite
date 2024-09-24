@@ -12,12 +12,12 @@
  * @package Slide Box
  */
 
-// Ensure $settings is defined and initialized
+// Ensure $settings is defined and initialized.
 if ( ! isset( $settings ) ) {
-	$settings = new stdClass(); // Create an empty object to avoid undefined errors
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
 }
 
-// Ensure $id is defined and initialized
+// Ensure $id is defined and initialized.
 if ( ! isset( $id ) ) {
 	$id = '';
 }

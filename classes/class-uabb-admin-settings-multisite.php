@@ -32,7 +32,7 @@ final class UABBBuilderMultisiteSettings {
 	 * @param string $url gets the activate redirect URL.
 	 * @return void
 	 */
-	public static function uabb_lite_redirect_on_activation( $url ): void {
+	public static function uabb_lite_redirect_on_activation( $url ) {
 		if ( true === get_option( 'uabb_lite_redirect' ) ) {
 			update_option( 'uabb_lite_redirect', false );
 			if ( ! is_multisite() ) :

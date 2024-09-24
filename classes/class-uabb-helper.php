@@ -26,7 +26,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 *
 		 * @since 1.0
 		 */
-		function __construct() {
+		public function __construct() {
 
 			$this->set_constants();
 		}
@@ -37,7 +37,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 * @since 1.0
 		 * @return void
 		 */
-		function set_constants() {
+		public function set_constants() {
 			$branding            = BB_Ultimate_Addon_Helper::get_builder_uabb_branding();
 			self::$basic_modules = __( 'Basic', 'uabb' );
 			$branding_name       = 'UABB';
@@ -65,7 +65,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 * @return array|string
 		 */
 		public static function module_cat( $cat ) {
-			// Defining the constant
+			// Defining the constant.
 			if ( ! defined( 'UABB_CAT' ) ) {
 				define( 'UABB_CAT', '' );
 			}

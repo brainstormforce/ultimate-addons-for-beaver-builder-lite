@@ -40,7 +40,7 @@ class UABBButtonModule extends FLBuilderModule {
 	 * @param object $settings gets the settings for the button module.
 	 * @return object Updated settings object
 	 */
-	public function update( $settings ): object {
+	public function update( $settings ) {
 		// Remove the old three_d setting.
 		if ( isset( $settings->three_d ) ) {
 			unset( $settings->three_d );
@@ -55,7 +55,7 @@ class UABBButtonModule extends FLBuilderModule {
 	 * @method get_classname
 	 * @return string Classname for the button
 	 */
-	public function get_classname(): string {
+	public function get_classname() {
 		$classname = 'uabb-button-wrap uabb-creative-button-wrap';
 
 		if ( ! empty( $this->settings->width ) ) {
@@ -87,7 +87,7 @@ class UABBButtonModule extends FLBuilderModule {
 	 * @method get_button_style
 	 * @return string Button styling string
 	 */
-	public function get_button_style(): string {
+	public function get_button_style() {
 		$btn_style = '';
 
 		if ( ! empty( $this->settings->style ) && 'transparent' === $this->settings->style ) {

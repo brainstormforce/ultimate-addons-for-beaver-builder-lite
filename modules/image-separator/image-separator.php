@@ -5,7 +5,6 @@
  *  @package UABB Image Separator Module
  */
 
-
 /**
  * Function that initializes Image Separator Module
  *
@@ -62,7 +61,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * @param object $settings gets the settings for the object.
 	 * @return object
 	 */
-	public function update( $settings ): object {
+	public function update( $settings ) {
 		// Make sure we have a photo_src property.
 		if ( ! isset( $settings->photo_src ) ) {
 			$settings->photo_src = '';
@@ -88,7 +87,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 *
 	 * @return void
 	 */
-	public function delete(): void {
+	public function delete() {
 		$cropped_path = $this->_get_cropped_path();
 
 		if ( file_exists( $cropped_path['path'] ) ) {
@@ -163,7 +162,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 *
 	 * @return object
 	 */
-	public function get_data(): object {
+	public function get_data() {
 		if ( ! $this->data ) {
 
 			// Photo source is set to "library".
@@ -259,13 +258,13 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 		$photo = $this->get_data();
 
 		if ( ! empty( $photo->alt ) ) {
-			return htmlspecialchars( $photo->alt );
+			return htmlspecialchars( $photo->alt, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
 		} elseif ( ! empty( $photo->description ) ) {
-			return htmlspecialchars( $photo->description );
+			return htmlspecialchars( $photo->description, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
 		} elseif ( ! empty( $photo->caption ) ) {
-			return htmlspecialchars( $photo->caption );
+			return htmlspecialchars( $photo->caption, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
 		} elseif ( ! empty( $photo->title ) ) {
-			return htmlspecialchars( $photo->title );
+			return htmlspecialchars( $photo->title, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
 		}
 		return null;
 	}
@@ -277,7 +276,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * @protected
 	 * @return boolean
 	 */
-	protected function _has_source(): bool {
+	protected function _has_source() {
 		if ( ! empty( $this->settings->photo_src ) ) {
 			return true;
 		}
@@ -350,7 +349,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * @protected
 	 * @return string
 	 */
-	protected function _get_uncropped_url(): string {
+	protected function _get_uncropped_url() {
 		if ( ! empty( $this->settings->photo_src ) ) {
 			$url = $this->settings->photo_src;
 		} else {
@@ -367,7 +366,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * @protected
 	 * @return string
 	 */
-	protected function _get_cropped_demo_url(): string {
+	protected function _get_cropped_demo_url() {
 		$info = $this->_get_cropped_path();
 
 		return FL_BUILDER_DEMO_CACHE_URL . $info['filename'];
