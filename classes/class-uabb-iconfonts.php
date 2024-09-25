@@ -102,6 +102,7 @@ class UABB_IconFonts {
 			@mkdir( $dst ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_mkdir
 		}
 
+		// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
 		while ( false !== ( $file = readdir( $dir ) ) ) {
 			if ( ( '.' !== $file ) && ( '..' !== $file ) ) {
 				if ( is_dir( $src . '/' . $file ) ) {

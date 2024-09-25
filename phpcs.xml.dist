@@ -17,6 +17,12 @@
         </properties>
     </rule>
 
+	<!-- Exclude the filename rule globally for all files -->
+    <rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+        <exclude-pattern>*.css.php</exclude-pattern>
+        <exclude-pattern>*.js.php</exclude-pattern>
+    </rule>
+
 	<!-- Show sniff codes in all reports -->
 	<arg value="s"/>
 

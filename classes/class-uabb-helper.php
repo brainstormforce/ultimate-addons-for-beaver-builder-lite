@@ -671,10 +671,10 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 *  @since 1.0
 		 *  @param string $target gets an string for the link.
 		 *  @param int    $is_nofollow gets an string for is no follow.
-		 *  @param int    $echo gets an string for echo.
+		 *  @param int    $should_echo gets an string for echo. Renaming the variable to $should_echo to avoid conflict with the built-in $echo parameter.
 		 *  @return string
 		 */
-		public static function get_link_rel( $target, $is_nofollow = 0, $echo = 0 ) {
+		public static function get_link_rel( $target, $is_nofollow = 0, $should_echo = 0 ) {
 
 			$attr = '';
 			if ( '_blank' === $target ) {
@@ -690,7 +690,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 			}
 
 			$attr = trim( $attr );
-			if ( ! $echo ) {
+			if ( ! $should_echo ) {
 				return 'rel="' . $attr . '"';
 			}
 			echo 'rel="' . esc_attr( $attr ) . '"';
