@@ -197,7 +197,7 @@ if ( '' !== $settings->separator_style ) {
 			'photo_src'           => ( isset( $settings->photo_src ) ) ? $settings->photo_src : '',
 
 			/*
-			 Icon color */
+			Icon color */
 			// 'icon_color'          => $settings->separator_icon_color,
 		);
 

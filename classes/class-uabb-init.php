@@ -53,7 +53,6 @@ class UABB_Init {
 			add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 			add_action( 'network_admin_notices', array( $this, 'admin_notices' ) );
 		}
-
 	}
 	/**
 	 * Function that renders links
@@ -104,7 +103,6 @@ class UABB_Init {
 
 		// Load the appropriate text-domain.
 		$this->load_plugin_textdomain();
-
 	}
 
 	/**
@@ -223,7 +221,6 @@ class UABB_Init {
 		if ( is_rtl() ) {
 			wp_enqueue_style( 'uabb-rtl-css', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-rtl.css', array() );
 		}
-
 	}
 
 	/**

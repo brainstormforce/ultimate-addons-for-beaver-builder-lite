@@ -247,10 +247,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 			return $h_padding;
 		}
-
 	}
 
 	new UABBGlobalSettingsOptions();
 }
-
-

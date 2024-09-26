@@ -953,4 +953,3 @@ function uabb_theme_padding_button( $mode, $value ) {
 
 	return $new_padding;
 }
-

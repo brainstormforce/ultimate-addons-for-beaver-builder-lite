@@ -110,7 +110,6 @@ class UABB_IconFonts {
 		}
 		closedir( $dir );
 	}
-
 }
 
 $UABB_IconFonts = new UABB_IconFonts(); // @codingStandardsIgnoreLine.

@@ -20,7 +20,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 * @param  array $font An array with font-family and weight.
 		 * @return void
 		 */
-		static public function uabb_font_css( $font ) {
+		public static function uabb_font_css( $font ) {
 			$css = '';
 
 			if ( array_key_exists( $font['family'], FLBuilderFontFamilies::$system ) ) {
@@ -45,7 +45,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 *
 		 * @param array $opacity returns the replacements values.
 		 */
-		static public function uabb_get_color( $hex, $opacity ) {
+		public static function uabb_get_color( $hex, $opacity ) {
 			$rgba = $hex;
 			if ( '' !== $opacity ) {
 				if ( 3 === strlen( $hex ) ) {
@@ -71,7 +71,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 * @param array $opacity returns the replacements values.
 		 * @param array $is_array returns the replacements values.
 		 */
-		static public function uabb_hex2rgba( $color, $opacity = false, $is_array = false ) {
+		public static function uabb_hex2rgba( $color, $opacity = false, $is_array = false ) {
 
 			$default = $color;
 
@@ -124,7 +124,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 * @param array $name returns the replacements values.
 		 * @param array $opc returns the replacements values.
 		 */
-		static public function uabb_colorpicker( $settings, $name = '', $opc = false ) {
+		public static function uabb_colorpicker( $settings, $name = '', $opc = false ) {
 
 			$hex_color = '';
 			$opacity   = '';
@@ -147,7 +147,6 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			}
 
 			return $hex_color;
-
 		}
 
 		/**
@@ -155,7 +154,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 *
 		 * @param var $gradient returns the bas values.
 		 */
-		static public function uabb_gradient_css( $gradient ) {
+		public static function uabb_gradient_css( $gradient ) {
 			$gradient_angle = intval( $gradient['angle'] );
 			$direction      = $gradient['direction'];
 			$color1         = '';
@@ -211,7 +210,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 *  @param string $echo gets an string for echo.
 		 *  @return string
 		 */
-		static public function get_link_rel( $target, $is_nofollow = 0, $echo = 0 ) {
+		public static function get_link_rel( $target, $is_nofollow = 0, $echo = 0 ) {
 
 			$attr = '';
 			if ( '_blank' === $target ) {

@@ -33,8 +33,6 @@ class UABBAdvancedIconModule extends FLBuilderModule {
 			)
 		);
 	}
-
-
 }
 
 /*

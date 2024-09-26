@@ -35,7 +35,6 @@ class UABBStarRatingModule extends FLBuilderModule {
 		);
 
 		$this->add_css( 'font-awesome-5' );
-
 	}
 
 		/**

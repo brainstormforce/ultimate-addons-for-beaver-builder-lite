@@ -401,7 +401,7 @@ class SlideBoxModule extends FLBuilderModule {
 			if ( ! isset( $settings->button->button_typo ) || ! is_object( $settings->button->button_typo ) ) {
 				$settings->button->button_typo            = new stdClass();
 				$settings->button->button_typo_medium     = new stdClass();
-				$settings->button->button_typo_responsive = new stdClass;
+				$settings->button->button_typo_responsive = new stdClass();
 			}
 			if ( isset( $settings->button->font_family ) ) {
 
@@ -1110,7 +1110,7 @@ class SlideBoxModule extends FLBuilderModule {
 		if ( 'style1' === $this->settings->slide_type && 'yes' === $this->settings->overlay ) {
 			/* Render HTML Function */
 			echo '<div class="uabb-slide-box-overlay">';
-			echo    '<span class="uabb-icon-wrap">
+			echo '<span class="uabb-icon-wrap">
                         <span class="uabb-icon">
                             <i class="' . esc_attr( $this->settings->overlay_icon ) . '"></i>
                         </span>
@@ -1136,7 +1136,7 @@ class SlideBoxModule extends FLBuilderModule {
 				'text'     => '',
 			);
 			echo '<div class="uabb-slide-dropdown">';
-			echo    '<span class="uabb-icon-wrap">
+			echo '<span class="uabb-icon-wrap">
                         <span class="uabb-icon">
                             <i class="fa fa-angle-down"></i> 
                         </span>
@@ -1154,7 +1154,7 @@ class SlideBoxModule extends FLBuilderModule {
 			);
 
 			echo '<div class="uabb-slide-dropdown">';
-			echo    '<span class="uabb-icon-wrap">
+			echo '<span class="uabb-icon-wrap">
                         <span class="uabb-icon">
                             <i class="fa fa-plus"></i> 
                         </span>

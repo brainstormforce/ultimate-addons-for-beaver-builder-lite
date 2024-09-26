@@ -228,7 +228,6 @@ class RibbonModule extends FLBuilderModule {
 			return '';
 		}
 	}
-
 }
 
 
@@ -242,4 +241,3 @@ if ( UABB_Lite_Compatibility::check_bb_version() ) {
 } else {
 	require_once BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php';
 }
-

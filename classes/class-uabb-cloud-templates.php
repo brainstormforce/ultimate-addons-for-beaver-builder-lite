@@ -243,7 +243,6 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 			} else {
 				return array();
 			}
-
 		}
 
 		/**
@@ -455,7 +454,6 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 				// Message for no templates found.
 				UABB_Cloud_Templates::message( 'not-found' );
 			}
-
 		}
 
 		/**
@@ -464,7 +462,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 * @since 1.0
 		 * @param string $dir_name verifies the dir name with bb-ultimate-addon.
 		 */
-		static public function create_local_dir( $dir_name = 'bb-ultimate-addon' ) {
+		public static function create_local_dir( $dir_name = 'bb-ultimate-addon' ) {
 
 			$wp_info = wp_upload_dir();
 
@@ -493,7 +491,6 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 
 			return $dir_info;
 		}
-
 	}
 }
 

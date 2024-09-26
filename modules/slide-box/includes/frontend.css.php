@@ -535,7 +535,7 @@ if ( 'style1' === $settings->slide_type ) {
 		<?php } ?>
 
 		<?php if ( 'yes' === $converted || isset( $settings->front_title_line_height_unit ) && '' !== $settings->front_title_line_height_unit ) { ?>
-			line-height: <?php echo  esc_attr( $settings->front_title_line_height_unit ); ?>em;  
+			line-height: <?php echo esc_attr( $settings->front_title_line_height_unit ); ?>em;  
 		<?php } elseif ( isset( $settings->front_title_line_height_unit ) && '' === $settings->front_title_line_height_unit && isset( $settings->front_title_line_height['desktop'] ) && '' !== $settings->front_title_line_height['desktop'] ) { ?>
 			line-height: <?php echo esc_attr( $settings->front_title_line_height['desktop'] ); ?>px;
 		<?php } ?>

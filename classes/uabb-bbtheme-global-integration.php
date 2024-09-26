@@ -64,7 +64,6 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 			add_filter( 'uabb/global/button_text_color', array( $this, 'uabb_global_button_text_color' ) );
 			add_filter( 'uabb/global/button_text_hover_color', array( $this, 'uabb_global_button_text_hover_color' ) );
-
 		}
 
 		/**

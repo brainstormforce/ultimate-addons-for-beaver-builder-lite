@@ -440,7 +440,7 @@ class FlipBoxModule extends FLBuilderModule {
 			if ( ! isset( $settings->button->button_typo ) || ! is_object( $settings->button->button_typo ) ) {
 				$settings->button->button_typo            = new stdClass();
 				$settings->button->button_typo_medium     = new stdClass();
-				$settings->button->button_typo_responsive = new stdClass;
+				$settings->button->button_typo_responsive = new stdClass();
 			}
 			if ( isset( $settings->button->font_family ) ) {
 				if ( isset( $settings->button->font_family->weight ) ) {
@@ -1060,4 +1060,3 @@ if ( UABB_Lite_Compatibility::check_bb_version() ) {
 } else {
 	require_once BB_ULTIMATE_ADDON_DIR . 'modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php';
 }
-

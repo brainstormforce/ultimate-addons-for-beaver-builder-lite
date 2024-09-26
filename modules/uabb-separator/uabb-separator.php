@@ -45,4 +45,3 @@ if ( UABB_Lite_Compatibility::check_bb_version() ) {
 } else {
 	require_once BB_ULTIMATE_ADDON_DIR . 'modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php';
 }
-

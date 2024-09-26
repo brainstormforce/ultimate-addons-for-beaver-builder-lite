@@ -174,7 +174,7 @@ class UABB_UI_Panels {
 	function fl_uabb_render_css( $css, $nodes, $global_settings ) {
 
 		$css .= file_get_contents( BB_ULTIMATE_ADDON_DIR . 'assets/css/uabb-frontend.css' );
-		$css .= include( BB_ULTIMATE_ADDON_DIR . 'assets/dynamic-css/uabb-theme-dynamic-css.php' );
+		$css .= include BB_ULTIMATE_ADDON_DIR . 'assets/dynamic-css/uabb-theme-dynamic-css.php';
 
 		return $css;
 	}
@@ -266,7 +266,7 @@ class UABB_UI_Panels {
 	 * @param array $templates Gets the array of UABB templates.
 	 * @param var   $status Checks for the status of UABB templates.
 	 */
-	static public function uabb_templates_data( $templates, $status = 'exclude' ) {
+	public static function uabb_templates_data( $templates, $status = 'exclude' ) {
 
 		if ( isset( $templates['categorized'] ) && count( $templates['categorized'] ) > 0 ) {
 
@@ -408,7 +408,6 @@ class UABB_UI_Panels {
 			wp_enqueue_script( 'uabb-panel-js', BB_ULTIMATE_ADDON_URL . 'assets/js/uabb-panel.js', array( 'jquery' ), '', true );
 		}
 	}
-
 }
 
 new UABB_UI_Panels();

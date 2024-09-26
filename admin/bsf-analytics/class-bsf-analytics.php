@@ -34,7 +34,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 
 			define( 'BSF_ANALYTICS_FILE', __FILE__ );
 			define( 'BSF_ANALYTICS_VERSION', '1.0.1' );
-			define( 'BSF_ANALYTICS_PATH', dirname( __FILE__ ) );
+			define( 'BSF_ANALYTICS_PATH', __DIR__ );
 			define( 'BSF_ANALYTICS_URI', $this->bsf_analytics_url() );
 
 			add_action( 'admin_init', array( $this, 'handle_optin_optout' ) );
@@ -399,7 +399,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 */
 		private function get_product_name() {
 
-			$base      = wp_normalize_path( dirname( __FILE__ ) );
+			$base      = wp_normalize_path( __DIR__ );
 			$theme_dir = wp_normalize_path( get_template_directory() );
 
 			if ( false !== strpos( $base, $theme_dir ) ) {

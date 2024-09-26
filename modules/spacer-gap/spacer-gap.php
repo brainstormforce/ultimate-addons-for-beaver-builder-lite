@@ -44,4 +44,3 @@ if ( UABB_Lite_Compatibility::check_bb_version() ) {
 } else {
 	require_once BB_ULTIMATE_ADDON_DIR . 'modules/spacer-gap/spacer-gap-bb-less-than-2-2-compatibility.php';
 }
-

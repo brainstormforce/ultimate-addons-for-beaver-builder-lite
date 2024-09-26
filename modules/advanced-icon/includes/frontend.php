@@ -73,7 +73,7 @@ foreach ( $settings->icons as $icon ) {
 		FLBuilder::render_module_html( 'image-icon', $imageicon_array );
 		echo '</a>';
 	}
-	$icon_count++;
+	++$icon_count;
 }
 
 ?>
