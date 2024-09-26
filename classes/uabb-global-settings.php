@@ -27,7 +27,7 @@ class UABB_Global_Styling {
 	 *
 	 * @since 1.0
 	 */
-	function add_options() {
+	public function add_options() {
 
 		$global_options = UABB_Init::$uabb_options['uabb_global_settings'];
 

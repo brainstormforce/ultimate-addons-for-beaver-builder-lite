@@ -207,10 +207,10 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 *  @since 1.3.0
 		 *  @param string $target gets an string for the link.
 		 *  @param string $is_nofollow gets an string for is no follow.
-		 *  @param string $echo gets an string for echo.
+		 *  @param string $should_echo gets an string for echo.
 		 *  @return string
 		 */
-		public static function get_link_rel( $target, $is_nofollow = 0, $echo = 0 ) {
+		public static function get_link_rel( $target, $is_nofollow = 0, $should_echo = 0 ) {
 
 			$attr = '';
 			if ( '_blank' === $target ) {
@@ -226,7 +226,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			}
 
 			$attr = trim( $attr );
-			if ( ! $echo ) {
+			if ( ! $should_echo ) {
 				return 'rel="' . $attr . '"';
 			}
 			echo 'rel="' . esc_attr( $attr ) . '"';

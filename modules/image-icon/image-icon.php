@@ -249,13 +249,13 @@ class ImageIconModule extends FLBuilderModule {
 		$photo = $this->get_data();
 
 		if ( ! empty( $photo->alt ) ) {
-			return htmlspecialchars( $photo->alt );
+			return htmlspecialchars( $photo->alt, ENT_QUOTES, 'UTF-8' ); // Added 'UTF-8' encoding.
 		} elseif ( ! empty( $photo->description ) ) {
-			return htmlspecialchars( $photo->description );
+			return htmlspecialchars( $photo->description, ENT_QUOTES, 'UTF-8' ); // Added 'UTF-8' encoding.
 		} elseif ( ! empty( $photo->caption ) ) {
-			return htmlspecialchars( $photo->caption );
+			return htmlspecialchars( $photo->caption, ENT_QUOTES, 'UTF-8' ); // Added 'UTF-8' encoding.
 		} elseif ( ! empty( $photo->title ) ) {
-			return htmlspecialchars( $photo->title );
+			return htmlspecialchars( $photo->title, ENT_QUOTES, 'UTF-8' ); // Added 'UTF-8' encoding.
 		}
 	}
 
