@@ -16,6 +16,11 @@
             <property name="strict_class_file_names" value="false" />
         </properties>
     </rule>
+	<!-- Exclude the filename rule globally for all files -->
+    <rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+        <exclude-pattern>*.css.php</exclude-pattern>
+        <exclude-pattern>*.js.php</exclude-pattern>
+    </rule>
 
 	<!-- Exclude the filename rule globally for all files -->
     <rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">

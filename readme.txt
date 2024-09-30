@@ -1,7 +1,7 @@
 === Ultimate Addons for Beaver Builder - Lite ===
 Contributors: brainstormforce
 Donate link: https://www.paypal.me/BrainstormForce
-Tags: beaver builder, beaver builder free, beaver addons, beaver builder addon, beaver builder add ons, beaver builder lite, beaver builder modules, beaver builder addons, beaver builder extensions, beaver addon, beaver builder plugin, beaver builder wordpress
+Tags: beaver builder, beaver builder free, beaver builder lite, beaver builder addons, beaver builder extensions
 Requires at least: 4.6
 Tested up to: 6.6
 Stable tag: 1.5.11
