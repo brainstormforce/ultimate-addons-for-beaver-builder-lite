@@ -233,7 +233,7 @@ if ( 'left' === $settings->icon_position ) {
 		<?php if ( '' !== $settings->space_between_elements ) { ?>
 			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper .uabb-info-list-item {
 				padding-right: <?php echo ( esc_attr( $settings->space_between_elements ) / 2 ); ?>px;
-				padding-left: <?php echo  ( esc_attr( $settings->space_between_elements ) / 2 ); ?>px;
+				padding-left: <?php echo ( esc_attr( $settings->space_between_elements ) / 2 ); ?>px;
 				padding-bottom: 0;
 			}
 		<?php } ?>

@@ -116,7 +116,6 @@ class UABBInfoList extends FLBuilderModule {
 		);
 		/* Render HTML Function */
 		FLBuilder::render_module_html( 'image-icon', $imageicon_array );
-
 	}
 	/**
 	 * Render text

@@ -27,7 +27,7 @@ class UABB_Global_Styling {
 	 *
 	 * @since 1.0
 	 */
-	function add_options() {
+	public function add_options() {
 
 		$global_options = UABB_Init::$uabb_options['uabb_global_settings'];
 
@@ -66,7 +66,7 @@ class UABB_Global_Styling {
 	 *
 	 * @since 1.0
 	 */
-	static public function init_actions() {
+	public static function init_actions() {
 		FLBuilderAJAX::add_action( 'render_uabb_global_settings', 'UABB_Global_Styling::render_uabb_global_settings' );
 		FLBuilderAJAX::add_action( 'save_uabb_global_settings', 'UABB_Global_Styling::save_uabb_global_settings', array( 'settings' ) );
 	}
@@ -76,7 +76,7 @@ class UABB_Global_Styling {
 	 *
 	 * @since 1.0
 	 */
-	static public function render_uabb_global_settings() {
+	public static function render_uabb_global_settings() {
 
 		$settings = self::get_uabb_global_settings();
 		$form     = FLBuilderModel::$settings_forms['uabb-global'];
@@ -97,7 +97,7 @@ class UABB_Global_Styling {
 	 *
 	 * @since 1.0
 	 */
-	static public function get_uabb_global_settings() {
+	public static function get_uabb_global_settings() {
 		$settings = UABB_Init::$uabb_options['uabb_global_settings'];
 
 		$defaults = FLBuilderModel::get_settings_form_defaults( 'uabb-global' );
@@ -114,7 +114,7 @@ class UABB_Global_Styling {
 	 * @since 1.0
 	 * @param array $settings gets a array of old and new settings values.
 	 */
-	static public function save_uabb_global_settings( $settings = array() ) {
+	public static function save_uabb_global_settings( $settings = array() ) {
 		$old_settings = self::get_uabb_global_settings();
 		$new_settings = (object) array_merge( (array) $old_settings, (array) $settings );
 

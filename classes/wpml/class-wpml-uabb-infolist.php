@@ -74,4 +74,3 @@ class WPML_UABB_Infolist extends WPML_Beaver_Builder_Module_With_Items {
 		}
 	}
 }
-

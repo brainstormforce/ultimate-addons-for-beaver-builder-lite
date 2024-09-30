@@ -133,7 +133,7 @@ foreach ( $settings->icons as $i => $icon ) :
 				<?php
 			}
 		}
-		$icon_count++;
+		++$icon_count;
 endforeach;
 ?>
 

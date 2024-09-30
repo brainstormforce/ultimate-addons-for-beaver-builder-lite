@@ -124,7 +124,7 @@ if ( 'none' !== $settings->image_type ) :
 				height: <?php echo esc_attr( $settings->icon_size ); ?>px;
 				width: <?php echo esc_attr( $settings->icon_size ); ?>px;
 				text-align: center;
-			<?php }; ?>
+			<?php } ?>
 
 			<?php /* Border Style */ ?>
 			<?php if ( 'custom' === $settings->icon_style && 'none' !== $settings->icon_border_style ) : ?>

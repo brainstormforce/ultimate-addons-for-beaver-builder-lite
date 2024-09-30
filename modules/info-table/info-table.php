@@ -673,4 +673,3 @@ if ( UABB_Lite_Compatibility::check_bb_version() ) {
 } else {
 	require_once BB_ULTIMATE_ADDON_DIR . 'modules/info-table/info-table-bb-less-than-2-2-compatibility.php';
 }
-

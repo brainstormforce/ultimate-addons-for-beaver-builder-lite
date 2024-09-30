@@ -19,14 +19,14 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 * @since 1.0
 		 * @var $basic_modules Category Strings
 		 */
-		static public $basic_modules = '';
+		public static $basic_modules = '';
 
 		/**
 		 * Constructor function that initializes required actions and hooks
 		 *
 		 * @since 1.0
 		 */
-		function __construct() {
+		public function __construct() {
 
 			$this->set_constants();
 		}
@@ -36,7 +36,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 *
 		 * @since 1.0
 		 */
-		function set_constants() {
+		public function set_constants() {
 			$branding            = BB_Ultimate_Addon_Helper::get_builder_uabb_branding();
 			self::$basic_modules = __( 'Basic', 'uabb' );
 			$branding_name       = 'UABB';
@@ -62,7 +62,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 * @since 1.0
 		 * @param array $cat gets the BB's UI ControlPanel Category.
 		 */
-		static public function module_cat( $cat ) {
+		public static function module_cat( $cat ) {
 			return class_exists( 'FLBuilderUIContentPanel' ) ? $cat : UABB_CAT;
 		}
 
@@ -71,7 +71,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 *
 		 * @since 1.0
 		 */
-		static public function get_builder_uabb() {
+		public static function get_builder_uabb() {
 			$uabb = UABB_Init::$uabb_options['fl_builder_uabb'];
 
 			$defaults = array(
@@ -107,7 +107,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 * @since 1.0
 		 * @param string $request_key gets the request key's value.
 		 */
-		static public function get_builder_uabb_branding( $request_key = '' ) {
+		public static function get_builder_uabb_branding( $request_key = '' ) {
 			$uabb = UABB_Init::$uabb_options['fl_builder_uabb_branding'];
 
 			$defaults = array(
@@ -148,7 +148,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 *
 		 * @since 1.0
 		 */
-		static public function get_all_modules() {
+		public static function get_all_modules() {
 			$modules_array = array(
 				'spacer-gap'       => 'Spacer / Gap',
 				'ribbon'           => 'Ribbon',
@@ -173,7 +173,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 *
 		 * @since 1.0
 		 */
-		static public function get_premium_modules() {
+		public static function get_premium_modules() {
 			$premium_modules_array = array(
 
 				'advanced-accordion'       => array(
@@ -570,7 +570,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 *
 		 * @since 1.0
 		 */
-		static public function get_builder_uabb_modules() {
+		public static function get_builder_uabb_modules() {
 			$uabb           = UABB_Init::$uabb_options['fl_builder_uabb_modules'];
 			$all_modules    = self::get_all_modules();
 			$is_all_modules = true;
@@ -666,10 +666,10 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 *  @since 1.0
 		 *  @param string $target gets an string for the link.
 		 *  @param string $is_nofollow gets an string for is no follow.
-		 *  @param string $echo gets an string for echo.
+		 *  @param string $should_echo gets an string for echo.
 		 *  @return string
 		 */
-		static public function get_link_rel( $target, $is_nofollow = 0, $echo = 0 ) {
+		public static function get_link_rel( $target, $is_nofollow = 0, $should_echo = 0 ) {
 
 			$attr = '';
 			if ( '_blank' === $target ) {
@@ -685,12 +685,11 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 			}
 
 			$attr = trim( $attr );
-			if ( ! $echo ) {
+			if ( ! $should_echo ) {
 				return 'rel="' . $attr . '"';
 			}
 			echo 'rel="' . esc_attr( $attr ) . '"';
 		}
-
 	}
 	new BB_Ultimate_Addon_Helper();
 }

@@ -38,7 +38,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		 *
 		 * @since 1.0
 		 */
-		function __construct() {
+		public function __construct() {
 
 			register_activation_hook( __FILE__, array( $this, 'activation_reset' ) );
 
@@ -51,7 +51,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		 *
 		 * @Since 1.0
 		 */
-		function activation_reset() {
+		public function activation_reset() {
 
 			$no_memory = $this->check_memory_limit();
 
@@ -75,7 +75,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		 *
 		 * @Since 1.0
 		 */
-		function check_memory_limit() {
+		public function check_memory_limit() {
 
 			$memory_limit  = ini_get( 'memory_limit' );       // Total Memory.
 			$peak_memory   = memory_get_peak_usage( true );   // Available Memory.

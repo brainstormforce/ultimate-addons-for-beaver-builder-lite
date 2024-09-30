@@ -639,12 +639,12 @@ if ( 'design02' !== $settings->box_design ) {
 }
 .fl-node-<?php echo esc_attr( $id ); ?> .info-table-heading .info-table-sub-heading {
 	<?php if ( isset( $settings->sub_heading_color ) ) { ?>
-		color:<?php echo  esc_attr( $settings->sub_heading_color ); ?>;
+		color:<?php echo esc_attr( $settings->sub_heading_color ); ?>;
 	<?php } ?>
 }
 .fl-node-<?php echo esc_attr( $id ); ?> .info-table .info-table-description {
 	<?php if ( isset( $settings->description_color ) ) { ?>
-		color:<?php echo  esc_attr( $settings->description_color ); ?>;
+		color:<?php echo esc_attr( $settings->description_color ); ?>;
 	<?php } ?>
 }
 <?php

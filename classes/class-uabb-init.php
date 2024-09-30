@@ -53,7 +53,6 @@ class UABB_Init {
 			add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 			add_action( 'network_admin_notices', array( $this, 'admin_notices' ) );
 		}
-
 	}
 	/**
 	 * Function that renders links
@@ -61,7 +60,7 @@ class UABB_Init {
 	 * @since 1.0
 	 * @param string $actions gets an link.
 	 */
-	function uabb_render_plugin_action_links( $actions ) {
+	public function uabb_render_plugin_action_links( $actions ) {
 
 		$actions[] = '<a href="' . BB_ULTIMATE_ADDON_UPGRADE_URL . '" style="color:#3db634;" title="Upgrade" target="_blank">' . _x( 'Upgrade', 'Plugin action link label.', 'uabb' ) . '</a>';
 
@@ -73,7 +72,7 @@ class UABB_Init {
 	 *
 	 * @since 1.0
 	 */
-	function includes() {
+	public function includes() {
 
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-update.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-compatibility.php';
@@ -104,14 +103,13 @@ class UABB_Init {
 
 		// Load the appropriate text-domain.
 		$this->load_plugin_textdomain();
-
 	}
 
 	/**
 	 *   For Performance.
 	 *   Set UABB static object to store data from database.
 	 */
-	static function set_uabb_options() {
+	public static function set_uabb_options() {
 		self::$uabb_options = array(
 			'fl_builder_uabb'          => FLBuilderModel::get_admin_settings_option( '_fl_builder_uabb', true ),
 			'fl_builder_uabb_branding' => FLBuilderModel::get_admin_settings_option( '_fl_builder_uabb_branding', false ),
@@ -128,7 +126,7 @@ class UABB_Init {
 	 * @param array  $defaults gets the array for the form defaults.
 	 * @param string $form_type gets an array to check the form type.
 	 */
-	function uabb_global_settings_form_defaults( $defaults, $form_type ) {
+	public function uabb_global_settings_form_defaults( $defaults, $form_type ) {
 
 		if ( class_exists( 'FLCustomizer' ) && 'uabb-global' === $form_type ) {
 
@@ -143,7 +141,7 @@ class UABB_Init {
 	 *
 	 * @since 1.0
 	 */
-	function init() {
+	public function init() {
 
 		if ( apply_filters( 'uabb_global_support', true ) && class_exists( 'FLBuilderAJAX' ) ) {
 			require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-global-settings.php';
@@ -175,7 +173,7 @@ class UABB_Init {
 	 *
 	 * @since 1.0
 	 */
-	function load_plugin_textdomain() {
+	public function load_plugin_textdomain() {
 		// Traditional WordPress plugin locale filter.
 		$locale = apply_filters( 'plugin_locale', get_locale(), 'uabb' );
 
@@ -200,7 +198,7 @@ class UABB_Init {
 	 *
 	 * @since 1.0
 	 */
-	function load_scripts() {
+	public function load_scripts() {
 
 		if ( FLBuilderModel::is_builder_active() ) {
 
@@ -223,7 +221,6 @@ class UABB_Init {
 		if ( is_rtl() ) {
 			wp_enqueue_style( 'uabb-rtl-css', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-rtl.css', array() );
 		}
-
 	}
 
 	/**
@@ -231,7 +228,7 @@ class UABB_Init {
 	 *
 	 * @since 1.0
 	 */
-	function admin_notices() {
+	public function admin_notices() {
 
 		if ( file_exists( plugin_dir_path( 'bb-plugin-agency/fl-builder.php' ) )
 			|| file_exists( plugin_dir_path( 'beaver-builder-lite-version/fl-builder.php' ) ) ) {
@@ -265,7 +262,7 @@ class UABB_Init {
 	 *
 	 * @since 1.0
 	 */
-	function load_modules() {
+	public function load_modules() {
 
 		$enable_modules = BB_Ultimate_Addon_Helper::get_builder_uabb_modules();
 		foreach ( $enable_modules as $file => $name ) {

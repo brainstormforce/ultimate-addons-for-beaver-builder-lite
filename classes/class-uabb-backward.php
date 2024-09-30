@@ -199,7 +199,6 @@ if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 
 			/* Update Flag */
 			update_post_meta( $post_id, '_uabb_lite_converted', 'yes' );
-
 		}
 
 		/**
