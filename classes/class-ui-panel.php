@@ -45,8 +45,10 @@ class UABB_UI_Panels {
 	 *  Function to add toggle UABB User Interface.
 	 *
 	 *  @since 1.0
+	 *
+	 * @return void
 	 */
-	function toggle_uabb_ui() {
+	public function toggle_uabb_ui() {
 
 		// Added ui panel.
 		add_action( 'wp_footer', array( $this, 'render_ui' ), 9 );
@@ -66,6 +68,8 @@ class UABB_UI_Panels {
 	 *  Function that initializes template selector data.
 	 *
 	 *  @since 1.0
+	 *
+	 * @return void
 	 */
 	public function init() {
 		add_filter( 'fl_builder_template_selector_data', array( $this, 'uabb_fl_builder_template_selector_data' ), 10, 2 );
@@ -78,8 +82,9 @@ class UABB_UI_Panels {
 	 *  @since 1.0
 	 *  @param array $template_data Gets the tags for the Template Data.
 	 *  @param array $template Gets the author for the Template Data.
+	 * @return array
 	 */
-	function uabb_fl_builder_template_selector_data( $template_data, $template ) {
+	public function uabb_fl_builder_template_selector_data( $template_data, $template ) {
 		$template_data['tags']   = isset( $template->tags ) ? $template->tags : array();
 		$template_data['author'] = isset( $template->author ) ? $template->author : '';
 		return $template_data;
@@ -89,8 +94,9 @@ class UABB_UI_Panels {
 	 *
 	 * @since 1.0
 	 * @param string $url Returns the URL of the Affiliate URL.
+	 * @return string
 	 */
-	function uabb_affiliate_url( $url ) {
+	public function uabb_affiliate_url( $url ) {
 
 		$url = 'https://www.wpbeaverbuilder.com/?fla=713';
 		return $url;
@@ -100,8 +106,13 @@ class UABB_UI_Panels {
 	 *
 	 * @since 1.0
 	 * @param string $url Returns the Key shortcut for showUABBGlobalSettings.
+	 * @return string
 	 */
-	function uabb_bsf_registration_page_url( $url ) {
+	public function uabb_bsf_registration_page_url( $url ) {
+		// Defining the constant.
+		if ( ! defined( 'FL_BUILDER_LITE' ) ) {
+			define( 'FL_BUILDER_LITE', '' );
+		}
 
 		if ( is_multisite() && false === FL_BUILDER_LITE ) {
 			return network_admin_url( '/settings.php?page=uabb-builder-multisite-settings#uabb-license' );
@@ -116,8 +127,9 @@ class UABB_UI_Panels {
 	 * @param string $form_heading Gets the form Heading.
 	 * @param string $license_status_class Gets the license status class.
 	 * @param string $license_status Gets the license status.
+	 * @return string
 	 */
-	function uabb_bsf_license_form_heading( $form_heading, $license_status_class, $license_status ) {
+	public function uabb_bsf_license_form_heading( $form_heading, $license_status_class, $license_status ) {
 
 		$branding_name       = BB_Ultimate_Addon_Helper::get_builder_uabb_branding( 'uabb-plugin-name' );
 		$branding_short_name = BB_Ultimate_Addon_Helper::get_builder_uabb_branding( 'uabb-plugin-short-name' );
@@ -138,8 +150,9 @@ class UABB_UI_Panels {
 	 * Skip Brainstorm Registration screen for UABB users
 	 *
 	 * @param array $products Gets an array of Products.
+	 * @return array
 	 */
-	function uabb_skip_brainstorm_menu( $products ) {
+	public function uabb_skip_brainstorm_menu( $products ) {
 
 		if ( function_exists( 'bsf_extract_product_id' ) ) {
 			$priduct_id = bsf_extract_product_id( BB_ULTIMATE_ADDON_DIR );
@@ -156,8 +169,9 @@ class UABB_UI_Panels {
 	 * @param file   $js Gets the js file contents.
 	 * @param array  $nodes Gets the nodes of the layout builder.
 	 * @param object $global_settings Gets the object for the Layout builder.
+	 * @return string|false
 	 */
-	function fl_uabb_render_js( $js, $nodes, $global_settings ) {
+	public function fl_uabb_render_js( $js, $nodes, $global_settings ) {
 		$temp = file_get_contents( BB_ULTIMATE_ADDON_DIR . 'assets/js/uabb-frontend.js' ) . $js;
 		$js   = $temp;
 		return $js;
@@ -170,11 +184,12 @@ class UABB_UI_Panels {
 	 * @param file   $css Gets the CSS file contents.
 	 * @param array  $nodes Gets the nodes of the layout builder.
 	 * @param object $global_settings Gets the object for the Layout builder.
+	 * @return string|false
 	 */
-	function fl_uabb_render_css( $css, $nodes, $global_settings ) {
+	public function fl_uabb_render_css( $css, $nodes, $global_settings ) {
 
 		$css .= file_get_contents( BB_ULTIMATE_ADDON_DIR . 'assets/css/uabb-frontend.css' );
-		$css .= include( BB_ULTIMATE_ADDON_DIR . 'assets/dynamic-css/uabb-theme-dynamic-css.php' );
+		$css .= include BB_ULTIMATE_ADDON_DIR . 'assets/dynamic-css/uabb-theme-dynamic-css.php';
 
 		return $css;
 	}
@@ -183,8 +198,9 @@ class UABB_UI_Panels {
 	 * Function that renders Config and templates function
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
-	function config() {
+	public function config() {
 
 		$is_templates_exist = BB_Ultimate_Addon_Helper::is_templates_exist();
 		if ( $is_templates_exist ) {
@@ -211,8 +227,9 @@ class UABB_UI_Panels {
 	 * Load cloud templates
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
-	function load_templates() {
+	public function load_templates() {
 
 		if ( ! method_exists( 'FLBuilder', 'register_templates' ) ) {
 			return;
@@ -247,8 +264,9 @@ class UABB_UI_Panels {
 	 * Function that renders Before Row Layouts
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
-	function uabb_panel_before_row_layouts() {
+	public function uabb_panel_before_row_layouts() {
 		?>
 			<!-- Search Module -->
 			<div id="fl-builder-blocks-rows" class="fl-builder-blocks-section">
@@ -263,10 +281,11 @@ class UABB_UI_Panels {
 	 *  2. Return ONLY UABB templates. If variable $status is NOT set to 'exclude'.
 	 *
 	 * @since 1.0
-	 * @param array $templates Gets the array of UABB templates.
-	 * @param var   $status Checks for the status of UABB templates.
+	 * @param array  $templates Gets the array of UABB templates.
+	 * @param string $status Checks for the status of UABB templates.
+	 * @return array
 	 */
-	static public function uabb_templates_data( $templates, $status = 'exclude' ) {
+	public function uabb_templates_data( $templates, $status = 'exclude' ) {
 
 		if ( isset( $templates['categorized'] ) && count( $templates['categorized'] ) > 0 ) {
 
@@ -307,8 +326,9 @@ class UABB_UI_Panels {
 	 *
 	 * @since 1.0
 	 * @param array $buttons Gets the buttons array for UI panel.
+	 * @return array
 	 */
-	function builder_ui_bar_buttons( $buttons ) {
+	public function builder_ui_bar_buttons( $buttons ) {
 
 		if ( is_callable( 'FLBuilderUserAccess::current_user_can' ) ) {
 			$simple_ui = ! FLBuilderUserAccess::current_user_can( 'unrestricted_editing' );
@@ -343,8 +363,9 @@ class UABB_UI_Panels {
 	 * Row panel showing sections - rows & modules
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
-	function render_ui() {
+	public function render_ui() {
 
 		global $wp_the_query;
 
@@ -384,8 +405,9 @@ class UABB_UI_Panels {
 	 * Function that renders live preview
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
-	function render_live_preview() {
+	public function render_live_preview() {
 		if ( FLBuilderModel::is_builder_active() ) {
 			/* Live Preview */
 			$uabb = BB_Ultimate_Addon_Helper::get_builder_uabb();
@@ -402,13 +424,14 @@ class UABB_UI_Panels {
 
 	/**
 	 * Enqueue Panel CSS and JS
+	 *
+	 * @return void
 	 */
-	function uabb_panel_css_js() {
+	public function uabb_panel_css_js() {
 		if ( FLBuilderModel::is_builder_active() ) {
 			wp_enqueue_script( 'uabb-panel-js', BB_ULTIMATE_ADDON_URL . 'assets/js/uabb-panel.js', array( 'jquery' ), '', true );
 		}
 	}
-
 }
 
 new UABB_UI_Panels();

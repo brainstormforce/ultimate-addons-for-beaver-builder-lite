@@ -6,7 +6,7 @@
  */
 
 /**
- * Function that initializes UABB Table of Content Module
+ * Class that initializes UABB Star Rating Module
  *
  * @class UABBStarRatingModule
  */
@@ -24,7 +24,7 @@ class UABBStarRatingModule extends FLBuilderModule {
 				'name'            => __( 'Star Rating', 'uabb' ),
 				'description'     => __( 'A module for Star Rating.', 'uabb' ),
 				'category'        => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'           => UABB_CAT,
+				'group'           => defined( 'UABB_CAT' ) ? UABB_CAT : '',
 				'dir'             => BB_ULTIMATE_ADDON_DIR . 'modules/uabb-star-rating/',
 				'url'             => BB_ULTIMATE_ADDON_URL . 'modules/uabb-star-rating/',
 				'editor_export'   => true, // Defaults to true and can be omitted.
@@ -35,7 +35,6 @@ class UABBStarRatingModule extends FLBuilderModule {
 		);
 
 		$this->add_css( 'font-awesome-5' );
-
 	}
 
 		/**
@@ -43,8 +42,11 @@ class UABBStarRatingModule extends FLBuilderModule {
 		 *
 		 * @method get_icons
 		 * @param string $icon gets the icon for the module.
+		 * @return string Icon path or empty string if not found
 		 */
 	public function get_icon( $icon = '' ) {
+
+		$path = ''; // Default Initialization.
 
 		// check if $icon is referencing an included icon.
 		if ( '' !== $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/uabb-star-rating/icon/' . $icon ) ) {
@@ -52,10 +54,11 @@ class UABBStarRatingModule extends FLBuilderModule {
 		}
 
 		if ( file_exists( $path ) ) {
-			return file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
-		} else {
-			return '';
+			$icon_content = file_get_contents( $path );
+			return false !== $icon_content ? $icon_content : '';
 		}
+
+		return ''; // Return an empty string if no icon found.
 	}
 }
 

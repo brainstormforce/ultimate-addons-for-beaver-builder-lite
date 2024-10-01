@@ -39,6 +39,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 *  Initiator
 		 *
 		 * @since 1.0
+		 * @return UABB_Cloud_Templates
 		 */
 		public static function get_instance() {
 			if ( ! isset( self::$instance ) ) {
@@ -52,7 +53,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 *
 		 * @since 1.0
 		 */
-		function __construct() {
+		public function __construct() {
 
 			self::$cloud_url = array(
 				'page-templates' => 'https://templates.ultimatebeaver.com/wp-json/uabb-lite/v1/template/layouts/',
@@ -66,8 +67,9 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 * Transient cloud templates
 		 *
 		 * @since 1.0
+		 * @return void
 		 */
-		static function reset_cloud_transient() {
+		public static function reset_cloud_transient() {
 
 			// get - downloaded templates.
 			$cloud_templates      = array();
@@ -186,8 +188,9 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 *
 		 * @since 1.0
 		 * @param string $type gets the type of the cloud templates.
+		 * @return int
 		 */
-		static function get_cloud_templates_count( $type = '' ) {
+		public static function get_cloud_templates_count( $type = '' ) {
 			$templates       = get_site_option( '_uabb_cloud_templats', false );
 			$templates_count = 0;
 
@@ -225,8 +228,9 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 *
 		 * @since 1.0
 		 * @param string $type gets the type of the cloud templates.
+		 * @return mixed
 		 */
-		static function get_cloud_templates( $type = '' ) {
+		public static function get_cloud_templates( $type = '' ) {
 
 			$templates = get_site_option( '_uabb_cloud_templats', false );
 
@@ -243,15 +247,15 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 			} else {
 				return array();
 			}
-
 		}
 
 		/**
 		 * Fetch cloud templates
 		 *
 		 * @since 1.0
+		 * @return void
 		 */
-		function fetch_cloud_templates() {
+		public function fetch_cloud_templates() {
 			if ( ! check_ajax_referer( 'uabb_cloud_nonce', 'form_nonce' ) || ! current_user_can( 'manage_options' ) ) {
 				wp_send_json_error(
 					array(
@@ -269,8 +273,9 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 *
 		 * @since 1.0
 		 * @param file $dat_file_type gets the DAT file type.
+		 * @return file|string
 		 */
-		function get_right_type_key( $dat_file_type ) {
+		public function get_right_type_key( $dat_file_type ) {
 
 			// Update the key.
 			if ( 'module' === $dat_file_type ) {
@@ -290,6 +295,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 * Function that renders load filesystem
 		 *
 		 * @since 1.0
+		 * @return void
 		 */
 		public static function load_filesystem() {
 			if ( null === self::$uabb_filesystem ) {
@@ -304,8 +310,9 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 *
 		 * @since 1.0
 		 * @param string $msg gets an string message.
+		 * @return void
 		 */
-		static function message( $msg ) {
+		public static function message( $msg ) {
 			if ( ! empty( $msg ) ) {
 				if ( 'not-found' === $msg ) { ?>
 					<div class="uabb-cloud-templates-not-found">
@@ -324,8 +331,9 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 *
 		 * @since 1.0
 		 * @param string $type gets the type page-templates.
+		 * @return void
 		 */
-		static function template_html( $type = 'page-templates' ) {
+		public static function template_html( $type = 'page-templates' ) {
 
 			$templates = self::get_cloud_templates( $type );
 
@@ -455,7 +463,6 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 				// Message for no templates found.
 				UABB_Cloud_Templates::message( 'not-found' );
 			}
-
 		}
 
 		/**
@@ -463,8 +470,9 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 *
 		 * @since 1.0
 		 * @param string $dir_name verifies the dir name with bb-ultimate-addon.
+		 * @return array
 		 */
-		static public function create_local_dir( $dir_name = 'bb-ultimate-addon' ) {
+		public static function create_local_dir( $dir_name = 'bb-ultimate-addon' ) {
 
 			$wp_info = wp_upload_dir();
 
@@ -493,7 +501,6 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 
 			return $dir_info;
 		}
-
 	}
 }
 

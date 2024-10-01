@@ -15,13 +15,13 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		/**
 		 * Gets the Beaver Builder theme's options
 		 *
-		 * @var $bb_options
+		 * @var array $bb_options
 		 */
 		public $bb_options;
 		/**
 		 * Constructor function that initializes required actions and hooks
 		 */
-		function __construct() {
+		public function __construct() {
 			/**
 			 *  **
 			 *  * Tracing Beaver Builder Theme Colors
@@ -64,13 +64,14 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 			add_filter( 'uabb/global/button_text_color', array( $this, 'uabb_global_button_text_color' ) );
 			add_filter( 'uabb/global/button_text_hover_color', array( $this, 'uabb_global_button_text_hover_color' ) );
-
 		}
 
 		/**
 		 * Theme Color -
+		 *
+		 * @return string
 		 */
-		function uabb_global_theme_color() {
+		public function uabb_global_theme_color() {
 			$color = $this->bb_options['theme_color'];
 
 			return $color;
@@ -78,8 +79,10 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Theme Text Color -
+		 *
+		 * @return string
 		 */
-		function uabb_global_text_color() {
+		public function uabb_global_text_color() {
 			$color = $this->bb_options['theme_text_color'];
 
 			return $color;
@@ -87,8 +90,10 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Button Background Color -
+		 *
+		 * @return string
 		 */
-		function uabb_global_button_bg_color() {
+		public function uabb_global_button_bg_color() {
 			$color = $this->bb_options['btn_bg_color'];
 
 			return $color;
@@ -97,8 +102,10 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Button Background Hover Color -
+		 *
+		 * @return string
 		 */
-		function uabb_global_button_bg_hover_color() {
+		public function uabb_global_button_bg_hover_color() {
 			$color = $this->bb_options['btn_bg_hover_color'];
 
 			return $color;
@@ -106,8 +113,10 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Button Text Color -
+		 *
+		 * @return string
 		 */
-		function uabb_global_button_text_color() {
+		public function uabb_global_button_text_color() {
 			$color = $this->bb_options['btn_text_color'];
 
 			return $color;
@@ -116,8 +125,10 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Button Text Hover Color -
+		 *
+		 * @return string
 		 */
-		function uabb_global_button_text_hover_color() {
+		public function uabb_global_button_text_hover_color() {
 			$color = $this->bb_options['btn_text_hover_color'];
 
 			return $color;

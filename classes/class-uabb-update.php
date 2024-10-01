@@ -40,7 +40,6 @@ if ( ! class_exists( 'UABB_lite_Plugin_Update' ) ) {
 
 			// UABB Updates.
 			add_action( 'init', __CLASS__ . '::init' );
-
 		}
 
 		/**
@@ -49,7 +48,7 @@ if ( ! class_exists( 'UABB_lite_Plugin_Update' ) ) {
 		 * @since 1.2.4
 		 * @return void
 		 */
-		static public function init() {
+		public static function init() {
 
 			// Get saved version number.
 			$saved_version = get_option( '_uabb_lite_saved_version', '0' );

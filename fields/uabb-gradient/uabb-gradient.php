@@ -18,7 +18,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 		 *
 		 * @since 1.0
 		 */
-		function __construct() {
+		public function __construct() {
 			add_action( 'fl_builder_control_uabb-gradient', array( $this, 'uabb_gradient' ), 1, 4 );
 			add_action( 'fl_builder_custom_fields', array( $this, 'ui_fields' ), 10, 1 );
 		}
@@ -27,9 +27,10 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 		 * Function that renders row's CSS
 		 *
 		 * @since 1.0
-		 * @param array $fields gets the fields for the gradient.
+		 * @param array<string, mixed> $fields gets the fields for the gradient.
+		 * @return array<string, mixed>
 		 */
-		function ui_fields( $fields ) {
+		public function ui_fields( $fields ) {
 			$fields['uabb-gradient'] = BB_ULTIMATE_ADDON_DIR . 'fields/uabb-gradient/ui-field-uabb-gradient.php';
 
 			return $fields;
@@ -58,8 +59,9 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 		 * @param array  $value gets an array of gradient values.
 		 * @param array  $field gets an array of field values.
 		 * @param object $settings gets the object of respective fields.
+		 * @return void
 		 */
-		function uabb_gradient( $name, $value, $field, $settings ) {
+		public function uabb_gradient( $name, $value, $field, $settings ) {
 
 			$name_new = 'uabb_' . $name;
 			$value    = (array) $value;

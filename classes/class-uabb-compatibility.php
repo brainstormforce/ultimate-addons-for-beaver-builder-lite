@@ -8,6 +8,10 @@
 
 if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 
+	if ( ! defined( 'FL_BUILDER_VERSION' ) ) {
+		define( 'FL_BUILDER_VERSION', '' );
+	}
+
 	/**
 	 * UABB_Plugin_Backward initial setup
 	 *
@@ -29,7 +33,7 @@ if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 		 * @since 1.3.0
 		 * @var $version_bb_check
 		 */
-		static public $version_bb_check;
+		public static $version_bb_check;
 
 		/**
 		 * Holds uabb migration status.
@@ -37,7 +41,7 @@ if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 		 * @since 1.3.0
 		 * @var $uabb_migration
 		 */
-		static public $uabb_migration;
+		public static $uabb_migration;
 
 		/**
 		 * Holds BB new page status.
@@ -45,12 +49,14 @@ if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 		 * @since 1.3.0
 		 * @var $stable_version_new_page
 		 */
-		static public $stable_version_new_page;
+		public static $stable_version_new_page;
 
 		/**
 		 * Initiator
+		 *
+		 * @return self
 		 */
-		static public function get_instance() {
+		public static function get_instance() {
 			if ( ! isset( self::$instance ) ) {
 				self::$instance = new self();
 			}
@@ -63,7 +69,7 @@ if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 		 * @since 1.3.0
 		 * @return bool self::$version_bb_check
 		 */
-		static public function check_bb_version() {
+		public static function check_bb_version() {
 
 			if ( null === self::$version_bb_check ) {
 
@@ -85,7 +91,7 @@ if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 		 * @since 1.3.0
 		 * @return string self::$uabb_migration
 		 */
-		static public function check_old_page_migration() {
+		public static function check_old_page_migration() {
 
 			if ( null === self::$uabb_migration ) {
 
@@ -101,9 +107,9 @@ if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 		 * Check if the page is created in between UABB version 1.7.0 - version 1.13.2
 		 *
 		 * @since 1.3.0
-		 * @return bool self::$stable_version_new_page
+		 * @return string self::$stable_version_new_page
 		 */
-		static public function check_stable_version_new_page() {
+		public static function check_stable_version_new_page() {
 
 			if ( null === self::$stable_version_new_page ) {
 

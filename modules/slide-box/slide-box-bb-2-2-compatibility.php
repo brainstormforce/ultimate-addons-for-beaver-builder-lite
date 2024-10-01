@@ -493,7 +493,6 @@ FLBuilder::register_module(
 						'back_background_color'  => array(
 							'type'        => 'color',
 							'label'       => __( 'Background Color', 'uabb' ),
-							'default'     => '',
 							'show_reset'  => true,
 							'connections' => array( 'color' ),
 							'show_alpha'  => true,

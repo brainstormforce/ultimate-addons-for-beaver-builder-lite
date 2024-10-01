@@ -20,7 +20,7 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 		 * @since 1.2.2
 		 * @return void
 		 */
-		static public function init() {
+		public static function init() {
 			add_filter( 'wpml_beaver_builder_modules_to_translate', __CLASS__ . '::wpml_uabb_modules_translate' );
 			UABBLite_WPML_Translatable::load_files();
 		}
@@ -29,12 +29,13 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 		 * Load files.
 		 *
 		 * @since 1.2.2
+		 *
+		 * @return void
 		 */
-		static public function load_files() {
+		public static function load_files() {
 			if ( class_exists( 'WPML_Page_Builders_Defined' ) ) {
 				require_once BB_ULTIMATE_ADDON_DIR . 'classes/wpml/class-wpml-uabb-infolist.php';
 			}
-
 		}
 
 		/**
@@ -44,7 +45,7 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 		 * @param array $form gets the forms array to be resolved.
 		 * @return array
 		 */
-		static public function wpml_uabb_modules_translate( $form ) {
+		public static function wpml_uabb_modules_translate( $form ) {
 
 			// Button Module.
 			$form['uabb-button'] = array(

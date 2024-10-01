@@ -23,7 +23,7 @@ class UABBSeparatorModule extends FLBuilderModule {
 				'name'            => __( 'Simple Separator', 'uabb' ),
 				'description'     => __( 'A divider line to separate content.', 'uabb' ),
 				'category'        => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'           => UABB_CAT,
+				'group'           => defined( 'UABB_CAT' ) ? UABB_CAT : '', // Define the constant before use.
 				'dir'             => BB_ULTIMATE_ADDON_DIR . 'modules/uabb-separator/',
 				'url'             => BB_ULTIMATE_ADDON_URL . 'modules/uabb-separator/',
 				'editor_export'   => false,
@@ -45,4 +45,3 @@ if ( UABB_Lite_Compatibility::check_bb_version() ) {
 } else {
 	require_once BB_ULTIMATE_ADDON_DIR . 'modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php';
 }
-

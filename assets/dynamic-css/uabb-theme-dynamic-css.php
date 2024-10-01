@@ -6,6 +6,13 @@
  */
 
 ob_start();
+
+// Ensure $global_settings is defined and initialized.
+if ( ! isset( $global_settings ) ) {
+	// Create an empty object to avoid undefined errors.
+	$global_settings = new stdClass();
+}
+
 ?>
 
 /* Theme Button

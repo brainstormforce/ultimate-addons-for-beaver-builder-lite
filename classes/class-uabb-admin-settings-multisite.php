@@ -19,7 +19,7 @@ final class UABBBuilderMultisiteSettings {
 	 * @since 1.0
 	 * @return void
 	 */
-	static public function init() {
+	public static function init() {
 		add_action( 'admin_init', __CLASS__ . '::admin_init' );
 		add_action( 'admin_init', __CLASS__ . '::uabb_lite_redirect_on_activation' );
 		add_action( 'network_admin_menu', __CLASS__ . '::menu' );
@@ -30,8 +30,9 @@ final class UABBBuilderMultisiteSettings {
 	 *
 	 * @since 1.0
 	 * @param string $url gets the activate redirect URL.
+	 * @return void
 	 */
-	static public function uabb_lite_redirect_on_activation( $url ) {
+	public static function uabb_lite_redirect_on_activation( $url ) {
 		if ( true === get_option( 'uabb_lite_redirect' ) ) {
 			update_option( 'uabb_lite_redirect', false );
 			if ( ! is_multisite() ) :
@@ -47,7 +48,7 @@ final class UABBBuilderMultisiteSettings {
 	 * @since 1.0
 	 * @return void
 	 */
-	static public function admin_init() {
+	public static function admin_init() {
 		if ( is_network_admin() && isset( $_REQUEST['page'] ) && 'uabb-builder-multisite-settings' === $_REQUEST['page'] ) {
 			add_action( 'admin_enqueue_scripts', 'UABBBuilderAdminSettings::styles_scripts' );
 			UABBBuilderAdminSettings::save();
@@ -60,7 +61,7 @@ final class UABBBuilderMultisiteSettings {
 	 * @since 1.0
 	 * @return void
 	 */
-	static public function menu() {
+	public static function menu() {
 		$title = UABB_PREFIX; // FLBuilderModel::get_branding();.
 		$cap   = 'manage_network_plugins';
 		$slug  = 'uabb-builder-multisite-settings';

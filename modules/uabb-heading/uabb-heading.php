@@ -23,7 +23,7 @@ class UABBHeadingModule extends FLBuilderModule {
 				'name'            => __( 'Heading', 'uabb' ),
 				'description'     => __( 'Display a title/page heading.', 'uabb' ),
 				'category'        => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'           => UABB_CAT,
+				'group'           => defined( 'UABB_CAT' ) ? UABB_CAT : '', // Defining the constant.
 				'dir'             => BB_ULTIMATE_ADDON_DIR . 'modules/uabb-heading/',
 				'url'             => BB_ULTIMATE_ADDON_URL . 'modules/uabb-heading/',
 				'partial_refresh' => true,
@@ -36,13 +36,14 @@ class UABBHeadingModule extends FLBuilderModule {
 	 * Function that renders pos.
 	 *
 	 * @method render_image
+	 * @return void // As the method does not return any value and just renders html
 	 */
 	public function render_image() {
 		if ( 'line_image' === $this->settings->separator_style || 'line_icon' === $this->settings->separator_style ) {
 			$imageicon_array = array(
 
 				/* General Section */
-				'image_type'   => ( 'line_image' === $this->settings->separator_style ) ? 'photo' : ( ( 'line_icon' === $this->settings->separator_style ) ? 'icon' : '' ),
+				'image_type'   => ( 'line_image' === $this->settings->separator_style ) ? 'photo' : 'icon', // Removed unreachable condition.
 
 				/* Icon Basics */
 				'icon'         => $this->settings->icon,

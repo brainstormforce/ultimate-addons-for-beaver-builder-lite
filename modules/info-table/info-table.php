@@ -22,7 +22,7 @@ class UABBInfoTableModule extends FLBuilderModule {
 				'name'            => __( 'Info Table', 'uabb' ),
 				'description'     => __( 'A basic info table.', 'uabb' ),
 				'category'        => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'           => UABB_CAT,
+				'group'           => defined( 'UABB_CAT' ) ? UABB_CAT : '',
 				'dir'             => BB_ULTIMATE_ADDON_DIR . 'modules/info-table/',
 				'url'             => BB_ULTIMATE_ADDON_URL . 'modules/info-table/',
 				'editor_export'   => true, // Defaults to true and can be omitted.
@@ -673,4 +673,3 @@ if ( UABB_Lite_Compatibility::check_bb_version() ) {
 } else {
 	require_once BB_ULTIMATE_ADDON_DIR . 'modules/info-table/info-table-bb-less-than-2-2-compatibility.php';
 }
-

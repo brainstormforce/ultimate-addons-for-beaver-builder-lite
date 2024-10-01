@@ -3,7 +3,7 @@
  * Plugin Name: Ultimate Addons for Beaver Builder - Lite
  * Plugin URI: http://www.ultimatebeaver.com/
  * Description: Ultimate Addons is a free extension for Beaver Builder that adds 10 modules, and works on top of any Beaver Builder Package. (Free, Standard, Pro & Agency) You can use it with on any WordPress theme.
- * Version: 1.5.11
+ * Version: 1.5.12
  * Author: Brainstorm Force
  * Author URI: http://www.brainstormforce.com
  * Text Domain: uabb
@@ -18,7 +18,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 
 	define( 'BB_ULTIMATE_ADDON_DIR', plugin_dir_path( __FILE__ ) );
 	define( 'BB_ULTIMATE_ADDON_URL', plugins_url( '/', __FILE__ ) );
-	define( 'BB_ULTIMATE_ADDON_LITE_VERSION', '1.5.11' );
+	define( 'BB_ULTIMATE_ADDON_LITE_VERSION', '1.5.12' );
 	define( 'BSF_REMOVE_UABB_FROM_REGISTRATION_LISTING', true );
 	define( 'BB_ULTIMATE_ADDON_FILE', trailingslashit( dirname( __FILE__ ) ) . 'bb-ultimate-addon.php' );// @codingStandardsIgnoreLine.
 	define( 'BB_ULTIMATE_ADDON_LITE', true );
@@ -38,7 +38,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		 *
 		 * @since 1.0
 		 */
-		function __construct() {
+		public function __construct() {
 
 			register_activation_hook( __FILE__, array( $this, 'activation_reset' ) );
 
@@ -51,7 +51,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		 *
 		 * @Since 1.0
 		 */
-		function activation_reset() {
+		public function activation_reset() {
 
 			$no_memory = $this->check_memory_limit();
 
@@ -75,7 +75,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		 *
 		 * @Since 1.0
 		 */
-		function check_memory_limit() {
+		public function check_memory_limit() {
 
 			$memory_limit  = ini_get( 'memory_limit' );       // Total Memory.
 			$peak_memory   = memory_get_peak_usage( true );   // Available Memory.

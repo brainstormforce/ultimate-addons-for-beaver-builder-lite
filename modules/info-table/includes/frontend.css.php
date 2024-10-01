@@ -9,6 +9,27 @@ global $post;
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
+// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
+// Ensure $id is defined and initialized.
+if ( ! isset( $id ) ) {
+	$id = '';
+}
+
+// Ensure $global_settings is defined and initialized.
+if ( ! isset( $global_settings ) ) {
+	// Create an empty object to avoid undefined errors.
+	$global_settings = new stdClass();
+}
+
+$bg_grad_start = ''; // Ensure $bg_grad_start is always defined.
+
+// Initialize $spacing variable.
+$spacing = 0;
+
 $settings->btn_text_color       = FLBuilderColor::hex_or_rgb( $settings->btn_text_color );
 $settings->btn_text_hover_color = FLBuilderColor::hex_or_rgb( $settings->btn_text_hover_color );
 $settings->heading_color        = FLBuilderColor::hex_or_rgb( $settings->heading_color );
@@ -639,12 +660,12 @@ if ( 'design02' !== $settings->box_design ) {
 }
 .fl-node-<?php echo esc_attr( $id ); ?> .info-table-heading .info-table-sub-heading {
 	<?php if ( isset( $settings->sub_heading_color ) ) { ?>
-		color:<?php echo  esc_attr( $settings->sub_heading_color ); ?>;
+		color:<?php echo esc_attr( $settings->sub_heading_color ); ?>;
 	<?php } ?>
 }
 .fl-node-<?php echo esc_attr( $id ); ?> .info-table .info-table-description {
 	<?php if ( isset( $settings->description_color ) ) { ?>
-		color:<?php echo  esc_attr( $settings->description_color ); ?>;
+		color:<?php echo esc_attr( $settings->description_color ); ?>;
 	<?php } ?>
 }
 <?php
@@ -779,12 +800,20 @@ if ( ! $version_bb_check ) {
 			<?php endif; ?>
 			<?php if ( 'yes' === $converted || isset( $settings->btn_font_size_unit ) && '' !== $settings->btn_font_size_unit ) { ?>
 				font-size: <?php echo esc_attr( $settings->btn_font_size_unit ); ?>px;
-				<?php if ( '' === $settings->btn_line_height_unit && '' !== $settings->btn_font_size_unit ) { ?>
-					line-height: <?php echo esc_attr( $settings->btn_font_size_unit ) + 5; ?>px;
+				<?php
+				if ( '' === $settings->btn_line_height_unit && '' !== $settings->btn_font_size_unit ) {
+					?>
+					<?php
+					$line_height = floatval( $settings->btn_font_size_unit ) + 5;
+					echo "line-height: {$line_height}px;";
+					?>
 				<?php } ?>		
 			<?php } elseif ( isset( $settings->btn_font_size_unit ) && '' === $settings->btn_font_size_unit && isset( $settings->btn_font_size['desktop'] ) && '' !== $settings->btn_font_size['desktop'] ) { ?>
 				font-size: <?php echo esc_attr( $settings->btn_font_size['desktop'] ); ?>px;
-				line-height: <?php echo esc_attr( $settings->btn_font_size['desktop'] ) + 5; ?>px;
+				<?php
+						$line_height = floatval( $settings->btn_font_size['desktop'] ) + 5;
+						echo "line-height: {$line_height}px;";
+				?>
 			<?php } ?>
 
 			<?php if ( isset( $settings->btn_font_size['desktop'] ) && '' === $settings->btn_font_size['desktop'] && isset( $settings->btn_line_height['desktop'] ) && '' !== $settings->btn_line_height['desktop'] && '' === $settings->btn_line_height_unit ) { ?>

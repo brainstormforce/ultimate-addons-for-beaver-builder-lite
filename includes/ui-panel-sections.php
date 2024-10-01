@@ -7,6 +7,17 @@
  *  @package Templates from sections and presets
  */
 
+// Ensure required variables are set.
+$has_editing_cap    = isset( $has_editing_cap ) ? $has_editing_cap : false;
+$is_module_template = isset( $is_module_template ) ? $is_module_template : false;
+$is_row_template    = isset( $is_row_template ) ? $is_row_template : false;
+$row_templates      = isset( $row_templates ) ? $row_templates : array();
+
+// Defining the constant.
+if ( ! defined( 'UABB_PREFIX' ) ) {
+	define( 'UABB_PREFIX', '' );
+}
+
 ?>
 
 <div class="fl-builder-panel fl-builder-panel-ultimate-rows">

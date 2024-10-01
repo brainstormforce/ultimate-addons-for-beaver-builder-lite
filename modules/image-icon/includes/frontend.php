@@ -5,6 +5,16 @@
  *  @package UABB Image Icon Module
  */
 
+// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
+// Ensure $module is defined and initialized.
+if ( ! isset( $module ) ) {
+	$module = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
 ?>
 <?php if ( 'none' !== $settings->image_type && '' !== $settings->image_type ) { ?>
 <div class="uabb-module-content uabb-imgicon-wrap"><?php /* Module Wrap */ ?>

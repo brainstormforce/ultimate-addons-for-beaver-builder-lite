@@ -508,7 +508,6 @@ FLBuilder::register_module(
 						'back_background_color'     => array(
 							'type'       => 'color',
 							'label'      => __( 'Background Color', 'uabb' ),
-							'default'    => '',
 							'show_reset' => true,
 							'default'    => 'f6f6f6',
 							'preview'    => array(
@@ -1100,4 +1099,3 @@ FLBuilder::register_module(
 		),
 	)
 );
-

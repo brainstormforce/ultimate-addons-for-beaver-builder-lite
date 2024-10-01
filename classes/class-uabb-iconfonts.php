@@ -24,6 +24,7 @@ class UABB_IconFonts {
 	 * Function that initializes UABB reload Icons
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
 	public function init() {
 		add_action( 'wp_ajax_uabb_reload_icons', array( $this, 'reload_icons' ) );
@@ -33,8 +34,9 @@ class UABB_IconFonts {
 	 * Function that renders reload Icons
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
-	function reload_icons() {
+	public function reload_icons() {
 
 		if ( ! wp_verify_nonce( $_POST['nonce'], 'uabb-reload-icons' ) || ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error(
@@ -53,8 +55,9 @@ class UABB_IconFonts {
 	 * Function that registers UABB Icons
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
-	function register_icons() {
+	public function register_icons() {
 
 		// Update initially.
 		$uabb_icons = get_option( '_uabb_enabled_icons', 0 );
@@ -91,7 +94,7 @@ class UABB_IconFonts {
 	 * @param array $src an array to get the src.
 	 * @param array $dst an object to get destination of the file.
 	 */
-	function recurse_copy( $src, $dst ) {
+	public function recurse_copy( $src, $dst ) {
 		$dir = opendir( $src );
 
 		// Create directory if not exist.
@@ -99,6 +102,7 @@ class UABB_IconFonts {
 			@mkdir( $dst ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_mkdir
 		}
 
+		// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
 		while ( false !== ( $file = readdir( $dir ) ) ) {
 			if ( ( '.' !== $file ) && ( '..' !== $file ) ) {
 				if ( is_dir( $src . '/' . $file ) ) {
@@ -110,7 +114,6 @@ class UABB_IconFonts {
 		}
 		closedir( $dir );
 	}
-
 }
 
 $UABB_IconFonts = new UABB_IconFonts(); // @codingStandardsIgnoreLine.

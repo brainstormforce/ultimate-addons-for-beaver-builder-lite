@@ -22,7 +22,7 @@ class UABBInfoList extends FLBuilderModule {
 				'name'            => __( 'Info List', 'uabb' ),
 				'description'     => __( 'A totally awesome module!', 'uabb' ),
 				'category'        => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'           => UABB_CAT,
+				'group'           => defined( 'UABB_CAT' ) ? UABB_CAT : '',
 				'dir'             => BB_ULTIMATE_ADDON_DIR . 'modules/info-list/',
 				'url'             => BB_ULTIMATE_ADDON_URL . 'modules/info-list/',
 				'editor_export'   => true, // Defaults to true and can be omitted.
@@ -46,16 +46,23 @@ class UABBInfoList extends FLBuilderModule {
 	 */
 	public function get_icon( $icon = '' ) {
 
+		// Initialize $path before the first if statement.
+		$path = '';
+
 		// check if $icon is referencing an included icon.
 		if ( '' !== $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/info-list/icon/' . $icon ) ) {
 			$path = BB_ULTIMATE_ADDON_DIR . 'modules/info-list/icon/' . $icon;
 		}
 
 		if ( file_exists( $path ) ) {
-			return file_get_contents( $path ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
-		} else {
-			return '';
+			$contents = file_get_contents( $path ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+			if ( false !== $contents ) {
+				return $contents;
+			}
 		}
+
+		// If we reach this point, either the file doesn't exist or file_get_contents failed.
+		return '';
 	}
 
 	/**
@@ -64,6 +71,7 @@ class UABBInfoList extends FLBuilderModule {
 	 * @method render_image
 	 * @param object $item gets the object for the module.
 	 * @param object $settings gets the settings for the module.
+	 * @return void
 	 */
 	public function render_image( $item, $settings ) {
 
@@ -116,7 +124,6 @@ class UABBInfoList extends FLBuilderModule {
 		);
 		/* Render HTML Function */
 		FLBuilder::render_module_html( 'image-icon', $imageicon_array );
-
 	}
 	/**
 	 * Render text
@@ -124,6 +131,7 @@ class UABBInfoList extends FLBuilderModule {
 	 * @method render_text
 	 * @param object $item gets the items.
 	 * @param var    $list_item_counter  counts the list item counter value.
+	 * @return void
 	 */
 	public function render_each_item( $item, $list_item_counter ) {
 		$target   = '';
@@ -207,6 +215,7 @@ class UABBInfoList extends FLBuilderModule {
 	 * Render List text
 	 *
 	 * @method render_text
+	 * @return void
 	 */
 	public function render_list() {
 		$info_list_html    = '';

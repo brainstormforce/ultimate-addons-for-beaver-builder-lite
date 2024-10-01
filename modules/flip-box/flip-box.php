@@ -22,7 +22,7 @@ class FlipBoxModule extends FLBuilderModule {
 				'name'          => __( 'Flip Box', 'uabb' ),
 				'description'   => __( 'Flip Box', 'uabb' ),
 				'category'      => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'         => UABB_CAT,
+				'group'         => defined( 'UABB_CAT' ) ? UABB_CAT : '',
 				'dir'           => BB_ULTIMATE_ADDON_DIR . 'modules/flip-box/',
 				'url'           => BB_ULTIMATE_ADDON_URL . 'modules/flip-box/',
 				'editor_export' => true, // Defaults to true and can be omitted.
@@ -38,8 +38,10 @@ class FlipBoxModule extends FLBuilderModule {
 	 *
 	 * @method get_icons
 	 * @param string $icon gets an string to check if $icon is referencing an included icon.
+	 * @return string Icon path or empty string if not found
 	 */
 	public function get_icon( $icon = '' ) {
+		$path = ''; // Default Initialization.
 
 		// check if $icon is referencing an included icon.
 		if ( '' !== $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/flip-box/icon/' . $icon ) ) {
@@ -47,10 +49,11 @@ class FlipBoxModule extends FLBuilderModule {
 		}
 
 		if ( file_exists( $path ) ) {
-			return file_get_contents( $path ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
-		} else {
-			return '';
+			$icon_content = file_get_contents( $path );
+			return false !== $icon_content ? $icon_content : '';
 		}
+
+		return ''; // Return an empty string if no icon found.
 	}
 
 
@@ -58,6 +61,7 @@ class FlipBoxModule extends FLBuilderModule {
 	 * Function that renders the button for the button
 	 *
 	 * @method render_button
+	 * @return void
 	 */
 	public function render_button() {
 		if ( 'yes' === $this->settings->show_button ) {
@@ -71,6 +75,7 @@ class FlipBoxModule extends FLBuilderModule {
 	 * Function that renders the Icon or Photo for the Flip Box
 	 *
 	 * @method render_icon
+	 * @return void
 	 */
 	public function render_icon() {
 		if ( '' !== $this->settings->smile_icon && '' !== $this->settings->smile_icon->icon ) {
@@ -440,7 +445,7 @@ class FlipBoxModule extends FLBuilderModule {
 			if ( ! isset( $settings->button->button_typo ) || ! is_object( $settings->button->button_typo ) ) {
 				$settings->button->button_typo            = new stdClass();
 				$settings->button->button_typo_medium     = new stdClass();
-				$settings->button->button_typo_responsive = new stdClass;
+				$settings->button->button_typo_responsive = new stdClass();
 			}
 			if ( isset( $settings->button->font_family ) ) {
 				if ( isset( $settings->button->font_family->weight ) ) {
@@ -1060,4 +1065,3 @@ if ( UABB_Lite_Compatibility::check_bb_version() ) {
 } else {
 	require_once BB_ULTIMATE_ADDON_DIR . 'modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php';
 }
-

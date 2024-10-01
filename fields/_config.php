@@ -19,7 +19,7 @@ if ( ! class_exists( 'UABB_Custom_Field_Scripts' ) ) {
 		 *
 		 * @since 1.0
 		 */
-		function __construct() {
+		public function __construct() {
 			add_action( 'wp_enqueue_scripts', array( $this, 'custom_field_scripts' ) );
 		}
 
@@ -27,8 +27,9 @@ if ( ! class_exists( 'UABB_Custom_Field_Scripts' ) ) {
 		 * Function that enqueue styles and scripts
 		 *
 		 * @since 1.0
+		 * @return void
 		 */
-		function custom_field_scripts() {
+		public function custom_field_scripts() {
 			if ( class_exists( 'FLBuilderModel' ) && FLBuilderModel::is_builder_active() ) {
 
 				/* uabb-gradient field */

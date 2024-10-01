@@ -5,6 +5,11 @@
  *  @package UABB Advanced Icon Module
  */
 
+// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
 ?>
 
 <div class="uabb-module-content adv-icon-wrap adv-icon-<?php echo esc_attr( $settings->icon_struc_align ); ?> adv-icon-<?php echo esc_attr( $settings->align ); ?>">
@@ -73,7 +78,7 @@ foreach ( $settings->icons as $icon ) {
 		FLBuilder::render_module_html( 'image-icon', $imageicon_array );
 		echo '</a>';
 	}
-	$icon_count++;
+	++$icon_count;
 }
 
 ?>

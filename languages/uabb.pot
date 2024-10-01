@@ -2,11 +2,11 @@
 # This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.5.11\n"
+"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.5.12\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-"
 "lite\n"
-"POT-Creation-Date: 2024-07-25 10:38:34+00:00\n"
+"POT-Creation-Date: 2024-10-01 08:49:20+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,47 +26,47 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: admin/bsf-analytics/class-bsf-analytics.php:183
+#: admin/bsf-analytics/class-bsf-analytics.php:185
 #. translators: %s product name
 msgid ""
 "Want to help make <strong>%1s</strong> even more awesome? Allow us to "
 "collect non-sensitive diagnostic data and usage information. "
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:186
+#: admin/bsf-analytics/class-bsf-analytics.php:188
 msgid "This will be applicable for all sites from the network."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:210
+#: admin/bsf-analytics/class-bsf-analytics.php:212
 #. translators: %s usage doc link
 msgid " Know More."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:217
+#: admin/bsf-analytics/class-bsf-analytics.php:219
 msgid "Yes! Allow it"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:225
+#: admin/bsf-analytics/class-bsf-analytics.php:227
 msgid "No Thanks"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:294
+#: admin/bsf-analytics/class-bsf-analytics.php:300
 msgid "Every two days"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:348
+#: admin/bsf-analytics/class-bsf-analytics.php:358
 msgid "Usage Tracking"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:380
+#: admin/bsf-analytics/class-bsf-analytics.php:392
 msgid "Allow Brainstorm Force products to track non-sensitive usage tracking data."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:383
+#: admin/bsf-analytics/class-bsf-analytics.php:395
 msgid " This will be applicable for all sites from the network."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:388
+#: admin/bsf-analytics/class-bsf-analytics.php:400
 msgid "Learn More."
 msgstr ""
 
@@ -91,96 +91,96 @@ msgid ""
 "one</a> before continuing."
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:117
+#: classes/class-uabb-admin-settings.php:118
 msgid ""
 "Hello! Thank you for choosing the Ultimate Addon for Beaver Builder to "
 "build this website!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:118
+#: classes/class-uabb-admin-settings.php:119
 msgid ""
 "Would you please mind sharing your views and give it a 5 star rating on the "
 "WordPress repository?"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:120
+#: classes/class-uabb-admin-settings.php:121
 msgid "Ok, you deserve it"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:122
+#: classes/class-uabb-admin-settings.php:123
 msgid "Nope, maybe later"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:123
+#: classes/class-uabb-admin-settings.php:124
 msgid "I already did"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:178
+#: classes/class-uabb-admin-settings.php:179
 msgid "Something went wrong!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:179
+#: classes/class-uabb-admin-settings.php:180
 msgid "Complete"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:180
+#: classes/class-uabb-admin-settings.php:181
 msgid "Refreshed!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:181
+#: classes/class-uabb-admin-settings.php:182
 msgid "Try Again!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:182
+#: classes/class-uabb-admin-settings.php:183
 msgid "Installed!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:183
+#: classes/class-uabb-admin-settings.php:184
 msgid "Remove"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:184
+#: classes/class-uabb-admin-settings.php:185
 msgid "Install"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:185
+#: classes/class-uabb-admin-settings.php:186
 msgid "Installed"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:186
+#: classes/class-uabb-admin-settings.php:187
 msgid "Removed!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:274
+#: classes/class-uabb-admin-settings.php:275
 msgid "Settings updated!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:293
+#: classes/class-uabb-admin-settings.php:294
 msgid "Welcome"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:300
+#: classes/class-uabb-admin-settings.php:301
 #: includes/admin-settings-general.php:11
 #: modules/info-list/info-list-bb-2-2-compatibility.php:347
 #: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:405
 msgid "General Settings"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:307
+#: classes/class-uabb-admin-settings.php:308
 msgid "Modules"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:315
+#: classes/class-uabb-admin-settings.php:316
 #: includes/admin-settings-premium.php:25
 #: includes/admin-settings-template-cloud.php:11
 msgid "Template Cloud"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:322
+#: classes/class-uabb-admin-settings.php:323
 msgid "Font Icon Manager"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:328
+#: classes/class-uabb-admin-settings.php:329
 #: includes/admin-settings-premium.php:12
 msgid "Premium Features"
 msgstr ""
@@ -189,88 +189,88 @@ msgstr ""
 msgid "Image Link"
 msgstr ""
 
-#: classes/class-uabb-cloud-templates.php:259
-#: classes/class-uabb-iconfonts.php:43
+#: classes/class-uabb-cloud-templates.php:263
+#: classes/class-uabb-iconfonts.php:45
 msgid "You are not authorized to perform this action."
 msgstr ""
 
-#: classes/class-uabb-cloud-templates.php:313
+#: classes/class-uabb-cloud-templates.php:320
 msgid "Welcome to %s Template Cloud!"
 msgstr ""
 
-#: classes/class-uabb-cloud-templates.php:314
+#: classes/class-uabb-cloud-templates.php:321
 msgid ""
 "%s Template Cloud would allow you to browse through our growing library of "
 "150+ professionally designed templates and download the only ones that you "
 "need."
 msgstr ""
 
-#: classes/class-uabb-cloud-templates.php:314
+#: classes/class-uabb-cloud-templates.php:321
 msgid "Let's get started"
 msgstr ""
 
-#: classes/class-uabb-cloud-templates.php:340
+#: classes/class-uabb-cloud-templates.php:348
 msgid "All"
 msgstr ""
 
-#: classes/class-uabb-cloud-templates.php:415
+#: classes/class-uabb-cloud-templates.php:423
 msgid "Preview"
 msgstr ""
 
-#: classes/class-uabb-cloud-templates.php:427
+#: classes/class-uabb-cloud-templates.php:435
 msgid "Upgrade"
 msgstr ""
 
-#: classes/class-uabb-cloud-templates.php:448
+#: classes/class-uabb-cloud-templates.php:456
 msgid "Templates are disabled from RestAPI."
 msgstr ""
 
-#: classes/class-uabb-global-settings.php:33
+#: classes/class-uabb-global-settings.php:35
 msgid "UABB - Global Settings"
 msgstr ""
 
-#: classes/class-uabb-global-settings.php:34
+#: classes/class-uabb-global-settings.php:36
 msgid "UABB - Knowledge Base"
 msgstr ""
 
-#: classes/class-uabb-global-settings.php:35
+#: classes/class-uabb-global-settings.php:37
 msgid "UABB - Contact Support"
 msgstr ""
 
-#: classes/class-uabb-global-settings.php:38
-#: classes/uabb-global-settings-form.php:12
+#: classes/class-uabb-global-settings.php:40
+#: classes/uabb-global-settings-form.php:18
 msgid "%s - Global Settings"
 msgstr ""
 
-#: classes/class-uabb-global-settings.php:43
+#: classes/class-uabb-global-settings.php:45
 msgid "%s - Knowledge Base"
 msgstr ""
 
-#: classes/class-uabb-global-settings.php:48
+#: classes/class-uabb-global-settings.php:50
 msgid "%s - Contact Support"
 msgstr ""
 
-#: classes/class-uabb-helper.php:41
+#: classes/class-uabb-helper.php:42
 msgid "Basic"
 msgstr ""
 
-#: classes/class-uabb-helper.php:43
+#: classes/class-uabb-helper.php:44
 msgid "UABB Modules"
 msgstr ""
 
-#: classes/class-uabb-helper.php:52 includes/admin-settings-modules.php:11
+#: classes/class-uabb-helper.php:53 includes/admin-settings-modules.php:16
 msgid "%s Modules"
 msgstr ""
 
-#: classes/class-uabb-init.php:248
+#: classes/class-uabb-init.php:254
 msgid "plugin requires"
 msgstr ""
 
-#: classes/class-uabb-init.php:250
+#: classes/class-uabb-init.php:256
 msgid " plugin installed & activated."
 msgstr ""
 
-#: classes/class-uabb-wpml.php:55 classes/uabb-global-settings-form.php:56
+#: classes/class-uabb-wpml.php:56 classes/uabb-global-settings-form.php:62
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:445
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:526
 #: modules/info-table/info-table-bb-2-2-compatibility.php:852
@@ -284,8 +284,8 @@ msgstr ""
 msgid "Button"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:60 classes/class-uabb-wpml.php:191
-#: modules/advanced-icon/advanced-icon.php:352
+#: classes/class-uabb-wpml.php:61 classes/class-uabb-wpml.php:192
+#: modules/advanced-icon/advanced-icon.php:350
 #: modules/image-separator/image-separator-bb-2-2-compatibility.php:314
 #: modules/image-separator/image-separator-bb-less-than-2-2-compatibility.php:314
 #: modules/info-list/info-list-bb-2-2-compatibility.php:361
@@ -303,95 +303,95 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:72
+#: classes/class-uabb-wpml.php:73
 msgid "Flip Box: Title on Front"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:77 classes/class-uabb-wpml.php:87
+#: classes/class-uabb-wpml.php:78 classes/class-uabb-wpml.php:88
 msgid "Flip Box: Description"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:82
+#: classes/class-uabb-wpml.php:83
 msgid "Flip Box: Title on Back"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:99
+#: classes/class-uabb-wpml.php:100
 msgid "Slide Box: Front Slide Title"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:104
+#: classes/class-uabb-wpml.php:105
 msgid "Slide Box: Front Description"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:109
+#: classes/class-uabb-wpml.php:110
 msgid "Slide Box: Back Slide Title"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:114
+#: classes/class-uabb-wpml.php:115
 msgid "Slide Box: Back Description"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:119
+#: classes/class-uabb-wpml.php:120
 msgid "Slide Box: Link"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:124
+#: classes/class-uabb-wpml.php:125
 msgid "Slide Box: Call to action text"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:143
+#: classes/class-uabb-wpml.php:144
 msgid "Info Table : Heading"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:148
+#: classes/class-uabb-wpml.php:149
 msgid "Info Table : Sub Heading"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:153
+#: classes/class-uabb-wpml.php:154
 msgid "Info Table : Description"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:158
+#: classes/class-uabb-wpml.php:159
 msgid "Info Table : Call to action button text"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:163
+#: classes/class-uabb-wpml.php:164
 msgid "Info Table : Link"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:175
+#: classes/class-uabb-wpml.php:176
 msgid "Image Separator : Link"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:186
+#: classes/class-uabb-wpml.php:187
 msgid "Heading Text"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:196
+#: classes/class-uabb-wpml.php:197
 msgid "Description Text"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:208
+#: classes/class-uabb-wpml.php:209
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:22
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:21
 msgid "Ribbon Message"
 msgstr ""
 
-#: classes/class-ui-panel.php:255
+#: classes/class-ui-panel.php:273
 msgid "Search Module..."
 msgstr ""
 
-#: classes/class-ui-panel.php:323
+#: classes/class-ui-panel.php:343
 msgid "Presets"
 msgstr ""
 
-#: classes/class-ui-panel.php:328 includes/admin-settings-template-cloud.php:41
+#: classes/class-ui-panel.php:348 includes/admin-settings-template-cloud.php:41
 msgid "Sections"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:17
-#: modules/advanced-icon/advanced-icon.php:68
-#: modules/advanced-icon/advanced-icon.php:366
+#: classes/uabb-global-settings-form.php:23
+#: modules/advanced-icon/advanced-icon.php:66
+#: modules/advanced-icon/advanced-icon.php:364
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:40
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:475
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:38
@@ -418,23 +418,23 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:265
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:71
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:66
-#: modules/uabb-star-rating/uabb-star-rating.php:140
+#: modules/uabb-star-rating/uabb-star-rating.php:143
 #: objects/fl-nested-form-button.php:56 objects/fl-nested-form-button.php:59
 #: objects/fl-nested-form-button.php:63 objects/fl-nested-form-button.php:471
 #: objects/fl-nested-form-button.php:474 objects/fl-nested-form-button.php:478
 msgid "Style"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:20
+#: classes/uabb-global-settings-form.php:26
 msgid "Global Styling"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:24
+#: classes/uabb-global-settings-form.php:30
 msgid "Enable Global Styling"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:39
-#: modules/advanced-icon/advanced-icon.php:316
+#: classes/uabb-global-settings-form.php:45
+#: modules/advanced-icon/advanced-icon.php:314
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:15
 #: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:14
 #: modules/image-separator/image-separator-bb-2-2-compatibility.php:15
@@ -453,21 +453,21 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:14
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:15
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:14
-#: modules/uabb-star-rating/uabb-star-rating.php:69
+#: modules/uabb-star-rating/uabb-star-rating.php:72
 #: objects/fl-nested-form-button.php:17 objects/fl-nested-form-button.php:439
 msgid "General"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:43
+#: classes/uabb-global-settings-form.php:49
 msgid "Primary Color"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:49
+#: classes/uabb-global-settings-form.php:55
 msgid "Primary Text Color"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:60
-#: modules/advanced-icon/advanced-icon.php:258
+#: classes/uabb-global-settings-form.php:66
+#: modules/advanced-icon/advanced-icon.php:256
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:161
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:302
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:416
@@ -498,8 +498,8 @@ msgstr ""
 msgid "Background Color"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:66
-#: classes/uabb-global-settings-form.php:83
+#: classes/uabb-global-settings-form.php:72
+#: classes/uabb-global-settings-form.php:89
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:169
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:161
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:298
@@ -530,16 +530,16 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:690
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:435
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:452
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:562
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:561
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:165
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:250
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:265
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:453
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:468
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:522
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:559
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:587
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:627
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:521
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:558
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:586
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:626
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:176
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:193
 #: objects/fl-nested-form-button.php:182 objects/fl-nested-form-button.php:199
@@ -547,9 +547,9 @@ msgstr ""
 msgid "Opacity"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:74
-#: modules/advanced-icon/advanced-icon.php:266
-#: modules/advanced-icon/advanced-icon.php:401
+#: classes/uabb-global-settings-form.php:80
+#: modules/advanced-icon/advanced-icon.php:264
+#: modules/advanced-icon/advanced-icon.php:399
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:396
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:451
 #: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:389
@@ -568,7 +568,7 @@ msgstr ""
 msgid "Background Hover Color"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:91
+#: classes/uabb-global-settings-form.php:97
 #: modules/info-table/info-table-bb-2-2-compatibility.php:187
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:194
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:152
@@ -581,7 +581,7 @@ msgstr ""
 msgid "Text Color"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:97
+#: classes/uabb-global-settings-form.php:103
 #: modules/info-table/info-table-bb-2-2-compatibility.php:195
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:200
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:160
@@ -590,7 +590,7 @@ msgstr ""
 msgid "Text Hover Color"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:106
+#: classes/uabb-global-settings-form.php:112
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:686
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:759
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:849
@@ -602,11 +602,11 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:886
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:945
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:207
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:732
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:810
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:904
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:980
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1057
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:731
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:809
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:903
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:979
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1056
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:395
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:352
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:473
@@ -615,7 +615,7 @@ msgstr ""
 msgid "Font Size"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:114
+#: classes/uabb-global-settings-form.php:120
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:704
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:777
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:867
@@ -627,11 +627,11 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:904
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:957
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:225
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:750
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:828
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:922
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:998
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1075
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:749
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:827
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:921
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:997
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1074
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:413
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:370
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:491
@@ -640,16 +640,16 @@ msgstr ""
 msgid "Line Height"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:122
+#: classes/uabb-global-settings-form.php:128
 msgid "Letter Spacing"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:130
+#: classes/uabb-global-settings-form.php:136
 msgid "Text Transform"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:133
-#: modules/advanced-icon/advanced-icon.php:158
+#: classes/uabb-global-settings-form.php:139
+#: modules/advanced-icon/advanced-icon.php:156
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:93
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:90
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:310
@@ -689,19 +689,19 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:134
+#: classes/uabb-global-settings-form.php:140
 msgid "Capitalize"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:135
+#: classes/uabb-global-settings-form.php:141
 msgid "Uppercase"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:136
+#: classes/uabb-global-settings-form.php:142
 msgid "Lowercase"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:137
+#: classes/uabb-global-settings-form.php:143
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:295
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:409
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:285
@@ -709,12 +709,12 @@ msgstr ""
 msgid "Initial"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:138
+#: classes/uabb-global-settings-form.php:144
 msgid "Inherit"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:143
-#: modules/advanced-icon/advanced-icon.php:196
+#: classes/uabb-global-settings-form.php:149
+#: modules/advanced-icon/advanced-icon.php:194
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:125
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:121
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:220
@@ -734,23 +734,23 @@ msgstr ""
 msgid "Border Radius"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:151
+#: classes/uabb-global-settings-form.php:157
 msgid "Vertical Padding"
 msgstr ""
 
-#: classes/uabb-global-settings-form.php:159
+#: classes/uabb-global-settings-form.php:165
 msgid "Horizontal Padding"
 msgstr ""
 
-#: classes/wpml/class-wpml-uabb-infolist.php:42
+#: classes/wpml/class-wpml-uabb-infolist.php:45
 msgid "Info List : Title"
 msgstr ""
 
-#: classes/wpml/class-wpml-uabb-infolist.php:45
+#: classes/wpml/class-wpml-uabb-infolist.php:48
 msgid "Info List : Link"
 msgstr ""
 
-#: classes/wpml/class-wpml-uabb-infolist.php:48
+#: classes/wpml/class-wpml-uabb-infolist.php:51
 msgid "Info List : Description"
 msgstr ""
 
@@ -837,22 +837,22 @@ msgstr ""
 msgid "Save Settings"
 msgstr ""
 
-#: includes/admin-settings-icons.php:11 includes/admin-settings-icons.php:24
+#: includes/admin-settings-icons.php:15 includes/admin-settings-icons.php:28
 msgid "Reload Icons"
 msgstr ""
 
-#: includes/admin-settings-icons.php:19
+#: includes/admin-settings-icons.php:23
 msgid ""
 "Clicking the button below will reinstall %1$s icons on your website. If you "
 "are facing issues to load %2$s icons then you are at right place to "
 "troubleshoot it."
 msgstr ""
 
-#: includes/admin-settings-modules.php:21
+#: includes/admin-settings-modules.php:26
 msgid "Upgrade to Premium version to get these modules"
 msgstr ""
 
-#: includes/admin-settings-modules.php:21
+#: includes/admin-settings-modules.php:26
 msgid "Unlock All Modules"
 msgstr ""
 
@@ -1011,22 +1011,22 @@ msgid ""
 "suggestions for the Ultimate Addons."
 msgstr ""
 
-#: includes/ui-panel-presets.php:81
+#: includes/ui-panel-presets.php:91
 msgid "Note - You can enable, disable and manage %s presets here."
 msgstr ""
 
-#: includes/ui-panel-presets.php:84 includes/ui-panel-sections.php:87
+#: includes/ui-panel-presets.php:94 includes/ui-panel-sections.php:98
 msgid ""
 "Note - Images used in the templates are hotlinked from our server and are "
 "subject to copyright. It is strongly recommended that you replace them with "
 "your own."
 msgstr ""
 
-#: includes/ui-panel-sections.php:22
+#: includes/ui-panel-sections.php:33
 msgid "Search Section..."
 msgstr ""
 
-#: includes/ui-panel-sections.php:83
+#: includes/ui-panel-sections.php:94
 msgid "Note - You can enable, disable and manage %s sections here."
 msgstr ""
 
@@ -1042,13 +1042,13 @@ msgstr ""
 msgid "Display a group of Image / Icons."
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:51
-#: modules/advanced-icon/advanced-icon.php:58
+#: modules/advanced-icon/advanced-icon.php:49
+#: modules/advanced-icon/advanced-icon.php:56
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:17
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:16
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:18
 #: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:17
-#: modules/image-icon/image-icon.php:40
+#: modules/image-icon/image-icon.php:52
 #: modules/info-table/info-table-bb-2-2-compatibility.php:273
 #: modules/info-table/info-table-bb-2-2-compatibility.php:276
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:269
@@ -1058,7 +1058,7 @@ msgstr ""
 msgid "Image / Icon"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:71
+#: modules/advanced-icon/advanced-icon.php:69
 #: modules/image-separator/image-separator-bb-2-2-compatibility.php:226
 #: modules/image-separator/image-separator-bb-less-than-2-2-compatibility.php:228
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:202
@@ -1069,37 +1069,37 @@ msgstr ""
 msgid "Structure"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:75
+#: modules/advanced-icon/advanced-icon.php:73
 msgid "Icons Structure"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:78
+#: modules/advanced-icon/advanced-icon.php:76
 msgid "Horizontal"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:79
+#: modules/advanced-icon/advanced-icon.php:77
 msgid "Vertical"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:85
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:571
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:609
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:596
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:636
+#: modules/advanced-icon/advanced-icon.php:83
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:570
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:608
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:595
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:635
 msgid "Icon Size"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:99
-#: modules/uabb-star-rating/uabb-star-rating.php:180
-#: modules/uabb-star-rating/uabb-star-rating.php:226
+#: modules/advanced-icon/advanced-icon.php:97
+#: modules/uabb-star-rating/uabb-star-rating.php:183
+#: modules/uabb-star-rating/uabb-star-rating.php:229
 msgid "Spacing"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:105
+#: modules/advanced-icon/advanced-icon.php:103
 msgid "To manage the space between Icons use this option"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:116
+#: modules/advanced-icon/advanced-icon.php:114
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:45
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:43
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:133
@@ -1109,7 +1109,7 @@ msgstr ""
 msgid "Icon Background Style"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:119
+#: modules/advanced-icon/advanced-icon.php:117
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:48
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:46
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:136
@@ -1129,7 +1129,7 @@ msgstr ""
 msgid "Simple"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:120
+#: modules/advanced-icon/advanced-icon.php:118
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:49
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:47
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:137
@@ -1139,7 +1139,7 @@ msgstr ""
 msgid "Circle Background"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:121
+#: modules/advanced-icon/advanced-icon.php:119
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:50
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:48
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:138
@@ -1149,7 +1149,7 @@ msgstr ""
 msgid "Square Background"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:122
+#: modules/advanced-icon/advanced-icon.php:120
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:51
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:49
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:139
@@ -1169,7 +1169,7 @@ msgstr ""
 msgid "Design your own"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:138
+#: modules/advanced-icon/advanced-icon.php:136
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:77
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:75
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:165
@@ -1187,7 +1187,7 @@ msgstr ""
 msgid "Background Size"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:139
+#: modules/advanced-icon/advanced-icon.php:137
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:166
 #: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:163
 #: modules/info-table/info-table-bb-2-2-compatibility.php:419
@@ -1195,7 +1195,7 @@ msgstr ""
 msgid "Spacing between Icon & Background edge"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:154
+#: modules/advanced-icon/advanced-icon.php:152
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:89
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:86
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:177
@@ -1213,7 +1213,7 @@ msgstr ""
 msgid "Border Style"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:156
+#: modules/advanced-icon/advanced-icon.php:154
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:91
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:88
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:308
@@ -1235,7 +1235,7 @@ msgid ""
 "to render properly."
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:159
+#: modules/advanced-icon/advanced-icon.php:157
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:94
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:91
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:311
@@ -1259,12 +1259,12 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:268
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:74
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:69
-#: modules/uabb-star-rating/uabb-star-rating.php:97
+#: modules/uabb-star-rating/uabb-star-rating.php:100
 #: objects/fl-nested-form-button.php:261
 msgid "Solid"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:160
+#: modules/advanced-icon/advanced-icon.php:158
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:95
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:92
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:312
@@ -1292,7 +1292,7 @@ msgstr ""
 msgid "Dashed"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:161
+#: modules/advanced-icon/advanced-icon.php:159
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:96
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:93
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:313
@@ -1320,7 +1320,7 @@ msgstr ""
 msgid "Dotted"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:162
+#: modules/advanced-icon/advanced-icon.php:160
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:97
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:94
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:314
@@ -1346,7 +1346,7 @@ msgstr ""
 msgid "Double"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:181
+#: modules/advanced-icon/advanced-icon.php:179
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:116
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:113
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:204
@@ -1366,7 +1366,7 @@ msgstr ""
 msgid "Border Width"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:211
+#: modules/advanced-icon/advanced-icon.php:209
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:61
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:115
 #: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:59
@@ -1381,28 +1381,28 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:68
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:55
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:50
-#: modules/uabb-star-rating/uabb-star-rating.php:196
+#: modules/uabb-star-rating/uabb-star-rating.php:199
 #: objects/fl-nested-form-button.php:360 objects/fl-nested-form-button.php:755
 msgid "Alignment"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:213
+#: modules/advanced-icon/advanced-icon.php:211
 msgid "The overall alignment of Icon"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:217
+#: modules/advanced-icon/advanced-icon.php:215
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:319
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:363
 #: objects/fl-nested-form-button.php:370 objects/fl-nested-form-button.php:765
 msgid "Mobile Alignment"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:219
+#: modules/advanced-icon/advanced-icon.php:217
 msgid "This alignment will apply on Mobile"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:224
-#: modules/advanced-icon/advanced-icon.php:370
+#: modules/advanced-icon/advanced-icon.php:222
+#: modules/advanced-icon/advanced-icon.php:368
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:135
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:130
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:350
@@ -1421,7 +1421,7 @@ msgstr ""
 msgid "Colors"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:228
+#: modules/advanced-icon/advanced-icon.php:226
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:141
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:136
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:356
@@ -1431,7 +1431,7 @@ msgstr ""
 msgid "Icon Color Presets"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:232
+#: modules/advanced-icon/advanced-icon.php:230
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:144
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:139
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:359
@@ -1441,7 +1441,7 @@ msgstr ""
 msgid "Preset 1"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:233
+#: modules/advanced-icon/advanced-icon.php:231
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:145
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:140
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:360
@@ -1451,7 +1451,7 @@ msgstr ""
 msgid "Preset 2"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:235
+#: modules/advanced-icon/advanced-icon.php:233
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:147
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:142
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:362
@@ -1463,8 +1463,8 @@ msgid ""
 "Background : #f3f3f3"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:239
-#: modules/advanced-icon/advanced-icon.php:374
+#: modules/advanced-icon/advanced-icon.php:237
+#: modules/advanced-icon/advanced-icon.php:372
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:248
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:362
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:238
@@ -1479,30 +1479,30 @@ msgstr ""
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:214
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:120
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:243
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:705
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:813
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:898
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:768
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:940
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1093
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:704
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:812
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:897
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:767
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:939
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1092
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:268
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:423
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:282
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:509
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:22
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:21
-#: modules/uabb-star-rating/uabb-star-rating.php:147
-#: modules/uabb-star-rating/uabb-star-rating.php:213
+#: modules/uabb-star-rating/uabb-star-rating.php:150
+#: modules/uabb-star-rating/uabb-star-rating.php:216
 msgid "Color"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:247
-#: modules/advanced-icon/advanced-icon.php:382
+#: modules/advanced-icon/advanced-icon.php:245
+#: modules/advanced-icon/advanced-icon.php:380
 msgid "Hover Color"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:277
-#: modules/advanced-icon/advanced-icon.php:413
+#: modules/advanced-icon/advanced-icon.php:275
+#: modules/advanced-icon/advanced-icon.php:411
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:179
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:171
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:359
@@ -1526,8 +1526,8 @@ msgstr ""
 msgid "Border Color"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:285
-#: modules/advanced-icon/advanced-icon.php:421
+#: modules/advanced-icon/advanced-icon.php:283
+#: modules/advanced-icon/advanced-icon.php:419
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:416
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:471
 #: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:414
@@ -1543,7 +1543,7 @@ msgstr ""
 msgid "Border Hover Color"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:293
+#: modules/advanced-icon/advanced-icon.php:291
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:189
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:179
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:426
@@ -1560,7 +1560,7 @@ msgstr ""
 msgid "Gradient"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:296
+#: modules/advanced-icon/advanced-icon.php:294
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:192
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:452
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:541
@@ -1586,15 +1586,15 @@ msgstr ""
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:96
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:106
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:228
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:518
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:636
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:517
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:635
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:226
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:540
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:662
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:539
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:661
 msgid "No"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:297
+#: modules/advanced-icon/advanced-icon.php:295
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:193
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:453
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:540
@@ -1618,19 +1618,19 @@ msgstr ""
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:95
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:105
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:227
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:517
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:637
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:516
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:636
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:225
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:539
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:663
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:538
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:662
 msgid "Yes"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:313
+#: modules/advanced-icon/advanced-icon.php:311
 msgid "Add Icon"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:323
+#: modules/advanced-icon/advanced-icon.php:321
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:22
 #: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:21
 #: modules/info-list/info-list-bb-2-2-compatibility.php:398
@@ -1642,8 +1642,8 @@ msgstr ""
 msgid "Image Type"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:326
-#: modules/advanced-icon/advanced-icon.php:341
+#: modules/advanced-icon/advanced-icon.php:324
+#: modules/advanced-icon/advanced-icon.php:339
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:14
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:24
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:13
@@ -1667,11 +1667,11 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:50
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:65
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:69
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:540
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:539
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:49
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:64
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:68
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:569
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:568
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:133
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:136
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:134
@@ -1680,8 +1680,8 @@ msgstr ""
 msgid "Icon"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:327
-#: modules/advanced-icon/advanced-icon.php:347
+#: modules/advanced-icon/advanced-icon.php:325
+#: modules/advanced-icon/advanced-icon.php:345
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:26
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:94
 #: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:25
@@ -1705,14 +1705,14 @@ msgstr ""
 msgid "Photo"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:367
+#: modules/advanced-icon/advanced-icon.php:365
 msgid ""
 "This background color properties will work only when Icon background style "
 "is not simple. Also the border color properties will work for Design your "
 "own."
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:393
+#: modules/advanced-icon/advanced-icon.php:391
 msgid "Background Color "
 msgstr ""
 
@@ -1745,7 +1745,7 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:200
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:158
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:216
-#: modules/uabb-star-rating/uabb-star-rating.php:163
+#: modules/uabb-star-rating/uabb-star-rating.php:166
 msgid "Size"
 msgstr ""
 
@@ -1760,13 +1760,13 @@ msgstr ""
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:154
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:150
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:75
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:545
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:585
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:593
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:544
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:584
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:592
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:74
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:574
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:609
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:615
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:573
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:608
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:614
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:154
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:172
 msgid "Icon Color"
@@ -2108,8 +2108,8 @@ msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:546
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:624
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:658
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:683
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:657
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:682
 msgid "Overall Vertical Alignment"
 msgstr ""
 
@@ -2146,13 +2146,13 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:715
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:181
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:171
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:671
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:695
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:741
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:803
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:845
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:888
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:696
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:670
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:694
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:740
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:802
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:844
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:887
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:695
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:332
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:339
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:376
@@ -2161,7 +2161,7 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:413
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:486
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:319
-#: modules/uabb-star-rating/uabb-star-rating.php:236
+#: modules/uabb-star-rating/uabb-star-rating.php:239
 #: objects/fl-nested-form-button.php:383 objects/fl-nested-form-button.php:778
 #: objects/fl-nested-form-button.php:785
 msgid "Typography"
@@ -2169,8 +2169,8 @@ msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:576
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:653
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:674
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:699
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:673
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:698
 msgid "Front Title"
 msgstr ""
 
@@ -2193,10 +2193,10 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:802
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:192
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:182
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:682
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:790
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:707
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:879
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:681
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:789
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:706
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:878
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:473
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:555
 msgid "H1"
@@ -2214,10 +2214,10 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:803
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:193
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:183
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:683
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:791
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:708
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:880
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:682
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:790
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:707
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:879
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:474
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:556
 msgid "H2"
@@ -2235,10 +2235,10 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:804
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:194
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:184
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:684
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:792
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:709
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:881
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:683
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:791
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:708
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:880
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:475
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:557
 msgid "H3"
@@ -2256,10 +2256,10 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:805
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:195
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:185
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:685
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:793
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:710
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:882
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:684
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:792
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:709
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:881
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:476
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:558
 msgid "H4"
@@ -2277,10 +2277,10 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:806
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:196
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:186
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:686
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:794
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:711
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:883
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:685
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:793
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:710
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:882
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:477
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:559
 msgid "H5"
@@ -2298,10 +2298,10 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:807
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:197
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:187
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:687
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:795
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:712
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:884
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:686
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:794
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:711
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:883
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:478
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:560
 msgid "H6"
@@ -2319,10 +2319,10 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:808
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:198
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:188
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:688
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:796
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:713
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:885
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:687
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:795
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:712
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:884
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:479
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:561
 msgid "Div"
@@ -2340,10 +2340,10 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:809
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:199
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:189
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:689
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:797
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:714
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:886
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:688
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:796
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:713
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:885
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:480
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:562
 msgid "p"
@@ -2361,10 +2361,10 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:810
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:200
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:190
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:690
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:798
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:715
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:887
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:689
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:797
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:714
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:886
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:481
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:563
 msgid "span"
@@ -2385,14 +2385,14 @@ msgstr ""
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:964
 #: modules/info-list/info-list-bb-2-2-compatibility.php:286
 #: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:309
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:721
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:767
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:826
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:868
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:780
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:858
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:951
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1027
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:720
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:766
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:825
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:867
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:779
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:857
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:950
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1026
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:353
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:436
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:399
@@ -2410,14 +2410,14 @@ msgstr ""
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:971
 #: modules/info-list/info-list-bb-2-2-compatibility.php:294
 #: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:316
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:728
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:774
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:833
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:875
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:786
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:864
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:957
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1033
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:727
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:773
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:832
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:874
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:785
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:863
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:956
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1032
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:367
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:450
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:412
@@ -2427,8 +2427,8 @@ msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:632
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:743
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:737
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:794
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:736
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:793
 msgid "Front Description"
 msgstr ""
 
@@ -2439,8 +2439,8 @@ msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:671
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:816
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:782
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:871
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:781
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:870
 msgid "Back Title"
 msgstr ""
 
@@ -2451,8 +2451,8 @@ msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:727
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:906
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:841
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:964
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:840
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:963
 msgid "Back Description"
 msgstr ""
 
@@ -2526,11 +2526,11 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:933
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:205
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:195
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:720
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:798
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:892
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:968
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1045
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:719
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:797
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:891
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:967
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1044
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:383
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:461
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:568
@@ -2554,10 +2554,10 @@ msgstr ""
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:86
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:209
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:484
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:622
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:621
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:207
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:499
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:648
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:647
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:313
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:323
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:357
@@ -2566,7 +2566,7 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:87
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:59
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:54
-#: modules/uabb-star-rating/uabb-star-rating.php:200
+#: modules/uabb-star-rating/uabb-star-rating.php:203
 #: objects/fl-nested-form-button.php:364 objects/fl-nested-form-button.php:374
 #: objects/fl-nested-form-button.php:759 objects/fl-nested-form-button.php:769
 msgid "Left"
@@ -2587,13 +2587,13 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:208
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:219
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:483
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:621
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:662
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:620
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:661
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:206
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:217
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:498
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:647
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:687
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:646
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:686
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:312
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:322
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:356
@@ -2602,7 +2602,7 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:88
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:58
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:53
-#: modules/uabb-star-rating/uabb-star-rating.php:201
+#: modules/uabb-star-rating/uabb-star-rating.php:204
 #: objects/fl-nested-form-button.php:363 objects/fl-nested-form-button.php:373
 #: objects/fl-nested-form-button.php:758 objects/fl-nested-form-button.php:768
 msgid "Center"
@@ -2620,10 +2620,10 @@ msgstr ""
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:87
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:210
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:485
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:623
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:622
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:208
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:500
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:649
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:648
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:314
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:324
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:358
@@ -2632,7 +2632,7 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:89
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:60
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:55
-#: modules/uabb-star-rating/uabb-star-rating.php:202
+#: modules/uabb-star-rating/uabb-star-rating.php:205
 #: objects/fl-nested-form-button.php:365 objects/fl-nested-form-button.php:375
 #: objects/fl-nested-form-button.php:760 objects/fl-nested-form-button.php:770
 msgid "Right"
@@ -2759,7 +2759,7 @@ msgstr ""
 msgid "Icon Hover Color"
 msgstr ""
 
-#: modules/image-icon/image-icon.php:41
+#: modules/image-icon/image-icon.php:53
 msgid "Image / Icon with effect"
 msgstr ""
 
@@ -2822,9 +2822,9 @@ msgstr ""
 #: modules/info-list/info-list-bb-2-2-compatibility.php:62
 #: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:61
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:218
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:663
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:662
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:216
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:688
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:687
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:123
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:142
 msgid "Top"
@@ -2877,7 +2877,7 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:286
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:64
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:73
-#: modules/uabb-star-rating/uabb-star-rating.php:117
+#: modules/uabb-star-rating/uabb-star-rating.php:120
 #: objects/fl-nested-form-button.php:67 objects/fl-nested-form-button.php:482
 msgid "Default"
 msgstr ""
@@ -3252,7 +3252,7 @@ msgstr ""
 #: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:69
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:266
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:276
-#: modules/uabb-star-rating/uabb-star-rating.php:118
+#: modules/uabb-star-rating/uabb-star-rating.php:121
 msgid "Inline"
 msgstr ""
 
@@ -3336,10 +3336,10 @@ msgstr ""
 #: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:413
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:22
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:21
-#: modules/uabb-star-rating/uabb-star-rating.php:103
-#: modules/uabb-star-rating/uabb-star-rating.php:209
-#: modules/uabb-star-rating/uabb-star-rating.php:239
-#: modules/uabb-star-rating/uabb-star-rating.php:243
+#: modules/uabb-star-rating/uabb-star-rating.php:106
+#: modules/uabb-star-rating/uabb-star-rating.php:212
+#: modules/uabb-star-rating/uabb-star-rating.php:242
+#: modules/uabb-star-rating/uabb-star-rating.php:246
 msgid "Title"
 msgstr ""
 
@@ -3627,7 +3627,7 @@ msgstr ""
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:15
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:14
-#: modules/uabb-star-rating/uabb-star-rating.php:114
+#: modules/uabb-star-rating/uabb-star-rating.php:117
 msgid "Layout"
 msgstr ""
 
@@ -3752,10 +3752,10 @@ msgstr ""
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:188
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:178
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:678
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:786
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:703
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:875
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:677
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:785
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:702
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:874
 msgid "Tag"
 msgstr ""
 
@@ -3789,7 +3789,7 @@ msgstr ""
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:181
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:179
-#: modules/uabb-star-rating/uabb-star-rating.php:128
+#: modules/uabb-star-rating/uabb-star-rating.php:131
 msgid "Position"
 msgstr ""
 
@@ -3971,81 +3971,81 @@ msgstr ""
 msgid "To apply padding to Slide Box Back use this setting"
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:510
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:532
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:509
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:531
 msgid "Overlay"
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:514
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:536
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:513
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:535
 msgid "Enable Overlay"
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:531
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:553
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:530
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:552
 msgid "Overlay Color"
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:554
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:601
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:581
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:621
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:553
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:600
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:580
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:620
 msgid "Icon Background Color"
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:581
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:605
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:580
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:604
 msgid "Drop Down Icon"
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:618
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:644
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:617
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:643
 msgid "Icon Alignment"
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:629
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:655
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:628
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:654
 msgid "Slide Box Min Height"
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:633
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:659
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:632
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:658
 msgid "Minimum Height"
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:650
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:676
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:649
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:675
 msgid "Enter Height"
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:654
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:679
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:653
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:678
 msgid ""
 "Apply minimum height to complete SlideBox. It is useful when multiple "
 "SlideBox are in same row."
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:660
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:685
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:659
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:684
 msgid "If enabled, the Content would align vertically center"
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:713
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:759
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:774
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:852
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:712
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:758
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:773
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:851
 msgid "Hover/Focus Color"
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:751
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:857
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:846
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1018
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:750
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:856
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:845
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1017
 msgid "Description Color"
 msgstr ""
 
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:884
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1041
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:883
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1040
 msgid "Link Text"
 msgstr ""
 
@@ -4456,7 +4456,7 @@ msgid "A divider line to separate content."
 msgstr ""
 
 #: modules/uabb-star-rating/uabb-star-rating.php:24
-#: modules/uabb-star-rating/uabb-star-rating.php:72
+#: modules/uabb-star-rating/uabb-star-rating.php:75
 msgid "Star Rating"
 msgstr ""
 
@@ -4464,49 +4464,84 @@ msgstr ""
 msgid "A module for Star Rating."
 msgstr ""
 
-#: modules/uabb-star-rating/uabb-star-rating.php:76
+#: modules/uabb-star-rating/uabb-star-rating.php:79
 msgid "Scale"
 msgstr ""
 
-#: modules/uabb-star-rating/uabb-star-rating.php:79
+#: modules/uabb-star-rating/uabb-star-rating.php:82
 msgid "0-5 Stars"
 msgstr ""
 
-#: modules/uabb-star-rating/uabb-star-rating.php:80
+#: modules/uabb-star-rating/uabb-star-rating.php:83
 msgid "0-10 Stars"
 msgstr ""
 
-#: modules/uabb-star-rating/uabb-star-rating.php:85
-#: modules/uabb-star-rating/uabb-star-rating.php:143
+#: modules/uabb-star-rating/uabb-star-rating.php:88
+#: modules/uabb-star-rating/uabb-star-rating.php:146
 msgid "Rating"
 msgstr ""
 
-#: modules/uabb-star-rating/uabb-star-rating.php:94
+#: modules/uabb-star-rating/uabb-star-rating.php:97
 msgid "Unmarked Style"
 msgstr ""
 
-#: modules/uabb-star-rating/uabb-star-rating.php:98
+#: modules/uabb-star-rating/uabb-star-rating.php:101
 msgid "Outline"
 msgstr ""
 
-#: modules/uabb-star-rating/uabb-star-rating.php:105
+#: modules/uabb-star-rating/uabb-star-rating.php:108
 msgid "Ratings !!!"
 msgstr ""
 
-#: modules/uabb-star-rating/uabb-star-rating.php:131
+#: modules/uabb-star-rating/uabb-star-rating.php:134
 msgid "Star First"
 msgstr ""
 
-#: modules/uabb-star-rating/uabb-star-rating.php:132
+#: modules/uabb-star-rating/uabb-star-rating.php:135
 msgid "Title First"
 msgstr ""
 
-#: modules/uabb-star-rating/uabb-star-rating.php:155
+#: modules/uabb-star-rating/uabb-star-rating.php:158
 msgid "Unmarked Color"
 msgstr ""
 
-#: modules/uabb-star-rating/uabb-star-rating.php:203
+#: modules/uabb-star-rating/uabb-star-rating.php:206
 msgid "Justify"
+msgstr ""
+
+#: vendor/wp-cli/core-command/src/Core_Command.php:749
+msgid "Wildcard DNS may not be configured correctly."
+msgstr ""
+
+#: vendor/wp-cli/entity-command/src/Site_Command.php:157
+msgid "Uncategorized"
+msgstr ""
+
+#: vendor/wp-cli/export-command/src/WP_Export_XML_Over_HTTP.php:20
+#: vendor/wp-cli/export-command/src/WP_Export_XML_Over_HTTP.php:25
+msgid "Export Error"
+msgstr ""
+
+#: vendor/wp-cli/extension-command/src/WP_CLI/CommandWithUpgrade.php:770
+msgid " Try again"
+msgstr ""
+
+#: vendor/wp-cli/extension-command/src/WP_CLI/CommandWithUpgrade.php:776
+msgid "API error. Try Again."
+msgstr ""
+
+#: vendor/wp-cli/media-command/src/Media_Command.php:159
+msgid "image"
+msgid_plural "images"
+msgstr[0] ""
+msgstr[1] ""
+
+#: vendor/wp-cli/wp-cli/php/utils-wp.php:247
+msgid "Inactive Widgets"
+msgstr ""
+
+#: vendor/wp-cli/wp-cli/php/utils-wp.php:250
+msgid "Drag widgets here to remove them from the sidebar but keep their settings."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
@@ -4532,7 +4567,7 @@ msgstr ""
 msgid "http://www.brainstormforce.com"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:250
+#: classes/class-uabb-admin-settings.php:251
 msgctxt "%s stands for custom branded \"UABB\" name."
 msgid "%s Settings"
 msgstr ""
@@ -4559,4 +4594,18 @@ msgstr ""
 #: objects/fl-nested-form-button.php:225 objects/fl-nested-form-button.php:656
 msgctxt "Width."
 msgid "Auto"
+msgstr ""
+
+#: vendor/wp-cli/core-command/src/Core_Command.php:491
+#: vendor/wp-cli/core-command/src/Core_Command.php:565
+#. translators: placeholder is blog name
+#. translators: placeholder is user supplied title
+msgctxt "Default network name"
+msgid "%s Sites"
+msgstr ""
+
+#: vendor/wp-cli/entity-command/src/Site_Command.php:160
+#. translators: Default category slug
+msgctxt "Default category slug"
+msgid "Uncategorized"
 msgstr ""

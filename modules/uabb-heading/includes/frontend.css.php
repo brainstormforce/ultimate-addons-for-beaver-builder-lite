@@ -1,6 +1,6 @@
 <?php
 /**
- *  UABB Heading Module front-end CSS php file
+ *  UABB Heading Module front-end CSS php file.
  *
  *  @package UABB Heading Module
  */
@@ -8,6 +8,25 @@
 global $post;
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
+
+// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
+// Ensure $id is defined and initialized.
+if ( ! isset( $id ) ) {
+	$id = '';
+}
+
+// Ensure $global_settings is defined and initialized.
+if ( ! isset( $global_settings ) ) {
+	// Create an empty object to avoid undefined errors.
+	$global_settings = new stdClass();
+}
+
+// Ensure $position is defined with a default value.
+$position = '0'; // Default to '0' to avoid undefined variable errors.
 
 	$settings->title_color = FLBuilderColor::hex_or_rgb( $settings->color );
 	$settings->desc_color  = FLBuilderColor::hex_or_rgb( $settings->desc_color );
@@ -181,7 +200,7 @@ if ( '' !== $settings->separator_style ) {
 
 		$imageicon_array = array(
 
-			'image_type'          => ( 'line_image' === $settings->separator_style ) ? 'photo' : ( ( 'line_icon' === $settings->separator_style ) ? 'icon' : '' ),
+			'image_type'          => ( 'line_image' === $settings->separator_style ) ? 'photo' : 'icon', // Removed unreachable condition.
 			/* Icon Basics */
 			'icon'                => $settings->icon,
 			'icon_size'           => $settings->icon_size,
@@ -197,8 +216,9 @@ if ( '' !== $settings->separator_style ) {
 			'photo_src'           => ( isset( $settings->photo_src ) ) ? $settings->photo_src : '',
 
 			/*
-			 Icon color */
-			// 'icon_color'          => $settings->separator_icon_color,
+			Icon color
+			*/
+			// 'icon_color'          => $settings->separator_icon_color.
 		);
 
 		/* CSS Render Function */

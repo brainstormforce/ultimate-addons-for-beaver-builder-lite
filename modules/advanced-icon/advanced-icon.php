@@ -23,7 +23,7 @@ class UABBAdvancedIconModule extends FLBuilderModule {
 				'name'            => __( 'Advanced Icons', 'uabb' ),
 				'description'     => __( 'Display a group of Image / Icons.', 'uabb' ),
 				'category'        => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'           => UABB_CAT,
+				'group'           => defined( 'UABB_CAT' ) ? UABB_CAT : '',
 				'dir'             => BB_ULTIMATE_ADDON_DIR . 'modules/advanced-icon/',
 				'url'             => BB_ULTIMATE_ADDON_URL . 'modules/advanced-icon/',
 				'editor_export'   => false, // Defaults to true and can be omitted.
@@ -33,8 +33,6 @@ class UABBAdvancedIconModule extends FLBuilderModule {
 			)
 		);
 	}
-
-
 }
 
 /*

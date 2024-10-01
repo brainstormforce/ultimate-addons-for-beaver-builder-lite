@@ -5,6 +5,11 @@
  * @package UABB Settings Modules
  */
 
+// Defining the constant.
+if ( ! defined( 'UABB_PREFIX' ) ) {
+	define( 'UABB_PREFIX', '' );
+}
+
 ?>
 <div id="fl-uabb-modules-form" class="fl-settings-form uabb-modules-fl-settings-form">
 

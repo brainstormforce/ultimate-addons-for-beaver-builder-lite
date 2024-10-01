@@ -28,7 +28,7 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 		 * @var array Notices.
 		 * @since 1.0.0
 		 */
-		private static $version = '1.1.8';
+		private static $version = '1.1.11';
 
 		/**
 		 * Notices
@@ -116,7 +116,7 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 			}
 
 			if ( false === wp_verify_nonce( $nonce, 'astra-notices' ) ) {
-				wp_send_json_error( esc_html_e( 'WordPress Nonce not validated.' ) );
+				wp_send_json_error( esc_html_e( 'WordPress Nonce not validated.', 'uabb' ) );
 			}
 
 			// Valid inputs?
@@ -141,6 +141,7 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 		 * @return void
 		 */
 		public function enqueue_scripts() {
+			wp_register_style( 'astra-notices', self::get_url() . 'notices.css', array(), self::$version );
 			wp_register_script( 'astra-notices', self::get_url() . 'notices.js', array( 'jquery' ), self::$version, true );
 			wp_localize_script(
 				'astra-notices',
@@ -257,7 +258,6 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 					}
 				}
 			}
-
 		}
 
 		/**
@@ -269,14 +269,15 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 		 */
 		public static function markup( $notice = array() ) {
 			wp_enqueue_script( 'astra-notices' );
+			wp_enqueue_style( 'astra-notices' );
 
 			do_action( 'astra_notice_before_markup' );
 
 			do_action( "astra_notice_before_markup_{$notice['id']}" );
 
 			?>
-			<div id="<?php echo esc_attr( $notice['id'] ); ?>" class="<?php echo esc_attr( $notice['classes'] ); ?>" data-repeat-notice-after="<?php echo esc_attr( $notice['repeat-notice-after'] ); ?>">
-				<div class="notice-container">
+			<div id="<?php echo esc_attr( $notice['id'] ); ?>" class="<?php echo 'astra-notice-wrapper ' . esc_attr( $notice['classes'] ); ?>" data-repeat-notice-after="<?php echo esc_attr( $notice['repeat-notice-after'] ); ?>">
+				<div class="astra-notice-container">
 					<?php do_action( "astra_notice_inside_markup_{$notice['id']}" ); ?>
 					<?php echo wp_kses_post( $notice['message'] ); ?>
 				</div>
@@ -369,7 +370,7 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 		 * @return mixed URL.
 		 */
 		public static function get_url() {
-			$path      = wp_normalize_path( dirname( __FILE__ ) );
+			$path      = wp_normalize_path( __DIR__ );
 			$theme_dir = wp_normalize_path( get_template_directory() );
 
 			if ( strpos( $path, $theme_dir ) !== false ) {
@@ -378,7 +379,6 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 				return plugin_dir_url( __FILE__ );
 			}
 		}
-
 	}
 
 	/**

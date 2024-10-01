@@ -11,6 +11,22 @@
 	$version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 	$converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
+	// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
+// Ensure $id is defined and initialized.
+if ( ! isset( $id ) ) {
+	$id = '';
+}
+
+// Ensure $global_settings is defined and initialized.
+if ( ! isset( $global_settings ) ) {
+	// Create an empty object to avoid undefined errors.
+	$global_settings = new stdClass();
+}
+
 	$settings->icon_color                     = FLBuilderColor::hex_or_rgb( $settings->icon_color );
 	$settings->icon_hover_color               = FLBuilderColor::hex_or_rgb( $settings->icon_hover_color );
 	$settings->overlay_icon_color             = FLBuilderColor::hex_or_rgb( $settings->overlay_icon_color );
@@ -535,7 +551,7 @@ if ( 'style1' === $settings->slide_type ) {
 		<?php } ?>
 
 		<?php if ( 'yes' === $converted || isset( $settings->front_title_line_height_unit ) && '' !== $settings->front_title_line_height_unit ) { ?>
-			line-height: <?php echo  esc_attr( $settings->front_title_line_height_unit ); ?>em;  
+			line-height: <?php echo esc_attr( $settings->front_title_line_height_unit ); ?>em;  
 		<?php } elseif ( isset( $settings->front_title_line_height_unit ) && '' === $settings->front_title_line_height_unit && isset( $settings->front_title_line_height['desktop'] ) && '' !== $settings->front_title_line_height['desktop'] ) { ?>
 			line-height: <?php echo esc_attr( $settings->front_title_line_height['desktop'] ); ?>px;
 		<?php } ?>
@@ -933,12 +949,21 @@ if ( 'style1' === $settings->slide_type ) {
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box .uabb-slide-box-section-content {
 			<?php if ( 'yes' === $converted || isset( $settings->front_desc_font_size_unit_responsive ) && '' !== $settings->front_desc_font_size_unit_responsive ) { ?>
 				font-size: <?php echo esc_attr( $settings->front_desc_font_size_unit_responsive ); ?>px;
-				<?php if ( '' === $settings->front_desc_line_height_unit_responsive && '' !== $settings->front_desc_font_size_unit_responsive ) { ?>
-					line-height: <?php echo esc_attr( $settings->front_desc_font_size_unit_responsive ) + 2; ?>px;
-				<?php } ?>  
-			<?php } elseif ( isset( $settings->front_desc_font_size_unit_responsive ) && '' === $settings->front_desc_font_size_unit_responsive && isset( $settings->line_height['small'] ) && '' !== $settings->line_height['small'] ) { ?>
-				font-size: <?php echo esc_attr( $settings->front_desc_font_size['small'] ); ?>px;
-				line-height: <?php echo esc_attr( $settings->front_desc_font_size['small'] ) + 2; ?>px;
+				<?php
+				if ( '' === $settings->front_desc_line_height_unit_responsive && '' !== $settings->front_desc_font_size_unit_responsive ) {
+					$line_height = floatval( $settings->front_desc_font_size_unit_responsive ) + 2; // ensure it's a numeric value before performing the addition.
+					echo "line-height: {$line_height}px;";
+				}
+				?>
+								<?php
+			} elseif ( isset( $settings->front_desc_font_size_unit_responsive ) && '' === $settings->front_desc_font_size_unit_responsive && isset( $settings->line_height['small'] ) && '' !== $settings->line_height['small'] ) {
+				?>
+				<?php
+				$small_font_size   = esc_attr( $settings->front_desc_font_size['small'] );
+				$small_line_height = floatval( $small_font_size ) + 2; // ensure it's a numeric value before performing the addition.
+				echo "font-size: {$small_font_size}px; line-height: {$small_line_height}px;";
+				?>
+
 			<?php } ?>
 
 			<?php if ( isset( $settings->front_desc_font_size['small'] ) && '' === $settings->front_desc_font_size['small'] && isset( $settings->front_desc_line_height['small'] ) && '' !== $settings->front_desc_line_height['small'] && '' === $settings->front_desc_line_height_unit && '' === $settings->front_desc_line_height_unit_medium && '' === $settings->front_desc_line_height_unit_responsive ) { ?>
@@ -956,12 +981,21 @@ if ( 'style1' === $settings->slide_type ) {
 
 				<?php if ( 'yes' === $converted || isset( $settings->front_title_font_size_unit_responsive ) && '' !== $settings->front_title_font_size_unit_responsive ) { ?>
 					font-size: <?php echo esc_attr( $settings->front_title_font_size_unit_responsive ); ?>px;
-					<?php if ( '' === $settings->front_title_line_height_unit_responsive && '' !== $settings->front_title_font_size_unit_responsive ) { ?>
-						line-height: <?php echo esc_attr( $settings->front_title_font_size_unit_responsive ) + 2; ?>px;
-					<?php } ?>      
-				<?php } elseif ( isset( $settings->front_title_font_size_unit_responsive ) && '' === $settings->front_title_font_size_unit_responsive && isset( $settings->front_title_font_size['small'] ) && '' !== $settings->front_title_font_size['small'] ) { ?>
-					font-size: <?php echo esc_attr( $settings->front_title_font_size['small'] ); ?>px;
-					line-height: <?php echo esc_attr( $settings->front_title_font_size['small'] ) + 2; ?>px;
+					<?php
+					if ( '' === $settings->front_title_line_height_unit_responsive && '' !== $settings->front_title_font_size_unit_responsive ) {
+						$line_height = floatval( $settings->front_title_font_size_unit_responsive ) + 2; // ensure it's a numeric value before performing the addition.
+						echo "line-height: {$line_height}px;";
+					}
+					?>
+										<?php
+				} elseif ( isset( $settings->front_title_font_size_unit_responsive ) && '' === $settings->front_title_font_size_unit_responsive && isset( $settings->front_title_font_size['small'] ) && '' !== $settings->front_title_font_size['small'] ) {
+					?>
+					<?php
+					$small_font_size   = esc_attr( $settings->front_title_font_size['small'] );
+					$small_line_height = floatval( $small_font_size ) + 2; // ensure it's a numeric value before performing the addition.
+					echo "font-size: {$small_font_size}px; line-height: {$small_line_height}px;";
+					?>
+
 				<?php } ?>
 
 				<?php if ( isset( $settings->front_title_font_size['small'] ) && '' === $settings->front_title_font_size['small'] && isset( $settings->front_title_line_height['small'] ) && '' !== $settings->front_title_line_height['small'] && '' === $settings->front_title_line_height_unit && '' === $settings->front_title_line_height_unit_medium && '' === $settings->front_title_line_height_unit_responsive ) { ?>
@@ -979,12 +1013,22 @@ if ( 'style1' === $settings->slide_type ) {
 
 				<?php if ( 'yes' === $converted || isset( $settings->back_desc_font_size_unit_responsive ) && '' !== $settings->back_desc_font_size_unit_responsive ) { ?>
 					font-size: <?php echo esc_attr( $settings->back_desc_font_size_unit_responsive ); ?>px;
-					<?php if ( '' === $settings->back_desc_line_height_unit_responsive && '' !== $settings->back_desc_font_size_unit_responsive ) { ?>
-						line-height: <?php echo esc_attr( $settings->back_desc_font_size_unit_responsive ) + 2; ?>px;
-					<?php } ?>      
-				<?php } elseif ( isset( $settings->back_desc_font_size_unit_responsive ) && '' === $settings->back_desc_font_size_unit_responsive && isset( $settings->back_desc_font_size['small'] ) && '' !== $settings->back_desc_font_size['small'] ) { ?>
-					font-size: <?php echo esc_attr( $settings->back_desc_font_size['small'] ); ?>px;
-					line-height: <?php echo esc_attr( $settings->back_desc_font_size['small'] ) + 2; ?>px;
+					<?php
+					if ( '' === $settings->back_desc_line_height_unit_responsive && '' !== $settings->back_desc_font_size_unit_responsive ) {
+
+						$line_height = floatval( $settings->back_desc_font_size_unit_responsive ) + 2; // ensure it's a numeric value before performing the addition.
+						echo "line-height: {$line_height}px;";
+					}
+					?>
+										<?php
+				} elseif ( isset( $settings->back_desc_font_size_unit_responsive ) && '' === $settings->back_desc_font_size_unit_responsive && isset( $settings->back_desc_font_size['small'] ) && '' !== $settings->back_desc_font_size['small'] ) {
+					?>
+					<?php
+					$small_font_size   = esc_attr( $settings->back_desc_font_size['small'] );
+					$small_line_height = floatval( $small_font_size ) + 2; // ensure it's a numeric value before performing the addition.
+					echo "font-size: {$small_font_size}px; line-height: {$small_line_height}px;";
+					?>
+
 				<?php } ?>
 
 				<?php if ( isset( $settings->back_desc_font_size['small'] ) && '' === $settings->back_desc_font_size['small'] && isset( $settings->back_desc_line_height['small'] ) && '' !== $settings->back_desc_line_height['small'] && '' === $settings->back_desc_line_height_unit && '' === $settings->back_desc_line_height_unit_medium && '' === $settings->back_desc_line_height_unit_responsive ) { ?>
@@ -1002,12 +1046,19 @@ if ( 'style1' === $settings->slide_type ) {
 
 				<?php if ( 'yes' === $converted || isset( $settings->back_title_font_size_unit_responsive ) && '' !== $settings->back_title_font_size_unit_responsive ) { ?>
 					font-size: <?php echo esc_attr( $settings->back_title_font_size_unit_responsive ); ?>px;
-					<?php if ( '' === $settings->back_title_line_height_unit_responsive && '' !== $settings->back_title_font_size_unit_responsive ) { ?>
-						line-height: <?php echo esc_attr( $settings->back_title_font_size_unit_responsive ) + 2; ?>px;
-					<?php } ?>      
-				<?php } elseif ( isset( $settings->back_title_font_size_unit_responsive ) && '' === $settings->back_title_font_size_unit_responsive && isset( $settings->back_title_font_size['small'] ) && '' !== $settings->back_title_font_size['small'] ) { ?>
-					font-size: <?php echo esc_attr( $settings->back_title_font_size['small'] ); ?>px;
-					line-height: <?php echo esc_attr( $settings->back_title_font_size['small'] ) + 2; ?>px;
+					<?php
+					if ( '' === $settings->back_title_line_height_unit_responsive && '' !== $settings->back_title_font_size_unit_responsive ) {
+						$line_height = floatval( $settings->back_title_font_size_unit_responsive ) + 2; // ensure it's a numeric value before performing the addition.
+						echo "line-height: {$line_height}px;";
+					}
+					?>
+									<?php } elseif ( isset( $settings->back_title_font_size_unit_responsive ) && '' === $settings->back_title_font_size_unit_responsive && isset( $settings->back_title_font_size['small'] ) && '' !== $settings->back_title_font_size['small'] ) { ?>
+					<?php
+					$small_font_size   = esc_attr( $settings->back_title_font_size['small'] );
+					$small_line_height = floatval( $small_font_size ) + 2; // ensure it's a numeric value before performing the addition.
+					echo "font-size: {$small_font_size}px; line-height: {$small_line_height}px;";
+					?>
+
 				<?php } ?>
 
 				<?php if ( isset( $settings->back_title_font_size['small'] ) && '' === $settings->back_title_font_size['small'] && isset( $settings->back_title_line_height['small'] ) && '' !== $settings->back_title_line_height['small'] && '' === $settings->back_title_line_height_unit && '' === $settings->back_title_line_height_unit_medium && '' === $settings->back_title_line_height_unit_responsive ) { ?>
@@ -1024,12 +1075,21 @@ if ( 'style1' === $settings->slide_type ) {
 			.fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> .uabb-callout-cta-link {
 				<?php if ( 'yes' === $converted || isset( $settings->link_font_size_unit_responsive ) && '' !== $settings->link_font_size_unit_responsive ) { ?>
 					font-size: <?php echo esc_attr( $settings->link_font_size_unit_responsive ); ?>px;
-					<?php if ( '' === $settings->link_line_height_unit_responsive && '' !== $settings->link_font_size_unit_responsive ) { ?>
-						line-height: <?php esc_attr( $settings->link_font_size_unit_responsive ) + 2; ?>px;
-					<?php } ?>  
-				<?php } elseif ( isset( $settings->link_font_size_unit_responsive ) && '' === $settings->link_font_size_unit_responsive && isset( $settings->link_font_size['small'] ) && '' !== $settings->link_font_size['small'] ) { ?> 
-					font-size: <?php echo esc_attr( $settings->link_font_size['small'] ); ?>px;
-					line-height: <?php esc_attr( $settings->link_font_size['small'] ) + 2; ?>px;
+					<?php
+					if ( '' === $settings->link_line_height_unit_responsive && '' !== $settings->link_font_size_unit_responsive ) {
+
+						$line_height = floatval( $settings->link_font_size_unit_responsive ) + 2; // ensure it's a numeric value before performing the addition.
+						echo "line-height: {$line_height}px;";
+
+					}
+					?>
+									<?php } elseif ( isset( $settings->link_font_size_unit_responsive ) && '' === $settings->link_font_size_unit_responsive && isset( $settings->link_font_size['small'] ) && '' !== $settings->link_font_size['small'] ) { ?> 
+					<?php
+					$small_font_size   = esc_attr( $settings->link_font_size['small'] );
+					$small_line_height = floatval( $small_font_size ) + 2; // ensure it's a numeric value before performing the addition.
+					echo "font-size: {$small_font_size}px; line-height: {$small_line_height}px;";
+					?>
+
 				<?php } ?> 
 
 				<?php if ( isset( $settings->link_font_size['small'] ) && '' === $settings->link_font_size['small'] && isset( $settings->link_line_height['small'] ) && '' !== $settings->link_line_height['small'] && '' === $settings->link_line_height_unit && '' === $settings->link_line_height_unit_medium ) { ?>

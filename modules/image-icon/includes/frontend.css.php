@@ -5,6 +5,25 @@
  *  @package UABB Image Icon Module
  */
 
+// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
+// Ensure $id is defined and initialized.
+if ( ! isset( $id ) ) {
+	$id = '';
+}
+
+// Ensure $global_settings is defined and initialized.
+if ( ! isset( $global_settings ) ) {
+	// Create an empty object to avoid undefined errors.
+	$global_settings = new stdClass();
+}
+
+$bg_hover_grad_start = ''; // Ensure $bg_grad_start is always defined.
+$border_hover_color  = ''; // Ensure $border_hover_color is always defined.
+
 if ( 'none' !== $settings->image_type ) :
 
 	$settings->icon_color       = FLBuilderColor::hex_or_rgb( $settings->icon_color );
@@ -124,7 +143,7 @@ if ( 'none' !== $settings->image_type ) :
 				height: <?php echo esc_attr( $settings->icon_size ); ?>px;
 				width: <?php echo esc_attr( $settings->icon_size ); ?>px;
 				text-align: center;
-			<?php }; ?>
+			<?php } ?>
 
 			<?php /* Border Style */ ?>
 			<?php if ( 'custom' === $settings->icon_style && 'none' !== $settings->icon_border_style ) : ?>

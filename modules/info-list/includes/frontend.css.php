@@ -9,6 +9,22 @@ global $post;
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
+// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
+// Ensure $id is defined and initialized.
+if ( ! isset( $id ) ) {
+	$id = '';
+}
+
+// Ensure $global_settings is defined and initialized.
+if ( ! isset( $global_settings ) ) {
+	// Create an empty object to avoid undefined errors.
+	$global_settings = new stdClass();
+}
+
 /* Variable settings */
 $settings->heading_color          = FLBuilderColor::hex_or_rgb( $settings->heading_color );
 $settings->description_color      = FLBuilderColor::hex_or_rgb( $settings->description_color );
@@ -65,7 +81,7 @@ if ( 'yes' === $settings->list_connector_option ) {
 		height: calc( 50% - <?php echo esc_attr( $settings->icon_image_size / 2 ) + $icon_extra_padding - $space_element; ?>px );
 		<?php else : ?>
 		top: <?php echo esc_attr( $settings->icon_image_size + $icon_extra_padding_top ); ?>px;
-		height: calc( 100% - <?php echo esc_attr( $settings->icon_image_size ) + $icon_extra_padding_top; ?>px );
+		height: calc( 100% - <?php echo esc_attr( $settings->icon_image_size + $icon_extra_padding_top ); ?>px );
 		<?php endif; ?>
 	}
 	<?php if ( 'center' === $settings->align_items ) : ?>
@@ -232,8 +248,8 @@ if ( 'left' === $settings->icon_position ) {
 		}
 		<?php if ( '' !== $settings->space_between_elements ) { ?>
 			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-wrapper .uabb-info-list-item {
-				padding-right: <?php echo ( esc_attr( $settings->space_between_elements ) / 2 ); ?>px;
-				padding-left: <?php echo  ( esc_attr( $settings->space_between_elements ) / 2 ); ?>px;
+				padding-right: <?php echo esc_attr( ( $settings->space_between_elements ) / 2 ); ?>px;
+				padding-left: <?php echo esc_attr( ( $settings->space_between_elements ) / 2 ); ?>px;
 				padding-bottom: 0;
 			}
 		<?php } ?>
@@ -376,7 +392,7 @@ foreach ( $settings->add_list_item as $item ) {
 				$img_size = getimagesize( $item->photo_url );
 			endif;
 
-			if ( ( null !== intval( $img_size[0] ) ) && ( null !== intval( $img_size[1] ) ) && ( 0 !== intval( $img_size[0] ) ) ) :
+			if ( ( 0 !== intval( $img_size[0] ) ) && ( 0 !== intval( $img_size[1] ) ) ) :
 				$actual_height = ( intval( $settings->icon_image_size ) * intval( $img_size[1] ) ) / intval( $img_size[0] );
 
 				if ( $actual_height > $settings->icon_image_size ) :
@@ -390,17 +406,17 @@ foreach ( $settings->add_list_item as $item ) {
 
 					.fl-node-<?php echo esc_attr( $id ); ?> .info-list-item-dynamic<?php echo esc_attr( $list_item_counter ); ?> .uabb-info-list-connector {
 						<?php if ( 'center' === $settings->align_items ) : ?>
-						top: calc( 50% + <?php echo ( esc_attr( $settings->icon_image_size - $need_to_add ) / 2 ) + $icon_extra_padding - $space_element; ?>px );
-						height: calc( 50% - <?php echo ( esc_attr( $settings->icon_image_size - $need_to_add ) / 2 ) + $icon_extra_padding - $space_element; ?>px );
+						top: calc( 50% + <?php echo esc_attr( ( $settings->icon_image_size - $need_to_add ) / 2 ) + $icon_extra_padding - $space_element; ?>px );
+						height: calc( 50% - <?php echo esc_attr( ( $settings->icon_image_size - $need_to_add ) / 2 ) + $icon_extra_padding - $space_element; ?>px );
 						<?php else : ?>
-						top: <?php echo esc_attr( $settings->icon_image_size - $need_to_add ) + $icon_extra_padding_top; ?>px;
-						height: calc( 100% - <?php echo ( esc_attr( $settings->icon_image_size - $need_to_add ) ) + $icon_extra_padding_top; ?>px );
+						top: <?php echo esc_attr( $settings->icon_image_size - $need_to_add + $icon_extra_padding_top ); ?>px;
+						height: calc( 100% - <?php echo esc_attr( ( $settings->icon_image_size - $need_to_add ) + $icon_extra_padding_top ); ?>px );
 						<?php endif; ?>
 					}
 
 					<?php if ( 'center' === $settings->align_items ) : ?>
 					.fl-node-<?php echo esc_attr( $id ); ?> .info-list-item-dynamic<?php echo esc_attr( $list_item_counter ); ?> .uabb-info-list-connector-top {
-						height: calc( 50% - <?php echo ( ( esc_attr( $settings->icon_image_size - $need_to_add ) / 2 ) + $icon_extra_padding + $space_element ); ?>px );
+						height: calc( 50% - <?php echo esc_attr( ( ( $settings->icon_image_size - $need_to_add ) / 2 ) + $icon_extra_padding + $space_element ); ?>px );
 					}
 						<?php
 					endif;

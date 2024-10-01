@@ -34,7 +34,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 
 			define( 'BSF_ANALYTICS_FILE', __FILE__ );
 			define( 'BSF_ANALYTICS_VERSION', '1.0.1' );
-			define( 'BSF_ANALYTICS_PATH', dirname( __FILE__ ) );
+			define( 'BSF_ANALYTICS_PATH', __DIR__ );
 			define( 'BSF_ANALYTICS_URI', $this->bsf_analytics_url() );
 
 			add_action( 'admin_init', array( $this, 'handle_optin_optout' ) );
@@ -64,13 +64,13 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 */
 		public function bsf_analytics_url() {
 
-			$path      = wp_normalize_path( BSF_ANALYTICS_PATH );
+			$path      = wp_normalize_path( defined( 'BSF_ANALYTICS_PATH' ) ? BSF_ANALYTICS_PATH : '' );
 			$theme_dir = wp_normalize_path( get_template_directory() );
 
 			if ( strpos( $path, $theme_dir ) !== false ) {
 				return rtrim( get_template_directory_uri() . '/admin/bsf-analytics/', '/' );
 			} else {
-				return rtrim( plugin_dir_url( BSF_ANALYTICS_FILE ), '/' );
+				return rtrim( plugin_dir_url( defined( 'BSF_ANALYTICS_FILE' ) ? BSF_ANALYTICS_FILE : '' ), '/' );
 			}
 		}
 
@@ -101,15 +101,16 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 			$file_rtl = ( is_rtl() ) ? '-rtl' : '';
 			$css_ext  = ( SCRIPT_DEBUG ) ? '.css' : '.min.css';
 
-			$css_uri = BSF_ANALYTICS_URI . '/assets/css/' . $dir_name . '/style' . $file_rtl . $css_ext;
+			$css_uri = ( defined( 'BSF_ANALYTICS_URI' ) ? BSF_ANALYTICS_URI : '' ) . '/assets/css/' . $dir_name . '/style' . $file_rtl . $css_ext;
 
-			wp_enqueue_style( 'bsf-analytics-admin-style', $css_uri, false, BSF_ANALYTICS_VERSION, 'all' );
+			wp_enqueue_style( 'bsf-analytics-admin-style', $css_uri, false, ( defined( 'BSF_ANALYTICS_VERSION' ) ? BSF_ANALYTICS_VERSION : '' ), 'all' );
 		}
 
 		/**
 		 * Send analytics API call.
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		public function send() {
 			wp_remote_post(
@@ -162,6 +163,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 * Display admin notice for usage tracking.
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		public function option_notice() {
 
@@ -236,6 +238,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 * Process usage tracking opt out.
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		public function handle_optin_optout() {
 			if ( ! isset( $_GET['bsf_analytics_nonce'] ) ) {
@@ -268,6 +271,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 * Opt in to usage tracking.
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		private function optin() {
 			update_site_option( 'bsf_analytics_optin', 'yes' );
@@ -277,6 +281,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 * Opt out to usage tracking.
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		private function optout() {
 			update_site_option( 'bsf_analytics_optin', 'no' );
@@ -287,6 +292,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 *
 		 * @param array $schedules scheduled array data.
 		 * @since 1.0.0
+		 * @return array
 		 */
 		public function every_two_days_schedule( $schedules ) {
 			$schedules['every_two_days'] = array(
@@ -301,6 +307,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 * Schedule usage tracking event.
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		private function schedule_event() {
 			if ( ! wp_next_scheduled( 'bsf_analytics_send' ) && $this->is_tracking_enabled() ) {
@@ -312,6 +319,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 * Unschedule usage tracking event.
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		private function unschedule_event() {
 			wp_clear_scheduled_hook( 'bsf_analytics_send' );
@@ -321,6 +329,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 * Load analytics stat class.
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		private function includes() {
 			require_once __DIR__ . '/class-bsf-analytics-stats.php';
@@ -330,6 +339,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 * Register usage tracking option in General settings page.
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		public function register_usage_tracking_setting() {
 
@@ -356,6 +366,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 *
 		 * @param bool $input Option value.
 		 * @since 1.0.0
+		 * @return string
 		 */
 		public function sanitize_option( $input ) {
 
@@ -370,6 +381,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 * Print settings field HTML.
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		public function render_settings_field_html() {
 			?>
@@ -399,7 +411,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 */
 		private function get_product_name() {
 
-			$base      = wp_normalize_path( dirname( __FILE__ ) );
+			$base      = wp_normalize_path( __DIR__ );
 			$theme_dir = wp_normalize_path( get_template_directory() );
 
 			if ( false !== strpos( $base, $theme_dir ) ) {
@@ -441,7 +453,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		/**
 		 * Set analytics installed time in option.
 		 *
-		 * @return string $time analytics installed time.
+		 * @return string|mixed $time analytics installed time.
 		 * @since 1.0.0
 		 */
 		private function get_analytics_install_time() {
@@ -463,6 +475,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 * @param string $value value of option.
 		 * @param string $option Option name.
 		 * @since 1.0.0
+		 * @return void
 		 */
 		public function update_analytics_option_callback( $old_value, $value, $option ) {
 			$this->add_option_to_network( $value );
@@ -474,6 +487,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 * @param string $option Option name.
 		 * @param string $value value of option.
 		 * @since 1.0.0
+		 * @return void
 		 */
 		public function add_analytics_option_callback( $option, $value ) {
 			$this->add_option_to_network( $value );
@@ -483,6 +497,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 * Schedule or unschedule event based on analytics option value.
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		public function schedule_unschedule_event() {
 
@@ -505,6 +520,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 *
 		 * @param string $value value of option.
 		 * @since 1.0.0
+		 * @return void
 		 */
 		public function add_option_to_network( $value ) {
 

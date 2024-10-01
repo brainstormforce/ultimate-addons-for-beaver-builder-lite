@@ -18,7 +18,7 @@ if ( ! class_exists( 'UABB_Attachment' ) ) {
 		 *
 		 * @since 1.0
 		 */
-		function __construct() {
+		public function __construct() {
 
 			add_filter( 'attachment_fields_to_edit', array( $this, 'uabb_attachment_field_cta' ), 10, 2 );
 			add_filter( 'attachment_fields_to_save', array( $this, 'uabb_attachment_field_cta_save' ), 10, 2 );
@@ -27,11 +27,11 @@ if ( ! class_exists( 'UABB_Attachment' ) ) {
 		/**
 		 * Add CTA Link field to media uploader
 		 *
-		 * @param array  $form_fields array, fields to include in attachment form.
-		 * @param object $post object, attachment record in database.
-		 * @return $form_fields, modified form fields
+		 * @param array<string, mixed> $form_fields array, fields to include in attachment form.
+		 * @param object               $post object, attachment record in database.
+		 * @return array<string, mixed> $form_fields, modified form fields
 		 */
-		function uabb_attachment_field_cta( $form_fields, $post ) {
+		public function uabb_attachment_field_cta( $form_fields, $post ) {
 			$form_fields['uabb-cta-link'] = array(
 				'label' => __( 'Image Link', 'uabb' ),
 				'input' => 'text',
@@ -48,7 +48,7 @@ if ( ! class_exists( 'UABB_Attachment' ) ) {
 		 * @param array $attachment array, attachment fields from $_POST form.
 		 * @return array $post array, modified post data.
 		 */
-		function uabb_attachment_field_cta_save( $post, $attachment ) {
+		public function uabb_attachment_field_cta_save( $post, $attachment ) {
 			if ( isset( $attachment['uabb-cta-link'] ) ) {
 				update_post_meta( $post['ID'], 'uabb-cta-link', $attachment['uabb-cta-link'] );
 			}

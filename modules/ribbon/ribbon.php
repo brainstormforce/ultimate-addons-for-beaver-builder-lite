@@ -22,7 +22,7 @@ class RibbonModule extends FLBuilderModule {
 				'name'          => __( 'Ribbon', 'uabb' ),
 				'description'   => __( 'Ribbon', 'uabb' ),
 				'category'      => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
-				'group'         => UABB_CAT,
+				'group'         => defined( 'UABB_CAT' ) ? UABB_CAT : '',
 				'dir'           => BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/',
 				'url'           => BB_ULTIMATE_ADDON_URL . 'modules/ribbon/',
 				'editor_export' => true, // Defaults to true and can be omitted.
@@ -217,18 +217,24 @@ class RibbonModule extends FLBuilderModule {
 	 * @param string $icon gets the icon for the module.
 	 */
 	public function get_icon( $icon = '' ) {
-		// check if $icon is referencing an included icon.
+		// Initialize $path before the first if statement.
+		$path = '';
+
+		// Check if $icon is referencing an included icon.
 		if ( '' !== $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/icon/' . $icon ) ) {
 			$path = BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/icon/' . $icon;
 		}
 
 		if ( file_exists( $path ) ) {
-			return file_get_contents( $path ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents	
-		} else {
-			return '';
+			$contents = file_get_contents( $path ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+			if ( false !== $contents ) {
+				return $contents;
+			}
 		}
-	}
 
+		// If we reach this point, either the file doesn't exist or file_get_contents failed.
+		return '';
+	}
 }
 
 
@@ -242,4 +248,3 @@ if ( UABB_Lite_Compatibility::check_bb_version() ) {
 } else {
 	require_once BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php';
 }
-
