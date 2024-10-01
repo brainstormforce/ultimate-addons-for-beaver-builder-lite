@@ -27,6 +27,7 @@ if ( ! class_exists( 'UABB_Custom_Field_Scripts' ) ) {
 		 * Function that enqueue styles and scripts
 		 *
 		 * @since 1.0
+		 * @return void
 		 */
 		public function custom_field_scripts() {
 			if ( class_exists( 'FLBuilderModel' ) && FLBuilderModel::is_builder_active() ) {

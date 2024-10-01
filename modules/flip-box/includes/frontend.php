@@ -5,6 +5,17 @@
  *  @package UABB Flip Box Module
  */
 
+// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
+// Ensure $module is defined and initialized.
+if ( ! isset( $module ) ) {
+	$module = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
+
 ?>
 <div class="uabb-module-content uabb-flip-box-wrap">
 	<div class="uabb-flip-box  <?php echo esc_attr( $settings->flip_type ); ?> <?php echo esc_attr( $settings->flip_box_min_height_options ); ?>">

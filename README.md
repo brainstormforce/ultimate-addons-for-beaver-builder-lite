@@ -4,7 +4,7 @@
 **Tags:** beaver builder, beaver builder free, beaver builder lite, beaver builder addons, beaver builder extensions  
 **Requires at least:** 4.6  
 **Tested up to:** 6.6  
-**Stable tag:** 1.5.11  
+**Stable tag:** 1.5.12  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -215,7 +215,8 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ## Changelog ##
 
-### 1.5.11.1 ###
+### 1.5.12 ###
+* Improvement: Improved code quality syntax and security checks for better coding standards and practices.
 * Fixed: Info List - Icon overlap issue.
 
 ### 1.5.11 ###

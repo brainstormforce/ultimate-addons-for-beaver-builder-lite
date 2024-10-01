@@ -5,6 +5,12 @@
  *  @package Global Settings Form
  */
 
+// Defining the constant.
+if ( ! defined( 'UABB_PREFIX' ) ) {
+	define( 'UABB_PREFIX', '' );
+}
+
+
 FLBuilder::register_settings_form(
 	'uabb-global',
 	array(

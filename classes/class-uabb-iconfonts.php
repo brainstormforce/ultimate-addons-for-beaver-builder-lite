@@ -24,6 +24,7 @@ class UABB_IconFonts {
 	 * Function that initializes UABB reload Icons
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
 	public function init() {
 		add_action( 'wp_ajax_uabb_reload_icons', array( $this, 'reload_icons' ) );
@@ -33,6 +34,7 @@ class UABB_IconFonts {
 	 * Function that renders reload Icons
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
 	public function reload_icons() {
 
@@ -53,6 +55,7 @@ class UABB_IconFonts {
 	 * Function that registers UABB Icons
 	 *
 	 * @since 1.0
+	 * @return void
 	 */
 	public function register_icons() {
 

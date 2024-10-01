@@ -29,6 +29,8 @@ if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 		 * Load files.
 		 *
 		 * @since 1.2.2
+		 *
+		 * @return void
 		 */
 		public static function load_files() {
 			if ( class_exists( 'WPML_Page_Builders_Defined' ) ) {
