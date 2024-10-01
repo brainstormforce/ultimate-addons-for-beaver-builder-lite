@@ -215,7 +215,7 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 ## Changelog ##
 
-### 1.5.11.2 ###
+### 1.5.11.1 ###
 * Fixed: Info List - Icon overlap issue.
 
 ### 1.5.11 ###
