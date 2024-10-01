@@ -44,6 +44,9 @@ module.exports = function( grunt ) {
 	                '!composer.json',
 	                '!composer.lock',
 	                '!package-lock.json',
+					'!phpstan-baseline.neon',
+                    '!phpstan.neon',
+                    '!stubs-generator.php',
 	                '!phpcs.xml.dist',
 	            ],
 	            dest: 'ultimate-addons-for-beaver-builder-lite/'
