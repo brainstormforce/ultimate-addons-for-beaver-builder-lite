@@ -30,7 +30,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 		 * @param array<string, mixed> $fields gets the fields for the gradient.
 		 * @return array<string, mixed>
 		 */
-		public function ui_fields( array $fields ) {
+		public function ui_fields( $fields ) {
 			$fields['uabb-gradient'] = BB_ULTIMATE_ADDON_DIR . 'fields/uabb-gradient/ui-field-uabb-gradient.php';
 
 			return $fields;

@@ -11,7 +11,12 @@ parameters:
 		- '#type has no value type specified in iterable type array\.$#'
 		- '#with no value type specified in iterable type array\.$#'
 		- "#^While loop condition is always true\\.$#"
-	
+
+		-
+			message: "#^Cannot cast mixed to float\\.$#"
+			count: 1
+			path: admin/bsf-analytics/class-bsf-analytics-stats.php
+
 		-
 			message: "#^Method BSF_Analytics_Stats\\:\\:format_plugin\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
@@ -323,7 +328,7 @@ parameters:
 			path: classes/class-uabb-update.php
 
 		-
-			message: "#^PHPDoc tag @var has invalid value \\(\\$instance Class instance\\.\\)\\: Unexpected token \"\\$instance\", expected type at offset 65$#"
+			message: "#^PHPDoc tag @var has invalid value \\(\\$instance Class instance\\.\\)\\: Unexpected token \"\\$instance\", expected type at offset 61$#"
 			count: 1
 			path: classes/class-uabb-update.php
 
@@ -428,11 +433,6 @@ parameters:
 			path: classes/uabb-bbtheme-global-integration.php
 
 		-
-			message: "#^Call to function is_array\\(\\) with non\\-falsy\\-string will always evaluate to false\\.$#"
-			count: 1
-			path: classes/uabb-global-functions.php
-
-		-
 			message: "#^Function array_replace_recursive\\(\\) has parameter \\$replacements with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: classes/uabb-global-functions.php
@@ -488,6 +488,16 @@ parameters:
 			path: fields/uabb-gradient/uabb-gradient.php
 
 		-
+			message: "#^Static call to instance method UABB_UI_Panels\\:\\:uabb_templates_data\\(\\)\\.$#"
+			count: 1
+			path: includes/ui-panel-presets.php
+
+		-
+			message: "#^Static call to instance method UABB_UI_Panels\\:\\:uabb_templates_data\\(\\)\\.$#"
+			count: 1
+			path: includes/ui-panel-sections.php
+
+		-
 			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 120$#"
 			count: 1
 			path: modules/advanced-icon/advanced-icon.php
@@ -523,62 +533,62 @@ parameters:
 			path: modules/image-icon/image-icon.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\n\\\\t \", expected '\\(' at offset 113$#"
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 116$#"
 			count: 1
 			path: modules/image-icon/image-icon.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(_get_cropped_path\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 77$#"
+			message: "#^PHPDoc tag @method has invalid value \\(_get_cropped_path\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 80$#"
 			count: 1
 			path: modules/image-icon/image-icon.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(_get_editor\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 65$#"
+			message: "#^PHPDoc tag @method has invalid value \\(_get_editor\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 68$#"
 			count: 1
 			path: modules/image-icon/image-icon.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(_get_uncropped_url\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 93$#"
+			message: "#^PHPDoc tag @method has invalid value \\(_get_uncropped_url\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 96$#"
 			count: 1
 			path: modules/image-icon/image-icon.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(_has_source\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 71$#"
+			message: "#^PHPDoc tag @method has invalid value \\(_has_source\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 74$#"
 			count: 1
 			path: modules/image-icon/image-icon.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(crop\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 60$#"
+			message: "#^PHPDoc tag @method has invalid value \\(crop\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 63$#"
 			count: 1
 			path: modules/image-icon/image-icon.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(delete\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 74$#"
+			message: "#^PHPDoc tag @method has invalid value \\(delete\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 77$#"
 			count: 1
 			path: modules/image-icon/image-icon.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(get_alt\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 83$#"
+			message: "#^PHPDoc tag @method has invalid value \\(get_alt\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 86$#"
 			count: 1
 			path: modules/image-icon/image-icon.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(get_classes\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 82$#"
+			message: "#^PHPDoc tag @method has invalid value \\(get_classes\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 85$#"
 			count: 1
 			path: modules/image-icon/image-icon.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(get_data\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 87$#"
+			message: "#^PHPDoc tag @method has invalid value \\(get_data\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 90$#"
 			count: 1
 			path: modules/image-icon/image-icon.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(get_src\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 86$#"
+			message: "#^PHPDoc tag @method has invalid value \\(get_src\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 89$#"
 			count: 1
 			path: modules/image-icon/image-icon.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(update\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 63$#"
+			message: "#^PHPDoc tag @method has invalid value \\(update\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 66$#"
 			count: 1
 			path: modules/image-icon/image-icon.php
 
@@ -588,74 +598,79 @@ parameters:
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\n\\\\t \", expected '\\(' at offset 118$#"
+			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 121$#"
 			count: 1
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(_get_cropped_path\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 91$#"
+			message: "#^PHPDoc tag @method has invalid value \\(_get_cropped_path\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 94$#"
 			count: 1
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(_get_editor\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 80$#"
+			message: "#^PHPDoc tag @method has invalid value \\(_get_editor\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 83$#"
 			count: 1
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(_get_uncropped_url\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 93$#"
+			message: "#^PHPDoc tag @method has invalid value \\(_get_uncropped_url\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 96$#"
 			count: 2
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(_has_source\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 71$#"
+			message: "#^PHPDoc tag @method has invalid value \\(_has_source\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 74$#"
 			count: 1
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(crop\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 68$#"
+			message: "#^PHPDoc tag @method has invalid value \\(crop\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 71$#"
 			count: 1
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(delete\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 71$#"
+			message: "#^PHPDoc tag @method has invalid value \\(delete\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\*\", expected '\\(' at offset 74$#"
 			count: 1
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(get_alt\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 75$#"
+			message: "#^PHPDoc tag @method has invalid value \\(get_alt\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 78$#"
 			count: 1
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(get_classes\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 81$#"
+			message: "#^PHPDoc tag @method has invalid value \\(get_classes\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 84$#"
 			count: 1
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(get_data\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 62$#"
+			message: "#^PHPDoc tag @method has invalid value \\(get_data\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\*\", expected '\\(' at offset 65$#"
 			count: 1
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(get_src\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 69$#"
+			message: "#^PHPDoc tag @method has invalid value \\(get_src\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 72$#"
 			count: 1
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @method has invalid value \\(update\\)\\: Unexpected token \"\\\\n\\\\t \\* \", expected '\\(' at offset 63$#"
+			message: "#^PHPDoc tag @method has invalid value \\(update\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \\* \", expected '\\(' at offset 66$#"
 			count: 1
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @property has invalid value \\(\\$_editor\\)\\: Unexpected token \"\\$_editor\", expected type at offset 62$#"
+			message: "#^PHPDoc tag @property has invalid value \\(\\$_editor\\)\\: Unexpected token \"\\$_editor\", expected type at offset 65$#"
 			count: 1
 			path: modules/image-separator/image-separator.php
 
 		-
-			message: "#^PHPDoc tag @property has invalid value \\(\\$data\\)\\: Unexpected token \"\\$data\", expected type at offset 62$#"
+			message: "#^PHPDoc tag @property has invalid value \\(\\$data\\)\\: Unexpected token \"\\$data\", expected type at offset 65$#"
 			count: 1
 			path: modules/image-separator/image-separator.php
+
+		-
+			message: "#^Method UABBInfoList\\:\\:get_icon\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: modules/info-list/info-list.php
 
 		-
 			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 115$#"
@@ -686,6 +701,11 @@ parameters:
 			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 116$#"
 			count: 1
 			path: modules/info-table/info-table.php
+
+		-
+			message: "#^Method RibbonModule\\:\\:get_icon\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: modules/ribbon/ribbon.php
 
 		-
 			message: "#^PHPDoc tag @method has invalid value \\(__construct\\)\\: Unexpected token \"\\\\r\\\\n\\\\t \", expected '\\(' at offset 112$#"
