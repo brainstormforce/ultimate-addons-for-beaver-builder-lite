@@ -215,6 +215,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 
 == Changelog ==
 
+= 1.5.13 = 
+* Fixed: Info List - Resolved warning for undefined array key when selecting image size in the module.
+
 = 1.5.12 = 
 * Improvement: Improved code quality syntax and security checks for better coding standards and practices.
 * Fixed: Info List - Icon overlap issue.
