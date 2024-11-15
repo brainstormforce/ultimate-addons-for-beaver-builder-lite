@@ -3,7 +3,7 @@ Contributors: brainstormforce
 Donate link: https://www.paypal.me/BrainstormForce
 Tags: beaver builder, beaver builder free, beaver builder lite, beaver builder addons, beaver builder extensions
 Requires at least: 4.6
-Tested up to: 6.6
+Tested up to: 6.7
 Stable tag: 1.5.12
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
