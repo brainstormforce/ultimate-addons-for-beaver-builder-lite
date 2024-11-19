@@ -383,7 +383,7 @@ foreach ( $settings->add_list_item as $item ) {
 		<?php
 	}
 
-	if ( 'photo' === $item->image_type && ( 'custom' === $settings->list_icon_style || 'simple' === $settings->list_icon_style ) ) :
+	if ( ( isset( $item->image_type ) && 'photo' === $item->image_type ) && ( 'custom' === $settings->list_icon_style || 'simple' === $settings->list_icon_style ) ) :
 		$img_size = array();
 		if ( 'library' === $item->photo_source && '' !== $item->photo ) :
 			$img_size[0] = ( isset( FLBuilderPhoto::get_attachment_data( $item->photo )->width ) ) ? FLBuilderPhoto::get_attachment_data( $item->photo )->width : '';
@@ -392,7 +392,7 @@ foreach ( $settings->add_list_item as $item ) {
 				$img_size = getimagesize( $item->photo_url );
 			endif;
 
-			if ( ( 0 !== intval( $img_size[0] ) ) && ( 0 !== intval( $img_size[1] ) ) ) :
+			if ( isset( $img_size[0] ) && isset( $img_size[1] ) && ( 0 !== intval( $img_size[0] ) ) && ( 0 !== intval( $img_size[1] ) ) ) :
 				$actual_height = ( intval( $settings->icon_image_size ) * intval( $img_size[1] ) ) / intval( $img_size[0] );
 
 				if ( $actual_height > $settings->icon_image_size ) :

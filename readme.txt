@@ -3,8 +3,8 @@ Contributors: brainstormforce
 Donate link: https://www.paypal.me/BrainstormForce
 Tags: beaver builder, beaver builder free, beaver builder lite, beaver builder addons, beaver builder extensions
 Requires at least: 4.6
-Tested up to: 6.6
-Stable tag: 1.5.12
+Tested up to: 6.7
+Stable tag: 1.5.13
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -214,6 +214,9 @@ Yes it is! This plugin comes with .po and .mo files. It is already translated in
 4. /assets/screenshots/4.png
 
 == Changelog ==
+
+= 1.5.13 = 
+* Fixed: Info List - Resolved warning for undefined array key when selecting image size in the module.
 
 = 1.5.12 = 
 * Improvement: Improved code quality syntax and security checks for better coding standards and practices.
