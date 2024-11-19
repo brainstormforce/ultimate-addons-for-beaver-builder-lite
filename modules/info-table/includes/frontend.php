@@ -5,6 +5,11 @@
  * @package UABB Info Table Module
  */
 
+// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
 if ( isset( $settings->it_link_nofollow ) ) {
 	$link_nofollow = $settings->it_link_nofollow;
 } else {

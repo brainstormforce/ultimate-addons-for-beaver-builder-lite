@@ -8,6 +8,10 @@
 
 if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 
+	if ( ! defined( 'FL_BUILDER_VERSION' ) ) {
+		define( 'FL_BUILDER_VERSION', '' );
+	}
+
 	/**
 	 * UABB_Plugin_Backward initial setup
 	 *
@@ -49,6 +53,8 @@ if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 
 		/**
 		 * Initiator
+		 *
+		 * @return self
 		 */
 		public static function get_instance() {
 			if ( ! isset( self::$instance ) ) {
@@ -101,7 +107,7 @@ if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 		 * Check if the page is created in between UABB version 1.7.0 - version 1.13.2
 		 *
 		 * @since 1.3.0
-		 * @return bool self::$stable_version_new_page
+		 * @return string self::$stable_version_new_page
 		 */
 		public static function check_stable_version_new_page() {
 

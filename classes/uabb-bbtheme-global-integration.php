@@ -15,7 +15,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		/**
 		 * Gets the Beaver Builder theme's options
 		 *
-		 * @var $bb_options
+		 * @var array $bb_options
 		 */
 		public $bb_options;
 		/**
@@ -68,6 +68,8 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Theme Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_theme_color() {
 			$color = $this->bb_options['theme_color'];
@@ -77,6 +79,8 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Theme Text Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_text_color() {
 			$color = $this->bb_options['theme_text_color'];
@@ -86,6 +90,8 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Button Background Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_bg_color() {
 			$color = $this->bb_options['btn_bg_color'];
@@ -96,6 +102,8 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Button Background Hover Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_bg_hover_color() {
 			$color = $this->bb_options['btn_bg_hover_color'];
@@ -105,6 +113,8 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Button Text Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_text_color() {
 			$color = $this->bb_options['btn_text_color'];
@@ -115,6 +125,8 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 		/**
 		 * Button Text Hover Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_text_hover_color() {
 			$color = $this->bb_options['btn_text_hover_color'];

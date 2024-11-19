@@ -6,6 +6,17 @@
  */
 
 global $wp_embed;
+
+// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
+// Ensure $module is defined and initialized.
+if ( ! isset( $module ) ) {
+	$module = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
 ?>
 <div class="uabb-module-content uabb-heading-wrapper uabb-heading-align-<?php echo esc_attr( $settings->alignment ); ?> <?php echo ( 'line_text' === $settings->separator_style ) ? esc_attr( $settings->responsive_compatibility ) : ''; ?>">
 	<?php if ( 'top' === $settings->separator_position ) { ?>

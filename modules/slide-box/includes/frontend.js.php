@@ -12,6 +12,16 @@
  * @package Slide Box
  */
 
+// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
+// Ensure $id is defined and initialized.
+if ( ! isset( $id ) ) {
+	$id = '';
+}
+
 ?>
 if(! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
 	var is_touch_device = false;

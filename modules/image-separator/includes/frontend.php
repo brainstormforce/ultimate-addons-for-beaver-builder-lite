@@ -5,6 +5,16 @@
  *  @package UABB Image Separator Module
  */
 
+	// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
+// Ensure $module is defined and initialized.
+if ( ! isset( $module ) ) {
+	$module = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
 	$classes = $module->get_classes();
 	$src     = $module->get_src();
 	$alt     = $module->get_alt();

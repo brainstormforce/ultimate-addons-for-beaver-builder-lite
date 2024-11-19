@@ -5,6 +5,11 @@
  *  @package UABB Star Ratting Module
  */
 
+// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
 $title  = $settings->rating_title;
 $rating = ! empty( $settings->rating ) ? $settings->rating : 0;
 $layout = 0;

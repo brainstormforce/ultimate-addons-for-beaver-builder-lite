@@ -22,6 +22,12 @@
         <exclude-pattern>*.js.php</exclude-pattern>
     </rule>
 
+	<!-- Exclude the filename rule globally for all files -->
+    <rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+        <exclude-pattern>*.css.php</exclude-pattern>
+        <exclude-pattern>*.js.php</exclude-pattern>
+    </rule>
+
 	<!-- Show sniff codes in all reports -->
 	<arg value="s"/>
 
@@ -29,6 +35,7 @@
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<exclude-pattern>*/tests/*</exclude-pattern>
 	<exclude-pattern>*/admin/bsf-core/*</exclude-pattern>
+	<exclude-pattern>*/stubs/*</exclude-pattern>
 	<!-- Exclude Libraries -->
 	<exclude-pattern>*/classes/library/batch-processing/*</exclude-pattern>
 	<exclude-pattern>*/classes/library/image-processing-queue/*</exclude-pattern>

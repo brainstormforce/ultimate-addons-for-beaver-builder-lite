@@ -11,6 +11,12 @@
 
 ?>
 <?php
+
+// Ensure $settings is defined and initialized.
+if ( ! isset( $settings ) ) {
+	$settings = new stdClass(); // Create an empty object to avoid undefined errors.
+}
+
 // Define a whitelist of allowed tags.
 	$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
 	$ribbon_tag   = in_array( $settings->text_tag_selection, $allowed_tags, true ) ? $settings->text_tag_selection : 'h3';

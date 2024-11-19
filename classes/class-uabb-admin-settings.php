@@ -59,6 +59,7 @@ final class UABBBuilderAdminSettings {
 	 * Enqueues the needed CSS/JS for the builder's admin settings page.
 	 *
 	 * @since 1.3.0
+	 * @return void
 	 */
 	public static function notice_styles_scripts() {
 		// Styles.
@@ -81,6 +82,7 @@ final class UABBBuilderAdminSettings {
 	 * Ask Plugin Rating
 	 *
 	 * @since 1.3.0
+	 * @return void
 	 */
 	public static function register_notices() {
 
@@ -113,13 +115,13 @@ final class UABBBuilderAdminSettings {
 							</div>
 						</div>',
 					$image_path,
-					__( 'Hello! Thank you for choosing the Ultimate Addon for Beaver Builder to build this website!', 'ultimate-addon-for-beaver-builder' ),
-					__( 'Would you please mind sharing your views and give it a 5 star rating on the WordPress repository?', 'ultimate-addon-for-beaver-builder' ),
+					__( 'Hello! Thank you for choosing the Ultimate Addon for Beaver Builder to build this website!', 'ultimate-addon-for-beaver-builder', 'uabb' ),
+					__( 'Would you please mind sharing your views and give it a 5 star rating on the WordPress repository?', 'ultimate-addon-for-beaver-builder', 'uabb' ),
 					'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/?filter=5',
-					__( 'Ok, you deserve it', 'ultimate-addon-for-beaver-builder' ),
+					__( 'Ok, you deserve it', 'ultimate-addon-for-beaver-builder', 'uabb' ),
 					MONTH_IN_SECONDS,
-					__( 'Nope, maybe later', 'ultimate-addon-for-beaver-builder' ),
-					__( 'I already did', 'ultimate-addon-for-beaver-builder' )
+					__( 'Nope, maybe later', 'ultimate-addon-for-beaver-builder', 'uabb' ),
+					__( 'I already did', 'ultimate-addon-for-beaver-builder', 'uabb' )
 				),
 				'repeat-notice-after'        => MONTH_IN_SECONDS,
 				'display-notice-after'       => ( 2 * WEEK_IN_SECONDS ), // Display notice after 2 weeks.

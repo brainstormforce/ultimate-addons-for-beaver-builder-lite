@@ -15,7 +15,7 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		/**
 		 * Constructor function that initializes necessary filters
 		 *
-		 * @var $uabb_setting_options gets the uabb setting options
+		 * @var mixed $uabb_setting_options gets the uabb setting options
 		 */
 		public $uabb_setting_options;
 		/**
@@ -54,8 +54,9 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		 *
 		 * @since 1.0
 		 * @param object $option gets the options for the UABB settings.
-		 * @param var    $color gets the color.
-		 * @param var    $opc gets the opacity for the colorpicker.
+		 * @param bool   $color gets the color.
+		 * @param bool   $opc gets the opacity for the colorpicker.
+		 * @return string
 		 */
 		public function uabb_get_global_option( $option, $color = false, $opc = false ) {
 			$uabb_setting_options = $this->uabb_setting_options;
@@ -74,6 +75,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		}
 		/**
 		 * Theme Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_theme_color() {
 			$color = $this->uabb_get_global_option( 'theme_color', true );
@@ -85,6 +88,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Text Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_text_color() {
 			$color = $this->uabb_get_global_option( 'theme_text_color', true );
@@ -96,6 +101,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Link Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_link_color() {
 			$color = $this->uabb_get_global_option( 'theme_link_color', true );
@@ -107,6 +114,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Link Hover Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_link_hover_color() {
 			$color = $this->uabb_get_global_option( 'theme_link_hover_color', true );
@@ -117,13 +126,18 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Font Family
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_font_family() {
+			$btn_font_family = '';
 			return $btn_font_family;
 		}
 
 		/**
 		 * Button Font Size -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_font_size() {
 			$font_size = $this->uabb_get_global_option( 'btn_font_size' );
@@ -133,6 +147,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Line Height -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_line_height() {
 			$line_height = $this->uabb_get_global_option( 'btn_line_height' );
@@ -143,6 +159,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Letter Spacing -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_letter_spacing() {
 			$letter_spacing = $this->uabb_get_global_option( 'btn_letter_spacing' );
@@ -153,6 +171,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Text Transform -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_text_transform() {
 			$text_transform = $this->uabb_get_global_option( 'btn_text_transform' );
@@ -163,6 +183,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Text Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_text_color() {
 			$color = $this->uabb_get_global_option( 'btn_text_color', true );
@@ -173,6 +195,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Text Hover Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_text_hover_color() {
 			$color = $this->uabb_get_global_option( 'btn_text_hover_color', true );
@@ -183,6 +207,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Background Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_bg_color() {
 			$color = $this->uabb_get_global_option( 'btn_bg_color', true, true );
@@ -193,6 +219,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Background Hover Color -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_bg_hover_color() {
 			$color = $this->uabb_get_global_option( 'btn_bg_hover_color', true, true );
@@ -203,6 +231,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Border Radius -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_border_radius() {
 			$border_radius = $this->uabb_get_global_option( 'btn_border_radius' );
@@ -214,6 +244,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 
 		/**
 		 * Button Padding -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_padding() {
 			$padding = '';
@@ -229,6 +261,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		}
 		/**
 		 * Button Padding -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_vertical_padding() {
 			$v_padding = '';
@@ -239,6 +273,8 @@ if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 		}
 		/**
 		 * Button Padding -
+		 *
+		 * @return string
 		 */
 		public function uabb_global_button_horizontal_padding() {
 			$h_padding = '';
