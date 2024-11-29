@@ -42,13 +42,13 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 			$mods = FLCustomizer::get_mods();
 
 			/* Primary Color */
-			$var['theme_color'] = FLColor::hex( array( $mods['fl-accent'] ) );
+			$var['theme_color'] = FLColor::hex( [ $mods['fl-accent'] ] );
 			/* Primary Text Color */
 			$var['theme_text_color'] = FLColor::hex( $mods['fl-body-text-color'] );
 
 			/* Background Colors */
-			$var['btn_bg_color']       = FLColor::hex( array( $mods['fl-accent'] ) );
-			$var['btn_bg_hover_color'] = FLColor::hex( array( $mods['fl-accent-hover'] ) );
+			$var['btn_bg_color']       = FLColor::hex( [ $mods['fl-accent'] ] );
+			$var['btn_bg_hover_color'] = FLColor::hex( [ $mods['fl-accent-hover'] ] );
 
 			/* Text Colors */
 			$var['btn_text_color']       = FLColor::foreground( $var['btn_bg_color'] );
@@ -56,14 +56,14 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 
 			$this->bb_options = $var;
 
-			add_filter( 'uabb/global/theme_color', array( $this, 'uabb_global_theme_color' ) );
-			add_filter( 'uabb/global/text_color', array( $this, 'uabb_global_text_color' ) );
+			add_filter( 'uabb/global/theme_color', [ $this, 'uabb_global_theme_color' ] );
+			add_filter( 'uabb/global/text_color', [ $this, 'uabb_global_text_color' ] );
 
-			add_filter( 'uabb/global/button_bg_color', array( $this, 'uabb_global_button_bg_color' ) );
-			add_filter( 'uabb/global/button_bg_hover_color', array( $this, 'uabb_global_button_bg_hover_color' ) );
+			add_filter( 'uabb/global/button_bg_color', [ $this, 'uabb_global_button_bg_color' ] );
+			add_filter( 'uabb/global/button_bg_hover_color', [ $this, 'uabb_global_button_bg_hover_color' ] );
 
-			add_filter( 'uabb/global/button_text_color', array( $this, 'uabb_global_button_text_color' ) );
-			add_filter( 'uabb/global/button_text_hover_color', array( $this, 'uabb_global_button_text_hover_color' ) );
+			add_filter( 'uabb/global/button_text_color', [ $this, 'uabb_global_button_text_color' ] );
+			add_filter( 'uabb/global/button_text_hover_color', [ $this, 'uabb_global_button_text_hover_color' ] );
 		}
 
 		/**
@@ -72,9 +72,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		 * @return string
 		 */
 		public function uabb_global_theme_color() {
-			$color = $this->bb_options['theme_color'];
-
-			return $color;
+			return $this->bb_options['theme_color'];
 		}
 
 		/**
@@ -83,9 +81,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		 * @return string
 		 */
 		public function uabb_global_text_color() {
-			$color = $this->bb_options['theme_text_color'];
-
-			return $color;
+			return $this->bb_options['theme_text_color'];
 		}
 
 		/**
@@ -94,11 +90,8 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		 * @return string
 		 */
 		public function uabb_global_button_bg_color() {
-			$color = $this->bb_options['btn_bg_color'];
-
-			return $color;
+			return $this->bb_options['btn_bg_color'];
 		}
-
 
 		/**
 		 * Button Background Hover Color -
@@ -106,9 +99,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		 * @return string
 		 */
 		public function uabb_global_button_bg_hover_color() {
-			$color = $this->bb_options['btn_bg_hover_color'];
-
-			return $color;
+			return $this->bb_options['btn_bg_hover_color'];
 		}
 
 		/**
@@ -117,11 +108,8 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		 * @return string
 		 */
 		public function uabb_global_button_text_color() {
-			$color = $this->bb_options['btn_text_color'];
-
-			return $color;
+			return $this->bb_options['btn_text_color'];
 		}
-
 
 		/**
 		 * Button Text Hover Color -
@@ -129,9 +117,7 @@ if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 		 * @return string
 		 */
 		public function uabb_global_button_text_hover_color() {
-			$color = $this->bb_options['btn_text_hover_color'];
-
-			return $color;
+			return $this->bb_options['btn_text_hover_color'];
 		}
 	}
 

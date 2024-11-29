@@ -25,7 +25,7 @@ foreach ( $settings->icons as $icon ) {
 		echo '';
 	} else {
 		echo '<a class="adv-icon-link adv-icon-' . esc_attr( $icon_count ) . '" href="' . esc_url( $icon->link ) . '" target="' . esc_attr( $icon->link_target ) . '" ' . sanitize_text_field( BB_Ultimate_Addon_Helper::get_link_rel( $icon->link_target, $icon->link_nofollow, 0 ) ) . '>'; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		$imageicon_array = array(
+		$imageicon_array = [
 
 			/* General Section */
 			'image_type'              => $icon->image_type,
@@ -41,7 +41,7 @@ foreach ( $settings->icons as $icon ) {
 			'photo_url'               => '',
 			'img_size'                => $settings->size,
 			'img_align'               => 'center',
-			'photo_src'               => ( isset( $icon->photo_src ) ) ? $icon->photo_src : '',
+			'photo_src'               => $icon->photo_src ?? '',
 
 			/* Icon Style */
 			'icon_style'              => $settings->icoimage_style,
@@ -74,7 +74,7 @@ foreach ( $settings->icons as $icon ) {
 			'img_bg_hover_color'      => $settings->bg_hover_color,
 			'img_border_color'        => $settings->border_color,
 			'img_border_hover_color'  => $settings->border_hover_color,
-		);
+		];
 		FLBuilder::render_module_html( 'image-icon', $imageicon_array );
 		echo '</a>';
 	}

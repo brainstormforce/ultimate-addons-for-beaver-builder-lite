@@ -19,9 +19,18 @@ if ( ! class_exists( 'UABB_lite_Plugin_Update' ) ) {
 		 * Class instance.
 		 *
 		 * @access private
-		 * @var $instance Class instance.
+		 * @var Class $instance instance.
 		 */
 		private static $instance;
+
+		/**
+		 *  Constructor
+		 */
+		public function __construct() {
+
+			// UABB Updates.
+			add_action( 'init', self::class . '::init' );
+		}
 
 		/**
 		 * Initiator
@@ -34,21 +43,12 @@ if ( ! class_exists( 'UABB_lite_Plugin_Update' ) ) {
 		}
 
 		/**
-		 *  Constructor
-		 */
-		public function __construct() {
-
-			// UABB Updates.
-			add_action( 'init', __CLASS__ . '::init' );
-		}
-
-		/**
 		 * Implement UABB update logic.
 		 *
 		 * @since 1.2.4
 		 * @return void
 		 */
-		public static function init() {
+		public static function init(): void {
 
 			// Get saved version number.
 			$saved_version = get_option( '_uabb_lite_saved_version', '0' );
@@ -65,14 +65,14 @@ if ( ! class_exists( 'UABB_lite_Plugin_Update' ) ) {
 
 			$old_jrn_details = get_option( '_uabb_lite_journey_details', '0' );
 
-			if ( '0' === $old_jrn_details ) {
-				$old_jrn_details = array();
+			if ( $old_jrn_details === '0' ) {
+				$old_jrn_details = [];
 			}
 
-			$new_jrn_details = array(
+			$new_jrn_details = [
 				'previous_version' => $saved_version,
 				'current_version'  => BB_ULTIMATE_ADDON_LITE_VERSION,
-			);
+			];
 
 			array_push( $old_jrn_details, $new_jrn_details );
 

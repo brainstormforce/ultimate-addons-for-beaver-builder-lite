@@ -12,7 +12,6 @@
  * @class UABB_IconFonts
  */
 class UABB_IconFonts {
-
 	/**
 	 *  Constructor
 	 */
@@ -26,8 +25,8 @@ class UABB_IconFonts {
 	 * @since 1.0
 	 * @return void
 	 */
-	public function init() {
-		add_action( 'wp_ajax_uabb_reload_icons', array( $this, 'reload_icons' ) );
+	public function init(): void {
+		add_action( 'wp_ajax_uabb_reload_icons', [ $this, 'reload_icons' ] );
 	}
 
 	/**
@@ -36,14 +35,14 @@ class UABB_IconFonts {
 	 * @since 1.0
 	 * @return void
 	 */
-	public function reload_icons() {
+	public function reload_icons(): void {
 
 		if ( ! wp_verify_nonce( $_POST['nonce'], 'uabb-reload-icons' ) || ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error(
-				array(
+				[
 					'success' => false,
 					'message' => __( 'You are not authorized to perform this action.', 'uabb' ),
-				)
+				]
 			);
 		}
 
@@ -57,12 +56,12 @@ class UABB_IconFonts {
 	 * @since 1.0
 	 * @return void
 	 */
-	public function register_icons() {
+	public function register_icons(): void {
 
 		// Update initially.
 		$uabb_icons = get_option( '_uabb_enabled_icons', 0 );
 
-		if ( 0 === $uabb_icons ) {
+		if ( $uabb_icons === 0 ) {
 
 			// Copy IconFonts from UABB to BB.
 			$dir = FLBuilderModel::get_cache_dir( 'icons' );
@@ -94,7 +93,7 @@ class UABB_IconFonts {
 	 * @param array $src an array to get the src.
 	 * @param array $dst an object to get destination of the file.
 	 */
-	public function recurse_copy( $src, $dst ) {
+	public function recurse_copy( $src, $dst ): void {
 		$dir = opendir( $src );
 
 		// Create directory if not exist.
@@ -103,8 +102,8 @@ class UABB_IconFonts {
 		}
 
 		// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
-		while ( false !== ( $file = readdir( $dir ) ) ) {
-			if ( ( '.' !== $file ) && ( '..' !== $file ) ) {
+		while ( ( $file = readdir( $dir ) ) !== false ) {
+			if ( ( $file !== '.' ) && ( $file !== '..' ) ) {
 				if ( is_dir( $src . '/' . $file ) ) {
 					$this->recurse_copy( $src . '/' . $file, $dst . '/' . $file );
 				} else {

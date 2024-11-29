@@ -12,7 +12,6 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 	 * @class UABB_Helper
 	 */
 	class UABB_Helper {
-
 		/**
 		 * Helper function to render css styles for a selected font.
 		 *
@@ -20,7 +19,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 * @param  array $font An array with font-family and weight.
 		 * @return void
 		 */
-		public static function uabb_font_css( $font ) {
+		public static function uabb_font_css( $font ): void {
 			$css = '';
 
 			if ( array_key_exists( $font['family'], FLBuilderFontFamilies::$system ) ) {
@@ -29,7 +28,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				$css .= 'font-family: ' . $font['family'] . ';';
 			}
 
-			if ( 'regular' === $font['weight'] ) {
+			if ( $font['weight'] === 'regular' ) {
 				$css .= 'font-weight: normal;';
 			} else {
 				$css .= 'font-weight: ' . $font['weight'] . ';';
@@ -49,8 +48,8 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 */
 		public static function uabb_get_color( $hex, $opacity ) {
 			$rgba = $hex;
-			if ( '' !== $opacity ) {
-				if ( 3 === strlen( $hex ) ) {
+			if ( $opacity !== '' ) {
+				if ( strlen( $hex ) === 3 ) {
 					$r = hexdec( substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) );
 					$g = hexdec( substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) );
 					$b = hexdec( substr( $hex, 2, 1 ) . substr( $hex, 2, 1 ) );
@@ -60,9 +59,9 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 					$b = hexdec( substr( $hex, 4, 2 ) );
 				}
 				return 'rgba( ' . $r . ', ' . $g . ', ' . $b . ', ' . $opacity . ' )';
-			} else {
-				return '#' . $hex;
 			}
+				return '#' . $hex;
+
 		}
 
 		/**
@@ -83,15 +82,15 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			}
 
 			// Sanitize $color if "#" is provided.
-			if ( '#' === $color[0] ) {
+			if ( $color[0] === '#' ) {
 				$color = substr( $color, 1 );
 			}
 
 			// Check if color has 6 or 3 characters and get values.
-			if ( 6 === strlen( $color ) ) {
-					$hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
-			} elseif ( 3 === strlen( $color ) ) {
-					$hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
+			if ( strlen( $color ) === 6 ) {
+					$hex = [ $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] ];
+			} elseif ( strlen( $color ) === 3 ) {
+					$hex = [ $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] ];
 			} else {
 					return $default;
 			}
@@ -100,10 +99,10 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			$rgb = array_map( 'hexdec', $hex );
 
 			// Check if opacity is set(rgba or rgb).
-			if ( false !== $opacity && '' !== $opacity ) {
+			if ( $opacity !== false && $opacity !== '' ) {
 				if ( abs( $opacity ) > 1 ) {
 
-					$opacity = $opacity / 100;
+					$opacity /= 100;
 				}
 				$output = 'rgba(' . implode( ',', $rgb ) . ',' . $opacity . ')';
 			} else {
@@ -112,10 +111,10 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 
 			if ( $is_array ) {
 				return $rgb;
-			} else {
+			}
 
 				return $output;
-			}
+
 		}
 
 		/**
@@ -132,17 +131,16 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			$opacity   = '';
 			$hex_color = $settings->$name;
 
-			if ( '' !== $hex_color && 'r' !== $hex_color[0] && 'R' !== $hex_color[0] ) {
+			if ( $hex_color !== '' && $hex_color[0] !== 'r' && $hex_color[0] !== 'R' ) {
 
-				if ( true === $opc && isset( $settings->{ $name . '_opc' } ) ) {
-					if ( '' !== $settings->{ $name . '_opc' } ) {
+				if ( $opc === true && isset( $settings->{ $name . '_opc' } ) ) {
+					if ( $settings->{ $name . '_opc' !== '' } ) {
 						$opacity = $settings->{ $name . '_opc' };
-						$rgba    = self::uabb_hex2rgba( $hex_color, $opacity / 100 );
-						return $rgba;
+						return self::uabb_hex2rgba( $hex_color, $opacity / 100 );
 					}
 				}
 
-				if ( '#' !== $hex_color[0] ) {
+				if ( $hex_color[0] !== '#' ) {
 
 					return '#' . $hex_color;
 				}
@@ -157,7 +155,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		 * @param var $gradient returns the bas values.
 		 * @return void
 		 */
-		public static function uabb_gradient_css( $gradient ) {
+		public static function uabb_gradient_css( $gradient ): void {
 			$gradient_angle = intval( $gradient['angle'] );
 			$direction      = $gradient['direction'];
 			$color1         = '';
@@ -165,7 +163,7 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 			$angle          = 0;
 			$css            = '';
 
-			if ( 'custom' !== $direction ) {
+			if ( $direction !== 'custom' ) {
 				switch ( $direction ) {
 					case 'left_right':
 						$gradient_angle = 0;
@@ -184,17 +182,17 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 				}
 			}
 
-			if ( isset( $gradient['color_one'] ) && '' !== $gradient['color_one'] ) {
+			if ( isset( $gradient['color_one'] ) && $gradient['color_one'] !== '' ) {
 				$color1 = self::uabb_hex2rgba( $gradient['color_one'] );
 			}
 
-			if ( isset( $gradient['color_two'] ) && '' !== $gradient['color_two'] ) {
+			if ( isset( $gradient['color_two'] ) && $gradient['color_two'] !== '' ) {
 				$color2 = self::uabb_hex2rgba( $gradient['color_two'] );
 			}
 
 			$angle = abs( $gradient_angle - 450 ) % 360;
 
-			if ( '' !== $color1 && '' !== $color2 ) {
+			if ( $color1 !== '' && $color2 !== '' ) {
 
 				$css .= 'background: -webkit-linear-gradient(' . $gradient_angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';
 				$css .= 'background: -o-linear-gradient(' . $gradient_angle . 'deg, ' . $color1 . ' 0%, ' . $color2 . ' 100%);';
@@ -215,15 +213,15 @@ if ( ! class_exists( 'UABB_Helper' ) ) {
 		public static function get_link_rel( $target, $is_nofollow = 0, $should_echo = 0 ) {
 
 			$attr = '';
-			if ( '_blank' === $target ) {
+			if ( $target === '_blank' ) {
 				$attr .= 'noopener';
 			}
 
-			if ( 1 === $is_nofollow || 'yes' === $is_nofollow ) {
+			if ( $is_nofollow === 1 || $is_nofollow === 'yes' ) {
 				$attr .= ' nofollow';
 			}
 
-			if ( '' === $attr ) {
+			if ( $attr === '' ) {
 				return;
 			}
 

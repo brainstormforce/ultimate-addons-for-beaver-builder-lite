@@ -17,15 +17,12 @@ if ( ! defined( 'FL_BUILDER_DEMO_CACHE_URL' ) ) {
 	define( 'FL_BUILDER_DEMO_CACHE_URL', '' );
 }
 
-
-
 /**
  * Function that initializes Image Icon Module
  *
  * @class ImageIconModule
  */
 class ImageIconModule extends FLBuilderModule {
-
 	/**
 	 * Variable for Image Icon module
 	 *
@@ -48,7 +45,7 @@ class ImageIconModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(
-			array(
+			[
 				'name'        => __( 'Image / Icon', 'uabb' ),
 				'description' => __( 'Image / Icon with effect', 'uabb' ),
 				'category'    => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
@@ -56,12 +53,11 @@ class ImageIconModule extends FLBuilderModule {
 				'dir'         => BB_ULTIMATE_ADDON_DIR . 'modules/image-icon/',
 				'url'         => BB_ULTIMATE_ADDON_URL . 'modules/image-icon/',
 				'icon'        => 'format-image.svg',
-			)
+			]
 		);
 
 		$this->add_css( 'font-awesome' );
 	}
-
 
 	/**
 	 * Function to update the Image src
@@ -95,7 +91,7 @@ class ImageIconModule extends FLBuilderModule {
 	 * @method delete
 	 * @return void
 	 */
-	public function delete() {
+	public function delete(): void {
 		$cropped_path = $this->_get_cropped_path();
 
 		if ( file_exists( $cropped_path['path'] ) ) {
@@ -114,7 +110,7 @@ class ImageIconModule extends FLBuilderModule {
 		$this->delete();
 
 		// Do a crop.
-		if ( ! empty( $this->settings->image_style ) && 'simple' !== $this->settings->image_style && 'custom' !== $this->settings->image_style ) {
+		if ( ! empty( $this->settings->image_style ) && $this->settings->image_style !== 'simple' && $this->settings->image_style !== 'custom' ) {
 
 			$editor = $this->_get_editor();
 
@@ -132,10 +128,10 @@ class ImageIconModule extends FLBuilderModule {
 			$ratio_2 = 1;
 
 			// Get the crop ratios.
-			if ( 'circle' === $this->settings->image_style ) {
+			if ( $this->settings->image_style === 'circle' ) {
 				$ratio_1 = 1;
 				$ratio_2 = 1;
-			} elseif ( 'square' === $this->settings->image_style ) {
+			} elseif ( $this->settings->image_style === 'square' ) {
 				$ratio_1 = 1;
 				$ratio_2 = 1;
 			}
@@ -173,7 +169,7 @@ class ImageIconModule extends FLBuilderModule {
 		if ( ! $this->data ) {
 
 			// Photo source is set to "url".
-			if ( 'url' === $this->settings->photo_source ) {
+			if ( $this->settings->photo_source === 'url' ) {
 				$this->data                = new stdClass();
 				$this->data->url           = $this->settings->photo_url;
 				$this->settings->photo_src = $this->settings->photo_url;
@@ -199,9 +195,9 @@ class ImageIconModule extends FLBuilderModule {
 	 * @return string
 	 */
 	public function get_classes() {
-		$classes = array( 'uabb-photo-img' );
+		$classes = [ 'uabb-photo-img' ];
 
-		if ( 'library' === $this->settings->photo_source ) {
+		if ( $this->settings->photo_source === 'library' ) {
 
 			if ( ! empty( $this->settings->photo ) ) {
 
@@ -260,7 +256,6 @@ class ImageIconModule extends FLBuilderModule {
 		return $src;
 	}
 
-
 	/**
 	 * Function that gets the alternate value of the Image
 	 *
@@ -272,15 +267,51 @@ class ImageIconModule extends FLBuilderModule {
 
 		if ( ! empty( $photo->alt ) ) {
 			return htmlspecialchars( $photo->alt, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
-		} elseif ( ! empty( $photo->description ) ) {
+		}
+		if ( ! empty( $photo->description ) ) {
 			return htmlspecialchars( $photo->description, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
-		} elseif ( ! empty( $photo->caption ) ) {
+		}
+		if ( ! empty( $photo->caption ) ) {
 			return htmlspecialchars( $photo->caption, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
-		} elseif ( ! empty( $photo->title ) ) {
+		}
+		if ( ! empty( $photo->title ) ) {
 			return htmlspecialchars( $photo->title, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
 		}
 
 		return null;
+	}
+	/**
+	 * Ensure backwards compatibility with old settings.
+	 *
+	 * @since 1.14.0
+	 * @param object $settings A module settings object.
+	 * @param object $helper A settings compatibility helper.
+	 * @return object
+	 */
+	public function filter_settings( $settings, $helper ) {
+
+		$version_bb_check        = UABB_Lite_Compatibility::check_bb_version();
+		$page_migrated           = UABB_Lite_Compatibility::check_old_page_migration();
+		$stable_version_new_page = UABB_Lite_Compatibility::check_stable_version_new_page();
+
+		if ( $version_bb_check && ( $page_migrated === 'yes' || $stable_version_new_page === 'yes' ) ) {
+
+			// Handle opacity fields.
+			$helper->handle_opacity_inputs( $settings, 'icon_bg_color_opc', 'icon_bg_color' );
+			$helper->handle_opacity_inputs( $settings, 'icon_bg_hover_color_opc', 'icon_bg_hover_color' );
+			$helper->handle_opacity_inputs( $settings, 'img_bg_color_opc', 'img_bg_color' );
+			$helper->handle_opacity_inputs( $settings, 'img_bg_hover_color_opc', 'img_bg_hover_color' );
+
+		} elseif ( $version_bb_check && $page_migrated !== 'yes' ) {
+
+			// Handle opacity fields.
+			$helper->handle_opacity_inputs( $settings, 'icon_bg_color_opc', 'icon_bg_color' );
+			$helper->handle_opacity_inputs( $settings, 'icon_bg_hover_color_opc', 'icon_bg_hover_color' );
+			$helper->handle_opacity_inputs( $settings, 'img_bg_color_opc', 'img_bg_color' );
+			$helper->handle_opacity_inputs( $settings, 'img_bg_hover_color_opc', 'img_bg_hover_color' );
+		}
+
+		return $settings;
 	}
 
 	/**
@@ -288,12 +319,13 @@ class ImageIconModule extends FLBuilderModule {
 	 *
 	 * @method _has_source
 	 * @protected
-	 * @return boolean
+	 * @return bool
 	 */
 	protected function _has_source() {
-		if ( 'url' === $this->settings->photo_source && ! empty( $this->settings->photo_url ) ) {
+		if ( $this->settings->photo_source === 'url' && ! empty( $this->settings->photo_url ) ) {
 			return true;
-		} elseif ( 'library' === $this->settings->photo_source && ! empty( $this->settings->photo_src ) ) {
+		}
+		if ( $this->settings->photo_source === 'library' && ! empty( $this->settings->photo_src ) ) {
 			return true;
 		}
 
@@ -307,7 +339,7 @@ class ImageIconModule extends FLBuilderModule {
 	 * @protected
 	 */
 	protected function _get_editor() {
-		if ( $this->_has_source() && null === $this->_editor ) {
+		if ( $this->_has_source() && $this->_editor === null ) {
 
 			$url_path  = $this->_get_uncropped_url();
 			$file_path = str_ireplace( home_url(), ABSPATH, $url_path );
@@ -346,16 +378,16 @@ class ImageIconModule extends FLBuilderModule {
 			$pathinfo = pathinfo( $url );
 			$dir      = $pathinfo['dirname'];
 			$ext      = $pathinfo['extension'];
-			$name     = wp_basename( $url, ".$ext" );
+			$name     = wp_basename( $url, ".{$ext}" );
 			$new_ext  = strtolower( $ext );
 			$filename = "{$name}-{$crop}.{$new_ext}";
 		}
 
-		return array(
+		return [
 			'filename' => $filename,
 			'path'     => $cache_dir['path'] . $filename,
 			'url'      => $cache_dir['url'] . $filename,
-		);
+		];
 	}
 
 	/**
@@ -366,7 +398,7 @@ class ImageIconModule extends FLBuilderModule {
 	 * @protected
 	 */
 	protected function _get_uncropped_url() {
-		if ( 'url' === $this->settings->photo_source ) {
+		if ( $this->settings->photo_source === 'url' ) {
 			$url = $this->settings->photo_url;
 		} elseif ( ! empty( $this->settings->photo_src ) ) {
 			$url = $this->settings->photo_src;
@@ -387,39 +419,6 @@ class ImageIconModule extends FLBuilderModule {
 		$info = $this->_get_cropped_path();
 
 		return FL_BUILDER_DEMO_CACHE_URL . $info['filename'];
-	}
-	/**
-	 * Ensure backwards compatibility with old settings.
-	 *
-	 * @since 1.14.0
-	 * @param object $settings A module settings object.
-	 * @param object $helper A settings compatibility helper.
-	 * @return object
-	 */
-	public function filter_settings( $settings, $helper ) {
-
-		$version_bb_check        = UABB_Lite_Compatibility::check_bb_version();
-		$page_migrated           = UABB_Lite_Compatibility::check_old_page_migration();
-		$stable_version_new_page = UABB_Lite_Compatibility::check_stable_version_new_page();
-
-		if ( $version_bb_check && ( 'yes' === $page_migrated || 'yes' === $stable_version_new_page ) ) {
-
-			// Handle opacity fields.
-			$helper->handle_opacity_inputs( $settings, 'icon_bg_color_opc', 'icon_bg_color' );
-			$helper->handle_opacity_inputs( $settings, 'icon_bg_hover_color_opc', 'icon_bg_hover_color' );
-			$helper->handle_opacity_inputs( $settings, 'img_bg_color_opc', 'img_bg_color' );
-			$helper->handle_opacity_inputs( $settings, 'img_bg_hover_color_opc', 'img_bg_hover_color' );
-
-		} elseif ( $version_bb_check && 'yes' !== $page_migrated ) {
-
-			// Handle opacity fields.
-			$helper->handle_opacity_inputs( $settings, 'icon_bg_color_opc', 'icon_bg_color' );
-			$helper->handle_opacity_inputs( $settings, 'icon_bg_hover_color_opc', 'icon_bg_hover_color' );
-			$helper->handle_opacity_inputs( $settings, 'img_bg_color_opc', 'img_bg_color' );
-			$helper->handle_opacity_inputs( $settings, 'img_bg_hover_color_opc', 'img_bg_hover_color' );
-		}
-
-		return $settings;
 	}
 }
 

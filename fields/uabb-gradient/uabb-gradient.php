@@ -19,8 +19,8 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 		 * @since 1.0
 		 */
 		public function __construct() {
-			add_action( 'fl_builder_control_uabb-gradient', array( $this, 'uabb_gradient' ), 1, 4 );
-			add_action( 'fl_builder_custom_fields', array( $this, 'ui_fields' ), 10, 1 );
+			add_action( 'fl_builder_control_uabb-gradient', [ $this, 'uabb_gradient' ], 1, 4 );
+			add_action( 'fl_builder_custom_fields', [ $this, 'ui_fields' ], 10, 1 );
 		}
 
 		/**
@@ -61,26 +61,26 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 		 * @param object $settings gets the object of respective fields.
 		 * @return void
 		 */
-		public function uabb_gradient( $name, $value, $field, $settings ) {
+		public function uabb_gradient( $name, $value, $field, $settings ): void {
 
 			$name_new = 'uabb_' . $name;
 			$value    = (array) $value;
-			$preview  = json_encode( array( 'type' => 'refresh' ) ); //	phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode	
+			$preview  = json_encode( [ 'type' => 'refresh' ] ); //	phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode
 
-			$default   = ( isset( $field['default'] ) && '' !== $field['default'] ) ? $field['default'] : '';
-			$direction = array(
+			$default   = isset( $field['default'] ) && $field['default'] !== '' ? $field['default'] : '';
+			$direction = [
 				'left_right' => 'Left to Right',
 				'right_left' => 'Right to Left',
 				'top_bottom' => 'Top to Bottom',
 				'bottom_top' => 'Bottom to Top',
 				'custom'     => 'Custom',
-			);
+			];
 
 			$colorpick_class = 'bb-colorpick';
 			$html            = '<div class="uabb-gradient-wrapper ' . $colorpick_class . '">';
 
 			/* Color One */
-			$color_one_class = ( empty( $value['color_one'] ) ) ? ' fl-color-picker-empty' : '';
+			$color_one_class = empty( $value['color_one'] ) ? ' fl-color-picker-empty' : '';
 			$html           .= '<div class="uabb-gradient-item bb-color uabb-gradient-color-one fl-field" data-type="color" data-preview=\'' . $preview . '\'>';
 			$html           .= '<label for="uabb-gradient-color-one" class="uabb-gradient-label">Color 1</label>';
 			$html           .= '<div class="fl-color-picker">';
@@ -91,7 +91,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 			$html           .= '</div>';
 
 			/* Color Two */
-			$color_two_class = ( empty( $value['color_two'] ) ) ? ' fl-color-picker-empty' : '';
+			$color_two_class = empty( $value['color_two'] ) ? ' fl-color-picker-empty' : '';
 			$html           .= '<div class="uabb-gradient-item bb-color uabb-gradient-color-two fl-field" data-type="color" data-preview=\'' . $preview . '\'>';
 			$html           .= '<label for="uabb-gradient-color-two" class="uabb-gradient-label">Color 2</label>';
 			$html           .= '<div class="fl-color-picker">';
@@ -116,7 +116,7 @@ if ( ! class_exists( 'UABB_Gradient' ) ) {
 			$html .= '</div>';
 
 			/* Angle */
-			$angle = ( isset( $value['angle'] ) ) ? $value['angle'] : '';
+			$angle = $value['angle'] ?? '';
 			$html .= '<div class="uabb-gradient-item uabb-gradient-angle fl-field" data-type="text" data-preview=\'' . $preview . '\' >';
 			$html .= '<label for="uabb-gradient-angle" class="uabb-gradient-label">Angle</label>';
 			$html .= '<input type="text" class="uabb-gradient-angle-input" name="' . $name . '[][angle]' . '" maxlength="3" size="6" value="' . $angle . '" />';

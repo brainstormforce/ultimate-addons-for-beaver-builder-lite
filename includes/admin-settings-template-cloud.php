@@ -10,21 +10,22 @@
 
 	<h3 class="fl-settings-form-header"><?php esc_html_e( 'Template Cloud', 'uabb' ); ?></h3>
 
-	<div class="uabb-go-premium"><?php _e( '<a href="' . BB_ULTIMATE_ADDON_UPGRADE_URL . '" target="_blank">Go Premium</a> and get access to all Page Templates and Sections.', 'uabb' ); // @codingStandardsIgnoreLine. ?></div>
+	<div class="uabb-go-premium"><?php _e( '<a href="' . BB_ULTIMATE_ADDON_UPGRADE_URL . '" target="_blank">Go Premium</a> and get access to all Page Templates and Sections.', 'uabb' ); // @codingStandardsIgnoreLine.?></div>
 
 	<form id="uabb-cloud-templates-form" action="<?php UABBBuilderAdminSettings::render_form_action( 'uabb-cloud-templates' ); ?>" method="post">
 
-		<?php if ( FLBuilderAdminSettings::multisite_support() && ! is_network_admin() ) : ?>
+		<?php if ( FLBuilderAdminSettings::multisite_support() && ! is_network_admin() ) { ?>
 		<label>
 			<input class="fl-override-ms-cb" type="checkbox" name="fl-override-ms" value="1" 
 			<?php
 			if ( get_option( '_fl_builder_uabb_cloud_templates' ) ) {
-				echo 'checked="checked"';}
+				echo 'checked="checked"';
+			}
 			?>
 			/>
 			<?php esc_html_e( 'Override network settings?', 'uabb' ); ?>
 		</label>
-		<?php endif; ?>
+		<?php } ?>
 
 		<div class="fl-settings-form-content">
 

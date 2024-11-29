@@ -13,7 +13,6 @@
  * @class UABB_Global_Styling
  */
 class UABB_Global_Styling {
-
 	/**
 	 * Constructor function that initializes required actions and hooks
 	 */
@@ -28,13 +27,13 @@ class UABB_Global_Styling {
 	 * @since 1.0
 	 * @return void
 	 */
-	public function add_options() {
+	public function add_options(): void {
 
 		$global_options = UABB_Init::$uabb_options['uabb_global_settings'];
 
-		if ( ! isset( $global_options ) || '' === $global_options || ! is_array( $global_options ) ) {
+		if ( ! isset( $global_options ) || $global_options === '' || ! is_array( $global_options ) ) {
 
-			$default = array(
+			$default = [
 				'enable_global'          => 'yes',
 				'theme_color'            => 'f7b91a',
 				'theme_text_color'       => '808285',
@@ -51,7 +50,7 @@ class UABB_Global_Styling {
 				'btn_border_radius'      => '5',
 				'btn_vertical_padding'   => '',
 				'btn_horizontal_padding' => '',
-			);
+			];
 
 			/**
 			 *  For Performance
@@ -68,9 +67,9 @@ class UABB_Global_Styling {
 	 * @since 1.0
 	 * @return void
 	 */
-	public static function init_actions() {
+	public static function init_actions(): void {
 		FLBuilderAJAX::add_action( 'render_uabb_global_settings', 'UABB_Global_Styling::render_uabb_global_settings' );
-		FLBuilderAJAX::add_action( 'save_uabb_global_settings', 'UABB_Global_Styling::save_uabb_global_settings', array( 'settings' ) );
+		FLBuilderAJAX::add_action( 'save_uabb_global_settings', 'UABB_Global_Styling::save_uabb_global_settings', [ 'settings' ] );
 	}
 
 	/**
@@ -85,12 +84,12 @@ class UABB_Global_Styling {
 		$form     = FLBuilderModel::$settings_forms['uabb-global'];
 
 		return FLBuilder::render_settings(
-			array(
+			[
 				'class'     => 'fl-builder-uabb-global-settings',
 				'title'     => $form['title'],
 				'tabs'      => $form['tabs'],
 				'resizable' => true,
-			),
+			],
 			$settings
 		);
 	}
@@ -119,7 +118,7 @@ class UABB_Global_Styling {
 	 * @param array $settings gets a array of old and new settings values.
 	 * @return bool
 	 */
-	public static function save_uabb_global_settings( $settings = array() ) {
+	public static function save_uabb_global_settings( $settings = [] ) {
 		$old_settings = self::get_uabb_global_settings();
 		$new_settings = (object) array_merge( (array) $old_settings, (array) $settings );
 

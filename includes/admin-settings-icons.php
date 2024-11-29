@@ -20,7 +20,7 @@ if ( ! defined( 'UABB_PREFIX' ) ) {
 
 			<p>
 			<?php
-			echo sprintf( __( 'Clicking the button below will reinstall %1$s icons on your website. If you are facing issues to load %2$s icons then you are at right place to troubleshoot it.', 'uabb' ),UABB_PREFIX, UABB_PREFIX ); // @codingStandardsIgnoreLine.
+			echo sprintf( __( 'Clicking the button below will reinstall %1$s icons on your website. If you are facing issues to load %2$s icons then you are at right place to troubleshoot it.', 'uabb' ), UABB_PREFIX, UABB_PREFIX ); // @codingStandardsIgnoreLine.
 			?>
 			</p>
 			<span class="button uabb-reload-icons">

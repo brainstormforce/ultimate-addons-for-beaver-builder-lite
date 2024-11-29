@@ -8,9 +8,9 @@
  */
 
 // Ensure required variables are set.
-$has_editing_cap    = isset( $has_editing_cap ) ? $has_editing_cap : false;
-$is_module_template = isset( $is_module_template ) ? $is_module_template : false;
-$module_templates   = isset( $module_templates ) ? $module_templates : array();
+$has_editing_cap    = $has_editing_cap ?? false;
+$is_module_template = $is_module_template ?? false;
+$module_templates   = $module_templates ?? [];
 
 // Defining the constant.
 if ( ! defined( 'UABB_PREFIX' ) ) {
@@ -46,11 +46,11 @@ if ( ! defined( 'UABB_PREFIX' ) ) {
 
 					$uabb_module_templates = UABB_UI_Panels::uabb_templates_data( $module_templates, 'includes' );
 
-					if ( count( $uabb_module_templates ) > 0 ) :
-						foreach ( $uabb_module_templates['categorized'] as $cat ) :
+					if ( count( $uabb_module_templates ) > 0 ) {
+						foreach ( $uabb_module_templates['categorized'] as $cat ) {
 
 							// avoid 'Uncategorized'.
-							if ( trim( $cat['name'] ) !== 'Uncategorized' ) :
+							if ( trim( $cat['name'] ) !== 'Uncategorized' ) {
 								?>
 								<div class="fl-builder-blocks-section">
 									<span class="fl-builder-blocks-section-title">
@@ -60,7 +60,7 @@ if ( ! defined( 'UABB_PREFIX' ) ) {
 									<div class="fl-builder-blocks-section-content fl-builder-module-templates">
 
 										<?php
-										foreach ( $cat['templates'] as $template ) :
+										foreach ( $cat['templates'] as $template ) {
 
 											// Get tags.
 											$tags = '';
@@ -70,25 +70,25 @@ if ( ! defined( 'UABB_PREFIX' ) ) {
 											?>
 
 											<span class="fl-builder-block fl-builder-block-template fl-builder-block-module-template" data-id="<?php echo esc_attr( $template['id'] ); ?>" data-type="<?php echo esc_attr( $template['type'] ); ?>">
-												<?php if ( ! stristr( $template['image'], 'blank.jpg' ) ) : ?>
+												<?php if ( ! stristr( $template['image'], 'blank.jpg' ) ) { ?>
 												<img class="fl-builder-block-template-image" src="<?php echo esc_url( $template['image'] ); ?>" />
-												<?php endif; ?>
+												<?php } ?>
 												<span class="fl-builder-block-title" data-tags="<?php echo esc_attr( $tags ); ?>" data-cat-name="<?php echo esc_attr( $cat['name'] ); ?>"><?php echo esc_html( $template['name'] ); ?></span>
 											</span>
-										<?php endforeach; ?>
+										<?php } ?>
 									</div>
 								</div>
 								<?php
-							endif;
-						endforeach;
-					endif;
+							}
+						}
+					}
 				}
 				?>
 
 				<?php do_action( 'uabb_fl_builder_ui_panel_after_presets' ); ?>
 
 				<div class="fl-builder-modules-cta">
-					<a href="#" onclick="window.open('<?php echo admin_url(); ?>options-general.php?page=fl-builder-settings#uabb-template-manager');" target="_blank"><i class="fa fa-external-link-square"></i> <?php echo sprintf( __( 'Note - You can enable, disable and manage %s presets here.', 'uabb' ), UABB_PREFIX ); // @codingStandardsIgnoreLine. ?></a>
+					<a href="#" onclick="window.open('<?php echo admin_url(); ?>options-general.php?page=fl-builder-settings#uabb-template-manager');" target="_blank"><i class="fa fa-external-link-square"></i> <?php echo sprintf( __( 'Note - You can enable, disable and manage %s presets here.', 'uabb' ), UABB_PREFIX ); // @codingStandardsIgnoreLine.?></a>
 				</div>
 				<div class="fl-builder-modules-cta">
 					<a href="#" target="_self"><?php echo esc_html__( 'Note - Images used in the templates are hotlinked from our server and are subject to copyright. It is strongly recommended that you replace them with your own.', 'uabb' ); ?></a>

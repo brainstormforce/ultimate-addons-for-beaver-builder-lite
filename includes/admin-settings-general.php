@@ -24,8 +24,8 @@
 				$is_load_panels    = '';
 				$uabb_live_preview = '';
 			if ( is_array( $uabb ) ) {
-				$is_load_panels    = ( array_key_exists( 'load_panels', $uabb ) && 1 === $uabb['load_panels'] ) ? ' checked' : '';
-				$uabb_live_preview = ( array_key_exists( 'uabb-live-preview', $uabb ) && 1 === $uabb['uabb-live-preview'] ) ? ' checked' : '';
+				$is_load_panels    = array_key_exists( 'load_panels', $uabb ) && $uabb['load_panels'] === 1 ? ' checked' : '';
+				$uabb_live_preview = array_key_exists( 'uabb-live-preview', $uabb ) && $uabb['uabb-live-preview'] === 1 ? ' checked' : '';
 			}
 			?>
 
@@ -35,13 +35,13 @@
 				<p class="uabb-admin-help">
 					<?php esc_html_e( 'Enable this setting for applying UI effects such as - Section panel, Search box etc. to frontend page builder. ', 'uabb' ); ?>
 					<?php
-					if ( empty( $branding_name ) && empty( $branding_short_name ) ) :
+					if ( empty( $branding_name ) && empty( $branding_short_name ) ) {
 						esc_html_e( 'Read ', 'uabb' );
 						?>
 						<a target="_blank" href="https://www.ultimatebeaver.com/docs/how-to-enable-disable-beaver-builders-ui/"><?php esc_html_e( 'this article', 'uabb' ); ?></a>
 						<?php
 						esc_html_e( ' for more information.', 'uabb' );
-					endif;
+					}
 					?>
 				</p>
 				<label>					

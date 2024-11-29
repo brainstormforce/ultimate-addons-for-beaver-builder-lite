@@ -20,7 +20,7 @@ if ( ! class_exists( 'UABB_Custom_Field_Scripts' ) ) {
 		 * @since 1.0
 		 */
 		public function __construct() {
-			add_action( 'wp_enqueue_scripts', array( $this, 'custom_field_scripts' ) );
+			add_action( 'wp_enqueue_scripts', [ $this, 'custom_field_scripts' ] );
 		}
 
 		/**
@@ -29,12 +29,12 @@ if ( ! class_exists( 'UABB_Custom_Field_Scripts' ) ) {
 		 * @since 1.0
 		 * @return void
 		 */
-		public function custom_field_scripts() {
+		public function custom_field_scripts(): void {
 			if ( class_exists( 'FLBuilderModel' ) && FLBuilderModel::is_builder_active() ) {
 
 				/* uabb-gradient field */
-				wp_enqueue_style( 'uabb-gradient', BB_ULTIMATE_ADDON_URL . 'fields/uabb-gradient/css/uabb-gradient.css', array(), '' );
-				wp_enqueue_script( 'uabb-gradient', BB_ULTIMATE_ADDON_URL . 'fields/uabb-gradient/js/uabb-gradient.js', array(), '', true );
+				wp_enqueue_style( 'uabb-gradient', BB_ULTIMATE_ADDON_URL . 'fields/uabb-gradient/css/uabb-gradient.css', [], '' );
+				wp_enqueue_script( 'uabb-gradient', BB_ULTIMATE_ADDON_URL . 'fields/uabb-gradient/js/uabb-gradient.js', [], '', true );
 			}
 		}
 	}

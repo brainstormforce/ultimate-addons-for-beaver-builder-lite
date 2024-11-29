@@ -32,17 +32,17 @@ class UABB_Init {
 			 */
 			self::set_uabb_options();
 
-			add_filter( 'fl_builder_settings_form_defaults', array( $this, 'uabb_global_settings_form_defaults' ), 10, 2 );
+			add_filter( 'fl_builder_settings_form_defaults', [ $this, 'uabb_global_settings_form_defaults' ], 10, 2 );
 			// Load all the required files of bb-ultimate-addon.
 			self::includes();
-			add_action( 'init', array( $this, 'init' ) );
+			add_action( 'init', [ $this, 'init' ] );
 
 			// Enqueue scripts.
-			add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ), 100 );
+			add_action( 'wp_enqueue_scripts', [ $this, 'load_scripts' ], 100 );
 
 			$basename = plugin_basename( BB_ULTIMATE_ADDON_FILE );
 			// Filters.
-			add_filter( 'plugin_action_links_' . $basename, array( $this, 'uabb_render_plugin_action_links' ) );
+			add_filter( 'plugin_action_links_' . $basename, [ $this, 'uabb_render_plugin_action_links' ] );
 
 		} else {
 
@@ -50,8 +50,8 @@ class UABB_Init {
 			define( 'BSF_UABB_NOTICES', false );
 
 			// Display admin notice for activating beaver builder.
-			add_action( 'admin_notices', array( $this, 'admin_notices' ) );
-			add_action( 'network_admin_notices', array( $this, 'admin_notices' ) );
+			add_action( 'admin_notices', [ $this, 'admin_notices' ] );
+			add_action( 'network_admin_notices', [ $this, 'admin_notices' ] );
 		}
 	}
 	/**
@@ -74,7 +74,7 @@ class UABB_Init {
 	 * @since 1.0
 	 * @return void
 	 */
-	public function includes() {
+	public function includes(): void {
 
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-update.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-compatibility.php';
@@ -113,14 +113,14 @@ class UABB_Init {
 	 *
 	 * @return void
 	 */
-	public static function set_uabb_options() {
-		self::$uabb_options = array(
+	public static function set_uabb_options(): void {
+		self::$uabb_options = [
 			'fl_builder_uabb'          => FLBuilderModel::get_admin_settings_option( '_fl_builder_uabb', true ),
 			'fl_builder_uabb_branding' => FLBuilderModel::get_admin_settings_option( '_fl_builder_uabb_branding', false ),
 			'uabb_global_settings'     => get_option( '_uabb_global_settings' ),
 
 			'fl_builder_uabb_modules'  => FLBuilderModel::get_admin_settings_option( '_fl_builder_uabb_modules', false ),
-		);
+		];
 	}
 
 	/**
@@ -133,7 +133,7 @@ class UABB_Init {
 	 */
 	public function uabb_global_settings_form_defaults( $defaults, $form_type ) {
 
-		if ( class_exists( 'FLCustomizer' ) && 'uabb-global' === $form_type ) {
+		if ( class_exists( 'FLCustomizer' ) && $form_type === 'uabb-global' ) {
 
 			$defaults->enable_global = 'no';
 		}
@@ -147,7 +147,7 @@ class UABB_Init {
 	 * @since 1.0
 	 * @return void
 	 */
-	public function init() {
+	public function init(): void {
 
 		if ( apply_filters( 'uabb_global_support', true ) && class_exists( 'FLBuilderAJAX' ) ) {
 			require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-global-settings.php';
@@ -157,7 +157,7 @@ class UABB_Init {
 		if ( class_exists( 'FLCustomizer' ) ) {
 			$uabb_global_style = UABB_Global_Styling::get_uabb_global_settings();
 
-			if ( ( isset( $uabb_global_style->enable_global ) && ( 'no' === $uabb_global_style->enable_global ) ) ) {
+			if ( ( isset( $uabb_global_style->enable_global ) && ( $uabb_global_style->enable_global === 'no' ) ) ) {
 				require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-bbtheme-global-integration.php';
 			}
 		}
@@ -191,7 +191,8 @@ class UABB_Init {
 		if ( file_exists( $mofile_global ) ) {
 			// Look in global /wp-content/languages/plugins/bb-ultimate-addon/ folder.
 			return load_textdomain( 'uabb', $mofile_global );
-		} elseif ( file_exists( $mofile_local ) ) {
+		}
+		if ( file_exists( $mofile_local ) ) {
 			// Look in local /wp-content/plugins/bb-ultimate-addon/languages/ folder.
 			return load_textdomain( 'uabb', $mofile_local );
 		}
@@ -206,28 +207,28 @@ class UABB_Init {
 	 * @since 1.0
 	 * @return void
 	 */
-	public function load_scripts() {
+	public function load_scripts(): void {
 
 		if ( FLBuilderModel::is_builder_active() ) {
 
-			wp_enqueue_style( 'uabb-builder-css', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-builder.css', array() );
-			wp_enqueue_script( 'uabb-builder-js', BB_ULTIMATE_ADDON_URL . 'assets/js/uabb-builder.js', array( 'jquery' ), '', true );
+			wp_enqueue_style( 'uabb-builder-css', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-builder.css', [] );
+			wp_enqueue_script( 'uabb-builder-js', BB_ULTIMATE_ADDON_URL . 'assets/js/uabb-builder.js', [ 'jquery' ], '', true );
 
 			if ( apply_filters( 'uabb_global_support', true ) ) {
 
-				wp_localize_script( 'uabb-builder-js', 'uabb_global', array( 'show_global_button' => true ) );
+				wp_localize_script( 'uabb-builder-js', 'uabb_global', [ 'show_global_button' => true ] );
 
 				$uabb = UABB_Global_Styling::get_uabb_global_settings();
 
-				if ( isset( $uabb->enable_global ) && ( 'no' === $uabb->enable_global ) ) {
-					wp_localize_script( 'uabb-builder-js', 'uabb_presets', array( 'show_presets' => true ) );
+				if ( isset( $uabb->enable_global ) && ( $uabb->enable_global === 'no' ) ) {
+					wp_localize_script( 'uabb-builder-js', 'uabb_presets', [ 'show_presets' => true ] );
 				}
 			}
 		}
 
 		/* RTL Support */
 		if ( is_rtl() ) {
-			wp_enqueue_style( 'uabb-rtl-css', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-rtl.css', array() );
+			wp_enqueue_style( 'uabb-rtl-css', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-rtl.css', [] );
 		}
 	}
 
@@ -237,7 +238,7 @@ class UABB_Init {
 	 * @since 1.0
 	 * @return void
 	 */
-	public function admin_notices() {
+	public function admin_notices(): void {
 
 		if ( file_exists( plugin_dir_path( 'bb-plugin-agency/fl-builder.php' ) )
 			|| file_exists( plugin_dir_path( 'beaver-builder-lite-version/fl-builder.php' ) ) ) {
@@ -255,13 +256,13 @@ class UABB_Init {
 				esc_url( $url ),
 				__( ' plugin installed & activated.', 'uabb' )
 			),
-			array(
-				'p'      => array(),
-				'strong' => array(),
-				'a'      => array(
-					'href' => array(),
-				),
-			)
+			[
+				'p'      => [],
+				'strong' => [],
+				'a'      => [
+					'href' => [],
+				],
+			]
 		);
 		echo '</div>';
 	}
@@ -272,12 +273,12 @@ class UABB_Init {
 	 * @since 1.0
 	 * @return void
 	 */
-	public function load_modules() {
+	public function load_modules(): void {
 
 		$enable_modules = BB_Ultimate_Addon_Helper::get_builder_uabb_modules();
 		foreach ( $enable_modules as $file => $name ) {
 
-			if ( 'false' === $name ) {
+			if ( $name === 'false' ) {
 				continue;
 			}
 
@@ -303,7 +304,7 @@ class UABB_Init {
  *
  * @return void
  */
-function init_uabb() {
+function init_uabb(): void {
 	$UABB_Init = new UABB_Init(); // @codingStandardsIgnoreLine.
 }
 

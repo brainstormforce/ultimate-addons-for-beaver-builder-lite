@@ -17,7 +17,7 @@ if ( ! isset( $global_settings ) ) {
 
 /* Theme Button
 ------------------------------------------------------ */
-<?php $uabb_theme_btn_family = apply_filters( 'uabb/theme/button_font_family', '' ); // @codingStandardsIgnoreLine. ?>
+<?php $uabb_theme_btn_family = apply_filters( 'uabb/theme/button_font_family', '' ); // @codingStandardsIgnoreLine.?>
 /*.fl-builder-content a.uabb-button,
 .fl-builder-content a.uabb-button:visited,
 .fl-builder-content a.uabb-creative-button,

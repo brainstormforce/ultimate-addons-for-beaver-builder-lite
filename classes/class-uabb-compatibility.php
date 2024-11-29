@@ -20,14 +20,6 @@ if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 	class UABB_Lite_Compatibility {
 
 		/**
-		 * Class instance.
-		 *
-		 * @access private
-		 * @var $instance Class instance.
-		 */
-		private static $instance;
-
-		/**
 		 * Holds BB current version.
 		 *
 		 * @since 1.3.0
@@ -50,6 +42,13 @@ if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 		 * @var $stable_version_new_page
 		 */
 		public static $stable_version_new_page;
+		/**
+		 * Class instance.
+		 *
+		 * @access private
+		 * @var Class $instance instance.
+		 */
+		private static $instance;
 
 		/**
 		 * Initiator
@@ -71,11 +70,11 @@ if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 		 */
 		public static function check_bb_version() {
 
-			if ( null === self::$version_bb_check ) {
+			if ( self::$version_bb_check === null ) {
 
 				$bb_builder_version = substr_replace( FL_BUILDER_VERSION, '', strpos( FL_BUILDER_VERSION, '-' ) );
 
-				if ( '' !== $bb_builder_version ) {
+				if ( $bb_builder_version !== '' ) {
 					self::$version_bb_check = version_compare( $bb_builder_version, '2.2', '>=' );
 				} else {
 					self::$version_bb_check = version_compare( FL_BUILDER_VERSION, '2.2', '>=' );
@@ -93,7 +92,7 @@ if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 		 */
 		public static function check_old_page_migration() {
 
-			if ( null === self::$uabb_migration ) {
+			if ( self::$uabb_migration === null ) {
 
 				$post_id = get_the_ID();
 
@@ -111,13 +110,13 @@ if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 		 */
 		public static function check_stable_version_new_page() {
 
-			if ( null === self::$stable_version_new_page ) {
+			if ( self::$stable_version_new_page === null ) {
 
 				$post_id = get_the_ID();
 
 				self::$stable_version_new_page = get_post_meta( $post_id, '_uabb_lite_version', true );
 
-				if ( '' !== self::$stable_version_new_page ) {
+				if ( self::$stable_version_new_page !== '' ) {
 					self::$stable_version_new_page = 'yes';
 					return self::$stable_version_new_page;
 				}

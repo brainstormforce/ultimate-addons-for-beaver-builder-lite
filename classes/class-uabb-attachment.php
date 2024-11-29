@@ -12,7 +12,6 @@ if ( ! class_exists( 'UABB_Attachment' ) ) {
 	 * @class UABB_Attachment
 	 */
 	class UABB_Attachment {
-
 		/**
 		 * Constructor function that initializes required actions and hooks
 		 *
@@ -20,8 +19,8 @@ if ( ! class_exists( 'UABB_Attachment' ) ) {
 		 */
 		public function __construct() {
 
-			add_filter( 'attachment_fields_to_edit', array( $this, 'uabb_attachment_field_cta' ), 10, 2 );
-			add_filter( 'attachment_fields_to_save', array( $this, 'uabb_attachment_field_cta_save' ), 10, 2 );
+			add_filter( 'attachment_fields_to_edit', [ $this, 'uabb_attachment_field_cta' ], 10, 2 );
+			add_filter( 'attachment_fields_to_save', [ $this, 'uabb_attachment_field_cta_save' ], 10, 2 );
 		}
 
 		/**
@@ -32,11 +31,11 @@ if ( ! class_exists( 'UABB_Attachment' ) ) {
 		 * @return array<string, mixed> $form_fields, modified form fields
 		 */
 		public function uabb_attachment_field_cta( $form_fields, $post ) {
-			$form_fields['uabb-cta-link'] = array(
+			$form_fields['uabb-cta-link'] = [
 				'label' => __( 'Image Link', 'uabb' ),
 				'input' => 'text',
 				'value' => get_post_meta( $post->ID, 'uabb-cta-link', true ),
-			);
+			];
 
 			return $form_fields;
 		}

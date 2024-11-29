@@ -32,7 +32,6 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 	 * @class BB_Ultimate_Addon
 	 */
 	class BB_Ultimate_Addon {
-
 		/**
 		 * Constructor function that initializes required actions and hooks
 		 *
@@ -40,7 +39,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		 */
 		public function __construct() {
 
-			register_activation_hook( __FILE__, array( $this, 'activation_reset' ) );
+			register_activation_hook( __FILE__, [ $this, 'activation_reset' ] );
 
 			// UABB Initialize.
 			require_once 'classes/class-uabb-init.php';
@@ -51,11 +50,11 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		 *
 		 * @Since 1.0
 		 */
-		public function activation_reset() {
+		public function activation_reset(): void {
 
 			$no_memory = $this->check_memory_limit();
 
-			if ( true === $no_memory && ! defined( 'WP_CLI' ) ) {
+			if ( $no_memory === true && ! defined( 'WP_CLI' ) ) {
 
 				$msg = sprintf( __( 'Unfortunately, plugin could not be activated as the memory allocated by your host has almost exhausted. UABB plugin recommends that your site should have 15M PHP memory remaining. <br/><br/>Please check <a target="_blank" href="https://www.ultimatebeaver.com/docs/increase-memory-limit-site/">this</a> article for solution or contact <a target="_blank" href="http://store.brainstormforce.com/support">support</a>.<br/><br/><a class="button button-primary" href="%s">Return to Plugins Page</a>', 'uabb' ), network_admin_url( 'plugins.php' ) ); // @codingStandardsIgnoreLine.
 
@@ -81,7 +80,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 			$peak_memory   = memory_get_peak_usage( true );   // Available Memory.
 			$uabb_required = 14999999;                      // Required Memory for UABB.
 
-			if ( '-1' !== $memory_limit ) {
+			if ( $memory_limit !== '-1' ) {
 				if ( preg_match( '/^(\d+)(.)$/', $memory_limit, $matches ) ) {
 
 					switch ( $matches[2] ) {
@@ -102,9 +101,9 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 
 				if ( $memory_limit - $peak_memory <= $uabb_required ) {
 					return true;
-				} else {
-					return false;
 				}
+					return false;
+
 			}
 		}
 	}
@@ -115,20 +114,20 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		/**
 		 * Display an admin notice when two versions of Ultimate Addon for Beaver Builder are active.
 		 */
-		function uabb_lite_admin_notices() {
+		function uabb_lite_admin_notices(): void {
 			$deactivate_url = admin_url( 'plugins.php' );
 			if ( is_plugin_active_for_network( 'ultimate-addons-for-beaver-builder-lite/bb-ultimate-addon.php' ) ) {
 				$deactivate_url = network_admin_url( 'plugins.php' );
 			}
 			$slug           = 'bb-ultimate-addon';
 			$deactivate_url = add_query_arg(
-				array(
+				[
 					'action'        => 'deactivate',
 					'plugin'        => rawurlencode( 'ultimate-addons-for-beaver-builder-lite/' . $slug . '.php' ),
 					'plugin_status' => 'all',
 					'paged'         => '1',
 					'_wpnonce'      => wp_create_nonce( 'deactivate-plugin_ultimate-addons-for-beaver-builder-lite/' . $slug . '.php' ),
-				),
+				],
 				$deactivate_url
 			);
 			echo '<div class="notice notice-error"><p>';
@@ -138,12 +137,12 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 					__( "You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='%s'>deactivate one</a> before continuing.", 'uabb' ),
 					$deactivate_url
 				),
-				array(
-					'strong' => array(),
-					'a'      => array(
-						'href' => array(),
-					),
-				)
+				[
+					'strong' => [],
+					'a'      => [
+						'href' => [],
+					],
+				]
 			);
 			echo '</p></div>';
 		}

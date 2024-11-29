@@ -27,23 +27,23 @@ if ( ! isset( $global_settings ) ) {
 if ( class_exists( 'FLBuilderCSS' ) ) {
 
 	FLBuilderCSS::responsive_rule(
-		array(
+		[
 			'settings'     => $settings,
 			'setting_name' => 'size',
-			'selector'     => ".fl-node-$id .adv-icon-wrap .uabb-icon-wrap .uabb-icon i",
+			'selector'     => ".fl-node-{$id} .adv-icon-wrap .uabb-icon-wrap .uabb-icon i",
 			'prop'         => 'font-size',
 			'unit'         => 'px',
-		)
+		]
 	);
 }
 ?>
 <?php
 
-	$settings->size    = ( '' !== $settings->size ) ? $settings->size : '';
-	$settings->spacing = ( '' !== $settings->spacing ) ? $settings->spacing : '';
+	$settings->size    = $settings->size !== '' ? $settings->size : '';
+	$settings->spacing = $settings->spacing !== '' ? $settings->spacing : '';
 ?>
 
-<?php if ( 'horizontal' === $settings->icon_struc_align ) { ?>
+<?php if ( $settings->icon_struc_align === 'horizontal' ) { ?>
 
 .fl-node-<?php echo esc_attr( $id ); ?> .adv-icon-horizontal .adv-icon-link {
 	margin-bottom: <?php echo esc_attr( $settings->spacing ); ?>px;
@@ -68,7 +68,7 @@ if ( class_exists( 'FLBuilderCSS' ) ) {
 
 <?php } ?>
 
-<?php if ( 'vertical' === $settings->icon_struc_align ) { ?>
+<?php if ( $settings->icon_struc_align === 'vertical' ) { ?>
 
 
 .fl-node-<?php echo esc_attr( $id ); ?> .adv-icon-vertical .adv-icon-link {
@@ -79,12 +79,12 @@ if ( class_exists( 'FLBuilderCSS' ) ) {
 
 <?php
 $icon_count                 = 1;
-$settings->bg_border_radius = ( '' !== $settings->bg_border_radius ) ? $settings->bg_border_radius : '0';
-$settings->bg_size          = ( '' !== $settings->bg_size ) ? (int) trim( $settings->bg_size ) : 10;
+$settings->bg_border_radius = $settings->bg_border_radius !== '' ? $settings->bg_border_radius : '0';
+$settings->bg_size          = $settings->bg_size !== '' ? (int) trim( $settings->bg_size ) : 10;
 
-foreach ( $settings->icons as $i => $icon ) :
+foreach ( $settings->icons as $i => $icon ) {
 
-		$imageicon_array = array(
+		$imageicon_array = [
 
 			/* General Section */
 			'image_type'              => $icon->image_type,
@@ -98,13 +98,13 @@ foreach ( $settings->icons as $i => $icon ) :
 			'photo_source'            => 'library',
 			'photo'                   => $icon->photo,
 			'photo_url'               => '',
-			'img_size'                => ( 'custom' === $settings->icoimage_style || 'simple' === $settings->icoimage_style ) ? $settings->size : ( $settings->size * 2 ),
+			'img_size'                => $settings->icoimage_style === 'custom' || $settings->icoimage_style === 'simple' ? $settings->size : $settings->size * 2,
 			'img_align'               => $settings->align,
-			'photo_src'               => ( isset( $icon->photo_src ) ) ? $icon->photo_src : '',
+			'photo_src'               => $icon->photo_src ?? '',
 
 			/* Icon Style */
 			'icon_style'              => $settings->icoimage_style,
-			'icon_bg_size'            => ( $settings->bg_size * 2 ),
+			'icon_bg_size'            => $settings->bg_size * 2,
 			'icon_border_style'       => $settings->border_style,
 			'icon_border_width'       => $settings->border_width,
 			'icon_bg_border_radius'   => $settings->bg_border_radius,
@@ -120,26 +120,25 @@ foreach ( $settings->icons as $i => $icon ) :
 			'icon_color_preset'       => $settings->color_preset,
 
 			/* Icon Colors */
-			'icon_color'              => ( ! empty( $icon->icocolor ) ) ? $icon->icocolor : $settings->color,
-			'icon_hover_color'        => ( ! empty( $icon->icohover_color ) ) ? $icon->icohover_color : $settings->hover_color,
-			'icon_bg_color'           => ( ! empty( $icon->bg_color ) ) ? $icon->bg_color : $settings->bg_color,
-			'icon_bg_hover_color'     => ( ! empty( $icon->bg_hover_color ) ) ? $icon->bg_hover_color : $settings->bg_hover_color,
-			'icon_border_color'       => ( ! empty( $icon->border_color ) ) ? $icon->border_color : $settings->border_color,
-			'icon_border_hover_color' => ( ! empty( $icon->border_hover_color ) ) ? $icon->border_hover_color : $settings->border_hover_color,
+			'icon_color'              => ! empty( $icon->icocolor ) ? $icon->icocolor : $settings->color,
+			'icon_hover_color'        => ! empty( $icon->icohover_color ) ? $icon->icohover_color : $settings->hover_color,
+			'icon_bg_color'           => ! empty( $icon->bg_color ) ? $icon->bg_color : $settings->bg_color,
+			'icon_bg_hover_color'     => ! empty( $icon->bg_hover_color ) ? $icon->bg_hover_color : $settings->bg_hover_color,
+			'icon_border_color'       => ! empty( $icon->border_color ) ? $icon->border_color : $settings->border_color,
+			'icon_border_hover_color' => ! empty( $icon->border_hover_color ) ? $icon->border_hover_color : $settings->border_hover_color,
 			'icon_three_d'            => $settings->three_d,
 
 			/* Image Colors */
-			'img_bg_color'            => ( ! empty( $icon->bg_color ) ) ? $icon->bg_color : $settings->bg_color,
-			'img_bg_hover_color'      => ( ! empty( $icon->bg_hover_color ) ) ? $icon->bg_hover_color : $settings->bg_hover_color,
-			'img_border_color'        => ( ! empty( $icon->border_color ) ) ? $icon->border_color : $settings->border_color,
-			'img_border_hover_color'  => ( ! empty( $icon->border_hover_color ) ) ? $icon->border_hover_color : $settings->border_hover_color,
-		);
-
+			'img_bg_color'            => ! empty( $icon->bg_color ) ? $icon->bg_color : $settings->bg_color,
+			'img_bg_hover_color'      => ! empty( $icon->bg_hover_color ) ? $icon->bg_hover_color : $settings->bg_hover_color,
+			'img_border_color'        => ! empty( $icon->border_color ) ? $icon->border_color : $settings->border_color,
+			'img_border_hover_color'  => ! empty( $icon->border_hover_color ) ? $icon->border_hover_color : $settings->border_hover_color,
+		];
 
 		FLBuilder::render_module_css( 'image-icon', $id . ' .adv-icon-' . $icon_count, $imageicon_array );
 
 		if ( isset( $settings->responsive_align ) ) {
-			if ( '' !== $settings->responsive_align && 'default' !== $settings->responsive_align ) {
+			if ( $settings->responsive_align !== '' && $settings->responsive_align !== 'default' ) {
 				?>
 	@media ( max-width: <?php echo esc_attr( $global_settings->responsive_breakpoint ); ?>px ) {
 		.fl-node-<?php echo esc_attr( $id ); ?> .adv-icon-<?php echo esc_attr( $icon_count ); ?> .uabb-imgicon-wrap {
@@ -150,12 +149,12 @@ foreach ( $settings->icons as $i => $icon ) :
 			}
 		}
 		++$icon_count;
-endforeach;
+}
 ?>
 
 <?php
 if ( isset( $settings->responsive_align ) ) {
-	if ( '' !== $settings->responsive_align && 'default' !== $settings->responsive_align ) {
+	if ( $settings->responsive_align !== '' && $settings->responsive_align !== 'default' ) {
 		?>
 @media ( max-width: <?php echo esc_attr( $global_settings->responsive_breakpoint ); ?>px ) {
 	.fl-node-<?php echo esc_attr( $id ); ?> .adv-icon-wrap {
@@ -163,16 +162,16 @@ if ( isset( $settings->responsive_align ) ) {
 	}
 
 		<?php
-		if ( 'center' !== $settings->responsive_align ) {
+		if ( $settings->responsive_align !== 'center' ) {
 			?>
 	.fl-node-<?php echo esc_attr( $id ); ?> .adv-icon-<?php echo esc_attr( $settings->align ); ?> .adv-icon-link {
 			<?php
-			if ( 'left' === $settings->responsive_align ) {
+			if ( $settings->responsive_align === 'left' ) {
 				?>
 		margin-right: <?php echo esc_attr( $settings->spacing ); ?>px;
 		margin-left: 0;
 				<?php
-			} elseif ( 'right' === $settings->responsive_align ) {
+			} elseif ( $settings->responsive_align === 'right' ) {
 				?>
 		margin-left: <?php echo esc_attr( $settings->spacing ); ?>px;
 		margin-right: 0;

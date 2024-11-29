@@ -29,7 +29,7 @@ class WPML_UABB_Infolist extends WPML_Beaver_Builder_Module_With_Items {
 	 * @return array
 	 */
 	public function get_fields() {
-		return array( 'list_item_title', 'list_item_url', 'list_item_description' );
+		return [ 'list_item_title', 'list_item_url', 'list_item_description' ];
 	}
 
 	/**
