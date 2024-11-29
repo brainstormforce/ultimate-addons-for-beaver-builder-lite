@@ -5,9 +5,20 @@
 	<rule ref="PHPCompatibility"/>
 	<config name="testVersion" value="5.3-"/>
 
-	<rule ref="WordPress-Core" />
+	<rule ref="WordPress-Core" >
+		<exclude name="WordPress.PHP.YodaConditions.NotYoda" />
+	</rule>
 	<rule ref="WordPress-Docs" />
 
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax.Found">
+		<type>warning</type>
+	</rule>
+
+	<!-- Enforce short array syntax -->
+   	<rule ref="Generic.Arrays.DisallowShortArraySyntax.Found">
+       		<severity>0</severity>
+   	</rule>
+	
 	<!-- Check all PHP files in directory tree by default. -->
 	<arg name="extensions" value="php"/>
 	<file>.</file>
@@ -36,6 +47,7 @@
 	<exclude-pattern>*/tests/*</exclude-pattern>
 	<exclude-pattern>*/admin/bsf-core/*</exclude-pattern>
 	<exclude-pattern>*/stubs/*</exclude-pattern>
+	<exclude-pattern>phpinsights.php</exclude-pattern>
 	<!-- Exclude Libraries -->
 	<exclude-pattern>*/classes/library/batch-processing/*</exclude-pattern>
 	<exclude-pattern>*/classes/library/image-processing-queue/*</exclude-pattern>

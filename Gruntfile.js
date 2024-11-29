@@ -48,6 +48,7 @@ module.exports = function( grunt ) {
                     '!phpstan.neon',
                     '!stubs-generator.php',
 	                '!phpcs.xml.dist',
+					'!phpinsights.php',
 	            ],
 	            dest: 'ultimate-addons-for-beaver-builder-lite/'
 	        }
