@@ -11,7 +11,6 @@
  * @class UABBSeparatorModule
  */
 class UABBSeparatorModule extends FLBuilderModule {
-
 	/**
 	 * Constructor function that constructs default values for the Separator module.
 	 *
@@ -19,7 +18,7 @@ class UABBSeparatorModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(
-			array(
+			[
 				'name'            => __( 'Simple Separator', 'uabb' ),
 				'description'     => __( 'A divider line to separate content.', 'uabb' ),
 				'category'        => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
@@ -30,7 +29,7 @@ class UABBSeparatorModule extends FLBuilderModule {
 				'partial_refresh' => true,
 				'icon'            => 'minus.svg',
 
-			)
+			]
 		);
 	}
 }

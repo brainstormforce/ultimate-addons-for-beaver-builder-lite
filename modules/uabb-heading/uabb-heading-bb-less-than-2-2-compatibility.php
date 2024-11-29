@@ -9,286 +9,286 @@
 
 FLBuilder::register_module(
 	'UABBHeadingModule',
-	array(
-		'general'    => array(
+	[
+		'general'    => [
 			'title'    => __( 'General', 'uabb' ),
-			'sections' => array(
-				'general'     => array(
+			'sections' => [
+				'general'     => [
 					'title'  => '',
-					'fields' => array(
-						'heading'     => array(
+					'fields' => [
+						'heading'     => [
 							'type'        => 'text',
 							'label'       => __( 'Heading', 'uabb' ),
 							'default'     => __( 'Design is a funny word', 'uabb' ),
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'text',
 								'selector' => '.uabb-heading-text',
-							),
-							'connections' => array( 'string', 'html' ),
-						),
-						'link'        => array(
+							],
+							'connections' => [ 'string', 'html' ],
+						],
+						'link'        => [
 							'type'        => 'link',
 							'label'       => __( 'Link', 'uabb' ),
-							'preview'     => array(
+							'preview'     => [
 								'type' => 'none',
-							),
-							'connections' => array( 'url' ),
-						),
-						'link_target' => array(
+							],
+							'connections' => [ 'url' ],
+						],
+						'link_target' => [
 							'type'    => 'select',
 							'label'   => __( 'Link Target', 'uabb' ),
 							'default' => '_self',
-							'options' => array(
+							'options' => [
 								'_self'  => __( 'Same Window', 'uabb' ),
 								'_blank' => __( 'New Window', 'uabb' ),
-							),
-							'preview' => array(
+							],
+							'preview' => [
 								'type' => 'none',
-							),
-						),
-					),
-				),
-				'description' => array(
+							],
+						],
+					],
+				],
+				'description' => [
 					'title'  => __( 'Description', 'uabb' ),
-					'fields' => array(
-						'description' => array(
+					'fields' => [
+						'description' => [
 							'type'        => 'editor',
 							'label'       => '',
 							'rows'        => 7,
 							'default'     => '',
-							'connections' => array( 'string', 'html' ),
-						),
-					),
-				),
-				'structure'   => array(
+							'connections' => [ 'string', 'html' ],
+						],
+					],
+				],
+				'structure'   => [
 					'title'  => __( 'Structure', 'uabb' ),
-					'fields' => array(
-						'alignment'          => array(
+					'fields' => [
+						'alignment'          => [
 							'type'    => 'select',
 							'label'   => __( 'Alignment', 'uabb' ),
 							'default' => 'center',
-							'options' => array(
+							'options' => [
 								'left'   => __( 'Left', 'uabb' ),
 								'center' => __( 'Center', 'uabb' ),
 								'right'  => __( 'Right', 'uabb' ),
-							),
+							],
 							'help'    => __( 'This is the overall alignment and would apply to all Heading elements', 'uabb' ),
-							'preview' => array(
+							'preview' => [
 								'type'     => 'css',
 								'selector' => '.uabb-heading-wrapper .uabb-heading, .uabb-heading-wrapper .uabb-subheading *',
 								'property' => 'text-align',
-							),
-						),
-						'r_custom_alignment' => array(
+							],
+						],
+						'r_custom_alignment' => [
 							'type'    => 'select',
 							'label'   => __( 'Responsive Alignment', 'uabb' ),
 							'default' => 'center',
-							'options' => array(
+							'options' => [
 								'left'   => __( 'Left', 'uabb' ),
 								'center' => __( 'Center', 'uabb' ),
 								'right'  => __( 'Right', 'uabb' ),
-							),
-							'preview' => array(
+							],
+							'preview' => [
 								'type' => 'none',
-							),
+							],
 							'help'    => __( 'The alignment will apply on Mobile', 'uabb' ),
-						),
-					),
-				),
-			),
-		),
-		'style'      => array(
+						],
+					],
+				],
+			],
+		],
+		'style'      => [
 			'title'    => __( 'Separator', 'uabb' ),
-			'sections' => array(
-				'separator'            => array(
+			'sections' => [
+				'separator'            => [
 					'title'  => __( 'Separator', 'uabb' ),
-					'fields' => array(
-						'separator_style'    => array(
+					'fields' => [
+						'separator_style'    => [
 							'type'    => 'select',
 							'label'   => __( 'Separator Style', 'uabb' ),
 							'default' => 'none',
-							'options' => array(
+							'options' => [
 								'none'       => __( 'None', 'uabb' ),
 								'line'       => __( 'Line', 'uabb' ),
 								'line_icon'  => __( 'Line With Icon', 'uabb' ),
 								'line_image' => __( 'Line With Image', 'uabb' ),
 								'line_text'  => __( 'Line With Text', 'uabb' ),
-							),
-							'toggle'  => array(
-								'line'       => array(
-									'sections' => array( 'separator_line' ),
-									'fields'   => array( 'separator_position' ),
-								),
-								'line_icon'  => array(
-									'sections' => array( 'separator_line', 'separator_icon_basic' ),
-									'fields'   => array( 'separator_position' ),
-								),
-								'line_image' => array(
-									'sections' => array( 'separator_line', 'separator_img_basic' ),
-									'fields'   => array( 'separator_position' ),
-								),
-								'line_text'  => array(
-									'sections' => array( 'separator_line', 'separator_text', 'separator_text_typography' ),
-									'fields'   => array( 'separator_position' ),
-								),
-							),
-						),
-						'separator_position' => array(
+							],
+							'toggle'  => [
+								'line'       => [
+									'sections' => [ 'separator_line' ],
+									'fields'   => [ 'separator_position' ],
+								],
+								'line_icon'  => [
+									'sections' => [ 'separator_line', 'separator_icon_basic' ],
+									'fields'   => [ 'separator_position' ],
+								],
+								'line_image' => [
+									'sections' => [ 'separator_line', 'separator_img_basic' ],
+									'fields'   => [ 'separator_position' ],
+								],
+								'line_text'  => [
+									'sections' => [ 'separator_line', 'separator_text', 'separator_text_typography' ],
+									'fields'   => [ 'separator_position' ],
+								],
+							],
+						],
+						'separator_position' => [
 							'type'    => 'select',
 							'label'   => __( 'Separator Position', 'uabb' ),
 							'default' => 'center',
-							'options' => array(
+							'options' => [
 								'center' => __( 'Between Heading & Description', 'uabb' ),
 								'top'    => __( 'Top', 'uabb' ),
 								'bottom' => __( 'Bottom', 'uabb' ),
-							),
-						),
-					),
-				),
-				'separator_icon_basic' => array(
+							],
+						],
+					],
+				],
+				'separator_icon_basic' => [
 					'title'  => __( 'Icon Basics', 'uabb' ),
-					'fields' => array(
-						'icon'                 => array(
+					'fields' => [
+						'icon'                 => [
 							'type'        => 'icon',
 							'label'       => __( 'Icon', 'uabb' ),
 							'show_remove' => true,
-						),
-						'icon_size'            => array(
+						],
+						'icon_size'            => [
 							'type'        => 'text',
 							'label'       => __( 'Size', 'uabb' ),
 							'placeholder' => '30',
 							'maxlength'   => '5',
 							'size'        => '6',
 							'description' => 'px',
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'selector' => '.uabb-icon-wrap .uabb-icon i, .uabb-icon-wrap .uabb-icon i:before',
 								'property' => 'font-size',
 								'unit'     => 'px',
-							),
-						),
-						'separator_icon_color' => array(
+							],
+						],
+						'separator_icon_color' => [
 							'type'       => 'color',
 							'label'      => __( 'Icon Color', 'uabb' ),
 							'default'    => '',
 							'show_reset' => true,
-							'preview'    => array(
+							'preview'    => [
 								'type'     => 'css',
 								'selector' => '.uabb-icon-wrap .uabb-icon i, .uabb-icon-wrap .uabb-icon i:before',
 								'property' => 'color',
-							),
-						),
-					),
-				),
-				'separator_img_basic'  => array(
+							],
+						],
+					],
+				],
+				'separator_img_basic'  => [
 					'title'  => __( 'Image Basics', 'uabb' ),
-					'fields' => array(
-						'photo_source'        => array(
+					'fields' => [
+						'photo_source'        => [
 							'type'    => 'select',
 							'label'   => __( 'Photo Source', 'uabb' ),
 							'default' => 'library',
-							'options' => array(
+							'options' => [
 								'library' => __( 'Media Library', 'uabb' ),
 								'url'     => __( 'URL', 'uabb' ),
-							),
-							'toggle'  => array(
-								'library' => array(
-									'fields' => array( 'photo' ),
-								),
-								'url'     => array(
-									'fields' => array( 'photo_url' ),
-								),
-							),
-						),
-						'photo'               => array(
+							],
+							'toggle'  => [
+								'library' => [
+									'fields' => [ 'photo' ],
+								],
+								'url'     => [
+									'fields' => [ 'photo_url' ],
+								],
+							],
+						],
+						'photo'               => [
 							'type'        => 'photo',
 							'label'       => __( 'Photo', 'uabb' ),
 							'show_remove' => true,
-							'connections' => array( 'photo' ),
-						),
-						'photo_url'           => array(
+							'connections' => [ 'photo' ],
+						],
+						'photo_url'           => [
 							'type'        => 'text',
 							'label'       => __( 'Photo URL', 'uabb' ),
 							'placeholder' => 'http://www.example.com/my-photo.jpg',
-						),
-						'img_size'            => array(
+						],
+						'img_size'            => [
 							'type'        => 'text',
 							'label'       => __( 'Size', 'uabb' ),
 							'maxlength'   => '5',
 							'size'        => '6',
 							'description' => 'px',
 							'placeholder' => '50',
-						),
-						'responsive_img_size' => array(
+						],
+						'responsive_img_size' => [
 							'type'        => 'text',
 							'label'       => __( 'Responsive Size', 'uabb' ),
 							'maxlength'   => '5',
 							'size'        => '6',
 							'description' => 'px',
 							'help'        => __( 'Image size below medium devices. Leave it blank if you want to keep same size', 'uabb' ),
-							'preview'     => array(
+							'preview'     => [
 								'type' => 'none',
-							),
-						),
-					),
-				),
-				'separator_text'       => array(
+							],
+						],
+					],
+				],
+				'separator_text'       => [
 					'title'  => __( 'Text', 'uabb' ),
-					'fields' => array(
-						'text_inline'              => array(
+					'fields' => [
+						'text_inline'              => [
 							'type'    => 'text',
 							'label'   => __( 'Text', 'uabb' ),
 							'default' => 'Ultimate',
-							'preview' => array(
+							'preview' => [
 								'type'     => 'text',
 								'selector' => '.uabb-divider-text',
-							),
-						),
-						'responsive_compatibility' => array(
+							],
+						],
+						'responsive_compatibility' => [
 							'type'    => 'select',
 							'label'   => __( 'Responsive Compatibility', 'uabb' ),
 							'help'    => __( 'There might be responsive issues for long texts. If you are facing such issues then select appropriate devices width to make your module responsive.', 'uabb' ),
 							'default' => '',
-							'options' => array(
+							'options' => [
 								''                         => __( 'None', 'uabb' ),
 								'uabb-responsive-mobile'   => __( 'Small Devices', 'uabb' ),
 								'uabb-responsive-medsmall' => __( 'Medium & Small Devices', 'uabb' ),
-							),
-						),
-					),
-				),
-				'separator_line'       => array(
+							],
+						],
+					],
+				],
+				'separator_line'       => [
 					'title'  => __( 'Line Style', 'uabb' ),
-					'fields' => array(
-						'separator_line_style'  => array(
+					'fields' => [
+						'separator_line_style'  => [
 							'type'    => 'select',
 							'label'   => __( 'Style', 'uabb' ),
 							'default' => 'solid',
-							'options' => array(
+							'options' => [
 								'solid'  => __( 'Solid', 'uabb' ),
 								'dashed' => __( 'Dashed', 'uabb' ),
 								'dotted' => __( 'Dotted', 'uabb' ),
 								'double' => __( 'Double', 'uabb' ),
-							),
+							],
 							'help'    => __( 'The type of border to use. Double borders must have a height of at least 3px to render properly.', 'uabb' ),
-							'preview' => array(
+							'preview' => [
 								'type'     => 'css',
 								'selector' => '.uabb-separator, .uabb-separator-line > span',
 								'property' => 'border-top-style',
-							),
-						),
-						'separator_line_color'  => array(
+							],
+						],
+						'separator_line_color'  => [
 							'type'       => 'color',
 							'label'      => __( 'Color', 'uabb' ),
 							'default'    => '',
 							'show_reset' => true,
-							'preview'    => array(
+							'preview'    => [
 								'type'     => 'css',
 								'selector' => '.uabb-separator, .uabb-separator-line > span',
 								'property' => 'border-top-color',
-							),
-						),
-						'separator_line_height' => array(
+							],
+						],
+						'separator_line_height' => [
 							'type'        => 'text',
 							'label'       => __( 'Thickness', 'uabb' ),
 							'placeholder' => '1',
@@ -296,262 +296,262 @@ FLBuilder::register_module(
 							'size'        => '3',
 							'description' => 'px',
 							'help'        => __( 'Thickness of Border', 'uabb' ),
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'selector' => '.uabb-separator, .uabb-separator-line > span',
 								'property' => 'border-top-width',
 								'unit'     => 'px',
-							),
-						),
-						'separator_line_width'  => array(
+							],
+						],
+						'separator_line_width'  => [
 							'type'        => 'text',
 							'label'       => __( 'Width', 'uabb' ),
 							'placeholder' => '30',
 							'maxlength'   => '3',
 							'size'        => '5',
 							'description' => '%',
-						),
-					),
-				),
-			),
-		),
-		'typography' => array(
+						],
+					],
+				],
+			],
+		],
+		'typography' => [
 			'title'    => __( 'Typography', 'uabb' ),
-			'sections' => array(
-				'heading_typo'              => array(
+			'sections' => [
+				'heading_typo'              => [
 					'title'  => __( 'Heading', 'uabb' ),
-					'fields' => array(
-						'tag'                   => array(
+					'fields' => [
+						'tag'                   => [
 							'type'     => 'select',
 							'label'    => __( 'HTML Tag', 'uabb' ),
 							'default'  => 'h3',
-							'sanitize' => array( 'FLBuilderUtils::esc_tags', 'h3' ),
-							'options'  => array(
+							'sanitize' => [ 'FLBuilderUtils::esc_tags', 'h3' ],
+							'options'  => [
 								'h1' => 'h1',
 								'h2' => 'h2',
 								'h3' => 'h3',
 								'h4' => 'h4',
 								'h5' => 'h5',
 								'h6' => 'h6',
-							),
-						),
-						'font'                  => array(
+							],
+						],
+						'font'                  => [
 							'type'    => 'font',
-							'default' => array(
+							'default' => [
 								'family' => 'Default',
 								'weight' => 300,
-							),
+							],
 							'label'   => __( 'Font', 'uabb' ),
-							'preview' => array(
+							'preview' => [
 								'type'     => 'font',
 								'selector' => '.uabb-heading .uabb-heading-text',
-							),
-						),
-						'new_font_size_unit'    => array(
+							],
+						],
+						'new_font_size_unit'    => [
 							'type'        => 'unit',
 							'label'       => __( 'Font Size', 'uabb' ),
 							'description' => 'px',
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'selector' => '.uabb-heading .uabb-heading-text',
 								'property' => 'font-size',
 								'unit'     => 'px',
-							),
-							'responsive'  => array(
-								'placeholder' => array(
+							],
+							'responsive'  => [
+								'placeholder' => [
 									'default'    => '',
 									'medium'     => '',
 									'responsive' => '',
-								),
-							),
-						),
-						'line_height_unit'      => array(
+								],
+							],
+						],
+						'line_height_unit'      => [
 							'type'        => 'unit',
 							'label'       => __( 'Line Height', 'uabb' ),
 							'description' => 'em',
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'selector' => '.uabb-heading .uabb-heading-text',
 								'property' => 'line-height',
 								'unit'     => 'em',
-							),
-							'responsive'  => array(
-								'placeholder' => array(
+							],
+							'responsive'  => [
+								'placeholder' => [
 									'default'    => '',
 									'medium'     => '',
 									'responsive' => '',
-								),
-							),
-						),
-						'color'                 => array(
+								],
+							],
+						],
+						'color'                 => [
 							'type'       => 'color',
 							'label'      => __( 'Text Color', 'uabb' ),
 							'default'    => '',
 							'show_reset' => true,
-							'preview'    => array(
+							'preview'    => [
 								'type'     => 'css',
 								'property' => 'color',
 								'selector' => '.fl-module-content.fl-node-content .uabb-heading  .uabb-heading-text',
-							),
-						),
-						'heading_margin_top'    => array(
+							],
+						],
+						'heading_margin_top'    => [
 							'type'        => 'text',
 							'label'       => __( 'Margin Top', 'uabb' ),
 							'placeholder' => '0',
 							'size'        => '5',
 							'description' => 'px',
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'property' => 'margin-top',
 								'selector' => '.uabb-heading',
 								'unit'     => 'px',
-							),
-						),
-						'heading_margin_bottom' => array(
+							],
+						],
+						'heading_margin_bottom' => [
 							'type'        => 'text',
 							'label'       => __( 'Margin Bottom', 'uabb' ),
 							'placeholder' => '15',
 							'size'        => '5',
 							'description' => 'px',
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'property' => 'margin-bottom',
 								'selector' => '.uabb-heading',
 								'unit'     => 'px',
-							),
-						),
-						'bg_color'              => array(
+							],
+						],
+						'bg_color'              => [
 							'type'        => 'color',
-							'connections' => array( 'color' ),
+							'connections' => [ 'color' ],
 							'label'       => __( 'Heading Background Color', 'uabb' ),
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'property' => 'background',
 								'selector' => '.fl-module-content.fl-node-content .uabb-heading  .uabb-heading-text',
-							),
-						),
-						'heading_padding'       => array(
+							],
+						],
+						'heading_padding'       => [
 							'type'        => 'dimension',
 							'label'       => __( 'Padding', 'uabb' ),
 							'description' => 'px',
-							'responsive'  => array(
-								'placeholder' => array(
+							'responsive'  => [
+								'placeholder' => [
 									'default'    => '',
 									'medium'     => '',
 									'responsive' => '',
-								),
-							),
-							'preview'     => array(
+								],
+							],
+							'preview'     => [
 								'type'      => 'css',
 								'selector'  => '.fl-module-content.fl-node-content .uabb-heading  .uabb-heading-text',
 								'property'  => 'padding',
 								'unit'      => 'px',
 								'important' => true,
-							),
-						),
-					),
-				),
-				'description_typo'          => array(
+							],
+						],
+					],
+				],
+				'description_typo'          => [
 					'title'  => __( 'Description', 'uabb' ),
-					'fields' => array(
-						'desc_font_family'      => array(
+					'fields' => [
+						'desc_font_family'      => [
 							'type'    => 'font',
 							'label'   => __( 'Font Family', 'uabb' ),
-							'default' => array(
+							'default' => [
 								'family' => 'Default',
 								'weight' => 'Default',
-							),
-							'preview' => array(
+							],
+							'preview' => [
 								'type'     => 'font',
 								'selector' => '.uabb-subheading, .uabb-subheading *',
-							),
-						),
-						'desc_font_size_unit'   => array(
+							],
+						],
+						'desc_font_size_unit'   => [
 							'type'        => 'unit',
 							'label'       => __( 'Font Size', 'uabb' ),
 							'description' => 'px',
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'property' => 'font-size',
 								'selector' => '.uabb-subheading, .uabb-subheading *',
 								'unit'     => 'px',
-							),
-							'responsive'  => array(
-								'placeholder' => array(
+							],
+							'responsive'  => [
+								'placeholder' => [
 									'default'    => '',
 									'medium'     => '',
 									'responsive' => '',
-								),
-							),
-						),
-						'desc_line_height_unit' => array(
+								],
+							],
+						],
+						'desc_line_height_unit' => [
 							'type'        => 'unit',
 							'label'       => __( 'Line Height', 'uabb' ),
 							'description' => 'em',
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'property' => 'line-height',
 								'selector' => '.uabb-subheading, .uabb-subheading *',
 								'unit'     => 'em',
-							),
-							'responsive'  => array(
-								'placeholder' => array(
+							],
+							'responsive'  => [
+								'placeholder' => [
 									'default'    => '',
 									'medium'     => '',
 									'responsive' => '',
-								),
-							),
-						),
-						'desc_color'            => array(
+								],
+							],
+						],
+						'desc_color'            => [
 							'type'       => 'color',
 							'label'      => __( 'Color', 'uabb' ),
 							'default'    => '',
 							'show_reset' => true,
-							'preview'    => array(
+							'preview'    => [
 								'type'     => 'css',
 								'property' => 'color',
 								'selector' => '.fl-module-content.fl-node-content .uabb-subheading, .fl-module-content.fl-node-content .uabb-subheading *',
-							),
-						),
-						'desc_margin_top'       => array(
+							],
+						],
+						'desc_margin_top'       => [
 							'type'        => 'text',
 							'label'       => __( 'Margin Top', 'uabb' ),
 							'placeholder' => '15',
 							'size'        => '5',
 							'description' => 'px',
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'property' => 'margin-top',
 								'selector' => '.uabb-subheading',
 								'unit'     => 'px',
-							),
-						),
-						'desc_margin_bottom'    => array(
+							],
+						],
+						'desc_margin_bottom'    => [
 							'type'        => 'text',
 							'label'       => __( 'Margin Bottom', 'uabb' ),
 							'placeholder' => '0',
 							'size'        => '5',
 							'description' => 'px',
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'property' => 'margin-bottom',
 								'selector' => '.uabb-subheading',
 								'unit'     => 'px',
-							),
-						),
-					),
-				),
-				'separator_text_typography' => array(
+							],
+						],
+					],
+				],
+				'separator_text_typography' => [
 					'title'  => __( 'Separator Text Typography', 'uabb' ),
-					'fields' => array(
-						'separator_text_tag_selection'    => array(
+					'fields' => [
+						'separator_text_tag_selection'    => [
 							'type'     => 'select',
 							'label'    => __( 'Text Tag', 'uabb' ),
 							'default'  => 'h3',
-							'sanitize' => array( 'FLBuilderUtils::esc_tags', 'h3' ),
-							'options'  => array(
+							'sanitize' => [ 'FLBuilderUtils::esc_tags', 'h3' ],
+							'options'  => [
 								'h1'   => __( 'H1', 'uabb' ),
 								'h2'   => __( 'H2', 'uabb' ),
 								'h3'   => __( 'H3', 'uabb' ),
@@ -561,70 +561,70 @@ FLBuilder::register_module(
 								'div'  => __( 'Div', 'uabb' ),
 								'p'    => __( 'p', 'uabb' ),
 								'span' => __( 'span', 'uabb' ),
-							),
-						),
-						'separator_text_font_family'      => array(
+							],
+						],
+						'separator_text_font_family'      => [
 							'type'    => 'font',
 							'label'   => __( 'Font Family', 'uabb' ),
-							'default' => array(
+							'default' => [
 								'family' => 'Default',
 								'weight' => 'Default',
-							),
-							'preview' => array(
+							],
+							'preview' => [
 								'type'     => 'font',
 								'selector' => '.uabb-divider-text',
-							),
-						),
-						'separator_text_font_size_unit'   => array(
+							],
+						],
+						'separator_text_font_size_unit'   => [
 							'type'        => 'unit',
 							'label'       => __( 'Font Size', 'uabb' ),
 							'description' => 'px',
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'property' => 'font-size',
 								'selector' => '.uabb-divider-text',
 								'unit'     => 'px',
-							),
-							'responsive'  => array(
-								'placeholder' => array(
+							],
+							'responsive'  => [
+								'placeholder' => [
 									'default'    => '',
 									'medium'     => '',
 									'responsive' => '',
-								),
-							),
-						),
-						'separator_text_line_height_unit' => array(
+								],
+							],
+						],
+						'separator_text_line_height_unit' => [
 							'type'        => 'unit',
 							'label'       => __( 'Line Height', 'uabb' ),
 							'description' => 'em',
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'property' => 'line-height',
 								'selector' => '.uabb-divider-text',
 								'unit'     => 'em',
-							),
-							'responsive'  => array(
-								'placeholder' => array(
+							],
+							'responsive'  => [
+								'placeholder' => [
 									'default'    => '',
 									'medium'     => '',
 									'responsive' => '',
-								),
-							),
-						),
-						'separator_text_color'            => array(
+								],
+							],
+						],
+						'separator_text_color'            => [
 							'type'       => 'color',
 							'label'      => __( 'Text Color', 'uabb' ),
 							'default'    => '',
 							'show_reset' => true,
-							'preview'    => array(
+							'preview'    => [
 								'type'     => 'css',
 								'property' => 'color',
 								'selector' => '.uabb-divider-text',
-							),
-						),
-					),
-				),
-			),
-		),
-	)
+							],
+						],
+					],
+				],
+			],
+		],
+	]
 );

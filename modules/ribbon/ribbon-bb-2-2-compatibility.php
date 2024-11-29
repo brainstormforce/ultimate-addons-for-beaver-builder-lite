@@ -10,185 +10,185 @@
 
 FLBuilder::register_module(
 	'RibbonModule',
-	array(
-		'general'    => array( // Tab.
+	[
+		'general'    => [ // Tab.
 			'title'    => __( 'Layout', 'uabb' ), // Tab title.
-			'sections' => array( // Tab Sections.
-				'general' => array(
+			'sections' => [ // Tab Sections.
+				'general' => [
 					'title'  => '',
-					'fields' => array(
-						'title'       => array(
+					'fields' => [
+						'title'       => [
 							'type'    => 'text',
 							'label'   => __( 'Ribbon Message', 'uabb' ),
 							'default' => __( 'SPECIAL OFFER', 'uabb' ),
-							'preview' => array(
+							'preview' => [
 								'type'     => 'text',
 								'selector' => '.uabb-ribbon-text-title',
-							),
-						),
-						'left_icon'   => array(
+							],
+						],
+						'left_icon'   => [
 							'type'        => 'icon',
 							'label'       => __( 'Left Icon', 'uabb' ),
 							'show_remove' => true,
-						),
-						'right_icon'  => array(
+						],
+						'right_icon'  => [
 							'type'        => 'icon',
 							'label'       => __( 'Right Icon', 'uabb' ),
 							'show_remove' => true,
-						),
-						'ribbon_resp' => array(
+						],
+						'ribbon_resp' => [
 							'type'    => 'select',
 							'label'   => __( 'Hide Ribbon Wings', 'uabb' ),
 							'default' => 'small',
 							'help'    => __( 'To hide Ribbon Wings on Small or Medium device use this option.', 'uabb' ),
-							'options' => array(
+							'options' => [
 								'none'   => __( 'None', 'uabb' ),
 								'small'  => __( 'Small Devices', 'uabb' ),
 								'medium' => __( 'Medium & Small Devices', 'uabb' ),
-							),
-						),
-					),
-				),
-				'style'   => array(
+							],
+						],
+					],
+				],
+				'style'   => [
 					'title'  => __( 'Style', 'uabb' ),
-					'fields' => array(
-						'ribbon_width' => array(
+					'fields' => [
+						'ribbon_width' => [
 							'type'    => 'select',
 							'label'   => __( 'Ribbon Width', 'uabb' ),
 							'default' => 'auto',
-							'options' => array(
+							'options' => [
 								'auto'   => __( 'Auto', 'uabb' ),
 								'full'   => __( 'Full', 'uabb' ),
 								'custom' => __( 'Custom', 'uabb' ),
-							),
-							'toggle'  => array(
-								'custom' => array(
-									'fields' => array( 'custom_width', 'ribbon_align' ),
-								),
-								'auto'   => array(
-									'fields' => array( 'ribbon_align' ),
-								),
-							),
-						),
-						'custom_width' => array(
+							],
+							'toggle'  => [
+								'custom' => [
+									'fields' => [ 'custom_width', 'ribbon_align' ],
+								],
+								'auto'   => [
+									'fields' => [ 'ribbon_align' ],
+								],
+							],
+						],
+						'custom_width' => [
 							'type'        => 'unit',
 							'label'       => __( 'Custom Width', 'uabb' ),
 							'placeholder' => '500',
 							'size'        => '6',
 							'slider'      => true,
-							'units'       => array( 'px' ),
-						),
-						'ribbon_align' => array(
+							'units'       => [ 'px' ],
+						],
+						'ribbon_align' => [
 							'type'    => 'align',
 							'label'   => __( 'Alignment', 'uabb' ),
 							'default' => 'center',
 							'help'    => __( 'To align Ribbon use this setting.', 'uabb' ),
-							'options' => array(
+							'options' => [
 								'center' => __( 'Center', 'uabb' ),
 								'left'   => __( 'Left', 'uabb' ),
 								'right'  => __( 'Right', 'uabb' ),
-							),
-						),
-						'stitching'    => array(
+							],
+						],
+						'stitching'    => [
 							'type'    => 'select',
 							'label'   => __( 'Stitching', 'uabb' ),
 							'default' => 'yes',
-							'options' => array(
+							'options' => [
 								'yes' => __( 'Yes', 'uabb' ),
 								'no'  => __( 'No', 'uabb' ),
-							),
+							],
 							'help'    => __( 'To give Stitch effect on Ribbon', 'uabb' ),
-						),
-						'shadow'       => array(
+						],
+						'shadow'       => [
 							'type'    => 'select',
 							'label'   => __( 'Ribbon Shadow', 'uabb' ),
 							'default' => 'yes',
-							'options' => array(
+							'options' => [
 								'yes' => __( 'Yes', 'uabb' ),
 								'no'  => __( 'No', 'uabb' ),
-							),
-						),
-					),
-				),
-				'colors'  => array(
+							],
+						],
+					],
+				],
+				'colors'  => [
 					'title'  => __( 'Ribbon Colors', 'uabb' ),
-					'fields' => array(
-						'ribbon_bg_type' => array(
+					'fields' => [
+						'ribbon_bg_type' => [
 							'type'    => 'select',
 							'label'   => __( 'Ribbon Color Type', 'uabb' ),
 							'default' => 'color',
 							'help'    => __( 'You can select one of the two background types: Color: simple one color background or Gradient: two color background.', 'uabb' ),
-							'options' => array(
+							'options' => [
 								'color'    => __( 'Color', 'uabb' ),
 								'gradient' => __( 'Gradient', 'uabb' ),
-							),
-							'toggle'  => array(
-								'color'    => array(
-									'fields' => array( 'ribbon_color' ),
-								),
-								'gradient' => array(
-									'fields' => array( 'gradient_color' ),
-								),
-							),
-						),
-						'ribbon_color'   => array(
+							],
+							'toggle'  => [
+								'color'    => [
+									'fields' => [ 'ribbon_color' ],
+								],
+								'gradient' => [
+									'fields' => [ 'gradient_color' ],
+								],
+							],
+						],
+						'ribbon_color'   => [
 							'type'        => 'color',
 							'label'       => __( 'Ribbon Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
-							'connections' => array( 'color' ),
+							'connections' => [ 'color' ],
 							'show_alpha'  => true,
-						),
-						'gradient_color' => array(
+						],
+						'gradient_color' => [
 							'type'    => 'uabb-gradient',
 							'label'   => __( 'Gradient', 'uabb' ),
-							'default' => array(
+							'default' => [
 								'color_one' => '',
 								'color_two' => '',
 								'direction' => 'top_bottom',
 								'angle'     => '0',
-							),
-						),
-						'icon_color'     => array(
+							],
+						],
+						'icon_color'     => [
 							'type'        => 'color',
 							'label'       => __( 'Icon Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-						'fold_color'     => array(
+							'connections' => [ 'color' ],
+						],
+						'fold_color'     => [
 							'type'        => 'color',
 							'label'       => __( 'Ribbon Fold Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-						'end_color'      => array(
+							'connections' => [ 'color' ],
+						],
+						'end_color'      => [
 							'type'        => 'color',
 							'label'       => __( 'Ribbon Wings Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-					),
-				),
-			),
-		),
-		'typography' => array( // Tab.
+							'connections' => [ 'color' ],
+						],
+					],
+				],
+			],
+		],
+		'typography' => [ // Tab.
 			'title'    => __( 'Typography', 'uabb' ), // Tab title.
-			'sections' => array( // Tab Sections.
-				'text_typography' => array(
+			'sections' => [ // Tab Sections.
+				'text_typography' => [
 					'title'  => __( 'Ribbon Text', 'uabb' ),
-					'fields' => array(
-						'text_tag_selection' => array(
+					'fields' => [
+						'text_tag_selection' => [
 							'type'     => 'select',
 							'label'    => __( 'Tag', 'uabb' ),
 							'default'  => 'h3',
-							'sanitize' => array( 'FLBuilderUtils::esc_tags', 'h3' ),
-							'options'  => array(
+							'sanitize' => [ 'FLBuilderUtils::esc_tags', 'h3' ],
+							'options'  => [
 								'h1'   => __( 'H1', 'uabb' ),
 								'h2'   => __( 'H2', 'uabb' ),
 								'h3'   => __( 'H3', 'uabb' ),
@@ -198,36 +198,36 @@ FLBuilder::register_module(
 								'div'  => __( 'Div', 'uabb' ),
 								'p'    => __( 'p', 'uabb' ),
 								'span' => __( 'span', 'uabb' ),
-							),
-						),
-						'font_typo'          => array(
+							],
+						],
+						'font_typo'          => [
 							'type'       => 'typography',
 							'label'      => __( 'Font Family', 'uabb' ),
 							'responsive' => true,
-							'preview'    => array(
+							'preview'    => [
 								'type'     => 'css',
 								'selector' => '.uabb-ribbon-text',
-							),
-						),
-						'text_color'         => array(
+							],
+						],
+						'text_color'         => [
 							'type'        => 'color',
 							'label'       => __( 'Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-						'text_shadow_color'  => array(
+							'connections' => [ 'color' ],
+						],
+						'text_shadow_color'  => [
 							'type'        => 'color',
 							'label'       => __( 'Text Shadow Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-					),
-				),
-			),
-		),
-	)
+							'connections' => [ 'color' ],
+						],
+					],
+				],
+			],
+		],
+	]
 );

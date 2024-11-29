@@ -17,7 +17,7 @@ $layout = 0;
 <div class="uabb-rating-content">
 
 <?php
-if ( 'bottom' === $settings->star_position ) {
+if ( $settings->star_position === 'bottom' ) {
 	?>
 	<div class="uabb-rating-title"><?php echo wp_kses_post( $title ); ?></div>
 	<?php
@@ -27,7 +27,7 @@ if ( 'bottom' === $settings->star_position ) {
 	<?php
 	$icon = '&#9733;';
 
-	if ( 'outline' === $settings->star_style ) {
+	if ( $settings->star_style === 'outline' ) {
 		$icon = '&#9734;';
 	}
 	$rating_scale   = (int) $settings->rating_scale;
@@ -50,7 +50,7 @@ if ( 'bottom' === $settings->star_position ) {
 	</div>
 
 <?php
-if ( 'top' === $settings->star_position ) {
+if ( $settings->star_position === 'top' ) {
 	?>
 	<div class="uabb-rating-title"><?php echo wp_kses_post( $title ); ?></div>
 	<?php

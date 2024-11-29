@@ -18,7 +18,7 @@ class RibbonModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(
-			array(
+			[
 				'name'          => __( 'Ribbon', 'uabb' ),
 				'description'   => __( 'Ribbon', 'uabb' ),
 				'category'      => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
@@ -28,7 +28,7 @@ class RibbonModule extends FLBuilderModule {
 				'editor_export' => true, // Defaults to true and can be omitted.
 				'enabled'       => true, // Defaults to true and can be omitted.
 				'icon'          => 'ribbon.svg',
-			)
+			]
 		);
 	}
 	/**
@@ -45,13 +45,13 @@ class RibbonModule extends FLBuilderModule {
 		$page_migrated           = UABB_Lite_Compatibility::check_old_page_migration();
 		$stable_version_new_page = UABB_Lite_Compatibility::check_stable_version_new_page();
 
-		if ( $version_bb_check && ( 'yes' === $page_migrated || 'yes' === $stable_version_new_page ) ) {
+		if ( $version_bb_check && ( $page_migrated === 'yes' || $stable_version_new_page === 'yes' ) ) {
 
 			if ( ! isset( $settings->font_typo ) || ! is_array( $settings->font_typo ) ) {
 
-				$settings->font_typo            = array();
-				$settings->font_typo_medium     = array();
-				$settings->font_typo_responsive = array();
+				$settings->font_typo            = [];
+				$settings->font_typo_medium     = [];
+				$settings->font_typo_responsive = [];
 			}
 			if ( isset( $settings->text_font_family ) ) {
 
@@ -62,7 +62,7 @@ class RibbonModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->text_font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->text_font_family['weight'] ) {
+					if ( $settings->text_font_family['weight'] === 'regular' ) {
 						$settings->font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->font_typo['font_weight'] = $settings->text_font_family['weight'];
@@ -71,61 +71,61 @@ class RibbonModule extends FLBuilderModule {
 				}
 			}
 			if ( isset( $settings->text_font_size_unit ) ) {
-				$settings->font_typo['font_size'] = array(
+				$settings->font_typo['font_size'] = [
 					'length' => $settings->text_font_size_unit,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->text_font_size_unit );
 			}
 			if ( isset( $settings->text_font_size_unit_medium ) ) {
 
-				$settings->font_typo_medium['font_size'] = array(
+				$settings->font_typo_medium['font_size'] = [
 					'length' => $settings->text_font_size_unit_medium,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->text_font_size_unit_medium );
 			}
 			if ( isset( $settings->text_font_size_unit_responsive ) ) {
 
-				$settings->font_typo_responsive['font_size'] = array(
+				$settings->font_typo_responsive['font_size'] = [
 					'length' => $settings->text_font_size_unit_responsive,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->text_font_size_unit_responsive );
 			}
 			if ( isset( $settings->text_line_height_unit ) ) {
 
-				$settings->font_typo['line_height'] = array(
+				$settings->font_typo['line_height'] = [
 					'length' => $settings->text_line_height_unit,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->text_line_height_unit );
 			}
 			if ( isset( $settings->text_line_height_unit_medium ) ) {
 
-				$settings->font_typo_medium['line_height'] = array(
+				$settings->font_typo_medium['line_height'] = [
 					'length' => $settings->text_line_height_unit_medium,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->text_line_height_unit_medium );
 			}
 			if ( isset( $settings->text_line_height_unit_responsive ) ) {
 
-				$settings->font_typo_responsive['line_height'] = array(
+				$settings->font_typo_responsive['line_height'] = [
 					'length' => $settings->text_line_height_unit_responsive,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->text_line_height_unit_responsive );
 			}
-		} elseif ( $version_bb_check && 'yes' !== $page_migrated ) {
+		} elseif ( $version_bb_check && $page_migrated !== 'yes' ) {
 
 			if ( ! isset( $settings->font_typo ) || ! is_array( $settings->font_typo ) ) {
 
-				$settings->font_typo            = array();
-				$settings->font_typo_medium     = array();
-				$settings->font_typo_responsive = array();
+				$settings->font_typo            = [];
+				$settings->font_typo_medium     = [];
+				$settings->font_typo_responsive = [];
 			}
-			if ( isset( $settings->text_font_family ) && '' !== $settings->text_font_family ) {
+			if ( isset( $settings->text_font_family ) && $settings->text_font_family !== '' ) {
 
 				if ( isset( $settings->text_font_family['family'] ) ) {
 
@@ -134,7 +134,7 @@ class RibbonModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->text_font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->text_font_family['weight'] ) {
+					if ( $settings->text_font_family['weight'] === 'regular' ) {
 						$settings->font_typo['font_weight'] = 'normal';
 					} else {
 						$settings->font_typo['font_weight'] = $settings->text_font_family['weight'];
@@ -144,47 +144,47 @@ class RibbonModule extends FLBuilderModule {
 			}
 			if ( isset( $settings->text_font_size['small'] ) && ! isset( $settings->font_typo_responsive['font_size'] ) ) {
 
-				$settings->font_typo_responsive['font_size'] = array(
+				$settings->font_typo_responsive['font_size'] = [
 					'length' => $settings->text_font_size['small'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->text_font_size['medium'] ) && ! isset( $settings->font_typo_medium['font_size'] ) ) {
 
-				$settings->font_typo_medium['font_size'] = array(
+				$settings->font_typo_medium['font_size'] = [
 					'length' => $settings->text_font_size['medium'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->text_font_size['desktop'] ) && ! isset( $settings->font_typo['font_size'] ) ) {
 
-				$settings->font_typo['font_size'] = array(
+				$settings->font_typo['font_size'] = [
 					'length' => $settings->text_font_size['desktop'],
 					'unit'   => 'px',
-				);
+				];
 			}
-			if ( isset( $settings->text_line_height['desktop'] ) && isset( $settings->text_font_size['desktop'] ) && 0 !== $settings->text_font_size['desktop'] && ! isset( $settings->font_typo['line_height'] ) ) {
+			if ( isset( $settings->text_line_height['desktop'] ) && isset( $settings->text_font_size['desktop'] ) && $settings->text_font_size['desktop'] !== 0 && ! isset( $settings->font_typo['line_height'] ) ) {
 				if ( is_numeric( $settings->text_line_height['desktop'] ) && is_numeric( $settings->text_font_size['desktop'] ) ) {
-					$settings->font_typo['line_height'] = array(
+					$settings->font_typo['line_height'] = [
 						'length' => round( $settings->text_line_height['desktop'] / $settings->text_font_size['desktop'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->text_line_height['medium'] ) && isset( $settings->text_font_size['medium'] ) && 0 !== $settings->text_font_size['medium'] && ! isset( $settings->font_typo_medium['line_height'] ) ) {
+			if ( isset( $settings->text_line_height['medium'] ) && isset( $settings->text_font_size['medium'] ) && $settings->text_font_size['medium'] !== 0 && ! isset( $settings->font_typo_medium['line_height'] ) ) {
 				if ( is_numeric( $settings->text_line_height['medium'] ) && is_numeric( $settings->text_font_size['medium'] ) ) {
-					$settings->font_typo_medium['line_height'] = array(
+					$settings->font_typo_medium['line_height'] = [
 						'length' => round( $settings->text_line_height['medium'] / $settings->text_font_size['medium'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->text_line_height['small'] ) && isset( $settings->text_font_size['small'] ) && 0 !== $settings->text_font_size['small'] && ! isset( $settings->font_typo_responsive['line_height'] ) ) {
+			if ( isset( $settings->text_line_height['small'] ) && isset( $settings->text_font_size['small'] ) && $settings->text_font_size['small'] !== 0 && ! isset( $settings->font_typo_responsive['line_height'] ) ) {
 				if ( is_numeric( $settings->text_line_height['small'] ) && is_numeric( $settings->text_font_size['small'] ) ) {
-					$settings->font_typo_responsive['line_height'] = array(
+					$settings->font_typo_responsive['line_height'] = [
 						'length' => round( $settings->text_line_height['small'] / $settings->text_font_size['small'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
 			// Unset the old values.
@@ -221,13 +221,13 @@ class RibbonModule extends FLBuilderModule {
 		$path = '';
 
 		// Check if $icon is referencing an included icon.
-		if ( '' !== $icon && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/icon/' . $icon ) ) {
+		if ( $icon !== '' && file_exists( BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/icon/' . $icon ) ) {
 			$path = BB_ULTIMATE_ADDON_DIR . 'modules/ribbon/icon/' . $icon;
 		}
 
 		if ( file_exists( $path ) ) {
 			$contents = file_get_contents( $path ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
-			if ( false !== $contents ) {
+			if ( $contents !== false ) {
 				return $contents;
 			}
 		}
@@ -236,7 +236,6 @@ class RibbonModule extends FLBuilderModule {
 		return '';
 	}
 }
-
 
 /*
  * Condition to verify Beaver Builder version.

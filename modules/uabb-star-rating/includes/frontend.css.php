@@ -28,31 +28,31 @@ $settings->rating_color          = FLBuilderColor::hex_or_rgb( $settings->rating
 if ( class_exists( 'FLBuilderCSS' ) ) {
 
 	FLBuilderCSS::typography_field_rule(
-		array(
+		[
 			'settings'     => $settings,
 			'setting_name' => 'title_typography',
-			'selector'     => ".fl-node-$id .uabb-rating-title",
-		)
+			'selector'     => ".fl-node-{$id} .uabb-rating-title",
+		]
 	);
 
 	FLBuilderCSS::responsive_rule(
-		array(
+		[
 			'settings'     => $settings,
 			'setting_name' => 'star_icon_size',
-			'selector'     => ".fl-node-$id .uabb-rating i",
+			'selector'     => ".fl-node-{$id} .uabb-rating i",
 			'prop'         => 'font-size',
 			'unit'         => 'px',
-		)
+		]
 	);
 
 	FLBuilderCSS::responsive_rule(
-		array(
+		[
 			'settings'     => $settings,
 			'setting_name' => 'star_icon_spacing',
-			'selector'     => ".fl-node-$id .uabb-rating i:not(:last-of-type)",
+			'selector'     => ".fl-node-{$id} .uabb-rating i:not(:last-of-type)",
 			'prop'         => 'margin-right',
 			'unit'         => 'px',
-		)
+		]
 	);
 }
 ?>
@@ -73,7 +73,7 @@ if ( class_exists( 'FLBuilderCSS' ) ) {
 .fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating-content {
 
 	<?php
-	if ( 'inline' === $settings->rating_layout && 'justify' === $settings->alignment ) {
+	if ( $settings->rating_layout === 'inline' && $settings->alignment === 'justify' ) {
 		?>
 		display: -webkit-box;
 		display: -webkit-flex;
@@ -86,7 +86,7 @@ if ( class_exists( 'FLBuilderCSS' ) ) {
 		flex-direction: row;
 		justify-content: space-between;
 		<?php
-	} elseif ( 'inline' === $settings->rating_layout && 'justify' !== $settings->alignment ) {
+	} elseif ( $settings->rating_layout === 'inline' && $settings->alignment !== 'justify' ) {
 		?>
 		display: block;
 		<?php
@@ -95,7 +95,7 @@ if ( class_exists( 'FLBuilderCSS' ) ) {
 }
 
 <?php
-if ( 'justify' !== $settings->alignment ) {
+if ( $settings->alignment !== 'justify' ) {
 	?>
 	.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating-content {
 		text-align: <?php echo esc_attr( $settings->alignment ); ?>;
@@ -107,10 +107,10 @@ if ( 'justify' !== $settings->alignment ) {
 	color: <?php echo esc_attr( $settings->title_color ); ?>;
 
 	<?php
-	if ( 'inline' === $settings->rating_layout ) {
-		if ( 'justify' !== $settings->alignment ) {
+	if ( $settings->rating_layout === 'inline' ) {
+		if ( $settings->alignment !== 'justify' ) {
 
-			if ( 'top' === $settings->star_position ) {
+			if ( $settings->star_position === 'top' ) {
 				?>
 				margin-left: <?php echo esc_attr( $settings->title_spacing ) . 'px'; ?>;
 				<?php
@@ -125,7 +125,7 @@ if ( 'justify' !== $settings->alignment ) {
 }
 
 <?php
-if ( 'inline' === $settings->rating_layout && 'justify' !== $settings->alignment ) {
+if ( $settings->rating_layout === 'inline' && $settings->alignment !== 'justify' ) {
 	?>
 	.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating-content > div {
 		display: inline-block;
@@ -140,7 +140,7 @@ if ( 'inline' === $settings->rating_layout && 'justify' !== $settings->alignment
 		@media ( max-width: <?php echo esc_attr( $global_settings->medium_breakpoint ) . 'px'; ?> ) {
 
 			<?php
-			if ( 'justify' !== $settings->alignment_medium ) {
+			if ( $settings->alignment_medium !== 'justify' ) {
 				?>
 	.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating-content {
 		text-align: <?php echo esc_attr( $settings->alignment_medium ); ?>;
@@ -155,7 +155,7 @@ if ( 'inline' === $settings->rating_layout && 'justify' !== $settings->alignment
 	<?php /* Small Breakpoint media query */ ?>
 		@media ( max-width: <?php echo esc_attr( $global_settings->responsive_breakpoint ) . 'px'; ?> ) {
 		<?php
-		if ( 'justify' !== $settings->alignment_responsive ) {
+		if ( $settings->alignment_responsive !== 'justify' ) {
 			?>
 	.fl-module-uabb-star-rating.fl-node-<?php echo esc_attr( $id ); ?> .uabb-rating-content {
 		text-align: <?php echo esc_attr( $settings->alignment_responsive ); ?>;

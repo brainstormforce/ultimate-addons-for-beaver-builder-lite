@@ -10,45 +10,45 @@
 
 FLBuilder::register_module(
 	'UABBSpacerGap',
-	array(
-		'spacer_gap_general' => array( // Tab.
+	[
+		'spacer_gap_general' => [ // Tab.
 			'title'    => __( 'General', 'uabb' ), // Tab title.
-			'sections' => array( // Tab Sections.
-				'spacer_gap_general' => array( // Section.
+			'sections' => [ // Tab Sections.
+				'spacer_gap_general' => [ // Section.
 					'title'  => '', // Section Title.
-					'fields' => array( // Section Fields.
-						'desktop_space' => array(
+					'fields' => [ // Section Fields.
+						'desktop_space' => [
 							'type'        => 'unit',
 							'label'       => __( 'Desktop', 'uabb' ),
 							'size'        => '8',
 							'placeholder' => '10',
 							'class'       => 'uabb-spacer-gap-desktop',
 							'slider'      => true,
-							'units'       => array( 'px' ),
+							'units'       => [ 'px' ],
 							'help'        => __( 'This value will work for all devices.', 'uabb' ),
-						),
-						'medium_device' => array(
+						],
+						'medium_device' => [
 							'type'    => 'unit',
 							'label'   => __( 'Medium Device ( Tabs )', 'uabb' ),
 							'default' => '',
 							'size'    => '8',
 							'class'   => 'uabb-spacer-gap-tab-landscape',
 							'slider'  => true,
-							'units'   => array( 'px' ),
-						),
+							'units'   => [ 'px' ],
+						],
 
-						'small_device'  => array(
+						'small_device'  => [
 							'type'    => 'unit',
 							'label'   => __( 'Small Device ( Mobile )', 'uabb' ),
 							'default' => '',
 							'size'    => '8',
 							'class'   => 'uabb-spacer-gap-mobile',
 							'slider'  => true,
-							'units'   => array( 'px' ),
-						),
-					),
-				),
-			),
-		),
-	)
+							'units'   => [ 'px' ],
+						],
+					],
+				],
+			],
+		],
+	]
 );

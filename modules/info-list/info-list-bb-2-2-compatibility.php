@@ -10,244 +10,244 @@
 
 FLBuilder::register_module(
 	'UABBInfoList',
-	array(
-		'info_list_item'    => array( // Tab.
+	[
+		'info_list_item'    => [ // Tab.
 			'title'    => __( 'List Item', 'uabb' ), // Tab title.
-			'sections' => array( // Tab Sections.
-				'info_list_general' => array( // Section.
+			'sections' => [ // Tab Sections.
+				'info_list_general' => [ // Section.
 					'title'  => '', // Section Title.
-					'fields' => array( // Section Fields.
-						'add_list_item' => array(
+					'fields' => [ // Section Fields.
+						'add_list_item' => [
 							'type'         => 'form',
 							'label'        => __( 'List Item', 'uabb' ),
 							'form'         => 'info_list_item_form',
 							'preview_text' => 'list_item_title',
 							'multiple'     => true,
-						),
-					),
-				),
-			),
-		),
+						],
+					],
+				],
+			],
+		],
 
-		'info_list_general' => array( // Tab.
+		'info_list_general' => [ // Tab.
 			'title'    => __( 'General', 'uabb' ), // Tab title.
-			'sections' => array( // Tab Sections.
-				'info_list_general'   => array( // Section.
+			'sections' => [ // Tab Sections.
+				'info_list_general'   => [ // Section.
 					'title'  => __( 'List Settings', 'uabb' ), // Section Title.
-					'fields' => array( // Section Fields.
-						'icon_position'              => array(
+					'fields' => [ // Section Fields.
+						'icon_position'              => [
 							'type'    => 'select',
 							'label'   => __( 'Icon / Image Position', 'uabb' ),
 							'default' => 'left',
-							'options' => array(
+							'options' => [
 								'left'  => __( 'Icon to the left', 'uabb' ),
 								'right' => __( 'Icon to the right', 'uabb' ),
 								'top'   => __( 'Icon at top', 'uabb' ),
-							),
-							'toggle'  => array(
-								'left'  => array(
-									'fields' => array( 'align_items', 'mobile_view' ),
-								),
-								'right' => array(
-									'fields' => array( 'align_items', 'mobile_view' ),
-								),
-							),
-						),
-						'align_items'                => array(
+							],
+							'toggle'  => [
+								'left'  => [
+									'fields' => [ 'align_items', 'mobile_view' ],
+								],
+								'right' => [
+									'fields' => [ 'align_items', 'mobile_view' ],
+								],
+							],
+						],
+						'align_items'                => [
 							'type'    => 'select',
 							'label'   => __( 'Icon Vertical Alignment', 'uabb' ),
 							'default' => 'top',
-							'options' => array(
+							'options' => [
 								'center' => __( 'Center', 'uabb' ),
 								'top'    => __( 'Top', 'uabb' ),
-							),
-						),
-						'mobile_view'                => array(
+							],
+						],
+						'mobile_view'                => [
 							'type'    => 'select',
 							'label'   => __( 'Mobile Structure', 'uabb' ),
 							'default' => '',
-							'options' => array(
+							'options' => [
 								''      => __( 'Inline', 'uabb' ),
 								'stack' => __( 'Stack', 'uabb' ),
-							),
-							'preview' => array(
+							],
+							'preview' => [
 								'type' => 'none',
-							),
-						),
-						'icon_image_size'            => array(
+							],
+						],
+						'icon_image_size'            => [
 							'type'        => 'unit',
 							'label'       => __( 'Icon / Image Size', 'uabb' ),
 							'slider'      => true,
-							'units'       => array( 'px' ),
+							'units'       => [ 'px' ],
 							'size'        => '8',
 							'placeholder' => '75',
-						),
-						'space_between_elements'     => array(
+						],
+						'space_between_elements'     => [
 							'type'        => 'unit',
 							'label'       => __( 'Space Between Two Elements', 'uabb' ),
 							'slider'      => true,
-							'units'       => array( 'px' ),
+							'units'       => [ 'px' ],
 							'size'        => '8',
 							'placeholder' => '20',
-						),
-						'list_icon_style'            => array(
+						],
+						'list_icon_style'            => [
 							'type'        => 'select',
 							'label'       => __( 'Icon / Image Style', 'uabb' ),
 							'default'     => 'simple',
 							'description' => '',
-							'options'     => array(
+							'options'     => [
 								'simple' => __( 'Simple', 'uabb' ),
 								'square' => __( 'Square', 'uabb' ),
 								'circle' => __( 'Circle', 'uabb' ),
 								'custom' => __( 'Design your own', 'uabb' ),
-							),
-							'toggle'      => array(
-								'circle' => array(
-									'fields' => array( 'list_icon_bg_color', 'list_icon_bg_color_opc' ),
-								),
-								'square' => array(
-									'fields' => array( 'list_icon_bg_color', 'list_icon_bg_color_opc' ),
-								),
-								'custom' => array(
-									'fields' => array( 'list_icon_bg_color', 'list_icon_bg_color_opc', 'list_icon_bg_size', 'list_icon_bg_border_radius', 'list_icon_bg_padding', 'list_icon_border_style' ),
-								),
-							),
-						),
-						'list_icon_bg_color'         => array(
+							],
+							'toggle'      => [
+								'circle' => [
+									'fields' => [ 'list_icon_bg_color', 'list_icon_bg_color_opc' ],
+								],
+								'square' => [
+									'fields' => [ 'list_icon_bg_color', 'list_icon_bg_color_opc' ],
+								],
+								'custom' => [
+									'fields' => [ 'list_icon_bg_color', 'list_icon_bg_color_opc', 'list_icon_bg_size', 'list_icon_bg_border_radius', 'list_icon_bg_padding', 'list_icon_border_style' ],
+								],
+							],
+						],
+						'list_icon_bg_color'         => [
 							'type'        => 'color',
 							'label'       => __( 'Color Option for Background', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
-							'connections' => array( 'color' ),
+							'connections' => [ 'color' ],
 							'show_alpha'  => true,
-						),
-						'list_icon_bg_color_opc'     => array(
+						],
+						'list_icon_bg_color_opc'     => [
 							'type'      => 'unit',
 							'label'     => __( 'Opacity', 'uabb' ),
 							'default'   => '',
 							'slider'    => true,
-							'units'     => array( 'px' ),
+							'units'     => [ 'px' ],
 							'maxlength' => '3',
 							'size'      => '5',
-						),
-						'list_icon_bg_border_radius' => array(
+						],
+						'list_icon_bg_border_radius' => [
 							'type'        => 'unit',
 							'label'       => __( 'Border Radius ( For Background )', 'uabb' ),
 							'maxlength'   => '3',
 							'size'        => '4',
 							'placeholder' => '0',
 							'slider'      => true,
-							'units'       => array( 'px' ),
-						),
+							'units'       => [ 'px' ],
+						],
 
-						'list_icon_bg_padding'       => array(
+						'list_icon_bg_padding'       => [
 							'type'        => 'unit',
 							'label'       => __( 'Padding ( For Background )', 'uabb' ),
 							'maxlength'   => '3',
 							'size'        => '4',
 							'placeholder' => '10',
 							'slider'      => true,
-							'units'       => array( 'px' ),
-						),
-						'list_icon_border_style'     => array(
+							'units'       => [ 'px' ],
+						],
+						'list_icon_border_style'     => [
 							'type'    => 'select',
 							'label'   => __( 'Border Style', 'uabb' ),
 							'default' => 'none',
 							'help'    => __( 'The type of border to use. Double borders must have a width of at least 3px to render properly.', 'uabb' ),
-							'options' => array(
+							'options' => [
 								'none'   => __( 'None', 'uabb' ),
 								'solid'  => __( 'Solid', 'uabb' ),
 								'dashed' => __( 'Dashed', 'uabb' ),
 								'dotted' => __( 'Dotted', 'uabb' ),
 								'double' => __( 'Double', 'uabb' ),
-							),
-						),
-						'list_icon_border_width'     => array(
+							],
+						],
+						'list_icon_border_width'     => [
 							'type'        => 'unit',
 							'label'       => __( 'Border Width', 'uabb' ),
 							'slider'      => true,
-							'units'       => array( 'px' ),
+							'units'       => [ 'px' ],
 							'maxlength'   => '3',
 							'size'        => '6',
 							'placeholder' => '1',
-						),
-						'list_icon_border_color'     => array(
+						],
+						'list_icon_border_color'     => [
 							'type'        => 'color',
 							'label'       => __( 'Border Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
-							'connections' => array( 'color' ),
+							'connections' => [ 'color' ],
 							'show_alpha'  => true,
-						),
-						'list_icon_animation'        => array(
+						],
+						'list_icon_animation'        => [
 							'type'        => 'select',
 							'label'       => __( 'Image/Icon Animation', 'uabb' ),
 							'description' => '',
 							'help'        => __( 'Select whether you want to animate image/icon or not', 'uabb' ),
 							'default'     => 'no',
-							'options'     => array(
+							'options'     => [
 								'yes' => __( 'Yes', 'uabb' ),
 								'no'  => __( 'No', 'uabb' ),
-							),
-						),
-					),
-				),
-				'info_list_connector' => array( // Section.
+							],
+						],
+					],
+				],
+				'info_list_connector' => [ // Section.
 					'title'  => __( 'List Connector', 'uabb' ), // Section Title.
-					'fields' => array( // Section Fields.
-						'list_connector_option' => array(
+					'fields' => [ // Section Fields.
+						'list_connector_option' => [
 							'type'        => 'select',
 							'label'       => __( 'Show Connector', 'uabb' ),
 							'description' => '',
 							'help'        => __( 'Select whether you would like to show connector on list items.', 'uabb' ),
 							'default'     => 'yes',
-							'options'     => array(
+							'options'     => [
 								'yes' => __( 'Yes', 'uabb' ),
 								'no'  => __( 'No', 'uabb' ),
-							),
-							'toggle'      => array(
-								'yes' => array(
-									'fields' => array( 'list_connector_color', 'list_connector_style' ),
-								),
-							),
+							],
+							'toggle'      => [
+								'yes' => [
+									'fields' => [ 'list_connector_color', 'list_connector_style' ],
+								],
+							],
 
-						),
-						'list_connector_color'  => array(
+						],
+						'list_connector_color'  => [
 							'type'        => 'color',
 							'label'       => __( 'Connector Line Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
-							'connections' => array( 'color' ),
+							'connections' => [ 'color' ],
 							'show_alpha'  => true,
-						),
-						'list_connector_style'  => array(
+						],
+						'list_connector_style'  => [
 							'type'        => 'select',
 							'label'       => __( 'Connector Line Style', 'uabb' ),
 							'description' => '',
 							'default'     => 'solid',
-							'options'     => array(
+							'options'     => [
 								'solid'  => __( 'Solid', 'uabb' ),
 								'dashed' => __( 'Dashed', 'uabb' ),
 								'dotted' => __( 'Dotted', 'uabb' ),
-							),
-						),
-					),
-				),
-			),
-		),
+							],
+						],
+					],
+				],
+			],
+		],
 
-		'info_list_style'   => array( // Tab.
+		'info_list_style'   => [ // Tab.
 			'title'    => __( 'Typography', 'uabb' ), // Tab title.
-			'sections' => array( // Tab Sections.
-				'heading_typography'     => array(
+			'sections' => [ // Tab Sections.
+				'heading_typography'     => [
 					'title'  => __( 'Title', 'uabb' ),
-					'fields' => array(
-						'heading_tag_selection' => array(
+					'fields' => [
+						'heading_tag_selection' => [
 							'type'     => 'select',
 							'label'    => __( 'Select Tag', 'uabb' ),
 							'default'  => 'h3',
-							'sanitize' => array( 'FLBuilderUtils::esc_tags', 'h3' ),
-							'options'  => array(
+							'sanitize' => [ 'FLBuilderUtils::esc_tags', 'h3' ],
+							'options'  => [
 								'h1'   => __( 'H1', 'uabb' ),
 								'h2'   => __( 'H2', 'uabb' ),
 								'h3'   => __( 'H3', 'uabb' ),
@@ -257,96 +257,95 @@ FLBuilder::register_module(
 								'div'  => __( 'Div', 'uabb' ),
 								'p'    => __( 'p', 'uabb' ),
 								'span' => __( 'span', 'uabb' ),
-							),
-						),
-						'heading_font_typo'     => array(
+							],
+						],
+						'heading_font_typo'     => [
 							'type'       => 'typography',
 							'label'      => __( 'Typography', 'uabb' ),
 							'responsive' => true,
-							'preview'    => array(
+							'preview'    => [
 								'type'      => 'css',
 								'selector'  => '.uabb-info-list-title,.uabb-info-list-title a',
 								'important' => true,
-							),
-						),
-						'heading_color'         => array(
+							],
+						],
+						'heading_color'         => [
 							'type'        => 'color',
 							'default'     => '',
 							'show_reset'  => true,
 							'label'       => __( 'Choose Color', 'uabb' ),
-							'connections' => array( 'color' ),
+							'connections' => [ 'color' ],
 							'show_alpha'  => true,
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'selector' => '.uabb-info-list-title',
 								'property' => 'color',
-							),
-						),
-						'heading_margin_top'    => array(
+							],
+						],
+						'heading_margin_top'    => [
 							'label'      => __( 'Margin Top', 'uabb' ),
 							'type'       => 'unit',
 							'size'       => '8',
 							'slider'     => true,
-							'units'      => array( 'px' ),
+							'units'      => [ 'px' ],
 							'max_length' => '3',
-						),
-						'heading_margin_bottom' => array(
+						],
+						'heading_margin_bottom' => [
 							'label'      => __( 'Margin Bottom', 'uabb' ),
 							'type'       => 'unit',
 							'size'       => '8',
 							'slider'     => true,
-							'units'      => array( 'px' ),
+							'units'      => [ 'px' ],
 							'max_length' => '3',
-						),
-					),
-				),
-				'description_typography' => array(
+						],
+					],
+				],
+				'description_typography' => [
 					'title'  => __( 'Description', 'uabb' ),
-					'fields' => array(
-						'description_font_typo' => array(
+					'fields' => [
+						'description_font_typo' => [
 							'type'       => 'typography',
 							'label'      => __( 'Typography', 'uabb' ),
 							'responsive' => true,
-							'preview'    => array(
+							'preview'    => [
 								'type'      => 'css',
 								'selector'  => '.uabb-info-list-description *',
 								'important' => true,
-							),
-						),
-						'description_color'     => array(
+							],
+						],
+						'description_color'     => [
 							'type'        => 'color',
 							'label'       => __( 'Choose Color', 'uabb' ),
-							'preview'     => array(
+							'preview'     => [
 								'type'     => 'css',
 								'selector' => '.uabb-info-list-content .uabb-info-list-description *',
 								'property' => 'color',
-							),
+							],
 							'default'     => '',
 							'show_reset'  => true,
-							'connections' => array( 'color' ),
+							'connections' => [ 'color' ],
 							'show_alpha'  => true,
-						),
-					),
-				),
-			),
-		),
-	)
+						],
+					],
+				],
+			],
+		],
+	]
 );
-
 
 // Add List Items.
 FLBuilder::register_settings_form(
 	'info_list_item_form',
-	array(
+	[
 		'title' => __( 'Add List Item', 'uabb' ),
-		'tabs'  => array(
-			'list_item_general' => array(
+		'tabs'  => [
+			'list_item_general' => [
 				'title'    => __( 'General', 'uabb' ),
-				'sections' => array(
-					'title' => array(
+				'sections' => [
+					'title' => [
 						'title'  => __( 'General Settings', 'uabb' ),
-						'fields' => array(
-							'list_item_title'       => array(
+						'fields' => [
+							'list_item_title'       => [
 								'type'        => 'text',
 								'label'       => __( 'Title', 'uabb' ),
 								'description' => '',
@@ -354,120 +353,120 @@ FLBuilder::register_settings_form(
 								'help'        => __( 'Provide a title for this icon list item.', 'uabb' ),
 								'placeholder' => __( 'Title', 'uabb' ),
 								'class'       => 'uabb-list-item-title',
-								'connections' => array( 'string', 'html' ),
-							),
-							'list_item_url'         => array(
+								'connections' => [ 'string', 'html' ],
+							],
+							'list_item_url'         => [
 								'type'          => 'link',
 								'label'         => __( 'Link', 'uabb' ),
-								'connections'   => array( 'url' ),
+								'connections'   => [ 'url' ],
 								'show_target'   => true,
 								'show_nofollow' => true,
-							),
-							'list_item_link'        => array(
+							],
+							'list_item_link'        => [
 								'type'    => 'select',
 								'label'   => __( 'Apply Link To', 'uabb' ),
 								'default' => 'no',
-								'options' => array(
+								'options' => [
 									'no'         => __( 'No Link', 'uabb' ),
 									'complete'   => __( 'Complete Box', 'uabb' ),
 									'list-title' => __( 'List Title', 'uabb' ),
 									'icon'       => __( 'Icon', 'uabb' ),
-								),
+								],
 								'preview' => 'none',
-							),
-							'list_item_description' => array(
+							],
+							'list_item_description' => [
 								'type'        => 'editor',
 								'default'     => __( 'Enter description text here.', 'uabb' ),
 								'label'       => '',
 								'rows'        => 13,
-								'connections' => array( 'string', 'html' ),
-							),
-						),
-					),
-				),
-			),
+								'connections' => [ 'string', 'html' ],
+							],
+						],
+					],
+				],
+			],
 
-			'list_item_image'   => array(
+			'list_item_image'   => [
 				'title'    => __( 'Icon / Image', 'uabb' ),
-				'sections' => array(
-					'title'      => array(
+				'sections' => [
+					'title'      => [
 						'title'  => __( 'Icon / Image', 'uabb' ),
-						'fields' => array(
-							'image_type' => array(
+						'fields' => [
+							'image_type' => [
 								'type'    => 'select',
 								'label'   => __( 'Image Type', 'uabb' ),
 								'default' => 'none',
-								'options' => array(
+								'options' => [
 									'none'  => __( 'None', 'uabb' ),
 									'icon'  => __( 'Icon', 'uabb' ),
 									'photo' => __( 'Photo', 'uabb' ),
-								),
-								'toggle'  => array(
-									'icon'  => array(
-										'sections' => array( 'icon_basic', 'icon_style', 'icon_colors' ),
-									),
-									'photo' => array(
-										'sections' => array( 'img_basic', 'img_style' ),
-									),
-								),
-							),
-						),
-					),
+								],
+								'toggle'  => [
+									'icon'  => [
+										'sections' => [ 'icon_basic', 'icon_style', 'icon_colors' ],
+									],
+									'photo' => [
+										'sections' => [ 'img_basic', 'img_style' ],
+									],
+								],
+							],
+						],
+					],
 					/* Icon Basic Setting */
-					'icon_basic' => array( // Section.
+					'icon_basic' => [ // Section.
 						'title'  => __( 'Icon', 'uabb' ), // Section Title.
-						'fields' => array( // Section Fields.
-							'icon'       => array(
+						'fields' => [ // Section Fields.
+							'icon'       => [
 								'type'        => 'icon',
 								'label'       => __( 'Icon', 'uabb' ),
 								'show_remove' => true,
-							),
-							'icon_color' => array(
+							],
+							'icon_color' => [
 								'type'        => 'color',
 								'label'       => __( 'Icon Color', 'uabb' ),
 								'default'     => '',
 								'show_reset'  => true,
-								'connections' => array( 'color' ),
+								'connections' => [ 'color' ],
 								'show_alpha'  => true,
-							),
-						),
-					),
+							],
+						],
+					],
 					/* Image Basic Setting */
-					'img_basic'  => array( // Section.
+					'img_basic'  => [ // Section.
 						'title'  => __( 'Image', 'uabb' ), // Section Title.
-						'fields' => array( // Section Fields.
-							'photo_source' => array(
+						'fields' => [ // Section Fields.
+							'photo_source' => [
 								'type'    => 'select',
 								'label'   => __( 'Photo Source', 'uabb' ),
 								'default' => 'library',
-								'options' => array(
+								'options' => [
 									'library' => __( 'Media Library', 'uabb' ),
 									'url'     => __( 'URL', 'uabb' ),
-								),
-								'toggle'  => array(
-									'library' => array(
-										'fields' => array( 'photo' ),
-									),
-									'url'     => array(
-										'fields' => array( 'photo_url' ),
-									),
-								),
-							),
-							'photo'        => array(
+								],
+								'toggle'  => [
+									'library' => [
+										'fields' => [ 'photo' ],
+									],
+									'url'     => [
+										'fields' => [ 'photo_url' ],
+									],
+								],
+							],
+							'photo'        => [
 								'type'        => 'photo',
 								'label'       => __( 'Photo', 'uabb' ),
 								'show_remove' => true,
-								'connections' => array( 'photo' ),
-							),
-							'photo_url'    => array(
+								'connections' => [ 'photo' ],
+							],
+							'photo_url'    => [
 								'type'        => 'text',
 								'label'       => __( 'Photo URL', 'uabb' ),
 								'placeholder' => 'http://www.example.com/my-photo.jpg',
-							),
-						),
-					),
-				),
-			),
-		),
-	)
+							],
+						],
+					],
+				],
+			],
+		],
+	]
 );

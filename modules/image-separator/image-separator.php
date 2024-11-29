@@ -11,7 +11,6 @@
  * @class UABBImageSeparatorModule
  */
 class UABBImageSeparatorModule extends FLBuilderModule {
-
 	/**
 	 * Variable for Image Separator module
 	 *
@@ -36,7 +35,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(
-			array(
+			[
 				'name'        => __( 'Image Separator', 'uabb' ),
 				'description' => __( 'Use Image as a separator ', 'uabb' ),
 				'category'    => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
@@ -44,7 +43,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 				'dir'         => BB_ULTIMATE_ADDON_DIR . 'modules/image-separator/',
 				'url'         => BB_ULTIMATE_ADDON_URL . 'modules/image-separator/',
 				'icon'        => 'format-image.svg',
-			)
+			]
 		);
 
 		$this->add_js( 'jquery-waypoints' );
@@ -52,7 +51,6 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 		// Register and enqueue your own.
 		$this->add_css( 'uabb-animate', BB_ULTIMATE_ADDON_URL . 'assets/css/uabb-animate.css' );
 	}
-
 
 	/**
 	 * Function to update the Image src
@@ -87,7 +85,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 *
 	 * @return void
 	 */
-	public function delete() {
+	public function delete(): void {
 		$cropped_path = $this->_get_cropped_path();
 
 		if ( file_exists( $cropped_path['path'] ) ) {
@@ -106,7 +104,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 		$this->delete();
 
 		// Do a crop.
-		if ( ! empty( $this->settings->image_style ) && 'simple' !== $this->settings->image_style && 'custom' !== $this->settings->image_style ) {
+		if ( ! empty( $this->settings->image_style ) && $this->settings->image_style !== 'simple' && $this->settings->image_style !== 'custom' ) {
 
 			$editor = $this->_get_editor();
 
@@ -124,10 +122,10 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 			$ratio_2 = 1;
 
 			// Get the crop ratios.
-			if ( 'circle' === $this->settings->image_style ) {
+			if ( $this->settings->image_style === 'circle' ) {
 				$ratio_1 = 1;
 				$ratio_2 = 1;
-			} elseif ( 'square' === $this->settings->image_style ) {
+			} elseif ( $this->settings->image_style === 'square' ) {
 				$ratio_1 = 1;
 				$ratio_2 = 1;
 			}
@@ -188,7 +186,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * @return string
 	 */
 	public function get_classes() {
-		$classes = array( 'uabb-photo-img' );
+		$classes = [ 'uabb-photo-img' ];
 
 		if ( ! empty( $this->settings->photo ) ) {
 
@@ -247,7 +245,6 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 		return $src;
 	}
 
-
 	/**
 	 * Function to get alternate val for the Image
 	 *
@@ -259,14 +256,46 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 
 		if ( ! empty( $photo->alt ) ) {
 			return htmlspecialchars( $photo->alt, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
-		} elseif ( ! empty( $photo->description ) ) {
+		}
+		if ( ! empty( $photo->description ) ) {
 			return htmlspecialchars( $photo->description, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
-		} elseif ( ! empty( $photo->caption ) ) {
+		}
+		if ( ! empty( $photo->caption ) ) {
 			return htmlspecialchars( $photo->caption, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
-		} elseif ( ! empty( $photo->title ) ) {
+		}
+		if ( ! empty( $photo->title ) ) {
 			return htmlspecialchars( $photo->title, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
 		}
 		return null;
+	}
+	/**
+	 * Ensure backwards compatibility with old settings.
+	 *
+	 * @since 1.14.0
+	 * @param object $settings A module settings object.
+	 * @param object $helper A settings compatibility helper.
+	 * @return object
+	 */
+	public function filter_settings( $settings, $helper ) {
+
+		$version_bb_check        = UABB_Lite_Compatibility::check_bb_version();
+		$page_migrated           = UABB_Lite_Compatibility::check_old_page_migration();
+		$stable_version_new_page = UABB_Lite_Compatibility::check_stable_version_new_page();
+
+		if ( $version_bb_check && ( $page_migrated === 'yes' || $stable_version_new_page === 'yes' ) ) {
+
+			// Handle opacity fields.
+			$helper->handle_opacity_inputs( $settings, 'img_bg_color_opc', 'img_bg_color' );
+			$helper->handle_opacity_inputs( $settings, 'img_bg_hover_color_opc', 'img_bg_hover_color' );
+
+		} elseif ( $version_bb_check && $page_migrated !== 'yes' ) {
+
+			// Handle opacity fields.
+			$helper->handle_opacity_inputs( $settings, 'img_bg_color_opc', 'img_bg_color' );
+			$helper->handle_opacity_inputs( $settings, 'img_bg_hover_color_opc', 'img_bg_hover_color' );
+		}
+
+		return $settings;
 	}
 
 	/**
@@ -274,7 +303,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 *
 	 * @method _has_source
 	 * @protected
-	 * @return boolean
+	 * @return bool
 	 */
 	protected function _has_source() {
 		if ( ! empty( $this->settings->photo_src ) ) {
@@ -291,7 +320,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 	 * @protected
 	 */
 	protected function _get_editor() {
-		if ( $this->_has_source() && null === $this->_editor ) {
+		if ( $this->_has_source() && $this->_editor === null ) {
 
 			$url_path  = $this->_get_uncropped_url();
 			$file_path = str_ireplace( home_url(), ABSPATH, $url_path );
@@ -330,16 +359,16 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 			$pathinfo = pathinfo( $url );
 			$dir      = $pathinfo['dirname'];
 			$ext      = $pathinfo['extension'];
-			$name     = wp_basename( $url, ".$ext" );
+			$name     = wp_basename( $url, ".{$ext}" );
 			$new_ext  = strtolower( $ext );
 			$filename = "{$name}-{$crop}.{$new_ext}";
 		}
 
-		return array(
+		return [
 			'filename' => $filename,
 			'path'     => $cache_dir['path'] . $filename,
 			'url'      => $cache_dir['url'] . $filename,
-		);
+		];
 	}
 
 	/**
@@ -370,35 +399,6 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 		$info = $this->_get_cropped_path();
 
 		return FL_BUILDER_DEMO_CACHE_URL . $info['filename'];
-	}
-	/**
-	 * Ensure backwards compatibility with old settings.
-	 *
-	 * @since 1.14.0
-	 * @param object $settings A module settings object.
-	 * @param object $helper A settings compatibility helper.
-	 * @return object
-	 */
-	public function filter_settings( $settings, $helper ) {
-
-		$version_bb_check        = UABB_Lite_Compatibility::check_bb_version();
-		$page_migrated           = UABB_Lite_Compatibility::check_old_page_migration();
-		$stable_version_new_page = UABB_Lite_Compatibility::check_stable_version_new_page();
-
-		if ( $version_bb_check && ( 'yes' === $page_migrated || 'yes' === $stable_version_new_page ) ) {
-
-			// Handle opacity fields.
-			$helper->handle_opacity_inputs( $settings, 'img_bg_color_opc', 'img_bg_color' );
-			$helper->handle_opacity_inputs( $settings, 'img_bg_hover_color_opc', 'img_bg_hover_color' );
-
-		} elseif ( $version_bb_check && 'yes' !== $page_migrated ) {
-
-			// Handle opacity fields.
-			$helper->handle_opacity_inputs( $settings, 'img_bg_color_opc', 'img_bg_color' );
-			$helper->handle_opacity_inputs( $settings, 'img_bg_hover_color_opc', 'img_bg_hover_color' );
-		}
-
-		return $settings;
 	}
 }
 

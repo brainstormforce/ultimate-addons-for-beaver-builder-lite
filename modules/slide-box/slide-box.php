@@ -18,7 +18,7 @@ class SlideBoxModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(
-			array(
+			[
 				'name'          => __( 'Slide Box', 'uabb' ),
 				'description'   => __( 'Slide Box', 'uabb' ),
 				'category'      => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
@@ -28,7 +28,7 @@ class SlideBoxModule extends FLBuilderModule {
 				'editor_export' => true, // Defaults to true and can be omitted.
 				'enabled'       => true, // Defaults to true and can be omitted.
 				'icon'          => 'slides.svg',
-			)
+			]
 		);
 		$this->add_css( 'font-awesome' );
 	}
@@ -46,7 +46,7 @@ class SlideBoxModule extends FLBuilderModule {
 		$page_migrated           = UABB_Lite_Compatibility::check_old_page_migration();
 		$stable_version_new_page = UABB_Lite_Compatibility::check_stable_version_new_page();
 
-		if ( $version_bb_check && ( 'yes' === $page_migrated || 'yes' === $stable_version_new_page ) ) {
+		if ( $version_bb_check && ( $page_migrated === 'yes' || $stable_version_new_page === 'yes' ) ) {
 
 			// Opacity.
 			$helper->handle_opacity_inputs( $settings, 'overlay_color_opc', 'overlay_color' );
@@ -64,9 +64,9 @@ class SlideBoxModule extends FLBuilderModule {
 			// Front Title Typography.
 			if ( ! isset( $settings->front_title_typo ) || ! is_array( $settings->front_title_typo ) ) {
 
-				$settings->front_title_typo            = array();
-				$settings->front_title_typo_medium     = array();
-				$settings->front_title_typo_responsive = array();
+				$settings->front_title_typo            = [];
+				$settings->front_title_typo_medium     = [];
+				$settings->front_title_typo_responsive = [];
 			}
 			if ( isset( $settings->front_title_font_family ) ) {
 
@@ -77,7 +77,7 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->front_title_font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->front_title_font_family['weight'] ) {
+					if ( $settings->front_title_font_family['weight'] === 'regular' ) {
 						$settings->front_title_typo['font_weight'] = 'normal';
 					} else {
 						$settings->front_title_typo['font_weight'] = $settings->front_title_font_family['weight'];
@@ -86,55 +86,55 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 			}
 			if ( isset( $settings->front_title_font_size_unit ) ) {
-				$settings->front_title_typo['font_size'] = array(
+				$settings->front_title_typo['font_size'] = [
 					'length' => $settings->front_title_font_size_unit,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->front_title_font_size_unit );
 			}
 			if ( isset( $settings->front_title_font_size_unit_medium ) ) {
-				$settings->front_title_typo_medium['font_size'] = array(
+				$settings->front_title_typo_medium['font_size'] = [
 					'length' => $settings->front_title_font_size_unit_medium,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->front_title_font_size_unit_medium );
 			}
 			if ( isset( $settings->front_title_font_size_unit_responsive ) ) {
-				$settings->front_title_typo_responsive['font_size'] = array(
+				$settings->front_title_typo_responsive['font_size'] = [
 					'length' => $settings->front_title_font_size_unit_responsive,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->front_title_font_size_unit_responsive );
 			}
 			if ( isset( $settings->front_title_line_height_unit ) ) {
 
-				$settings->front_title_typo['line_height'] = array(
+				$settings->front_title_typo['line_height'] = [
 					'length' => $settings->front_title_line_height_unit,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->front_title_line_height_unit );
 			}
 			if ( isset( $settings->front_title_line_height_unit_medium ) ) {
-				$settings->front_title_typo_medium['line_height'] = array(
+				$settings->front_title_typo_medium['line_height'] = [
 					'length' => $settings->front_title_line_height_unit_medium,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->front_title_line_height_unit_medium );
 			}
 			if ( isset( $settings->front_title_line_height_unit_responsive ) ) {
-				$settings->front_title_typo_responsive['line_height'] = array(
+				$settings->front_title_typo_responsive['line_height'] = [
 					'length' => $settings->front_title_line_height_unit_responsive,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->front_title_line_height_unit_responsive );
 			}
 
 			// Front Description Typography.
 			if ( ! isset( $settings->front_desc_typo ) || ! is_array( $settings->front_desc_typo ) ) {
 
-				$settings->front_desc_typo            = array();
-				$settings->front_desc_typo_medium     = array();
-				$settings->front_desc_typo_responsive = array();
+				$settings->front_desc_typo            = [];
+				$settings->front_desc_typo_medium     = [];
+				$settings->front_desc_typo_responsive = [];
 			}
 			if ( isset( $settings->front_desc_font_family ) ) {
 
@@ -145,7 +145,7 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->front_desc_font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->front_desc_font_family['weight'] ) {
+					if ( $settings->front_desc_font_family['weight'] === 'regular' ) {
 						$settings->front_desc_typo['font_weight'] = 'normal';
 					} else {
 						$settings->front_desc_typo['font_weight'] = $settings->front_desc_font_family['weight'];
@@ -154,55 +154,55 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 			}
 			if ( isset( $settings->front_desc_font_size_unit ) ) {
-				$settings->front_desc_typo['font_size'] = array(
+				$settings->front_desc_typo['font_size'] = [
 					'length' => $settings->front_desc_font_size_unit,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->front_desc_font_size_unit );
 			}
 			if ( isset( $settings->front_desc_font_size_unit_medium ) ) {
-				$settings->front_desc_typo_medium['font_size'] = array(
+				$settings->front_desc_typo_medium['font_size'] = [
 					'length' => $settings->front_desc_font_size_unit_medium,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->front_desc_font_size_unit_medium );
 			}
 			if ( isset( $settings->front_desc_font_size_unit_responsive ) ) {
-				$settings->front_desc_typo_responsive['font_size'] = array(
+				$settings->front_desc_typo_responsive['font_size'] = [
 					'length' => $settings->front_desc_font_size_unit_responsive,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->front_desc_font_size_unit_responsive );
 			}
 
 			if ( isset( $settings->front_desc_line_height_unit ) ) {
-				$settings->front_desc_typo['line_height'] = array(
+				$settings->front_desc_typo['line_height'] = [
 					'length' => $settings->front_desc_line_height_unit,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->front_desc_line_height_unit );
 			}
 			if ( isset( $settings->front_desc_line_height_unit_medium ) ) {
-				$settings->front_desc_typo_medium['line_height'] = array(
+				$settings->front_desc_typo_medium['line_height'] = [
 					'length' => $settings->front_desc_line_height_unit_medium,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->front_desc_line_height_unit_medium );
 			}
 			if ( isset( $settings->front_desc_line_height_unit_responsive ) ) {
-				$settings->front_desc_typo_responsive['line_height'] = array(
+				$settings->front_desc_typo_responsive['line_height'] = [
 					'length' => $settings->front_desc_line_height_unit_responsive,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->front_desc_line_height_unit_responsive );
 			}
 
 			// Back Title Typography.
 			if ( ! isset( $settings->back_title_typo ) || ! is_array( $settings->back_title_typo ) ) {
 
-				$settings->back_title_typo            = array();
-				$settings->back_title_typo_medium     = array();
-				$settings->back_title_typo_responsive = array();
+				$settings->back_title_typo            = [];
+				$settings->back_title_typo_medium     = [];
+				$settings->back_title_typo_responsive = [];
 			}
 			if ( isset( $settings->back_title_font_family ) ) {
 
@@ -213,7 +213,7 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->back_title_font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->back_title_font_family['weight'] ) {
+					if ( $settings->back_title_font_family['weight'] === 'regular' ) {
 						$settings->back_title_typo['font_weight'] = 'normal';
 					} else {
 						$settings->back_title_typo['font_weight'] = $settings->back_title_font_family['weight'];
@@ -222,54 +222,54 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 			}
 			if ( isset( $settings->back_title_font_size_unit ) ) {
-				$settings->back_title_typo['font_size'] = array(
+				$settings->back_title_typo['font_size'] = [
 					'length' => $settings->back_title_font_size_unit,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->back_title_font_size_unit );
 			}
 			if ( isset( $settings->back_title_font_size_unit_medium ) ) {
-				$settings->back_title_typo_medium['font_size'] = array(
+				$settings->back_title_typo_medium['font_size'] = [
 					'length' => $settings->back_title_font_size_unit_medium,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->back_title_font_size_unit_medium );
 			}
 			if ( isset( $settings->back_title_font_size_unit_responsive ) ) {
-				$settings->back_title_typo_responsive['font_size'] = array(
+				$settings->back_title_typo_responsive['font_size'] = [
 					'length' => $settings->back_title_font_size_unit_responsive,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->back_title_font_size_unit_responsive );
 			}
 			if ( isset( $settings->back_title_line_height_unit ) ) {
 
-				$settings->back_title_typo['line_height'] = array(
+				$settings->back_title_typo['line_height'] = [
 					'length' => $settings->back_title_line_height_unit,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->back_title_line_height_unit );
 			}
 			if ( isset( $settings->back_title_line_height_unit_medium ) ) {
-				$settings->back_title_typo_medium['line_height'] = array(
+				$settings->back_title_typo_medium['line_height'] = [
 					'length' => $settings->back_title_line_height_unit_medium,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->back_title_line_height_unit_medium );
 			}
 			if ( isset( $settings->back_title_line_height_unit_responsive ) ) {
-				$settings->back_title_typo_responsive['line_height'] = array(
+				$settings->back_title_typo_responsive['line_height'] = [
 					'length' => $settings->back_title_line_height_unit_responsive,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->back_title_line_height_unit_responsive );
 			}
 			// Back Description Typography.
 			if ( ! isset( $settings->back_desc_typo ) || ! is_array( $settings->back_desc_typo ) ) {
 
-				$settings->back_desc_typo            = array();
-				$settings->back_desc_typo_medium     = array();
-				$settings->back_desc_typo_responsive = array();
+				$settings->back_desc_typo            = [];
+				$settings->back_desc_typo_medium     = [];
+				$settings->back_desc_typo_responsive = [];
 			}
 			if ( isset( $settings->back_desc_font_family ) ) {
 
@@ -280,7 +280,7 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->back_desc_font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->back_desc_font_family['weight'] ) {
+					if ( $settings->back_desc_font_family['weight'] === 'regular' ) {
 						$settings->back_desc_typo['font_weight'] = 'normal';
 					} else {
 						$settings->back_desc_typo['font_weight'] = $settings->back_desc_font_family['weight'];
@@ -289,54 +289,54 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 			}
 			if ( isset( $settings->back_desc_font_size_unit ) ) {
-				$settings->back_desc_typo['font_size'] = array(
+				$settings->back_desc_typo['font_size'] = [
 					'length' => $settings->back_desc_font_size_unit,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->back_desc_font_size_unit );
 			}
 			if ( isset( $settings->back_desc_font_size_unit_medium ) ) {
-				$settings->back_desc_typo_medium['font_size'] = array(
+				$settings->back_desc_typo_medium['font_size'] = [
 					'length' => $settings->back_desc_font_size_unit_medium,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->back_desc_font_size_unit_medium );
 			}
 			if ( isset( $settings->back_desc_font_size_unit_responsive ) ) {
-				$settings->back_desc_typo_responsive['font_size'] = array(
+				$settings->back_desc_typo_responsive['font_size'] = [
 					'length' => $settings->back_desc_font_size_unit_responsive,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->back_desc_font_size_unit_responsive );
 			}
 			if ( isset( $settings->back_desc_line_height_unit ) ) {
 
-				$settings->back_desc_typo['line_height'] = array(
+				$settings->back_desc_typo['line_height'] = [
 					'length' => $settings->back_desc_line_height_unit,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->back_desc_line_height_unit );
 			}
 			if ( isset( $settings->back_desc_line_height_unit_medium ) ) {
-				$settings->back_desc_typo_medium['line_height'] = array(
+				$settings->back_desc_typo_medium['line_height'] = [
 					'length' => $settings->back_desc_line_height_unit_medium,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->back_desc_line_height_unit_medium );
 			}
 			if ( isset( $settings->back_desc_line_height_unit_responsive ) ) {
-				$settings->back_desc_typo_responsive['line_height'] = array(
+				$settings->back_desc_typo_responsive['line_height'] = [
 					'length' => $settings->back_desc_line_height_unit_responsive,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->back_desc_line_height_unit_responsive );
 			}
 			// Link Typography.
 			if ( ! isset( $settings->link_typo ) || ! is_array( $settings->link_typo ) ) {
 
-				$settings->link_typo            = array();
-				$settings->link_typo_medium     = array();
-				$settings->link_typo_responsive = array();
+				$settings->link_typo            = [];
+				$settings->link_typo_medium     = [];
+				$settings->link_typo_responsive = [];
 			}
 			if ( isset( $settings->link_font_family ) ) {
 
@@ -347,7 +347,7 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->link_font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->link_font_family['weight'] ) {
+					if ( $settings->link_font_family['weight'] === 'regular' ) {
 						$settings->link_typo['font_weight'] = 'normal';
 					} else {
 						$settings->link_typo['font_weight'] = $settings->link_font_family['weight'];
@@ -356,46 +356,46 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 			}
 			if ( isset( $settings->link_font_size_unit ) ) {
-				$settings->link_typo['font_size'] = array(
+				$settings->link_typo['font_size'] = [
 					'length' => $settings->link_font_size_unit,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->link_font_size_unit );
 			}
 			if ( isset( $settings->link_font_size_unit_medium ) ) {
-				$settings->link_typo_medium['font_size'] = array(
+				$settings->link_typo_medium['font_size'] = [
 					'length' => $settings->link_font_size_unit_medium,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->link_font_size_unit_medium );
 			}
 			if ( isset( $settings->link_font_size_unit_responsive ) ) {
-				$settings->link_typo_responsive['font_size'] = array(
+				$settings->link_typo_responsive['font_size'] = [
 					'length' => $settings->link_font_size_unit_responsive,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->link_font_size_unit_responsive );
 			}
 			if ( isset( $settings->link_line_height_unit ) ) {
 
-				$settings->link_typo['line_height'] = array(
+				$settings->link_typo['line_height'] = [
 					'length' => $settings->link_line_height_unit,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->link_line_height_unit );
 			}
 			if ( isset( $settings->link_line_height_unit_medium ) ) {
-				$settings->link_typo_medium['line_height'] = array(
+				$settings->link_typo_medium['line_height'] = [
 					'length' => $settings->link_line_height_unit_medium,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->link_line_height_unit_medium );
 			}
 			if ( isset( $settings->link_line_height_unit_responsive ) ) {
-				$settings->link_typo_responsive['line_height'] = array(
+				$settings->link_typo_responsive['line_height'] = [
 					'length' => $settings->link_line_height_unit_responsive,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->link_line_height_unit_responsive );
 			}
 			if ( ! isset( $settings->button->button_typo ) || ! is_object( $settings->button->button_typo ) ) {
@@ -411,7 +411,7 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->button->font_family->weight ) ) {
 
-					if ( 'regular' === $settings->button->font_family->weight ) {
+					if ( $settings->button->font_family->weight === 'regular' ) {
 						$settings->button->button_typo->font_weight = 'normal';
 					} else {
 						$settings->button->button_typo->font_weight = $settings->button->font_family->weight;
@@ -420,59 +420,59 @@ class SlideBoxModule extends FLBuilderModule {
 				unset( $settings->button->font_family );
 			}
 			if ( isset( $settings->button->font_size_unit ) ) {
-				$settings->button->button_typo->font_size = (object) array(
+				$settings->button->button_typo->font_size = (object) [
 					'length' => $settings->button->font_size_unit,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->button->font_size_unit );
 			}
 			if ( isset( $settings->button->font_size_unit_medium ) ) {
-				$settings->button->button_typo_medium->font_size = (object) array(
+				$settings->button->button_typo_medium->font_size = (object) [
 					'length' => $settings->button->font_size_unit_medium,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->button->font_size_unit_medium );
 			}
 			if ( isset( $settings->button->font_size_unit_responsive ) ) {
-				$settings->button->button_typo_responsive->font_size = (object) array(
+				$settings->button->button_typo_responsive->font_size = (object) [
 					'length' => $settings->button->font_size_unit_responsive,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->button->font_size_unit_responsive );
 			}
 			if ( isset( $settings->button->line_height_unit ) ) {
 
-				$settings->button->button_typo->line_height = (object) array(
+				$settings->button->button_typo->line_height = (object) [
 					'length' => $settings->button->line_height_unit,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->button->line_height_unit );
 			}
 			if ( isset( $settings->button->line_height_unit_medium ) ) {
-				$settings->button->button_typo_medium->line_height = (object) array(
+				$settings->button->button_typo_medium->line_height = (object) [
 					'length' => $settings->button->line_height_unit_medium,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->button->line_height_unit_medium );
 			}
 			if ( isset( $settings->button->line_height_unit_responsive ) ) {
-				$settings->button->button_typo_responsive->line_height = (object) array(
+				$settings->button->button_typo_responsive->line_height = (object) [
 					'length' => $settings->button->line_height_unit_responsive,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->button->line_height_unit_responsive );
 			}
 			if ( isset( $settings->button->link_nofollow ) ) {
-				if ( '1' === $settings->button->link_nofollow || 'yes' === $settings->button->link_nofollow ) {
+				if ( $settings->button->link_nofollow === '1' || $settings->button->link_nofollow === 'yes' ) {
 					$settings->button->link_nofollow = 'yes';
 				}
 			}
 			if ( isset( $settings->link_nofollow ) ) {
-				if ( '1' === $settings->link_nofollow || 'yes' === $settings->link_nofollow ) {
+				if ( $settings->link_nofollow === '1' || $settings->link_nofollow === 'yes' ) {
 					$settings->link_nofollow = 'yes';
 				}
 			}
-		} elseif ( $version_bb_check && 'yes' !== $page_migrated ) {
+		} elseif ( $version_bb_check && $page_migrated !== 'yes' ) {
 
 			// Opacity.
 			$helper->handle_opacity_inputs( $settings, 'overlay_color_opc', 'overlay_color' );
@@ -494,9 +494,9 @@ class SlideBoxModule extends FLBuilderModule {
 			// Front title Typography.
 			if ( ! isset( $settings->front_title_typo ) || ! is_array( $settings->front_title_typo ) ) {
 
-				$settings->front_title_typo            = array();
-				$settings->front_title_typo_medium     = array();
-				$settings->front_title_typo_responsive = array();
+				$settings->front_title_typo            = [];
+				$settings->front_title_typo_medium     = [];
+				$settings->front_title_typo_responsive = [];
 			}
 			if ( isset( $settings->front_title_font_family ) ) {
 
@@ -507,7 +507,7 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->front_title_font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->front_title_font_family['weight'] ) {
+					if ( $settings->front_title_font_family['weight'] === 'regular' ) {
 						$settings->front_title_typo['font_weight'] = 'normal';
 					} else {
 						$settings->front_title_typo['font_weight'] = $settings->front_title_font_family['weight'];
@@ -516,55 +516,55 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 			}
 			if ( isset( $settings->front_title_font_size['desktop'] ) ) {
-				$settings->front_title_typo['font_size'] = array(
+				$settings->front_title_typo['font_size'] = [
 					'length' => $settings->front_title_font_size['desktop'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->front_title_font_size['small'] ) ) {
-				$settings->front_title_typo_responsive['font_size'] = array(
+				$settings->front_title_typo_responsive['font_size'] = [
 					'length' => $settings->front_title_font_size['small'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->front_title_font_size['medium'] ) ) {
-				$settings->front_title_typo_medium['font_size'] = array(
+				$settings->front_title_typo_medium['font_size'] = [
 					'length' => $settings->front_title_font_size['medium'],
 					'unit'   => 'px',
-				);
+				];
 			}
 
-			if ( isset( $settings->front_title_line_height['small'] ) && isset( $settings->front_title_font_size['small'] ) && 0 !== $settings->front_title_font_size['small'] ) {
+			if ( isset( $settings->front_title_line_height['small'] ) && isset( $settings->front_title_font_size['small'] ) && $settings->front_title_font_size['small'] !== 0 ) {
 				if ( is_numeric( $settings->front_title_line_height['small'] ) && is_numeric( $settings->front_title_font_size['small'] ) ) {
-					$settings->front_title_typo_responsive['line_height'] = array(
+					$settings->front_title_typo_responsive['line_height'] = [
 						'length' => round( $settings->front_title_line_height['small'] / $settings->front_title_font_size['small'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->front_title_line_height['medium'] ) && isset( $settings->front_title_font_size['medium'] ) && 0 !== $settings->front_title_font_size['medium'] ) {
+			if ( isset( $settings->front_title_line_height['medium'] ) && isset( $settings->front_title_font_size['medium'] ) && $settings->front_title_font_size['medium'] !== 0 ) {
 				if ( is_numeric( $settings->front_title_line_height['medium'] ) && is_numeric( $settings->front_title_font_size['medium'] ) ) {
-					$settings->front_title_typo_medium['line_height'] = array(
+					$settings->front_title_typo_medium['line_height'] = [
 						'length' => round( $settings->front_title_line_height['medium'] / $settings->front_title_font_size['medium'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->front_title_line_height['desktop'] ) && isset( $settings->front_title_font_size['desktop'] ) && 0 !== $settings->front_title_font_size['desktop'] ) {
+			if ( isset( $settings->front_title_line_height['desktop'] ) && isset( $settings->front_title_font_size['desktop'] ) && $settings->front_title_font_size['desktop'] !== 0 ) {
 				if ( is_numeric( $settings->front_title_line_height['desktop'] ) && is_numeric( $settings->front_title_font_size['desktop'] ) ) {
-					$settings->front_title_typo['line_height'] = array(
+					$settings->front_title_typo['line_height'] = [
 						'length' => round( $settings->front_title_line_height['desktop'] / $settings->front_title_font_size['desktop'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
 
 			// Front Description Typography.
 			if ( ! isset( $settings->front_desc_typo ) || ! is_array( $settings->front_desc_typo ) ) {
 
-				$settings->front_desc_typo            = array();
-				$settings->front_desc_typo_medium     = array();
-				$settings->front_desc_typo_responsive = array();
+				$settings->front_desc_typo            = [];
+				$settings->front_desc_typo_medium     = [];
+				$settings->front_desc_typo_responsive = [];
 			}
 			if ( isset( $settings->front_desc_font_family ) ) {
 
@@ -575,7 +575,7 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->front_desc_font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->front_desc_font_family['weight'] ) {
+					if ( $settings->front_desc_font_family['weight'] === 'regular' ) {
 						$settings->front_desc_typo['font_weight'] = 'normal';
 					} else {
 						$settings->front_desc_typo['font_weight'] = $settings->front_desc_font_family['weight'];
@@ -585,55 +585,55 @@ class SlideBoxModule extends FLBuilderModule {
 			}
 			if ( isset( $settings->front_desc_font_size['small'] ) ) {
 
-				$settings->front_desc_typo_responsive['font_size'] = array(
+				$settings->front_desc_typo_responsive['font_size'] = [
 					'length' => $settings->front_desc_font_size['small'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->front_desc_font_size['medium'] ) ) {
-				$settings->front_desc_typo_medium['font_size'] = array(
+				$settings->front_desc_typo_medium['font_size'] = [
 					'length' => $settings->front_desc_font_size['medium'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->front_desc_font_size['desktop'] ) ) {
-				$settings->front_desc_typo['font_size'] = array(
+				$settings->front_desc_typo['font_size'] = [
 					'length' => $settings->front_desc_font_size['desktop'],
 					'unit'   => 'px',
-				);
+				];
 			}
 
-			if ( isset( $settings->front_desc_line_height['small'] ) && isset( $settings->front_desc_font_size['small'] ) && 0 !== $settings->front_desc_font_size['small'] ) {
+			if ( isset( $settings->front_desc_line_height['small'] ) && isset( $settings->front_desc_font_size['small'] ) && $settings->front_desc_font_size['small'] !== 0 ) {
 				if ( is_numeric( $settings->front_desc_line_height['small'] ) && is_numeric( $settings->front_desc_font_size['small'] ) ) {
-					$settings->front_desc_typo_responsive['line_height'] = array(
+					$settings->front_desc_typo_responsive['line_height'] = [
 						'length' => round( $settings->front_desc_line_height['small'] / $settings->front_desc_font_size['small'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->front_desc_line_height['medium'] ) && isset( $settings->front_desc_font_size['medium'] ) && 0 !== $settings->front_desc_font_size['medium'] ) {
+			if ( isset( $settings->front_desc_line_height['medium'] ) && isset( $settings->front_desc_font_size['medium'] ) && $settings->front_desc_font_size['medium'] !== 0 ) {
 				if ( is_numeric( $settings->front_desc_line_height['medium'] ) && is_numeric( $settings->front_desc_font_size['medium'] ) ) {
-					$settings->front_desc_typo_medium['line_height'] = array(
+					$settings->front_desc_typo_medium['line_height'] = [
 						'length' => round( $settings->front_desc_line_height['medium'] / $settings->front_desc_font_size['medium'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->front_desc_line_height['desktop'] ) && isset( $settings->front_desc_font_size['desktop'] ) && 0 !== $settings->front_desc_font_size['desktop'] ) {
+			if ( isset( $settings->front_desc_line_height['desktop'] ) && isset( $settings->front_desc_font_size['desktop'] ) && $settings->front_desc_font_size['desktop'] !== 0 ) {
 				if ( is_numeric( $settings->front_desc_line_height['desktop'] ) && is_numeric( $settings->front_desc_font_size['desktop'] ) ) {
-					$settings->front_desc_typo['line_height'] = array(
+					$settings->front_desc_typo['line_height'] = [
 						'length' => round( $settings->front_desc_line_height['desktop'] / $settings->front_desc_font_size['desktop'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
 
 			// Back Title Typography.
 			if ( ! isset( $settings->back_title_typo ) || ! is_array( $settings->back_title_typo ) ) {
 
-				$settings->back_title_typo            = array();
-				$settings->back_title_typo_medium     = array();
-				$settings->back_title_typo_responsive = array();
+				$settings->back_title_typo            = [];
+				$settings->back_title_typo_medium     = [];
+				$settings->back_title_typo_responsive = [];
 			}
 			if ( isset( $settings->back_title_font_family ) ) {
 
@@ -644,7 +644,7 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->back_title_font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->back_title_font_family['weight'] ) {
+					if ( $settings->back_title_font_family['weight'] === 'regular' ) {
 						$settings->back_title_typo['font_weight'] = 'normal';
 					} else {
 						$settings->back_title_typo['font_weight'] = $settings->back_title_font_family['weight'];
@@ -655,56 +655,56 @@ class SlideBoxModule extends FLBuilderModule {
 
 			if ( isset( $settings->back_title_font_size['small'] ) ) {
 
-				$settings->back_title_typo_responsive['font_size'] = array(
+				$settings->back_title_typo_responsive['font_size'] = [
 					'length' => $settings->back_title_font_size['small'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->back_title_font_size['medium'] ) ) {
 
-				$settings->back_title_typo_medium['font_size'] = array(
+				$settings->back_title_typo_medium['font_size'] = [
 					'length' => $settings->back_title_font_size['medium'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->back_title_font_size['desktop'] ) ) {
-				$settings->back_title_typo['font_size'] = array(
+				$settings->back_title_typo['font_size'] = [
 					'length' => $settings->back_title_font_size['desktop'],
 					'unit'   => 'px',
-				);
+				];
 			}
 
-			if ( isset( $settings->back_title_line_height['small'] ) && isset( $settings->back_title_font_size['small'] ) && 0 !== $settings->back_title_font_size['small'] ) {
+			if ( isset( $settings->back_title_line_height['small'] ) && isset( $settings->back_title_font_size['small'] ) && $settings->back_title_font_size['small'] !== 0 ) {
 				if ( is_numeric( $settings->back_title_line_height['small'] ) && is_numeric( $settings->back_title_font_size['small'] ) ) {
-					$settings->back_title_typo_responsive['line_height'] = array(
+					$settings->back_title_typo_responsive['line_height'] = [
 						'length' => round( $settings->back_title_line_height['small'] / $settings->back_title_font_size['small'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->back_title_line_height['medium'] ) && isset( $settings->back_title_font_size['medium'] ) && 0 !== $settings->back_title_font_size['medium'] ) {
+			if ( isset( $settings->back_title_line_height['medium'] ) && isset( $settings->back_title_font_size['medium'] ) && $settings->back_title_font_size['medium'] !== 0 ) {
 				if ( is_numeric( $settings->back_title_line_height['medium'] ) && is_numeric( $settings->back_title_font_size['medium'] ) ) {
-					$settings->back_title_typo_medium['line_height'] = array(
+					$settings->back_title_typo_medium['line_height'] = [
 						'length' => round( $settings->back_title_line_height['medium'] / $settings->back_title_font_size['medium'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->back_title_line_height['desktop'] ) && isset( $settings->back_title_font_size['desktop'] ) && 0 !== $settings->back_title_font_size['desktop'] ) {
+			if ( isset( $settings->back_title_line_height['desktop'] ) && isset( $settings->back_title_font_size['desktop'] ) && $settings->back_title_font_size['desktop'] !== 0 ) {
 				if ( is_numeric( $settings->back_title_line_height['desktop'] ) && is_numeric( $settings->back_title_font_size['desktop'] ) ) {
-					$settings->back_title_typo['line_height'] = array(
+					$settings->back_title_typo['line_height'] = [
 						'length' => round( $settings->back_title_line_height['desktop'] / $settings->back_title_font_size['desktop'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
 
 			// Back Description Typography.
 			if ( ! isset( $settings->back_desc_typo ) || ! is_array( $settings->back_desc_typo ) ) {
 
-				$settings->back_desc_typo            = array();
-				$settings->back_desc_typo_medium     = array();
-				$settings->back_desc_typo_responsive = array();
+				$settings->back_desc_typo            = [];
+				$settings->back_desc_typo_medium     = [];
+				$settings->back_desc_typo_responsive = [];
 			}
 			if ( isset( $settings->back_desc_font_family ) ) {
 
@@ -715,7 +715,7 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->back_desc_font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->back_desc_font_family['weight'] ) {
+					if ( $settings->back_desc_font_family['weight'] === 'regular' ) {
 						$settings->back_desc_typo['font_weight'] = 'normal';
 					} else {
 						$settings->back_desc_typo['font_weight'] = $settings->back_desc_font_family['weight'];
@@ -725,53 +725,53 @@ class SlideBoxModule extends FLBuilderModule {
 			}
 			if ( isset( $settings->back_desc_font_size['desktop'] ) ) {
 
-				$settings->back_desc_typo['font_size'] = array(
+				$settings->back_desc_typo['font_size'] = [
 					'length' => $settings->back_desc_font_size['desktop'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->back_desc_font_size['medium'] ) ) {
-				$settings->back_desc_typo_medium['font_size'] = array(
+				$settings->back_desc_typo_medium['font_size'] = [
 					'length' => $settings->back_desc_font_size['medium'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->back_desc_font_size['small'] ) ) {
-				$settings->back_desc_typo_responsive['font_size'] = array(
+				$settings->back_desc_typo_responsive['font_size'] = [
 					'length' => $settings->back_desc_font_size['small'],
 					'unit'   => 'px',
-				);
+				];
 			}
-			if ( isset( $settings->back_desc_line_height['desktop'] ) && isset( $settings->back_desc_font_size['desktop'] ) && 0 !== $settings->back_desc_font_size['desktop'] ) {
+			if ( isset( $settings->back_desc_line_height['desktop'] ) && isset( $settings->back_desc_font_size['desktop'] ) && $settings->back_desc_font_size['desktop'] !== 0 ) {
 				if ( is_numeric( $settings->back_desc_line_height['desktop'] ) && is_numeric( $settings->back_desc_font_size['desktop'] ) ) {
-					$settings->back_desc_typo['line_height'] = array(
+					$settings->back_desc_typo['line_height'] = [
 						'length' => round( $settings->back_desc_line_height['desktop'] / $settings->back_desc_font_size['desktop'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->back_desc_line_height['medium'] ) && isset( $settings->back_desc_font_size['medium'] ) && 0 !== $settings->back_desc_font_size['medium'] ) {
+			if ( isset( $settings->back_desc_line_height['medium'] ) && isset( $settings->back_desc_font_size['medium'] ) && $settings->back_desc_font_size['medium'] !== 0 ) {
 				if ( is_numeric( $settings->back_desc_line_height['medium'] ) && is_numeric( $settings->back_desc_font_size['medium'] ) ) {
-					$settings->back_desc_typo_medium['line_height'] = array(
+					$settings->back_desc_typo_medium['line_height'] = [
 						'length' => round( $settings->back_desc_line_height['medium'] / $settings->back_desc_font_size['medium'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->back_desc_line_height['small'] ) && isset( $settings->back_desc_font_size['small'] ) && 0 !== $settings->back_desc_font_size['small'] ) {
+			if ( isset( $settings->back_desc_line_height['small'] ) && isset( $settings->back_desc_font_size['small'] ) && $settings->back_desc_font_size['small'] !== 0 ) {
 				if ( is_numeric( $settings->back_desc_line_height['small'] ) && is_numeric( $settings->back_desc_font_size['small'] ) ) {
-					$settings->back_desc_typo_responsive['line_height'] = array(
+					$settings->back_desc_typo_responsive['line_height'] = [
 						'length' => round( $settings->back_desc_line_height['small'] / $settings->back_desc_font_size['small'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
 			// Link Typography.
 			if ( ! isset( $settings->link_typo ) || ! is_array( $settings->link_typo ) ) {
 
-				$settings->link_typo            = array();
-				$settings->link_typo_medium     = array();
-				$settings->link_typo_responsive = array();
+				$settings->link_typo            = [];
+				$settings->link_typo_medium     = [];
+				$settings->link_typo_responsive = [];
 			}
 			if ( isset( $settings->link_font_family ) ) {
 
@@ -782,7 +782,7 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->link_font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->link_font_family['weight'] ) {
+					if ( $settings->link_font_family['weight'] === 'regular' ) {
 						$settings->link_typo['font_weight'] = 'normal';
 					} else {
 						$settings->link_typo['font_weight'] = $settings->link_font_family['weight'];
@@ -792,46 +792,46 @@ class SlideBoxModule extends FLBuilderModule {
 			}
 
 			if ( isset( $settings->link_font_size['small'] ) ) {
-				$settings->link_typo_responsive['font_size'] = array(
+				$settings->link_typo_responsive['font_size'] = [
 					'length' => $settings->link_font_size['small'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->link_font_size['medium'] ) ) {
-				$settings->link_typo_medium['font_size'] = array(
+				$settings->link_typo_medium['font_size'] = [
 					'length' => $settings->link_font_size['medium'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->link_font_size['desktop'] ) ) {
-				$settings->link_typo['font_size'] = array(
+				$settings->link_typo['font_size'] = [
 					'length' => $settings->link_font_size['desktop'],
 					'unit'   => 'px',
-				);
+				];
 			}
 
-			if ( isset( $settings->link_line_height['small'] ) && isset( $settings->link_font_size['small'] ) && 0 !== $settings->link_font_size['small'] ) {
+			if ( isset( $settings->link_line_height['small'] ) && isset( $settings->link_font_size['small'] ) && $settings->link_font_size['small'] !== 0 ) {
 				if ( is_numeric( $settings->link_line_height['small'] ) && is_numeric( $settings->link_font_size['small'] ) ) {
-					$settings->link_typo_responsive['line_height'] = array(
+					$settings->link_typo_responsive['line_height'] = [
 						'length' => round( $settings->link_line_height['small'] / $settings->link_font_size['small'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->link_line_height['medium'] ) && isset( $settings->link_font_size['medium'] ) && 0 !== $settings->link_font_size['medium'] ) {
+			if ( isset( $settings->link_line_height['medium'] ) && isset( $settings->link_font_size['medium'] ) && $settings->link_font_size['medium'] !== 0 ) {
 				if ( is_numeric( $settings->link_line_height['medium'] ) && is_numeric( $settings->link_font_size['medium'] ) ) {
-					$settings->link_typo_medium['line_height'] = array(
+					$settings->link_typo_medium['line_height'] = [
 						'length' => round( $settings->link_line_height['medium'] / $settings->link_font_size['medium'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->link_line_height['desktop'] ) && isset( $settings->link_font_size['desktop'] ) && 0 !== $settings->link_font_size['desktop'] ) {
+			if ( isset( $settings->link_line_height['desktop'] ) && isset( $settings->link_font_size['desktop'] ) && $settings->link_font_size['desktop'] !== 0 ) {
 				if ( is_numeric( $settings->link_line_height['desktop'] ) && is_numeric( $settings->link_font_size['desktop'] ) ) {
-					$settings->link_typo['line_height'] = array(
+					$settings->link_typo['line_height'] = [
 						'length' => round( $settings->link_line_height['desktop'] / $settings->link_font_size['desktop'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
 			if ( ! isset( $settings->button->button_typo ) || ! is_object( $settings->button->button_typo ) ) {
@@ -846,7 +846,7 @@ class SlideBoxModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->button->font_family->weight ) ) {
 
-					if ( 'regular' === $settings->button->font_family->weight ) {
+					if ( $settings->button->font_family->weight === 'regular' ) {
 						$settings->button->button_typo->font_weight = 'normal';
 					} else {
 						$settings->button->button_typo->font_weight = $settings->button->font_family->weight;
@@ -855,49 +855,49 @@ class SlideBoxModule extends FLBuilderModule {
 				unset( $settings->button->font_family );
 			}
 			if ( isset( $settings->button->font_size->desktop ) ) {
-				$settings->button->button_typo->font_size = (object) array(
+				$settings->button->button_typo->font_size = (object) [
 					'length' => $settings->button->font_size->desktop,
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->button->font_size->medium ) ) {
-				$settings->button->button_typo_medium->font_size = (object) array(
+				$settings->button->button_typo_medium->font_size = (object) [
 					'length' => $settings->button->font_size->medium,
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->button->font_size->small ) ) {
-				$settings->button->button_typo_responsive->font_size = (object) array(
+				$settings->button->button_typo_responsive->font_size = (object) [
 					'length' => $settings->button->font_size->small,
 					'unit'   => 'px',
-				);
+				];
 			}
-			if ( isset( $settings->button->line_height->desktop ) && isset( $settings->button->font_size->desktop ) && 0 !== $settings->button->font_size->desktop ) {
+			if ( isset( $settings->button->line_height->desktop ) && isset( $settings->button->font_size->desktop ) && $settings->button->font_size->desktop !== 0 ) {
 				if ( is_numeric( $settings->button->line_height->desktop ) && is_numeric( $settings->button->font_size->desktop ) ) {
-					$settings->button->button_typo->line_height = (object) array(
+					$settings->button->button_typo->line_height = (object) [
 						'length' => round( $settings->button->line_height->desktop / $settings->button->font_size->desktop, 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->button->line_height->medium ) && isset( $settings->button->font_size->medium ) && 0 !== $settings->button->font_size->medium ) {
+			if ( isset( $settings->button->line_height->medium ) && isset( $settings->button->font_size->medium ) && $settings->button->font_size->medium !== 0 ) {
 				if ( is_numeric( $settings->button->line_height->medium ) && is_numeric( $settings->button->font_size->medium ) ) {
-					$settings->button->button_typo_medium->line_height = (object) array(
+					$settings->button->button_typo_medium->line_height = (object) [
 						'length' => round( $settings->button->line_height->medium / $settings->button->font_size->medium, 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->button->line_height->small ) && isset( $settings->button->font_size->small ) && 0 !== $settings->button->font_size->small ) {
+			if ( isset( $settings->button->line_height->small ) && isset( $settings->button->font_size->small ) && $settings->button->font_size->small !== 0 ) {
 				if ( is_numeric( $settings->button->line_height->small ) && is_numeric( $settings->button->font_size->small ) ) {
-					$settings->button->button_typo_responsive->line_height = (object) array(
+					$settings->button->button_typo_responsive->line_height = (object) [
 						'length' => round( $settings->button->line_height->small / $settings->button->font_size->small, 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
 			if ( isset( $settings->button->link_nofollow ) ) {
-				if ( '1' === $settings->button->link_nofollow || 'yes' === $settings->button->link_nofollow ) {
+				if ( $settings->button->link_nofollow === '1' || $settings->button->link_nofollow === 'yes' ) {
 					$settings->button->link_nofollow = 'yes';
 				}
 			}
@@ -1014,13 +1014,13 @@ class SlideBoxModule extends FLBuilderModule {
 	 * @method render_link
 	 * @return void
 	 */
-	public function render_link() {
+	public function render_link(): void {
 		if ( isset( $this->settings->link_nofollow ) ) {
 			$link_nofollow = $this->settings->link_nofollow;
 		} else {
 			$link_nofollow = '';
 		}
-		if ( 'link' === $this->settings->cta_type ) {
+		if ( $this->settings->cta_type === 'link' ) {
 			echo '<a href="' . esc_url( $this->settings->link ) . '" target="' . esc_attr( $this->settings->link_target ) . '" ' . esc_attr( UABB_Helper::get_link_rel( $this->settings->link_target, $link_nofollow, 0 ) ) . ' class="uabb-callout-cta-link">' . esc_html( $this->settings->cta_text ) . '</a>';
 		}
 	}
@@ -1031,9 +1031,9 @@ class SlideBoxModule extends FLBuilderModule {
 	 * @method render_button
 	 * @return void
 	 */
-	public function render_button() {
-		if ( 'button' === $this->settings->cta_type ) {
-			if ( '' !== $this->settings->button ) {
+	public function render_button(): void {
+		if ( $this->settings->cta_type === 'button' ) {
+			if ( $this->settings->button !== '' ) {
 				FLBuilder::render_module_html( 'uabb-button', $this->settings->button );
 			}
 		}
@@ -1046,9 +1046,9 @@ class SlideBoxModule extends FLBuilderModule {
 	 * @param var $pos gets the position of the image.
 	 * @return void
 	 */
-	public function render_image( $pos ) {
+	public function render_image( $pos ): void {
 		if ( $pos === $this->settings->front_img_icon_position ) {
-			$imageicon_array = array(
+			$imageicon_array = [
 
 				/* General Section. */
 				'image_type'              => $this->settings->image_type,
@@ -1064,7 +1064,7 @@ class SlideBoxModule extends FLBuilderModule {
 				'photo_url'               => '',
 				'img_size'                => $this->settings->img_size,
 				'img_align'               => 'inherit',
-				'photo_src'               => ( isset( $this->settings->photo_src ) ) ? $this->settings->photo_src : '',
+				'photo_src'               => $this->settings->photo_src ?? '',
 
 				/* Icon Style */
 				'icon_style'              => 'simple',
@@ -1097,7 +1097,7 @@ class SlideBoxModule extends FLBuilderModule {
 				'img_bg_hover_color'      => '',
 				'img_border_color'        => '',
 				'img_border_hover_color'  => '',
-			);
+			];
 
 			/* Render HTML Function */
 			FLBuilder::render_module_html( 'image-icon', $imageicon_array );
@@ -1110,8 +1110,8 @@ class SlideBoxModule extends FLBuilderModule {
 	 * @method render_overlay_icon
 	 * @return void
 	 */
-	public function render_overlay_icon() {
-		if ( 'style1' === $this->settings->slide_type && 'yes' === $this->settings->overlay ) {
+	public function render_overlay_icon(): void {
+		if ( $this->settings->slide_type === 'style1' && $this->settings->overlay === 'yes' ) {
 			/* Render HTML Function */
 			echo '<div class="uabb-slide-box-overlay">';
 			echo '<span class="uabb-icon-wrap">
@@ -1129,17 +1129,17 @@ class SlideBoxModule extends FLBuilderModule {
 	 * @method render_dropdown_icon
 	 * @return void
 	 */
-	public function render_dropdown_icon() {
+	public function render_dropdown_icon(): void {
 
-		if ( 'style2' === $this->settings->slide_type ) {
+		if ( $this->settings->slide_type === 'style2' ) {
 
-			$icon_settings = array(
+			$icon_settings = [
 				'bg_color' => $this->settings->dropdown_icon_bg_color,
 				'color'    => $this->settings->dropdown_icon_color,
 				'icon'     => 'fa fa-angle-down',
 				'size'     => $this->settings->dropdown_icon_size,
 				'text'     => '',
-			);
+			];
 			echo '<div class="uabb-slide-dropdown">';
 			echo '<span class="uabb-icon-wrap">
                         <span class="uabb-icon">
@@ -1149,14 +1149,14 @@ class SlideBoxModule extends FLBuilderModule {
 			echo '</div>';
 		}
 
-		if ( 'style3' === $this->settings->slide_type ) {
+		if ( $this->settings->slide_type === 'style3' ) {
 
-			$icon_settings = array(
+			$icon_settings = [
 				'color' => $this->settings->dropdown_icon_color,
 				'icon'  => 'fa fa-plus',
 				'size'  => $this->settings->dropdown_icon_size,
 				'text'  => '',
-			);
+			];
 
 			echo '<div class="uabb-slide-dropdown">';
 			echo '<span class="uabb-icon-wrap">
@@ -1168,8 +1168,6 @@ class SlideBoxModule extends FLBuilderModule {
 		}
 	}
 }
-
-
 
 /**
  * Condition to verify Beaver Builder version.

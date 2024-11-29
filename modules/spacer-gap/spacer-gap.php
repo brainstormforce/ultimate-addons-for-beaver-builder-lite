@@ -18,7 +18,7 @@ class UABBSpacerGap extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(
-			array(
+			[
 				'name'            => __( 'Spacer / Gap', 'uabb' ),
 				'description'     => __( 'A totally awesome module!', 'uabb' ),
 				'category'        => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
@@ -29,7 +29,7 @@ class UABBSpacerGap extends FLBuilderModule {
 				'enabled'         => true, // Defaults to true and can be omitted.
 				'partial_refresh' => false, // Defaults to false and can be omitted.
 				'icon'            => 'minus.svg',
-			)
+			]
 		);
 	}
 }

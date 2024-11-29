@@ -30,54 +30,54 @@ $pos = $settings->front_img_icon_position;
 			?>
 ">
 				<div class="uabb-slide-box-section "><!-- Inline Block Space Fix
-					<?php if ( 'none' !== $settings->image_type ) : ?>
-						<?php if ( 'left' === $pos ) { ?>
+					<?php if ( $settings->image_type !== 'none' ) { ?>
+						<?php if ( $pos === 'left' ) { ?>
 							--><div class="uabb-slide-front-left-img">
 								<?php $module->render_image( 'left' ); ?>
 							</div><!-- Inline Block Space Fix
-							<?php if ( 'yes' === $settings->front_icon_border ) { ?>
+							<?php if ( $settings->front_icon_border === 'yes' ) { ?>
 							--><span class="uabb-slide-icon-border"></span><!-- Inline Block Space Fix
 							<?php } ?>
 						<?php } ?>
-						<?php if ( 'above-title' === $pos ) { ?>
+						<?php if ( $pos === 'above-title' ) { ?>
 							--><div class="uabb-slide-front-above-img">
 								<?php $module->render_image( 'above-title' ); ?>
 							</div><!-- Inline Block Space Fix
 						<?php } ?>
-					<?php endif; ?>
+					<?php } ?>
 					--><div class="uabb-slide-front-right-text"><!-- Inline Block Space Fix
-						<?php if ( 'none' !== $settings->image_type && 'left-title' === $pos ) : ?>
+						<?php if ( $settings->image_type !== 'none' && $pos === 'left-title' ) { ?>
 							--><div class="uabb-slide-front-left-title-img">
 								<?php $module->render_image( 'left-title' ); ?>
 							</div><!-- Inline Block Space Fix
-						<?php endif; ?>
+						<?php } ?>
 						<?php
 							// Define a whitelist of allowed tags.
-							$allowed_tags    = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
+							$allowed_tags    = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' ];
 							$front_title_tag = in_array( $settings->front_title_tag_selection, $allowed_tags, true ) ? $settings->front_title_tag_selection : 'h3';
 						?>
-						<?php if ( '' !== $settings->title_front ) { ?>
+						<?php if ( $settings->title_front !== '' ) { ?>
 							--><<?php echo esc_attr( $front_title_tag ); ?> class="uabb-slide-face-text-title"><?php echo wp_kses_post( $settings->title_front ); ?></<?php echo esc_attr( $front_title_tag ); ?>><!-- Inline Block Space Fix
 						<?php } ?>
-						<?php if ( 'none' !== $settings->image_type && 'right-title' === $pos ) : ?>
+						<?php if ( $settings->image_type !== 'none' && $pos === 'right-title' ) { ?>
 							--><div class="uabb-slide-front-right-title-img">
 								<?php $module->render_image( 'right-title' ); ?>
 							</div><!-- Inline Block Space Fix
-						<?php endif; ?>
-						<?php if ( '' !== $settings->desc_front ) { ?>
+						<?php } ?>
+						<?php if ( $settings->desc_front !== '' ) { ?>
 							--><div class="uabb-slide-box-section-content uabb-text-editor">
 								<?php echo wp_kses_post( trim( $settings->desc_front ) ); ?>
 							</div><!-- Inline Block Space Fix
 						<?php } ?>
 					--></div><!-- Inline Block Space Fix
-					<?php if ( 'none' !== $settings->image_type && 'right' === $pos ) : ?>
-						<?php if ( 'yes' === $settings->front_icon_border ) { ?>
+					<?php if ( $settings->image_type !== 'none' && $pos === 'right' ) { ?>
+						<?php if ( $settings->front_icon_border === 'yes' ) { ?>
 							--><span class="uabb-slide-icon-border"></span><!-- Inline Block Space Fix
 						<?php } ?>
 						--><div class="uabb-slide-front-right-img">
 							<?php $module->render_image( 'right' ); ?>
 						</div><!-- Inline Block Space Fix
-					<?php endif; ?>
+					<?php } ?>
 					--><?php $module->render_dropdown_icon(); ?><!-- Inline Block Space Fix
 				--></div>
 
@@ -89,16 +89,16 @@ $pos = $settings->front_img_icon_position;
 				<div class="uabb-slide-box-section- ">
 				<?php
 				// Define a whitelist of allowed tags.
-					$allowed_tags   = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
+					$allowed_tags   = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' ];
 					$back_title_tag = in_array( $settings->back_title_tag_selection, $allowed_tags, true ) ? $settings->back_title_tag_selection : 'h3';
 				?>
 				<?php
-				if ( '' !== $settings->title_back ) {
+				if ( $settings->title_back !== '' ) {
 					?>
 					<<?php echo esc_attr( $back_title_tag ); ?> class="uabb-slide-back-text-title"><?php echo wp_kses_post( $settings->title_back ); ?></<?php echo esc_attr( $back_title_tag ); ?>>
 					<?php
 				}
-				if ( '' !== $settings->desc_back ) {
+				if ( $settings->desc_back !== '' ) {
 					?>
 					<div class="uabb-slide-down-box-section-content uabb-text-editor">
 						<?php echo wp_kses_post( trim( $settings->desc_back ) ); ?>
@@ -107,7 +107,7 @@ $pos = $settings->front_img_icon_position;
 				}
 				?>
 					<?php
-					if ( 'none' !== $settings->cta_type ) {
+					if ( $settings->cta_type !== 'none' ) {
 						// Link CTA.
 						$module->render_link();
 

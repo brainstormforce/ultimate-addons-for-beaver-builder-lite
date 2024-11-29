@@ -11,7 +11,6 @@
  * @class UABBButtonModule
  */
 class UABBButtonModule extends FLBuilderModule {
-
 	/**
 	 * Constructor function that constructs default values for the Button Module
 	 *
@@ -19,7 +18,7 @@ class UABBButtonModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(
-			array(
+			[
 				'name'          => __( 'Button', 'uabb' ),
 				'description'   => __( 'A simple call to action button.', 'uabb' ),
 				'category'      => BB_Ultimate_Addon_Helper::module_cat( BB_Ultimate_Addon_Helper::$basic_modules ),
@@ -29,7 +28,7 @@ class UABBButtonModule extends FLBuilderModule {
 				'editor_export' => true, // Defaults to true and can be omitted.
 				'enabled'       => true, // Defaults to true and can be omitted.
 				'icon'          => 'button.svg',
-			)
+			]
 		);
 	}
 
@@ -90,19 +89,19 @@ class UABBButtonModule extends FLBuilderModule {
 	public function get_button_style() {
 		$btn_style = '';
 
-		if ( ! empty( $this->settings->style ) && 'transparent' === $this->settings->style ) {
+		if ( ! empty( $this->settings->style ) && $this->settings->style === 'transparent' ) {
 			if ( isset( $this->settings->transparent_button_options ) && ! empty( $this->settings->transparent_button_options ) ) {
 				$btn_style .= ' uabb-' . $this->settings->transparent_button_options . '-btn';
 			}
 		}
 
-		if ( ! empty( $this->settings->style ) && 'threed' === $this->settings->style ) {
+		if ( ! empty( $this->settings->style ) && $this->settings->style === 'threed' ) {
 			if ( isset( $this->settings->threed_button_options ) && ! empty( $this->settings->threed_button_options ) ) {
 				$btn_style .= ' uabb-' . $this->settings->threed_button_options . '-btn';
 			}
 		}
 
-		if ( ! empty( $this->settings->style ) && 'flat' === $this->settings->style ) {
+		if ( ! empty( $this->settings->style ) && $this->settings->style === 'flat' ) {
 			if ( isset( $this->settings->flat_button_options ) && ! empty( $this->settings->flat_button_options ) ) {
 				$btn_style .= ' uabb-' . $this->settings->flat_button_options . '-btn';
 			}
@@ -124,16 +123,16 @@ class UABBButtonModule extends FLBuilderModule {
 		$page_migrated           = UABB_Lite_Compatibility::Check_Old_Page_Migration();
 		$stable_version_new_page = UABB_Lite_Compatibility::Check_Stable_Version_New_page();
 
-		if ( $version_bb_check && ( 'yes' === $page_migrated || 'yes' === $stable_version_new_page ) ) {
+		if ( $version_bb_check && ( $page_migrated === 'yes' || $stable_version_new_page === 'yes' ) ) {
 
 			// Handle color opacity fields.
 			$helper->handle_opacity_inputs( $settings, 'bg_color_opc', 'bg_color' );
 			$helper->handle_opacity_inputs( $settings, 'bg_hover_color_opc', 'bg_hover_color' );
 
 			if ( ! isset( $settings->button_typo ) || ! is_array( $settings->button_typo ) ) {
-				$settings->button_typo            = array();
-				$settings->button_typo_medium     = array();
-				$settings->button_typo_responsive = array();
+				$settings->button_typo            = [];
+				$settings->button_typo_medium     = [];
+				$settings->button_typo_responsive = [];
 			}
 			if ( isset( $settings->font_family ) ) {
 
@@ -144,7 +143,7 @@ class UABBButtonModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->font_family['weight'] ) {
+					if ( $settings->font_family['weight'] === 'regular' ) {
 						$settings->button_typo['font_weight'] = 'normal';
 					} else {
 						$settings->button_typo['font_weight'] = $settings->font_family['weight'];
@@ -154,46 +153,46 @@ class UABBButtonModule extends FLBuilderModule {
 			}
 			if ( isset( $settings->font_size_unit ) ) {
 
-				$settings->button_typo['font_size'] = array(
+				$settings->button_typo['font_size'] = [
 					'length' => $settings->font_size_unit,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->font_size_unit );
 			}
 			if ( isset( $settings->font_size_unit_medium ) ) {
-				$settings->button_typo_medium['font_size'] = array(
+				$settings->button_typo_medium['font_size'] = [
 					'length' => $settings->font_size_unit_medium,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->font_size_unit_medium );
 			}
 			if ( isset( $settings->font_size_unit_responsive ) ) {
-				$settings->button_typo_responsive['font_size'] = array(
+				$settings->button_typo_responsive['font_size'] = [
 					'length' => $settings->font_size_unit_responsive,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->font_size_unit_responsive );
 			}
 			if ( isset( $settings->line_height_unit ) ) {
 
-				$settings->button_typo['line_height'] = array(
+				$settings->button_typo['line_height'] = [
 					'length' => $settings->line_height_unit,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->line_height_unit );
 			}
 			if ( isset( $settings->line_height_unit_medium ) ) {
-				$settings->button_typo_medium['line_height'] = array(
+				$settings->button_typo_medium['line_height'] = [
 					'length' => $settings->line_height_unit_medium,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->line_height_unit_medium );
 			}
 			if ( isset( $settings->line_height_unit_responsive ) ) {
-				$settings->button_typo_responsive['line_height'] = array(
+				$settings->button_typo_responsive['line_height'] = [
 					'length' => $settings->line_height_unit_responsive,
 					'unit'   => 'em',
-				);
+				];
 				unset( $settings->line_height_unit_responsive );
 			}
 			if ( isset( $settings->transform ) ) {
@@ -201,27 +200,27 @@ class UABBButtonModule extends FLBuilderModule {
 				unset( $settings->transform );
 			}
 			if ( isset( $settings->letter_spacing ) ) {
-				$settings->button_typo['letter_spacing'] = array(
+				$settings->button_typo['letter_spacing'] = [
 					'length' => $settings->letter_spacing,
 					'unit'   => 'px',
-				);
+				];
 				unset( $settings->letter_spacing );
 			}
 			if ( isset( $settings->link_nofollow ) ) {
-				if ( '1' === $settings->link_nofollow || 'yes' === $settings->link_nofollow ) {
+				if ( $settings->link_nofollow === '1' || $settings->link_nofollow === 'yes' ) {
 					$settings->link_nofollow = 'yes';
 				}
 			}
-		} elseif ( $version_bb_check && 'yes' !== $page_migrated ) {
+		} elseif ( $version_bb_check && $page_migrated !== 'yes' ) {
 
 			// Handle color opacity fields.
 			$helper->handle_opacity_inputs( $settings, 'bg_color_opc', 'bg_color' );
 			$helper->handle_opacity_inputs( $settings, 'bg_hover_color_opc', 'bg_hover_color' );
 
 			if ( ! isset( $settings->button_typo ) || ! is_array( $settings->button_typo ) ) {
-				$settings->button_typo            = array();
-				$settings->button_typo_medium     = array();
-				$settings->button_typo_responsive = array();
+				$settings->button_typo            = [];
+				$settings->button_typo_medium     = [];
+				$settings->button_typo_responsive = [];
 			}
 			if ( isset( $settings->font_family ) ) {
 
@@ -232,7 +231,7 @@ class UABBButtonModule extends FLBuilderModule {
 				}
 				if ( isset( $settings->font_family['weight'] ) ) {
 
-					if ( 'regular' === $settings->font_family['weight'] ) {
+					if ( $settings->font_family['weight'] === 'regular' ) {
 						$settings->button_typo['font_weight'] = 'normal';
 					} else {
 						$settings->button_typo['font_weight'] = $settings->font_family['weight'];
@@ -241,50 +240,50 @@ class UABBButtonModule extends FLBuilderModule {
 				}
 			}
 			if ( isset( $settings->font_size['desktop'] ) ) {
-				$settings->button_typo['font_size'] = array(
+				$settings->button_typo['font_size'] = [
 					'length' => $settings->font_size['desktop'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->font_size['medium'] ) ) {
-				$settings->button_typo_medium['font_size'] = array(
+				$settings->button_typo_medium['font_size'] = [
 					'length' => $settings->font_size['medium'],
 					'unit'   => 'px',
-				);
+				];
 			}
 			if ( isset( $settings->font_size['small'] ) ) {
 
-				$settings->button_typo_responsive['font_size'] = array(
+				$settings->button_typo_responsive['font_size'] = [
 					'length' => $settings->font_size['small'],
 					'unit'   => 'px',
-				);
+				];
 			}
-			if ( isset( $settings->line_height['desktop'] ) && isset( $settings->font_size['desktop'] ) && 0 !== $settings->font_size['desktop'] ) {
+			if ( isset( $settings->line_height['desktop'] ) && isset( $settings->font_size['desktop'] ) && $settings->font_size['desktop'] !== 0 ) {
 				if ( is_numeric( $settings->line_height['desktop'] ) && is_numeric( $settings->font_size['desktop'] ) ) {
-					$settings->button_typo['line_height'] = array(
+					$settings->button_typo['line_height'] = [
 						'length' => round( $settings->line_height['desktop'] / $settings->font_size['desktop'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->line_height['medium'] ) && isset( $settings->font_size['medium'] ) && 0 !== $settings->font_size['medium'] ) {
+			if ( isset( $settings->line_height['medium'] ) && isset( $settings->font_size['medium'] ) && $settings->font_size['medium'] !== 0 ) {
 				if ( is_numeric( $settings->line_height['medium'] ) && is_numeric( $settings->font_size['medium'] ) ) {
-					$settings->button_typo_medium['line_height'] = array(
+					$settings->button_typo_medium['line_height'] = [
 						'length' => round( $settings->line_height['medium'] / $settings->font_size['medium'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
-			if ( isset( $settings->line_height['small'] ) && isset( $settings->font_size['small'] ) && 0 !== $settings->font_size['small'] && ! isset( $settings->line_height_unit_responsive ) ) {
+			if ( isset( $settings->line_height['small'] ) && isset( $settings->font_size['small'] ) && $settings->font_size['small'] !== 0 && ! isset( $settings->line_height_unit_responsive ) ) {
 				if ( is_numeric( $settings->line_height['small'] ) && is_numeric( $settings->font_size['small'] ) ) {
-					$settings->button_typo_responsive['line_height'] = array(
+					$settings->button_typo_responsive['line_height'] = [
 						'length' => round( $settings->line_height['small'] / $settings->font_size['small'], 2 ),
 						'unit'   => 'em',
-					);
+					];
 				}
 			}
 			if ( isset( $settings->link_nofollow ) ) {
-				if ( '1' === $settings->link_nofollow || 'yes' === $settings->link_nofollow ) {
+				if ( $settings->link_nofollow === '1' || $settings->link_nofollow === 'yes' ) {
 					$settings->link_nofollow = 'yes';
 				}
 			}

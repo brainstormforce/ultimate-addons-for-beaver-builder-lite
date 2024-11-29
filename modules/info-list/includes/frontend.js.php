@@ -15,12 +15,11 @@ if ( ! isset( $id ) ) {
 	$id = '';
 }
 
-
 ?>
 (function($) {
 
 	jQuery(document).ready(function() {
-		<?php if ( 'yes' === $settings->list_icon_animation ) : ?>
+		<?php if ( $settings->list_icon_animation === 'yes' ) { ?>
 			if(typeof jQuery.fn.waypoint !== 'undefined' ) {
 
 			$( '.fl-node-<?php echo esc_attr( $id ); ?> .uabb-info-list-icon' ).waypoint({
@@ -31,7 +30,7 @@ if ( ! isset( $id ) ) {
 				});
 			}
 
-		<?php endif; ?>
+		<?php } ?>
 	});
 
 })(jQuery);

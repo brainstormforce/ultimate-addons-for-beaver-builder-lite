@@ -18,7 +18,7 @@ if ( ! isset( $settings ) ) {
 }
 
 // Define a whitelist of allowed tags.
-	$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
+	$allowed_tags = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' ];
 	$ribbon_tag   = in_array( $settings->text_tag_selection, $allowed_tags, true ) ? $settings->text_tag_selection : 'h3';
 ?>
 <div class="uabb-ribbon-wrap">
@@ -26,14 +26,16 @@ if ( ! isset( $settings ) ) {
 		<span class="uabb-left-ribb flips"><i class="<?php echo esc_attr( $settings->left_icon ); ?>"></i></span>
 		<span class="uabb-ribbon-text">
 			<?php
-			if ( 'yes' === $settings->stitching ) {
+			if ( $settings->stitching === 'yes' ) {
 				?>
-				<div class="uabb-ribbon-stitches-top"></div> <?php } ?>
+				<div class="uabb-ribbon-stitches-top"></div> <?php
+            } ?>
 				<span class="uabb-ribbon-text-title"><?php echo wp_kses_post( $settings->title ); ?></span>
 			<?php
-			if ( 'yes' === $settings->stitching ) {
+			if ( $settings->stitching === 'yes' ) {
 				?>
-				<div class="uabb-ribbon-stitches-bottom"></div> <?php } ?>
+				<div class="uabb-ribbon-stitches-bottom"></div> <?php
+            } ?>
 		</span>		
 		<span class="uabb-right-ribb flips"><i class="<?php echo esc_attr( $settings->right_icon ); ?>"></i></span>
 	</<?php echo esc_attr( $ribbon_tag ); ?>>

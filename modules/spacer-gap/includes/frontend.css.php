@@ -32,7 +32,7 @@ if ( ! isset( $global_settings ) ) {
 }
 
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-spacer-gap-preview.uabb-spacer-gap {
-	height: <?php echo esc_attr( ( '' !== $settings->desktop_space ) ? $settings->desktop_space : 10 ); ?>px;
+	height: <?php echo esc_attr( $settings->desktop_space !== '' ? $settings->desktop_space : 10 ); ?>px;
 	clear: both;
 	width: 100%;
 } 

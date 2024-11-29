@@ -9,108 +9,108 @@
 
 FLBuilder::register_module(
 	'UABBInfoTableModule',
-	array(
-		'general'       => array(
+	[
+		'general'       => [
 			'title'    => __( 'General', 'uabb' ),
-			'sections' => array(
-				'title-section' => array(
+			'sections' => [
+				'title-section' => [
 					'title'  => __( 'Info-Table', 'uabb' ),
-					'fields' => array(
-						'it_title'     => array(
+					'fields' => [
+						'it_title'     => [
 							'type'        => 'text',
 							'label'       => __( 'Heading', 'uabb' ),
 							'default'     => __( 'Heading', 'uabb' ),
 							'help'        => __( 'Enter Info-Table Title', 'uabb' ),
-							'connections' => array( 'string', 'html' ),
-						),
-						'sub_heading'  => array(
+							'connections' => [ 'string', 'html' ],
+						],
+						'sub_heading'  => [
 							'type'        => 'text',
 							'label'       => __( 'Sub Heading', 'uabb' ),
 							'default'     => __( 'Sub Heading', 'uabb' ),
-							'connections' => array( 'string', 'html' ),
-						),
-						'it_long_desc' => array(
+							'connections' => [ 'string', 'html' ],
+						],
+						'it_long_desc' => [
 							'type'        => 'editor',
 							'label'       => '',
 							'default'     => __( 'Enter description text here.', 'uabb' ),
-							'connections' => array( 'string', 'html' ),
-						),
-						'it_link_type' => array(
+							'connections' => [ 'string', 'html' ],
+						],
+						'it_link_type' => [
 							'type'    => 'select',
 							'label'   => __( 'Add Link', 'uabb' ),
 							'default' => 'no',
-							'options' => array(
+							'options' => [
 								'no'            => __( 'No Link', 'uabb' ),
 								'cta'           => __( 'Call to Action Button', 'uabb' ),
 								'complete_link' => __( 'Link to Complete Box', 'uabb' ),
-							),
-							'toggle'  => array(
-								'cta'           => array(
-									'sections' => array( 'btn-style-section', 'btn_typography' ),
-									'fields'   => array( 'button_text', 'it_link', 'it_link_target' ),
-								),
-								'complete_link' => array(
-									'fields' => array( 'it_link', 'it_link_target' ),
-								),
-							),
-						),
-						'button_text'  => array(
+							],
+							'toggle'  => [
+								'cta'           => [
+									'sections' => [ 'btn-style-section', 'btn_typography' ],
+									'fields'   => [ 'button_text', 'it_link', 'it_link_target' ],
+								],
+								'complete_link' => [
+									'fields' => [ 'it_link', 'it_link_target' ],
+								],
+							],
+						],
+						'button_text'  => [
 							'type'        => 'text',
 							'label'       => __( 'Call to action button text', 'uabb' ),
-							'connections' => array( 'string', 'html' ),
-						),
-						'it_link'      => array(
+							'connections' => [ 'string', 'html' ],
+						],
+						'it_link'      => [
 							'type'          => 'link',
 							'label'         => __( 'Select URL', 'uabb' ),
-							'connections'   => array( 'url' ),
+							'connections'   => [ 'url' ],
 							'show_target'   => true,
 							'show_nofollow' => true,
-						),
-					),
-				),
-			),
-		),
-		'style'         => array(
+						],
+					],
+				],
+			],
+		],
+		'style'         => [
 			'title'    => __( 'Style', 'uabb' ),
-			'sections' => array(
-				'style-section'     => array(
+			'sections' => [
+				'style-section'     => [
 					'title'  => __( 'Styles', 'uabb' ),
-					'fields' => array(
-						'box_design'             => array(
+					'fields' => [
+						'box_design'             => [
 							'type'    => 'select',
 							'label'   => __( 'Select Design Style', 'uabb' ),
 							'default' => 'design01',
-							'options' => array(
+							'options' => [
 								'design01' => __( 'Design 01', 'uabb' ),
 								'design02' => __( 'Design 02', 'uabb' ),
 								'design03' => __( 'Design 03', 'uabb' ),
 								'design04' => __( 'Design 04', 'uabb' ),
 								'design05' => __( 'Design 05', 'uabb' ),
 								'design06' => __( 'Design 06', 'uabb' ),
-							),
-							'toggle'  => array(
-								'design01' => array(
-									'fields' => array( 'btn_radius', 'btn_top_margin', 'btn_bottom_margin' ),
-								),
-								'design03' => array(
-									'fields' => array( 'btn_radius', 'btn_top_margin', 'btn_bottom_margin' ),
-								),
-								'design04' => array(
-									'fields' => array( 'btn_radius', 'btn_top_margin', 'btn_bottom_margin' ),
-								),
-								'design05' => array(
-									'fields' => array( 'btn_radius', 'btn_top_margin', 'btn_bottom_margin' ),
-								),
-								'design06' => array(
-									'fields' => array( 'btn_radius', 'btn_top_margin', 'btn_bottom_margin' ),
-								),
-							),
-						),
-						'color_scheme'           => array(
+							],
+							'toggle'  => [
+								'design01' => [
+									'fields' => [ 'btn_radius', 'btn_top_margin', 'btn_bottom_margin' ],
+								],
+								'design03' => [
+									'fields' => [ 'btn_radius', 'btn_top_margin', 'btn_bottom_margin' ],
+								],
+								'design04' => [
+									'fields' => [ 'btn_radius', 'btn_top_margin', 'btn_bottom_margin' ],
+								],
+								'design05' => [
+									'fields' => [ 'btn_radius', 'btn_top_margin', 'btn_bottom_margin' ],
+								],
+								'design06' => [
+									'fields' => [ 'btn_radius', 'btn_top_margin', 'btn_bottom_margin' ],
+								],
+							],
+						],
+						'color_scheme'           => [
 							'type'    => 'select',
 							'label'   => __( 'Select Color Scheme', 'uabb' ),
 							'default' => 'black',
-							'options' => array(
+							'options' => [
 								'black'  => __( 'Black', 'uabb' ),
 								'red'    => __( 'Red', 'uabb' ),
 								'blue'   => __( 'Blue', 'uabb' ),
@@ -118,123 +118,123 @@ FLBuilder::register_module(
 								'green'  => __( 'Green', 'uabb' ),
 								'gray'   => __( 'Gray', 'uabb' ),
 								'custom' => __( 'Design Your Own', 'uabb' ),
-							),
-							'toggle'  => array(
-								'custom' => array(
-									'fields' => array( 'desc_back_color', 'desc_back_color_opc' ),
-								),
-							),
-						),
-						'heading_back_color'     => array(
+							],
+							'toggle'  => [
+								'custom' => [
+									'fields' => [ 'desc_back_color', 'desc_back_color_opc' ],
+								],
+							],
+						],
+						'heading_back_color'     => [
 							'type'        => 'color',
 							'label'       => __( 'Main background Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-						'heading_back_color_opc' => array(
+							'connections' => [ 'color' ],
+						],
+						'heading_back_color_opc' => [
 							'type'        => 'text',
 							'label'       => __( 'Opacity', 'uabb' ),
 							'default'     => '',
 							'description' => '%',
 							'maxlength'   => '3',
 							'size'        => '5',
-						),
+						],
 
-						'desc_back_color'        => array(
+						'desc_back_color'        => [
 							'type'        => 'color',
 							'label'       => __( 'Highlight background Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-						'desc_back_color_opc'    => array(
+							'connections' => [ 'color' ],
+						],
+						'desc_back_color_opc'    => [
 							'type'        => 'text',
 							'label'       => __( 'Opacity', 'uabb' ),
 							'default'     => '',
 							'description' => '%',
 							'maxlength'   => '3',
 							'size'        => '5',
-						),
+						],
 
-						'hover_effect'           => array(
+						'hover_effect'           => [
 							'type'    => 'select',
 							'label'   => __( 'Hover Effect', 'uabb' ),
 							'default' => 'shadow',
-							'options' => array(
+							'options' => [
 								'none'   => __( 'None', 'uabb' ),
 								'shadow' => __( 'Box Shadow', 'uabb' ),
-							),
-						),
-						'min_height'             => array(
+							],
+						],
+						'min_height'             => [
 							'type'      => 'unit',
 							'label'     => __( 'Min Height', 'uabb' ),
 							'maxlength' => '5',
 							'size'      => '6',
 							'slider'    => true,
-							'units'     => array( 'px' ),
-						),
-					),
-				),
-				'btn-style-section' => array(
+							'units'     => [ 'px' ],
+						],
+					],
+				],
+				'btn-style-section' => [
 					'title'  => __( 'CTA Button Style', 'uabb' ),
-					'fields' => array(
+					'fields' => [
 
-						'btn_text_color'         => array(
+						'btn_text_color'         => [
 							'type'        => 'color',
 							'label'       => __( 'Text Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-						'btn_text_hover_color'   => array(
+							'connections' => [ 'color' ],
+						],
+						'btn_text_hover_color'   => [
 							'type'        => 'color',
 							'label'       => __( 'Text Hover Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-							'preview'     => array(
+							'connections' => [ 'color' ],
+							'preview'     => [
 								'type' => 'none',
-							),
-						),
-						'btn_bg_color'           => array(
+							],
+						],
+						'btn_bg_color'           => [
 							'type'        => 'color',
 							'label'       => __( 'Background Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-						'btn_bg_color_opc'       => array(
+							'connections' => [ 'color' ],
+						],
+						'btn_bg_color_opc'       => [
 							'type'        => 'text',
 							'label'       => __( 'Opacity', 'uabb' ),
 							'default'     => '',
 							'description' => '%',
 							'maxlength'   => '3',
 							'size'        => '5',
-						),
+						],
 
-						'btn_bg_hover_color'     => array(
+						'btn_bg_hover_color'     => [
 							'type'        => 'color',
 							'label'       => __( 'Background Hover Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-						'btn_bg_hover_color_opc' => array(
+							'connections' => [ 'color' ],
+						],
+						'btn_bg_hover_color_opc' => [
 							'type'        => 'text',
 							'label'       => __( 'Opacity', 'uabb' ),
 							'default'     => '',
 							'description' => '%',
 							'maxlength'   => '3',
 							'size'        => '5',
-						),
-						'btn_radius'             => array(
+						],
+						'btn_radius'             => [
 							'type'        => 'unit',
 							'label'       => __( 'Border Radius', 'uabb' ),
 							'default'     => '',
@@ -242,178 +242,178 @@ FLBuilder::register_module(
 							'size'        => '6',
 							'placeholder' => '3',
 							'slider'      => true,
-							'units'       => array( 'px' ),
-						),
-						'btn_top_margin'         => array(
+							'units'       => [ 'px' ],
+						],
+						'btn_top_margin'         => [
 							'type'        => 'unit',
 							'label'       => __( 'Top Margin', 'uabb' ),
 							'default'     => '',
 							'maxlength'   => '4',
 							'size'        => '6',
 							'slider'      => true,
-							'units'       => array( 'px' ),
+							'units'       => [ 'px' ],
 							'placeholder' => '15',
-						),
-						'btn_bottom_margin'      => array(
+						],
+						'btn_bottom_margin'      => [
 							'type'        => 'unit',
 							'label'       => __( 'Bottom Margin', 'uabb' ),
 							'default'     => '',
 							'maxlength'   => '4',
 							'size'        => '6',
 							'slider'      => true,
-							'units'       => array( 'px' ),
+							'units'       => [ 'px' ],
 							'placeholder' => '15',
-						),
-					),
-				),
-			),
-		),
+						],
+					],
+				],
+			],
+		],
 
-		'it_image_icon' => array(
+		'it_image_icon' => [
 			'title'    => __( 'Image / Icon', 'uabb' ),
-			'sections' => array(
-				'type_general' => array( // Section.
+			'sections' => [
+				'type_general' => [ // Section.
 					'title'  => __( 'Image / Icon', 'uabb' ), // Section Title.
-					'fields' => array( // Section Fields.
-						'image_type' => array(
+					'fields' => [ // Section Fields.
+						'image_type' => [
 							'type'    => 'select',
 							'label'   => __( 'Image Type', 'uabb' ),
 							'default' => 'icon',
-							'options' => array(
+							'options' => [
 								'none'  => __( 'None', 'uabb' ),
 								'icon'  => __( 'Icon', 'uabb' ),
 								'photo' => __( 'Photo', 'uabb' ),
-							),
+							],
 							'class'   => 'class_image_type',
-							'toggle'  => array(
-								'icon'  => array(
-									'sections' => array( 'icon_basic', 'icon_style', 'icon_colors' ),
-								),
-								'photo' => array(
-									'sections' => array( 'img_basic', 'img_style' ),
-								),
-							),
-						),
-					),
-				),
-				'icon_basic'   => array( // Section.
+							'toggle'  => [
+								'icon'  => [
+									'sections' => [ 'icon_basic', 'icon_style', 'icon_colors' ],
+								],
+								'photo' => [
+									'sections' => [ 'img_basic', 'img_style' ],
+								],
+							],
+						],
+					],
+				],
+				'icon_basic'   => [ // Section.
 					'title'  => __( 'Icon Basics', 'uabb' ), // Section Title.
-					'fields' => array( // Section Fields.
-						'icon'      => array(
+					'fields' => [ // Section Fields.
+						'icon'      => [
 							'type'        => 'icon',
 							'label'       => __( 'Icon', 'uabb' ),
 							'show_remove' => true,
 							'default'     => 'fa fa-child',
-						),
-						'icon_size' => array(
+						],
+						'icon_size' => [
 							'type'        => 'unit',
 							'label'       => __( 'Size', 'uabb' ),
 							'maxlength'   => '5',
 							'size'        => '6',
 							'slider'      => true,
-							'units'       => array( 'px' ),
+							'units'       => [ 'px' ],
 							'placeholder' => '75',
-							'preview'     => array(
+							'preview'     => [
 								'type' => 'refresh',
-							),
-						),
-					),
-				),
+							],
+						],
+					],
+				],
 
 				/* Image Basic Setting */
-				'img_basic'    => array( // Section.
+				'img_basic'    => [ // Section.
 					'title'  => __( 'Image Basics', 'uabb' ), // Section Title.
-					'fields' => array( // Section Fields.
-						'photo_source' => array(
+					'fields' => [ // Section Fields.
+						'photo_source' => [
 							'type'    => 'select',
 							'label'   => __( 'Photo Source', 'uabb' ),
 							'default' => 'library',
-							'options' => array(
+							'options' => [
 								'library' => __( 'Media Library', 'uabb' ),
 								'url'     => __( 'URL', 'uabb' ),
-							),
-							'toggle'  => array(
-								'library' => array(
-									'fields' => array( 'photo' ),
-								),
-								'url'     => array(
-									'fields' => array( 'photo_url' ),
-								),
-							),
-						),
-						'photo'        => array(
+							],
+							'toggle'  => [
+								'library' => [
+									'fields' => [ 'photo' ],
+								],
+								'url'     => [
+									'fields' => [ 'photo_url' ],
+								],
+							],
+						],
+						'photo'        => [
 							'type'        => 'photo',
 							'label'       => __( 'Photo', 'uabb' ),
 							'show_remove' => true,
-							'connections' => array( 'photo' ),
-						),
-						'photo_url'    => array(
+							'connections' => [ 'photo' ],
+						],
+						'photo_url'    => [
 							'type'        => 'text',
 							'label'       => __( 'Photo URL', 'uabb' ),
 							'placeholder' => 'http://www.example.com/my-photo.jpg',
-						),
-						'img_size'     => array(
+						],
+						'img_size'     => [
 							'type'        => 'unit',
 							'label'       => __( 'Size', 'uabb' ),
 							'maxlength'   => '5',
 							'size'        => '6',
 							'slider'      => true,
-							'units'       => array( 'px' ),
+							'units'       => [ 'px' ],
 							'placeholder' => '150',
-							'preview'     => array(
+							'preview'     => [
 								'type' => 'refresh',
-							),
-						),
-						'img_align'    => array(
+							],
+						],
+						'img_align'    => [
 							'type'    => 'select',
 							'label'   => __( 'Alignment', 'uabb' ),
-							'options' => array(
+							'options' => [
 								'left'    => __( 'Left', 'uabb' ),
 								'center'  => __( 'Center', 'uabb' ),
 								'right'   => __( 'Right', 'uabb' ),
 								'inherit' => __( 'Default', 'uabb' ),
-							),
+							],
 							'default' => 'inherit',
-						),
-					),
-				),
-				'icon_style'   => array(
+						],
+					],
+				],
+				'icon_style'   => [
 					'title'  => __( 'Style', 'uabb' ),
-					'fields' => array(
+					'fields' => [
 						/* Icon Style */
-						'icon_style'            => array(
+						'icon_style'            => [
 							'type'    => 'select',
 							'label'   => __( 'Icon Background Style', 'uabb' ),
 							'default' => 'simple',
-							'options' => array(
+							'options' => [
 								'simple' => __( 'Simple', 'uabb' ),
 								'circle' => __( 'Circle Background', 'uabb' ),
 								'square' => __( 'Square Background', 'uabb' ),
 								'custom' => __( 'Design your own', 'uabb' ),
-							),
-							'toggle'  => array(
-								'simple' => array(
-									'fields' => array(),
-								),
-								'circle' => array(
-									'fields' => array( 'icon_color_preset', 'icon_bg_color', 'icon_bg_color_opc', 'icon_bg_hover_color', 'icon_bg_hover_color_opc', 'icon_three_d' ),
-								),
-								'square' => array(
-									'fields' => array( 'icon_color_preset', 'icon_bg_color', 'icon_bg_color_opc', 'icon_bg_hover_color', 'icon_bg_hover_color_opc', 'icon_three_d' ),
-								),
-								'custom' => array(
-									'fields' => array( 'icon_color_preset', 'icon_border_style', 'icon_bg_color', 'icon_bg_color_opc', 'icon_bg_hover_color', 'icon_bg_hover_color_opc', 'icon_three_d', 'icon_bg_size', 'icon_bg_border_radius' ),
-								),
-							),
-							'trigger' => array(
-								'custom' => array(
-									'fields' => array( 'icon_border_style' ),
-								),
-							),
-						),
+							],
+							'toggle'  => [
+								'simple' => [
+									'fields' => [],
+								],
+								'circle' => [
+									'fields' => [ 'icon_color_preset', 'icon_bg_color', 'icon_bg_color_opc', 'icon_bg_hover_color', 'icon_bg_hover_color_opc', 'icon_three_d' ],
+								],
+								'square' => [
+									'fields' => [ 'icon_color_preset', 'icon_bg_color', 'icon_bg_color_opc', 'icon_bg_hover_color', 'icon_bg_hover_color_opc', 'icon_three_d' ],
+								],
+								'custom' => [
+									'fields' => [ 'icon_color_preset', 'icon_border_style', 'icon_bg_color', 'icon_bg_color_opc', 'icon_bg_hover_color', 'icon_bg_hover_color_opc', 'icon_three_d', 'icon_bg_size', 'icon_bg_border_radius' ],
+								],
+							],
+							'trigger' => [
+								'custom' => [
+									'fields' => [ 'icon_border_style' ],
+								],
+							],
+						],
 
 						/* Icon Background SIze */
-						'icon_bg_size'          => array(
+						'icon_bg_size'          => [
 							'type'        => 'unit',
 							'label'       => __( 'Background Size', 'uabb' ),
 							'help'        => __( 'Spacing between Icon & Background edge', 'uabb' ),
@@ -421,339 +421,339 @@ FLBuilder::register_module(
 							'maxlength'   => '3',
 							'size'        => '6',
 							'slider'      => true,
-							'units'       => array( 'px' ),
-						),
+							'units'       => [ 'px' ],
+						],
 
 						/* Border Style and Radius for Icon */
-						'icon_border_style'     => array(
+						'icon_border_style'     => [
 							'type'    => 'select',
 							'label'   => __( 'Border Style', 'uabb' ),
 							'default' => 'none',
 							'help'    => __( 'The type of border to use. Double borders must have a width of at least 3px to render properly.', 'uabb' ),
-							'options' => array(
+							'options' => [
 								'none'   => __( 'None', 'uabb' ),
 								'solid'  => __( 'Solid', 'uabb' ),
 								'dashed' => __( 'Dashed', 'uabb' ),
 								'dotted' => __( 'Dotted', 'uabb' ),
 								'double' => __( 'Double', 'uabb' ),
-							),
-							'toggle'  => array(
-								'solid'  => array(
-									'fields' => array( 'icon_border_width', 'icon_border_color', 'icon_border_hover_color' ),
-								),
-								'dashed' => array(
-									'fields' => array( 'icon_border_width', 'icon_border_color', 'icon_border_hover_color' ),
-								),
-								'dotted' => array(
-									'fields' => array( 'icon_border_width', 'icon_border_color', 'icon_border_hover_color' ),
-								),
-								'double' => array(
-									'fields' => array( 'icon_border_width', 'icon_border_color', 'icon_border_hover_color' ),
-								),
-							),
-						),
-						'icon_border_width'     => array(
+							],
+							'toggle'  => [
+								'solid'  => [
+									'fields' => [ 'icon_border_width', 'icon_border_color', 'icon_border_hover_color' ],
+								],
+								'dashed' => [
+									'fields' => [ 'icon_border_width', 'icon_border_color', 'icon_border_hover_color' ],
+								],
+								'dotted' => [
+									'fields' => [ 'icon_border_width', 'icon_border_color', 'icon_border_hover_color' ],
+								],
+								'double' => [
+									'fields' => [ 'icon_border_width', 'icon_border_color', 'icon_border_hover_color' ],
+								],
+							],
+						],
+						'icon_border_width'     => [
 							'type'        => 'unit',
 							'label'       => __( 'Border Width', 'uabb' ),
 							'slider'      => true,
-							'units'       => array( 'px' ),
+							'units'       => [ 'px' ],
 							'maxlength'   => '3',
 							'size'        => '6',
 							'placeholder' => '1',
-							'preview'     => array(
+							'preview'     => [
 								'type' => 'refresh',
-							),
-						),
-						'icon_bg_border_radius' => array(
+							],
+						],
+						'icon_bg_border_radius' => [
 							'type'        => 'unit',
 							'label'       => __( 'Border Radius', 'uabb' ),
 							'slider'      => true,
-							'units'       => array( 'px' ),
+							'units'       => [ 'px' ],
 							'maxlength'   => '3',
 							'size'        => '6',
 							'placeholder' => '20',
-						),
-					),
-				),
-				'img_style'    => array(
+						],
+					],
+				],
+				'img_style'    => [
 					'title'  => __( 'Style', 'uabb' ),
-					'fields' => array(
+					'fields' => [
 						/* Image Style */
-						'image_style'          => array(
+						'image_style'          => [
 							'type'    => 'select',
 							'label'   => __( 'Image Style', 'uabb' ),
 							'default' => 'simple',
 							'help'    => __( 'Circle and Square style will crop your image in 1:1 ratio', 'uabb' ),
-							'options' => array(
+							'options' => [
 								'simple' => __( 'Simple', 'uabb' ),
 								'circle' => __( 'Circle', 'uabb' ),
 								'square' => __( 'Square', 'uabb' ),
 								'custom' => __( 'Design your own', 'uabb' ),
-							),
+							],
 							'class'   => 'uabb-image-icon-style',
-							'toggle'  => array(
-								'simple' => array(
-									'fields' => array(),
-								),
-								'circle' => array(
-									'fields' => array(),
-								),
-								'square' => array(
-									'fields' => array(),
-								),
-								'custom' => array(
-									'sections' => array( 'img_colors' ),
-									'fields'   => array( 'img_bg_size', 'img_border_style', 'img_border_width', 'img_bg_border_radius' ),
-								),
-							),
-							'trigger' => array(
-								'custom' => array(
-									'fields' => array( 'img_border_style' ),
-								),
+							'toggle'  => [
+								'simple' => [
+									'fields' => [],
+								],
+								'circle' => [
+									'fields' => [],
+								],
+								'square' => [
+									'fields' => [],
+								],
+								'custom' => [
+									'sections' => [ 'img_colors' ],
+									'fields'   => [ 'img_bg_size', 'img_border_style', 'img_border_width', 'img_bg_border_radius' ],
+								],
+							],
+							'trigger' => [
+								'custom' => [
+									'fields' => [ 'img_border_style' ],
+								],
 
-							),
-						),
+							],
+						],
 
 						/* Image Background Size */
-						'img_bg_size'          => array(
+						'img_bg_size'          => [
 							'type'      => 'unit',
 							'label'     => __( 'Background Size', 'uabb' ),
 							'help'      => __( 'Spacing between Image edge & Background edge', 'uabb' ),
 							'maxlength' => '3',
 							'size'      => '6',
 							'slider'    => true,
-							'units'     => array( 'px' ),
-							'preview'   => array(
+							'units'     => [ 'px' ],
+							'preview'   => [
 								'type' => 'refresh',
-							),
-						),
+							],
+						],
 
 						/* Border Style and Radius for Image */
-						'img_border_style'     => array(
+						'img_border_style'     => [
 							'type'    => 'select',
 							'label'   => __( 'Border Style', 'uabb' ),
 							'default' => 'none',
 							'help'    => __( 'The type of border to use. Double borders must have a width of at least 3px to render properly.', 'uabb' ),
-							'options' => array(
+							'options' => [
 								'none'   => __( 'None', 'uabb' ),
 								'solid'  => __( 'Solid', 'uabb' ),
 								'dashed' => __( 'Dashed', 'uabb' ),
 								'dotted' => __( 'Dotted', 'uabb' ),
 								'double' => __( 'Double', 'uabb' ),
-							),
-							'toggle'  => array(
-								'solid'  => array(
-									'fields' => array( 'img_border_width', 'img_border_radius', 'img_border_color', 'img_border_hover_color' ),
-								),
-								'dashed' => array(
-									'fields' => array( 'img_border_width', 'img_border_radius', 'img_border_color', 'img_border_hover_color' ),
-								),
-								'dotted' => array(
-									'fields' => array( 'img_border_width', 'img_border_radius', 'img_border_color', 'img_border_hover_color' ),
-								),
-								'double' => array(
-									'fields' => array( 'img_border_width', 'img_border_radius', 'img_border_color', 'img_border_hover_color' ),
-								),
-							),
-						),
-						'img_border_width'     => array(
+							],
+							'toggle'  => [
+								'solid'  => [
+									'fields' => [ 'img_border_width', 'img_border_radius', 'img_border_color', 'img_border_hover_color' ],
+								],
+								'dashed' => [
+									'fields' => [ 'img_border_width', 'img_border_radius', 'img_border_color', 'img_border_hover_color' ],
+								],
+								'dotted' => [
+									'fields' => [ 'img_border_width', 'img_border_radius', 'img_border_color', 'img_border_hover_color' ],
+								],
+								'double' => [
+									'fields' => [ 'img_border_width', 'img_border_radius', 'img_border_color', 'img_border_hover_color' ],
+								],
+							],
+						],
+						'img_border_width'     => [
 							'type'        => 'unit',
 							'label'       => __( 'Border Width', 'uabb' ),
 							'slider'      => true,
-							'units'       => array( 'px' ),
+							'units'       => [ 'px' ],
 							'maxlength'   => '3',
 							'size'        => '6',
 							'placeholder' => '1',
-							'preview'     => array(
+							'preview'     => [
 								'type' => 'refresh',
-							),
-						),
-						'img_bg_border_radius' => array(
+							],
+						],
+						'img_bg_border_radius' => [
 							'type'        => 'unit',
 							'label'       => __( 'Border Radius', 'uabb' ),
 							'slider'      => true,
-							'units'       => array( 'px' ),
+							'units'       => [ 'px' ],
 							'maxlength'   => '3',
 							'size'        => '6',
 							'placeholder' => '0',
-						),
-					),
-				),
-				'icon_colors'  => array( // Section.
+						],
+					],
+				],
+				'icon_colors'  => [ // Section.
 					'title'  => __( 'Colors', 'uabb' ), // Section Title.
-					'fields' => array( // Section Fields.
+					'fields' => [ // Section Fields.
 
 						/* Style Options */
-						'icon_color_preset'       => array(
+						'icon_color_preset'       => [
 							'type'    => 'select',
 							'label'   => __( 'Icon Color Presets', 'uabb' ),
 							'default' => 'preset1',
-							'options' => array(
+							'options' => [
 								'preset1' => __( 'Preset 1', 'uabb' ),
 								'preset2' => __( 'Preset 2', 'uabb' ),
-							),
+							],
 							'help'    => __( 'Preset 1 => Icon : White, Background : Theme </br>Preset 2 => Icon : Theme, Background : #f3f3f3', 'uabb' ),
-						),
+						],
 						/* Icon Color */
-						'icon_color'              => array(
+						'icon_color'              => [
 							'type'        => 'color',
 							'label'       => __( 'Icon Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-						'icon_hover_color'        => array(
+							'connections' => [ 'color' ],
+						],
+						'icon_hover_color'        => [
 							'type'        => 'color',
 							'label'       => __( 'Icon Hover Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-							'preview'     => array(
+							'connections' => [ 'color' ],
+							'preview'     => [
 								'type' => 'none',
-							),
-						),
+							],
+						],
 
-						/* Background Color Dependent on Icon Style **/
-						'icon_bg_color'           => array(
+						/* Background Color Dependent on Icon Style */
+						'icon_bg_color'           => [
 							'type'        => 'color',
 							'label'       => __( 'Background Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-						'icon_bg_color_opc'       => array(
+							'connections' => [ 'color' ],
+						],
+						'icon_bg_color_opc'       => [
 							'type'        => 'text',
 							'label'       => __( 'Opacity', 'uabb' ),
 							'default'     => '',
 							'description' => '%',
 							'maxlength'   => '3',
 							'size'        => '5',
-						),
-						'icon_bg_hover_color'     => array(
+						],
+						'icon_bg_hover_color'     => [
 							'type'        => 'color',
 							'label'       => __( 'Background Hover Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
-							'connections' => array( 'color' ),
-							'preview'     => array(
+							'connections' => [ 'color' ],
+							'preview'     => [
 								'type' => 'none',
-							),
-						),
-						'icon_bg_hover_color_opc' => array(
+							],
+						],
+						'icon_bg_hover_color_opc' => [
 							'type'        => 'text',
 							'label'       => __( 'Opacity', 'uabb' ),
 							'default'     => '',
 							'description' => '%',
 							'maxlength'   => '3',
 							'size'        => '5',
-						),
+						],
 
 						/* Border Color Dependent on Border Style for ICon */
-						'icon_border_color'       => array(
+						'icon_border_color'       => [
 							'type'        => 'color',
 							'label'       => __( 'Border Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-						'icon_border_hover_color' => array(
+							'connections' => [ 'color' ],
+						],
+						'icon_border_hover_color' => [
 							'type'        => 'color',
 							'label'       => __( 'Border Hover Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
+							'connections' => [ 'color' ],
+						],
 
 						/* Gradient Color Option */
-						'icon_three_d'            => array(
+						'icon_three_d'            => [
 							'type'    => 'select',
 							'label'   => __( 'Gradient', 'uabb' ),
 							'default' => '0',
-							'options' => array(
+							'options' => [
 								'0' => __( 'No', 'uabb' ),
 								'1' => __( 'Yes', 'uabb' ),
-							),
-						),
-					),
-				),
-				'img_colors'   => array( // Section.
+							],
+						],
+					],
+				],
+				'img_colors'   => [ // Section.
 					'title'  => __( 'Colors', 'uabb' ), // Section Title.
-					'fields' => array( // Section Fields.
-						/* Background Color Dependent on Icon Style **/
-						'img_bg_color'           => array(
+					'fields' => [ // Section Fields.
+						/* Background Color Dependent on Icon Style */
+						'img_bg_color'           => [
 							'type'        => 'color',
 							'label'       => __( 'Background Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-						'img_bg_color_opc'       => array(
+							'connections' => [ 'color' ],
+						],
+						'img_bg_color_opc'       => [
 							'type'        => 'text',
 							'label'       => __( 'Opacity', 'uabb' ),
 							'default'     => '',
 							'description' => '%',
 							'maxlength'   => '3',
 							'size'        => '5',
-						),
-						'img_bg_hover_color'     => array(
+						],
+						'img_bg_hover_color'     => [
 							'type'        => 'color',
 							'label'       => __( 'Background Hover Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-							'preview'     => array(
+							'connections' => [ 'color' ],
+							'preview'     => [
 								'type' => 'none',
-							),
-						),
-						'img_bg_hover_color_opc' => array(
+							],
+						],
+						'img_bg_hover_color_opc' => [
 							'type'        => 'text',
 							'label'       => __( 'Opacity', 'uabb' ),
 							'default'     => '',
 							'description' => '%',
 							'maxlength'   => '3',
 							'size'        => '5',
-						),
+						],
 
 						/* Border Color Dependent on Border Style for Image */
-						'img_border_color'       => array(
+						'img_border_color'       => [
 							'type'        => 'color',
 							'label'       => __( 'Border Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-						'img_border_hover_color' => array(
+							'connections' => [ 'color' ],
+						],
+						'img_border_hover_color' => [
 							'type'        => 'color',
 							'label'       => __( 'Border Hover Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-					),
-				),
-			),
-		),
-		'typography'    => array(
+							'connections' => [ 'color' ],
+						],
+					],
+				],
+			],
+		],
+		'typography'    => [
 			'title'    => __( 'Typography', 'uabb' ),
-			'sections' => array(
-				'heading_typography'     => array(
+			'sections' => [
+				'heading_typography'     => [
 					'title'  => __( 'Heading', 'uabb' ),
-					'fields' => array(
-						'heading_tag_selection' => array(
+					'fields' => [
+						'heading_tag_selection' => [
 							'type'     => 'select',
 							'label'    => __( 'Select Tag', 'uabb' ),
 							'default'  => 'h3',
-							'sanitize' => array( 'FLBuilderUtils::esc_tags', 'h3' ),
-							'options'  => array(
+							'sanitize' => [ 'FLBuilderUtils::esc_tags', 'h3' ],
+							'options'  => [
 								'h1'   => __( 'H1', 'uabb' ),
 								'h2'   => __( 'H2', 'uabb' ),
 								'h3'   => __( 'H3', 'uabb' ),
@@ -763,37 +763,37 @@ FLBuilder::register_module(
 								'div'  => __( 'Div', 'uabb' ),
 								'p'    => __( 'p', 'uabb' ),
 								'span' => __( 'span', 'uabb' ),
-							),
-						),
-						'heading_font_typo'     => array(
+							],
+						],
+						'heading_font_typo'     => [
 							'type'       => 'typography',
 							'label'      => __( 'Typography', 'uabb' ),
 							'responsive' => true,
-							'preview'    => array(
+							'preview'    => [
 								'type'      => 'css',
 								'selector'  => '.info-table-main-heading',
 								'important' => true,
-							),
-						),
-						'heading_color'         => array(
+							],
+						],
+						'heading_color'         => [
 							'type'        => 'color',
 							'label'       => __( 'Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-					),
-				),
-				'sub_heading_typography' => array(
+							'connections' => [ 'color' ],
+						],
+					],
+				],
+				'sub_heading_typography' => [
 					'title'  => __( 'Sub Heading', 'uabb' ),
-					'fields' => array(
-						'sub_heading_tag_selection' => array(
+					'fields' => [
+						'sub_heading_tag_selection' => [
 							'type'     => 'select',
 							'label'    => __( 'Select Tag', 'uabb' ),
 							'default'  => 'h5',
-							'sanitize' => array( 'FLBuilderUtils::esc_tags', 'h5' ),
-							'options'  => array(
+							'sanitize' => [ 'FLBuilderUtils::esc_tags', 'h5' ],
+							'options'  => [
 								'h1'   => __( 'H1', 'uabb' ),
 								'h2'   => __( 'H2', 'uabb' ),
 								'h3'   => __( 'H3', 'uabb' ),
@@ -803,67 +803,67 @@ FLBuilder::register_module(
 								'div'  => __( 'Div', 'uabb' ),
 								'p'    => __( 'p', 'uabb' ),
 								'span' => __( 'span', 'uabb' ),
-							),
-						),
-						'sub_heading_font_typo'     => array(
+							],
+						],
+						'sub_heading_font_typo'     => [
 							'type'       => 'typography',
 							'label'      => __( 'Typography', 'uabb' ),
 							'responsive' => true,
-							'preview'    => array(
+							'preview'    => [
 								'type'      => 'css',
 								'selector'  => '.info-table-sub-heading',
 								'important' => true,
-							),
-						),
-						'sub_heading_color'         => array(
+							],
+						],
+						'sub_heading_color'         => [
 							'type'        => 'color',
 							'label'       => __( 'Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-					),
-				),
-				'description_typography' => array(
+							'connections' => [ 'color' ],
+						],
+					],
+				],
+				'description_typography' => [
 					'title'  => __( 'Description', 'uabb' ),
-					'fields' => array(
-						'description_font_typo' => array(
+					'fields' => [
+						'description_font_typo' => [
 							'type'       => 'typography',
 							'label'      => __( 'Typography', 'uabb' ),
 							'responsive' => true,
-							'preview'    => array(
+							'preview'    => [
 								'type'      => 'css',
 								'selector'  => '.info-table-description *',
 								'important' => true,
-							),
-						),
-						'description_color'     => array(
+							],
+						],
+						'description_color'     => [
 							'type'        => 'color',
 							'label'       => __( 'Color', 'uabb' ),
 							'default'     => '',
 							'show_reset'  => true,
 							'show_alpha'  => true,
-							'connections' => array( 'color' ),
-						),
-					),
-				),
-				'btn_typography'         => array(
+							'connections' => [ 'color' ],
+						],
+					],
+				],
+				'btn_typography'         => [
 					'title'  => __( 'Button', 'uabb' ),
-					'fields' => array(
-						'btn_font_typo' => array(
+					'fields' => [
+						'btn_font_typo' => [
 							'type'       => 'typography',
 							'label'      => __( 'Typography', 'uabb' ),
 							'responsive' => true,
-							'preview'    => array(
+							'preview'    => [
 								'type'      => 'css',
 								'selector'  => '.info-table-button a',
 								'important' => true,
-							),
-						),
-					),
-				),
-			),
-		),
-	)
+							],
+						],
+					],
+				],
+			],
+		],
+	]
 );
