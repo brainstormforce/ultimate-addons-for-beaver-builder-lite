@@ -14,19 +14,13 @@ The Ultimate Addons for Beaver Builder extends the Beaver Builder functionality 
 
 <strong>The Ultimate Addons for Beaver Builder</strong>
 
-Supercharge Beaver Builder with 60+ powerful modules, 200+ section templates & 100+ page templates to build WordPress websites in record time! This <a href=" https://www.ultimatebeaver.com/?utm_source=wprepo&utm_campaign=Lite&utm_medium=description">Beaver Builder Addon</a> is here to make website building an ultimate journey for you all.
+Supercharge Beaver Builder with 60+ modules, 200+ section templates, and 100+ page templates to build WordPress websites faster than ever! With the <a href=" https://www.ultimatebeaver.com/?utm_source=wprepo&utm_campaign=Lite&utm_medium=description">Beaver Builder Addon</a> Addon, drag & drop custom modules and pre-designed templates to cut development time by 30% and make website building a seamless journey.
 
-Simply drag &amp; drop custom modules and pre-designed row &amp; page templates to reduce your website development time by around 30%!
-
-With the Ultimate Addons for Beaver Builder, we took the pain out of the website development process with easy-to-use custom & creative modules that allow you to build websites in minutes without writing a single line of code. Thus leaving you free from the hassles of coding!
-
-The Ultimate Addons for Beaver Builder, free up your time from all the complex website development process with easy to use drag and drop modules and templates that make the process quick and easy.
-
-[Try it out on a free dummy site](https://bsf.io/uabb-lite-demo)
+The Ultimate Addons for Beaver Builder simplifies website development with easy drag-and-drop modules and templates, letting you build stunning websites in minutes—no coding required![Try it out on a free dummy site](https://bsf.io/uabb-lite-demo)
 
 <blockquote><strong>Ultimate Addons Pro &amp; Premium Support: </strong>
 
-This plugin is the lite version of the Ultimate Addons for Beaver Builder that is available for free. If you wish to avail all the time-saving features you'll ever need, including premium support, white label branding, 60+ powerful modules, 200+ section templates & 100+ page templates and more, upgrade the Ultimate Addons to the pro version. <a href="https://www.ultimatebeaver.com/pricing/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Support" target="_blank">Click Here to Get Pro Copy now</a>!.<p></p></blockquote>
+This free lite version of Ultimate Addons for Beaver Builder offers basic features. Upgrade to the pro version for premium support, white-label branding, 60+ modules, 200+ section templates, 100+ page templates, and more time-saving tools! <a href="https://www.ultimatebeaver.com/pricing/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=Support" target="_blank">Click Here to Get Pro Copy now</a>!.<p></p></blockquote>
 
 <strong>Learn From Tutorials</strong>
 
@@ -34,7 +28,7 @@ Not sure of how things work? With over 170+ helpful articles, we are here to hel
 
 <strong>Join our Facebook Group</strong>
 
-Want to connect with us to know more? Or have some suggestions we can take forward? Join our Facebook community, where a number of professional and newbie Beavers share their views and suggestions for the Ultimate Addons. If you have questions or anything to discuss, or you would like to meet and network with others, join in and say hello! <a href="https://www.brainstormforce.com/go/uabb-facebook-group/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=FB" target="_blank">Ultimate Addons Facebook Group</a>
+Want to connect or share suggestions? Join our Facebook community to discuss Ultimate Addons, ask questions, and network with other Beaver Builder users!
 
 <strong>Ultimate Addons for Beaver Builder Lite - Features</strong>
 <ul>
