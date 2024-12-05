@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/brainstormforce/ultimate-addons-for-beaver-builder-lite#readme",
   "devDependencies": {
+    "gpt-po": "^1.2.0",
     "grunt": "^1.6.1",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-compress": "^1.4.3",
@@ -22,5 +23,12 @@
     "grunt-wp-i18n": "^1.0.2",
     "grunt-wp-readme-to-markdown": "^2.0.1",
     "shelljs": "~0.8.1"
-  }
+  },
+  "scripts": {
+    "i18n:po": "wp i18n update-po languages/uabb.pot",
+    "i18n:mo": "wp i18n make-mo languages",
+    "i18n:json": "wp i18n make-json languages --no-purge",
+    "i18n:gptpo:nl": "gpt-po translate --po languages/uabb-nl_NL.po --lang nl --verbose"
+}
+
 }
