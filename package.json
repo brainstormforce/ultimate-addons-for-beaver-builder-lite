@@ -25,7 +25,7 @@
     "shelljs": "~0.8.1"
   },
   "scripts": {
-		"i18n": "grunt i18n && wp i18n make-pot . --exclude='node_modules,vendor,tests,artifact' languages/uabb.pot --domain=uabb --debug",
+    "i18n": "grunt i18n && wp i18n make-pot . --exclude='node_modules,vendor,tests,artifact' languages/uabb.pot --domain=uabb --debug",
     "i18n:po": "wp i18n update-po languages/uabb.pot",
     "i18n:mo": "wp i18n make-mo languages",
     "i18n:json": "wp i18n make-json languages --no-purge",
