@@ -1,12 +1,12 @@
 # Copyright (C) 2024 Brainstorm Force
-# This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite package.
+# This file is distributed under the same license as the Ultimate Addons for Beaver Builder package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.5.13\n"
+"Project-Id-Version: Ultimate Addons for Beaver Builder 1.5.13\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-"
 "lite\n"
-"POT-Creation-Date: 2024-11-15 07:16:51+00:00\n"
+"POT-Creation-Date: 2024-12-12 10:09:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -262,11 +262,11 @@ msgstr ""
 msgid "%s Modules"
 msgstr ""
 
-#: classes/class-uabb-init.php:254
+#: classes/class-uabb-init.php:256
 msgid "plugin requires"
 msgstr ""
 
-#: classes/class-uabb-init.php:256
+#: classes/class-uabb-init.php:258
 msgid " plugin installed & activated."
 msgstr ""
 
@@ -4509,8 +4509,43 @@ msgstr ""
 msgid "Justify"
 msgstr ""
 
+#: vendor/wp-cli/core-command/src/Core_Command.php:749
+msgid "Wildcard DNS may not be configured correctly."
+msgstr ""
+
+#: vendor/wp-cli/entity-command/src/Site_Command.php:157
+msgid "Uncategorized"
+msgstr ""
+
+#: vendor/wp-cli/export-command/src/WP_Export_XML_Over_HTTP.php:20
+#: vendor/wp-cli/export-command/src/WP_Export_XML_Over_HTTP.php:25
+msgid "Export Error"
+msgstr ""
+
+#: vendor/wp-cli/extension-command/src/WP_CLI/CommandWithUpgrade.php:770
+msgid " Try again"
+msgstr ""
+
+#: vendor/wp-cli/extension-command/src/WP_CLI/CommandWithUpgrade.php:776
+msgid "API error. Try Again."
+msgstr ""
+
+#: vendor/wp-cli/media-command/src/Media_Command.php:159
+msgid "image"
+msgid_plural "images"
+msgstr[0] ""
+msgstr[1] ""
+
+#: vendor/wp-cli/wp-cli/php/utils-wp.php:247
+msgid "Inactive Widgets"
+msgstr ""
+
+#: vendor/wp-cli/wp-cli/php/utils-wp.php:250
+msgid "Drag widgets here to remove them from the sidebar but keep their settings."
+msgstr ""
+
 #. Plugin Name of the plugin/theme
-msgid "Ultimate Addons for Beaver Builder - Lite"
+msgid "Ultimate Addons for Beaver Builder"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
@@ -4537,7 +4572,7 @@ msgctxt "%s stands for custom branded \"UABB\" name."
 msgid "%s Settings"
 msgstr ""
 
-#: classes/class-uabb-init.php:66
+#: classes/class-uabb-init.php:68
 msgctxt "Plugin action link label."
 msgid "Upgrade"
 msgstr ""
@@ -4559,4 +4594,18 @@ msgstr ""
 #: objects/fl-nested-form-button.php:225 objects/fl-nested-form-button.php:656
 msgctxt "Width."
 msgid "Auto"
+msgstr ""
+
+#: vendor/wp-cli/core-command/src/Core_Command.php:491
+#: vendor/wp-cli/core-command/src/Core_Command.php:565
+#. translators: placeholder is blog name
+#. translators: placeholder is user supplied title
+msgctxt "Default network name"
+msgid "%s Sites"
+msgstr ""
+
+#: vendor/wp-cli/entity-command/src/Site_Command.php:160
+#. translators: Default category slug
+msgctxt "Default category slug"
+msgid "Uncategorized"
 msgstr ""
