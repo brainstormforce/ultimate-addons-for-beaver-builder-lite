@@ -34,8 +34,8 @@ class UABB_Init {
 
 			add_filter( 'fl_builder_settings_form_defaults', array( $this, 'uabb_global_settings_form_defaults' ), 10, 2 );
 			// Load all the required files of bb-ultimate-addon.
-			self::includes();
-			add_action( 'init', array( $this, 'init' ) );
+			add_action( 'init', array( $this, 'includes' ), 9 ); // Lower priority number runs first
+			add_action( 'init', array( $this, 'init' ), 10 );
 
 			// Enqueue scripts.
 			add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ), 100 );
@@ -54,7 +54,7 @@ class UABB_Init {
 			add_action( 'network_admin_notices', array( $this, 'admin_notices' ) );
 		}
 		// Hook the load_plugin_textdomain function to the init action.
-		add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
+		add_action( 'init', array( $this, 'load_plugin_textdomain'), 8 );
 	}
 	/**
 	 * Function that renders links
