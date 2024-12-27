@@ -1,12 +1,12 @@
 # Copyright (C) 2024 Brainstorm Force
-# This file is distributed under the same license as the Ultimate Addons for Beaver Builder package.
+# This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Addons for Beaver Builder 1.5.13\n"
+"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.5.13\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-"
 "lite\n"
-"POT-Creation-Date: 2024-12-12 10:09:15+00:00\n"
+"POT-Creation-Date: 2024-12-27 10:32:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -4545,7 +4545,7 @@ msgid "Drag widgets here to remove them from the sidebar but keep their settings
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "Ultimate Addons for Beaver Builder"
+msgid "Ultimate Addons for Beaver Builder - Lite"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
