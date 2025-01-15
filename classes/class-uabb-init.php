@@ -53,8 +53,7 @@ class UABB_Init {
 			add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 			add_action( 'network_admin_notices', array( $this, 'admin_notices' ) );
 		}
-		// Hook the load_plugin_textdomain function to the init action.
-		add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
+
 	}
 	/**
 	 * Function that renders links
