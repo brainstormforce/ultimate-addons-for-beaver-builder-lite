@@ -5,7 +5,7 @@ Tags: beaver builder, beaver builder free, beaver builder lite, beaver builder a
 Requires at least: 4.6
 Requires PHP: 7.0
 Tested up to: 6.7
-Stable tag: 1.5.13
+Stable tag: 1.5.14
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
