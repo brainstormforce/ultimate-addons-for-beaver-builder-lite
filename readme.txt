@@ -105,6 +105,7 @@ Yes, with .po and .mo files and GlotPress support.
 
 = 1.5.14 = 
 * Improvement: Revised the README content.
+* Fixed: Flip Box - Box content bounce on page load.
 
 = 1.5.13 = 
 * Fixed: Info List - Resolved warning for undefined array key when selecting image size in the module.
