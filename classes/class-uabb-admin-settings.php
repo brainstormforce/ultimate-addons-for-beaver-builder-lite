@@ -504,7 +504,7 @@ final class UABBBuilderAdminSettings {
 	}
 
 /**
- * Render CartFlows NPS Survey Notice.
+ * Render Ultimate Addons for Beaver Builder Lite NPS Survey Notice.
  *
  * @since x.x.x
  * @return void
@@ -523,12 +523,12 @@ public static function show_nps_notice() {
 
                     // Step 1 i.e rating input.
                     'logo'                  => esc_url( BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg' ),
-                    'plugin_name'           => __( 'Ultimate Addons for Beaver Builder', 'uabb' ),
-                    'nps_rating_message'    => __( 'How likely are you to recommend Ultimate Addons for Beaver Builder to your friends or colleagues?', 'uabb' ),
+                    'plugin_name'           => __( 'Ultimate Addons for Beaver Builder Lite', 'uabb' ),
+                    'nps_rating_message'    => __( 'How likely are you to recommend Ultimate Addons for Beaver Builder Lite to your friends or colleagues?', 'uabb' ),
 
                     // Step 2A i.e. positive.
-                    'feedback_content'      => __( 'Could you please do us a favor and give us a 5-star rating on WordPress? It would help others choose Ultimate Addons for Beaver Builder with confidence. Thank you!', 'uabb' ),
-                    'plugin_rating_link'    => esc_url( 'https://www.trustpilot.com/review/brainstormforce.com' ),
+                    'feedback_content'      => __( 'Could you please do us a favor and give us a 5-star rating on WordPress? It would help others choose Ultimate Addons for Beaver Builder Lite with confidence. Thank you!', 'uabb' ),
+                    'plugin_rating_link'    => esc_url( 'https://www.trustpilot.com/review/ultimatebeaver.com' ),
 
                     // Step 2B i.e. negative.
                     'plugin_rating_title'   => __( 'Thank you for your feedback', 'uabb' ),
