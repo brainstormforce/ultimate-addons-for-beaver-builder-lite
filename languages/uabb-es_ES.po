@@ -11,50 +11,42 @@ msgstr ""
 "PO-Revision-Date: 2025-01-20T17:51:02+00:00\n"
 "Language: \n"
 
-#: bb-ultimate-addon.php
 #. Plugin Name of the plugin
+#: bb-ultimate-addon.php
 msgid "Ultimate Addons for Beaver Builder - Lite"
 msgstr "Complementos Ultimate para Beaver Builder - Lite"
 
-#: bb-ultimate-addon.php
 #. Plugin URI of the plugin
+#: bb-ultimate-addon.php
 msgid "http://www.ultimatebeaver.com/"
 msgstr "http://www.ultimatebeaver.com/"
 
-#: bb-ultimate-addon.php
 #. Description of the plugin
-msgid ""
-"Ultimate Addons is a free extension for Beaver Builder that adds 10 modules, and works on top of any Beaver Builder "
-"Package. (Free, Standard, Pro & Agency) You can use it with on any WordPress theme."
-msgstr ""
-"Ultimate Addons es una extensión gratuita para Beaver Builder que añade 10 módulos y funciona sobre cualquier paquete "
-"de Beaver Builder. (Gratis, Estándar, Pro y Agencia) Puedes usarlo con cualquier tema de WordPress."
-
 #: bb-ultimate-addon.php
+msgid "Ultimate Addons is a free extension for Beaver Builder that adds 10 modules, and works on top of any Beaver Builder Package. (Free, Standard, Pro & Agency) You can use it with on any WordPress theme."
+msgstr "Ultimate Addons es una extensión gratuita para Beaver Builder que añade 10 módulos y funciona sobre cualquier paquete de Beaver Builder. (Gratis, Estándar, Pro y Agencia) Puedes usarlo con cualquier tema de WordPress."
+
 #. Author of the plugin
+#: bb-ultimate-addon.php
 msgid "Brainstorm Force"
 msgstr "Brainstorm Force"
 
-#: bb-ultimate-addon.php
 #. Author URI of the plugin
+#: bb-ultimate-addon.php
 msgid "http://www.brainstormforce.com"
 msgstr "http://www.brainstormforce.com"
 
-#: admin/bsf-analytics/class-bsf-analytics.php:185
 #. translators: %s product name
-msgid ""
-"Want to help make <strong>%1s</strong> even more awesome? Allow us to collect non-sensitive diagnostic data and usage "
-"information. "
-msgstr ""
-"¿Quieres ayudar a hacer que <strong>%1s</strong> sea aún más increíble? Permítenos recopilar datos de diagnóstico no "
-"sensibles e información de uso."
+#: admin/bsf-analytics/class-bsf-analytics.php:185
+msgid "Want to help make <strong>%1s</strong> even more awesome? Allow us to collect non-sensitive diagnostic data and usage information. "
+msgstr "¿Quieres ayudar a hacer que <strong>%1s</strong> sea aún más increíble? Permítenos recopilar datos de diagnóstico no sensibles e información de uso."
 
 #: admin/bsf-analytics/class-bsf-analytics.php:188
 msgid "This will be applicable for all sites from the network."
 msgstr "Esto será aplicable para todos los sitios de la red."
 
-#: admin/bsf-analytics/class-bsf-analytics.php:212
 #. translators: %s usage doc link
+#: admin/bsf-analytics/class-bsf-analytics.php:212
 msgid " Know More."
 msgstr "Saber más."
 
@@ -87,28 +79,13 @@ msgid "Learn More."
 msgstr "Saber más."
 
 #: bb-ultimate-addon.php:60
-msgid ""
-"Unfortunately, plugin could not be activated as the memory allocated by your host has almost exhausted. UABB plugin "
-"recommends that your site should have 15M PHP memory remaining. <br/><br/>Please check <a target=\"_blank\" "
-"href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">this</a> article for solution or contact <a "
-"target=\"_blank\" href=\"http://store.brainstormforce.com/support\">support</a>.<br/><br/><a class=\"button "
-"button-primary\" href=\"%s\">Return to Plugins Page</a>"
-msgstr ""
-"Desafortunadamente, el complemento no pudo ser activado ya que la memoria asignada por tu proveedor de hosting está "
-"casi agotada. El complemento UABB recomienda que tu sitio tenga 15M de memoria PHP restante. <br/><br/>Por favor, "
-"revisa <a target=\"_blank\" href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">este</a> artículo "
-"para una solución o contacta <a target=\"_blank\" "
-"href=\"http://store.brainstormforce.com/support\">soporte</a>.<br/><br/><a class=\"button button-primary\" "
-"href=\"%s\">Regresar a la página de complementos</a>"
+msgid "Unfortunately, plugin could not be activated as the memory allocated by your host has almost exhausted. UABB plugin recommends that your site should have 15M PHP memory remaining. <br/><br/>Please check <a target=\"_blank\" href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">this</a> article for solution or contact <a target=\"_blank\" href=\"http://store.brainstormforce.com/support\">support</a>.<br/><br/><a class=\"button button-primary\" href=\"%s\">Return to Plugins Page</a>"
+msgstr "Desafortunadamente, el complemento no pudo ser activado ya que la memoria asignada por tu proveedor de hosting está casi agotada. El complemento UABB recomienda que tu sitio tenga 15M de memoria PHP restante. <br/><br/>Por favor, revisa <a target=\"_blank\" href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">este</a> artículo para una solución o contacta <a target=\"_blank\" href=\"http://store.brainstormforce.com/support\">soporte</a>.<br/><br/><a class=\"button button-primary\" href=\"%s\">Regresar a la página de complementos</a>"
 
-#: bb-ultimate-addon.php:138
 #. Translators: %s is the URL to deactivate one of the Ultimate Addon for Beaver Builder versions.
-msgid ""
-"You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a "
-"href='%s'>deactivate one</a> before continuing."
-msgstr ""
-"Actualmente tienes dos versiones de <strong>Ultimate Addon para Beaver Builder</strong> activas en este sitio. Por "
-"favor <a href='%s'>desactiva una</a> antes de continuar."
+#: bb-ultimate-addon.php:138
+msgid "You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='%s'>deactivate one</a> before continuing."
+msgstr "Actualmente tienes dos versiones de <strong>Ultimate Addon para Beaver Builder</strong> activas en este sitio. Por favor <a href='%s'>desactiva una</a> antes de continuar."
 
 #: classes/class-uabb-admin-settings.php:179
 msgid "Something went wrong!"
@@ -194,12 +171,8 @@ msgid "Welcome to %s Template Cloud!"
 msgstr "¡Bienvenido a la Nube de Plantillas %s!"
 
 #: classes/class-uabb-cloud-templates.php:321
-msgid ""
-"%s Template Cloud would allow you to browse through our growing library of 150+ professionally designed templates and "
-"download the only ones that you need."
-msgstr ""
-"%s Nube de Plantillas te permitirá explorar nuestra creciente biblioteca de más de 150 plantillas diseñadas "
-"profesionalmente y descargar solo las que necesites."
+msgid "%s Template Cloud would allow you to browse through our growing library of 150+ professionally designed templates and download the only ones that you need."
+msgstr "%s Nube de Plantillas te permitirá explorar nuestra creciente biblioteca de más de 150 plantillas diseñadas profesionalmente y descargar solo las que necesites."
 
 #: classes/class-uabb-cloud-templates.php:321
 msgid "Let's get started"
@@ -823,9 +796,7 @@ msgstr "Habilitar diseño de interfaz de usuario"
 
 #: includes/admin-settings-general.php:36
 msgid "Enable this setting for applying UI effects such as - Section panel, Search box etc. to frontend page builder. "
-msgstr ""
-"Habilite esta configuración para aplicar efectos de interfaz de usuario como - panel de sección, cuadro de búsqueda, "
-"etc. al constructor de páginas en el frontend."
+msgstr "Habilite esta configuración para aplicar efectos de interfaz de usuario como - panel de sección, cuadro de búsqueda, etc. al constructor de páginas en el frontend."
 
 #: includes/admin-settings-general.php:39
 msgid "Read "
@@ -858,12 +829,8 @@ msgid "Reload Icons"
 msgstr "Recargar íconos"
 
 #: includes/admin-settings-icons.php:23
-msgid ""
-"Clicking the button below will reinstall %1$s icons on your website. If you are facing issues to load %2$s icons then "
-"you are at right place to troubleshoot it."
-msgstr ""
-"Hacer clic en el botón de abajo reinstalará los íconos %1$s en su sitio web. Si tiene problemas para cargar los íconos "
-"%2$s, entonces está en el lugar correcto para solucionarlo."
+msgid "Clicking the button below will reinstall %1$s icons on your website. If you are facing issues to load %2$s icons then you are at right place to troubleshoot it."
+msgstr "Hacer clic en el botón de abajo reinstalará los íconos %1$s en su sitio web. Si tiene problemas para cargar los íconos %2$s, entonces está en el lugar correcto para solucionarlo."
 
 #: includes/admin-settings-modules.php:26
 msgid "Upgrade to Premium version to get these modules"
@@ -883,9 +850,7 @@ msgstr "Etiqueta blanca"
 
 #: includes/admin-settings-premium.php:21
 msgid "You can White Label Ultimate Addons and provide a seamless experience to your clients without any extra cost."
-msgstr ""
-"Puede etiquetar en blanco los complementos Ultimate y proporcionar una experiencia fluida a sus clientes sin costo "
-"adicional."
+msgstr "Puede etiquetar en blanco los complementos Ultimate y proporcionar una experiencia fluida a sus clientes sin costo adicional."
 
 #: includes/admin-settings-premium.php:22
 msgid "Lightweight"
@@ -893,41 +858,27 @@ msgstr "Ligero"
 
 #: includes/admin-settings-premium.php:22
 msgid "Like Beaver Builder, Ultimate Addons is built for performance. It follows the best WordPress development standards."
-msgstr ""
-"Al igual que Beaver Builder, Ultimate Addons está construido para el rendimiento. Sigue los mejores estándares de "
-"desarrollo de WordPress."
+msgstr "Al igual que Beaver Builder, Ultimate Addons está construido para el rendimiento. Sigue los mejores estándares de desarrollo de WordPress."
 
 #: includes/admin-settings-premium.php:23
 msgid "Professional Support"
 msgstr "Soporte profesional"
 
 #: includes/admin-settings-premium.php:23
-msgid ""
-"Our dedicated support team is friendly and has experience of helping thousands of customers with consistent five star "
-"ratings."
-msgstr ""
-"Nuestro equipo de soporte dedicado es amable y tiene experiencia ayudando a miles de clientes con calificaciones "
-"consistentes de cinco estrellas."
+msgid "Our dedicated support team is friendly and has experience of helping thousands of customers with consistent five star ratings."
+msgstr "Nuestro equipo de soporte dedicado es amable y tiene experiencia ayudando a miles de clientes con calificaciones consistentes de cinco estrellas."
 
 #: includes/admin-settings-premium.php:24
 msgid "Regular Updates"
 msgstr "Actualizaciones regulares"
 
 #: includes/admin-settings-premium.php:24
-msgid ""
-"We strive to keep Ultimate Addons on the cutting edge of functionality. Get free updates with bug fixes and new "
-"features."
-msgstr ""
-"Nos esforzamos por mantener los complementos Ultimate a la vanguardia de la funcionalidad. Obtenga actualizaciones "
-"gratuitas con correcciones de errores y nuevas características."
+msgid "We strive to keep Ultimate Addons on the cutting edge of functionality. Get free updates with bug fixes and new features."
+msgstr "Nos esforzamos por mantener los complementos Ultimate a la vanguardia de la funcionalidad. Obtenga actualizaciones gratuitas con correcciones de errores y nuevas características."
 
 #: includes/admin-settings-premium.php:25
-msgid ""
-"Template Cloud is one of our flagship feature! It provides access to hundreds of templates right in the WordPress "
-"backend."
-msgstr ""
-"¡Template Cloud es una de nuestras características principales! Proporciona acceso a cientos de plantillas directamente "
-"en el backend de WordPress."
+msgid "Template Cloud is one of our flagship feature! It provides access to hundreds of templates right in the WordPress backend."
+msgstr "¡Template Cloud es una de nuestras características principales! Proporciona acceso a cientos de plantillas directamente en el backend de WordPress."
 
 #: includes/admin-settings-premium.php:26
 msgid "WordPress Multisite"
@@ -943,9 +894,7 @@ msgstr "Todas las Ediciones de Beaver Builder"
 
 #: includes/admin-settings-premium.php:27
 msgid "Ultimate Addons work with free as well paid editions of Beaver Builder. It nicely complements agency version too."
-msgstr ""
-"Ultimate Addons funciona con ediciones gratuitas y de pago de Beaver Builder. También complementa muy bien la versión "
-"para agencias."
+msgstr "Ultimate Addons funciona con ediciones gratuitas y de pago de Beaver Builder. También complementa muy bien la versión para agencias."
 
 #: includes/admin-settings-premium.php:28
 msgid "All WordPress Themes"
@@ -953,9 +902,7 @@ msgstr "Todos los Temas de WordPress"
 
 #: includes/admin-settings-premium.php:28
 msgid "Our plugin can be used with any theme. Genesis, GeneratePress & Beaver Builder themes are popular among our users."
-msgstr ""
-"Nuestro plugin se puede usar con cualquier tema. Los temas Genesis, GeneratePress y Beaver Builder son populares entre "
-"nuestros usuarios."
+msgstr "Nuestro plugin se puede usar con cualquier tema. Los temas Genesis, GeneratePress y Beaver Builder son populares entre nuestros usuarios."
 
 #: includes/admin-settings-premium.php:29
 msgid "From Brainstorm Force"
@@ -990,57 +937,28 @@ msgid "Welcome to the Ultimate Addon for Beaver Builder!"
 msgstr "¡Bienvenido al Ultimate Addon para Beaver Builder!"
 
 #: includes/admin-settings-welcome.php:16
-msgid ""
-"Thank you for choosing the Ultimate Addons for Beaver Builder and welcome on board! We promise to take you through an "
-"ultimate journey of website building. You’ll find a few settings in the column on the left. Need some more time-saving "
-"and advanced modules to play with? You can avail all of them with 200+ page & section templates and dedicated support "
-"from our team."
-msgstr ""
-"¡Gracias por elegir los Ultimate Addons para Beaver Builder y bienvenido a bordo! Prometemos llevarte a través de un "
-"viaje definitivo de creación de sitios web. Encontrarás algunas configuraciones en la columna de la izquierda. "
-"¿Necesitas algunos módulos avanzados y que ahorren tiempo para jugar? Puedes obtener todos ellos con más de 200 "
-"plantillas de página y sección y soporte dedicado de nuestro equipo."
+msgid "Thank you for choosing the Ultimate Addons for Beaver Builder and welcome on board! We promise to take you through an ultimate journey of website building. You’ll find a few settings in the column on the left. Need some more time-saving and advanced modules to play with? You can avail all of them with 200+ page & section templates and dedicated support from our team."
+msgstr "¡Gracias por elegir los Ultimate Addons para Beaver Builder y bienvenido a bordo! Prometemos llevarte a través de un viaje definitivo de creación de sitios web. Encontrarás algunas configuraciones en la columna de la izquierda. ¿Necesitas algunos módulos avanzados y que ahorren tiempo para jugar? Puedes obtener todos ellos con más de 200 plantillas de página y sección y soporte dedicado de nuestro equipo."
 
 #: includes/admin-settings-welcome.php:22
-msgid ""
-"For more time-saving features and access to our expert support team, <a href=\"%s\" target=\"_blank\">upgrade now!</a> "
-"With regular updates, helpful tutorials, we promise to make website building an ultimate journey for you!"
-msgstr ""
-"Para más características que ahorran tiempo y acceso a nuestro equipo de soporte experto, <a href=\"%s\" "
-"target=\"_blank\">¡actualiza ahora!</a> Con actualizaciones regulares y tutoriales útiles, prometemos hacer de la "
-"creación de sitios web un viaje definitivo para ti."
+msgid "For more time-saving features and access to our expert support team, <a href=\"%s\" target=\"_blank\">upgrade now!</a> With regular updates, helpful tutorials, we promise to make website building an ultimate journey for you!"
+msgstr "Para más características que ahorran tiempo y acceso a nuestro equipo de soporte experto, <a href=\"%s\" target=\"_blank\">¡actualiza ahora!</a> Con actualizaciones regulares y tutoriales útiles, prometemos hacer de la creación de sitios web un viaje definitivo para ti."
 
 #: includes/admin-settings-welcome.php:27
-msgid ""
-"The Ultimate Addon for Beaver Builder comes with a number of custom modules to enhance your experience of website "
-"creation with Beaver Builder. Inheriting the drag & drop functionality and the performance oriented objective of Beaver "
-"Builder, the Ultimate Addons are now the best addons to be used with the page builder."
-msgstr ""
-"El Ultimate Addon para Beaver Builder viene con varios módulos personalizados para mejorar tu experiencia de creación "
-"de sitios web con Beaver Builder. Heredando la funcionalidad de arrastrar y soltar y el objetivo orientado al "
-"rendimiento de Beaver Builder, los Ultimate Addons son ahora los mejores addons para usar con el constructor de páginas."
+msgid "The Ultimate Addon for Beaver Builder comes with a number of custom modules to enhance your experience of website creation with Beaver Builder. Inheriting the drag & drop functionality and the performance oriented objective of Beaver Builder, the Ultimate Addons are now the best addons to be used with the page builder."
+msgstr "El Ultimate Addon para Beaver Builder viene con varios módulos personalizados para mejorar tu experiencia de creación de sitios web con Beaver Builder. Heredando la funcionalidad de arrastrar y soltar y el objetivo orientado al rendimiento de Beaver Builder, los Ultimate Addons son ahora los mejores addons para usar con el constructor de páginas."
 
 #: includes/admin-settings-welcome.php:31
-msgid ""
-"With <a href=\"%1$s\" target=\"_blank\">regular updates</a>, <a href=\"%2$s\" target=\"_blank\">helpful tutorials</a>, "
-"we promise to make website building an ultimate journey for you!"
-msgstr ""
-"Con <a href=\"%1$s\" target=\"_blank\">actualizaciones regulares</a>, <a href=\"%2$s\" target=\"_blank\">tutoriales "
-"útiles</a>, prometemos hacer de la creación de sitios web un viaje definitivo para ti."
+msgid "With <a href=\"%1$s\" target=\"_blank\">regular updates</a>, <a href=\"%2$s\" target=\"_blank\">helpful tutorials</a>, we promise to make website building an ultimate journey for you!"
+msgstr "Con <a href=\"%1$s\" target=\"_blank\">actualizaciones regulares</a>, <a href=\"%2$s\" target=\"_blank\">tutoriales útiles</a>, prometemos hacer de la creación de sitios web un viaje definitivo para ti."
 
 #: includes/admin-settings-welcome.php:40
 msgid "Join our Community!"
 msgstr "¡Únete a nuestra Comunidad!"
 
 #: includes/admin-settings-welcome.php:41
-msgid ""
-"Want to connect with us to know more? Or have some suggestions we can take forward? <a href=\"%s\" "
-"target=\"_blank\">Join our Facebook community</a>, where a number of professional and newbie Beavers share their views "
-"and suggestions for the Ultimate Addons."
-msgstr ""
-"¿Quieres conectarte con nosotros para saber más? ¿O tienes algunas sugerencias que podamos llevar adelante? <a "
-"href=\"%s\" target=\"_blank\">Únete a nuestra comunidad de Facebook</a>, donde varios Beavers profesionales y novatos "
-"comparten sus opiniones y sugerencias para los Ultimate Addons."
+msgid "Want to connect with us to know more? Or have some suggestions we can take forward? <a href=\"%s\" target=\"_blank\">Join our Facebook community</a>, where a number of professional and newbie Beavers share their views and suggestions for the Ultimate Addons."
+msgstr "¿Quieres conectarte con nosotros para saber más? ¿O tienes algunas sugerencias que podamos llevar adelante? <a href=\"%s\" target=\"_blank\">Únete a nuestra comunidad de Facebook</a>, donde varios Beavers profesionales y novatos comparten sus opiniones y sugerencias para los Ultimate Addons."
 
 #: includes/ui-panel-presets.php:91
 msgid "Note - You can enable, disable and manage %s presets here."
@@ -1048,12 +966,8 @@ msgstr "Nota - Puedes habilitar, deshabilitar y gestionar los presets de %s aqu�
 
 #: includes/ui-panel-presets.php:94
 #: includes/ui-panel-sections.php:98
-msgid ""
-"Note - Images used in the templates are hotlinked from our server and are subject to copyright. It is strongly "
-"recommended that you replace them with your own."
-msgstr ""
-"Nota - Las imágenes utilizadas en las plantillas están enlazadas desde nuestro servidor y están sujetas a derechos de "
-"autor. Se recomienda encarecidamente que las reemplaces con las tuyas."
+msgid "Note - Images used in the templates are hotlinked from our server and are subject to copyright. It is strongly recommended that you replace them with your own."
+msgstr "Nota - Las imágenes utilizadas en las plantillas están enlazadas desde nuestro servidor y están sujetas a derechos de autor. Se recomienda encarecidamente que las reemplaces con las tuyas."
 
 #: includes/ui-panel-sections.php:33
 msgid "Search Section..."
@@ -1742,12 +1656,8 @@ msgid "Photo"
 msgstr "Foto"
 
 #: modules/advanced-icon/advanced-icon.php:365
-msgid ""
-"This background color properties will work only when Icon background style is not simple. Also the border color "
-"properties will work for Design your own."
-msgstr ""
-"Estas propiedades de color de fondo solo funcionarán cuando el estilo de fondo del ícono no sea simple. También las "
-"propiedades del color del borde funcionarán para Diseña el tuyo."
+msgid "This background color properties will work only when Icon background style is not simple. Also the border color properties will work for Design your own."
+msgstr "Estas propiedades de color de fondo solo funcionarán cuando el estilo de fondo del ícono no sea simple. También las propiedades del color del borde funcionarán para Diseña el tuyo."
 
 #: modules/advanced-icon/advanced-icon.php:391
 msgid "Background Color "
@@ -1843,12 +1753,8 @@ msgstr "Quizás, este es el texto más destacado."
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:234
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:224
-msgid ""
-"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "
-"dummy text ever since the 1500s."
-msgstr ""
-"Lorem Ipsum es simplemente texto de marcador de posición de la industria de la impresión y la composición tipográfica. "
-"Lorem Ipsum ha sido el texto de marcador de posición estándar de la industria desde el siglo XVI."
+msgid "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+msgstr "Lorem Ipsum es simplemente texto de marcador de posición de la industria de la impresión y la composición tipográfica. Lorem Ipsum ha sido el texto de marcador de posición estándar de la industria desde el siglo XVI."
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:240
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:230
@@ -2020,12 +1926,8 @@ msgstr "¡Genial!"
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:349
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:384
-msgid ""
-"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "
-"dummy text ever since the 1500s"
-msgstr ""
-"Lorem Ipsum es simplemente texto de marcador de posición de la industria de la impresión y la composición tipográfica. "
-"Lorem Ipsum ha sido el texto de marcador de posición estándar de la industria desde el siglo XVI."
+msgid "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+msgstr "Lorem Ipsum es simplemente texto de marcador de posición de la industria de la impresión y la composición tipográfica. Lorem Ipsum ha sido el texto de marcador de posición estándar de la industria desde el siglo XVI."
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:354
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:389
@@ -2882,9 +2784,7 @@ msgstr "Espaciado"
 #: modules/image-separator/image-separator-bb-2-2-compatibility.php:245
 #: modules/image-separator/image-separator-bb-less-than-2-2-compatibility.php:247
 msgid "50% is default. Increase to push the image outside or decrease to pull the image inside."
-msgstr ""
-"50% es el valor predeterminado. Aumenta para empujar la imagen hacia afuera o disminuye para acercar la imagen hacia "
-"adentro."
+msgstr "50% es el valor predeterminado. Aumenta para empujar la imagen hacia afuera o disminuye para acercar la imagen hacia adentro."
 
 #: modules/image-separator/image-separator-bb-2-2-compatibility.php:254
 #: modules/image-separator/image-separator-bb-less-than-2-2-compatibility.php:255
@@ -3947,9 +3847,7 @@ msgstr ""
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:346
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:354
-msgid ""
-"The link applies to the entire module. If choosing a call to action type below, this link will also be used for the "
-"text or button."
+msgid "The link applies to the entire module. If choosing a call to action type below, this link will also be used for the text or button."
 msgstr ""
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:354
@@ -4458,12 +4356,8 @@ msgstr "Tamaño de imagen por debajo de dispositivos medianos. Déjalo en blanco
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:236
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:250
-msgid ""
-"There might be responsive issues for long texts. If you are facing such issues then select appropriate devices width to "
-"make your module responsive."
-msgstr ""
-"Puede haber problemas responsivos para textos largos. Si enfrentas tales problemas, selecciona el ancho de dispositivos "
-"apropiado para hacer tu módulo responsivo."
+msgid "There might be responsive issues for long texts. If you are facing such issues then select appropriate devices width to make your module responsive."
+msgstr "Puede haber problemas responsivos para textos largos. Si enfrentas tales problemas, selecciona el ancho de dispositivos apropiado para hacer tu módulo responsivo."
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:247
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:261
