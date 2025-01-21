@@ -503,39 +503,42 @@ final class UABBBuilderAdminSettings {
 		FLBuilderModel::delete_asset_cache_for_all_posts();
 	}
 
-			/**
-		 * Render CartFlows NPS Survey Notice.
-		 *
-		 * @since x.x.x
-		 * @return void
-		 */
-		public static function show_nps_notice() {
-			\Nps_Survey::show_nps_notice(
-			'nps-survey-uabb-lite',
-			array(
-				'show_if'          => true, // Add your display conditions.
-				'dismiss_timespan' => 2 * WEEK_IN_SECONDS,
-				'display_after'    => 0,
-				'plugin_slug'      => 'uabb',
-				'show_on_screens'  => array( 'settings_page_uabb-builder-settings' ),
-				'message'          => array(
+/**
+ * Render CartFlows NPS Survey Notice.
+ *
+ * @since x.x.x
+ * @return void
+ */
+public static function show_nps_notice() {
+    if ( class_exists( 'Nps_Survey' ) ) {
+        \Nps_Survey::show_nps_notice(
+            'nps-survey-uabb-lite',
+            array(
+                'show_if'          => true, // Add your display conditions.
+                'dismiss_timespan' => 2 * WEEK_IN_SECONDS,
+                'display_after'    => 2 * WEEK_IN_SECONDS,
+                'plugin_slug'      => 'uabb-lite',
+                'show_on_screens'  => array( 'settings_page_uabb-builder-settings' ),
+                'message'          => array(
 
-					// Step 1 i.e rating input.
-					'logo'                  => esc_url( BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg' ),
-					'plugin_name'           => __( 'Ultimate Addons for Beaver Builder', 'uabb' ),
-					'nps_rating_message'    => __( 'How likely are you to recommend Ultimate Addons for Beaver Builder to your friends or colleagues?', 'uabb' ),
+                    // Step 1 i.e rating input.
+                    'logo'                  => esc_url( BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg' ),
+                    'plugin_name'           => __( 'Ultimate Addons for Beaver Builder', 'uabb' ),
+                    'nps_rating_message'    => __( 'How likely are you to recommend Ultimate Addons for Beaver Builder to your friends or colleagues?', 'uabb' ),
 
-					// Step 2A i.e. positive.
-					'feedback_content'      => __( 'Could you please do us a favor and give us a 5-star rating on WordPress? It would help others choose Ultimate Addons for Beaver Builder with confidence. Thank you!', 'uabb' ),
-					'plugin_rating_link'    => esc_url( 'https://www.trustpilot.com/review/brainstormforce.com' ),
+                    // Step 2A i.e. positive.
+                    'feedback_content'      => __( 'Could you please do us a favor and give us a 5-star rating on WordPress? It would help others choose Ultimate Addons for Beaver Builder with confidence. Thank you!', 'uabb' ),
+                    'plugin_rating_link'    => esc_url( 'https://www.trustpilot.com/review/brainstormforce.com' ),
 
-					// Step 2B i.e. negative.
-					'plugin_rating_title'   => __( 'Thank you for your feedback', 'uabb' ),
-					'plugin_rating_content' => __( 'We value your input. How can we improve your experience?', 'uabb' ),
-				),
-			)
-		);
-	}
+                    // Step 2B i.e. negative.
+                    'plugin_rating_title'   => __( 'Thank you for your feedback', 'uabb' ),
+                    'plugin_rating_content' => __( 'We value your input. How can we improve your experience?', 'uabb' ),
+                ),
+            )
+        );
+    }
+}
+
 }
 
 UABBBuilderAdminSettings::init();
