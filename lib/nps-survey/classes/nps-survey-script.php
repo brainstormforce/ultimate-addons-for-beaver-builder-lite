@@ -501,9 +501,12 @@ class Nps_Survey {
 		return 'nps-survey-' . $plugin_slug;
 	}
    }
- }
 
 /**
  * Kicking this off by calling 'get_instance()' method
  */
 Nps_Survey::get_instance();
+ 
+}
+
+
