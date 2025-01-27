@@ -6,7 +6,8 @@
  * @package {{package}}
  */
 
-/**
+ if ( ! class_exists( 'Nps_Survey' ) ) {
+	/**
  * Nps_Survey
  */
 class Nps_Survey {
@@ -499,7 +500,8 @@ class Nps_Survey {
 	public static function get_nps_id( $plugin_slug ) {
 		return 'nps-survey-' . $plugin_slug;
 	}
-}
+   }
+ }
 
 /**
  * Kicking this off by calling 'get_instance()' method

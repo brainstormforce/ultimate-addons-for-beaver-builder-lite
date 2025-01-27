@@ -515,7 +515,7 @@ public static function show_nps_notice() {
             'nps-survey-uabb-lite',
             array(
                 'show_if'          => true, // Add your display conditions.
-                'dismiss_timespan' => 2 * WEEK_IN_SECONDS,
+                'dismiss_timespan' => 4 * WEEK_IN_SECONDS,
                 'display_after'    => 2 * WEEK_IN_SECONDS,
                 'plugin_slug'      => 'uabb-lite',
                 'show_on_screens'  => array( 'settings_page_uabb-builder-settings' ),
@@ -528,7 +528,7 @@ public static function show_nps_notice() {
 
                     // Step 2A i.e. positive.
                     'feedback_content'      => __( 'Could you please do us a favor and give us a 5-star rating on WordPress? It would help others choose Ultimate Addons for Beaver Builder Lite with confidence. Thank you!', 'uabb' ),
-                    'plugin_rating_link'    => esc_url( 'https://www.trustpilot.com/review/ultimatebeaver.com' ),
+                    'plugin_rating_link'    => esc_url( 'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/#new-post' ),
 
                     // Step 2B i.e. negative.
                     'plugin_rating_title'   => __( 'Thank you for your feedback', 'uabb' ),
