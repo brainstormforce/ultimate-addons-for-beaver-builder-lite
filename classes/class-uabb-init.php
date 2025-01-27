@@ -101,6 +101,11 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/helper.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-ui-panel.php';
 
+		// Load the NPS Survey library.
+		if ( ! class_exists( 'Uabb_Lite_Nps_Survey' ) ) {
+			require_once BB_ULTIMATE_ADDON_DIR . 'lib/class-uabb-lite-nps-survey.php';
+		}
+
 		// BSF Analytics Tracker.
 		require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
 

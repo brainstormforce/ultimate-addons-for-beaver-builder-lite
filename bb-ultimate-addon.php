@@ -57,7 +57,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 
 			if ( true === $no_memory && ! defined( 'WP_CLI' ) ) {
 
-				$msg = sprintf( __( 'Unfortunately, plugin could not be activated as the memory allocated by your host has almost exhausted. UABB plugin recommends that your site should have 15M PHP memory remaining. <br/><br/>Please check <a target="_blank" href="https://www.ultimatebeaver.com/docs/increase-memory-limit-site/">this</a> article for solution or contact <a target="_blank" href="http://store.brainstormforce.com/support">support</a>.<br/><br/><a class="button button-primary" href="%s">Return to Plugins Page</a>', 'uabb' ), network_admin_url( 'plugins.php' ) ); // @codingStandardsIgnoreLine.
+				$msg = sprintf( __( 'Unfortunately, plugin could not be activated as the memory allocated by your host has almost exhausted. Plugin recommends that your site should have 15M PHP memory remaining. <br/><br/>Please check <a target="_blank" href="https://www.ultimatebeaver.com/docs/increase-memory-limit-site/">this</a> article for solution or contact <a target="_blank" href="http://store.brainstormforce.com/support">support</a>.<br/><br/><a class="button button-primary" href="%s">Return to Plugins Page</a>', 'uabb' ), network_admin_url( 'plugins.php' ) ); // @codingStandardsIgnoreLine.
 
 				deactivate_plugins( plugin_basename( __FILE__ ) );
 				wp_die( esc_html( $msg ) );

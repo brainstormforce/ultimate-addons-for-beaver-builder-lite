@@ -103,6 +103,9 @@ Yes, with .po and .mo files and GlotPress support.
 
 ## Changelog ##
 
+### 1.5.14.1 ###
+* New: Added NPS Survey to gather your valuable feedback for UABB Lite!
+
 ### 1.5.14 ###
 * Improvement: Revised the README content.
 * Fixed: Flip Box - Box content bounce on page load.

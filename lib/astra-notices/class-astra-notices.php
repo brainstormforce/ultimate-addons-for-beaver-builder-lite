@@ -116,7 +116,7 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 			}
 
 			if ( false === wp_verify_nonce( $nonce, 'astra-notices' ) ) {
-				wp_send_json_error( esc_html_e( 'WordPress Nonce not validated.', 'uabb' ) );
+				wp_send_json_error( esc_html_e( 'WordPress Nonce not validated.' ) );
 			}
 
 			// Valid inputs?
@@ -258,6 +258,7 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 					}
 				}
 			}
+
 		}
 
 		/**
@@ -370,7 +371,7 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 		 * @return mixed URL.
 		 */
 		public static function get_url() {
-			$path      = wp_normalize_path( __DIR__ );
+			$path      = wp_normalize_path( dirname( __FILE__ ) );
 			$theme_dir = wp_normalize_path( get_template_directory() );
 
 			if ( strpos( $path, $theme_dir ) !== false ) {
@@ -379,6 +380,7 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 				return plugin_dir_url( __FILE__ );
 			}
 		}
+
 	}
 
 	/**
