@@ -104,6 +104,7 @@ Yes, with .po and .mo files and GlotPress support.
 == Changelog ==
 
 = 1.5.14.1 = 
+* New: UABB Lite now supports four languages—Dutch, French, Spanish and German enhancing accessibility for our global audience.
 * New: Added NPS Survey to gather your valuable feedback for UABB Lite!
 
 = 1.5.14 = 
