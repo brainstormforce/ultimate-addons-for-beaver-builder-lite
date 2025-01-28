@@ -5,7 +5,7 @@
 **Requires at least:** 4.6  
 **Requires PHP:** 7.0  
 **Tested up to:** 6.7  
-**Stable tag:** 1.5.14  
+**Stable tag:** 1.6.0  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -103,8 +103,8 @@ Yes, with .po and .mo files and GlotPress support.
 
 ## Changelog ##
 
-### 1.5.14.1 ###
-* New: UABB Lite now supports four languages—Dutch, French, Spanish and German enhancing accessibility for our global audience.
+### 1.6.0 ###
+* New: UABB Lite now includes translations for Dutch, French, Spanish, and German enhancing multilingual accessibility.
 * New: Added NPS Survey to gather your valuable feedback for UABB Lite!
 
 ### 1.5.14 ###
