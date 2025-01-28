@@ -18,7 +18,7 @@ Enhance your website development with 60+ modules, 200+ section templates, and 1
 
 Enjoy an intuitive experience with modules requiring no coding, making website building efficient and hassle-free. Free yourself from complex development tasks and focus on creativity.
 
-[Try it on a free demo site](https://bsf.io/uabb-lite-demo).
+[Try it on a free demo site](https://zipwp.org/plugins/ultimate-addons-for-beaver-builder-lite/).
 
 This free version offers essential features. For advanced modules, white labelling, and premium support, upgrade to the Pro version. [Get Pro Now](https://www.ultimatebeaver.com/pricing)
 
@@ -105,6 +105,7 @@ Yes, with .po and .mo files and GlotPress support.
 
 ### 1.5.14.1 ###
 * New: UABB Lite now supports four languages—Dutch, French, Spanish and German enhancing accessibility for our global audience.
+* New: Added NPS Survey to gather your valuable feedback for UABB Lite!
 
 ### 1.5.14 ###
 * Improvement: Revised the README content.

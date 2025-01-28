@@ -1,15 +1,24 @@
 {
   "require": {
 		"brainstormforce/astra-notices": "^1.1",
+		 "brainstormforce/nps-survey": "^1",
     "wp-cli/wp-cli-bundle": "^2.11"
     },
 	"extra": {
 		"installer-paths": {
 		  "lib/{$name}/": [
-			"brainstormforce/astra-notices"
+			"brainstormforce/astra-notices",
+      "brainstormforce/nps-survey"
 		  ]
 		}
 	},
+  "repositories": [
+    {
+        "name": "brainstormforce/nps-survey",
+        "type": "vcs",
+        "url": "git@github.com:brainstormforce/nps-survey.git"
+    }
+],
   "require-dev": {
 	    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
 	    "wp-coding-standards/wpcs": "^3.1",
