@@ -24,7 +24,7 @@ foreach ( $settings->icons as $icon ) {
 	if ( ! empty( $icon->connections->link ) && empty( $icon->link ) && ! FLBuilderModel::is_builder_active() ) {
 		echo '';
 	} else {
-		echo '<a class="adv-icon-link adv-icon-' . esc_attr( $icon_count ) . '" href="' . esc_url( $icon->link ) . '" target="' . esc_attr( $icon->link_target ) . '" ' . sanitize_text_field( BB_Ultimate_Addon_Helper::get_link_rel( $icon->link_target, $icon->link_nofollow, 0 ) ) . '>'; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<a class="adv-icon-link adv-icon-' . esc_attr( $icon_count ) . '" href="' . esc_url( $icon->link ) . '" target="' . esc_attr( $icon->link_target ) . '" ' . esc_attr( BB_Ultimate_Addon_Helper::get_link_rel( $icon->link_target, $icon->link_nofollow, 0 ) ) . '>';
 		$imageicon_array = array(
 
 			/* General Section */

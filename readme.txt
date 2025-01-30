@@ -103,6 +103,9 @@ Yes, with .po and .mo files and GlotPress support.
 
 == Changelog ==
 
+= 1.6.0.1 = 
+* Improvement: Enhanced the codebase to strengthen security measures.
+
 = 1.6.0 = 
 * New: UABB Lite now includes translations for Dutch, French, Spanish, and German enhancing multilingual accessibility.
 * New: Added NPS Survey to gather your valuable feedback for UABB Lite!
