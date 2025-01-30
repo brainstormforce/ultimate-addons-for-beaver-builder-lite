@@ -530,7 +530,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 			}
 
 			// If action coming from general settings page.
-			if ( isset( $_POST['option_page'] ) && 'general' === $_POST['option_page'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
+			if ( isset( $_POST['option_page'] ) && 'general' === $_POST['option_page'] ) {
 
 				if ( get_site_option( 'bsf_analytics_optin' ) ) {
 					update_site_option( 'bsf_analytics_optin', $value );
