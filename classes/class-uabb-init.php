@@ -227,7 +227,7 @@ class UABB_Init {
 			load_textdomain( 'uabb', $mofile_local );
 		} else {
 			// Load the default language files.
-			load_uabb_textdomain( 'uabb', false, $lang_dir );
+			load_plugin_textdomain( 'uabb', false, $lang_dir );
 		}
 	}
 
