@@ -110,7 +110,7 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
 
 		// Load the appropriate text-domain.
-		$this->load_plugin_textdomain();
+		$this->load_uabb_textdomain();
 	}
 
 	/**
@@ -186,7 +186,7 @@ class UABB_Init {
 	 * @since 1.0
 	 * @return bool
 	 */
-	public function load_plugin_textdomain() {
+	public function load_uabb_textdomain() {
 		// Default languages directory for "ultimate-addons-for-beaver-builder-lite".
 		$lang_dir = BB_ULTIMATE_ADDON_DIR . 'languages/';
 
