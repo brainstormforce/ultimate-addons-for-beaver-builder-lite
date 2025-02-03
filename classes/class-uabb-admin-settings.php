@@ -54,6 +54,7 @@ final class UABBBuilderAdminSettings {
 		add_action( 'admin_notices', __CLASS__ . '::register_notices' );
 		add_filter( 'wp_kses_allowed_html', __CLASS__ . '::add_data_attributes', 10, 2 );
 		add_action( 'admin_enqueue_scripts', __CLASS__ . '::notice_styles_scripts' );
+		add_action( 'admin_footer', __CLASS__. '::show_nps_notice' );
 	}
 	/**
 	 * Enqueues the needed CSS/JS for the builder's admin settings page.
@@ -501,6 +502,43 @@ final class UABBBuilderAdminSettings {
 		// Clear all asset cache.
 		FLBuilderModel::delete_asset_cache_for_all_posts();
 	}
+
+/**
+ * Render Ultimate Addons for Beaver Builder Lite NPS Survey Notice.
+ *
+ * @since x.x.x
+ * @return void
+ */
+public static function show_nps_notice() {
+    if ( class_exists( 'Nps_Survey' ) ) {
+        \Nps_Survey::show_nps_notice(
+            'nps-survey-uabb-lite',
+            array(
+                'show_if'          => true, // Add your display conditions.
+                'dismiss_timespan' => 4 * WEEK_IN_SECONDS,
+                'display_after'    => 2 * WEEK_IN_SECONDS,
+                'plugin_slug'      => 'uabb-lite',
+                'show_on_screens'  => array( 'settings_page_uabb-builder-settings' ),
+                'message'          => array(
+
+                    // Step 1 i.e rating input.
+                    'logo'                  => esc_url( BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg' ),
+                    'plugin_name'           => __( 'Ultimate Addons for Beaver Builder Lite', 'uabb' ),
+                    'nps_rating_message'    => __( 'How likely are you to recommend Ultimate Addons for Beaver Builder Lite to your friends or colleagues?', 'uabb' ),
+
+                    // Step 2A i.e. positive.
+                    'feedback_content'      => __( 'Could you please do us a favor and give us a 5-star rating on WordPress? It would help others choose Ultimate Addons for Beaver Builder Lite with confidence. Thank you!', 'uabb' ),
+                    'plugin_rating_link'    => esc_url( 'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/#new-post' ),
+
+                    // Step 2B i.e. negative.
+                    'plugin_rating_title'   => __( 'Thank you for your feedback', 'uabb' ),
+                    'plugin_rating_content' => __( 'We value your input. How can we improve your experience?', 'uabb' ),
+                ),
+            )
+        );
+    }
+}
+
 }
 
 UABBBuilderAdminSettings::init();

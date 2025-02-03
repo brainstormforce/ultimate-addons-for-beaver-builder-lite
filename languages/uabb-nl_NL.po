@@ -207,11 +207,11 @@ msgstr "UABB-modules"
 msgid "%s Modules"
 msgstr "%s Modules"
 
-#: classes/class-uabb-init.php:256
+#: classes/class-uabb-init.php:255
 msgid "plugin requires"
 msgstr "plugin vereist"
 
-#: classes/class-uabb-init.php:258
+#: classes/class-uabb-init.php:257
 msgid " plugin installed & activated."
 msgstr "plugin geïnstalleerd en geactiveerd."
 
@@ -4485,7 +4485,7 @@ msgctxt "%s stands for custom branded \"UABB\" name."
 msgid "%s Settings"
 msgstr "%s Instellingen"
 
-#: classes/class-uabb-init.php:68
+#: classes/class-uabb-init.php:67
 msgctxt "Plugin action link label."
 msgid "Upgrade"
 msgstr "Upgrade"
