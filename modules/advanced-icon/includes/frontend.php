@@ -81,7 +81,11 @@ foreach ( $settings->icons as $icon ) {
 			'img_border_hover_color'  => $settings->border_hover_color,
 		);
 		FLBuilder::render_module_html( 'image-icon', $imageicon_array );
-		echo '</a>';
+		if ( '' === $icon->link ) {
+			echo '</div>';
+		} else {
+			echo '</a>';
+		}
 	}
 	++$icon_count;
 }
