@@ -524,13 +524,8 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 */
 		public function add_option_to_network( $value ) {
 
-			// Verify the nonce to ensure the request is secure.
-			if ( empty( $_POST['_wpnonce'] ) || ! wp_verify_nonce( wp_unslash( sanitize_text_field( $_POST['_wpnonce'] ) ), 'general-options' ) ) {
-				return; // Stop execution if nonce is invalid.
-			}
-
 			// If action coming from general settings page.
-			if ( isset( $_POST['option_page'] ) && 'general' === $_POST['option_page'] ) {
+			if ( isset( $_POST['option_page'] ) && 'general' === $_POST['option_page'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
 
 				if ( get_site_option( 'bsf_analytics_optin' ) ) {
 					update_site_option( 'bsf_analytics_optin', $value );
