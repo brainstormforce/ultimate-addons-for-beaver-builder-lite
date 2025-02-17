@@ -24,7 +24,12 @@ foreach ( $settings->icons as $icon ) {
 	if ( ! empty( $icon->connections->link ) && empty( $icon->link ) && ! FLBuilderModel::is_builder_active() ) {
 		echo '';
 	} else {
-		echo '<a class="adv-icon-link adv-icon-' . esc_attr( $icon_count ) . '" href="' . esc_url( $icon->link ) . '" target="' . esc_attr( $icon->link_target ) . '" ' . esc_attr( BB_Ultimate_Addon_Helper::get_link_rel( $icon->link_target, $icon->link_nofollow, 0 ) ) . '>';
+		if ( '' === $icon->link ) {
+			echo '<div class="adv-icon-link adv-icon-' . esc_attr( $icon_count ) . '">';
+		}else{
+			$link_rel = BB_Ultimate_Addon_Helper::get_link_rel( $icon->link_target, $icon->link_nofollow, 0 );
+			echo '<a class="adv-icon-link adv-icon-' . esc_attr( $icon_count ) . '" href="' . esc_url( $icon->link ) . '" target="' . esc_attr( $icon->link_target ) . '" ' . ( ! is_null( $link_rel ) ? wp_kses_post( $link_rel ) : '' ) . ' aria-label="' . esc_attr__( 'Go to', 'uabb' ) . ' ' . esc_url( $icon->link ) . '">';
+		}
 		$imageicon_array = array(
 
 			/* General Section */
