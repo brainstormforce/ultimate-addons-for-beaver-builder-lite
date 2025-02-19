@@ -2,7 +2,8 @@
   "require": {
 		"brainstormforce/astra-notices": "^1.1",
 		 "brainstormforce/nps-survey": "^1",
-    "wp-cli/wp-cli-bundle": "^2.11"
+    "wp-cli/wp-cli-bundle": "^2.11",
+    "brainstormforce/bsf-analytics": "^1"
     },
 	"extra": {
 		"installer-paths": {
@@ -10,13 +11,23 @@
 			"brainstormforce/astra-notices",
       "brainstormforce/nps-survey"
 		  ]
-		}
+		},
+    "installer-paths": {
+        "admin/{$name}/": [
+            "brainstormforce/bsf-analytics"
+        ]
+    }
 	},
   "repositories": [
     {
         "name": "brainstormforce/nps-survey",
         "type": "vcs",
         "url": "git@github.com:brainstormforce/nps-survey.git"
+    },
+    {
+      "name": "brainstormforce/bsf-analytics",
+      "type": "vcs",
+      "url": "git@github.com:brainstormforce/bsf-analytics.git"
     }
 ],
   "require-dev": {
