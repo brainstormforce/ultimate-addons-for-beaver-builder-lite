@@ -106,6 +106,26 @@ class UABB_Init {
 			require_once BB_ULTIMATE_ADDON_DIR . 'lib/class-uabb-lite-nps-survey.php';
 		}
 
+		/*
+		* BSF Analytics Integration tracker.
+		*/
+		if ( ! class_exists( 'BSF_Analytics_Loader' ) ) {
+			require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics-loader.php';
+
+			$uabb_lite_bsf_analytics = \BSF_Analytics_Loader::get_instance();
+
+			$uabb_lite_bsf_analytics->set_entity(
+				[
+					'product_name' => [
+						'product_name'    => 'Ultimate Addons for Beaver Builder Lite',
+						'path'            => BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics',
+						'author'          => 'Brainstorm Force',
+						'time_to_display' => '+24 hours',
+					],
+				]
+			);
+		}
+
 		// BSF Analytics Tracker.
 		require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
 
