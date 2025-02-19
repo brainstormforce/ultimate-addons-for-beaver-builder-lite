@@ -10,13 +10,11 @@
 		  "lib/{$name}/": [
 			"brainstormforce/astra-notices",
       "brainstormforce/nps-survey"
-		  ]
-		},
-    "installer-paths": {
-        "admin/{$name}/": [
-            "brainstormforce/bsf-analytics"
-        ]
-    }
+		  ],
+      "admin/{$name}/": [
+        "brainstormforce/bsf-analytics"
+      ]
+		}
 	},
   "repositories": [
     {
