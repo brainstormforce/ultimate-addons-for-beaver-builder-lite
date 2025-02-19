@@ -121,6 +121,18 @@ class UABB_Init {
 						'path'            => BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics',
 						'author'          => 'Brainstorm Force',
 						'time_to_display' => '+24 hours',
+						'deactivation_survey' => [ // Plugin deactivation survey key.
+							[
+								'id'                => 'deactivation-survey-ultimate-addons-for-beaver-builder-lite', // 'deactivation-survey-<your-plugin-slug>'
+								'popup_logo'        =>  BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg',
+								'plugin_slug'       => 'ultimate-addons-for-beaver-builder-lite', // <your-plugin-slug>
+								'plugin_version'    =>  BB_ULTIMATE_ADDON_LITE_VERSION,
+								'popup_title'       => __( 'Quick Feedback', 'ultimate-addons-for-beaver-builder-lite' ),
+								'support_url'       => 'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/',
+								'popup_description' => __( 'If you have a moment, please share why you are deactivating Ultimate Addons for Beaver Builder Lite:', 'ultimate-addons-for-beaver-builder-lite' ),
+								'show_on_screens'   => ['plugins' ],
+							]
+						]
 					],
 				]
 			);
