@@ -127,7 +127,7 @@ class UABB_Init {
 								'plugin_slug'       => 'ultimate-addons-for-beaver-builder-lite', // <your-plugin-slug>
 								'plugin_version'    => BB_ULTIMATE_ADDON_LITE_VERSION,
 								'popup_title'       => __( 'Quick Feedback', 'ultimate-addons-for-beaver-builder-lite' ),
-								'support_url'       => 'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/',
+								'support_url'       => 'https://www.ultimatebeaver.com/contact/',
 								'popup_description' => __( 'If you have a moment, please share why you are deactivating Ultimate Addons for Beaver Builder Lite :', 'ultimate-addons-for-beaver-builder-lite' ),
 								'show_on_screens'   => array( 'plugins' ),
 							),
