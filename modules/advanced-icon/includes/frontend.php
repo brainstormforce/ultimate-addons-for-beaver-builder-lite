@@ -88,7 +88,7 @@ foreach ( $settings->icons as $icon ) {
 			echo '</a>';
 		}
 	}
-	$icon_count++;
+	++$icon_count;
 }
 
 ?>
