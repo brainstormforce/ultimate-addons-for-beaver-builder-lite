@@ -83,7 +83,7 @@ foreach ( $settings->icons as $icon ) {
 		);
 		FLBuilder::render_module_html( 'image-icon', $imageicon_array );
 		if ( '' === $icon->link ) {
-			echo '</div>';
+			echo '</a>';
 		} else {
 			echo '</a>';
 		}
