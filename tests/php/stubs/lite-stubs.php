@@ -2411,7 +2411,7 @@ class UABBSeparatorModule extends \FLBuilderModule {
 }
 \define( 'BB_ULTIMATE_ADDON_DIR', \plugin_dir_path( __FILE__ ) );
 \define( 'BB_ULTIMATE_ADDON_URL', \plugins_url( '/', __FILE__ ) );
-\define( 'BB_ULTIMATE_ADDON_LITE_VERSION', '1.6.0' );
+\define( 'BB_ULTIMATE_ADDON_LITE_VERSION', '1.6.1' );
 \define( 'BSF_REMOVE_UABB_FROM_REGISTRATION_LISTING', \true );
 \define( 'BB_ULTIMATE_ADDON_FILE', \trailingslashit( __DIR__ ) . 'bb-ultimate-addon.php' );
 // @codingStandardsIgnoreLine.
