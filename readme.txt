@@ -104,6 +104,7 @@ Yes, with .po and .mo files and GlotPress support.
 == Changelog ==
 
 = 1.6.0.1 = 
+* This update addressed a security bug. Please make sure you are using the latest version on your website.
 * Improvement: Enhanced the codebase to strengthen security measures.
 
 = 1.6.0 = 
