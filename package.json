@@ -17,11 +17,11 @@
     "gpt-po": "^1.2.0",
     "grunt": "^1.6.1",
     "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-compress": "^1.6.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-release": "^0.14.0",
-    "grunt-wp-i18n": "^1.0.2",
-    "grunt-wp-readme-to-markdown": "^2.0.1",
+    "grunt-wp-i18n": "^1.0.3",
+    "grunt-wp-readme-to-markdown": "^2.1.0",
     "shelljs": "~0.8.1"
   },
   "scripts": {
