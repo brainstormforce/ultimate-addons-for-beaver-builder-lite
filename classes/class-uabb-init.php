@@ -53,7 +53,6 @@ class UABB_Init {
 			add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 			add_action( 'network_admin_notices', array( $this, 'admin_notices' ) );
 		}
-
 	}
 	/**
 	 * Function that renders links
@@ -106,8 +105,40 @@ class UABB_Init {
 			require_once BB_ULTIMATE_ADDON_DIR . 'lib/class-uabb-lite-nps-survey.php';
 		}
 
+		/*
+		* BSF Analytics Integration tracker.
+		*/
+		if ( ! class_exists( 'BSF_Analytics_Loader' ) ) {
+			require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics-loader.php';
+
+			$bsf_analytics = \BSF_Analytics_Loader::get_instance();
+
+			$bsf_analytics->set_entity(
+				array(
+					'bsf' => array(
+						'product_name'        => 'Ultimate Addons for Beaver Builder Lite',
+						'path'                => BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics',
+						'author'              => 'Brainstorm Force',
+						'time_to_display'     => '+24 hours',
+						'deactivation_survey' => array( // UABB Lite Plugin deactivation survey key.
+							array(
+								'id'                => 'deactivation-survey-ultimate-addons-for-beaver-builder-lite', // 'deactivation-survey-<your-plugin-slug>'
+								'popup_logo'        => BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg',
+								'plugin_slug'       => 'ultimate-addons-for-beaver-builder-lite', // <your-plugin-slug>
+								'plugin_version'    => BB_ULTIMATE_ADDON_LITE_VERSION,
+								'popup_title'       => __( 'Quick Feedback', 'uabb' ),
+								'support_url'       => 'https://www.ultimatebeaver.com/contact/',
+								'popup_description' => __( 'If you have a moment, please share why you are deactivating Ultimate Addons for Beaver Builder Lite :', 'uabb' ),
+								'show_on_screens'   => array( 'plugins' ),
+							),
+						),
+					),
+				)
+			);
+		}
+
 		// BSF Analytics Tracker.
-		require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
+		//require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
 
 		// Load the appropriate text-domain.
 		$this->load_uabb_textdomain();

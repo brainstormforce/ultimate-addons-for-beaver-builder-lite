@@ -5,7 +5,7 @@ Tags: beaver builder, beaver builder free, beaver builder lite, beaver builder a
 Requires at least: 4.6
 Requires PHP: 7.0
 Tested up to: 6.7
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,7 @@ Enhance your website development with 60+ modules, 200+ section templates, and 1
 
 Enjoy an intuitive experience with modules requiring no coding, making website building efficient and hassle-free. Free yourself from complex development tasks and focus on creativity.
 
-[Try it on a free demo site](https://zipwp.org/plugins/ultimate-addons-for-beaver-builder-lite/).
+[Try the live demo of Ultimate Addons for Beaver Builder – Lite](https://zipwp.org/plugins/ultimate-addons-for-beaver-builder-lite/).
 
 This free version offers essential features. For advanced modules, white labelling, and premium support, upgrade to the Pro version. [Get Pro Now](https://www.ultimatebeaver.com/pricing)
 
@@ -102,6 +102,10 @@ Yes, with .po and .mo files and GlotPress support.
 ---
 
 == Changelog ==
+
+= 1.6.1 = 
+* This update addressed a security bug. Please make sure you are using the latest version on your website.
+* Improved accessibility compliance throughout the plugin.
 
 = 1.6.0 = 
 * New: UABB Lite now includes translations for Dutch, French, Spanish, and German enhancing multilingual accessibility.

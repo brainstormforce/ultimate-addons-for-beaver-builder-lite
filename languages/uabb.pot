@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.0\n"
+"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
