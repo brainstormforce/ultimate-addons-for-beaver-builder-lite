@@ -29,7 +29,7 @@ foreach ( $settings->icons as $icon ) {
 			echo '<a class="adv-icon-link adv-icon-' . esc_attr( $icon_count ) . '" href="" target="' . $target . '">';
 		} else {
 			$link_rel = BB_Ultimate_Addon_Helper::get_link_rel( $icon->link_target, $icon->link_nofollow, 0 );
-			echo '<a class="adv-icon-link adv-icon-' . esc_attr( $icon_count ) . '" href="' . $icon->link . '" target="' . ( $target ) . '" ' . ( ! is_null( $link_rel ) ? wp_kses_post( $link_rel ) : '' ) . ' aria-label="' . esc_attr__( 'Go to', 'uabb' ) . ' ' . $icon->link . '">';
+			echo '<a class="adv-icon-link adv-icon-' . esc_attr( $icon_count ) . '" href="' . esc_url( $icon->link ) . '" target="' . ( $target ) . '" ' . ( ! is_null( $link_rel ) ? wp_kses_post( $link_rel ) : '' ) . ' aria-label="' . esc_attr__( 'Go to', 'uabb' ) . ' ' . esc_url( $icon->link ) . '">';
 		}
 		$imageicon_array = array(
 
