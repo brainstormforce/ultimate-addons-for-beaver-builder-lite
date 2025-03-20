@@ -21,7 +21,7 @@ if ( ! isset( $module ) ) {
 ?>
 <div class="uabb-module-content uabb-imgseparator-wrap">
 	<?php if ( 'yes' === $settings->enable_link ) : ?>
-	<a class="imgseparator-link" href="<?php echo esc_url( $settings->link ); ?>" target="<?php echo esc_attr( $settings->link_target ); ?>"></a>
+	<a class="imgseparator-link" href="<?php echo esc_url( $settings->link ); ?>" target="<?php echo esc_attr( $settings->link_target ); ?>" aria-label="<?php echo esc_attr( 'Learn more - ' . $alt ); ?>"></a>
 	<?php endif; ?>
 	<div class="uabb-image-separator uabb-image
 	<?php

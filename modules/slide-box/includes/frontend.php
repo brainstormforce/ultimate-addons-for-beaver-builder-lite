@@ -21,7 +21,7 @@ if ( ! isset( $module ) ) {
 
 $pos = $settings->front_img_icon_position;
 ?>
-<div class="uabb-module-content uabb-slide-box-wrap">
+<div class="uabb-module-content uabb-slide-box-wrap" tabindex="0">
 	<div class="uabb-slide-type uabb-<?php echo esc_attr( $settings->slide_type ); ?>" data-style="<?php echo esc_attr( $settings->slide_type ); ?>">
 		<div id="uabb-slide-box-wrap-<?php echo esc_attr( $module->node ); ?>" class="uabb-slide-box">
 			<div class="uabb-slide-face uabb-slide-front uabb-slide-

@@ -17,7 +17,7 @@ if ( ! isset( $module ) ) {
 
 
 ?>
-<div class="uabb-module-content uabb-flip-box-wrap">
+<div class="uabb-module-content uabb-flip-box-wrap" tabindex="0">
 	<div class="uabb-flip-box  <?php echo esc_attr( $settings->flip_type ); ?> <?php echo esc_attr( $settings->flip_box_min_height_options ); ?>">
 		<div class="uabb-flip-box uabb-flip-box-outter">
 			<div class="uabb-face uabb-front ">

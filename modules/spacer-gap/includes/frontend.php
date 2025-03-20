@@ -7,5 +7,5 @@
 
 ?>
 <?php /* HTML Markup */ ?>
-<div class="uabb-module-content uabb-spacer-gap-preview uabb-spacer-gap">
+<div class="uabb-module-content uabb-spacer-gap-preview uabb-spacer-gap" tabindex="0">
 </div>
