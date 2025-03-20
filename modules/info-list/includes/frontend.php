@@ -16,7 +16,7 @@ if ( ! isset( $module ) ) {
 }
 
 ?>
-<div class="uabb-module-content uabb-info-list">
+<div class="uabb-module-content uabb-info-list" tabindex="0">
 	<ul class="uabb-info-list-wrapper uabb-info-list-<?php echo esc_attr( $settings->icon_position ); ?>">
 		<?php
 		$module->render_list();

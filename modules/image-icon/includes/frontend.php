@@ -17,7 +17,7 @@ if ( ! isset( $module ) ) {
 
 ?>
 <?php if ( 'none' !== $settings->image_type && '' !== $settings->image_type ) { ?>
-<div class="uabb-module-content uabb-imgicon-wrap"><?php /* Module Wrap */ ?>
+	<div class="uabb-module-content uabb-imgicon-wrap" tabindex="0" aria-label="<?php echo esc_attr( $settings->image_type ); ?>">
 	<?php /*Icon Html */ ?>
 	<?php if ( 'icon' === $settings->image_type ) { ?>
 		<span class="uabb-icon-wrap">
