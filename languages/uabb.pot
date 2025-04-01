@@ -1,55 +1,44 @@
-# Copyright (C) 2025 Brainstorm Force
-# This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite plugin.
+# Copyright (C) 2024 Brainstorm Force
+# This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.1\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite\n"
+"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.2\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-"
+"lite\n"
+"POT-Creation-Date: 2024-10-01 08:49:20+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-21T07:02:17+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
-"X-Domain: uabb\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#. Plugin Name of the plugin
-#: bb-ultimate-addon.php
-msgid "Ultimate Addons for Beaver Builder - Lite"
-msgstr ""
-
-#. Plugin URI of the plugin
-#: bb-ultimate-addon.php
-msgid "http://www.ultimatebeaver.com/"
-msgstr ""
-
-#. Description of the plugin
-#: bb-ultimate-addon.php
-msgid "Ultimate Addons is a free extension for Beaver Builder that adds 10 modules, and works on top of any Beaver Builder Package. (Free, Standard, Pro & Agency) You can use it with on any WordPress theme."
-msgstr ""
-
-#. Author of the plugin
-#: bb-ultimate-addon.php
-msgid "Brainstorm Force"
-msgstr ""
-
-#. Author URI of the plugin
-#: bb-ultimate-addon.php
-msgid "http://www.brainstormforce.com"
-msgstr ""
-
-#. translators: %s product name
 #: admin/bsf-analytics/class-bsf-analytics.php:185
-msgid "Want to help make <strong>%1s</strong> even more awesome? Allow us to collect non-sensitive diagnostic data and usage information. "
+#. translators: %s product name
+msgid ""
+"Want to help make <strong>%1s</strong> even more awesome? Allow us to "
+"collect non-sensitive diagnostic data and usage information. "
 msgstr ""
 
 #: admin/bsf-analytics/class-bsf-analytics.php:188
 msgid "This will be applicable for all sites from the network."
 msgstr ""
 
-#. translators: %s usage doc link
 #: admin/bsf-analytics/class-bsf-analytics.php:212
+#. translators: %s usage doc link
 msgid " Know More."
 msgstr ""
 
@@ -82,12 +71,48 @@ msgid "Learn More."
 msgstr ""
 
 #: bb-ultimate-addon.php:60
-msgid "Unfortunately, plugin could not be activated as the memory allocated by your host has almost exhausted. UABB plugin recommends that your site should have 15M PHP memory remaining. <br/><br/>Please check <a target=\"_blank\" href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">this</a> article for solution or contact <a target=\"_blank\" href=\"http://store.brainstormforce.com/support\">support</a>.<br/><br/><a class=\"button button-primary\" href=\"%s\">Return to Plugins Page</a>"
+msgid ""
+"Unfortunately, plugin could not be activated as the memory allocated by "
+"your host has almost exhausted. UABB plugin recommends that your site "
+"should have 15M PHP memory remaining. <br/><br/>Please check <a "
+"target=\"_blank\" "
+"href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\""
+">this</a> article for solution or contact <a target=\"_blank\" "
+"href=\"http://store.brainstormforce.com/support\">support</a>.<br/><br/><a "
+"class=\"button button-primary\" href=\"%s\">Return to Plugins Page</a>"
 msgstr ""
 
-#. Translators: %s is the URL to deactivate one of the Ultimate Addon for Beaver Builder versions.
 #: bb-ultimate-addon.php:138
-msgid "You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='%s'>deactivate one</a> before continuing."
+#. Translators: %s is the URL to deactivate one of the Ultimate Addon for
+#. Beaver Builder versions.
+msgid ""
+"You currently have two versions of <strong>Ultimate Addon for Beaver "
+"Builder</strong> active on this site. Please <a href='%s'>deactivate "
+"one</a> before continuing."
+msgstr ""
+
+#: classes/class-uabb-admin-settings.php:118
+msgid ""
+"Hello! Thank you for choosing the Ultimate Addon for Beaver Builder to "
+"build this website!"
+msgstr ""
+
+#: classes/class-uabb-admin-settings.php:119
+msgid ""
+"Would you please mind sharing your views and give it a 5 star rating on the "
+"WordPress repository?"
+msgstr ""
+
+#: classes/class-uabb-admin-settings.php:121
+msgid "Ok, you deserve it"
+msgstr ""
+
+#: classes/class-uabb-admin-settings.php:123
+msgid "Nope, maybe later"
+msgstr ""
+
+#: classes/class-uabb-admin-settings.php:124
+msgid "I already did"
 msgstr ""
 
 #: classes/class-uabb-admin-settings.php:179
@@ -124,11 +149,6 @@ msgstr ""
 
 #: classes/class-uabb-admin-settings.php:187
 msgid "Removed!"
-msgstr ""
-
-#: classes/class-uabb-admin-settings.php:251
-msgctxt "%s stands for custom branded \"UABB\" name."
-msgid "%s Settings"
 msgstr ""
 
 #: classes/class-uabb-admin-settings.php:275
@@ -179,7 +199,10 @@ msgid "Welcome to %s Template Cloud!"
 msgstr ""
 
 #: classes/class-uabb-cloud-templates.php:321
-msgid "%s Template Cloud would allow you to browse through our growing library of 150+ professionally designed templates and download the only ones that you need."
+msgid ""
+"%s Template Cloud would allow you to browse through our growing library of "
+"150+ professionally designed templates and download the only ones that you "
+"need."
 msgstr ""
 
 #: classes/class-uabb-cloud-templates.php:321
@@ -235,26 +258,19 @@ msgstr ""
 msgid "UABB Modules"
 msgstr ""
 
-#: classes/class-uabb-helper.php:53
-#: includes/admin-settings-modules.php:16
+#: classes/class-uabb-helper.php:53 includes/admin-settings-modules.php:16
 msgid "%s Modules"
 msgstr ""
 
-#: classes/class-uabb-init.php:67
-msgctxt "Plugin action link label."
-msgid "Upgrade"
-msgstr ""
-
-#: classes/class-uabb-init.php:255
+#: classes/class-uabb-init.php:254
 msgid "plugin requires"
 msgstr ""
 
-#: classes/class-uabb-init.php:257
+#: classes/class-uabb-init.php:256
 msgid " plugin installed & activated."
 msgstr ""
 
-#: classes/class-uabb-wpml.php:56
-#: classes/uabb-global-settings-form.php:62
+#: classes/class-uabb-wpml.php:56 classes/uabb-global-settings-form.php:62
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:445
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:526
 #: modules/info-table/info-table-bb-2-2-compatibility.php:852
@@ -263,14 +279,12 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:359
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:334
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:379
-#: modules/uabb-button/uabb-button.php:23
-#: objects/fl-nested-form-button.php:14
+#: modules/uabb-button/uabb-button.php:23 objects/fl-nested-form-button.php:14
 #: objects/fl-nested-form-button.php:436
 msgid "Button"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:61
-#: classes/class-uabb-wpml.php:192
+#: classes/class-uabb-wpml.php:61 classes/class-uabb-wpml.php:192
 #: modules/advanced-icon/advanced-icon.php:350
 #: modules/image-separator/image-separator-bb-2-2-compatibility.php:314
 #: modules/image-separator/image-separator-bb-less-than-2-2-compatibility.php:314
@@ -284,10 +298,8 @@ msgstr ""
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:37
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:32
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:31
-#: objects/fl-nested-form-button.php:35
-#: objects/fl-nested-form-button.php:39
-#: objects/fl-nested-form-button.php:457
-#: objects/fl-nested-form-button.php:461
+#: objects/fl-nested-form-button.php:35 objects/fl-nested-form-button.php:39
+#: objects/fl-nested-form-button.php:457 objects/fl-nested-form-button.php:461
 msgid "Link"
 msgstr ""
 
@@ -295,8 +307,7 @@ msgstr ""
 msgid "Flip Box: Title on Front"
 msgstr ""
 
-#: classes/class-uabb-wpml.php:78
-#: classes/class-uabb-wpml.php:88
+#: classes/class-uabb-wpml.php:78 classes/class-uabb-wpml.php:88
 msgid "Flip Box: Description"
 msgstr ""
 
@@ -374,8 +385,7 @@ msgstr ""
 msgid "Presets"
 msgstr ""
 
-#: classes/class-ui-panel.php:348
-#: includes/admin-settings-template-cloud.php:41
+#: classes/class-ui-panel.php:348 includes/admin-settings-template-cloud.php:41
 msgid "Sections"
 msgstr ""
 
@@ -409,12 +419,9 @@ msgstr ""
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:71
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:66
 #: modules/uabb-star-rating/uabb-star-rating.php:143
-#: objects/fl-nested-form-button.php:56
-#: objects/fl-nested-form-button.php:59
-#: objects/fl-nested-form-button.php:63
-#: objects/fl-nested-form-button.php:471
-#: objects/fl-nested-form-button.php:474
-#: objects/fl-nested-form-button.php:478
+#: objects/fl-nested-form-button.php:56 objects/fl-nested-form-button.php:59
+#: objects/fl-nested-form-button.php:63 objects/fl-nested-form-button.php:471
+#: objects/fl-nested-form-button.php:474 objects/fl-nested-form-button.php:478
 msgid "Style"
 msgstr ""
 
@@ -447,8 +454,7 @@ msgstr ""
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:15
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:14
 #: modules/uabb-star-rating/uabb-star-rating.php:72
-#: objects/fl-nested-form-button.php:17
-#: objects/fl-nested-form-button.php:439
+#: objects/fl-nested-form-button.php:17 objects/fl-nested-form-button.php:439
 msgid "General"
 msgstr ""
 
@@ -488,8 +494,7 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:510
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:171
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:170
-#: objects/fl-nested-form-button.php:176
-#: objects/fl-nested-form-button.php:601
+#: objects/fl-nested-form-button.php:176 objects/fl-nested-form-button.php:601
 msgid "Background Color"
 msgstr ""
 
@@ -537,10 +542,8 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:626
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:176
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:193
-#: objects/fl-nested-form-button.php:182
-#: objects/fl-nested-form-button.php:199
-#: objects/fl-nested-form-button.php:609
-#: objects/fl-nested-form-button.php:629
+#: objects/fl-nested-form-button.php:182 objects/fl-nested-form-button.php:199
+#: objects/fl-nested-form-button.php:609 objects/fl-nested-form-button.php:629
 msgid "Opacity"
 msgstr ""
 
@@ -561,8 +564,7 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:681
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:179
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:184
-#: objects/fl-nested-form-button.php:190
-#: objects/fl-nested-form-button.php:618
+#: objects/fl-nested-form-button.php:190 objects/fl-nested-form-button.php:618
 msgid "Background Hover Color"
 msgstr ""
 
@@ -575,8 +577,7 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:496
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:388
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:616
-#: objects/fl-nested-form-button.php:161
-#: objects/fl-nested-form-button.php:582
+#: objects/fl-nested-form-button.php:161 objects/fl-nested-form-button.php:582
 msgid "Text Color"
 msgstr ""
 
@@ -585,8 +586,7 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:200
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:160
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:161
-#: objects/fl-nested-form-button.php:167
-#: objects/fl-nested-form-button.php:590
+#: objects/fl-nested-form-button.php:167 objects/fl-nested-form-button.php:590
 msgid "Text Hover Color"
 msgstr ""
 
@@ -683,10 +683,8 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:239
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:111
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:253
-#: objects/fl-nested-form-button.php:99
-#: objects/fl-nested-form-button.php:128
-#: objects/fl-nested-form-button.php:260
-#: objects/fl-nested-form-button.php:520
+#: objects/fl-nested-form-button.php:99 objects/fl-nested-form-button.php:128
+#: objects/fl-nested-form-button.php:260 objects/fl-nested-form-button.php:520
 #: objects/fl-nested-form-button.php:549
 msgid "None"
 msgstr ""
@@ -777,8 +775,7 @@ msgstr ""
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:61
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:211
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:222
-#: objects/fl-nested-form-button.php:227
-#: objects/fl-nested-form-button.php:658
+#: objects/fl-nested-form-button.php:227 objects/fl-nested-form-button.php:658
 msgid "Custom"
 msgstr ""
 
@@ -808,7 +805,9 @@ msgid "Enable UI Design"
 msgstr ""
 
 #: includes/admin-settings-general.php:36
-msgid "Enable this setting for applying UI effects such as - Section panel, Search box etc. to frontend page builder. "
+msgid ""
+"Enable this setting for applying UI effects such as - Section panel, Search "
+"box etc. to frontend page builder. "
 msgstr ""
 
 #: includes/admin-settings-general.php:39
@@ -829,20 +828,24 @@ msgid "Enable Live Preview"
 msgstr ""
 
 #: includes/admin-settings-general.php:55
-msgid "Enable this setting to see live preview of a page without leaving the editor."
+msgid ""
+"Enable this setting to see live preview of a page without leaving the "
+"editor."
 msgstr ""
 
 #: includes/admin-settings-general.php:63
 msgid "Save Settings"
 msgstr ""
 
-#: includes/admin-settings-icons.php:15
-#: includes/admin-settings-icons.php:28
+#: includes/admin-settings-icons.php:15 includes/admin-settings-icons.php:28
 msgid "Reload Icons"
 msgstr ""
 
 #: includes/admin-settings-icons.php:23
-msgid "Clicking the button below will reinstall %1$s icons on your website. If you are facing issues to load %2$s icons then you are at right place to troubleshoot it."
+msgid ""
+"Clicking the button below will reinstall %1$s icons on your website. If you "
+"are facing issues to load %2$s icons then you are at right place to "
+"troubleshoot it."
 msgstr ""
 
 #: includes/admin-settings-modules.php:26
@@ -862,7 +865,9 @@ msgid "White Label"
 msgstr ""
 
 #: includes/admin-settings-premium.php:21
-msgid "You can White Label Ultimate Addons and provide a seamless experience to your clients without any extra cost."
+msgid ""
+"You can White Label Ultimate Addons and provide a seamless experience to "
+"your clients without any extra cost."
 msgstr ""
 
 #: includes/admin-settings-premium.php:22
@@ -870,7 +875,9 @@ msgid "Lightweight"
 msgstr ""
 
 #: includes/admin-settings-premium.php:22
-msgid "Like Beaver Builder, Ultimate Addons is built for performance. It follows the best WordPress development standards."
+msgid ""
+"Like Beaver Builder, Ultimate Addons is built for performance. It follows "
+"the best WordPress development standards."
 msgstr ""
 
 #: includes/admin-settings-premium.php:23
@@ -878,7 +885,9 @@ msgid "Professional Support"
 msgstr ""
 
 #: includes/admin-settings-premium.php:23
-msgid "Our dedicated support team is friendly and has experience of helping thousands of customers with consistent five star ratings."
+msgid ""
+"Our dedicated support team is friendly and has experience of helping "
+"thousands of customers with consistent five star ratings."
 msgstr ""
 
 #: includes/admin-settings-premium.php:24
@@ -886,11 +895,15 @@ msgid "Regular Updates"
 msgstr ""
 
 #: includes/admin-settings-premium.php:24
-msgid "We strive to keep Ultimate Addons on the cutting edge of functionality. Get free updates with bug fixes and new features."
+msgid ""
+"We strive to keep Ultimate Addons on the cutting edge of functionality. Get "
+"free updates with bug fixes and new features."
 msgstr ""
 
 #: includes/admin-settings-premium.php:25
-msgid "Template Cloud is one of our flagship feature! It provides access to hundreds of templates right in the WordPress backend."
+msgid ""
+"Template Cloud is one of our flagship feature! It provides access to "
+"hundreds of templates right in the WordPress backend."
 msgstr ""
 
 #: includes/admin-settings-premium.php:26
@@ -898,7 +911,9 @@ msgid "WordPress Multisite"
 msgstr ""
 
 #: includes/admin-settings-premium.php:26
-msgid "Ultimate Addons is 100% compatible and well tested on WordPress multisite network installations ."
+msgid ""
+"Ultimate Addons is 100% compatible and well tested on WordPress multisite "
+"network installations ."
 msgstr ""
 
 #: includes/admin-settings-premium.php:27
@@ -906,7 +921,9 @@ msgid "All Beaver Builder Editions"
 msgstr ""
 
 #: includes/admin-settings-premium.php:27
-msgid "Ultimate Addons work with free as well paid editions of Beaver Builder. It nicely complements agency version too."
+msgid ""
+"Ultimate Addons work with free as well paid editions of Beaver Builder. It "
+"nicely complements agency version too."
 msgstr ""
 
 #: includes/admin-settings-premium.php:28
@@ -914,7 +931,9 @@ msgid "All WordPress Themes"
 msgstr ""
 
 #: includes/admin-settings-premium.php:28
-msgid "Our plugin can be used with any theme. Genesis, GeneratePress & Beaver Builder themes are popular among our users."
+msgid ""
+"Our plugin can be used with any theme. Genesis, GeneratePress & Beaver "
+"Builder themes are popular among our users."
 msgstr ""
 
 #: includes/admin-settings-premium.php:29
@@ -922,15 +941,13 @@ msgid "From Brainstorm Force"
 msgstr ""
 
 #: includes/admin-settings-premium.php:29
-msgid "Over past many years, we have delivered several products that are used by thousands of businesses."
+msgid ""
+"Over past many years, we have delivered several products that are used by "
+"thousands of businesses."
 msgstr ""
 
 #: includes/admin-settings-premium.php:35
 msgid "Upgrade Today"
-msgstr ""
-
-#: includes/admin-settings-template-cloud.php:13
-msgid "<a href=\""
 msgstr ""
 
 #: includes/admin-settings-template-cloud.php:25
@@ -950,19 +967,36 @@ msgid "Welcome to the Ultimate Addon for Beaver Builder!"
 msgstr ""
 
 #: includes/admin-settings-welcome.php:16
-msgid "Thank you for choosing the Ultimate Addons for Beaver Builder and welcome on board! We promise to take you through an ultimate journey of website building. You’ll find a few settings in the column on the left. Need some more time-saving and advanced modules to play with? You can avail all of them with 200+ page & section templates and dedicated support from our team."
+msgid ""
+"Thank you for choosing the Ultimate Addons for Beaver Builder and welcome "
+"on board! We promise to take you through an ultimate journey of website "
+"building. You’ll find a few settings in the column on the left. Need some "
+"more time-saving and advanced modules to play with? You can avail all of "
+"them with 200+ page & section templates and dedicated support from our team."
 msgstr ""
 
 #: includes/admin-settings-welcome.php:22
-msgid "For more time-saving features and access to our expert support team, <a href=\"%s\" target=\"_blank\">upgrade now!</a> With regular updates, helpful tutorials, we promise to make website building an ultimate journey for you!"
+msgid ""
+"For more time-saving features and access to our expert support team, <a "
+"href=\"%s\" target=\"_blank\">upgrade now!</a> With regular updates, "
+"helpful tutorials, we promise to make website building an ultimate journey "
+"for you!"
 msgstr ""
 
 #: includes/admin-settings-welcome.php:27
-msgid "The Ultimate Addon for Beaver Builder comes with a number of custom modules to enhance your experience of website creation with Beaver Builder. Inheriting the drag & drop functionality and the performance oriented objective of Beaver Builder, the Ultimate Addons are now the best addons to be used with the page builder."
+msgid ""
+"The Ultimate Addon for Beaver Builder comes with a number of custom modules "
+"to enhance your experience of website creation with Beaver Builder. "
+"Inheriting the drag & drop functionality and the performance oriented "
+"objective of Beaver Builder, the Ultimate Addons are now the best addons to "
+"be used with the page builder."
 msgstr ""
 
 #: includes/admin-settings-welcome.php:31
-msgid "With <a href=\"%1$s\" target=\"_blank\">regular updates</a>, <a href=\"%2$s\" target=\"_blank\">helpful tutorials</a>, we promise to make website building an ultimate journey for you!"
+msgid ""
+"With <a href=\"%1$s\" target=\"_blank\">regular updates</a>, <a "
+"href=\"%2$s\" target=\"_blank\">helpful tutorials</a>, we promise to make "
+"website building an ultimate journey for you!"
 msgstr ""
 
 #: includes/admin-settings-welcome.php:40
@@ -970,16 +1004,22 @@ msgid "Join our Community!"
 msgstr ""
 
 #: includes/admin-settings-welcome.php:41
-msgid "Want to connect with us to know more? Or have some suggestions we can take forward? <a href=\"%s\" target=\"_blank\">Join our Facebook community</a>, where a number of professional and newbie Beavers share their views and suggestions for the Ultimate Addons."
+msgid ""
+"Want to connect with us to know more? Or have some suggestions we can take "
+"forward? <a href=\"%s\" target=\"_blank\">Join our Facebook community</a>, "
+"where a number of professional and newbie Beavers share their views and "
+"suggestions for the Ultimate Addons."
 msgstr ""
 
 #: includes/ui-panel-presets.php:91
 msgid "Note - You can enable, disable and manage %s presets here."
 msgstr ""
 
-#: includes/ui-panel-presets.php:94
-#: includes/ui-panel-sections.php:98
-msgid "Note - Images used in the templates are hotlinked from our server and are subject to copyright. It is strongly recommended that you replace them with your own."
+#: includes/ui-panel-presets.php:94 includes/ui-panel-sections.php:98
+msgid ""
+"Note - Images used in the templates are hotlinked from our server and are "
+"subject to copyright. It is strongly recommended that you replace them with "
+"your own."
 msgstr ""
 
 #: includes/ui-panel-sections.php:33
@@ -1025,8 +1065,7 @@ msgstr ""
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:213
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:55
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:64
-#: objects/fl-nested-form-button.php:218
-#: objects/fl-nested-form-button.php:649
+#: objects/fl-nested-form-button.php:218 objects/fl-nested-form-button.php:649
 msgid "Structure"
 msgstr ""
 
@@ -1191,7 +1230,9 @@ msgstr ""
 #: modules/info-table/info-table-bb-2-2-compatibility.php:536
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:425
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:526
-msgid "The type of border to use. Double borders must have a width of at least 3px to render properly."
+msgid ""
+"The type of border to use. Double borders must have a width of at least 3px "
+"to render properly."
 msgstr ""
 
 #: modules/advanced-icon/advanced-icon.php:157
@@ -1341,8 +1382,7 @@ msgstr ""
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:55
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:50
 #: modules/uabb-star-rating/uabb-star-rating.php:199
-#: objects/fl-nested-form-button.php:360
-#: objects/fl-nested-form-button.php:755
+#: objects/fl-nested-form-button.php:360 objects/fl-nested-form-button.php:755
 msgid "Alignment"
 msgstr ""
 
@@ -1353,8 +1393,7 @@ msgstr ""
 #: modules/advanced-icon/advanced-icon.php:215
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:319
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:363
-#: objects/fl-nested-form-button.php:370
-#: objects/fl-nested-form-button.php:765
+#: objects/fl-nested-form-button.php:370 objects/fl-nested-form-button.php:765
 msgid "Mobile Alignment"
 msgstr ""
 
@@ -1378,8 +1417,7 @@ msgstr ""
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:662
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:148
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:151
-#: objects/fl-nested-form-button.php:157
-#: objects/fl-nested-form-button.php:578
+#: objects/fl-nested-form-button.php:157 objects/fl-nested-form-button.php:578
 msgid "Colors"
 msgstr ""
 
@@ -1420,7 +1458,9 @@ msgstr ""
 #: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:353
 #: modules/info-table/info-table-bb-2-2-compatibility.php:595
 #: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:583
-msgid "Preset 1 => Icon : White, Background : Theme </br>Preset 2 => Icon : Theme, Background : #f3f3f3"
+msgid ""
+"Preset 1 => Icon : White, Background : Theme </br>Preset 2 => Icon : Theme, "
+"Background : #f3f3f3"
 msgstr ""
 
 #: modules/advanced-icon/advanced-icon.php:237
@@ -1482,8 +1522,7 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:247
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:244
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:296
-#: objects/fl-nested-form-button.php:302
-#: objects/fl-nested-form-button.php:314
+#: objects/fl-nested-form-button.php:302 objects/fl-nested-form-button.php:314
 msgid "Border Color"
 msgstr ""
 
@@ -1517,8 +1556,7 @@ msgstr ""
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:140
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:66
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:75
-#: objects/fl-nested-form-button.php:69
-#: objects/fl-nested-form-button.php:484
+#: objects/fl-nested-form-button.php:69 objects/fl-nested-form-button.php:484
 msgid "Gradient"
 msgstr ""
 
@@ -1638,8 +1676,7 @@ msgstr ""
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:136
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:134
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:153
-#: objects/fl-nested-form-button.php:142
-#: objects/fl-nested-form-button.php:563
+#: objects/fl-nested-form-button.php:142 objects/fl-nested-form-button.php:563
 msgid "Icon"
 msgstr ""
 
@@ -1669,7 +1706,10 @@ msgid "Photo"
 msgstr ""
 
 #: modules/advanced-icon/advanced-icon.php:365
-msgid "This background color properties will work only when Icon background style is not simple. Also the border color properties will work for Design your own."
+msgid ""
+"This background color properties will work only when Icon background style "
+"is not simple. Also the border color properties will work for Design your "
+"own."
 msgstr ""
 
 #: modules/advanced-icon/advanced-icon.php:391
@@ -1766,7 +1806,10 @@ msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:234
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:224
-msgid "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+msgid ""
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+"Lorem Ipsum has been the industry's standard dummy text ever since the "
+"1500s."
 msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:240
@@ -1909,8 +1952,7 @@ msgstr ""
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:193
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:241
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:204
-#: objects/fl-nested-form-button.php:210
-#: objects/fl-nested-form-button.php:641
+#: objects/fl-nested-form-button.php:210 objects/fl-nested-form-button.php:641
 #: objects/fl-nested-form-button.php:688
 msgid "Border"
 msgstr ""
@@ -1939,7 +1981,9 @@ msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:349
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:384
-msgid "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+msgid ""
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
 msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:354
@@ -1958,8 +2002,7 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:383
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:335
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:379
-#: objects/fl-nested-form-button.php:386
-#: objects/fl-nested-form-button.php:781
+#: objects/fl-nested-form-button.php:386 objects/fl-nested-form-button.php:781
 msgid "Button Settings"
 msgstr ""
 
@@ -2020,7 +2063,9 @@ msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:516
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:596
-msgid "Apply height to complete Flipbox. It is useful when multiple Flipboxes are in same row."
+msgid ""
+"Apply height to complete Flipbox. It is useful when multiple Flipboxes are "
+"in same row."
 msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:520
@@ -2030,7 +2075,9 @@ msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:524
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:603
-msgid "Apply height to complete Flipbox for medium devices. It will inherit desktop height if empty."
+msgid ""
+"Apply height to complete Flipbox for medium devices. It will inherit "
+"desktop height if empty."
 msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:528
@@ -2040,7 +2087,9 @@ msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:532
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:610
-msgid "Apply height to complete Flipbox for small devices. It will inherit medium height if empty."
+msgid ""
+"Apply height to complete Flipbox for small devices. It will inherit medium "
+"height if empty."
 msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:536
@@ -2052,7 +2101,9 @@ msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:538
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:616
-msgid "If enabled your Flip Box would automatically manage its height for small devices."
+msgid ""
+"If enabled your Flip Box would automatically manage its height for small "
+"devices."
 msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:546
@@ -2068,8 +2119,7 @@ msgstr ""
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:238
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:394
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:437
-#: objects/fl-nested-form-button.php:243
-#: objects/fl-nested-form-button.php:674
+#: objects/fl-nested-form-button.php:243 objects/fl-nested-form-button.php:674
 msgid "Padding"
 msgstr ""
 
@@ -2112,8 +2162,7 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:486
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:319
 #: modules/uabb-star-rating/uabb-star-rating.php:239
-#: objects/fl-nested-form-button.php:383
-#: objects/fl-nested-form-button.php:778
+#: objects/fl-nested-form-button.php:383 objects/fl-nested-form-button.php:778
 #: objects/fl-nested-form-button.php:785
 msgid "Typography"
 msgstr ""
@@ -2456,8 +2505,7 @@ msgstr ""
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:504
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:78
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:82
-#: objects/fl-nested-form-button.php:88
-#: objects/fl-nested-form-button.php:508
+#: objects/fl-nested-form-button.php:88 objects/fl-nested-form-button.php:508
 msgid "Border Size"
 msgstr ""
 
@@ -2490,8 +2538,7 @@ msgstr ""
 msgid "Font Family"
 msgstr ""
 
-#: modules/flip-box/flip-box.php:22
-#: modules/flip-box/flip-box.php:23
+#: modules/flip-box/flip-box.php:22 modules/flip-box/flip-box.php:23
 msgid "Flip Box"
 msgstr ""
 
@@ -2520,10 +2567,8 @@ msgstr ""
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:59
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:54
 #: modules/uabb-star-rating/uabb-star-rating.php:203
-#: objects/fl-nested-form-button.php:364
-#: objects/fl-nested-form-button.php:374
-#: objects/fl-nested-form-button.php:759
-#: objects/fl-nested-form-button.php:769
+#: objects/fl-nested-form-button.php:364 objects/fl-nested-form-button.php:374
+#: objects/fl-nested-form-button.php:759 objects/fl-nested-form-button.php:769
 msgid "Left"
 msgstr ""
 
@@ -2558,10 +2603,8 @@ msgstr ""
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:58
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:53
 #: modules/uabb-star-rating/uabb-star-rating.php:204
-#: objects/fl-nested-form-button.php:363
-#: objects/fl-nested-form-button.php:373
-#: objects/fl-nested-form-button.php:758
-#: objects/fl-nested-form-button.php:768
+#: objects/fl-nested-form-button.php:363 objects/fl-nested-form-button.php:373
+#: objects/fl-nested-form-button.php:758 objects/fl-nested-form-button.php:768
 msgid "Center"
 msgstr ""
 
@@ -2590,10 +2633,8 @@ msgstr ""
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:60
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:55
 #: modules/uabb-star-rating/uabb-star-rating.php:205
-#: objects/fl-nested-form-button.php:365
-#: objects/fl-nested-form-button.php:375
-#: objects/fl-nested-form-button.php:760
-#: objects/fl-nested-form-button.php:770
+#: objects/fl-nested-form-button.php:365 objects/fl-nested-form-button.php:375
+#: objects/fl-nested-form-button.php:760 objects/fl-nested-form-button.php:770
 msgid "Right"
 msgstr ""
 
@@ -2796,7 +2837,9 @@ msgstr ""
 
 #: modules/image-separator/image-separator-bb-2-2-compatibility.php:245
 #: modules/image-separator/image-separator-bb-less-than-2-2-compatibility.php:247
-msgid "50% is default. Increase to push the image outside or decrease to pull the image inside."
+msgid ""
+"50% is default. Increase to push the image outside or decrease to pull the "
+"image inside."
 msgstr ""
 
 #: modules/image-separator/image-separator-bb-2-2-compatibility.php:254
@@ -2835,8 +2878,7 @@ msgstr ""
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:64
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:73
 #: modules/uabb-star-rating/uabb-star-rating.php:120
-#: objects/fl-nested-form-button.php:67
-#: objects/fl-nested-form-button.php:482
+#: objects/fl-nested-form-button.php:67 objects/fl-nested-form-button.php:482
 msgid "Default"
 msgstr ""
 
@@ -3137,7 +3179,9 @@ msgstr ""
 
 #: modules/image-separator/image-separator-bb-2-2-compatibility.php:409
 #: modules/image-separator/image-separator-bb-less-than-2-2-compatibility.php:407
-msgid "The animation effect will repeat to the count you enter. Enter 0 if you want to repeat it infinitely."
+msgid ""
+"The animation effect will repeat to the count you enter. Enter 0 if you "
+"want to repeat it infinitely."
 msgstr ""
 
 #: modules/image-separator/image-separator-bb-2-2-compatibility.php:418
@@ -3385,8 +3429,7 @@ msgstr ""
 msgid "Info List"
 msgstr ""
 
-#: modules/info-list/info-list.php:23
-#: modules/spacer-gap/spacer-gap.php:23
+#: modules/info-list/info-list.php:23 modules/spacer-gap/spacer-gap.php:23
 msgid "A totally awesome module!"
 msgstr ""
 
@@ -3646,8 +3689,7 @@ msgstr ""
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:74
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:265
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:314
-#: objects/fl-nested-form-button.php:321
-#: objects/fl-nested-form-button.php:712
+#: objects/fl-nested-form-button.php:321 objects/fl-nested-form-button.php:712
 msgid "Custom Width"
 msgstr ""
 
@@ -3683,7 +3725,9 @@ msgstr ""
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:120
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:118
-msgid "You can select one of the two background types: Color: simple one color background or Gradient: two color background."
+msgid ""
+"You can select one of the two background types: Color: simple one color "
+"background or Gradient: two color background."
 msgstr ""
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:136
@@ -3720,8 +3764,7 @@ msgstr ""
 msgid "Text Shadow Color"
 msgstr ""
 
-#: modules/ribbon/ribbon.php:22
-#: modules/ribbon/ribbon.php:23
+#: modules/ribbon/ribbon.php:22 modules/ribbon/ribbon.php:23
 msgid "Ribbon"
 msgstr ""
 
@@ -3737,12 +3780,6 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:35
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:34
 msgid "Add description text here. Lorem Ipsum is a dummy content."
-msgstr ""
-
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:48
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:47
-msgctxt "Image type."
-msgid "None"
 msgstr ""
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:177
@@ -3834,7 +3871,9 @@ msgstr ""
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:310
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:320
-msgid "<ul><li>Enter description text here.</li><li>Enter description text here.</li></ul>"
+msgid ""
+"<ul><li>Enter description text here.</li><li>Enter description text "
+"here.</li></ul>"
 msgstr ""
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:315
@@ -3845,12 +3884,6 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:319
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:329
 msgid "Type"
-msgstr ""
-
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:322
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:332
-msgctxt "Call to action."
-msgid "None"
 msgstr ""
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:323
@@ -3865,14 +3898,15 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:226
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:236
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:240
-#: objects/fl-nested-form-button.php:24
-#: objects/fl-nested-form-button.php:446
+#: objects/fl-nested-form-button.php:24 objects/fl-nested-form-button.php:446
 msgid "Text"
 msgstr ""
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:346
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:354
-msgid "The link applies to the entire module. If choosing a call to action type below, this link will also be used for the text or button."
+msgid ""
+"The link applies to the entire module. If choosing a call to action type "
+"below, this link will also be used for the text or button."
 msgstr ""
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:354
@@ -3986,7 +4020,9 @@ msgstr ""
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:653
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:678
-msgid "Apply minimum height to complete SlideBox. It is useful when multiple SlideBox are in same row."
+msgid ""
+"Apply minimum height to complete SlideBox. It is useful when multiple "
+"SlideBox are in same row."
 msgstr ""
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:659
@@ -4013,8 +4049,7 @@ msgstr ""
 msgid "Link Text"
 msgstr ""
 
-#: modules/slide-box/slide-box.php:22
-#: modules/slide-box/slide-box.php:23
+#: modules/slide-box/slide-box.php:22 modules/slide-box/slide-box.php:23
 msgid "Slide Box"
 msgstr ""
 
@@ -4044,29 +4079,25 @@ msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:23
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:22
-#: objects/fl-nested-form-button.php:25
-#: objects/fl-nested-form-button.php:447
+#: objects/fl-nested-form-button.php:25 objects/fl-nested-form-button.php:447
 msgid "Click Here"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:65
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:74
-#: objects/fl-nested-form-button.php:68
-#: objects/fl-nested-form-button.php:483
+#: objects/fl-nested-form-button.php:68 objects/fl-nested-form-button.php:483
 msgid "Flat"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:67
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:76
-#: objects/fl-nested-form-button.php:70
-#: objects/fl-nested-form-button.php:485
+#: objects/fl-nested-form-button.php:70 objects/fl-nested-form-button.php:485
 msgid "Transparent"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:68
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:77
-#: objects/fl-nested-form-button.php:71
-#: objects/fl-nested-form-button.php:486
+#: objects/fl-nested-form-button.php:71 objects/fl-nested-form-button.php:486
 msgid "3D"
 msgstr ""
 
@@ -4076,180 +4107,153 @@ msgstr ""
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:90
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:106
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:119
-#: objects/fl-nested-form-button.php:96
-#: objects/fl-nested-form-button.php:112
-#: objects/fl-nested-form-button.php:125
-#: objects/fl-nested-form-button.php:517
-#: objects/fl-nested-form-button.php:533
-#: objects/fl-nested-form-button.php:546
+#: objects/fl-nested-form-button.php:96 objects/fl-nested-form-button.php:112
+#: objects/fl-nested-form-button.php:125 objects/fl-nested-form-button.php:517
+#: objects/fl-nested-form-button.php:533 objects/fl-nested-form-button.php:546
 msgid "Hover Styles"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:91
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:94
-#: objects/fl-nested-form-button.php:100
-#: objects/fl-nested-form-button.php:521
+#: objects/fl-nested-form-button.php:100 objects/fl-nested-form-button.php:521
 msgid "Fade Background"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:92
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:95
-#: objects/fl-nested-form-button.php:101
-#: objects/fl-nested-form-button.php:522
+#: objects/fl-nested-form-button.php:101 objects/fl-nested-form-button.php:522
 msgid "Fill Background From Top"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:93
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:96
-#: objects/fl-nested-form-button.php:102
-#: objects/fl-nested-form-button.php:523
+#: objects/fl-nested-form-button.php:102 objects/fl-nested-form-button.php:523
 msgid "Fill Background From Bottom"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:94
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:97
-#: objects/fl-nested-form-button.php:103
-#: objects/fl-nested-form-button.php:524
+#: objects/fl-nested-form-button.php:103 objects/fl-nested-form-button.php:524
 msgid "Fill Background From Left"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:95
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:98
-#: objects/fl-nested-form-button.php:104
-#: objects/fl-nested-form-button.php:525
+#: objects/fl-nested-form-button.php:104 objects/fl-nested-form-button.php:525
 msgid "Fill Background From Right"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:96
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:99
-#: objects/fl-nested-form-button.php:105
-#: objects/fl-nested-form-button.php:526
+#: objects/fl-nested-form-button.php:105 objects/fl-nested-form-button.php:526
 msgid "Fill Background Vertical"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:97
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:100
-#: objects/fl-nested-form-button.php:106
-#: objects/fl-nested-form-button.php:527
+#: objects/fl-nested-form-button.php:106 objects/fl-nested-form-button.php:527
 msgid "Fill Background Diagonal"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:98
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:101
-#: objects/fl-nested-form-button.php:107
-#: objects/fl-nested-form-button.php:528
+#: objects/fl-nested-form-button.php:107 objects/fl-nested-form-button.php:528
 msgid "Fill Background Horizontal"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:106
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:109
-#: objects/fl-nested-form-button.php:115
-#: objects/fl-nested-form-button.php:536
+#: objects/fl-nested-form-button.php:115 objects/fl-nested-form-button.php:536
 msgid "Move Down"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:107
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:110
-#: objects/fl-nested-form-button.php:116
-#: objects/fl-nested-form-button.php:537
+#: objects/fl-nested-form-button.php:116 objects/fl-nested-form-button.php:537
 msgid "Move Up"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:108
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:111
-#: objects/fl-nested-form-button.php:117
-#: objects/fl-nested-form-button.php:538
+#: objects/fl-nested-form-button.php:117 objects/fl-nested-form-button.php:538
 msgid "Move Left"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:109
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:112
-#: objects/fl-nested-form-button.php:118
-#: objects/fl-nested-form-button.php:539
+#: objects/fl-nested-form-button.php:118 objects/fl-nested-form-button.php:539
 msgid "Move Right"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:110
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:113
-#: objects/fl-nested-form-button.php:119
-#: objects/fl-nested-form-button.php:540
+#: objects/fl-nested-form-button.php:119 objects/fl-nested-form-button.php:540
 msgid "Animate Top"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:111
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:114
-#: objects/fl-nested-form-button.php:120
-#: objects/fl-nested-form-button.php:541
+#: objects/fl-nested-form-button.php:120 objects/fl-nested-form-button.php:541
 msgid "Animate Bottom"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:120
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:123
-#: objects/fl-nested-form-button.php:129
-#: objects/fl-nested-form-button.php:550
+#: objects/fl-nested-form-button.php:129 objects/fl-nested-form-button.php:550
 msgid "Appear Icon From Right"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:121
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:124
-#: objects/fl-nested-form-button.php:130
-#: objects/fl-nested-form-button.php:551
+#: objects/fl-nested-form-button.php:130 objects/fl-nested-form-button.php:551
 msgid "Appear Icon From Left"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:122
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:125
-#: objects/fl-nested-form-button.php:131
-#: objects/fl-nested-form-button.php:552
+#: objects/fl-nested-form-button.php:131 objects/fl-nested-form-button.php:552
 msgid "Appear Icon From Top"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:123
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:126
-#: objects/fl-nested-form-button.php:132
-#: objects/fl-nested-form-button.php:553
+#: objects/fl-nested-form-button.php:132 objects/fl-nested-form-button.php:553
 msgid "Appear Icon From Bottom"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:129
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:132
-#: objects/fl-nested-form-button.php:138
-#: objects/fl-nested-form-button.php:559
+#: objects/fl-nested-form-button.php:138 objects/fl-nested-form-button.php:559
 msgid "Icons"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:138
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:141
-#: objects/fl-nested-form-button.php:147
-#: objects/fl-nested-form-button.php:568
+#: objects/fl-nested-form-button.php:147 objects/fl-nested-form-button.php:568
 msgid "Icon Position"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:141
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:144
-#: objects/fl-nested-form-button.php:150
-#: objects/fl-nested-form-button.php:571
+#: objects/fl-nested-form-button.php:150 objects/fl-nested-form-button.php:571
 msgid "Before Text"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:142
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:145
-#: objects/fl-nested-form-button.php:151
-#: objects/fl-nested-form-button.php:572
+#: objects/fl-nested-form-button.php:151 objects/fl-nested-form-button.php:572
 msgid "After Text"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:190
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:201
-#: objects/fl-nested-form-button.php:207
-#: objects/fl-nested-form-button.php:638
+#: objects/fl-nested-form-button.php:207 objects/fl-nested-form-button.php:638
 msgid "Apply Hover Color To"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:194
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:205
-#: objects/fl-nested-form-button.php:211
-#: objects/fl-nested-form-button.php:642
+#: objects/fl-nested-form-button.php:211 objects/fl-nested-form-button.php:642
 msgid "Background"
 msgstr ""
 
@@ -4259,51 +4263,37 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:308
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:46
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:42
-#: objects/fl-nested-form-button.php:222
-#: objects/fl-nested-form-button.php:653
+#: objects/fl-nested-form-button.php:222 objects/fl-nested-form-button.php:653
 msgid "Width"
-msgstr ""
-
-#: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:209
-#: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:220
-#: objects/fl-nested-form-button.php:225
-#: objects/fl-nested-form-button.php:656
-msgctxt "Width."
-msgid "Auto"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:210
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:221
-#: objects/fl-nested-form-button.php:226
-#: objects/fl-nested-form-button.php:657
+#: objects/fl-nested-form-button.php:226 objects/fl-nested-form-button.php:657
 msgid "Full Width"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:274
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:322
-#: objects/fl-nested-form-button.php:329
-#: objects/fl-nested-form-button.php:721
+#: objects/fl-nested-form-button.php:329 objects/fl-nested-form-button.php:721
 msgid "Custom Height"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:283
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:330
-#: objects/fl-nested-form-button.php:337
-#: objects/fl-nested-form-button.php:730
+#: objects/fl-nested-form-button.php:337 objects/fl-nested-form-button.php:730
 msgid "Padding Top/Bottom"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:292
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:338
-#: objects/fl-nested-form-button.php:345
-#: objects/fl-nested-form-button.php:739
+#: objects/fl-nested-form-button.php:345 objects/fl-nested-form-button.php:739
 msgid "Padding Left/Right"
 msgstr ""
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:301
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:346
-#: objects/fl-nested-form-button.php:353
-#: objects/fl-nested-form-button.php:747
+#: objects/fl-nested-form-button.php:353 objects/fl-nested-form-button.php:747
 msgid "Round Corners"
 msgstr ""
 
@@ -4384,12 +4374,16 @@ msgstr ""
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:214
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:228
-msgid "Image size below medium devices. Leave it blank if you want to keep same size"
+msgid ""
+"Image size below medium devices. Leave it blank if you want to keep same "
+"size"
 msgstr ""
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:236
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:250
-msgid "There might be responsive issues for long texts. If you are facing such issues then select appropriate devices width to make your module responsive."
+msgid ""
+"There might be responsive issues for long texts. If you are facing such "
+"issues then select appropriate devices width to make your module responsive."
 msgstr ""
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:247
@@ -4401,7 +4395,9 @@ msgstr ""
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:273
 #: modules/uabb-separator/uabb-separator-bb-2-2-compatibility.php:84
 #: modules/uabb-separator/uabb-separator-bb-less-than-2-2-compatibility.php:79
-msgid "The type of border to use. Double borders must have a height of at least 3px to render properly."
+msgid ""
+"The type of border to use. Double borders must have a height of at least "
+"3px to render properly."
 msgstr ""
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:281
@@ -4511,4 +4507,105 @@ msgstr ""
 
 #: modules/uabb-star-rating/uabb-star-rating.php:206
 msgid "Justify"
+msgstr ""
+
+#: vendor/wp-cli/core-command/src/Core_Command.php:749
+msgid "Wildcard DNS may not be configured correctly."
+msgstr ""
+
+#: vendor/wp-cli/entity-command/src/Site_Command.php:157
+msgid "Uncategorized"
+msgstr ""
+
+#: vendor/wp-cli/export-command/src/WP_Export_XML_Over_HTTP.php:20
+#: vendor/wp-cli/export-command/src/WP_Export_XML_Over_HTTP.php:25
+msgid "Export Error"
+msgstr ""
+
+#: vendor/wp-cli/extension-command/src/WP_CLI/CommandWithUpgrade.php:770
+msgid " Try again"
+msgstr ""
+
+#: vendor/wp-cli/extension-command/src/WP_CLI/CommandWithUpgrade.php:776
+msgid "API error. Try Again."
+msgstr ""
+
+#: vendor/wp-cli/media-command/src/Media_Command.php:159
+msgid "image"
+msgid_plural "images"
+msgstr[0] ""
+msgstr[1] ""
+
+#: vendor/wp-cli/wp-cli/php/utils-wp.php:247
+msgid "Inactive Widgets"
+msgstr ""
+
+#: vendor/wp-cli/wp-cli/php/utils-wp.php:250
+msgid "Drag widgets here to remove them from the sidebar but keep their settings."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Ultimate Addons for Beaver Builder - Lite"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.ultimatebeaver.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Ultimate Addons is a free extension for Beaver Builder that adds 10 "
+"modules, and works on top of any Beaver Builder Package. (Free, Standard, "
+"Pro & Agency) You can use it with on any WordPress theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Brainstorm Force"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.brainstormforce.com"
+msgstr ""
+
+#: classes/class-uabb-admin-settings.php:251
+msgctxt "%s stands for custom branded \"UABB\" name."
+msgid "%s Settings"
+msgstr ""
+
+#: classes/class-uabb-init.php:66
+msgctxt "Plugin action link label."
+msgid "Upgrade"
+msgstr ""
+
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:48
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:47
+msgctxt "Image type."
+msgid "None"
+msgstr ""
+
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:322
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:332
+msgctxt "Call to action."
+msgid "None"
+msgstr ""
+
+#: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:209
+#: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:220
+#: objects/fl-nested-form-button.php:225 objects/fl-nested-form-button.php:656
+msgctxt "Width."
+msgid "Auto"
+msgstr ""
+
+#: vendor/wp-cli/core-command/src/Core_Command.php:491
+#: vendor/wp-cli/core-command/src/Core_Command.php:565
+#. translators: placeholder is blog name
+#. translators: placeholder is user supplied title
+msgctxt "Default network name"
+msgid "%s Sites"
+msgstr ""
+
+#: vendor/wp-cli/entity-command/src/Site_Command.php:160
+#. translators: Default category slug
+msgctxt "Default category slug"
+msgid "Uncategorized"
 msgstr ""
