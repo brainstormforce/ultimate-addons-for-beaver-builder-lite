@@ -100,11 +100,48 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/helper.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-ui-panel.php';
 
+		// Load the NPS Survey library.
+		if ( ! class_exists( 'Uabb_Lite_Nps_Survey' ) ) {
+			require_once BB_ULTIMATE_ADDON_DIR . 'lib/class-uabb-lite-nps-survey.php';
+		}
+
+		/*
+		* BSF Analytics Integration tracker.
+		*/
+		if ( ! class_exists( 'BSF_Analytics_Loader' ) ) {
+			require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics-loader.php';
+
+			$bsf_analytics = \BSF_Analytics_Loader::get_instance();
+
+			$bsf_analytics->set_entity(
+				array(
+					'bsf' => array(
+						'product_name'        => 'Ultimate Addons for Beaver Builder Lite',
+						'path'                => BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics',
+						'author'              => 'Brainstorm Force',
+						'time_to_display'     => '+24 hours',
+						'deactivation_survey' => array( // UABB Lite Plugin deactivation survey key.
+							array(
+								'id'                => 'deactivation-survey-ultimate-addons-for-beaver-builder-lite', // 'deactivation-survey-<your-plugin-slug>'
+								'popup_logo'        => BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg',
+								'plugin_slug'       => 'ultimate-addons-for-beaver-builder-lite', // <your-plugin-slug>
+								'plugin_version'    => BB_ULTIMATE_ADDON_LITE_VERSION,
+								'popup_title'       => __( 'Quick Feedback', 'uabb' ),
+								'support_url'       => 'https://www.ultimatebeaver.com/contact/',
+								'popup_description' => __( 'If you have a moment, please share why you are deactivating Ultimate Addons for Beaver Builder Lite :', 'uabb' ),
+								'show_on_screens'   => array( 'plugins' ),
+							),
+						),
+					),
+				)
+			);
+		}
+
 		// BSF Analytics Tracker.
-		require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
+		//require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
 
 		// Load the appropriate text-domain.
-		$this->load_plugin_textdomain();
+		$this->load_uabb_textdomain();
 	}
 
 	/**
@@ -180,24 +217,49 @@ class UABB_Init {
 	 * @since 1.0
 	 * @return bool
 	 */
-	public function load_plugin_textdomain() {
+	public function load_uabb_textdomain() {
+		// Default languages directory for "ultimate-addons-for-beaver-builder-lite".
+		$lang_dir = BB_ULTIMATE_ADDON_DIR . 'languages/';
+
+		/**
+		 * Filters the languages directory path to use for AffiliateWP.
+		 *
+		 * @param string $lang_dir The languages directory path.
+		 */
+		$lang_dir = apply_filters( 'uabb_languages_directory', $lang_dir );
+
 		// Traditional WordPress plugin locale filter.
-		$locale = apply_filters( 'plugin_locale', get_locale(), 'uabb' );
+		global $wp_version;
 
-		// Setup paths to current locale file.
-		$mofile_global = trailingslashit( WP_LANG_DIR ) . 'plugins/bb-ultimate-addon/' . $locale . '.mo';
-		$mofile_local  = trailingslashit( BB_ULTIMATE_ADDON_DIR ) . 'languages/' . $locale . '.mo';
+		$get_locale = get_locale();
 
-		if ( file_exists( $mofile_global ) ) {
-			// Look in global /wp-content/languages/plugins/bb-ultimate-addon/ folder.
-			return load_textdomain( 'uabb', $mofile_global );
-		} elseif ( file_exists( $mofile_local ) ) {
-			// Look in local /wp-content/plugins/bb-ultimate-addon/languages/ folder.
-			return load_textdomain( 'uabb', $mofile_local );
+		if ( $wp_version >= 4.7 ) {
+			$get_locale = get_user_locale();
 		}
 
-		// Nothing found.
-		return false;
+		/**
+		 * Language Locale for Ultimate BB
+		 *
+		 * @var $get_locale The locale to use. Uses get_user_locale()` in WordPress 4.7 or greater,
+		 *                  otherwise uses `get_locale()`.
+		 */
+		$locale = apply_filters( 'plugin_locale', $get_locale, 'uabb' );
+		$mofile = sprintf( '%1$s-%2$s.mo', 'uabb', $locale );
+
+		// Setup paths to current locale file.
+		$mofile_local  = $lang_dir . $mofile;
+		$mofile_global = WP_LANG_DIR . '/ultimate-addons-for-beaver-builder-lite/' . $mofile;
+
+		if ( file_exists( $mofile_global ) ) {
+			// Look in global /wp-content/languages/ultimate-addons-for-beaver-builder-lite/ folder.
+			load_textdomain( 'uabb', $mofile_global );
+		} elseif ( file_exists( $mofile_local ) ) {
+			// Look in local /wp-content/plugins/ultimate-addons-for-beaver-builder-lite/languages/ folder.
+			load_textdomain( 'uabb', $mofile_local );
+		} else {
+			// Load the default language files.
+			load_plugin_textdomain( 'uabb', false, $lang_dir );
+		}
 	}
 
 	/**

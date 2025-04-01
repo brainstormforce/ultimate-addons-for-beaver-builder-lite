@@ -14,13 +14,27 @@
   },
   "homepage": "https://github.com/brainstormforce/ultimate-addons-for-beaver-builder-lite#readme",
   "devDependencies": {
+    "gpt-po": "^1.2.0",
     "grunt": "^1.6.1",
     "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-compress": "^1.6.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-release": "^0.14.0",
-    "grunt-wp-i18n": "^1.0.2",
-    "grunt-wp-readme-to-markdown": "^2.0.1",
+    "grunt-wp-i18n": "^1.0.3",
+    "grunt-wp-readme-to-markdown": "^2.1.0",
     "shelljs": "~0.8.1"
+  },
+  "scripts": {
+    "i18n": "grunt i18n && wp i18n make-pot . --exclude='node_modules,vendor,tests,artifact' languages/uabb.pot --domain=uabb --debug",
+    "i18n:po": "wp i18n update-po languages/uabb.pot",
+    "i18n:mo": "wp i18n make-mo languages",
+    "i18n:json": "wp i18n make-json languages --no-purge",
+    "i18n:gptpo:nl": "gpt-po translate --po languages/uabb-nl_NL.po --lang nl --verbose",
+    "i18n:gptpo:fr": "gpt-po translate --po languages/uabb-fr_FR.po --lang fr --verbose",
+    "i18n:gptpo:es": "gpt-po translate --po languages/uabb-es_ES.po --lang es --verbose",
+    "i18n:gptpo:de": "gpt-po translate --po languages/uabb-de_DE.po --lang de --verbose"
+  },
+  "dependencies": {
+    "@wordpress/scripts": "^1.0.0"
   }
 }
