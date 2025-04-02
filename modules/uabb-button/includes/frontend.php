@@ -25,7 +25,7 @@ if ( isset( $settings->link_nofollow ) ) {
 	$link_nofollow = '';
 }
 ?>
-<div class="uabb-module-content <?php echo esc_attr( $module->get_classname() ); ?>">
+<div class="uabb-module-content  <?php echo esc_attr( $module->get_classname() ); ?>">
 	<?php
 	if ( isset( $settings->threed_button_options ) && ( 'animate_top' === $settings->threed_button_options || 'animate_bottom' === $settings->threed_button_options || 'animate_left' === $settings->threed_button_options || 'animate_right' === $settings->threed_button_options ) ) {
 		?>

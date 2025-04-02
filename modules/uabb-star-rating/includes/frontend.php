@@ -14,8 +14,7 @@ $title  = $settings->rating_title;
 $rating = ! empty( $settings->rating ) ? $settings->rating : 0;
 $layout = 0;
 ?>
-<div class="uabb-rating-content">
-
+<div class="uabb-rating-content" tabindex="0" aria-label="<?php echo esc_attr( $rating ); ?>">
 <?php
 if ( 'bottom' === $settings->star_position ) {
 	?>

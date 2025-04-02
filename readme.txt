@@ -5,7 +5,7 @@ Tags: beaver builder, beaver builder free, beaver builder lite, beaver builder a
 Requires at least: 4.6
 Requires PHP: 7.0
 Tested up to: 6.7
-Stable tag: 1.6.1
+Stable tag: 1.6.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,6 +102,9 @@ Yes, with .po and .mo files and GlotPress support.
 ---
 
 == Changelog ==
+
+= 1.6.2 = 
+* Improved adherence to accessibility standards throughout the plugin.
 
 = 1.6.1 = 
 * This update addressed a security bug. Please make sure you are using the latest version on your website.
