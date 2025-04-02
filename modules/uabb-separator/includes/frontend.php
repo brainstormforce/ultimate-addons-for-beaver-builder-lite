@@ -7,6 +7,6 @@
 
 ?>
 <?php /* Separator Markup */ ?>
-<div class="uabb-module-content uabb-separator-parent" tabindex="0">
+<div class="uabb-module-content uabb-separator-parent">
 	<div class="uabb-separator"></div>
 </div>
