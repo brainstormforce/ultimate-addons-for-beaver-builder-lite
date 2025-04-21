@@ -1,16 +1,16 @@
-# Copyright (C) 2024 Brainstorm Force
+# Copyright (C) 2025 Brainstorm Force
 # This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.2\n"
+"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.3\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-"
 "lite\n"
-"POT-Creation-Date: 2024-10-01 08:49:20+00:00\n"
+"POT-Creation-Date: 2025-04-21 11:25:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
@@ -26,56 +26,166 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: admin/bsf-analytics/class-bsf-analytics.php:185
+#: admin/bsf-analytics/class-bsf-analytics.php:228
 #. translators: %s product name
 msgid ""
-"Want to help make <strong>%1s</strong> even more awesome? Allow us to "
-"collect non-sensitive diagnostic data and usage information. "
+"Want to help make %1s even more awesome? Allow us to collect non-sensitive "
+"diagnostic data and usage information. "
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:188
+#: admin/bsf-analytics/class-bsf-analytics.php:231
 msgid "This will be applicable for all sites from the network."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:212
+#: admin/bsf-analytics/class-bsf-analytics.php:255
 #. translators: %s usage doc link
 msgid " Know More."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:219
+#: admin/bsf-analytics/class-bsf-analytics.php:265
 msgid "Yes! Allow it"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:227
+#: admin/bsf-analytics/class-bsf-analytics.php:276
 msgid "No Thanks"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:300
-msgid "Every two days"
-msgstr ""
-
-#: admin/bsf-analytics/class-bsf-analytics.php:358
+#: admin/bsf-analytics/class-bsf-analytics.php:387
 msgid "Usage Tracking"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:392
-msgid "Allow Brainstorm Force products to track non-sensitive usage tracking data."
+#: admin/bsf-analytics/class-bsf-analytics.php:431
+#. translators: %s Product title
+msgid "Allow %s products to track non-sensitive usage tracking data."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:395
+#: admin/bsf-analytics/class-bsf-analytics.php:434
 msgid " This will be applicable for all sites from the network."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:400
+#: admin/bsf-analytics/class-bsf-analytics.php:439
 msgid "Learn More."
+msgstr ""
+
+#: admin/bsf-analytics/classes/class-bsf-analytics-helper.php:28
+msgid "Oops! Something went wrong. Please refresh the page and try again."
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:80
+#: classes/class-uabb-init.php:125
+msgid "Quick Feedback"
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:83
+msgid "If you have a moment, please share why you are deactivating the plugin."
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:109
+#: modules/advanced-icon/advanced-icon.php:324
+#: modules/advanced-icon/advanced-icon.php:339
+#: modules/flip-box/flip-box-bb-2-2-compatibility.php:14
+#: modules/flip-box/flip-box-bb-2-2-compatibility.php:24
+#: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:13
+#: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:23
+#: modules/image-icon/image-icon-bb-2-2-compatibility.php:25
+#: modules/image-icon/image-icon-bb-2-2-compatibility.php:46
+#: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:24
+#: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:45
+#: modules/info-list/info-list-bb-2-2-compatibility.php:374
+#: modules/info-list/info-list-bb-2-2-compatibility.php:402
+#: modules/info-list/info-list-bb-2-2-compatibility.php:418
+#: modules/info-list/info-list-bb-2-2-compatibility.php:422
+#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:430
+#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:467
+#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:483
+#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:487
+#: modules/info-table/info-table-bb-2-2-compatibility.php:284
+#: modules/info-table/info-table-bb-2-2-compatibility.php:304
+#: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:280
+#: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:300
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:50
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:65
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:69
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:539
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:49
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:64
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:68
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:568
+#: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:133
+#: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:136
+#: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:134
+#: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:153
+#: objects/fl-nested-form-button.php:142 objects/fl-nested-form-button.php:563
+msgid "Icon"
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:134
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:309
+msgid "Please tell us more details."
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:143
+#. translators: %1$s: link html start, %2$s: link html end
+msgid "Need help from our experts? %1$sClick here to contact us.%2$s"
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:154
+msgid "Submit & Deactivate"
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:155
+msgid "Skip & Deactivate"
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:224
+msgid "Sorry, you are not allowed to do this operation."
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:237
+msgid "Nonce validation failed"
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:284
+msgid "This is a temporary deactivation for testing."
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:285
+msgid "How can we assist you?"
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:290
+msgid "The plugin isn't working properly."
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:291
+msgid "Please tell us more about what went wrong?"
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:296
+msgid "I found a better alternative plugin."
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:297
+msgid "Could you please specify which plugin?"
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:302
+msgid "It's missing a specific feature."
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:303
+msgid "Please tell us more about the feature."
+msgstr ""
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:308
+msgid "Other"
 msgstr ""
 
 #: bb-ultimate-addon.php:60
 msgid ""
 "Unfortunately, plugin could not be activated as the memory allocated by "
-"your host has almost exhausted. UABB plugin recommends that your site "
-"should have 15M PHP memory remaining. <br/><br/>Please check <a "
-"target=\"_blank\" "
+"your host has almost exhausted. Plugin recommends that your site should "
+"have 15M PHP memory remaining. <br/><br/>Please check <a target=\"_blank\" "
 "href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\""
 ">this</a> article for solution or contact <a target=\"_blank\" "
 "href=\"http://store.brainstormforce.com/support\">support</a>.<br/><br/><a "
@@ -91,98 +201,123 @@ msgid ""
 "one</a> before continuing."
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:118
+#: classes/class-uabb-admin-settings.php:119
 msgid ""
 "Hello! Thank you for choosing the Ultimate Addon for Beaver Builder to "
 "build this website!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:119
+#: classes/class-uabb-admin-settings.php:120
 msgid ""
 "Would you please mind sharing your views and give it a 5 star rating on the "
 "WordPress repository?"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:121
+#: classes/class-uabb-admin-settings.php:122
 msgid "Ok, you deserve it"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:123
+#: classes/class-uabb-admin-settings.php:124
 msgid "Nope, maybe later"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:124
+#: classes/class-uabb-admin-settings.php:125
 msgid "I already did"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:179
+#: classes/class-uabb-admin-settings.php:180
 msgid "Something went wrong!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:180
+#: classes/class-uabb-admin-settings.php:181
 msgid "Complete"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:181
+#: classes/class-uabb-admin-settings.php:182
 msgid "Refreshed!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:182
+#: classes/class-uabb-admin-settings.php:183
 msgid "Try Again!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:183
+#: classes/class-uabb-admin-settings.php:184
 msgid "Installed!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:184
+#: classes/class-uabb-admin-settings.php:185
 msgid "Remove"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:185
+#: classes/class-uabb-admin-settings.php:186
 msgid "Install"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:186
+#: classes/class-uabb-admin-settings.php:187
 msgid "Installed"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:187
+#: classes/class-uabb-admin-settings.php:188
 msgid "Removed!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:275
+#: classes/class-uabb-admin-settings.php:276
 msgid "Settings updated!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:294
+#: classes/class-uabb-admin-settings.php:295
 msgid "Welcome"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:301
+#: classes/class-uabb-admin-settings.php:302
 #: includes/admin-settings-general.php:11
 #: modules/info-list/info-list-bb-2-2-compatibility.php:347
 #: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:405
 msgid "General Settings"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:308
+#: classes/class-uabb-admin-settings.php:309
 msgid "Modules"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:316
+#: classes/class-uabb-admin-settings.php:317
 #: includes/admin-settings-premium.php:25
 #: includes/admin-settings-template-cloud.php:11
 msgid "Template Cloud"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:323
+#: classes/class-uabb-admin-settings.php:324
 msgid "Font Icon Manager"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:329
+#: classes/class-uabb-admin-settings.php:330
 #: includes/admin-settings-premium.php:12
 msgid "Premium Features"
+msgstr ""
+
+#: classes/class-uabb-admin-settings.php:526
+msgid "Ultimate Addons for Beaver Builder Lite"
+msgstr ""
+
+#: classes/class-uabb-admin-settings.php:527
+msgid ""
+"How likely are you to recommend Ultimate Addons for Beaver Builder Lite to "
+"your friends or colleagues?"
+msgstr ""
+
+#: classes/class-uabb-admin-settings.php:530
+msgid ""
+"Could you please do us a favor and give us a 5-star rating on WordPress? It "
+"would help others choose Ultimate Addons for Beaver Builder Lite with "
+"confidence. Thank you!"
+msgstr ""
+
+#: classes/class-uabb-admin-settings.php:534
+msgid "Thank you for your feedback"
+msgstr ""
+
+#: classes/class-uabb-admin-settings.php:535
+msgid "We value your input. How can we improve your experience?"
 msgstr ""
 
 #: classes/class-uabb-attachment.php:36
@@ -262,11 +397,17 @@ msgstr ""
 msgid "%s Modules"
 msgstr ""
 
-#: classes/class-uabb-init.php:254
+#: classes/class-uabb-init.php:127
+msgid ""
+"If you have a moment, please share why you are deactivating Ultimate Addons "
+"for Beaver Builder Lite :"
+msgstr ""
+
+#: classes/class-uabb-init.php:317
 msgid "plugin requires"
 msgstr ""
 
-#: classes/class-uabb-init.php:256
+#: classes/class-uabb-init.php:319
 msgid " plugin installed & activated."
 msgstr ""
 
@@ -1030,8 +1171,21 @@ msgstr ""
 msgid "Note - You can enable, disable and manage %s sections here."
 msgstr ""
 
-#: lib/astra-notices/class-astra-notices.php:119
+#: lib/astra-notices/class-astra-notices.php:146
 msgid "WordPress Nonce not validated."
+msgstr ""
+
+#: lib/astra-notices/class-astra-notices.php:153
+msgid "Invalid notice ID."
+msgstr ""
+
+#: lib/nps-survey/classes/nps-survey-script.php:249
+msgid "Sorry, you are not allowed to do that."
+msgstr ""
+
+#: lib/nps-survey/classes/nps-survey-script.php:271
+#: lib/nps-survey/classes/nps-survey-script.php:377
+msgid "Nonce verification failed."
 msgstr ""
 
 #: modules/advanced-icon/advanced-icon.php:23
@@ -1642,44 +1796,6 @@ msgstr ""
 msgid "Image Type"
 msgstr ""
 
-#: modules/advanced-icon/advanced-icon.php:324
-#: modules/advanced-icon/advanced-icon.php:339
-#: modules/flip-box/flip-box-bb-2-2-compatibility.php:14
-#: modules/flip-box/flip-box-bb-2-2-compatibility.php:24
-#: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:13
-#: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:23
-#: modules/image-icon/image-icon-bb-2-2-compatibility.php:25
-#: modules/image-icon/image-icon-bb-2-2-compatibility.php:46
-#: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:24
-#: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:45
-#: modules/info-list/info-list-bb-2-2-compatibility.php:374
-#: modules/info-list/info-list-bb-2-2-compatibility.php:402
-#: modules/info-list/info-list-bb-2-2-compatibility.php:418
-#: modules/info-list/info-list-bb-2-2-compatibility.php:422
-#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:430
-#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:467
-#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:483
-#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:487
-#: modules/info-table/info-table-bb-2-2-compatibility.php:284
-#: modules/info-table/info-table-bb-2-2-compatibility.php:304
-#: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:280
-#: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:300
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:50
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:65
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:69
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:539
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:49
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:64
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:68
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:568
-#: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:133
-#: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:136
-#: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:134
-#: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:153
-#: objects/fl-nested-form-button.php:142 objects/fl-nested-form-button.php:563
-msgid "Icon"
-msgstr ""
-
 #: modules/advanced-icon/advanced-icon.php:325
 #: modules/advanced-icon/advanced-icon.php:345
 #: modules/image-icon/image-icon-bb-2-2-compatibility.php:26
@@ -1714,6 +1830,10 @@ msgstr ""
 
 #: modules/advanced-icon/advanced-icon.php:391
 msgid "Background Color "
+msgstr ""
+
+#: modules/advanced-icon/includes/frontend.php:32
+msgid "Go to"
 msgstr ""
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:20
@@ -4310,6 +4430,10 @@ msgstr ""
 msgid "A simple call to action button."
 msgstr ""
 
+#: modules/uabb-heading/includes/frontend.php:54
+msgid "Go to "
+msgstr ""
+
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:23
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:22
 msgid "Design is a funny word"
@@ -4567,7 +4691,7 @@ msgstr ""
 msgid "http://www.brainstormforce.com"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:251
+#: classes/class-uabb-admin-settings.php:252
 msgctxt "%s stands for custom branded \"UABB\" name."
 msgid "%s Settings"
 msgstr ""
