@@ -103,7 +103,7 @@ Yes, with .po and .mo files and GlotPress support.
 
 == Changelog ==
 
-= 1.6.2.1 = 
+= 1.6.3 = 
 * Fixed: Resolved the issue for function _load_textdomain_just_in_time was called incorrectly in WP 6.8.
 
 = 1.6.2 = 
