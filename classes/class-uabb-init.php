@@ -80,8 +80,6 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-compatibility.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-backward.php';
 
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-helper.php';
-
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-cloud-templates.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-admin-settings.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-admin-settings-multisite.php';
@@ -96,9 +94,7 @@ class UABB_Init {
 		// fields.
 		require_once BB_ULTIMATE_ADDON_DIR . 'fields/_config.php';
 
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-global-settings-form.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/helper.php';
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-ui-panel.php';
 
 		// Load the NPS Survey library.
 		if ( ! class_exists( 'Uabb_Lite_Nps_Survey' ) ) {
@@ -126,9 +122,9 @@ class UABB_Init {
 								'popup_logo'        => BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg',
 								'plugin_slug'       => 'ultimate-addons-for-beaver-builder-lite', // <your-plugin-slug>
 								'plugin_version'    => BB_ULTIMATE_ADDON_LITE_VERSION,
-								'popup_title'       => __( 'Quick Feedback', 'uabb' ),
+								'popup_title'       => __( 'Quick Feedback' ),
 								'support_url'       => 'https://www.ultimatebeaver.com/contact/',
-								'popup_description' => __( 'If you have a moment, please share why you are deactivating Ultimate Addons for Beaver Builder Lite :', 'uabb' ),
+								'popup_description' => __( 'If you have a moment, please share why you are deactivating Ultimate Addons for Beaver Builder Lite :' ),
 								'show_on_screens'   => array( 'plugins' ),
 							),
 						),
@@ -208,6 +204,11 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-iconfonts.php';
 		// require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-model-helper.php';.
 		// Ultimate Modules.
+		// Load the appropriate text-domain notice.
+		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-helper.php';
+		require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-global-settings-form.php';
+		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-ui-panel.php';
+
 		$this->load_modules();
 	}
 
