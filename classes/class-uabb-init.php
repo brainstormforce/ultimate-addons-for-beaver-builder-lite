@@ -122,9 +122,9 @@ class UABB_Init {
 								'popup_logo'        => BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg',
 								'plugin_slug'       => 'ultimate-addons-for-beaver-builder-lite', // <your-plugin-slug>
 								'plugin_version'    => BB_ULTIMATE_ADDON_LITE_VERSION,
-								'popup_title'       => __( 'Quick Feedback' ),
+								'popup_title'       => 'Quick Feedback',
 								'support_url'       => 'https://www.ultimatebeaver.com/contact/',
-								'popup_description' => __( 'If you have a moment, please share why you are deactivating Ultimate Addons for Beaver Builder Lite :' ),
+								'popup_description' => 'If you have a moment, please share why you are deactivating Ultimate Addons for Beaver Builder Lite :',
 								'show_on_screens'   => array( 'plugins' ),
 							),
 						),
