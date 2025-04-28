@@ -34,8 +34,8 @@ class UABB_Init {
 
 			add_filter( 'fl_builder_settings_form_defaults', array( $this, 'uabb_global_settings_form_defaults' ), 10, 2 );
 			// Load all the required files of bb-ultimate-addon.
-			self::includes();
-			add_action( 'init', array( $this, 'init' ) );
+			add_action( 'init', array( $this, 'includes' ), 10);
+			add_action( 'init', array( $this, 'init' ), 40 );
 
 			// Enqueue scripts.
 			add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ), 100 );
