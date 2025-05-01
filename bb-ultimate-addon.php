@@ -7,7 +7,8 @@
  * Author: Brainstorm Force
  * Author URI: http://www.brainstormforce.com
  * Text Domain: uabb
- *
+ * Requires Plugins: bb-plugin
+ * 
  * @package Ultimate Addons For Beaver Builder
  */
 
