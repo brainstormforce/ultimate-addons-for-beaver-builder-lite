@@ -72,6 +72,8 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-compatibility.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-backward.php';
 
+		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-helper.php';
+
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-cloud-templates.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-admin-settings.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-admin-settings-multisite.php';
@@ -209,11 +211,6 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-iconfonts.php';
 		// require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-model-helper.php';.
 		// Ultimate Modules.
-		// Load the appropriate text-domain notice.
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-helper.php';
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-global-settings-form.php';
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-ui-panel.php';
-
 		$this->load_modules();
 	}
 
