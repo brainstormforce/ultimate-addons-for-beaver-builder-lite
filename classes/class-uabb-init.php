@@ -35,15 +35,7 @@ class UABB_Init {
 			add_filter( 'fl_builder_settings_form_defaults', array( $this, 'uabb_global_settings_form_defaults' ), 10, 2 );
 			// Load all the required files of bb-ultimate-addon.
 			self::includes();
-			add_action( 'init', array( $this, 'init' ) );
-
-			// Enqueue scripts.
-			add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ), 100 );
-
-			$basename = plugin_basename( BB_ULTIMATE_ADDON_FILE );
-			// Filters.
-			add_filter( 'plugin_action_links_' . $basename, array( $this, 'uabb_render_plugin_action_links' ) );
-
+			
 		} else {
 
 			// disable UABB activation ntices in admin panel.
@@ -80,26 +72,12 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-compatibility.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-backward.php';
 
+		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-helper.php';
+
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-cloud-templates.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-admin-settings.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-admin-settings-multisite.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'lib/astra-notices/class-astra-notices.php';
-
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-global-settings.php';
-
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-global-functions.php';
-		// Attachment Fields.
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-attachment.php';
-
-		// fields.
-		require_once BB_ULTIMATE_ADDON_DIR . 'fields/_config.php';
-
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/helper.php';
-
-		// Load the NPS Survey library.
-		if ( ! class_exists( 'Uabb_Lite_Nps_Survey' ) ) {
-			require_once BB_ULTIMATE_ADDON_DIR . 'lib/class-uabb-lite-nps-survey.php';
-		}
 
 		/*
 		* BSF Analytics Integration tracker.
@@ -107,37 +85,66 @@ class UABB_Init {
 		if ( ! class_exists( 'BSF_Analytics_Loader' ) ) {
 			require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics-loader.php';
 
-			$bsf_analytics = \BSF_Analytics_Loader::get_instance();
+		$bsf_analytics = \BSF_Analytics_Loader::get_instance();
 
-			$bsf_analytics->set_entity(
-				array(
-					'bsf' => array(
-						'product_name'        => 'Ultimate Addons for Beaver Builder Lite',
-						'path'                => BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics',
-						'author'              => 'Brainstorm Force',
-						'time_to_display'     => '+24 hours',
-						'deactivation_survey' => array( // UABB Lite Plugin deactivation survey key.
-							array(
-								'id'                => 'deactivation-survey-ultimate-addons-for-beaver-builder-lite', // 'deactivation-survey-<your-plugin-slug>'
-								'popup_logo'        => BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg',
-								'plugin_slug'       => 'ultimate-addons-for-beaver-builder-lite', // <your-plugin-slug>
-								'plugin_version'    => BB_ULTIMATE_ADDON_LITE_VERSION,
-								'popup_title'       => 'Quick Feedback',
-								'support_url'       => 'https://www.ultimatebeaver.com/contact/',
-								'popup_description' => 'If you have a moment, please share why you are deactivating Ultimate Addons for Beaver Builder Lite :',
-								'show_on_screens'   => array( 'plugins' ),
-							),
+		$bsf_analytics->set_entity(
+			array(
+				'bsf' => array(
+				'product_name'        => 'Ultimate Addons for Beaver Builder Lite',
+				'path'                => BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics',
+				'author'              => 'Brainstorm Force',
+				'time_to_display'     => '+24 hours',
+					'deactivation_survey' => array( // UABB Lite Plugin deactivation survey key.
+						array(
+							'id'                => 'deactivation-survey-ultimate-addons-for-beaver-builder-lite', // 'deactivation-survey-<your-plugin-slug>'
+							'popup_logo'        => BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg',
+							'plugin_slug'       => 'ultimate-addons-for-beaver-builder-lite', // <your-plugin-slug>
+							'plugin_version'    => BB_ULTIMATE_ADDON_LITE_VERSION,
+							'popup_title'       => 'Quick Feedback',
+							'support_url'       => 'https://www.ultimatebeaver.com/contact/',
+							'popup_description' => 'If you have a moment, please share why you are deactivating Ultimate Addons for Beaver Builder Lite :',
+							'show_on_screens'   => array( 'plugins' ),
 						),
 					),
-				)
-			);
+				),
+			)
+		);
 		}
+		
+		add_action( 'init', function(){
 
-		// BSF Analytics Tracker.
-		//require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
+			require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-global-settings.php';
 
-		// Load the appropriate text-domain.
-		$this->load_uabb_textdomain();
+			require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-global-functions.php';
+			// Attachment Fields.
+			require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-attachment.php';
+
+			// fields.
+			require_once BB_ULTIMATE_ADDON_DIR . 'fields/_config.php';
+
+			require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-global-settings-form.php';
+			require_once BB_ULTIMATE_ADDON_DIR . 'classes/helper.php';
+			require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-ui-panel.php';
+
+			
+			// Load the NPS Survey library.
+			if ( ! class_exists( 'Uabb_Lite_Nps_Survey' ) ) {
+				require_once BB_ULTIMATE_ADDON_DIR . 'lib/class-uabb-lite-nps-survey.php';
+			}
+
+			// Load the appropriate text-domain.
+			$this->load_uabb_textdomain();
+		}, 10 );
+
+		add_action( 'init', array( $this, 'init' ), 40 );
+
+		// Enqueue scripts.
+		add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ), 100 );
+
+		$basename = plugin_basename( BB_ULTIMATE_ADDON_FILE );
+		// Filters.
+		add_filter( 'plugin_action_links_' . $basename, array( $this, 'uabb_render_plugin_action_links' ) );
+
 	}
 
 	/**
@@ -204,11 +211,6 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-iconfonts.php';
 		// require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-model-helper.php';.
 		// Ultimate Modules.
-		// Load the appropriate text-domain notice.
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-helper.php';
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/uabb-global-settings-form.php';
-		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-ui-panel.php';
-
 		$this->load_modules();
 	}
 

@@ -39,9 +39,9 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 		 */
 		public function set_constants() {
 			$branding            = BB_Ultimate_Addon_Helper::get_builder_uabb_branding();
-			self::$basic_modules = __( 'Basic', 'uabb' );
+			self::$basic_modules ='Basic';
 			$branding_name       = 'UABB';
-			$branding_modules    = __( 'UABB Modules', 'uabb' );
+			$branding_modules    ='UABB Modules';
 
 			// Branding - %s.
 			if ( is_array( $branding ) && array_key_exists( 'uabb-plugin-short-name', $branding ) && '' !== $branding['uabb-plugin-short-name'] ) {
@@ -50,7 +50,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 
 			// Branding - %s Modules.
 			if ( 'UABB' !== $branding_name ) {
-				$branding_modules = sprintf( __( '%s Modules', 'uabb' ), $branding_name ); // @codingStandardsIgnoreLine.
+				$branding_modules = sprintf('%s Modules', $branding_name ); // @codingStandardsIgnoreLine.
 			}
 
 			define( 'UABB_PREFIX', $branding_name );
