@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-"
 "lite\n"
-"POT-Creation-Date: 2025-04-21 11:25:04+00:00\n"
+"POT-Creation-Date: 2025-05-05 06:24:37+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -72,7 +72,6 @@ msgid "Oops! Something went wrong. Please refresh the page and try again."
 msgstr ""
 
 #: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:80
-#: classes/class-uabb-init.php:125
 msgid "Quick Feedback"
 msgstr ""
 
@@ -80,7 +79,7 @@ msgstr ""
 msgid "If you have a moment, please share why you are deactivating the plugin."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:109
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:112
 #: modules/advanced-icon/advanced-icon.php:324
 #: modules/advanced-icon/advanced-icon.php:339
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:14
@@ -119,65 +118,65 @@ msgstr ""
 msgid "Icon"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:134
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:309
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:139
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:314
 msgid "Please tell us more details."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:143
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:148
 #. translators: %1$s: link html start, %2$s: link html end
 msgid "Need help from our experts? %1$sClick here to contact us.%2$s"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:154
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:159
 msgid "Submit & Deactivate"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:155
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:160
 msgid "Skip & Deactivate"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:224
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:229
 msgid "Sorry, you are not allowed to do this operation."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:237
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:242
 msgid "Nonce validation failed"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:284
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:289
 msgid "This is a temporary deactivation for testing."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:285
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:290
 msgid "How can we assist you?"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:290
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:295
 msgid "The plugin isn't working properly."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:291
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:296
 msgid "Please tell us more about what went wrong?"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:296
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:301
 msgid "I found a better alternative plugin."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:297
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:302
 msgid "Could you please specify which plugin?"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:302
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:307
 msgid "It's missing a specific feature."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:303
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:308
 msgid "Please tell us more about the feature."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:308
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:313
 msgid "Other"
 msgstr ""
 
@@ -385,29 +384,11 @@ msgstr ""
 msgid "%s - Contact Support"
 msgstr ""
 
-#: classes/class-uabb-helper.php:42
-msgid "Basic"
-msgstr ""
-
-#: classes/class-uabb-helper.php:44
-msgid "UABB Modules"
-msgstr ""
-
-#: classes/class-uabb-helper.php:53 includes/admin-settings-modules.php:16
-msgid "%s Modules"
-msgstr ""
-
-#: classes/class-uabb-init.php:127
-msgid ""
-"If you have a moment, please share why you are deactivating Ultimate Addons "
-"for Beaver Builder Lite :"
-msgstr ""
-
-#: classes/class-uabb-init.php:317
+#: classes/class-uabb-init.php:319
 msgid "plugin requires"
 msgstr ""
 
-#: classes/class-uabb-init.php:319
+#: classes/class-uabb-init.php:321
 msgid " plugin installed & activated."
 msgstr ""
 
@@ -987,6 +968,10 @@ msgid ""
 "Clicking the button below will reinstall %1$s icons on your website. If you "
 "are facing issues to load %2$s icons then you are at right place to "
 "troubleshoot it."
+msgstr ""
+
+#: includes/admin-settings-modules.php:16
+msgid "%s Modules"
 msgstr ""
 
 #: includes/admin-settings-modules.php:26
@@ -4696,7 +4681,7 @@ msgctxt "%s stands for custom branded \"UABB\" name."
 msgid "%s Settings"
 msgstr ""
 
-#: classes/class-uabb-init.php:66
+#: classes/class-uabb-init.php:58
 msgctxt "Plugin action link label."
 msgid "Upgrade"
 msgstr ""
