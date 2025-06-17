@@ -326,10 +326,16 @@ final class UABBBuilderAdminSettings {
 			'priority' => 509,
 		);
 
+		$items['uabb-analytics'] = array(
+			'title'    => __( 'General Settings', 'uabb' ),
+			'show'     => is_network_admin() || ! FLBuilderAdminSettings::multisite_support(),
+			'priority' => 510,
+		);
+
 		$items['uabb-premium'] = array(
 			'title'    => __( 'Premium Features', 'uabb' ),
 			'show'     => is_network_admin() || ! FLBuilderAdminSettings::multisite_support(),
-			'priority' => 510,
+			'priority' => 511,
 		);
 
 		$item_data = apply_filters( 'uabb_builder_admin_settings_nav_items', $items );
@@ -362,7 +368,9 @@ final class UABBBuilderAdminSettings {
 		self::render_form( 'modules' );
 		self::render_form( 'icons' );
 		self::render_form( 'template-cloud' );
+		self::render_form( 'analytics' );
 		self::render_form( 'premium' );
+		
 
 		// Let extensions hook into form rendering.
 		do_action( 'uabb_builder_admin_settings_render_forms' );
@@ -491,6 +499,13 @@ final class UABBBuilderAdminSettings {
 			}
 
 			FLBuilderModel::update_admin_settings_option( '_fl_builder_uabb_modules', $modules, false );
+		}
+		
+		if ( isset( $_POST['fl-uabb-analytics-nonce'] ) && wp_verify_nonce( $_POST['fl-uabb-analytics-nonce'], 'uabb-analytics' ) ) {
+			$analytics = array();
+			$analytics['enabled'] = isset( $_POST['uabb-analytics-enabled'] ) ? 'yes' : 'no';
+			
+			FLBuilderModel::update_admin_settings_option( 'uabb_analytics_optin', $analytics['enabled'], false );
 		}
 
 		/**

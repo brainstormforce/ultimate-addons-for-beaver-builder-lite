@@ -84,31 +84,34 @@ class UABB_Init {
 		*/
 		if ( ! class_exists( 'BSF_Analytics_Loader' ) ) {
 			require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics-loader.php';
+		
+		add_action( 'admin_init', array( $this, 'uabb_lite_maybe_migrate_analytics_tracking' ) );
 
 		$bsf_analytics = \BSF_Analytics_Loader::get_instance();
 
 		$bsf_analytics->set_entity(
 			array(
-				'bsf' => array(
-				'product_name'        => 'Ultimate Addons for Beaver Builder Lite',
-				'path'                => BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics',
-				'author'              => 'Brainstorm Force',
-				'time_to_display'     => '+24 hours',
-					'deactivation_survey' => array( // UABB Lite Plugin deactivation survey key.
-						array(
-							'id'                => 'deactivation-survey-ultimate-addons-for-beaver-builder-lite', // 'deactivation-survey-<your-plugin-slug>'
-							'popup_logo'        => BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg',
-							'plugin_slug'       => 'ultimate-addons-for-beaver-builder-lite', // <your-plugin-slug>
-							'plugin_version'    => BB_ULTIMATE_ADDON_LITE_VERSION,
-							'popup_title'       => 'Quick Feedback',
-							'support_url'       => 'https://www.ultimatebeaver.com/contact/',
-							'popup_description' => 'If you have a moment, please share why you are deactivating Ultimate Addons for Beaver Builder Lite :',
-							'show_on_screens'   => array( 'plugins' ),
+				'uabb' => array(
+					'product_name'        => 'Ultimate Addons for Beaver Builder Lite',
+					'path'                => BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics',
+					'author'              => 'Brainstorm Force',
+					'time_to_display'     => '+24 hours',
+						'deactivation_survey' => array( // UABB Lite Plugin deactivation survey key.
+							array(
+								'id'                => 'deactivation-survey-ultimate-addons-for-beaver-builder-lite', // 'deactivation-survey-<your-plugin-slug>'
+								'popup_logo'        => BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg',
+								'plugin_slug'       => 'ultimate-addons-for-beaver-builder-lite', // <your-plugin-slug>
+								'plugin_version'    => BB_ULTIMATE_ADDON_LITE_VERSION,
+								'popup_title'       => 'Quick Feedback',
+								'support_url'       => 'https://www.ultimatebeaver.com/contact/',
+								'popup_description' => 'If you have a moment, please share why you are deactivating Ultimate Addons for Beaver Builder Lite :',
+								'show_on_screens'   => array( 'plugins' ),
+							),
 						),
+						'hide_optin_checkbox' => true, // Hide the opt-in checkbox.
 					),
-				),
-			)
-		);
+				)
+			);
 		}
 		
 		add_action( 'init', function(){
@@ -145,6 +148,28 @@ class UABB_Init {
 		// Filters.
 		add_filter( 'plugin_action_links_' . $basename, array( $this, 'uabb_render_plugin_action_links' ) );
 
+	}
+
+	/**
+	 * Migrates analytics tracking option from 'bsf_analytics_optin' to 'uabb_analytics_optin'.
+	 *
+	 * Checks if the old analytics tracking option ('bsf_analytics_optin') is set to 'yes'
+	 * and if the new option ('uabb_analytics_optin') is not already set.
+	 * If so, updates the new tracking option to 'yes' to maintain user consent during migration.
+	 *
+	 * @since x.x.x
+	 * @access public
+	 *
+	 * @return void
+	 */
+	public function uabb_lite_maybe_migrate_analytics_tracking() {
+		$old_tracking = get_option( 'bsf_analytics_optin', false );
+		$new_tracking = get_option( 'uabb_analytics_optin', false );
+		if ( 'yes' === $old_tracking && false === $new_tracking ) {
+			update_option( 'uabb_analytics_optin', 'yes' );
+			$time = get_option( 'bsf_analytics_installed_time' );
+			update_option( 'uabb_analytics_installed_time', $time );
+		}
 	}
 
 	/**
