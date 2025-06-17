@@ -327,7 +327,7 @@ final class UABBBuilderAdminSettings {
 		);
 
 		$items['uabb-analytics'] = array(
-			'title'    => __( 'Advanced', 'uabb' ),
+			'title'    => __( 'General Settings', 'uabb' ),
 			'show'     => is_network_admin() || ! FLBuilderAdminSettings::multisite_support(),
 			'priority' => 510,
 		);
