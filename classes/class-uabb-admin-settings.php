@@ -327,7 +327,7 @@ final class UABBBuilderAdminSettings {
 		);
 
 		$items['uabb-analytics'] = array(
-			'title'    => __( 'Enable Anonymous Analytics', 'uabb' ),
+			'title'    => __( 'Advanced', 'uabb' ),
 			'show'     => is_network_admin() || ! FLBuilderAdminSettings::multisite_support(),
 			'priority' => 510,
 		);
