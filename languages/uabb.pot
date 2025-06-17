@@ -2,11 +2,11 @@
 # This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.3\n"
+"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.4\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-"
 "lite\n"
-"POT-Creation-Date: 2025-05-05 06:24:37+00:00\n"
+"POT-Creation-Date: 2025-06-17 08:22:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,44 +26,47 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: admin/bsf-analytics/class-bsf-analytics.php:228
+#: admin/bsf-analytics/class-bsf-analytics.php:238
 #. translators: %s product name
 msgid ""
-"Want to help make %1s even more awesome? Allow us to collect non-sensitive "
-"diagnostic data and usage information. "
+"Help us improve %1$s and our other products!<br><br>With your permission, "
+"we'd like to collect <strong>non-sensitive information</strong> from your "
+"website — like your PHP version and which features you use — so we can fix "
+"bugs faster, make smarter decisions, and build features that actually "
+"matter to you. <em>No personal info. Ever.</em>"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:231
+#: admin/bsf-analytics/class-bsf-analytics.php:244
 msgid "This will be applicable for all sites from the network."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:255
+#: admin/bsf-analytics/class-bsf-analytics.php:268
 #. translators: %s usage doc link
 msgid " Know More."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:265
+#: admin/bsf-analytics/class-bsf-analytics.php:278
 msgid "Yes! Allow it"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:276
+#: admin/bsf-analytics/class-bsf-analytics.php:289
 msgid "No Thanks"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:387
+#: admin/bsf-analytics/class-bsf-analytics.php:414
 msgid "Usage Tracking"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:431
+#: admin/bsf-analytics/class-bsf-analytics.php:458
 #. translators: %s Product title
 msgid "Allow %s products to track non-sensitive usage tracking data."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:434
+#: admin/bsf-analytics/class-bsf-analytics.php:461
 msgid " This will be applicable for all sites from the network."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:439
+#: admin/bsf-analytics/class-bsf-analytics.php:466
 msgid "Learn More."
 msgstr ""
 
@@ -290,32 +293,36 @@ msgid "Font Icon Manager"
 msgstr ""
 
 #: classes/class-uabb-admin-settings.php:330
+msgid "Advanced"
+msgstr ""
+
+#: classes/class-uabb-admin-settings.php:336
 #: includes/admin-settings-premium.php:12
 msgid "Premium Features"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:526
+#: classes/class-uabb-admin-settings.php:541
 msgid "Ultimate Addons for Beaver Builder Lite"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:527
+#: classes/class-uabb-admin-settings.php:542
 msgid ""
 "How likely are you to recommend Ultimate Addons for Beaver Builder Lite to "
 "your friends or colleagues?"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:530
+#: classes/class-uabb-admin-settings.php:545
 msgid ""
 "Could you please do us a favor and give us a 5-star rating on WordPress? It "
 "would help others choose Ultimate Addons for Beaver Builder Lite with "
 "confidence. Thank you!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:534
+#: classes/class-uabb-admin-settings.php:549
 msgid "Thank you for your feedback"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:535
+#: classes/class-uabb-admin-settings.php:550
 msgid "We value your input. How can we improve your experience?"
 msgstr ""
 
@@ -384,11 +391,11 @@ msgstr ""
 msgid "%s - Contact Support"
 msgstr ""
 
-#: classes/class-uabb-init.php:319
+#: classes/class-uabb-init.php:344
 msgid "plugin requires"
 msgstr ""
 
-#: classes/class-uabb-init.php:321
+#: classes/class-uabb-init.php:346
 msgid " plugin installed & activated."
 msgstr ""
 
@@ -921,6 +928,26 @@ msgstr ""
 msgid "deg"
 msgstr ""
 
+#: includes/admin-settings-analytics.php:11
+msgid "Enable Anonymous Analytics"
+msgstr ""
+
+#: includes/admin-settings-analytics.php:26
+msgid ""
+"Collect non-sensitive information from your website, such as the PHP "
+"version and features used, to help us fix bugs faster, make smarter "
+"decisions, and build features that actually matter to you."
+msgstr ""
+
+#: includes/admin-settings-analytics.php:27
+msgid "Learn More"
+msgstr ""
+
+#: includes/admin-settings-analytics.php:33
+#: includes/admin-settings-general.php:63
+msgid "Save Settings"
+msgstr ""
+
 #: includes/admin-settings-general.php:34
 #: includes/admin-settings-general.php:48
 msgid "Enable UI Design"
@@ -953,10 +980,6 @@ msgstr ""
 msgid ""
 "Enable this setting to see live preview of a page without leaving the "
 "editor."
-msgstr ""
-
-#: includes/admin-settings-general.php:63
-msgid "Save Settings"
 msgstr ""
 
 #: includes/admin-settings-icons.php:15 includes/admin-settings-icons.php:28
@@ -4631,11 +4654,11 @@ msgstr ""
 msgid "Export Error"
 msgstr ""
 
-#: vendor/wp-cli/extension-command/src/WP_CLI/CommandWithUpgrade.php:770
+#: vendor/wp-cli/extension-command/src/WP_CLI/CommandWithUpgrade.php:787
 msgid " Try again"
 msgstr ""
 
-#: vendor/wp-cli/extension-command/src/WP_CLI/CommandWithUpgrade.php:776
+#: vendor/wp-cli/extension-command/src/WP_CLI/CommandWithUpgrade.php:793
 msgid "API error. Try Again."
 msgstr ""
 
@@ -4645,11 +4668,11 @@ msgid_plural "images"
 msgstr[0] ""
 msgstr[1] ""
 
-#: vendor/wp-cli/wp-cli/php/utils-wp.php:247
+#: vendor/wp-cli/wp-cli/php/utils-wp.php:301
 msgid "Inactive Widgets"
 msgstr ""
 
-#: vendor/wp-cli/wp-cli/php/utils-wp.php:250
+#: vendor/wp-cli/wp-cli/php/utils-wp.php:304
 msgid "Drag widgets here to remove them from the sidebar but keep their settings."
 msgstr ""
 
