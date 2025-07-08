@@ -190,6 +190,7 @@
 
 .uabb-lite-modules {
     margin-bottom: 25px;
+    height: 180px;
 }
 
 .uabb-premium-modules p label {
@@ -197,6 +198,16 @@
     padding: 7px 15px;
 }
 .uabb-premium-modules p {
+    width: 31.33%;
+    float: left;
+    margin: 10px 2% 0 0;
+    box-sizing: border-box;
+    background: #f7f7f7;
+}
+
+.uabb-lite-modules p {
+    display: block;
+    padding: 7px 15px;
     width: 31.33%;
     float: left;
     margin: 10px 2% 0 0;
