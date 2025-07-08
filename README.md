@@ -89,6 +89,11 @@ Yes, both free and pro versions support unlimited sites.
 No, it’s optimized for performance.
 ### Is it translation ready? ###
 Yes, with .po and .mo files and GlotPress support.
+### How can I report a security bug? ###
+We take plugin security extremely seriously. If you discover a security vulnerability, please report it in a safe and responsible manner.
+
+You can report the issue through our [Bug Bounty Program](https://brainstormforce.com/bug-bounty-program/).
+
 
 ---
 
