@@ -2,11 +2,11 @@
 # This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.4\n"
+"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.5\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-"
 "lite\n"
-"POT-Creation-Date: 2025-06-17 08:22:03+00:00\n"
+"POT-Creation-Date: 2025-07-10 09:26:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -272,6 +272,7 @@ msgid "Welcome"
 msgstr ""
 
 #: classes/class-uabb-admin-settings.php:302
+#: classes/class-uabb-admin-settings.php:330
 #: includes/admin-settings-general.php:11
 #: modules/info-list/info-list-bb-2-2-compatibility.php:347
 #: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:405
@@ -290,10 +291,6 @@ msgstr ""
 
 #: classes/class-uabb-admin-settings.php:324
 msgid "Font Icon Manager"
-msgstr ""
-
-#: classes/class-uabb-admin-settings.php:330
-msgid "Advanced"
 msgstr ""
 
 #: classes/class-uabb-admin-settings.php:336
@@ -929,21 +926,21 @@ msgid "deg"
 msgstr ""
 
 #: includes/admin-settings-analytics.php:11
-msgid "Enable Anonymous Analytics"
+msgid "Help Us Improve Your Experience"
 msgstr ""
 
-#: includes/admin-settings-analytics.php:26
+#: includes/admin-settings-analytics.php:25
 msgid ""
 "Collect non-sensitive information from your website, such as the PHP "
 "version and features used, to help us fix bugs faster, make smarter "
 "decisions, and build features that actually matter to you."
 msgstr ""
 
-#: includes/admin-settings-analytics.php:27
+#: includes/admin-settings-analytics.php:26
 msgid "Learn More"
 msgstr ""
 
-#: includes/admin-settings-analytics.php:33
+#: includes/admin-settings-analytics.php:32
 #: includes/admin-settings-general.php:63
 msgid "Save Settings"
 msgstr ""
@@ -997,11 +994,11 @@ msgstr ""
 msgid "%s Modules"
 msgstr ""
 
-#: includes/admin-settings-modules.php:26
+#: includes/admin-settings-modules.php:27
 msgid "Upgrade to Premium version to get these modules"
 msgstr ""
 
-#: includes/admin-settings-modules.php:26
+#: includes/admin-settings-modules.php:27
 msgid "Unlock All Modules"
 msgstr ""
 
