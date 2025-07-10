@@ -15,7 +15,7 @@
   "homepage": "https://github.com/brainstormforce/ultimate-addons-for-beaver-builder-lite#readme",
   "devDependencies": {
     "gpt-po": "^1.2.0",
-    "grunt": "^1.6.4",
+    "grunt": "^1.6.5",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-compress": "^1.6.0",
     "grunt-contrib-copy": "^1.0.0",

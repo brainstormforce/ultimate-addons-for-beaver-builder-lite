@@ -1,13 +1,18 @@
 <?php
 /**
  * NPS Survey Script
- * File to handle behaviour and content of NPS popup
+ * File to handle behaviour and content of NPS popup`
  *
  * @package {{package}}
  */
 
- if ( ! class_exists( 'Nps_Survey' ) ) {
-	/**
+// Prevent multiple inclusions of this file.
+if ( defined( 'NPS_SURVEY_SCRIPT_LOADED' ) ) {
+	return;
+}
+define( 'NPS_SURVEY_SCRIPT_LOADED', true );
+
+/**
  * Nps_Survey
  */
 class Nps_Survey {
@@ -209,7 +214,7 @@ class Nps_Survey {
 	 * @return string
 	 */
 	public static function get_api_domain() {
-		return trailingslashit( defined( 'NPS_SURVEY_REMOTE_URL' ) ? NPS_SURVEY_REMOTE_URL : apply_filters( 'nps_survey_api_domain', 'https://websitedemos.net/' ) );
+		return trailingslashit( defined( 'NPS_SURVEY_REMOTE_URL' ) ? NPS_SURVEY_REMOTE_URL : apply_filters( 'nps_survey_api_domain', 'https://metrics.brainstormforce.com/' ) );
 	}
 
 	/**
@@ -307,7 +312,7 @@ class Nps_Survey {
 		 */
 		$api_endpoint = apply_filters(
 			'nps_survey_api_endpoint',
-			self::get_api_domain() . 'wp-json/starter-templates/v1/nps-survey/',
+			self::get_api_domain() . 'wp-json/bsf-metrics-server/v1/nps-survey/',
 			$post_data // Pass the post data to the filter, so that the endpoint can be modified based on the data.
 		);
 
@@ -500,13 +505,9 @@ class Nps_Survey {
 	public static function get_nps_id( $plugin_slug ) {
 		return 'nps-survey-' . $plugin_slug;
 	}
-   }
+}
 
 /**
  * Kicking this off by calling 'get_instance()' method
  */
 Nps_Survey::get_instance();
- 
-}
-
-

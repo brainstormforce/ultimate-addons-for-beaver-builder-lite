@@ -7,9 +7,10 @@
 
 ?>
 <div id="fl-uabb-analytics-form" class="fl-settings-form uabb-fl-settings-form">
-
-	<h3 class="fl-settings-form-header"><?php esc_html_e( 'Enable Anonymous Analytics', 'uabb' ); ?></h3>
-
+	<br>
+	<b><?php esc_html_e( 'Help Us Improve Your Experience', 'uabb' ); ?></b>
+	<br>
+	<br>
 	<form id="uabb-analytics-form" action="<?php UABBBuilderAdminSettings::render_form_action( 'uabb-analytics' ); ?>" method="post">
 
 		<div class="fl-settings-form-content">
@@ -18,8 +19,6 @@
 				$analytics_option = get_option( 'uabb_analytics_optin', false );
 				$analytics_enabled = ( isset( $analytics_option )  && $analytics_option === 'yes' ) ? 'yes' : 'no';
 			?>
-
-			<!-- Usage Tracking -->
 			<div class="uabb-form-setting">
 				<label>					
 					<input type="checkbox" name="uabb-analytics-enabled" value="1" <?php checked( $analytics_enabled, 'yes' ); ?> />

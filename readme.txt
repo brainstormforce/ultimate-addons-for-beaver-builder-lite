@@ -5,7 +5,7 @@ Tags: beaver builder, beaver builder free, beaver builder lite, beaver builder a
 Requires at least: 4.6
 Requires PHP: 7.0
 Tested up to: 6.8
-Stable tag: 1.6.4
+Stable tag: 1.6.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,6 +89,11 @@ Yes, both free and pro versions support unlimited sites.
 No, it’s optimized for performance.
 = Is it translation ready? =
 Yes, with .po and .mo files and GlotPress support.
+= How can I report a security bug? =
+We take plugin security extremely seriously. If you discover a security vulnerability, please report it in a safe and responsible manner.
+
+You can report the issue through our [Bug Bounty Program](https://brainstormforce.com/bug-bounty-program/).
+
 
 ---
 
@@ -102,6 +107,9 @@ Yes, with .po and .mo files and GlotPress support.
 ---
 
 == Changelog ==
+= 1.6.5 =
+* Improvement: Updated Readme file.
+
 = 1.6.4 = 
 * Improvement: Optimized codebase and improved code quality.
 
