@@ -129,10 +129,12 @@
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<exclude-pattern>*/tests/*</exclude-pattern>
-	<exclude-pattern>*/admin/bsf-core/*</exclude-pattern>
+	<exclude-pattern>*/admin/bsf-analytics/*</exclude-pattern>
 	<exclude-pattern>*/stubs/*</exclude-pattern>
 	<!-- Exclude Libraries -->
 	<exclude-pattern>*/classes/library/batch-processing/*</exclude-pattern>
 	<exclude-pattern>*/classes/library/image-processing-queue/*</exclude-pattern>
+	<exclude-pattern>*/lib/nps-survey/*</exclude-pattern>
+	<exclude-pattern>*/lib/astra-notices/*</exclude-pattern>
 
 </ruleset>
