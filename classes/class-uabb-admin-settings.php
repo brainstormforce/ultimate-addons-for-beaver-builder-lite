@@ -542,8 +542,9 @@ public static function show_nps_notice() {
                     'nps_rating_message'    => __( 'How likely are you to recommend Ultimate Addons for Beaver Builder Lite to your friends or colleagues?', 'uabb' ),
 
                     // Step 2A i.e. positive.
-                    'feedback_content'      => __( 'Could you please do us a favor and give us a 5-star rating on WordPress? It would help others choose Ultimate Addons for Beaver Builder Lite with confidence. Thank you!', 'uabb' ),
-                    'plugin_rating_link'    => esc_url( 'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/#new-post' ),
+					'feedback_title'        => __( 'Thanks a lot for your feedback! 😍', 'uabb' ),
+					'feedback_content'      => __( 'Thanks for using Ultimate Addons! Got feedback or suggestions to make it even better? We’d love to hear from you.', 'uabb' ),
+					'plugin_rating_link'    => esc_url( 'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/#new-post' ),
 
                     // Step 2B i.e. negative.
                     'plugin_rating_title'   => __( 'Thank you for your feedback', 'uabb' ),
