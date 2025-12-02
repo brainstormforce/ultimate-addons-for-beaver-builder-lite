@@ -23,7 +23,7 @@ When you're ready for more, [UABB Pro](https://www.ultimatebeaver.com/pricing/?u
 
 Whether you're just getting started with WordPress or building multiple sites for clients, UABB gives you control, performance, and reliability to design beautiful, high-converting websites efficiently.
 
-[Try the live demo of Ultimate Addons for Beaver Builder – Lite](https://zipwp.org/plugins/ultimate-addons-for-beaver-builder-lite/).
+[Try the live demo of Ultimate Addons for Beaver Builder – Lite](https://app.zipwp.com/blueprint/uabb-demo-ie9).
 
 ### **Why Choose Ultimate Addons for Beaver Builder**
 
