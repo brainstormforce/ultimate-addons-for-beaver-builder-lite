@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/BrainstormForce
 Tags: beaver builder, beaver builder free, beaver builder lite, beaver builder addons, beaver builder extensions
 Requires at least: 4.6
 Requires PHP: 7.0
-Tested up to: 6.8
+Tested up to: 6.9
 Stable tag: 1.6.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -13,47 +13,102 @@ Extend Beaver Builder with powerful modules and ready-made templates to build st
 
 == Description ==
 
-### **The Ultimate Addons for Beaver Builder**
-Enhance your website development with 60+ modules, 200+ section templates, and 100+ page templates. This [Beaver Builder Addon](https://www.ultimatebeaver.com) simplifies website creation with drag-and-drop custom modules and templates, cutting development time by 30%.
+**Ultimate Addons for Beaver Builder (UABB)** is a lightweight yet powerful plugin that adds extra design modules and templates directly inside Beaver Builder. It helps you build better websites, without needing extra tools or custom code.
 
-Enjoy an intuitive experience with modules requiring no coding, making website building efficient and hassle-free. Free yourself from complex development tasks and focus on creativity.
+UABB is trusted by thousands of WordPress users to create beautiful sections and layouts visually. Everything works inside the familiar Beaver Builder editor, and no coding is needed.
 
-[Try the live demo of Ultimate Addons for Beaver Builder – Lite](https://zipwp.org/plugins/ultimate-addons-for-beaver-builder-lite/).
+The free version includes a selection of useful modules like info boxes, call-to-action blocks, content toggles, and more. You also get access to pre-designed sections and page templates that make building websites faster and easier.
 
-This free version offers essential features. For advanced modules, white labelling, and premium support, upgrade to the Pro version. [Get Pro Now](https://www.ultimatebeaver.com/pricing)
+When you're ready for more, [UABB Pro](https://www.ultimatebeaver.com/pricing/?utm_source=repo&utm_medium=wp&utm_campaign=wp-repo-CTA) offers a growing library of advanced modules, dynamic content support, WooCommerce widgets, and white-label options for agencies and power users.
 
-**Key Features**
+Whether you're just getting started with WordPress or building multiple sites for clients, UABB gives you control, performance, and reliability to design beautiful, high-converting websites efficiently.
 
-* **Ribbon**: Create attractive headers or offers.
-* **Info Table & List**: Display content effectively with visuals.
-* **Image/Icon Modules**: Enhance designs with creative options.
-* **Flip Box, Slide Box**: Interactive and engaging modules.
-* **Button, Heading**: Essential elements for standout designs.
-* SEO-friendly, translation-ready, and responsive modules.
+[Try the live demo of Ultimate Addons for Beaver Builder](https://app.zipwp.com/blueprint/uabb-demo-ie9).
 
-### **Optimized for Performance**
-Efficient design ensures fast loading. Disable unused modules and load only necessary templates to maintain speed.
+### **Why Choose Ultimate Addons for Beaver Builder**
 
-### **Pro Features**
+Ultimate Addons is designed to help you work faster and design better—without complicating your workflow. Whether you’re building simple landing pages or full websites, UABB gives you the building blocks you need, all in one place.
 
-* 300+ templates in Template Cloud.
-* Advanced customization and white-label branding.
-* Premium support and frequent updates.
-* Unlimited usage for personal or client projects.
+**Here’s why users choose UABB:**
 
-With the Ultimate Addons for Beaver Builder Pro, you gain access to over 35 advanced modules, including:
+* **Build Cleaner Designs** – Flexible modules like info boxes, content toggles, separators, and more.
+* **Save Time With Pre-Built Templates** – Insert professionally designed sections or full pages in seconds.
+* **No Coding Required** – Everything works visually inside the Beaver Builder interface.
+* **Works With Any Theme** – Tested with Astra, GeneratePress, and other leading themes.
+* **Beginner-Friendly + Agency-Ready** – Simple UI, deep customization, and white-labeling options.
+* **Grows With Your Needs** – Start free, upgrade for advanced functionality.
 
-* **[Modal Popup](https://www.ultimatebeaver.com/modules/modal-popup/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO/)**: Showcase forms, videos, and more with customizable triggers.
-* **[Photo Gallery](https://www.ultimatebeaver.com/modules/photo-gallery/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO)**: Display images with captions and links.
-* **[Dual Button](https://www.ultimatebeaver.com/modules/dual-button/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO)**: Create paired call-to-action buttons.
-* **[Counter & Progress Bar](https://www.ultimatebeaver.com/modules/counter/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO)**: Add animated progress indicators.
-* **[Testimonials](https://www.ultimatebeaver.com/modules/testimonials/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO)**: Stylishly display user testimonials.
-* **[Interactive Banners](https://www.ultimatebeaver.com/modules/interactive-banner-2/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO)**: Highlight content with engaging animations.
-* **[Content Toggle](https://www.ultimatebeaver.com/modules/content-toggle/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO)**: Enable users to switch between different content views.
-* **[WooCommerce Modules](https://www.ultimatebeaver.com/beaver-builder-woocommerce/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO)**: Showcase products, categories, and more.
-* **[Google Maps](https://www.ultimatebeaver.com/modules/google-map/?utm_source=wprepo&amp;utm_campaign=Lite&amp;utm_medium=DEMO)**: Add interactive maps with custom styling.
+No matter your experience level, UABB helps you design faster, avoid bloat, and build sites that look and perform better.
 
-Love what you see? [Get Pro Now](https://www.ultimatebeaver.com/pricing)
+### **Free Widgets in Ultimate Addons for Beaver Builder**
+
+These are the core modules included in the free version of UABB. Each is designed to add real value to your layouts, without adding clutter.
+
+* **Info Box** – Heading, icon, and text in a flexible content block.
+* **Call to Action** – Highlight offers with buttons and styled text.
+* **Image Separator** – Add stylish image dividers between content sections.
+* **Content Toggle** – Switchable content (e.g., Pricing Monthly/Yearly).
+* **Dual Button** – Two buttons side-by-side for split CTAs.
+* **Creative Button** – Buttons with modern hover effects and gradients.
+* **Timeline** – Vertical timeline for steps or history.
+* **Team** – Showcase team members with images and roles.
+* **Testimonials** – Display client feedback elegantly.
+* **Social Share** – Add share buttons to boost content visibility.
+* **Advanced Heading** – Headings with subtext, lines, and styling.
+* **Price Box** – Clean layouts for pricing and service offers.
+
+**Note:** These modules are available right after activation. You can start designing with them inside the Beaver Builder editor.
+
+### **What’s Included in UABB Pro**
+
+Upgrade to UABB Pro and unlock access to advanced modules, templates, and agency-friendly features:
+
+* **60+ Custom Modules** – Access a wide range of advanced design and content modules for every type of layout.
+* **200+ Row Templates** – Insert ready-made section layouts to build pages faster with consistent design.
+* **100+ Page Templates** – Choose from full-page templates for various industries and site types.
+* **WooCommerce Modules**  – Add product grids, cart buttons, and other WooCommerce elements with drag-and-drop ease.
+* **White Label Branding** – Replace UABB branding with your own when building client websites.
+* **Regular Product Updates** – Stay current with performance improvements, new features, and compatibility updates.
+* **Premium Support** – Get fast, priority assistance from the UABB team when you need help.
+* **Risk-Free 100% Money-Back Guarantee** – Try UABB Pro with confidence thanks to a 100% money-back guarantee.
+
+**Love what you see? [Get Pro Now](https://www.ultimatebeaver.com/pricing)**
+
+### **How These Beaver Builder Widgets Help**
+
+* Build content sections, callouts, and pricing layouts visually in Beaver Builder  
+* Avoid relying on external plugins or custom CSS for design elements
+* Keep your page layout consistent across all devices
+* Improve overall site readability, usability, and visual appeal
+* Design faster with essential modules that support most website types
+
+The free UABB widgets provide a strong starting point for professional websites, and they work well with any Beaver Builder-compatible WordPress theme.
+
+🚀 Ready to expand? [Upgrade to Ultimate Addons for Beaver Builder Pro](https://www.ultimatebeaver.com/pricing/?utm_source=repo&utm_medium=wp&utm_campaign=wp-repo-CTA) to access advanced modules, features, and templates.
+
+---
+
+### **More Tools To Enhance Your WordPress Website**
+
+If you enjoy using Ultimate Addons, explore our other tools that simplify building and managing websites:
+
+* **[Astra Theme](https://wpastra.com/)** – A popular WordPress theme known for speed, flexibility, and ease of use.
+* **[Starter Templates](https://startertemplates.com/)** – Choose from over 300+ ready-to-use website templates or use AI to create a custom layout in minutes.  
+* **[OttoKit](https://ottokit.com/)** – Automate everyday WordPress tasks by connecting plugins and apps.
+* **[Ultimate Addons for Elementor](https://ultimateelementor.com/)** – Extend Elementor with powerful widgets, templates, and features built to speed up design and enhance creativity, without adding bloat. 
+
+Each tool is built to help you create faster, manage better, and grow your online presence without extra effort.
+
+---
+
+**Need help getting started?** 
+
+* [Read our Getting Started Guide](https://www.ultimatebeaver.com/docs/getting-started-ultimate-addons-beaver-builder/) 
+* [Visit our Support Forum](https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/) 
+
+**Love Ultimate Addons?**  
+
+* [Leave a review](https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/#new-post) on WordPress.org and help others discover UABB!  
 
 ---
 
