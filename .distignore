@@ -33,3 +33,7 @@ node_modules
 *.zip
 .github
 .wordpress-org
+auth.json
+.env
+.env.*
+credentials.json
