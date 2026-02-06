@@ -55,6 +55,11 @@ final class UABBBuilderAdminSettings {
 		add_filter( 'wp_kses_allowed_html', __CLASS__ . '::add_data_attributes', 10, 2 );
 		add_action( 'admin_enqueue_scripts', __CLASS__ . '::notice_styles_scripts' );
 		add_action( 'admin_footer', __CLASS__. '::show_nps_notice' );
+
+		// Module usage data collection for analytics.
+		if ( 'yes' === get_option( 'uabb_usage_optin', false ) ) {
+			add_action( 'shutdown', __CLASS__ . '::maybe_run_uabb_widgets_usage_check' );
+		}
 	}
 	/**
 	 * Enqueues the needed CSS/JS for the builder's admin settings page.
@@ -554,6 +559,131 @@ public static function show_nps_notice() {
         );
     }
 }
+
+	/**
+	 * Check the page on which module check needs to be run.
+	 *
+	 * @since 1.6.7
+	 * @access public
+	 */
+	public static function maybe_run_uabb_widgets_usage_check() {
+		// Run only on admin.php?page=uabb-builder-settings
+		if (
+			is_admin() &&
+			isset( $_GET['page'] ) &&
+			'uabb-builder-settings' === $_GET['page']
+		) {
+			self::uabb_check_widgets_data_usage();
+		}
+	}
+
+	/**
+	 * Handle AJAX request to get widgets usage data.
+	 *
+	 * @since 1.6.7
+	 * @access public
+	 */
+	public static function uabb_check_widgets_data_usage() {
+		// Check user permissions
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
+		$transient_key = 'uabblite_module_usage_data';
+		$module_usage = get_transient( $transient_key );
+
+		if ( false === $module_usage || false === get_option( 'uabblite_module_usage_data_option' ) ) {
+			$filtered_module_usage = self::get_uabb_module_usage();
+
+			set_transient( $transient_key, $filtered_module_usage, MONTH_IN_SECONDS );
+			update_option( 'uabblite_module_usage_data_option', $filtered_module_usage );
+		}
+	}
+
+	/**
+	 * Get UABB module usage statistics.
+	 *
+	 * @since 1.6.7
+	 * @access public
+	 * @return array
+	 */
+	public static function get_uabb_module_usage() {
+
+		if ( ! class_exists( 'FLBuilder' ) || ! class_exists( 'FLBuilderModel' ) ) {
+			return array();
+		}
+
+		$uabb_modules_usage = array();
+
+		$args = array(
+			'post_type'      => FLBuilderModel::get_post_types(),
+			'post_status'    => 'publish',
+			'meta_key'       => '_fl_builder_enabled',
+			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			'meta_value'     => '1',
+			'posts_per_page' => -1,
+		);
+
+		$query = new WP_Query( $args );
+
+		if ( ! empty( $query->posts ) ) {
+			foreach ( $query->posts as $post ) {
+
+				$meta = get_post_meta( $post->ID, '_fl_builder_data', true );
+
+				if ( ! is_array( $meta ) && ! is_object( $meta ) ) {
+					continue;
+				}
+
+				foreach ( (array) $meta as $node ) {
+
+					if ( ! isset( $node->type ) || 'module' !== $node->type ) {
+						continue;
+					}
+
+					if ( ! isset( $node->settings->type ) ) {
+						continue;
+					}
+
+					$module_type = $node->settings->type;
+
+					if ( self::is_uabb_module( $module_type ) ) {
+
+						if ( ! isset( $uabb_modules_usage[ $module_type ] ) ) {
+							$uabb_modules_usage[ $module_type ] = 0;
+						}
+
+						++$uabb_modules_usage[ $module_type ];
+					}
+				}
+			}
+		}
+
+		arsort( $uabb_modules_usage );
+
+		return $uabb_modules_usage;
+	}
+
+	/**
+	 * Check if a module is a UABB module.
+	 *
+	 * @since 1.6.7
+	 * @access private
+	 * @param string $module_type Module slug.
+	 * @return bool
+	 */
+	private static function is_uabb_module( $module_type ) {
+
+		$all_modules = BB_Ultimate_Addon_Helper::get_all_modules();
+
+		foreach ( $all_modules as $pattern => $module_data ) {
+			if ( 0 === strpos( $module_type, $pattern ) ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
 
 }
 
