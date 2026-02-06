@@ -1,3 +1,8 @@
+Version 1.0.16 - 20-01-2026
+- Improvement:
+  - Made comment field mandatory for ratings of 6 or below to ensure actionable feedback.
+  - Enforced minimum feedback length of 50 characters for low ratings to prevent short or low-effort responses.
+
 Version 1.0.15 - 11-09-2025
 - New:
   - Added `privacy_policy` option with configurable link and custom content.

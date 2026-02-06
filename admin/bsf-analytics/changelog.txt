@@ -1,3 +1,6 @@
+v1.1.17 - 29-January-2025
+- Improvement: Renamed options from `*_analytics_*` to `*_usage_*`.
+
 v1.1.16 - 15-July-2025
 - Improvement: Added `SureRank` slug to UTM analytics.
 

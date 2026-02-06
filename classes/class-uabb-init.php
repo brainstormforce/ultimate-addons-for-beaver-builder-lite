@@ -151,10 +151,10 @@ class UABB_Init {
 	}
 
 	/**
-	 * Migrates analytics tracking option from 'bsf_analytics_optin' to 'uabb_analytics_optin'.
+	 * Migrates analytics tracking option from 'bsf_analytics_optin' to 'uabb_usage_optin'.
 	 *
 	 * Checks if the old analytics tracking option ('bsf_analytics_optin') is set to 'yes'
-	 * and if the new option ('uabb_analytics_optin') is not already set.
+	 * and if the new option ('uabb_usage_optin') is not already set.
 	 * If so, updates the new tracking option to 'yes' to maintain user consent during migration.
 	 *
 	 * @since x.x.x
@@ -163,12 +163,12 @@ class UABB_Init {
 	 * @return void
 	 */
 	public function uabb_lite_maybe_migrate_analytics_tracking() {
-		$old_tracking = get_option( 'bsf_analytics_optin', false );
-		$new_tracking = get_option( 'uabb_analytics_optin', false );
+		$old_tracking = get_option( 'bsf_usage_optin', false );
+		$new_tracking = get_option( 'uabb_usage_optin', false );
 		if ( 'yes' === $old_tracking && false === $new_tracking ) {
-			update_option( 'uabb_analytics_optin', 'yes' );
-			$time = get_option( 'bsf_analytics_installed_time' );
-			update_option( 'uabb_analytics_installed_time', $time );
+			update_option( 'uabb_usage_optin', 'yes' );
+			$time = get_option( 'bsf_usage_installed_time' );
+			update_option( 'uabb_usage_installed_time', $time );
 		}
 	}
 
