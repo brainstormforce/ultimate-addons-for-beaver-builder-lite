@@ -5,7 +5,7 @@ Tags: beaver builder, beaver builder free, beaver builder lite, beaver builder a
 Requires at least: 4.6
 Requires PHP: 7.0
 Tested up to: 6.9
-Stable tag: 1.6.6
+Stable tag: 1.6.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -162,6 +162,9 @@ You can report the issue through our [Bug Bounty Program](https://brainstormforc
 ---
 
 == Changelog ==
+= 1.6.7 =
+* Fixed: Button color not working correctly after BB 2.10 update.
+
 = 1.6.6 =
 * Improvement: Updated dependent libraries.
 
