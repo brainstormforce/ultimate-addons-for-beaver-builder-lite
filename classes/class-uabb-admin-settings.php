@@ -505,7 +505,7 @@ final class UABBBuilderAdminSettings {
 			$analytics = array();
 			$analytics['enabled'] = isset( $_POST['uabb-analytics-enabled'] ) ? 'yes' : 'no';
 			
-			FLBuilderModel::update_admin_settings_option( 'uabb_analytics_optin', $analytics['enabled'], false );
+			FLBuilderModel::update_admin_settings_option( 'uabb_usage_optin', $analytics['enabled'], false );
 		}
 
 		/**

@@ -16,7 +16,7 @@
 		<div class="fl-settings-form-content">
 
 			<?php
-				$analytics_option = get_option( 'uabb_analytics_optin', false );
+				$analytics_option = get_option( 'uabb_usage_optin', false );
 				$analytics_enabled = ( isset( $analytics_option )  && $analytics_option === 'yes' ) ? 'yes' : 'no';
 			?>
 			<div class="uabb-form-setting">
