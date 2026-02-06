@@ -62,7 +62,6 @@ if ( ! class_exists( 'UABB_Analytics' ) ) {
 			);
 
 			add_filter( 'bsf_core_stats', array( $this, 'add_uabb_analytics_data' ) );
-			$this->add_uabb_analytics_data([]);
 		}
 
 		/**
@@ -84,6 +83,7 @@ if ( ! class_exists( 'UABB_Analytics' ) ) {
 			foreach ( $fetch_uabb_data as $key => $value ) {
 				$stats_data['plugin_data']['uabb']['numeric_values'][ $key ] = $value;
 			}
+
 			return $stats_data;
 		}
 

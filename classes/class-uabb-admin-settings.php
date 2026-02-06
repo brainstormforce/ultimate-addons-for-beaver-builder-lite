@@ -58,7 +58,7 @@ final class UABBBuilderAdminSettings {
 
 		// Module usage data collection for analytics.
 		if ( 'yes' === get_option( 'uabb_usage_optin', false ) ) {
-			add_action( 'shutdown', __CLASS__ . '::maybe_run_uabb_widgets_usage_check' );
+			add_action( 'shutdown', __CLASS__ . '::maybe_run_uabb_modules_usage_check' );
 		}
 	}
 	/**
@@ -566,14 +566,14 @@ public static function show_nps_notice() {
 	 * @since 1.6.7
 	 * @access public
 	 */
-	public static function maybe_run_uabb_widgets_usage_check() {
+	public static function maybe_run_uabb_modules_usage_check() {
 		// Run only on admin.php?page=uabb-builder-settings
 		if (
 			is_admin() &&
 			isset( $_GET['page'] ) &&
 			'uabb-builder-settings' === $_GET['page']
 		) {
-			self::uabb_check_widgets_data_usage();
+			self::uabb_check_modules_data_usage();
 		}
 	}
 
@@ -583,7 +583,7 @@ public static function show_nps_notice() {
 	 * @since 1.6.7
 	 * @access public
 	 */
-	public static function uabb_check_widgets_data_usage() {
+	public static function uabb_check_modules_data_usage() {
 		// Check user permissions
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
