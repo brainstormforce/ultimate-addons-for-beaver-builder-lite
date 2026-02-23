@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(composer run lint)",
+      "Bash(composer run format)",
+      "Bash(composer run phpstan)",
+      "Bash(composer run gen-stubs)",
+      "Bash(composer install)",
+      "Bash(composer update)",
+      "Bash(npm install)",
+      "Bash(npm run i18n)",
+      "Bash(npm run i18n:po)",
+      "Bash(npm run i18n:mo)",
+      "Bash(npm run i18n:json)",
+      "Bash(grunt *)",
+      "Bash(php -l *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git branch *)",
+      "Bash(git add *)",
+      "Bash(git fetch *)",
+      "Bash(git worktree *)",
+      "Bash(wp option *)",
+      "Bash(wp i18n *)"
+    ],
+    "deny": [
+      "Bash(git push --force*)",
+      "Bash(git reset --hard*)",
+      "Bash(rm -rf *)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && php -l \"$CLAUDE_FILE_PATHS\" 2>&1 | grep -v '^No syntax errors' || true"
+          }
+        ]
+      }
+    ]
+  }
+}
