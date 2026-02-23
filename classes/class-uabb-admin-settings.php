@@ -138,14 +138,11 @@ final class UABBBuilderAdminSettings {
 	 * @return void
 	 */
 	public static function menu() {
-		if ( current_user_can( 'manage_options' ) ) {
-
-			$title = UABB_PREFIX;
-			$cap   = 'manage_options';
-			$slug  = 'uabb-builder-settings';
-			$func  = __CLASS__ . '::render';
-			add_submenu_page( 'options-general.php', $title, $title, $cap, $slug, $func );
-		}
+		$title = UABB_PREFIX;
+		$cap   = 'manage_options';
+		$slug  = 'uabb-builder-settings';
+		$func  = __CLASS__ . '::render';
+		add_submenu_page( 'options-general.php', $title, $title, $cap, $slug, $func );
 	}
 
 	/**

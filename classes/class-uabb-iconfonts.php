@@ -45,6 +45,7 @@ class UABB_IconFonts {
 					'message' => __( 'You are not authorized to perform this action.', 'uabb' ),
 				)
 			);
+			return;
 		}
 
 		delete_option( '_uabb_enabled_icons' );

@@ -255,13 +255,14 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 * @return void
 		 */
 		public function fetch_cloud_templates() {
-			if ( ! check_ajax_referer( 'uabb_cloud_nonce', 'form_nonce' ) || ! current_user_can( 'manage_options' ) ) {
+			if ( ! check_ajax_referer( 'uabb_cloud_nonce', 'form_nonce', false ) || ! current_user_can( 'manage_options' ) ) {
 				wp_send_json_error(
 					array(
 						'success' => false,
 						'message' => __( 'You are not authorized to perform this action.', 'uabb' ),
 					)
 				);
+				return;
 			}
 			self::reset_cloud_transient();
 			wp_send_json_success();
