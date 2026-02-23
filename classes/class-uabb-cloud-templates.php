@@ -446,18 +446,6 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 				</div><!-- #uabb-templates -->
 
 				<?php
-
-				/**
-				 * Debugging
-				 */
-				if ( isset( $_GET['debug'] ) ) {
-					if ( count( $templates ) < 1 ) {
-						?>
-						<h2> <?php esc_html_e( 'Templates are disabled from RestAPI.', 'uabb' ); ?> </h2>
-						<?php
-						print_r( $templates );
-					}
-				}
 			} else {
 
 				// Message for no templates found.
