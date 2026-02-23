@@ -491,12 +491,13 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 
 			// Create the upload dir if it doesn't exist.
 			if ( ! file_exists( $dir_info['path'] ) ) {
+				self::load_filesystem();
 
 				// Create the directory.
-				mkdir( $dir_info['path'] );
+				self::$uabb_filesystem->mkdir( $dir_info['path'] );
 
 				// Add an index file for security.
-				file_put_contents( $dir_info['path'] . 'index.html', '' );
+				self::$uabb_filesystem->put_contents( $dir_info['path'] . 'index.html', '', FS_CHMOD_FILE );
 			}
 
 			return $dir_info;
