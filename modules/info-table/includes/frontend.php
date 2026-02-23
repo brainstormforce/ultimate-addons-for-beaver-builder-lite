@@ -17,7 +17,7 @@ if ( isset( $settings->it_link_nofollow ) ) {
 }
 ?>
 <?php if ( 'complete_link' === $settings->it_link_type ) { ?>
-<a href="<?php echo esc_attr( $settings->it_link ); ?>" target="<?php echo esc_attr( $settings->it_link_target ); ?>" <?php UABB_Helper::get_link_rel( $settings->it_link_target, $link_nofollow, 1 ); ?>>
+<a href="<?php echo esc_url( $settings->it_link ); ?>" target="<?php echo esc_attr( $settings->it_link_target ); ?>" <?php UABB_Helper::get_link_rel( $settings->it_link_target, $link_nofollow, 1 ); ?>>
 <?php } ?>
 <div class="uabb-module-content info-table-wrap info-table-<?php echo esc_attr( $settings->box_design ); ?> info-table-cs-<?php echo esc_attr( $settings->color_scheme ); ?>">
 	<div class="info-table">
