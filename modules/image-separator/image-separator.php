@@ -230,7 +230,7 @@ class UABBImageSeparatorModule extends FLBuilderModule {
 			// See if the cropped photo already exists.
 			if ( file_exists( $cropped_path['path'] ) ) {
 				$src = $cropped_path['url'];
-			} elseif ( stristr( $src, FL_BUILDER_DEMO_URL ) && ! stristr( FL_BUILDER_DEMO_URL, $_SERVER['HTTP_HOST'] ) ) {
+			} elseif ( stristr( $src, FL_BUILDER_DEMO_URL ) && ! stristr( FL_BUILDER_DEMO_URL, wp_parse_url( home_url(), PHP_URL_HOST ) ) ) {
 				$src = $this->_get_cropped_demo_url();
 			} elseif ( stristr( $src, FL_BUILDER_OLD_DEMO_URL ) ) {
 				$src = $this->_get_cropped_demo_url();
