@@ -5,6 +5,8 @@
  *  @package UABB Info List Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Function that initializes Info List Module
  *

@@ -5,6 +5,8 @@
  *  @package UABB Info List WPML Compatibility
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Here WPML_UABB_Infolist extends WPML_Beaver_Builder_Module_With_Items
  *

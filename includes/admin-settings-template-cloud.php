@@ -5,6 +5,8 @@
  * @package UABB Settings Template Cloud
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <div id="fl-uabb-cloud-templates-form" class="fl-settings-form uabb-cloud-templates-fl-settings-form">
 

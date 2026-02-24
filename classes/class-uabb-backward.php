@@ -6,6 +6,8 @@
  * @package BAckward Compatibility
  */
 
+defined( 'ABSPATH' ) || exit;
+
 if ( ! class_exists( 'UABB_lite_Plugin_Backward' ) ) {
 
 	/**

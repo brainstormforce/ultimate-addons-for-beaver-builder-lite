@@ -5,6 +5,8 @@
  *  @package UABB Ribbon Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <?php
 global $post;

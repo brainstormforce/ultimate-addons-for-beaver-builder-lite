@@ -7,6 +7,8 @@
  * @package UABB Separator Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 FLBuilder::register_module(
 	'UABBSeparatorModule',
 	array(

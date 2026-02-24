@@ -1,4 +1,6 @@
-<?php // @codingStandardsIgnoreLine.
+<?php
+defined( 'ABSPATH' ) || exit;
+// @codingStandardsIgnoreLine.
 /**
  *  Custom Fields Config File
  *

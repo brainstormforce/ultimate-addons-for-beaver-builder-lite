@@ -8,6 +8,8 @@
  * @package UABB Spacer Gap Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 FLBuilder::register_module(
 	'UABBSpacerGap',
 	array(

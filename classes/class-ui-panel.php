@@ -6,6 +6,8 @@
  * @package UABB UI Panels Setup
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * This class initializes UABB UI Panels
  *

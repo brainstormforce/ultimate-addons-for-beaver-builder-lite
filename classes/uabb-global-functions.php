@@ -29,6 +29,8 @@
  *  @package Global Styling
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Function for PHP older version
  */

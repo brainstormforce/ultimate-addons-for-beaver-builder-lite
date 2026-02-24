@@ -5,6 +5,8 @@
  * @package UABB Settings WelCome
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 
 <div id="fl-uabb-welcome-form" class="fl-settings-form">

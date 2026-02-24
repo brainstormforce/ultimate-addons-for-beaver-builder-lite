@@ -6,6 +6,8 @@
  * @package UABB Admin Settings.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * This class initializes UABB Builder Admin Settings
  *

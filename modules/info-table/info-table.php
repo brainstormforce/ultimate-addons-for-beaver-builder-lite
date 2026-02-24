@@ -5,6 +5,8 @@
  *  @package UABB Info Table Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Function that initializes Info Table Module
  *

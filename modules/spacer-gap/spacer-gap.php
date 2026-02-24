@@ -5,6 +5,8 @@
  *  @package UABB Spacer Gap Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Function that initializes UABB Spacer Gap Module.
  *

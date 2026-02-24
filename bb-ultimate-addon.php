@@ -11,6 +11,9 @@
  * @package Ultimate Addons For Beaver Builder
  */
 
+defined( 'ABSPATH' ) || exit;
+
+
 /**
  * Custom modules
  */

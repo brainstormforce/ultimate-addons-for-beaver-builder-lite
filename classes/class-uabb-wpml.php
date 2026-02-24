@@ -6,6 +6,8 @@
  * @package UABB WPML Tranlatable
  */
 
+defined( 'ABSPATH' ) || exit;
+
 if ( ! class_exists( 'UABBLite_WPML_Translatable' ) ) {
 	/**
 	 * Class UABBLite_WPML_Translatable.

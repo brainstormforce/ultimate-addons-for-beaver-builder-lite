@@ -5,6 +5,8 @@
  * @package Attachment Fields
  */
 
+defined( 'ABSPATH' ) || exit;
+
 if ( ! class_exists( 'UABB_Attachment' ) ) {
 	/**
 	 * This class initializes UABB Attachment

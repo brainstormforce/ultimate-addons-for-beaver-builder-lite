@@ -5,6 +5,8 @@
  *  @package UABB Star Rating
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Class that initializes UABB Star Rating Module
  *

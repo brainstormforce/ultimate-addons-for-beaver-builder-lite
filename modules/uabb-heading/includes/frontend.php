@@ -5,6 +5,8 @@
  *  @package UABB Heading Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 global $wp_embed;
 
 // Ensure $settings is defined and initialized.
