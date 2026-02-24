@@ -32,26 +32,27 @@ if ( ! isset( $module ) ) {
 						<?php $module->render_image(); ?>
 						<?php
 						if ( 'line_text' === $settings->separator_style ) {
-							echo '<' . esc_attr( $settings->separator_text_tag_selection ) . ' class="uabb-divider-text">' . esc_attr( $settings->text_inline ) . '</' . esc_attr( $settings->separator_text_tag_selection ) . '>';
+							echo '<' . esc_html( $separator_tag ) . ' class="uabb-divider-text">' . esc_html( $settings->text_inline ) . '</' . esc_html( $separator_tag ) . '>';
 						}
 						?>
-					</div>			 		    
+					</div>
 					<div class="uabb-separator-line uabb-side-right">
 						<span></span>
-					</div> 
+					</div>
 				</div>
 			<?php } ?>
 			<?php if ( 'line' === $settings->separator_style ) { ?>
 				<div class="uabb-separator"></div>
 			<?php } ?>
-		</div> 
+		</div>
 	<?php } ?>
 	<?php
 	// Define a whitelist of allowed tags.
-		$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' );
-		$heading_tag  = in_array( $settings->tag, $allowed_tags, true ) ? $settings->tag : 'h3';
+		$allowed_tags     = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
+		$heading_tag      = in_array( $settings->tag, $allowed_tags, true ) ? $settings->tag : 'h3';
+		$separator_tag    = isset( $settings->separator_text_tag_selection ) && in_array( $settings->separator_text_tag_selection, $allowed_tags, true ) ? $settings->separator_text_tag_selection : 'h3';
 	?>
-	<<?php echo esc_attr( $heading_tag ); ?> class="uabb-heading">
+	<<?php echo esc_html( $heading_tag ); ?> class="uabb-heading">
 		<?php if ( ! empty( $settings->link ) ) : ?>
 			<a href="<?php echo esc_url( $settings->link ); ?>" title="<?php echo esc_attr( $settings->heading ); ?>" target="<?php echo esc_attr( $settings->link_target ); ?>" <?php BB_Ultimate_Addon_Helper::get_link_rel( esc_attr( $settings->link_target ), $settings->link_nofollow, 1 ); ?> aria-label="<?php echo esc_attr__( 'Go to ', 'uabb' ) . esc_url( $settings->link ); ?>">
 			<?php endif; ?>
@@ -59,7 +60,7 @@ if ( ! isset( $module ) ) {
 			<?php if ( ! empty( $settings->link ) ) : ?>
 			</a>
 		<?php endif; ?>
-	</<?php echo esc_attr( $heading_tag ); ?>>
+	</<?php echo esc_html( $heading_tag ); ?>>
 
 	<?php if ( 'center' === $settings->separator_position ) { ?>
 		<div class="uabb-module-content uabb-separator-parent">			
@@ -72,13 +73,13 @@ if ( ! isset( $module ) ) {
 						<?php $module->render_image(); ?>
 						<?php
 						if ( 'line_text' === $settings->separator_style ) {
-							echo '<' . esc_attr( $settings->separator_text_tag_selection ) . ' class="uabb-divider-text">' . esc_html( $settings->text_inline ) . '</' . esc_attr( $settings->separator_text_tag_selection ) . '>';
+							echo '<' . esc_html( $separator_tag ) . ' class="uabb-divider-text">' . esc_html( $settings->text_inline ) . '</' . esc_html( $separator_tag ) . '>';
 						}
 						?>
-					</div>					    
+					</div>
 					<div class="uabb-separator-line uabb-side-right">
 						<span></span>
-					</div> 
+					</div>
 				</div>
 			<?php } ?>
 			<?php if ( 'line' === $settings->separator_style ) { ?>
@@ -104,7 +105,7 @@ if ( ! isset( $module ) ) {
 						<?php $module->render_image(); ?>
 						<?php
 						if ( 'line_text' === $settings->separator_style ) {
-								echo '<' . esc_attr( $settings->separator_text_tag_selection ) . ' class="uabb-divider-text">' . esc_html( $settings->text_inline ) . '</' . esc_attr( $settings->separator_text_tag_selection ) . '>';
+								echo '<' . esc_html( $separator_tag ) . ' class="uabb-divider-text">' . esc_html( $settings->text_inline ) . '</' . esc_html( $separator_tag ) . '>';
 						}
 						?>
 					</div>

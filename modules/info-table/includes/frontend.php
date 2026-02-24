@@ -86,7 +86,7 @@ if ( isset( $settings->it_link_nofollow ) ) {
 		</div>
 		<?php if ( 'cta' === $settings->it_link_type && 'design02' !== $settings->box_design ) { ?>
 		<div class="info-table-button">
-			<a href="<?php echo esc_url( $settings->it_link ); ?>" target="<?php echo esc_attr( $settings->it_link_target ); ?>"><?php echo esc_html( $settings->button_text ); ?></a>
+			<a href="<?php echo esc_url( $settings->it_link ); ?>" target="<?php echo esc_attr( $settings->it_link_target ); ?>" <?php UABB_Helper::get_link_rel( esc_attr( $settings->it_link_target ), $link_nofollow, 1 ); ?>><?php echo esc_html( $settings->button_text ); ?></a>
 		</div>
 		<?php } ?>
 	</div>
