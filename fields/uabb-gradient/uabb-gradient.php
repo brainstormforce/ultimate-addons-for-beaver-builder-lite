@@ -6,6 +6,8 @@
  *  @package UABB Gradient
  */
 
+defined( 'ABSPATH' ) || exit;
+
 if ( ! class_exists( 'UABB_Gradient' ) ) {
 	/**
 	 * This class initializes Gradient

@@ -5,6 +5,8 @@
  * @package Next
  */
 
+defined( 'ABSPATH' ) || exit;
+
 if ( ! class_exists( 'UABBGlobalSettingsOptions' ) ) {
 	/**
 	 * This class initializes UABB Global Settings Options

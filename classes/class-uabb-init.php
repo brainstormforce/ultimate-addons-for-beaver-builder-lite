@@ -6,6 +6,8 @@
  * @package UABB Initial Setup
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * This class initializes UABB Init
  *

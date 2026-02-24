@@ -6,6 +6,8 @@
  *  @package Global Styling
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * This class initializes UABB Global Styling
  *

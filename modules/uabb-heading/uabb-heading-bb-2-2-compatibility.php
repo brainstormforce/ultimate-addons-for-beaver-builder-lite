@@ -8,6 +8,8 @@
  * @package UABB Heading Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 FLBuilder::register_module(
 	'UABBHeadingModule',
 	array(

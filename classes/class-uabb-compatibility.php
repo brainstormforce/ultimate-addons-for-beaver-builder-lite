@@ -6,6 +6,8 @@
  * @package BB Version Check
  */
 
+defined( 'ABSPATH' ) || exit;
+
 if ( ! class_exists( 'UABB_Lite_Compatibility' ) ) {
 
 	if ( ! defined( 'FL_BUILDER_VERSION' ) ) {

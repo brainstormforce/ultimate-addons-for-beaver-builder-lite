@@ -6,6 +6,8 @@
  * @package UABB Iconfonts
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * This class initializes UABB IconFonts
  *

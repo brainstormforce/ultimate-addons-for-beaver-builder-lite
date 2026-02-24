@@ -5,6 +5,8 @@
  * @package UABB Settings Analytics
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <div id="fl-uabb-analytics-form" class="fl-settings-form uabb-fl-settings-form">
 	<br>

@@ -8,6 +8,8 @@
  * @package UABB Info List Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 FLBuilder::register_module(
 	'UABBInfoList',
 	array(

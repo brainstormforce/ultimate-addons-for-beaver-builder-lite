@@ -5,6 +5,8 @@
  *  @package UABB Separator Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Function that initializes UABB Separator Module
  *

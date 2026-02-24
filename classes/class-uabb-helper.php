@@ -5,6 +5,8 @@
  * @package UABB Helper
  */
 
+defined( 'ABSPATH' ) || exit;
+
 if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 	/**
 	 * This class initializes BB Ultiamte Addon Helper

@@ -7,6 +7,8 @@
  * @package UABB Info Table Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 FLBuilder::register_module(
 	'UABBInfoTableModule',
 	array(

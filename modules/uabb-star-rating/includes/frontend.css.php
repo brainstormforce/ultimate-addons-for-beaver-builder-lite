@@ -5,6 +5,8 @@
  *  @package UABB Star Rating Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 // Ensure $settings is defined and initialized.
 if ( ! isset( $settings ) ) {
 	$settings = new stdClass(); // Create an empty object to avoid undefined errors.

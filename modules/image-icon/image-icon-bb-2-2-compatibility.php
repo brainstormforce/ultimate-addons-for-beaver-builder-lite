@@ -8,6 +8,8 @@
  * @package UABB Image Icon Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 FLBuilder::register_module(
 	'ImageIconModule',
 	array(

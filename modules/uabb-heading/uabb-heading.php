@@ -5,6 +5,8 @@
  *  @package UABB Heading
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Function that initializes UABB Heading Module
  *

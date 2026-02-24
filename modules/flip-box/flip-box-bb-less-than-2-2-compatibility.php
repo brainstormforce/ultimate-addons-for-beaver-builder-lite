@@ -7,6 +7,8 @@
  * @package UABB Flip Box Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 FLBuilder::register_settings_form(
 	'flip_box_icon_form_field',
 	array(

@@ -7,6 +7,8 @@
  *  @package Templates from sections and presets
  */
 
+defined( 'ABSPATH' ) || exit;
+
 // Ensure required variables are set.
 $has_editing_cap    = isset( $has_editing_cap ) ? $has_editing_cap : false;
 $is_module_template = isset( $is_module_template ) ? $is_module_template : false;

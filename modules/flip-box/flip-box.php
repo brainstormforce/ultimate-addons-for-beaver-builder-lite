@@ -5,6 +5,8 @@
  *  @package UABB Flip Box Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Function that initializes UABB Flip Box Module
  *

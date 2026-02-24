@@ -5,6 +5,8 @@
  * @package UABB Settings Modules
  */
 
+defined( 'ABSPATH' ) || exit;
+
 // Defining the constant.
 if ( ! defined( 'UABB_PREFIX' ) ) {
 	define( 'UABB_PREFIX', '' );

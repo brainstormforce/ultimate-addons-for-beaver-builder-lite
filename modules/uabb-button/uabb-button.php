@@ -5,6 +5,8 @@
  *  @package UABB Button Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Function that initializes UABB Button Module
  *

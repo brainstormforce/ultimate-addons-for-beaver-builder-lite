@@ -5,6 +5,8 @@
  * @package Beaver Builder Theme Global Integration
  */
 
+defined( 'ABSPATH' ) || exit;
+
 if ( ! class_exists( 'UABB_BBThemeGlobalIntegration' ) ) {
 	/**
 	 * This class initializes BB options and required fields

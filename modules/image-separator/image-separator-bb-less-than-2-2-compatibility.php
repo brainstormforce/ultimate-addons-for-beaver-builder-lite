@@ -7,6 +7,8 @@
  * @package UABB Image Separator Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 FLBuilder::register_module(
 	'UABBImageSeparatorModule',
 	array(

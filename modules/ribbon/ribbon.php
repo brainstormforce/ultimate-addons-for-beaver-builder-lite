@@ -5,6 +5,8 @@
  *  @package UABB Ribbon Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Function that initializes UABB Ribbon Module
  *

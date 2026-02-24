@@ -6,6 +6,8 @@
  * @package Network Admin Settings
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * This class initializes UABB Builder Multisite Settings
  *
