@@ -49,7 +49,7 @@ final class UABBBuilderAdminSettings {
 		add_action( 'network_admin_menu', __CLASS__ . '::menu' );
 		add_action( 'admin_menu', __CLASS__ . '::menu' );
 
-		if ( isset( $_REQUEST['page'] ) && 'uabb-builder-settings' === $_REQUEST['page'] ) {
+		if ( isset( $_REQUEST['page'] ) && 'uabb-builder-settings' === sanitize_text_field( wp_unslash( $_REQUEST['page'] ) ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			add_action( 'admin_enqueue_scripts', __CLASS__ . '::styles_scripts' );
 			self::save();
 		}
@@ -270,7 +270,7 @@ final class UABBBuilderAdminSettings {
 					)
 				);
 			}
-		} elseif ( ! empty( $_POST ) && ! isset( $_POST['email'] ) ) {
+		} elseif ( ! empty( $_POST ) && ! isset( $_POST['email'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
 			echo wp_kses(
 				'<div class="updated"><p>' . __( 'Settings updated!', 'uabb' ) . '</p></div>',
 				array(
@@ -462,7 +462,7 @@ final class UABBBuilderAdminSettings {
 			return;
 		}
 
-		if ( isset( $_POST['fl-uabb-nonce'] ) && wp_verify_nonce( $_POST['fl-uabb-nonce'], 'uabb' ) ) {
+		if ( isset( $_POST['fl-uabb-nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['fl-uabb-nonce'] ) ), 'uabb' ) ) {
 
 			$uabb['load_panels']    = false;
 			$uabb['load_templates'] = false;
@@ -479,14 +479,14 @@ final class UABBBuilderAdminSettings {
 			FLBuilderModel::update_admin_settings_option( '_fl_builder_uabb', $uabb, false );
 		}
 
-		if ( isset( $_POST['fl-uabb-modules-nonce'] ) && wp_verify_nonce( $_POST['fl-uabb-modules-nonce'], 'uabb-modules' ) ) {
+		if ( isset( $_POST['fl-uabb-modules-nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['fl-uabb-modules-nonce'] ) ), 'uabb-modules' ) ) {
 			$modules = array();
 
 			$modules_array = BB_Ultimate_Addon_Helper::get_all_modules();
 
 			if ( isset( $_POST['uabb-modules'] ) && is_array( $_POST['uabb-modules'] ) ) {
 
-				$modules = array_map( 'sanitize_text_field', $_POST['uabb-modules'] );
+				$modules = array_map( 'sanitize_text_field', wp_unslash( $_POST['uabb-modules'] ) );
 
 				foreach ( $modules_array as $key => $value ) {
 					if ( ! array_key_exists( $key, $modules ) ) {
@@ -500,7 +500,7 @@ final class UABBBuilderAdminSettings {
 			FLBuilderModel::update_admin_settings_option( '_fl_builder_uabb_modules', $modules, false );
 		}
 		
-		if ( isset( $_POST['fl-uabb-analytics-nonce'] ) && wp_verify_nonce( $_POST['fl-uabb-analytics-nonce'], 'uabb-analytics' ) ) {
+		if ( isset( $_POST['fl-uabb-analytics-nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['fl-uabb-analytics-nonce'] ) ), 'uabb-analytics' ) ) {
 			$analytics = array();
 			$analytics['enabled'] = isset( $_POST['uabb-analytics-enabled'] ) ? 'yes' : 'no';
 			
