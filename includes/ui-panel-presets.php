@@ -54,7 +54,7 @@ if ( ! defined( 'UABB_PREFIX' ) ) {
 								?>
 								<div class="fl-builder-blocks-section">
 									<span class="fl-builder-blocks-section-title">
-										<?php echo __( $cat['name'], 'uabb' ); // @codingStandardsIgnoreLine.?>
+										<?php echo esc_html( $cat['name'] ); ?>
 										<i class="fa fa-chevron-down"></i>
 									</span>
 									<div class="fl-builder-blocks-section-content fl-builder-module-templates">
@@ -88,7 +88,7 @@ if ( ! defined( 'UABB_PREFIX' ) ) {
 				<?php do_action( 'uabb_fl_builder_ui_panel_after_presets' ); ?>
 
 				<div class="fl-builder-modules-cta">
-					<a href="#" onclick="window.open('<?php echo admin_url(); ?>options-general.php?page=fl-builder-settings#uabb-template-manager');" target="_blank"><i class="fa fa-external-link-square"></i> <?php echo sprintf( __( 'Note - You can enable, disable and manage %s presets here.', 'uabb' ), UABB_PREFIX ); // @codingStandardsIgnoreLine. ?></a>
+					<a href="#" onclick="window.open('<?php echo esc_url( admin_url( 'options-general.php?page=fl-builder-settings#uabb-template-manager' ) ); ?>');" target="_blank"><i class="fa fa-external-link-square"></i> <?php echo esc_html( sprintf( /* translators: %s: UABB prefix branding */ __( 'Note - You can enable, disable and manage %s presets here.', 'uabb' ), UABB_PREFIX ) ); ?></a>
 				</div>
 				<div class="fl-builder-modules-cta">
 					<a href="#" target="_self"><?php echo esc_html__( 'Note - Images used in the templates are hotlinked from our server and are subject to copyright. It is strongly recommended that you replace them with your own.', 'uabb' ); ?></a>
