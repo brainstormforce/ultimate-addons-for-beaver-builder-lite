@@ -98,24 +98,27 @@ class UABB_IconFonts {
 	 * @param array $dst an object to get destination of the file.
 	 */
 	public function recurse_copy( $src, $dst ) {
-		$dir = opendir( $src );
-
-		// Create directory if not exist.
-		if ( ! is_dir( $dst ) ) {
-			@mkdir( $dst ); //phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_mkdir
+		global $wp_filesystem;
+		if ( empty( $wp_filesystem ) ) {
+			require_once ABSPATH . '/wp-admin/includes/file.php';
+			WP_Filesystem();
 		}
 
-		// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
-		while ( false !== ( $file = readdir( $dir ) ) ) {
-			if ( ( '.' !== $file ) && ( '..' !== $file ) ) {
-				if ( is_dir( $src . '/' . $file ) ) {
+		// Create directory if not exist.
+		if ( ! $wp_filesystem->is_dir( $dst ) ) {
+			$wp_filesystem->mkdir( $dst );
+		}
+
+		$dirlist = $wp_filesystem->dirlist( $src );
+		if ( ! empty( $dirlist ) ) {
+			foreach ( $dirlist as $file => $fileinfo ) {
+				if ( 'd' === $fileinfo['type'] ) {
 					$this->recurse_copy( $src . '/' . $file, $dst . '/' . $file );
 				} else {
-					copy( $src . '/' . $file, $dst . '/' . $file );
+					$wp_filesystem->copy( $src . '/' . $file, $dst . '/' . $file, true );
 				}
 			}
 		}
-		closedir( $dir );
 	}
 }
 
