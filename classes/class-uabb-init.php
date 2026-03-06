@@ -37,7 +37,7 @@ class UABB_Init {
 			add_filter( 'fl_builder_settings_form_defaults', array( $this, 'uabb_global_settings_form_defaults' ), 10, 2 );
 			// Load all the required files of bb-ultimate-addon.
 			self::includes();
-			
+
 		} else {
 
 			// disable UABB activation ntices in admin panel.
@@ -86,12 +86,12 @@ class UABB_Init {
 		*/
 		if ( ! class_exists( 'BSF_Analytics_Loader' ) ) {
 			require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics-loader.php';
-		
-		add_action( 'admin_init', array( $this, 'uabb_lite_maybe_migrate_analytics_tracking' ) );
 
-		$bsf_analytics = \BSF_Analytics_Loader::get_instance();
+			add_action( 'admin_init', array( $this, 'uabb_lite_maybe_migrate_analytics_tracking' ) );
 
-		$bsf_analytics->set_entity(
+			$bsf_analytics = \BSF_Analytics_Loader::get_instance();
+
+			$bsf_analytics->set_entity(
 			array(
 				'uabb' => array(
 					'product_name'        => 'Ultimate Addons for Beaver Builder Lite',
@@ -115,7 +115,7 @@ class UABB_Init {
 				)
 			);
 		}
-		
+
 		add_action( 'init', function(){
 
 			require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-global-settings.php';
@@ -131,7 +131,6 @@ class UABB_Init {
 			require_once BB_ULTIMATE_ADDON_DIR . 'classes/helper.php';
 			require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-ui-panel.php';
 
-			
 			// Load the NPS Survey library.
 			if ( ! class_exists( 'Uabb_Lite_Nps_Survey' ) ) {
 				require_once BB_ULTIMATE_ADDON_DIR . 'lib/class-uabb-lite-nps-survey.php';

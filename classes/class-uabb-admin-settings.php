@@ -370,7 +370,6 @@ final class UABBBuilderAdminSettings {
 		self::render_form( 'template-cloud' );
 		self::render_form( 'analytics' );
 		self::render_form( 'premium' );
-		
 
 		// Let extensions hook into form rendering.
 		do_action( 'uabb_builder_admin_settings_render_forms' );
@@ -500,11 +499,11 @@ final class UABBBuilderAdminSettings {
 
 			FLBuilderModel::update_admin_settings_option( '_fl_builder_uabb_modules', $modules, false );
 		}
-		
+
 		if ( isset( $_POST['fl-uabb-analytics-nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['fl-uabb-analytics-nonce'] ) ), 'uabb-analytics' ) ) {
-			$analytics = array();
+			$analytics            = array();
 			$analytics['enabled'] = isset( $_POST['uabb-analytics-enabled'] ) ? 'yes' : 'no';
-			
+
 			FLBuilderModel::update_admin_settings_option( 'uabb_usage_optin', $analytics['enabled'], false );
 		}
 
@@ -518,42 +517,42 @@ final class UABBBuilderAdminSettings {
 		FLBuilderModel::delete_asset_cache_for_all_posts();
 	}
 
-/**
- * Render Ultimate Addons for Beaver Builder Lite NPS Survey Notice.
- *
- * @since x.x.x
- * @return void
- */
-public static function show_nps_notice() {
-    if ( class_exists( 'Nps_Survey' ) ) {
-        \Nps_Survey::show_nps_notice(
-            'nps-survey-uabb-lite',
-            array(
-                'show_if'          => true, // Add your display conditions.
-                'dismiss_timespan' => 4 * WEEK_IN_SECONDS,
-                'display_after'    => 2 * WEEK_IN_SECONDS,
-                'plugin_slug'      => 'uabb-lite',
-                'show_on_screens'  => array( 'settings_page_uabb-builder-settings' ),
-                'message'          => array(
+	/**
+	 * Render Ultimate Addons for Beaver Builder Lite NPS Survey Notice.
+	 *
+	 * @since x.x.x
+	 * @return void
+	 */
+	public static function show_nps_notice() {
+		if ( class_exists( 'Nps_Survey' ) ) {
+			\Nps_Survey::show_nps_notice(
+				'nps-survey-uabb-lite',
+				array(
+					'show_if'          => true, // Add your display conditions.
+					'dismiss_timespan' => 4 * WEEK_IN_SECONDS,
+					'display_after'    => 2 * WEEK_IN_SECONDS,
+					'plugin_slug'      => 'uabb-lite',
+					'show_on_screens'  => array( 'settings_page_uabb-builder-settings' ),
+					'message'          => array(
 
-                    // Step 1 i.e rating input.
-                    'logo'                  => esc_url( BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg' ),
-                    'plugin_name'           => __( 'Ultimate Addons for Beaver Builder Lite', 'uabb' ),
-                    'nps_rating_message'    => __( 'How likely are you to recommend Ultimate Addons for Beaver Builder Lite to your friends or colleagues?', 'uabb' ),
+						// Step 1 i.e rating input.
+						'logo'                  => esc_url( BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg' ),
+						'plugin_name'           => __( 'Ultimate Addons for Beaver Builder Lite', 'uabb' ),
+						'nps_rating_message'    => __( 'How likely are you to recommend Ultimate Addons for Beaver Builder Lite to your friends or colleagues?', 'uabb' ),
 
-                    // Step 2A i.e. positive.
-					'feedback_title'        => __( 'Thanks a lot for your feedback! 😍', 'uabb' ),
-					'feedback_content'      => __( 'Thanks for using Ultimate Addons! Got feedback or suggestions to make it even better? We’d love to hear from you.', 'uabb' ),
-					'plugin_rating_link'    => esc_url( 'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/#new-post' ),
+						// Step 2A i.e. positive.
+						'feedback_title'        => __( 'Thanks a lot for your feedback! 😍', 'uabb' ),
+						'feedback_content'      => __( 'Thanks for using Ultimate Addons! Got feedback or suggestions to make it even better? We\'d love to hear from you.', 'uabb' ),
+						'plugin_rating_link'    => esc_url( 'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/#new-post' ),
 
-                    // Step 2B i.e. negative.
-                    'plugin_rating_title'   => __( 'Thank you for your feedback', 'uabb' ),
-                    'plugin_rating_content' => __( 'We value your input. How can we improve your experience?', 'uabb' ),
-                ),
-            )
-        );
-    }
-}
+						// Step 2B i.e. negative.
+						'plugin_rating_title'   => __( 'Thank you for your feedback', 'uabb' ),
+						'plugin_rating_content' => __( 'We value your input. How can we improve your experience?', 'uabb' ),
+					),
+				)
+			);
+		}
+	}
 
 }
 
