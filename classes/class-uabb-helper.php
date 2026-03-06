@@ -5,6 +5,8 @@
  * @package UABB Helper
  */
 
+defined( 'ABSPATH' ) || exit;
+
 if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 	/**
 	 * This class initializes BB Ultiamte Addon Helper
@@ -50,7 +52,8 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 
 			// Branding - %s Modules.
 			if ( 'UABB' !== $branding_name ) {
-				$branding_modules = sprintf('%s Modules', $branding_name ); // @codingStandardsIgnoreLine.
+				// Translators: %s is the branded plugin name.
+				$branding_modules = sprintf( __( '%s Modules', 'uabb' ), $branding_name );
 			}
 
 			define( 'UABB_PREFIX', $branding_name );

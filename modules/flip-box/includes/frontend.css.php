@@ -5,7 +5,8 @@
  *  @package UABB Flip Box Module
  */
 
-global $post;
+defined( 'ABSPATH' ) || exit;
+
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 

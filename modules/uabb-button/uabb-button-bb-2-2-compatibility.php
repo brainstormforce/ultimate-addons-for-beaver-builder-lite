@@ -8,6 +8,8 @@
  * @package UABB Button Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 FLBuilder::register_module(
 	'UABBButtonModule',
 	array(

@@ -5,6 +5,8 @@
  * @package Render UABB Admin settings
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <div class="wrap <?php UABBBuilderAdminSettings::render_page_class(); ?>">
 

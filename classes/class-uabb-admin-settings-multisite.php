@@ -6,6 +6,8 @@
  * @package Network Admin Settings
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * This class initializes UABB Builder Multisite Settings
  *
@@ -49,7 +51,7 @@ final class UABBBuilderMultisiteSettings {
 	 * @return void
 	 */
 	public static function admin_init() {
-		if ( is_network_admin() && isset( $_REQUEST['page'] ) && 'uabb-builder-multisite-settings' === $_REQUEST['page'] ) {
+		if ( is_network_admin() && isset( $_REQUEST['page'] ) && 'uabb-builder-multisite-settings' === sanitize_text_field( wp_unslash( $_REQUEST['page'] ) ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			add_action( 'admin_enqueue_scripts', 'UABBBuilderAdminSettings::styles_scripts' );
 			UABBBuilderAdminSettings::save();
 		}

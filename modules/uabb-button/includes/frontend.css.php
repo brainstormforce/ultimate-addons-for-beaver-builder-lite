@@ -5,7 +5,8 @@
  * @package UABB Button Module
  */
 
-global $post;
+defined( 'ABSPATH' ) || exit;
+
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
@@ -343,22 +344,22 @@ if ( ! $version_bb_check ) {
 
 <?php
 if ( 'custom' === $settings->width && '' !== $settings->custom_height ) :
-	$translateText = intval( $settings->custom_height ) + ( $padding_top_bottom * 2 ) + 50; // @codingStandardsIgnoreLine.
+	$translate_text = intval( $settings->custom_height ) + ( $padding_top_bottom * 2 ) + 50;
 	?>
 .fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-flat-btn.uabb-animate_from_top-btn:hover .uabb-button-text {
-	-webkit-transform: translateY(<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
-	-moz-transform: translateY(<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
-	-ms-transform: translateY(<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
-	-o-transform: translateY(<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
-	transform: translateY(<?php echo $translateText; ?>px);  <?php // @codingStandardsIgnoreLine. ?>
+	-webkit-transform: translateY(<?php echo esc_attr( $translate_text ); ?>px);
+	-moz-transform: translateY(<?php echo esc_attr( $translate_text ); ?>px);
+	-ms-transform: translateY(<?php echo esc_attr( $translate_text ); ?>px);
+	-o-transform: translateY(<?php echo esc_attr( $translate_text ); ?>px);
+	transform: translateY(<?php echo esc_attr( $translate_text ); ?>px);
 }
 
 .fl-builder-content .fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-flat-btn.uabb-animate_from_bottom-btn:hover .uabb-button-text {
-	-webkit-transform: translateY(-<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
-	-moz-transform: translateY(-<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
-	-ms-transform: translateY(-<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
-	-o-transform: translateY(-<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
-	transform: translateY(-<?php echo $translateText; ?>px); <?php // @codingStandardsIgnoreLine. ?>
+	-webkit-transform: translateY(-<?php echo esc_attr( $translate_text ); ?>px);
+	-moz-transform: translateY(-<?php echo esc_attr( $translate_text ); ?>px);
+	-ms-transform: translateY(-<?php echo esc_attr( $translate_text ); ?>px);
+	-o-transform: translateY(-<?php echo esc_attr( $translate_text ); ?>px);
+	transform: translateY(-<?php echo esc_attr( $translate_text ); ?>px);
 }
 <?php endif; ?>
 

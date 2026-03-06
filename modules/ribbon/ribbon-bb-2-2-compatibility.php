@@ -8,6 +8,8 @@
  * @package UABB Ribbon Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 FLBuilder::register_module(
 	'RibbonModule',
 	array(

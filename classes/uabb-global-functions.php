@@ -29,6 +29,8 @@
  *  @package Global Styling
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Function for PHP older version
  */
@@ -44,8 +46,7 @@ if ( ! function_exists( 'array_replace_recursive' ) ) {
 
 		$base = recurse( $base, $replacements );
 		// handle the arguments, merge one by one.
-		$args = func_get_args(); // @codingStandardsIgnoreLine.
-		$base = $args[0];
+		$args = func_get_args();		$base = $args[0];
 		if ( ! is_array( $base ) ) {
 			return $base;
 		}
@@ -694,8 +695,7 @@ function uabb_theme_button_border_radius( $default_btn_border_radius ) {
 
 	if ( '' === $default_btn_border_radius ) {
 
-		$radius = apply_filters( 'uabb/global/button_border_radius', $default_btn_border_radius ); // @codingStandardsIgnoreLine.
-
+		$radius = apply_filters( 'uabb/global/button_border_radius', $default_btn_border_radius );
 		if ( '' === $radius ) {
 			$radius = apply_filters( 'uabb_theme_button_border_radius', $default_btn_border_radius );
 			if ( '' === $radius ) {

@@ -243,7 +243,7 @@ class ImageIconModule extends FLBuilderModule {
 			// See if the cropped photo already exists.
 			if ( file_exists( $cropped_path['path'] ) ) {
 				$src = $cropped_path['url'];
-			} elseif ( stristr( $src, FL_BUILDER_DEMO_URL ) && ! stristr( FL_BUILDER_DEMO_URL, $_SERVER['HTTP_HOST'] ) ) {
+			} elseif ( stristr( $src, FL_BUILDER_DEMO_URL ) && ! stristr( FL_BUILDER_DEMO_URL, wp_parse_url( home_url(), PHP_URL_HOST ) ) ) {
 				$src = $this->_get_cropped_demo_url();
 			} elseif ( stristr( $src, FL_BUILDER_OLD_DEMO_URL ) ) {
 				$src = $this->_get_cropped_demo_url();
@@ -271,13 +271,13 @@ class ImageIconModule extends FLBuilderModule {
 		$photo = $this->get_data();
 
 		if ( ! empty( $photo->alt ) ) {
-			return htmlspecialchars( $photo->alt, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
+			return esc_attr( $photo->alt );
 		} elseif ( ! empty( $photo->description ) ) {
-			return htmlspecialchars( $photo->description, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
+			return esc_attr( $photo->description );
 		} elseif ( ! empty( $photo->caption ) ) {
-			return htmlspecialchars( $photo->caption, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
+			return esc_attr( $photo->caption );
 		} elseif ( ! empty( $photo->title ) ) {
-			return htmlspecialchars( $photo->title, ENT_QUOTES, 'UTF-8' );  // Added 'UTF-8' encoding.
+			return esc_attr( $photo->title );
 		}
 
 		return null;

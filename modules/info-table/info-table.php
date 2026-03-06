@@ -5,6 +5,8 @@
  *  @package UABB Info Table Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Function that initializes Info Table Module
  *
@@ -542,7 +544,7 @@ class UABBInfoTableModule extends FLBuilderModule {
 			}
 			if ( isset( $settings->btn_font_size['desktop'] ) ) {
 				$settings->btn_font_typo['font_size'] = array(
-					'length' => $settings->sub_heading_font_size['desktop'],
+					'length' => $settings->btn_font_size['desktop'],
 					'unit'   => 'px',
 				);
 			}

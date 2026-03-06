@@ -5,7 +5,8 @@
  * @package UABB Info List Module
  */
 
-global $post;
+defined( 'ABSPATH' ) || exit;
+
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 $converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
@@ -389,7 +390,10 @@ foreach ( $settings->add_list_item as $item ) {
 			$img_size[0] = ( isset( FLBuilderPhoto::get_attachment_data( $item->photo )->width ) ) ? FLBuilderPhoto::get_attachment_data( $item->photo )->width : '';
 			$img_size[1] = ( isset( FLBuilderPhoto::get_attachment_data( $item->photo )->height ) ) ? FLBuilderPhoto::get_attachment_data( $item->photo )->height : '';
 			elseif ( '' !== trim( $item->photo_url ) ) :
-				$img_size = getimagesize( $item->photo_url );
+				$photo_url = esc_url_raw( $item->photo_url );
+				if ( wp_http_validate_url( $photo_url ) ) {
+					$img_size = @getimagesize( $photo_url ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
+				}
 			endif;
 
 			if ( isset( $img_size[0] ) && isset( $img_size[1] ) && ( 0 !== intval( $img_size[0] ) ) && ( 0 !== intval( $img_size[1] ) ) ) :

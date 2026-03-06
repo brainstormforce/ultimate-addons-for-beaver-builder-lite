@@ -6,6 +6,8 @@
  * @package UABB UI Panels Setup
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * This class initializes UABB UI Panels
  *
@@ -172,8 +174,15 @@ class UABB_UI_Panels {
 	 * @return string|false
 	 */
 	public function fl_uabb_render_js( $js, $nodes, $global_settings ) {
-		$temp = file_get_contents( BB_ULTIMATE_ADDON_DIR . 'assets/js/uabb-frontend.js' ) . $js;
-		$js   = $temp;
+		global $wp_filesystem;
+		if ( empty( $wp_filesystem ) ) {
+			require_once ABSPATH . '/wp-admin/includes/file.php';
+			WP_Filesystem();
+		}
+		$file_path = BB_ULTIMATE_ADDON_DIR . 'assets/js/uabb-frontend.js';
+		$contents  = $wp_filesystem->get_contents( $file_path );
+		$temp      = ( false !== $contents ? $contents : '' ) . $js;
+		$js        = $temp;
 		return $js;
 	}
 
@@ -187,9 +196,15 @@ class UABB_UI_Panels {
 	 * @return string|false
 	 */
 	public function fl_uabb_render_css( $css, $nodes, $global_settings ) {
-
-		$css .= file_get_contents( BB_ULTIMATE_ADDON_DIR . 'assets/css/uabb-frontend.css' );
-		$css .= include BB_ULTIMATE_ADDON_DIR . 'assets/dynamic-css/uabb-theme-dynamic-css.php';
+		global $wp_filesystem;
+		if ( empty( $wp_filesystem ) ) {
+			require_once ABSPATH . '/wp-admin/includes/file.php';
+			WP_Filesystem();
+		}
+		$file_path = BB_ULTIMATE_ADDON_DIR . 'assets/css/uabb-frontend.css';
+		$contents  = $wp_filesystem->get_contents( $file_path );
+		$css      .= ( false !== $contents ? $contents : '' );
+		$css      .= include BB_ULTIMATE_ADDON_DIR . 'assets/dynamic-css/uabb-theme-dynamic-css.php';
 
 		return $css;
 	}

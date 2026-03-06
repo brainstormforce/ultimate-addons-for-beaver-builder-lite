@@ -5,6 +5,8 @@
  * @package UABB Theme Dynamic CSS file
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ob_start();
 
 // Ensure $global_settings is defined and initialized.

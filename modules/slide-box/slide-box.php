@@ -5,6 +5,8 @@
  *  @package UABB Slide Box Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Function that initializes UABB Slide Box Module
  *

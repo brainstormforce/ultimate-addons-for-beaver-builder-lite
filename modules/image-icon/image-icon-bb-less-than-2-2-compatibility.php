@@ -7,6 +7,8 @@
  * @package UABB Image Icon Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 FLBuilder::register_module(
 	'ImageIconModule',
 	array(
@@ -122,7 +124,7 @@ FLBuilder::register_module(
 
 				/* Icon Style Section */
 				'icon_style'   => array(
-					'title'  => 'Style',
+					'title'  => __( 'Style', 'uabb' ),
 					'fields' => array(
 						/* Icon Style */
 						'icon_style'            => array(

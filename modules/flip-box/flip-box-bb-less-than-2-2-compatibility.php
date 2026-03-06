@@ -7,6 +7,8 @@
  * @package UABB Flip Box Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 FLBuilder::register_settings_form(
 	'flip_box_icon_form_field',
 	array(
@@ -273,8 +275,8 @@ FLBuilder::register_module(
 							'label'   => __( 'Repeat', 'uabb' ),
 							'default' => 'no',
 							'options' => array(
-								'yes' => 'Yes',
-								'no'  => 'No',
+								'yes' => __( 'Yes', 'uabb' ),
+								'no'  => __( 'No', 'uabb' ),
 							),
 						),
 						'front_bg_image_display'     => array(
@@ -432,8 +434,8 @@ FLBuilder::register_module(
 							'label'   => __( 'Repeat', 'uabb' ),
 							'default' => 'no',
 							'options' => array(
-								'yes' => 'Yes',
-								'no'  => 'No',
+								'yes' => __( 'Yes', 'uabb' ),
+								'no'  => __( 'No', 'uabb' ),
 							),
 						),
 						'back_bg_image_display'     => array(

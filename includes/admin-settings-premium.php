@@ -5,6 +5,8 @@
  * @package UABB Settings Premium
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 
 <div id="fl-uabb-premium-form" class="fl-settings-form uabb-fl-settings-form">

@@ -6,6 +6,8 @@
  * @package UABB Admin Settings.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * This class initializes UABB Builder Admin Settings
  *
@@ -47,7 +49,7 @@ final class UABBBuilderAdminSettings {
 		add_action( 'network_admin_menu', __CLASS__ . '::menu' );
 		add_action( 'admin_menu', __CLASS__ . '::menu' );
 
-		if ( isset( $_REQUEST['page'] ) && 'uabb-builder-settings' === $_REQUEST['page'] ) {
+		if ( isset( $_REQUEST['page'] ) && 'uabb-builder-settings' === sanitize_text_field( wp_unslash( $_REQUEST['page'] ) ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			add_action( 'admin_enqueue_scripts', __CLASS__ . '::styles_scripts' );
 			self::save();
 		}
@@ -116,13 +118,13 @@ final class UABBBuilderAdminSettings {
 							</div>
 						</div>',
 					$image_path,
-					__( 'Hello! Thank you for choosing the Ultimate Addon for Beaver Builder to build this website!', 'ultimate-addon-for-beaver-builder', 'uabb' ),
-					__( 'Would you please mind sharing your views and give it a 5 star rating on the WordPress repository?', 'ultimate-addon-for-beaver-builder', 'uabb' ),
+					__( 'Hello! Thank you for choosing the Ultimate Addon for Beaver Builder to build this website!', 'uabb' ),
+					__( 'Would you please mind sharing your views and give it a 5 star rating on the WordPress repository?', 'uabb' ),
 					'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/?filter=5',
-					__( 'Ok, you deserve it', 'ultimate-addon-for-beaver-builder', 'uabb' ),
+					__( 'Ok, you deserve it', 'uabb' ),
 					MONTH_IN_SECONDS,
-					__( 'Nope, maybe later', 'ultimate-addon-for-beaver-builder', 'uabb' ),
-					__( 'I already did', 'ultimate-addon-for-beaver-builder', 'uabb' )
+					__( 'Nope, maybe later', 'uabb' ),
+					__( 'I already did', 'uabb' )
 				),
 				'repeat-notice-after'        => MONTH_IN_SECONDS,
 				'display-notice-after'       => ( 2 * WEEK_IN_SECONDS ), // Display notice after 2 weeks.
@@ -246,7 +248,8 @@ final class UABBBuilderAdminSettings {
 			echo '<img src="' . esc_url( $icon ) . '" />';
 		}
 
-		echo '<span>' . sprintf( _x( '%s Settings', '%s stands for custom branded "UABB" name.', 'uabb' ), UABB_PREFIX ) . '</span>'; // @codingStandardsIgnoreLine.
+		// Translators: %s stands for custom branded "UABB" name.
+		echo '<span>' . esc_html( sprintf( _x( '%s Settings', '%s stands for custom branded "UABB" name.', 'uabb' ), UABB_PREFIX ) ) . '</span>';
 	}
 
 	/**
@@ -268,7 +271,7 @@ final class UABBBuilderAdminSettings {
 					)
 				);
 			}
-		} elseif ( ! empty( $_POST ) && ! isset( $_POST['email'] ) ) {
+		} elseif ( ! empty( $_POST ) && ! isset( $_POST['email'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
 			echo wp_kses(
 				'<div class="updated"><p>' . __( 'Settings updated!', 'uabb' ) . '</p></div>',
 				array(
@@ -367,7 +370,6 @@ final class UABBBuilderAdminSettings {
 		self::render_form( 'template-cloud' );
 		self::render_form( 'analytics' );
 		self::render_form( 'premium' );
-		
 
 		// Let extensions hook into form rendering.
 		do_action( 'uabb_builder_admin_settings_render_forms' );
@@ -460,7 +462,7 @@ final class UABBBuilderAdminSettings {
 			return;
 		}
 
-		if ( isset( $_POST['fl-uabb-nonce'] ) && wp_verify_nonce( $_POST['fl-uabb-nonce'], 'uabb' ) ) {
+		if ( isset( $_POST['fl-uabb-nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['fl-uabb-nonce'] ) ), 'uabb' ) ) {
 
 			$uabb['load_panels']    = false;
 			$uabb['load_templates'] = false;
@@ -477,14 +479,14 @@ final class UABBBuilderAdminSettings {
 			FLBuilderModel::update_admin_settings_option( '_fl_builder_uabb', $uabb, false );
 		}
 
-		if ( isset( $_POST['fl-uabb-modules-nonce'] ) && wp_verify_nonce( $_POST['fl-uabb-modules-nonce'], 'uabb-modules' ) ) {
+		if ( isset( $_POST['fl-uabb-modules-nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['fl-uabb-modules-nonce'] ) ), 'uabb-modules' ) ) {
 			$modules = array();
 
 			$modules_array = BB_Ultimate_Addon_Helper::get_all_modules();
 
 			if ( isset( $_POST['uabb-modules'] ) && is_array( $_POST['uabb-modules'] ) ) {
 
-				$modules = array_map( 'sanitize_text_field', $_POST['uabb-modules'] );
+				$modules = array_map( 'sanitize_text_field', wp_unslash( $_POST['uabb-modules'] ) );
 
 				foreach ( $modules_array as $key => $value ) {
 					if ( ! array_key_exists( $key, $modules ) ) {
@@ -497,11 +499,11 @@ final class UABBBuilderAdminSettings {
 
 			FLBuilderModel::update_admin_settings_option( '_fl_builder_uabb_modules', $modules, false );
 		}
-		
-		if ( isset( $_POST['fl-uabb-analytics-nonce'] ) && wp_verify_nonce( $_POST['fl-uabb-analytics-nonce'], 'uabb-analytics' ) ) {
-			$analytics = array();
+
+		if ( isset( $_POST['fl-uabb-analytics-nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['fl-uabb-analytics-nonce'] ) ), 'uabb-analytics' ) ) {
+			$analytics            = array();
 			$analytics['enabled'] = isset( $_POST['uabb-analytics-enabled'] ) ? 'yes' : 'no';
-			
+
 			FLBuilderModel::update_admin_settings_option( 'uabb_usage_optin', $analytics['enabled'], false );
 		}
 
@@ -515,42 +517,42 @@ final class UABBBuilderAdminSettings {
 		FLBuilderModel::delete_asset_cache_for_all_posts();
 	}
 
-/**
- * Render Ultimate Addons for Beaver Builder Lite NPS Survey Notice.
- *
- * @since x.x.x
- * @return void
- */
-public static function show_nps_notice() {
-    if ( class_exists( 'Nps_Survey' ) ) {
-        \Nps_Survey::show_nps_notice(
-            'nps-survey-uabb-lite',
-            array(
-                'show_if'          => true, // Add your display conditions.
-                'dismiss_timespan' => 4 * WEEK_IN_SECONDS,
-                'display_after'    => 2 * WEEK_IN_SECONDS,
-                'plugin_slug'      => 'uabb-lite',
-                'show_on_screens'  => array( 'settings_page_uabb-builder-settings' ),
-                'message'          => array(
+	/**
+	 * Render Ultimate Addons for Beaver Builder Lite NPS Survey Notice.
+	 *
+	 * @since x.x.x
+	 * @return void
+	 */
+	public static function show_nps_notice() {
+		if ( class_exists( 'Nps_Survey' ) ) {
+			\Nps_Survey::show_nps_notice(
+				'nps-survey-uabb-lite',
+				array(
+					'show_if'          => true, // Add your display conditions.
+					'dismiss_timespan' => 4 * WEEK_IN_SECONDS,
+					'display_after'    => 2 * WEEK_IN_SECONDS,
+					'plugin_slug'      => 'uabb-lite',
+					'show_on_screens'  => array( 'settings_page_uabb-builder-settings' ),
+					'message'          => array(
 
-                    // Step 1 i.e rating input.
-                    'logo'                  => esc_url( BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg' ),
-                    'plugin_name'           => __( 'Ultimate Addons for Beaver Builder Lite', 'uabb' ),
-                    'nps_rating_message'    => __( 'How likely are you to recommend Ultimate Addons for Beaver Builder Lite to your friends or colleagues?', 'uabb' ),
+						// Step 1 i.e rating input.
+						'logo'                  => esc_url( BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg' ),
+						'plugin_name'           => __( 'Ultimate Addons for Beaver Builder Lite', 'uabb' ),
+						'nps_rating_message'    => __( 'How likely are you to recommend Ultimate Addons for Beaver Builder Lite to your friends or colleagues?', 'uabb' ),
 
-                    // Step 2A i.e. positive.
-					'feedback_title'        => __( 'Thanks a lot for your feedback! 😍', 'uabb' ),
-					'feedback_content'      => __( 'Thanks for using Ultimate Addons! Got feedback or suggestions to make it even better? We’d love to hear from you.', 'uabb' ),
-					'plugin_rating_link'    => esc_url( 'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/#new-post' ),
+						// Step 2A i.e. positive.
+						'feedback_title'        => __( 'Thanks a lot for your feedback! 😍', 'uabb' ),
+						'feedback_content'      => __( 'Thanks for using Ultimate Addons! Got feedback or suggestions to make it even better? We\'d love to hear from you.', 'uabb' ),
+						'plugin_rating_link'    => esc_url( 'https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite/reviews/#new-post' ),
 
-                    // Step 2B i.e. negative.
-                    'plugin_rating_title'   => __( 'Thank you for your feedback', 'uabb' ),
-                    'plugin_rating_content' => __( 'We value your input. How can we improve your experience?', 'uabb' ),
-                ),
-            )
-        );
-    }
-}
+						// Step 2B i.e. negative.
+						'plugin_rating_title'   => __( 'Thank you for your feedback', 'uabb' ),
+						'plugin_rating_content' => __( 'We value your input. How can we improve your experience?', 'uabb' ),
+					),
+				)
+			);
+		}
+	}
 
 }
 

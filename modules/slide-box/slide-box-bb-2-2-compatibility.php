@@ -8,6 +8,8 @@
  * @package UABB Slide Box Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 FLBuilder::register_module(
 	'SlideBoxModule',
 	array(

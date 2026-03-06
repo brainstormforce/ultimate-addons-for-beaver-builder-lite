@@ -5,6 +5,8 @@
  *  @package UABB Separator Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <?php /* Separator Markup */ ?>
 <div class="uabb-module-content uabb-separator-parent">

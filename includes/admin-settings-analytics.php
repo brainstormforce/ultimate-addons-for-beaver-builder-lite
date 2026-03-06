@@ -5,6 +5,8 @@
  * @package UABB Settings Analytics
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <div id="fl-uabb-analytics-form" class="fl-settings-form uabb-fl-settings-form">
 	<br>
@@ -17,7 +19,7 @@
 
 			<?php
 				$analytics_option = get_option( 'uabb_usage_optin', false );
-				$analytics_enabled = ( isset( $analytics_option )  && $analytics_option === 'yes' ) ? 'yes' : 'no';
+				$analytics_enabled = ( isset( $analytics_option ) && 'yes' === $analytics_option ) ? 'yes' : 'no';
 			?>
 			<div class="uabb-form-setting">
 				<label>					

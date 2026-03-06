@@ -7,7 +7,8 @@
  * @package Slide Box
  */
 
-	global $post;
+defined( 'ABSPATH' ) || exit;
+
 	$version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 	$converted        = UABB_Lite_Compatibility::check_old_page_migration();
 
@@ -290,7 +291,7 @@ if ( 'button' === $settings->cta_type ) {
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-slide-box-overlay .uabb-icon i:before {
 	color: <?php echo esc_attr( uabb_theme_base_color( $settings->overlay_icon_color ) ); ?>;
 	font-size: <?php echo esc_attr( $settings->overlay_icon_size ); ?>px;
-	<?php if ( isset( $settings->overlay_icon_bg_color ) && trim( $settings->overlay_icon_bg_color ) !== '' ) : ?>
+	<?php if ( isset( $settings->overlay_icon_bg_color ) && '' !== trim( $settings->overlay_icon_bg_color ) ) : ?>
 		background: <?php echo esc_attr( $settings->overlay_icon_bg_color ); ?>;
 		border-radius: 100%;
 		-moz-border-radius: 100%;

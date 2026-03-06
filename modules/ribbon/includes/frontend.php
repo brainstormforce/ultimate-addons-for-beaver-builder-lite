@@ -9,6 +9,8 @@
  * @package UABB Ribbon Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <?php
 

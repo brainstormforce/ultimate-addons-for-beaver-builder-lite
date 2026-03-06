@@ -5,6 +5,8 @@
  *  @package UABB Advanced Icon Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <?php
 

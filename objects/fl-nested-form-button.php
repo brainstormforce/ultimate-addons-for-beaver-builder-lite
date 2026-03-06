@@ -5,6 +5,8 @@
  * @package Button
  */
 
+defined( 'ABSPATH' ) || exit;
+
 $version_bb_check = UABB_Lite_Compatibility::check_bb_version();
 
 if ( ! $version_bb_check ) {

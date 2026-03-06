@@ -5,6 +5,8 @@
  *  @package UABB Advanced Icon Module
  */
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Function that initializes UABB Advanced Icon Module
  *

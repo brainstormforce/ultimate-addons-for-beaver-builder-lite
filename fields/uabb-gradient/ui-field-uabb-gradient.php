@@ -5,6 +5,8 @@
  * @package Gradient Field
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <#
 var field   = data.field,
