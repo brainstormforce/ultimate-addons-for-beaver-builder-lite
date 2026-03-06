@@ -30,7 +30,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 	define( 'BB_ULTIMATE_ADDON_TWITTER_URL', 'https://twitter.com/WeBrainstorm' );
 
 	/**
-	 * This class initializes BB Ultiamte Addons
+	 * This class initializes BB Ultimate Addons
 	 *
 	 * @class BB_Ultimate_Addon
 	 */
@@ -52,7 +52,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		/**
 		 * Function which resets the plugin activation if necessary memmory not found
 		 *
-		 * @Since 1.0
+		 * @since 1.0
 		 */
 		public function activation_reset() {
 
@@ -89,7 +89,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		/**
 		 * Memory Limit function that checks for memory limit for the UABB plugin
 		 *
-		 * @Since 1.0
+		 * @since 1.0
 		 */
 		public function check_memory_limit() {
 
