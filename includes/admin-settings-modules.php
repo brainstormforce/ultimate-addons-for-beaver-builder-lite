@@ -31,7 +31,7 @@ if ( ! defined( 'UABB_PREFIX' ) ) {
 		</div>
 	</div>
 	<br>
-	<h4 class="fl-settings-form-header"><?php echo esc_html( sprintf( __( 'Upgrade to Premium version to get these modules', 'uabb' ), UABB_PREFIX ) ); ?><span class="uabb-builder-upgrade-button fl-builder-button"><a href="<?php echo esc_url( BB_ULTIMATE_ADDON_UPGRADE_URL ); ?>" title="Upgrade" target="_blank"><?php esc_html_e( 'Unlock All Modules', 'uabb' ); ?><i class="dashicons dashicons-share-alt2"></i></a></span></h4>
+	<h4 class="fl-settings-form-header"><?php echo esc_html__( 'Upgrade to Premium version to get these modules', 'uabb' ); ?><span class="uabb-builder-upgrade-button fl-builder-button"><a href="<?php echo esc_url( BB_ULTIMATE_ADDON_UPGRADE_URL ); ?>" title="Upgrade" target="_blank"><?php esc_html_e( 'Unlock All Modules', 'uabb' ); ?><i class="dashicons dashicons-share-alt2"></i></a></span></h4>
 	<div class="uabb-premium-modules">
 		<?php $modules_array = BB_Ultimate_Addon_Helper::get_premium_modules(); ?>
 		<?php foreach ( $modules_array as $slug => $module ) : ?>
