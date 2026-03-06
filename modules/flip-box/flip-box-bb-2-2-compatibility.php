@@ -285,8 +285,8 @@ FLBuilder::register_module(
 							'label'   => __( 'Repeat', 'uabb' ),
 							'default' => 'no',
 							'options' => array(
-								'yes' => 'Yes',
-								'no'  => 'No',
+								'yes' => __( 'Yes', 'uabb' ),
+								'no'  => __( 'No', 'uabb' ),
 							),
 						),
 						'front_bg_image_display' => array(
@@ -399,8 +399,8 @@ FLBuilder::register_module(
 							'label'   => __( 'Repeat', 'uabb' ),
 							'default' => 'no',
 							'options' => array(
-								'yes' => 'Yes',
-								'no'  => 'No',
+								'yes' => __( 'Yes', 'uabb' ),
+								'no'  => __( 'No', 'uabb' ),
 							),
 						),
 						'back_bg_image_display' => array(

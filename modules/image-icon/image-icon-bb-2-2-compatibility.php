@@ -127,7 +127,7 @@ FLBuilder::register_module(
 
 				/* Icon Style Section */
 				'icon_style'   => array(
-					'title'  => 'Style',
+					'title'  => __( 'Style', 'uabb' ),
 					'fields' => array(
 						/* Icon Style */
 						'icon_style'            => array(
