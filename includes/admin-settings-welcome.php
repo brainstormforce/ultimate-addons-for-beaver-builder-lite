@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="fl-settings-form-content fl-welcome-page-content">
 
-		<p><?php _e( 'Thank you for choosing the Ultimate Addons for Beaver Builder and welcome on board! We promise to take you through an ultimate journey of website building. You’ll find a few settings in the column on the left. Need some more time-saving and advanced modules to play with? You can avail all of them with 200+ page & section templates and dedicated support from our team.', 'uabb' ); // @codingStandardsIgnoreLine. ?></p>
+		<p><?php esc_html_e( 'Thank you for choosing the Ultimate Addons for Beaver Builder and welcome on board! We promise to take you through an ultimate journey of website building. You’ll find a few settings in the column on the left. Need some more time-saving and advanced modules to play with? You can avail all of them with 200+ page & section templates and dedicated support from our team.', 'uabb' ); ?></p>
 
 		<div class="fl-welcome-col-wrap">
 
@@ -29,7 +29,7 @@ defined( 'ABSPATH' ) || exit;
 				</p>
 
 
-				<p><?php _e( 'The Ultimate Addon for Beaver Builder comes with a number of custom modules to enhance your experience of website creation with Beaver Builder. Inheriting the drag & drop functionality and the performance oriented objective of Beaver Builder, the Ultimate Addons are now the best addons to be used with the page builder.', 'uabb' ); // @codingStandardsIgnoreLine. ?>
+				<p><?php esc_html_e( 'The Ultimate Addon for Beaver Builder comes with a number of custom modules to enhance your experience of website creation with Beaver Builder. Inheriting the drag & drop functionality and the performance oriented objective of Beaver Builder, the Ultimate Addons are now the best addons to be used with the page builder.', 'uabb' ); // @codingStandardsIgnoreLine. ?>
 
 				</p>
 

@@ -248,7 +248,8 @@ final class UABBBuilderAdminSettings {
 			echo '<img src="' . esc_url( $icon ) . '" />';
 		}
 
-		echo '<span>' . sprintf( _x( '%s Settings', '%s stands for custom branded "UABB" name.', 'uabb' ), UABB_PREFIX ) . '</span>'; // @codingStandardsIgnoreLine.
+		// Translators: %s stands for custom branded "UABB" name.
+		echo '<span>' . esc_html( sprintf( _x( '%s Settings', '%s stands for custom branded "UABB" name.', 'uabb' ), UABB_PREFIX ) ) . '</span>';
 	}
 
 	/**

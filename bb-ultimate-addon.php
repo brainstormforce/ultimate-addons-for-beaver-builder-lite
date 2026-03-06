@@ -23,7 +23,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 	define( 'BB_ULTIMATE_ADDON_URL', plugins_url( '/', __FILE__ ) );
 	define( 'BB_ULTIMATE_ADDON_LITE_VERSION', '1.6.7' );
 	define( 'BSF_REMOVE_UABB_FROM_REGISTRATION_LISTING', true );
-	define( 'BB_ULTIMATE_ADDON_FILE', trailingslashit( dirname( __FILE__ ) ) . 'bb-ultimate-addon.php' );// @codingStandardsIgnoreLine.
+	define( 'BB_ULTIMATE_ADDON_FILE', trailingslashit( dirname( __FILE__ ) ) . 'bb-ultimate-addon.php' );
 	define( 'BB_ULTIMATE_ADDON_LITE', true );
 	define( 'BB_ULTIMATE_ADDON_UPGRADE_URL', 'https://www.ultimatebeaver.com/pricing/?utm_source=uabb-dashboard&utm_campaign=uabblite_upgrade&utm_medium=upgrade-button' );
 	define( 'BB_ULTIMATE_ADDON_FB_URL', 'https://www.brainstormforce.com/go/uabb-facebook-group/?utm_source=uabb-dashboard&utm_campaign=Lite&utm_medium=FB' );

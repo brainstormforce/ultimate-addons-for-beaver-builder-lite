@@ -317,8 +317,10 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 				if ( 'not-found' === $msg ) { ?>
 					<div class="uabb-cloud-templates-not-found">
 
-						<h3> <?php printf( __( 'Welcome to %s Template Cloud!', 'uabb' ), UABB_PREFIX ); // @codingStandardsIgnoreLine. ?> </h3>
-						<p> <?php printf( __( '%s Template Cloud would allow you to browse through our growing library of 150+ professionally designed templates and download the only ones that you need.', 'uabb' ), UABB_PREFIX ); ?> <span class="uabb-cloud-process button-primary" data-operation="fetch"> <i class="dashicons dashicons-update " style="display: none; padding: 3px;"></i> <?php _e( "Let's get started", 'uabb' ); // @codingStandardsIgnoreLine. ?> &rarr; </span></p>
+						<?php // Translators: %s is the branded plugin name. ?>
+						<h3> <?php echo esc_html( sprintf( __( 'Welcome to %s Template Cloud!', 'uabb' ), UABB_PREFIX ) ); ?> </h3>
+						<?php // Translators: %s is the branded plugin name. ?>
+						<p> <?php echo esc_html( sprintf( __( '%s Template Cloud would allow you to browse through our growing library of 150+ professionally designed templates and download the only ones that you need.', 'uabb' ), UABB_PREFIX ) ); ?> <span class="uabb-cloud-process button-primary" data-operation="fetch"> <i class="dashicons dashicons-update " style="display: none; padding: 3px;"></i> <?php esc_html_e( "Let's get started", 'uabb' ); ?> &rarr; </span></p>
 
 					</div>
 					<?php
