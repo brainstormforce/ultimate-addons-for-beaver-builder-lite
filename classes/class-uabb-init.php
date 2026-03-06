@@ -244,7 +244,7 @@ class UABB_Init {
 	 * Function that renders UABB's Text-domain.
 	 *
 	 * @since 1.0
-	 * @return bool
+	 * @return void
 	 */
 	public function load_uabb_textdomain() {
 		// Default languages directory for "ultimate-addons-for-beaver-builder-lite".
