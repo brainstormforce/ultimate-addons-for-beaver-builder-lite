@@ -122,6 +122,8 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 					return false;
 				}
 			}
+
+			return false;
 		}
 	}
 
