@@ -1,11 +1,11 @@
 <?php
-defined( 'ABSPATH' ) || exit;
-// @codingStandardsIgnoreLine.
 /**
- *  Custom Fields Config File
+ * Custom Fields Config File
  *
- *  @package UABB_Custom_Field_Scripts
+ * @package UABB_Custom_Field_Scripts
  */
+
+defined( 'ABSPATH' ) || exit;
 
 require_once 'uabb-gradient/uabb-gradient.php';
 
