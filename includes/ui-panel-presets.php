@@ -52,7 +52,7 @@ if ( ! defined( 'UABB_PREFIX' ) ) {
 						foreach ( $uabb_module_templates['categorized'] as $cat ) :
 
 							// avoid 'Uncategorized'.
-							if ( trim( $cat['name'] ) !== 'Uncategorized' ) :
+							if ( 'Uncategorized' !== trim( $cat['name'] ) ) :
 								?>
 								<div class="fl-builder-blocks-section">
 									<span class="fl-builder-blocks-section-title">
