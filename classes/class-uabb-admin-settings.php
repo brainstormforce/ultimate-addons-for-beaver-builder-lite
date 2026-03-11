@@ -484,7 +484,7 @@ final class UABBBuilderAdminSettings {
 
 			if ( isset( $_POST['uabb-modules'] ) && is_array( $_POST['uabb-modules'] ) ) {
 
-				$modules = array_map( 'sanitize_text_field', $_POST['uabb-modules'] );
+				$modules = array_map( 'sanitize_text_field', wp_unslash( $_POST['uabb-modules'] ) );
 
 				foreach ( $modules_array as $key => $value ) {
 					if ( ! array_key_exists( $key, $modules ) ) {
