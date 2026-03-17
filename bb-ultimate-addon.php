@@ -3,7 +3,7 @@
  * Plugin Name: Ultimate Addons for Beaver Builder - Lite
  * Plugin URI: http://www.ultimatebeaver.com/
  * Description: Ultimate Addons is a free extension for Beaver Builder that adds 10 modules, and works on top of any Beaver Builder Package. (Free, Standard, Pro & Agency) You can use it with on any WordPress theme.
- * Version: 1.6.7
+ * Version: 1.6.8
  * Author: Brainstorm Force
  * Author URI: http://www.brainstormforce.com
  * Text Domain: uabb
@@ -18,7 +18,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 
 	define( 'BB_ULTIMATE_ADDON_DIR', plugin_dir_path( __FILE__ ) );
 	define( 'BB_ULTIMATE_ADDON_URL', plugins_url( '/', __FILE__ ) );
-	define( 'BB_ULTIMATE_ADDON_LITE_VERSION', '1.6.7' );
+	define( 'BB_ULTIMATE_ADDON_LITE_VERSION', '1.6.8' );
 	define( 'BSF_REMOVE_UABB_FROM_REGISTRATION_LISTING', true );
 	define( 'BB_ULTIMATE_ADDON_FILE', trailingslashit( dirname( __FILE__ ) ) . 'bb-ultimate-addon.php' );// @codingStandardsIgnoreLine.
 	define( 'BB_ULTIMATE_ADDON_LITE', true );
@@ -41,6 +41,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		public function __construct() {
 
 			register_activation_hook( __FILE__, array( $this, 'activation_reset' ) );
+			register_deactivation_hook( __FILE__, array( $this, 'deactivation_cleanup' ) );
 
 			// UABB Initialize.
 			require_once 'classes/class-uabb-init.php';
@@ -60,7 +61,19 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 				$msg = sprintf( __( 'Unfortunately, plugin could not be activated as the memory allocated by your host has almost exhausted. Plugin recommends that your site should have 15M PHP memory remaining. <br/><br/>Please check <a target="_blank" href="https://www.ultimatebeaver.com/docs/increase-memory-limit-site/">this</a> article for solution or contact <a target="_blank" href="http://store.brainstormforce.com/support">support</a>.<br/><br/><a class="button button-primary" href="%s">Return to Plugins Page</a>', 'uabb' ), network_admin_url( 'plugins.php' ) ); // @codingStandardsIgnoreLine.
 
 				deactivate_plugins( plugin_basename( __FILE__ ) );
-				wp_die( esc_html( $msg ) );
+				wp_die(
+					wp_kses(
+						$msg,
+						array(
+							'a'  => array(
+								'href'   => array(),
+								'target' => array(),
+								'class'  => array(),
+							),
+							'br' => array(),
+						)
+					)
+				);
 			}
 
 			delete_option( 'uabb_hide_branding' );
@@ -68,6 +81,19 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 			// Force check graupi bundled products.
 			update_site_option( 'bsf_force_check_extensions', true );
 			update_option( 'uabb_lite_redirect', true );
+		}
+
+		/**
+		 * Clean up cron events on plugin deactivation.
+		 *
+		 * @since 1.6.8
+		 * @return void
+		 */
+		public function deactivation_cleanup() {
+			$timestamp = wp_next_scheduled( 'uabb_module_usage_cron' );
+			if ( $timestamp ) {
+				wp_unschedule_event( $timestamp, 'uabb_module_usage_cron' );
+			}
 		}
 
 		/**

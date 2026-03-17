@@ -38,13 +38,14 @@ class UABB_IconFonts {
 	 */
 	public function reload_icons() {
 
-		if ( ! wp_verify_nonce( $_POST['nonce'], 'uabb-reload-icons' ) || ! current_user_can( 'manage_options' ) ) {
+		if ( ! check_ajax_referer( 'uabb-reload-icons', 'nonce', false ) || ! current_user_can( 'manage_options' ) ) {
 			wp_send_json_error(
 				array(
 					'success' => false,
 					'message' => __( 'You are not authorized to perform this action.', 'uabb' ),
 				)
 			);
+			return;
 		}
 
 		delete_option( '_uabb_enabled_icons' );

@@ -56,7 +56,7 @@ if ( ! defined( 'UABB_PREFIX' ) ) {
 								?>
 								<div class="fl-builder-blocks-section">
 									<span class="fl-builder-blocks-section-title">
-										<?php echo __( $cat['name'], 'uabb' ); // @codingStandardsIgnoreLine.?>
+										<?php echo esc_html( __( $cat['name'], 'uabb' ) ); // phpcs:ignore WordPress.WP.I18n.NonSingularStringLiteralText ?>
 										<i class="fa fa-chevron-down"></i>
 									</span>
 									<div class="fl-builder-blocks-section-content fl-builder-row-templates">
@@ -91,7 +91,7 @@ if ( ! defined( 'UABB_PREFIX' ) ) {
 
 				<?php if ( BB_Ultimate_Addon_Helper::get_builder_uabb_branding( 'uabb-enable-template-cloud' ) ) { ?>
 				<div class="fl-builder-modules-cta">
-					<a href="#" onclick="window.open('<?php echo admin_url(); ?>options-general.php?page=uabb-builder-settings#uabb-cloud-templates');" target="_blank"><i class="fa fa-external-link-square"></i> <?php echo sprintf( __( 'Note - You can enable, disable and manage %s sections here.', 'uabb' ), UABB_PREFIX ); // @codingStandardsIgnoreLine. ?></a>
+					<a href="#" onclick="window.open('<?php echo esc_url( admin_url( 'options-general.php?page=uabb-builder-settings#uabb-cloud-templates' ) ); ?>');" target="_blank"><i class="fa fa-external-link-square"></i> <?php echo esc_html( sprintf( __( 'Note - You can enable, disable and manage %s sections here.', 'uabb' ), UABB_PREFIX ) ); // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment ?></a>
 				</div>
 				<?php } ?>
 				<div class="fl-builder-modules-cta">

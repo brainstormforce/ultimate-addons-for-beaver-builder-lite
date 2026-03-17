@@ -57,8 +57,8 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 
 			self::$cloud_url = array(
 				'page-templates' => 'https://templates.ultimatebeaver.com/wp-json/uabb-lite/v1/template/layouts/',
-				'sections'       => 'http://templates.ultimatebeaver.com/wp-json/uabb-lite/v1/template/sections/',
-				'presets'        => 'http://templates.ultimatebeaver.com/wp-json/uabb-lite/v1/template/presets/',
+				'sections'       => 'https://templates.ultimatebeaver.com/wp-json/uabb-lite/v1/template/sections/',
+				'presets'        => 'https://templates.ultimatebeaver.com/wp-json/uabb-lite/v1/template/presets/',
 			);
 
 			add_action( 'wp_ajax_uabb_cloud_dat_file_fetch', array( $this, 'fetch_cloud_templates' ) );
@@ -82,7 +82,6 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 					$url,
 					array(
 						'timeout'     => 30,
-						'sslverify'   => false,
 						'httpversion' => '1.1',
 					)
 				);
@@ -159,7 +158,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 					 *
 					 *  Then, keep cloud.
 					 */
-				} elseif ( ( is_array( $type_templates ) && count( $type_templates ) > 0 ) && ( 0 === count( $downloaded_templates[ $type ] ) )
+				} elseif ( ( is_array( $type_templates ) && count( $type_templates ) > 0 ) && ( ! is_array( $downloaded_templates[ $type ] ) || 0 === count( $downloaded_templates[ $type ] ) )
 					) {
 
 					$cloud_templates[ $type ] = $type_templates;
@@ -169,7 +168,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 					 *
 					 *  Then, keep downloaded.
 					 */
-				} elseif ( 0 === $type_templates && count( $downloaded_templates[ $type ] ) > 0 ) {
+				} elseif ( 0 === $type_templates && is_array( $downloaded_templates[ $type ] ) && count( $downloaded_templates[ $type ] ) > 0 ) {
 
 					$cloud_templates[ $type ] = $downloaded_templates[ $type ];
 				}
@@ -256,13 +255,14 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 		 * @return void
 		 */
 		public function fetch_cloud_templates() {
-			if ( ! check_ajax_referer( 'uabb_cloud_nonce', 'form_nonce' ) || ! current_user_can( 'manage_options' ) ) {
+			if ( ! check_ajax_referer( 'uabb_cloud_nonce', 'form_nonce', false ) || ! current_user_can( 'manage_options' ) ) {
 				wp_send_json_error(
 					array(
 						'success' => false,
 						'message' => __( 'You are not authorized to perform this action.', 'uabb' ),
 					)
 				);
+				return;
 			}
 			self::reset_cloud_transient();
 			wp_send_json_success();
@@ -446,18 +446,6 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 				</div><!-- #uabb-templates -->
 
 				<?php
-
-				/**
-				 * Debugging
-				 */
-				if ( isset( $_GET['debug'] ) ) {
-					if ( count( $templates ) < 1 ) {
-						?>
-						<h2> <?php esc_html_e( 'Templates are disabled from RestAPI.', 'uabb' ); ?> </h2>
-						<?php
-						print_r( $templates );
-					}
-				}
 			} else {
 
 				// Message for no templates found.
@@ -491,12 +479,13 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 
 			// Create the upload dir if it doesn't exist.
 			if ( ! file_exists( $dir_info['path'] ) ) {
+				self::load_filesystem();
 
 				// Create the directory.
-				mkdir( $dir_info['path'] );
+				self::$uabb_filesystem->mkdir( $dir_info['path'] );
 
 				// Add an index file for security.
-				file_put_contents( $dir_info['path'] . 'index.html', '' );
+				self::$uabb_filesystem->put_contents( $dir_info['path'] . 'index.html', '', FS_CHMOD_FILE );
 			}
 
 			return $dir_info;

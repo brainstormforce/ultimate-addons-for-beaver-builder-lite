@@ -30,6 +30,9 @@ final class UABBBuilderAdminSettings {
 	 */
 	public static function init() {
 		add_action( 'after_setup_theme', __CLASS__ . '::init_hooks' );
+
+		// Cron callback must be registered on all requests (including WP-Cron).
+		add_action( 'uabb_module_usage_cron', __CLASS__ . '::uabb_check_modules_data_usage' );
 	}
 
 	/**
@@ -55,6 +58,11 @@ final class UABBBuilderAdminSettings {
 		add_filter( 'wp_kses_allowed_html', __CLASS__ . '::add_data_attributes', 10, 2 );
 		add_action( 'admin_enqueue_scripts', __CLASS__ . '::notice_styles_scripts' );
 		add_action( 'admin_footer', __CLASS__. '::show_nps_notice' );
+
+		// Schedule module usage cron if opted in.
+		if ( 'yes' === get_option( 'uabb_usage_optin', false ) ) {
+			self::schedule_usage_cron();
+		}
 	}
 	/**
 	 * Enqueues the needed CSS/JS for the builder's admin settings page.
@@ -138,14 +146,11 @@ final class UABBBuilderAdminSettings {
 	 * @return void
 	 */
 	public static function menu() {
-		if ( current_user_can( 'delete_users' ) ) {
-
-			$title = UABB_PREFIX;
-			$cap   = 'delete_users';
-			$slug  = 'uabb-builder-settings';
-			$func  = __CLASS__ . '::render';
-			add_submenu_page( 'options-general.php', $title, $title, $cap, $slug, $func );
-		}
+		$title = UABB_PREFIX;
+		$cap   = 'manage_options';
+		$slug  = 'uabb-builder-settings';
+		$func  = __CLASS__ . '::render';
+		add_submenu_page( 'options-general.php', $title, $title, $cap, $slug, $func );
 	}
 
 	/**
@@ -459,7 +464,7 @@ final class UABBBuilderAdminSettings {
 	 */
 	public static function save() {
 		// Only admins can save settings.
-		if ( ! current_user_can( 'delete_users' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
 
@@ -487,7 +492,7 @@ final class UABBBuilderAdminSettings {
 
 			if ( isset( $_POST['uabb-modules'] ) && is_array( $_POST['uabb-modules'] ) ) {
 
-				$modules = array_map( 'sanitize_text_field', $_POST['uabb-modules'] );
+				$modules = array_map( 'sanitize_text_field', wp_unslash( $_POST['uabb-modules'] ) );
 
 				foreach ( $modules_array as $key => $value ) {
 					if ( ! array_key_exists( $key, $modules ) ) {
@@ -504,8 +509,15 @@ final class UABBBuilderAdminSettings {
 		if ( isset( $_POST['fl-uabb-analytics-nonce'] ) && wp_verify_nonce( $_POST['fl-uabb-analytics-nonce'], 'uabb-analytics' ) ) {
 			$analytics = array();
 			$analytics['enabled'] = isset( $_POST['uabb-analytics-enabled'] ) ? 'yes' : 'no';
-			
+
 			FLBuilderModel::update_admin_settings_option( 'uabb_usage_optin', $analytics['enabled'], false );
+
+			// Schedule or unschedule cron based on optin.
+			if ( 'yes' === $analytics['enabled'] ) {
+				self::schedule_usage_cron();
+			} else {
+				self::unschedule_usage_cron();
+			}
 		}
 
 		/**
@@ -554,6 +566,134 @@ public static function show_nps_notice() {
         );
     }
 }
+
+	/**
+	 * Schedule the module usage cron event if not already scheduled.
+	 *
+	 * @since 1.6.8
+	 * @return void
+	 */
+	public static function schedule_usage_cron() {
+		if ( ! wp_next_scheduled( 'uabb_module_usage_cron' ) ) {
+			wp_schedule_event( time(), 'weekly', 'uabb_module_usage_cron' );
+		}
+	}
+
+	/**
+	 * Unschedule the module usage cron event.
+	 *
+	 * @since 1.6.8
+	 * @return void
+	 */
+	public static function unschedule_usage_cron() {
+		$timestamp = wp_next_scheduled( 'uabb_module_usage_cron' );
+		if ( $timestamp ) {
+			wp_unschedule_event( $timestamp, 'uabb_module_usage_cron' );
+		}
+	}
+
+	/**
+	 * Handle AJAX request to get widgets usage data.
+	 *
+	 * @since 1.6.7
+	 * @access public
+	 */
+	public static function uabb_check_modules_data_usage() {
+		$transient_key = 'uabblite_module_usage_data';
+		$module_usage = get_transient( $transient_key );
+
+		if ( false === $module_usage || false === get_option( 'uabblite_module_usage_data_option' ) ) {
+			$filtered_module_usage = self::get_uabb_module_usage();
+
+			set_transient( $transient_key, $filtered_module_usage, MONTH_IN_SECONDS );
+			update_option( 'uabblite_module_usage_data_option', $filtered_module_usage );
+		}
+	}
+
+	/**
+	 * Get UABB module usage statistics.
+	 *
+	 * @since 1.6.7
+	 * @access public
+	 * @return array
+	 */
+	public static function get_uabb_module_usage() {
+
+		if ( ! class_exists( 'FLBuilder' ) || ! class_exists( 'FLBuilderModel' ) ) {
+			return array();
+		}
+
+		$uabb_modules_usage = array();
+
+		$args = array(
+			'post_type'      => FLBuilderModel::get_post_types(),
+			'post_status'    => 'publish',
+			'meta_key'       => '_fl_builder_enabled',
+			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			'meta_value'     => '1',
+			'posts_per_page' => -1,
+		);
+
+		$query = new WP_Query( $args );
+
+		if ( ! empty( $query->posts ) ) {
+			foreach ( $query->posts as $post ) {
+
+				$meta = get_post_meta( $post->ID, '_fl_builder_data', true );
+
+				if ( ! is_array( $meta ) && ! is_object( $meta ) ) {
+					continue;
+				}
+
+				foreach ( (array) $meta as $node ) {
+
+					if ( ! isset( $node->type ) || 'module' !== $node->type ) {
+						continue;
+					}
+
+					if ( ! isset( $node->settings->type ) ) {
+						continue;
+					}
+
+					$module_type = $node->settings->type;
+
+					if ( self::is_uabb_module( $module_type ) ) {
+
+						if ( ! isset( $uabb_modules_usage[ $module_type ] ) ) {
+							$uabb_modules_usage[ $module_type ] = 0;
+						}
+
+						++$uabb_modules_usage[ $module_type ];
+					}
+				}
+			}
+		}
+
+		arsort( $uabb_modules_usage );
+
+		return $uabb_modules_usage;
+	}
+
+	/**
+	 * Check if a module is a UABB module.
+	 *
+	 * @since 1.6.7
+	 * @access private
+	 * @param string $module_type Module slug.
+	 * @return bool
+	 */
+	private static function is_uabb_module( $module_type ) {
+
+		$all_modules = BB_Ultimate_Addon_Helper::get_all_modules();
+
+		foreach ( $all_modules as $pattern => $module_data ) {
+			if ( 0 === strpos( $module_type, $pattern ) ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
 
 }
 

@@ -19,8 +19,11 @@
 
 			<div class="fl-welcome-col">
 
-				<p><?php printf( __( 'For more time-saving features and access to our expert support team, <a href="%s" target="_blank">upgrade now!</a> With regular updates, helpful tutorials, we promise to make website building an ultimate journey for you!', 'uabb' ), BB_ULTIMATE_ADDON_UPGRADE_URL ); // @codingStandardsIgnoreLine. ?>
-
+				<p>
+					<?php
+					// translators: %s is the upgrade URL.
+					echo wp_kses_post( sprintf( __( 'For more time-saving features and access to our expert support team, <a href="%s" target="_blank">upgrade now!</a> With regular updates, helpful tutorials, we promise to make website building an ultimate journey for you!', 'uabb' ), esc_url( BB_ULTIMATE_ADDON_UPGRADE_URL ) ) );
+					?>
 				</p>
 
 
@@ -28,7 +31,12 @@
 
 				</p>
 
-				<p><?php printf( __( 'With <a href="%1$s" target="_blank">regular updates</a>, <a href="%2$s" target="_blank">helpful tutorials</a>, we promise to make website building an ultimate journey for you!', 'uabb' ), 'https://www.ultimatebeaver.com/blog/?utm_source=uabb-dashboard&amp;utm_campaign=Lite&amp;utm_medium=welcome-page', 'https://www.ultimatebeaver.com/docs/?utm_source=uabb-dashboard&amp;utm_campaign=Lite&amp;utm_medium=welcome-page' ); // @codingStandardsIgnoreLine. ?></p>
+				<p>
+					<?php
+					// translators: %1$s is the blog URL, %2$s is the docs URL.
+					echo wp_kses_post( sprintf( __( 'With <a href="%1$s" target="_blank">regular updates</a>, <a href="%2$s" target="_blank">helpful tutorials</a>, we promise to make website building an ultimate journey for you!', 'uabb' ), esc_url( 'https://www.ultimatebeaver.com/blog/?utm_source=uabb-dashboard&utm_campaign=Lite&utm_medium=welcome-page' ), esc_url( 'https://www.ultimatebeaver.com/docs/?utm_source=uabb-dashboard&utm_campaign=Lite&utm_medium=welcome-page' ) ) );
+					?>
+				</p>
 
 			</div>
 
@@ -38,7 +46,12 @@
 		</div>
 
 		<h4><?php esc_html_e( 'Join our Community!', 'uabb' ); ?></h4>
-		<p><?php printf( __( 'Want to connect with us to know more? Or have some suggestions we can take forward? <a href="%s" target="_blank">Join our Facebook community</a>, where a number of professional and newbie Beavers share their views and suggestions for the Ultimate Addons.', 'uabb' ), BB_ULTIMATE_ADDON_FB_URL );  // @codingStandardsIgnoreLine. ?></p>
+		<p>
+			<?php
+			// translators: %s is the Facebook community URL.
+			echo wp_kses_post( sprintf( __( 'Want to connect with us to know more? Or have some suggestions we can take forward? <a href="%s" target="_blank">Join our Facebook community</a>, where a number of professional and newbie Beavers share their views and suggestions for the Ultimate Addons.', 'uabb' ), esc_url( BB_ULTIMATE_ADDON_FB_URL ) ) );
+			?>
+		</p>
 
 	</div>
 </div>
