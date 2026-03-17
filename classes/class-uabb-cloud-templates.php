@@ -158,7 +158,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 					 *
 					 *  Then, keep cloud.
 					 */
-				} elseif ( ( is_array( $type_templates ) && count( $type_templates ) > 0 ) && ( 0 === count( $downloaded_templates[ $type ] ) )
+				} elseif ( ( is_array( $type_templates ) && count( $type_templates ) > 0 ) && ( ! is_array( $downloaded_templates[ $type ] ) || 0 === count( $downloaded_templates[ $type ] ) )
 					) {
 
 					$cloud_templates[ $type ] = $type_templates;
@@ -168,7 +168,7 @@ if ( ! class_exists( 'UABB_Cloud_Templates' ) ) {
 					 *
 					 *  Then, keep downloaded.
 					 */
-				} elseif ( 0 === $type_templates && count( $downloaded_templates[ $type ] ) > 0 ) {
+				} elseif ( 0 === $type_templates && is_array( $downloaded_templates[ $type ] ) && count( $downloaded_templates[ $type ] ) > 0 ) {
 
 					$cloud_templates[ $type ] = $downloaded_templates[ $type ];
 				}
