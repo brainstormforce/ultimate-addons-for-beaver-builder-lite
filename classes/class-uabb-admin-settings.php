@@ -30,6 +30,9 @@ final class UABBBuilderAdminSettings {
 	 */
 	public static function init() {
 		add_action( 'after_setup_theme', __CLASS__ . '::init_hooks' );
+
+		// Cron callback must be registered on all requests (including WP-Cron).
+		add_action( 'uabb_module_usage_cron', __CLASS__ . '::uabb_check_modules_data_usage' );
 	}
 
 	/**
@@ -56,9 +59,9 @@ final class UABBBuilderAdminSettings {
 		add_action( 'admin_enqueue_scripts', __CLASS__ . '::notice_styles_scripts' );
 		add_action( 'admin_footer', __CLASS__. '::show_nps_notice' );
 
-		// Module usage data collection for analytics.
+		// Schedule module usage cron if opted in.
 		if ( 'yes' === get_option( 'uabb_usage_optin', false ) ) {
-			add_action( 'shutdown', __CLASS__ . '::maybe_run_uabb_modules_usage_check' );
+			self::schedule_usage_cron();
 		}
 	}
 	/**
@@ -509,8 +512,15 @@ final class UABBBuilderAdminSettings {
 		if ( isset( $_POST['fl-uabb-analytics-nonce'] ) && wp_verify_nonce( $_POST['fl-uabb-analytics-nonce'], 'uabb-analytics' ) ) {
 			$analytics = array();
 			$analytics['enabled'] = isset( $_POST['uabb-analytics-enabled'] ) ? 'yes' : 'no';
-			
+
 			FLBuilderModel::update_admin_settings_option( 'uabb_usage_optin', $analytics['enabled'], false );
+
+			// Schedule or unschedule cron based on optin.
+			if ( 'yes' === $analytics['enabled'] ) {
+				self::schedule_usage_cron();
+			} else {
+				self::unschedule_usage_cron();
+			}
 		}
 
 		/**
@@ -561,19 +571,27 @@ public static function show_nps_notice() {
 }
 
 	/**
-	 * Check the page on which module check needs to be run.
+	 * Schedule the module usage cron event if not already scheduled.
 	 *
-	 * @since 1.6.7
-	 * @access public
+	 * @since 1.6.8
+	 * @return void
 	 */
-	public static function maybe_run_uabb_modules_usage_check() {
-		// Run only on admin.php?page=uabb-builder-settings
-		if (
-			is_admin() &&
-			isset( $_GET['page'] ) &&
-			'uabb-builder-settings' === $_GET['page']
-		) {
-			self::uabb_check_modules_data_usage();
+	public static function schedule_usage_cron() {
+		if ( ! wp_next_scheduled( 'uabb_module_usage_cron' ) ) {
+			wp_schedule_event( time(), 'weekly', 'uabb_module_usage_cron' );
+		}
+	}
+
+	/**
+	 * Unschedule the module usage cron event.
+	 *
+	 * @since 1.6.8
+	 * @return void
+	 */
+	public static function unschedule_usage_cron() {
+		$timestamp = wp_next_scheduled( 'uabb_module_usage_cron' );
+		if ( $timestamp ) {
+			wp_unschedule_event( $timestamp, 'uabb_module_usage_cron' );
 		}
 	}
 
@@ -584,11 +602,6 @@ public static function show_nps_notice() {
 	 * @access public
 	 */
 	public static function uabb_check_modules_data_usage() {
-		// Check user permissions
-		if ( ! current_user_can( 'manage_options' ) ) {
-			return;
-		}
-
 		$transient_key = 'uabblite_module_usage_data';
 		$module_usage = get_transient( $transient_key );
 
