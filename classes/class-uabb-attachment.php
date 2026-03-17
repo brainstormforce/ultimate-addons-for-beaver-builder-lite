@@ -50,7 +50,7 @@ if ( ! class_exists( 'UABB_Attachment' ) ) {
 		 */
 		public function uabb_attachment_field_cta_save( $post, $attachment ) {
 			if ( isset( $attachment['uabb-cta-link'] ) ) {
-				update_post_meta( $post['ID'], 'uabb-cta-link', $attachment['uabb-cta-link'] );
+				update_post_meta( $post['ID'], 'uabb-cta-link', esc_url_raw( $attachment['uabb-cta-link'] ) );
 			}
 
 			return $post;

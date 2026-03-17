@@ -146,14 +146,11 @@ final class UABBBuilderAdminSettings {
 	 * @return void
 	 */
 	public static function menu() {
-		if ( current_user_can( 'delete_users' ) ) {
-
-			$title = UABB_PREFIX;
-			$cap   = 'delete_users';
-			$slug  = 'uabb-builder-settings';
-			$func  = __CLASS__ . '::render';
-			add_submenu_page( 'options-general.php', $title, $title, $cap, $slug, $func );
-		}
+		$title = UABB_PREFIX;
+		$cap   = 'manage_options';
+		$slug  = 'uabb-builder-settings';
+		$func  = __CLASS__ . '::render';
+		add_submenu_page( 'options-general.php', $title, $title, $cap, $slug, $func );
 	}
 
 	/**
@@ -467,7 +464,7 @@ final class UABBBuilderAdminSettings {
 	 */
 	public static function save() {
 		// Only admins can save settings.
-		if ( ! current_user_can( 'delete_users' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
 
@@ -495,7 +492,7 @@ final class UABBBuilderAdminSettings {
 
 			if ( isset( $_POST['uabb-modules'] ) && is_array( $_POST['uabb-modules'] ) ) {
 
-				$modules = array_map( 'sanitize_text_field', $_POST['uabb-modules'] );
+				$modules = array_map( 'sanitize_text_field', wp_unslash( $_POST['uabb-modules'] ) );
 
 				foreach ( $modules_array as $key => $value ) {
 					if ( ! array_key_exists( $key, $modules ) ) {

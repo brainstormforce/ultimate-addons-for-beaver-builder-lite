@@ -36,7 +36,7 @@ final class UABBBuilderMultisiteSettings {
 		if ( true === get_option( 'uabb_lite_redirect' ) ) {
 			update_option( 'uabb_lite_redirect', false );
 			if ( ! is_multisite() ) :
-				wp_redirect( admin_url( 'options-general.php?page=uabb-builder-settings#uabb-welcome' ) );
+				wp_safe_redirect( admin_url( 'options-general.php?page=uabb-builder-settings#uabb-welcome' ) );
 				exit();
 			endif;
 		}
