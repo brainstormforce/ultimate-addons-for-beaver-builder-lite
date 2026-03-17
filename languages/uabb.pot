@@ -2,11 +2,11 @@
 # This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.7\n"
+"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.8\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-"
 "lite\n"
-"POT-Creation-Date: 2026-02-06 08:53:42+00:00\n"
+"POT-Creation-Date: 2026-03-17 06:39:20+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -183,7 +183,7 @@ msgstr ""
 msgid "Other"
 msgstr ""
 
-#: bb-ultimate-addon.php:60
+#: bb-ultimate-addon.php:61
 msgid ""
 "Unfortunately, plugin could not be activated as the memory allocated by "
 "your host has almost exhausted. Plugin recommends that your site should "
@@ -194,7 +194,7 @@ msgid ""
 "class=\"button button-primary\" href=\"%s\">Return to Plugins Page</a>"
 msgstr ""
 
-#: bb-ultimate-addon.php:138
+#: bb-ultimate-addon.php:164
 #. Translators: %s is the URL to deactivate one of the Ultimate Addon for
 #. Beaver Builder versions.
 msgid ""
@@ -203,126 +203,126 @@ msgid ""
 "one</a> before continuing."
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:119
+#: classes/class-uabb-admin-settings.php:127
 msgid ""
 "Hello! Thank you for choosing the Ultimate Addon for Beaver Builder to "
 "build this website!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:120
+#: classes/class-uabb-admin-settings.php:128
 msgid ""
 "Would you please mind sharing your views and give it a 5 star rating on the "
 "WordPress repository?"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:122
+#: classes/class-uabb-admin-settings.php:130
 msgid "Ok, you deserve it"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:124
+#: classes/class-uabb-admin-settings.php:132
 msgid "Nope, maybe later"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:125
+#: classes/class-uabb-admin-settings.php:133
 msgid "I already did"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:180
+#: classes/class-uabb-admin-settings.php:185
 msgid "Something went wrong!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:181
+#: classes/class-uabb-admin-settings.php:186
 msgid "Complete"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:182
+#: classes/class-uabb-admin-settings.php:187
 msgid "Refreshed!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:183
+#: classes/class-uabb-admin-settings.php:188
 msgid "Try Again!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:184
+#: classes/class-uabb-admin-settings.php:189
 msgid "Installed!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:185
+#: classes/class-uabb-admin-settings.php:190
 msgid "Remove"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:186
+#: classes/class-uabb-admin-settings.php:191
 msgid "Install"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:187
+#: classes/class-uabb-admin-settings.php:192
 msgid "Installed"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:188
+#: classes/class-uabb-admin-settings.php:193
 msgid "Removed!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:276
+#: classes/class-uabb-admin-settings.php:281
 msgid "Settings updated!"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:295
+#: classes/class-uabb-admin-settings.php:300
 msgid "Welcome"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:302
-#: classes/class-uabb-admin-settings.php:330
+#: classes/class-uabb-admin-settings.php:307
+#: classes/class-uabb-admin-settings.php:335
 #: includes/admin-settings-general.php:11
 #: modules/info-list/info-list-bb-2-2-compatibility.php:347
 #: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:405
 msgid "General Settings"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:309
+#: classes/class-uabb-admin-settings.php:314
 msgid "Modules"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:317
+#: classes/class-uabb-admin-settings.php:322
 #: includes/admin-settings-premium.php:25
 #: includes/admin-settings-template-cloud.php:11
 msgid "Template Cloud"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:324
+#: classes/class-uabb-admin-settings.php:329
 msgid "Font Icon Manager"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:336
+#: classes/class-uabb-admin-settings.php:341
 #: includes/admin-settings-premium.php:12
 msgid "Premium Features"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:541
+#: classes/class-uabb-admin-settings.php:553
 msgid "Ultimate Addons for Beaver Builder Lite"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:542
+#: classes/class-uabb-admin-settings.php:554
 msgid ""
 "How likely are you to recommend Ultimate Addons for Beaver Builder Lite to "
 "your friends or colleagues?"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:545
+#: classes/class-uabb-admin-settings.php:557
 msgid "Thanks a lot for your feedback! 😍"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:546
+#: classes/class-uabb-admin-settings.php:558
 msgid ""
 "Thanks for using Ultimate Addons! Got feedback or suggestions to make it "
 "even better? We’d love to hear from you."
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:550
+#: classes/class-uabb-admin-settings.php:562
 msgid "Thank you for your feedback"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:551
+#: classes/class-uabb-admin-settings.php:563
 msgid "We value your input. How can we improve your experience?"
 msgstr ""
 
@@ -330,7 +330,7 @@ msgstr ""
 msgid "Image Link"
 msgstr ""
 
-#: classes/class-uabb-cloud-templates.php:263
+#: classes/class-uabb-cloud-templates.php:262
 #: classes/class-uabb-iconfonts.php:45
 msgid "You are not authorized to perform this action."
 msgstr ""
@@ -362,10 +362,6 @@ msgstr ""
 msgid "Upgrade"
 msgstr ""
 
-#: classes/class-uabb-cloud-templates.php:456
-msgid "Templates are disabled from RestAPI."
-msgstr ""
-
 #: classes/class-uabb-global-settings.php:35
 msgid "UABB - Global Settings"
 msgstr ""
@@ -391,11 +387,11 @@ msgstr ""
 msgid "%s - Contact Support"
 msgstr ""
 
-#: classes/class-uabb-init.php:344
+#: classes/class-uabb-init.php:316
 msgid "plugin requires"
 msgstr ""
 
-#: classes/class-uabb-init.php:346
+#: classes/class-uabb-init.php:318
 msgid " plugin installed & activated."
 msgstr ""
 
@@ -514,7 +510,7 @@ msgstr ""
 msgid "Presets"
 msgstr ""
 
-#: classes/class-ui-panel.php:348 includes/admin-settings-template-cloud.php:41
+#: classes/class-ui-panel.php:348 includes/admin-settings-template-cloud.php:46
 msgid "Sections"
 msgstr ""
 
@@ -982,26 +978,28 @@ msgid ""
 "editor."
 msgstr ""
 
-#: includes/admin-settings-icons.php:15 includes/admin-settings-icons.php:28
+#: includes/admin-settings-icons.php:15 includes/admin-settings-icons.php:29
 msgid "Reload Icons"
 msgstr ""
 
-#: includes/admin-settings-icons.php:23
+#: includes/admin-settings-icons.php:24
+#. translators: %1$s and %2$s are the plugin name/prefix.
 msgid ""
 "Clicking the button below will reinstall %1$s icons on your website. If you "
 "are facing issues to load %2$s icons then you are at right place to "
 "troubleshoot it."
 msgstr ""
 
-#: includes/admin-settings-modules.php:16
+#: includes/admin-settings-modules.php:19
+#. translators: %s is the plugin name/prefix.
 msgid "%s Modules"
 msgstr ""
 
-#: includes/admin-settings-modules.php:27
+#: includes/admin-settings-modules.php:32
 msgid "Upgrade to Premium version to get these modules"
 msgstr ""
 
-#: includes/admin-settings-modules.php:27
+#: includes/admin-settings-modules.php:32
 msgid "Unlock All Modules"
 msgstr ""
 
@@ -1099,15 +1097,22 @@ msgstr ""
 msgid "Upgrade Today"
 msgstr ""
 
-#: includes/admin-settings-template-cloud.php:25
+#: includes/admin-settings-template-cloud.php:16
+#. translators: %s is the upgrade URL.
+msgid ""
+"<a href=\"%s\" target=\"_blank\">Go Premium</a> and get access to all Page "
+"Templates and Sections."
+msgstr ""
+
+#: includes/admin-settings-template-cloud.php:30
 msgid "Override network settings?"
 msgstr ""
 
-#: includes/admin-settings-template-cloud.php:40
+#: includes/admin-settings-template-cloud.php:45
 msgid "Page Templates"
 msgstr ""
 
-#: includes/admin-settings-template-cloud.php:46
+#: includes/admin-settings-template-cloud.php:51
 msgid "Refresh"
 msgstr ""
 
@@ -1124,7 +1129,8 @@ msgid ""
 "them with 200+ page & section templates and dedicated support from our team."
 msgstr ""
 
-#: includes/admin-settings-welcome.php:22
+#: includes/admin-settings-welcome.php:25
+#. translators: %s is the upgrade URL.
 msgid ""
 "For more time-saving features and access to our expert support team, <a "
 "href=\"%s\" target=\"_blank\">upgrade now!</a> With regular updates, "
@@ -1132,7 +1138,7 @@ msgid ""
 "for you!"
 msgstr ""
 
-#: includes/admin-settings-welcome.php:27
+#: includes/admin-settings-welcome.php:30
 msgid ""
 "The Ultimate Addon for Beaver Builder comes with a number of custom modules "
 "to enhance your experience of website creation with Beaver Builder. "
@@ -1141,18 +1147,20 @@ msgid ""
 "be used with the page builder."
 msgstr ""
 
-#: includes/admin-settings-welcome.php:31
+#: includes/admin-settings-welcome.php:37
+#. translators: %1$s is the blog URL, %2$s is the docs URL.
 msgid ""
 "With <a href=\"%1$s\" target=\"_blank\">regular updates</a>, <a "
 "href=\"%2$s\" target=\"_blank\">helpful tutorials</a>, we promise to make "
 "website building an ultimate journey for you!"
 msgstr ""
 
-#: includes/admin-settings-welcome.php:40
+#: includes/admin-settings-welcome.php:48
 msgid "Join our Community!"
 msgstr ""
 
-#: includes/admin-settings-welcome.php:41
+#: includes/admin-settings-welcome.php:52
+#. translators: %s is the Facebook community URL.
 msgid ""
 "Want to connect with us to know more? Or have some suggestions we can take "
 "forward? <a href=\"%s\" target=\"_blank\">Join our Facebook community</a>, "
@@ -4699,7 +4707,7 @@ msgstr ""
 msgid "http://www.brainstormforce.com"
 msgstr ""
 
-#: classes/class-uabb-admin-settings.php:252
+#: classes/class-uabb-admin-settings.php:257
 msgctxt "%s stands for custom branded \"UABB\" name."
 msgid "%s Settings"
 msgstr ""
