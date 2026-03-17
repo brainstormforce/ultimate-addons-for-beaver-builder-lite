@@ -41,6 +41,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 		public function __construct() {
 
 			register_activation_hook( __FILE__, array( $this, 'activation_reset' ) );
+			register_deactivation_hook( __FILE__, array( $this, 'deactivation_cleanup' ) );
 
 			// UABB Initialize.
 			require_once 'classes/class-uabb-init.php';
@@ -80,6 +81,19 @@ if ( ! class_exists( 'BB_Ultimate_Addon' ) ) {
 			// Force check graupi bundled products.
 			update_site_option( 'bsf_force_check_extensions', true );
 			update_option( 'uabb_lite_redirect', true );
+		}
+
+		/**
+		 * Clean up cron events on plugin deactivation.
+		 *
+		 * @since 1.6.8
+		 * @return void
+		 */
+		public function deactivation_cleanup() {
+			$timestamp = wp_next_scheduled( 'uabb_module_usage_cron' );
+			if ( $timestamp ) {
+				wp_unschedule_event( $timestamp, 'uabb_module_usage_cron' );
+			}
 		}
 
 		/**

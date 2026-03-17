@@ -80,39 +80,11 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'lib/astra-notices/class-astra-notices.php';
 
 		/*
-		* BSF Analytics Integration tracker.
+		* UABB Analytics with Module Usage Tracking.
 		*/
-		if ( ! class_exists( 'BSF_Analytics_Loader' ) ) {
-			require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics-loader.php';
-		
+		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-analytics.php';
+
 		add_action( 'admin_init', array( $this, 'uabb_lite_maybe_migrate_analytics_tracking' ) );
-
-		$bsf_analytics = \BSF_Analytics_Loader::get_instance();
-
-		$bsf_analytics->set_entity(
-			array(
-				'uabb' => array(
-					'product_name'        => 'Ultimate Addons for Beaver Builder Lite',
-					'path'                => BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics',
-					'author'              => 'Brainstorm Force',
-					'time_to_display'     => '+24 hours',
-						'deactivation_survey' => array( // UABB Lite Plugin deactivation survey key.
-							array(
-								'id'                => 'deactivation-survey-ultimate-addons-for-beaver-builder-lite', // 'deactivation-survey-<your-plugin-slug>'
-								'popup_logo'        => BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg',
-								'plugin_slug'       => 'ultimate-addons-for-beaver-builder-lite', // <your-plugin-slug>
-								'plugin_version'    => BB_ULTIMATE_ADDON_LITE_VERSION,
-								'popup_title'       => 'Quick Feedback',
-								'support_url'       => 'https://www.ultimatebeaver.com/contact/',
-								'popup_description' => 'If you have a moment, please share why you are deactivating Ultimate Addons for Beaver Builder Lite :',
-								'show_on_screens'   => array( 'plugins' ),
-							),
-						),
-						'hide_optin_checkbox' => true, // Hide the opt-in checkbox.
-					),
-				)
-			);
-		}
 		
 		add_action( 'init', function(){
 
