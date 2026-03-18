@@ -32,6 +32,7 @@
 
 ### API & Hooks
 - [AJAX Endpoints](AJAX-Endpoints)
+- [Abilities API](Abilities-API)
 
 ---
 

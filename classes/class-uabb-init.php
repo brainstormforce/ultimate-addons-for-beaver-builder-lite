@@ -113,6 +113,12 @@ class UABB_Init {
 
 		add_action( 'init', array( $this, 'init' ), 40 );
 
+		// Abilities API integration (WP 6.9+).
+		if ( function_exists( 'wp_register_ability' ) ) {
+			require_once BB_ULTIMATE_ADDON_DIR . 'abilities/class-uabb-abilities.php';
+			UABB_Abilities::init();
+		}
+
 		// Enqueue scripts.
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ), 100 );
 
