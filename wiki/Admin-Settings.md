@@ -90,7 +90,7 @@ Onboarding screen with upgrade CTA, Facebook group link (`BB_ULTIMATE_ADDON_FB_U
 
 ## Admin Notices
 
-`UABBBuilderAdminSettings::register_notices()` registers notices via the `Astra_Notices` library (loaded from `lib/astra-notices/`). Notices support:
+`UABBBuilderAdminSettings::register_notices()` registers notices via the `BSF_Admin_Notices` library (loaded from `lib/astra-notices/`). Notices support:
 - A `data-repeat-notice-after` attribute (supported by the `add_data_attributes` filter on `wp_kses_allowed_html`)
 - Dismissible and repeatable notice patterns
 

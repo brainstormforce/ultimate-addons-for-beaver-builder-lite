@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2103f39d6be70fd2084ae452a83602ab",
+    "content-hash": "20e7eb1b69eb3ca3d446db06b5fce875",
     "packages": [
         {
             "name": "brainstormforce/astra-notices",

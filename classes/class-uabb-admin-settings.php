@@ -97,7 +97,7 @@ final class UABBBuilderAdminSettings {
 
 		$image_path = BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg';
 
-		Astra_Notices::add_notice(
+		BSF_Admin_Notices::add_notice(
 			array(
 				'id'                         => 'uabb-admin-rating',
 				'type'                       => '',
