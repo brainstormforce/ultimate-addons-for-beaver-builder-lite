@@ -271,6 +271,15 @@ if ( ! class_exists( 'UABB_Analytics' ) ) {
 		/**
 		 * Callback function to add specific analytics data.
 		 *
+		 * Send cadence is ~24h but cron-produced data only refreshes weekly. A
+		 * refresh-date marker pair (`uabb_analytics_last_refresh_date` written by
+		 * the cron, `uabb_analytics_last_sent_refresh_date` written here) gates
+		 * `numeric_values` + `kpi_records` so they ship exactly once per cron
+		 * tick instead of being re-sent on every 24h send.
+		 *
+		 * One-time events (`events_record`) are independent — they flush on
+		 * every send and rely on the library's per-event-name dedup.
+		 *
 		 * @param array $stats_data Existing stats data.
 		 * @return array
 		 */
@@ -284,33 +293,41 @@ if ( ! class_exists( 'UABB_Analytics' ) ) {
 				'theme_name'             => self::get_theme_name(),
 			);
 
-			$fetch_uabb_data = $this->uabb_get_module_usage();
-
-			foreach ( $fetch_uabb_data as $key => $value ) {
-				$stats_data['plugin_data']['uabb']['numeric_values'][ $key ] = $value;
-			}
-
-			// Flush pending one-time events into the payload.
+			// One-time events: flush on every send; library handles dedup.
 			$events = self::events();
 			if ( null !== $events ) {
 				$stats_data['plugin_data']['uabb']['events_record'] = $events->flush_pending();
 			}
 
-			// Emit today's Daily KPI snapshot.
-			$stats_data['plugin_data']['uabb']['kpi_records'] = $this->get_kpi_tracking_data();
+			// Cron-produced data: only emit when the cron has produced a fresh
+			// snapshot since the last send.
+			$last_refresh      = (string) get_option( 'uabb_analytics_last_refresh_date', '' );
+			$last_sent_refresh = (string) get_option( 'uabb_analytics_last_sent_refresh_date', '' );
+
+			if ( '' !== $last_refresh && $last_refresh !== $last_sent_refresh ) {
+				$fetch_uabb_data = $this->uabb_get_module_usage();
+				foreach ( $fetch_uabb_data as $key => $value ) {
+					$stats_data['plugin_data']['uabb']['numeric_values'][ $key ] = $value;
+				}
+
+				$stats_data['plugin_data']['uabb']['kpi_records'] = $this->get_kpi_tracking_data();
+
+				update_option( 'uabb_analytics_last_sent_refresh_date', $last_refresh, false );
+			}
 
 			return $stats_data;
 		}
 
 		/**
-		 * Build the Daily KPI payload from the rolling snapshot buffer written by the
-		 * daily module-usage cron.
+		 * Build the KPI payload from the latest snapshot written by the weekly
+		 * module-usage cron.
 		 *
-		 * The cron owns all measurement — analytics only reshapes the stored snapshots
-		 * into the `kpi_records` wire format. Empty buffer (fresh install / opted out
-		 * before first cron tick) returns an empty array.
+		 * The cron stores exactly one record — the most recent week's calculation
+		 * — keyed by that cron-tick's date. Analytics reshapes it into the
+		 * `kpi_records` wire format. Empty (fresh install / opted out before first
+		 * cron tick) returns an empty array.
 		 *
-		 * Shape: `[ 'Y-m-d' => [ [ 'kpi_name' => ..., 'kpi_value' => (float) ... ], ... ] ]`.
+		 * Shape: `[ 'Y-m-d' => [ [ 'kpi_name' => ..., 'kpi_value' => (float) ... ] ] ]`.
 		 *
 		 * @since 1.6.8
 		 * @return array<string, array<int, array{kpi_name:string, kpi_value:float}>>

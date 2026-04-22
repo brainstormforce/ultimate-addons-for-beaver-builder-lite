@@ -570,8 +570,9 @@ public static function show_nps_notice() {
 	/**
 	 * Schedule the module usage cron event.
 	 *
-	 * Runs daily so the daily KPI snapshot stays current. If an older weekly
-	 * schedule is still active (from prior versions), migrate it to daily.
+	 * Runs weekly — one scan per week updates both the module-usage counts and the
+	 * KPI snapshot. If a different recurrence is scheduled (e.g. a prior `daily`
+	 * schedule from an interim build), migrate it to `weekly`.
 	 *
 	 * @since 1.6.8
 	 * @return void
@@ -579,7 +580,7 @@ public static function show_nps_notice() {
 	public static function schedule_usage_cron() {
 		$current_recurrence = wp_get_schedule( 'uabb_module_usage_cron' );
 
-		if ( 'daily' === $current_recurrence ) {
+		if ( 'weekly' === $current_recurrence ) {
 			return;
 		}
 
@@ -587,7 +588,7 @@ public static function show_nps_notice() {
 			self::unschedule_usage_cron();
 		}
 
-		wp_schedule_event( time(), 'daily', 'uabb_module_usage_cron' );
+		wp_schedule_event( time(), 'weekly', 'uabb_module_usage_cron' );
 	}
 
 	/**
@@ -604,10 +605,12 @@ public static function show_nps_notice() {
 	}
 
 	/**
-	 * Refresh the cached module usage counts and daily KPI snapshot.
+	 * Refresh the cached module usage counts and weekly KPI snapshot.
 	 *
-	 * Runs in a background cron context (daily) so analytics data stays current
-	 * without burdening admin-facing page loads.
+	 * Runs in a background cron context (weekly) so analytics data stays current
+	 * without burdening admin-facing page loads. One weekly scan updates both
+	 * `numeric_values` (via `uabblite_module_usage_data_option`) and the KPI
+	 * snapshot buffer (`uabb_kpi_daily_snapshots`).
 	 *
 	 * @since 1.6.7
 	 * @access public
@@ -627,16 +630,21 @@ public static function show_nps_notice() {
 
 		$filtered_module_usage = self::get_uabb_module_usage();
 
-		set_transient( $transient_key, $filtered_module_usage, DAY_IN_SECONDS );
+		set_transient( $transient_key, $filtered_module_usage, WEEK_IN_SECONDS );
 		update_option( 'uabblite_module_usage_data_option', $filtered_module_usage );
 		self::save_kpi_snapshot( $filtered_module_usage );
+
+		// Stamp the refresh date so analytics knows fresh cron data is available
+		// and emits it exactly once in the next stats send.
+		update_option( 'uabb_analytics_last_refresh_date', current_time( 'Y-m-d' ), false );
 	}
 
 	/**
-	 * Persist today's KPI snapshot alongside the module usage refresh.
+	 * Persist the latest KPI snapshot alongside the module usage refresh.
 	 *
-	 * Stores a rolling buffer of the last 3 days keyed by `Y-m-d` so analytics
-	 * can emit per-day records without recomputing on send.
+	 * Called once per weekly cron tick. Stores exactly one record — the most
+	 * recent week's calculation — keyed by the cron-tick date in `Y-m-d` form.
+	 * The send gate ensures this record ships exactly once per week.
 	 *
 	 * @since 1.6.8
 	 * @param array<string, int> $module_usage Filtered UABB module usage counts.
@@ -647,21 +655,14 @@ public static function show_nps_notice() {
 		$total = is_array( $module_usage ) ? array_sum( array_map( 'intval', $module_usage ) ) : 0;
 
 		$snapshot = array(
-			'numeric_values' => array(
-				'uabb_modules_in_use_total' => $total,
+			$today => array(
+				'numeric_values' => array(
+					'uabb_modules_in_use_total' => $total,
+				),
 			),
 		);
 
-		$snapshots = get_option( 'uabb_kpi_daily_snapshots', array() );
-		if ( ! is_array( $snapshots ) ) {
-			$snapshots = array();
-		}
-
-		$snapshots[ $today ] = $snapshot;
-		krsort( $snapshots );
-		$snapshots = array_slice( $snapshots, 0, 3, true );
-
-		update_option( 'uabb_kpi_daily_snapshots', $snapshots, false );
+		update_option( 'uabb_kpi_daily_snapshots', $snapshot, false );
 	}
 
 	/**
