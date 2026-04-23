@@ -22,7 +22,7 @@
 			<div class="uabb-form-setting">
 				<label>					
 					<input type="checkbox" name="uabb-analytics-enabled" value="1" <?php checked( $analytics_enabled, 'yes' ); ?> />
-					<?php esc_html_e( 'Collect non-sensitive information from your website, such as the PHP version and features used, to help us fix bugs faster, make smarter decisions, and build features that actually matter to you.', 'uabb' ); ?>
+					<?php esc_html_e( 'Help shape the future of Ultimate Addons for Beaver Builder. Share how you use the plugin so we can build features that matter, fix issues faster, and make smart desicions.', 'uabb' ); ?>
 					<a target="_blank" rel="noopener" href="https://store.brainstormforce.com/usage-tracking/?utm_source=wp_dashboard&utm_medium=general_settings&utm_campaign=usage_tracking"><?php esc_html_e( 'Learn More', 'uabb' ); ?></a>
 				</label>
 			</div>
