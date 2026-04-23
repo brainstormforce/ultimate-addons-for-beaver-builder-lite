@@ -2,11 +2,11 @@
 # This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.8\n"
+"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.9\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-"
 "lite\n"
-"POT-Creation-Date: 2026-03-17 06:39:20+00:00\n"
+"POT-Creation-Date: 2026-04-23 09:30:34+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,47 +26,47 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: admin/bsf-analytics/class-bsf-analytics.php:242
+#: admin/bsf-analytics/class-bsf-analytics.php:273
 #. translators: %s product name
 msgid ""
-"Help us improve %1$s and our other products!<br><br>With your permission, "
-"we'd like to collect <strong>non-sensitive information</strong> from your "
-"website — like your PHP version and which features you use — so we can fix "
-"bugs faster, make smarter decisions, and build features that actually "
-"matter to you. <em>No personal info. Ever.</em>"
+"<strong>Help shape the future of %1$s.</strong><br><br>Share how you use "
+"the plugin so we can build features that matter, fix issues faster, and "
+"make smarter decisions."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:248
+#: admin/bsf-analytics/class-bsf-analytics.php:279
 msgid "This will be applicable for all sites from the network."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:272
+#: admin/bsf-analytics/class-bsf-analytics.php:303
 #. translators: %s usage doc link
-msgid " Know More."
+msgid "Learn more."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:282
-msgid "Yes! Allow it"
+#: admin/bsf-analytics/class-bsf-analytics.php:313
+msgid "Happy to help!"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:293
-msgid "No Thanks"
+#: admin/bsf-analytics/class-bsf-analytics.php:324
+msgid "Skip"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:461
+#: admin/bsf-analytics/class-bsf-analytics.php:502
 msgid "Usage Tracking"
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:506
+#: admin/bsf-analytics/class-bsf-analytics.php:547
 #. translators: %s Product title
-msgid "Allow %s products to track non-sensitive usage tracking data."
+msgid ""
+"Help improve %s by sharing non-sensitive usage data — like PHP version and "
+"features used."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:509
+#: admin/bsf-analytics/class-bsf-analytics.php:550
 msgid " This will be applicable for all sites from the network."
 msgstr ""
 
-#: admin/bsf-analytics/class-bsf-analytics.php:514
+#: admin/bsf-analytics/class-bsf-analytics.php:555
 msgid "Learn More."
 msgstr ""
 
@@ -82,7 +82,7 @@ msgstr ""
 msgid "If you have a moment, please share why you are deactivating the plugin."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:112
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:105
 #: modules/advanced-icon/advanced-icon.php:324
 #: modules/advanced-icon/advanced-icon.php:339
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:14
@@ -121,65 +121,65 @@ msgstr ""
 msgid "Icon"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:139
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:314
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:132
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:307
 msgid "Please tell us more details."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:148
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:141
 #. translators: %1$s: link html start, %2$s: link html end
 msgid "Need help from our experts? %1$sClick here to contact us.%2$s"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:159
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:152
 msgid "Submit & Deactivate"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:160
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:153
 msgid "Skip & Deactivate"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:229
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:222
 msgid "Sorry, you are not allowed to do this operation."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:242
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:235
 msgid "Nonce validation failed"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:289
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:282
 msgid "This is a temporary deactivation for testing."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:290
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:283
 msgid "How can we assist you?"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:295
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:288
 msgid "The plugin isn't working properly."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:296
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:289
 msgid "Please tell us more about what went wrong?"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:301
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:294
 msgid "I found a better alternative plugin."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:302
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:295
 msgid "Could you please specify which plugin?"
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:307
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:300
 msgid "It's missing a specific feature."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:308
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:301
 msgid "Please tell us more about the feature."
 msgstr ""
 
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:313
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:306
 msgid "Other"
 msgstr ""
 
@@ -930,9 +930,9 @@ msgstr ""
 
 #: includes/admin-settings-analytics.php:25
 msgid ""
-"Collect non-sensitive information from your website, such as the PHP "
-"version and features used, to help us fix bugs faster, make smarter "
-"decisions, and build features that actually matter to you."
+"Help shape the future of Ultimate Addons for Beaver Builder. Share how you "
+"use the plugin so we can build features that matter, fix issues faster, and "
+"make smart desicions."
 msgstr ""
 
 #: includes/admin-settings-analytics.php:26
@@ -1187,20 +1187,21 @@ msgstr ""
 msgid "Note - You can enable, disable and manage %s sections here."
 msgstr ""
 
-#: lib/astra-notices/class-astra-notices.php:146
-msgid "WordPress Nonce not validated."
+#: lib/astra-notices/class-bsf-admin-notices.php:144
+msgid "Permission denied."
 msgstr ""
 
-#: lib/astra-notices/class-astra-notices.php:153
+#: lib/astra-notices/class-bsf-admin-notices.php:161
+#: lib/astra-notices/class-bsf-admin-notices.php:168
 msgid "Invalid notice ID."
 msgstr ""
 
-#: lib/nps-survey/classes/nps-survey-script.php:277
+#: lib/nps-survey/classes/nps-survey-script.php:333
 msgid "Sorry, you are not allowed to do that."
 msgstr ""
 
-#: lib/nps-survey/classes/nps-survey-script.php:331
-#: lib/nps-survey/classes/nps-survey-script.php:449
+#: lib/nps-survey/classes/nps-survey-script.php:387
+#: lib/nps-survey/classes/nps-survey-script.php:505
 msgid "Nonce verification failed."
 msgstr ""
 
@@ -4657,8 +4658,8 @@ msgstr ""
 msgid "Uncategorized"
 msgstr ""
 
-#: vendor/wp-cli/export-command/src/WP_Export_XML_Over_HTTP.php:20
-#: vendor/wp-cli/export-command/src/WP_Export_XML_Over_HTTP.php:25
+#: vendor/wp-cli/export-command/src/WP_Export_XML_Over_HTTP.php:31
+#: vendor/wp-cli/export-command/src/WP_Export_XML_Over_HTTP.php:36
 msgid "Export Error"
 msgstr ""
 
@@ -4670,7 +4671,7 @@ msgstr ""
 msgid "API error. Try Again."
 msgstr ""
 
-#: vendor/wp-cli/media-command/src/Media_Command.php:159
+#: vendor/wp-cli/media-command/src/Media_Command.php:168
 msgid "image"
 msgid_plural "images"
 msgstr[0] ""
