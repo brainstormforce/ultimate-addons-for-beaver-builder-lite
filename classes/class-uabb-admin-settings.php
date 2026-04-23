@@ -97,7 +97,7 @@ final class UABBBuilderAdminSettings {
 
 		$image_path = BB_ULTIMATE_ADDON_URL . 'assets/images/uabb_notice.svg';
 
-		Astra_Notices::add_notice(
+		BSF_Admin_Notices::add_notice(
 			array(
 				'id'                         => 'uabb-admin-rating',
 				'type'                       => '',
@@ -568,15 +568,27 @@ public static function show_nps_notice() {
 }
 
 	/**
-	 * Schedule the module usage cron event if not already scheduled.
+	 * Schedule the module usage cron event.
+	 *
+	 * Runs weekly — one scan per week updates both the module-usage counts and the
+	 * KPI snapshot. If a different recurrence is scheduled (e.g. a prior `daily`
+	 * schedule from an interim build), migrate it to `weekly`.
 	 *
 	 * @since 1.6.8
 	 * @return void
 	 */
 	public static function schedule_usage_cron() {
-		if ( ! wp_next_scheduled( 'uabb_module_usage_cron' ) ) {
-			wp_schedule_event( time(), 'weekly', 'uabb_module_usage_cron' );
+		$current_recurrence = wp_get_schedule( 'uabb_module_usage_cron' );
+
+		if ( 'weekly' === $current_recurrence ) {
+			return;
 		}
+
+		if ( false !== $current_recurrence ) {
+			self::unschedule_usage_cron();
+		}
+
+		wp_schedule_event( time(), 'weekly', 'uabb_module_usage_cron' );
 	}
 
 	/**
@@ -593,21 +605,64 @@ public static function show_nps_notice() {
 	}
 
 	/**
-	 * Handle AJAX request to get widgets usage data.
+	 * Refresh the cached module usage counts and weekly KPI snapshot.
+	 *
+	 * Runs in a background cron context (weekly) so analytics data stays current
+	 * without burdening admin-facing page loads. One weekly scan updates both
+	 * `numeric_values` (via `uabblite_module_usage_data_option`) and the KPI
+	 * snapshot buffer (`uabb_kpi_daily_snapshots`).
 	 *
 	 * @since 1.6.7
 	 * @access public
 	 */
 	public static function uabb_check_modules_data_usage() {
-		$transient_key = 'uabblite_module_usage_data';
-		$module_usage = get_transient( $transient_key );
+		$transient_key        = 'uabblite_module_usage_data';
+		$module_usage         = get_transient( $transient_key );
+		$needs_module_refresh = false === $module_usage || false === get_option( 'uabblite_module_usage_data_option' );
 
-		if ( false === $module_usage || false === get_option( 'uabblite_module_usage_data_option' ) ) {
-			$filtered_module_usage = self::get_uabb_module_usage();
+		$snapshots             = get_option( 'uabb_kpi_daily_snapshots', array() );
+		$today                 = current_time( 'Y-m-d' );
+		$needs_snapshot_update = ! is_array( $snapshots ) || ! isset( $snapshots[ $today ] );
 
-			set_transient( $transient_key, $filtered_module_usage, MONTH_IN_SECONDS );
-			update_option( 'uabblite_module_usage_data_option', $filtered_module_usage );
+		if ( ! $needs_module_refresh && ! $needs_snapshot_update ) {
+			return;
 		}
+
+		$filtered_module_usage = self::get_uabb_module_usage();
+
+		set_transient( $transient_key, $filtered_module_usage, WEEK_IN_SECONDS );
+		update_option( 'uabblite_module_usage_data_option', $filtered_module_usage );
+		self::save_kpi_snapshot( $filtered_module_usage );
+
+		// Stamp the refresh date so analytics knows fresh cron data is available
+		// and emits it exactly once in the next stats send.
+		update_option( 'uabb_analytics_last_refresh_date', current_time( 'Y-m-d' ), false );
+	}
+
+	/**
+	 * Persist the latest KPI snapshot alongside the module usage refresh.
+	 *
+	 * Called once per weekly cron tick. Stores exactly one record — the most
+	 * recent week's calculation — keyed by the cron-tick date in `Y-m-d` form.
+	 * The send gate ensures this record ships exactly once per week.
+	 *
+	 * @since 1.6.8
+	 * @param array<string, int> $module_usage Filtered UABB module usage counts.
+	 * @return void
+	 */
+	private static function save_kpi_snapshot( $module_usage ) {
+		$today = current_time( 'Y-m-d' );
+		$total = is_array( $module_usage ) ? array_sum( array_map( 'intval', $module_usage ) ) : 0;
+
+		$snapshot = array(
+			$today => array(
+				'numeric_values' => array(
+					'uabb_modules_in_use_total' => $total,
+				),
+			),
+		);
+
+		update_option( 'uabb_kpi_daily_snapshots', $snapshot, false );
 	}
 
 	/**

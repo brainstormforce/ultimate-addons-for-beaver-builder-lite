@@ -1549,11 +1549,11 @@ class BSF_Analytics {
 	}
 }
 /**
- * Astra_Notices
+ * BSF_Admin_Notices
  *
  * @since 1.0.0
  */
-class Astra_Notices {
+class BSF_Admin_Notices {
 
 	/**
 	 * Initiator

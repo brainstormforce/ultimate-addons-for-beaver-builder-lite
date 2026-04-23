@@ -77,7 +77,7 @@ class UABB_Init {
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-cloud-templates.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-admin-settings.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/class-uabb-admin-settings-multisite.php';
-		require_once BB_ULTIMATE_ADDON_DIR . 'lib/astra-notices/class-astra-notices.php';
+		require_once BB_ULTIMATE_ADDON_DIR . 'lib/astra-notices/class-bsf-admin-notices.php';
 
 		/*
 		* UABB Analytics with Module Usage Tracking.

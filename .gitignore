@@ -7,3 +7,4 @@ node_modules/
 package-lock.json
 vendor/
 .claude/settings.local.json
+.analytics-audit/
