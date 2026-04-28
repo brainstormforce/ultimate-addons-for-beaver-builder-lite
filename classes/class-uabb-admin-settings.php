@@ -765,10 +765,11 @@ public static function show_nps_notice() {
 				}
 			}
 
-			$scanned += count( $post_ids );
+			$batch_count = count( $post_ids );
+			$scanned    += $batch_count;
 			++$paged;
 
-		} while ( count( $post_ids ) === $per_page && $scanned < $post_cap );
+		} while ( $batch_count === $per_page && $scanned < $post_cap );
 
 		arsort( $uabb_modules_usage );
 
