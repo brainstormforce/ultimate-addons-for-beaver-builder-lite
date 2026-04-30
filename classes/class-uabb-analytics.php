@@ -271,14 +271,12 @@ if ( ! class_exists( 'UABB_Analytics' ) ) {
 		/**
 		 * Callback function to add specific analytics data.
 		 *
-		 * Send cadence is ~24h but cron-produced data only refreshes weekly. A
-		 * refresh-date marker pair (`uabb_analytics_last_refresh_date` written by
-		 * the cron, `uabb_analytics_last_sent_refresh_date` written here) gates
-		 * `numeric_values` + `kpi_records` so they ship exactly once per cron
-		 * tick instead of being re-sent on every 24h send.
-		 *
-		 * One-time events (`events_record`) are independent — they flush on
-		 * every send and rely on the library's per-event-name dedup.
+		 * `events_record` flushes on every send (library per-event-name dedup).
+		 * `numeric_values` + `kpi_records` ship on every send using whatever the
+		 * weekly cron last wrote — ClickHouse dedupes on `(date, kpi_name)`, so
+		 * re-shipping the same week's snapshot across 24h sends is a no-op
+		 * server-side while keeping KPI delivery resilient to transport failures
+		 * or missed sends without paying the weekly scan cost more than once.
 		 *
 		 * @param array $stats_data Existing stats data.
 		 * @return array
@@ -299,20 +297,16 @@ if ( ! class_exists( 'UABB_Analytics' ) ) {
 				$stats_data['plugin_data']['uabb']['events_record'] = $events->flush_pending();
 			}
 
-			// Cron-produced data: only emit when the cron has produced a fresh
-			// snapshot since the last send.
-			$last_refresh      = (string) get_option( 'uabb_analytics_last_refresh_date', '' );
-			$last_sent_refresh = (string) get_option( 'uabb_analytics_last_sent_refresh_date', '' );
-
-			if ( '' !== $last_refresh && $last_refresh !== $last_sent_refresh ) {
-				$fetch_uabb_data = $this->uabb_get_module_usage();
+			$fetch_uabb_data = $this->uabb_get_module_usage();
+			if ( ! empty( $fetch_uabb_data ) ) {
 				foreach ( $fetch_uabb_data as $key => $value ) {
 					$stats_data['plugin_data']['uabb']['numeric_values'][ $key ] = $value;
 				}
+			}
 
-				$stats_data['plugin_data']['uabb']['kpi_records'] = $this->get_kpi_tracking_data();
-
-				update_option( 'uabb_analytics_last_sent_refresh_date', $last_refresh, false );
+			$kpi_records = $this->get_kpi_tracking_data();
+			if ( ! empty( $kpi_records ) ) {
+				$stats_data['plugin_data']['uabb']['kpi_records'] = $kpi_records;
 			}
 
 			return $stats_data;

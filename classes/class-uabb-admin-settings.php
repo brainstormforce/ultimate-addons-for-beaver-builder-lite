@@ -574,11 +574,17 @@ public static function show_nps_notice() {
 	 * KPI snapshot. If a different recurrence is scheduled (e.g. a prior `daily`
 	 * schedule from an interim build), migrate it to `weekly`.
 	 *
+	 * On the first schedule for this site, the scan callback is invoked once
+	 * synchronously so the first snapshot exists immediately — otherwise a low
+	 * traffic site could wait days before WP-Cron picks up the first tick, and
+	 * the 24h stats send would ship with empty `kpi_records`.
+	 *
 	 * @since 1.6.8
 	 * @return void
 	 */
 	public static function schedule_usage_cron() {
 		$current_recurrence = wp_get_schedule( 'uabb_module_usage_cron' );
+		$needs_initial_run  = false === $current_recurrence && false === get_option( 'uabb_kpi_daily_snapshots', false );
 
 		if ( 'weekly' === $current_recurrence ) {
 			return;
@@ -589,6 +595,10 @@ public static function show_nps_notice() {
 		}
 
 		wp_schedule_event( time(), 'weekly', 'uabb_module_usage_cron' );
+
+		if ( $needs_initial_run ) {
+			self::uabb_check_modules_data_usage();
+		}
 	}
 
 	/**
@@ -633,18 +643,14 @@ public static function show_nps_notice() {
 		set_transient( $transient_key, $filtered_module_usage, WEEK_IN_SECONDS );
 		update_option( 'uabblite_module_usage_data_option', $filtered_module_usage );
 		self::save_kpi_snapshot( $filtered_module_usage );
-
-		// Stamp the refresh date so analytics knows fresh cron data is available
-		// and emits it exactly once in the next stats send.
-		update_option( 'uabb_analytics_last_refresh_date', current_time( 'Y-m-d' ), false );
 	}
 
 	/**
 	 * Persist the latest KPI snapshot alongside the module usage refresh.
 	 *
-	 * Called once per weekly cron tick. Stores exactly one record — the most
-	 * recent week's calculation — keyed by the cron-tick date in `Y-m-d` form.
-	 * The send gate ensures this record ships exactly once per week.
+	 * Keyed by the cron-tick date in `Y-m-d` form. The last 3 entries are kept
+	 * so a missed stats send self-heals on the next successful send — ClickHouse
+	 * dedupes on `(date, kpi_name)` so re-shipping older snapshots is a no-op.
 	 *
 	 * @since 1.6.8
 	 * @param array<string, int> $module_usage Filtered UABB module usage counts.
@@ -654,23 +660,33 @@ public static function show_nps_notice() {
 		$today = current_time( 'Y-m-d' );
 		$total = is_array( $module_usage ) ? array_sum( array_map( 'intval', $module_usage ) ) : 0;
 
-		$snapshot = array(
-			$today => array(
-				'numeric_values' => array(
-					'uabb_modules_in_use_total' => $total,
-				),
+		$snapshots = get_option( 'uabb_kpi_daily_snapshots', array() );
+		if ( ! is_array( $snapshots ) ) {
+			$snapshots = array();
+		}
+
+		$snapshots[ $today ] = array(
+			'numeric_values' => array(
+				'uabb_modules_in_use_total' => $total,
 			),
 		);
 
-		update_option( 'uabb_kpi_daily_snapshots', $snapshot, false );
+		// Keep the three most recent snapshots — buffer for missed sends.
+		krsort( $snapshots );
+		$snapshots = array_slice( $snapshots, 0, 3, true );
+
+		update_option( 'uabb_kpi_daily_snapshots', $snapshots, false );
 	}
 
 	/**
 	 * Get UABB module usage statistics.
 	 *
+	 * Paginated ID-only scan capped at a configurable post count — prevents runaway
+	 * memory use on sites with tens of thousands of BB-enabled posts.
+	 *
 	 * @since 1.6.7
 	 * @access public
-	 * @return array
+	 * @return array<string, int>
 	 */
 	public static function get_uabb_module_usage() {
 
@@ -680,21 +696,47 @@ public static function show_nps_notice() {
 
 		$uabb_modules_usage = array();
 
-		$args = array(
-			'post_type'      => FLBuilderModel::get_post_types(),
-			'post_status'    => 'publish',
-			'meta_key'       => '_fl_builder_enabled',
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
-			'meta_value'     => '1',
-			'posts_per_page' => -1,
-		);
+		/**
+		 * Cap on how many BB-enabled posts the module-usage scan will walk.
+		 * Prevents runaway memory use on sites with tens of thousands of posts.
+		 *
+		 * @since 1.6.9
+		 * @param int $cap Maximum posts to scan in a single cron tick.
+		 */
+		$post_cap = (int) apply_filters( 'uabb_lite_module_usage_post_cap', 5000 );
+		if ( $post_cap < 1 ) {
+			$post_cap = 5000;
+		}
 
-		$query = new WP_Query( $args );
+		$per_page = min( 500, $post_cap );
+		$scanned  = 0;
+		$paged    = 1;
 
-		if ( ! empty( $query->posts ) ) {
-			foreach ( $query->posts as $post ) {
+		do {
+			$args = array(
+				'post_type'              => FLBuilderModel::get_post_types(),
+				'post_status'            => 'publish',
+				'meta_key'               => '_fl_builder_enabled',
+				// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+				'meta_value'             => '1',
+				'posts_per_page'         => $per_page,
+				'paged'                  => $paged,
+				'fields'                 => 'ids',
+				'no_found_rows'          => true,
+				'update_post_meta_cache' => false,
+				'update_post_term_cache' => false,
+			);
 
-				$meta = get_post_meta( $post->ID, '_fl_builder_data', true );
+			$query    = new WP_Query( $args );
+			$post_ids = isset( $query->posts ) ? $query->posts : array();
+
+			if ( empty( $post_ids ) ) {
+				break;
+			}
+
+			foreach ( $post_ids as $post_id ) {
+
+				$meta = get_post_meta( (int) $post_id, '_fl_builder_data', true );
 
 				if ( ! is_array( $meta ) && ! is_object( $meta ) ) {
 					continue;
@@ -722,7 +764,12 @@ public static function show_nps_notice() {
 					}
 				}
 			}
-		}
+
+			$batch_count = count( $post_ids );
+			$scanned    += $batch_count;
+			++$paged;
+
+		} while ( $batch_count === $per_page && $scanned < $post_cap );
 
 		arsort( $uabb_modules_usage );
 
