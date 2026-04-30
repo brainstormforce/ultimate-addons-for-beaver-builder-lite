@@ -35,6 +35,6 @@
     "i18n:gptpo:de": "gpt-po translate --po languages/uabb-de_DE.po --lang de --verbose"
   },
   "dependencies": {
-    "@wordpress/scripts": "^1.0.0"
+    "@wordpress/scripts": "^32.1.0"
   }
 }
