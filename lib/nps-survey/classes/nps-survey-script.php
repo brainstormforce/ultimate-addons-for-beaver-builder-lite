@@ -104,26 +104,6 @@ class Nps_Survey {
 	}
 
 	/**
-	 * Generate and return the Google fonts url.
-	 *
-	 * @since 1.0.2
-	 * @return string
-	 */
-	public static function google_fonts_url() {
-
-		$font_families = array(
-			'Figtree:400,500,600,700',
-		);
-
-		$query_args = array(
-			'family' => rawurlencode( implode( '|', $font_families ) ),
-			'subset' => rawurlencode( 'latin,latin-ext' ),
-		);
-
-		return add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-	}
-
-	/**
 	 * Load script.
 	 *
 	 * @param array<string> $show_on_screens An array of screen IDs where the scripts should be loaded.
@@ -187,7 +167,7 @@ class Nps_Survey {
 
 		wp_enqueue_style( 'nps-survey-style', $build_url . '/style-main.css', array(), NPS_SURVEY_VER );
 		wp_style_add_data( 'nps-survey-style', 'rtl', 'replace' );
-		wp_enqueue_style( 'nps-survey-google-fonts', self::google_fonts_url(), array(), 'all' );
+		wp_enqueue_style( 'nps-survey-fonts', NPS_SURVEY_URL . 'assets/fonts/figtree.css', array(), NPS_SURVEY_VER );
 	}
 
 	/**
