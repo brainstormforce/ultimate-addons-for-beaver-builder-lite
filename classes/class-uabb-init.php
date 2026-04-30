@@ -128,11 +128,11 @@ class UABB_Init {
 	 * Precedence (most → least specific):
 	 *   1. `uabb_usage_optin` already set ('yes' or 'no')      → preserved as-is.
 	 *   2. Legacy `bsf_usage_optin` set ('yes' or 'no')        → migrated to the new key.
-	 *   3. Genuinely fresh site (neither key set anywhere)     → default to 'yes'.
+	 *   3. Genuinely fresh site (neither key set anywhere)     → left unset.
 	 *
-	 * Backward compatibility: a user who has explicitly opted out — either via the
-	 * current notice or the legacy key — stays opted out. Only sites that have never
-	 * recorded a choice receive the default-on behaviour.
+	 * Fresh sites stay opted out by default — the BSF Analytics library treats
+	 * an absent / false opt-in as "no telemetry" and shows its own opt-in
+	 * notice so the user makes the choice explicitly.
 	 *
 	 * @since x.x.x
 	 * @access public
@@ -156,13 +156,6 @@ class UABB_Init {
 			if ( false !== $time ) {
 				update_option( 'uabb_usage_installed_time', $time );
 			}
-			return;
-		}
-
-		// Fresh site with no recorded choice — default to opted-in.
-		update_option( 'uabb_usage_optin', 'yes' );
-		if ( false === get_option( 'uabb_usage_installed_time', false ) ) {
-			update_option( 'uabb_usage_installed_time', time() );
 		}
 	}
 
