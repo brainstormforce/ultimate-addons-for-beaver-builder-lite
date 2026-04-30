@@ -123,11 +123,16 @@ class UABB_Init {
 	}
 
 	/**
-	 * Migrates analytics tracking option from 'bsf_analytics_optin' to 'uabb_usage_optin'.
+	 * Resolve the analytics tracking opt-in state.
 	 *
-	 * Checks if the old analytics tracking option ('bsf_analytics_optin') is set to 'yes'
-	 * and if the new option ('uabb_usage_optin') is not already set.
-	 * If so, updates the new tracking option to 'yes' to maintain user consent during migration.
+	 * Precedence (most → least specific):
+	 *   1. `uabb_usage_optin` already set ('yes' or 'no')      → preserved as-is.
+	 *   2. Legacy `bsf_usage_optin` set ('yes' or 'no')        → migrated to the new key.
+	 *   3. Genuinely fresh site (neither key set anywhere)     → left unset.
+	 *
+	 * Fresh sites stay opted out by default — the BSF Analytics library treats
+	 * an absent / false opt-in as "no telemetry" and shows its own opt-in
+	 * notice so the user makes the choice explicitly.
 	 *
 	 * @since x.x.x
 	 * @access public
@@ -135,12 +140,22 @@ class UABB_Init {
 	 * @return void
 	 */
 	public function uabb_lite_maybe_migrate_analytics_tracking() {
-		$old_tracking = get_option( 'bsf_usage_optin', false );
 		$new_tracking = get_option( 'uabb_usage_optin', false );
-		if ( 'yes' === $old_tracking && false === $new_tracking ) {
-			update_option( 'uabb_usage_optin', 'yes' );
+
+		// Already an explicit choice on the new key — preserve it.
+		if ( false !== $new_tracking ) {
+			return;
+		}
+
+		$old_tracking = get_option( 'bsf_usage_optin', false );
+
+		// Migrate explicit legacy choice (yes or no) onto the new key.
+		if ( 'yes' === $old_tracking || 'no' === $old_tracking ) {
+			update_option( 'uabb_usage_optin', $old_tracking );
 			$time = get_option( 'bsf_usage_installed_time' );
-			update_option( 'uabb_usage_installed_time', $time );
+			if ( false !== $time ) {
+				update_option( 'uabb_usage_installed_time', $time );
+			}
 		}
 	}
 

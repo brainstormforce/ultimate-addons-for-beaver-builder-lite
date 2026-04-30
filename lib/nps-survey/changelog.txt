@@ -1,3 +1,6 @@
+Version 1.0.22 - 27-04-2026
+- Fix: Self-host the Figtree font used by the survey dialog instead of fetching from fonts.googleapis.com. Required for WordPress.org compliance.
+
 Version 1.0.21 - 24-03-2026
 - Improvement:
   - Updated build process to add ABSPATH guards to generated .asset.php files.
