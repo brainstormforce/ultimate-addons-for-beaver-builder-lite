@@ -2,11 +2,11 @@
 # This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.9\n"
+"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.10\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-"
 "lite\n"
-"POT-Creation-Date: 2026-04-23 09:30:34+00:00\n"
+"POT-Creation-Date: 2026-04-30 06:08:40+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -387,11 +387,11 @@ msgstr ""
 msgid "%s - Contact Support"
 msgstr ""
 
-#: classes/class-uabb-init.php:316
+#: classes/class-uabb-init.php:338
 msgid "plugin requires"
 msgstr ""
 
-#: classes/class-uabb-init.php:318
+#: classes/class-uabb-init.php:340
 msgid " plugin installed & activated."
 msgstr ""
 
@@ -1196,12 +1196,12 @@ msgstr ""
 msgid "Invalid notice ID."
 msgstr ""
 
-#: lib/nps-survey/classes/nps-survey-script.php:333
+#: lib/nps-survey/classes/nps-survey-script.php:313
 msgid "Sorry, you are not allowed to do that."
 msgstr ""
 
-#: lib/nps-survey/classes/nps-survey-script.php:387
-#: lib/nps-survey/classes/nps-survey-script.php:505
+#: lib/nps-survey/classes/nps-survey-script.php:367
+#: lib/nps-survey/classes/nps-survey-script.php:485
 msgid "Nonce verification failed."
 msgstr ""
 
