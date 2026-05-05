@@ -16,6 +16,7 @@ Ultimate Addons for Beaver Builder (UABB) Lite is a free WordPress plugin that e
 | Configure admin settings | [Admin Settings](Admin-Settings) |
 | Set up global styling | [Global Settings](Global-Settings) |
 | Use template cloud | [Cloud Templates](Cloud-Templates) |
+| Integrate with AI / MCP | [Abilities API](Abilities-API) |
 | Set up a dev environment | [Environment Configuration](Environment-Configuration) |
 | Contribute code | [Contributing Guide](Contributing-Guide) |
 | Deploy a release | [Deployment Guide](Deployment-Guide) |
@@ -80,6 +81,7 @@ plugins_loaded
 - [Contributing Guide](Contributing-Guide) — branching, code standards, adding modules
 - [Deployment Guide](Deployment-Guide) — GitHub Actions, WordPress.org SVN, release process
 - [AJAX Endpoints](AJAX-Endpoints) — all AJAX hooks documented
+- [Abilities API](Abilities-API) — WordPress Abilities for AI/MCP integration
 - [Plugin Constants & Globals](Plugin-Constants-and-Globals) — all `define()` constants, DB option keys
 
 ---
