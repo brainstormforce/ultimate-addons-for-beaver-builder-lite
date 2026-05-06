@@ -134,8 +134,28 @@ if ( ! class_exists( 'UABB_Analytics' ) ) {
 					'days_since_install'    => self::days_since_install(),
 					'beaver_builder_active' => defined( 'FL_BUILDER_VERSION' ),
 					'is_multisite'          => is_multisite(),
+					'source'                => self::get_install_source( 'ultimate-addons-for-beaver-builder-lite' ),
 				)
 			);
+		}
+
+		/**
+		 * Resolve the install source for the activation event.
+		 *
+		 * Reads the BSF UTM referer table written by other BSF products that installed
+		 * us via TGM/PluginActivator. Returns the referer slug (e.g. `astra`,
+		 * `cartflows`) when present, or `direct` when the user installed us directly.
+		 *
+		 * @since 1.6.9
+		 * @param string $product_slug This product's slug as recorded in `bsf_product_referers`.
+		 * @return string
+		 */
+		private static function get_install_source( $product_slug ) {
+			$referers = get_option( 'bsf_product_referers', array() );
+			if ( ! is_array( $referers ) || empty( $referers[ $product_slug ] ) ) {
+				return 'direct';
+			}
+			return (string) $referers[ $product_slug ];
 		}
 
 		/**
@@ -316,15 +336,15 @@ if ( ! class_exists( 'UABB_Analytics' ) ) {
 		 * Build the KPI payload from the latest snapshot written by the weekly
 		 * module-usage cron.
 		 *
-		 * The cron stores exactly one record — the most recent week's calculation
-		 * — keyed by that cron-tick's date. Analytics reshapes it into the
-		 * `kpi_records` wire format. Empty (fresh install / opted out before first
-		 * cron tick) returns an empty array.
+		 * The writer (`save_kpi_snapshot()`) already persists each day in the BSF
+		 * analytics ingestion contract shape, so the reader returns it verbatim.
+		 * Empty (fresh install / opted out before first cron tick) returns an
+		 * empty array.
 		 *
-		 * Shape: `[ 'Y-m-d' => [ [ 'kpi_name' => ..., 'kpi_value' => (float) ... ] ] ]`.
+		 * Shape: `[ 'Y-m-d' => [ 'numeric_values' => [ kpi_name => kpi_value ] ] ]`.
 		 *
 		 * @since 1.6.8
-		 * @return array<string, array<int, array{kpi_name:string, kpi_value:float}>>
+		 * @return array<string, array{numeric_values: array<string, int|float>}>
 		 */
 		private function get_kpi_tracking_data() {
 			$snapshots = get_option( 'uabb_kpi_daily_snapshots', array() );
@@ -337,18 +357,7 @@ if ( ! class_exists( 'UABB_Analytics' ) ) {
 				if ( ! is_array( $snapshot ) || empty( $snapshot['numeric_values'] ) ) {
 					continue;
 				}
-
-				$day_records = array();
-				foreach ( (array) $snapshot['numeric_values'] as $kpi_name => $kpi_value ) {
-					$day_records[] = array(
-						'kpi_name'  => (string) $kpi_name,
-						'kpi_value' => (float) $kpi_value,
-					);
-				}
-
-				if ( ! empty( $day_records ) ) {
-					$records[ (string) $date ] = $day_records;
-				}
+				$records[ (string) $date ] = $snapshot;
 			}
 
 			return $records;
