@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: gpt-po v1.2.0\n"
+"Last-Translator: gpt-po v1.2.3\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -36,123 +36,95 @@ msgstr "Brainstorm Force"
 msgid "http://www.brainstormforce.com"
 msgstr "http://www.brainstormforce.com"
 
-#. translators: %s product name
-#: admin/bsf-analytics/class-bsf-analytics.php:185
-msgid "Want to help make <strong>%1s</strong> even more awesome? Allow us to collect non-sensitive diagnostic data and usage information. "
-msgstr "Vous souhaitez aider à rendre <strong>%1s</strong> encore plus génial ? Permettez-nous de collecter des données de diagnostic non sensibles et des informations d'utilisation."
-
-#: admin/bsf-analytics/class-bsf-analytics.php:188
+#: admin/bsf-analytics/class-bsf-analytics.php:279
 msgid "This will be applicable for all sites from the network."
 msgstr "Cela sera applicable à tous les sites du réseau."
 
-#. translators: %s usage doc link
-#: admin/bsf-analytics/class-bsf-analytics.php:212
-msgid " Know More."
-msgstr "En savoir plus."
-
-#: admin/bsf-analytics/class-bsf-analytics.php:219
-msgid "Yes! Allow it"
-msgstr "Oui ! Autoriser"
-
-#: admin/bsf-analytics/class-bsf-analytics.php:227
-msgid "No Thanks"
-msgstr "Non merci"
-
-#: admin/bsf-analytics/class-bsf-analytics.php:300
-msgid "Every two days"
-msgstr "Tous les deux jours"
-
-#: admin/bsf-analytics/class-bsf-analytics.php:358
+#: admin/bsf-analytics/class-bsf-analytics.php:502
 msgid "Usage Tracking"
 msgstr "Suivi d'utilisation"
 
-#: admin/bsf-analytics/class-bsf-analytics.php:392
-msgid "Allow Brainstorm Force products to track non-sensitive usage tracking data."
-msgstr "Autoriser les produits Brainstorm Force à suivre des données de suivi d'utilisation non sensibles."
-
-#: admin/bsf-analytics/class-bsf-analytics.php:395
+#: admin/bsf-analytics/class-bsf-analytics.php:550
 msgid " This will be applicable for all sites from the network."
 msgstr "Cela sera applicable à tous les sites du réseau."
 
-#: admin/bsf-analytics/class-bsf-analytics.php:400
+#: admin/bsf-analytics/class-bsf-analytics.php:555
 msgid "Learn More."
 msgstr "En savoir plus."
 
-#: bb-ultimate-addon.php:60
-msgid "Unfortunately, plugin could not be activated as the memory allocated by your host has almost exhausted. UABB plugin recommends that your site should have 15M PHP memory remaining. <br/><br/>Please check <a target=\"_blank\" href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">this</a> article for solution or contact <a target=\"_blank\" href=\"http://store.brainstormforce.com/support\">support</a>.<br/><br/><a class=\"button button-primary\" href=\"%s\">Return to Plugins Page</a>"
-msgstr "Malheureusement, le plugin n'a pas pu être activé car la mémoire allouée par votre hébergeur est presque épuisée. Le plugin UABB recommande que votre site dispose de 15 Mo de mémoire PHP restante. <br/><br/>Veuillez consulter <a target=\"_blank\" href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">cet</a> article pour une solution ou contacter <a target=\"_blank\" href=\"http://store.brainstormforce.com/support\">le support</a>.<br/><br/><a class=\"button button-primary\" href=\"%s\">Retour à la page des plugins</a>"
-
 #. Translators: %s is the URL to deactivate one of the Ultimate Addon for Beaver Builder versions.
-#: bb-ultimate-addon.php:138
+#: bb-ultimate-addon.php:164
+#, php-format
 msgid "You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='%s'>deactivate one</a> before continuing."
 msgstr "Vous avez actuellement deux versions de <strong>Ultimate Addon pour Beaver Builder</strong> actives sur ce site. Veuillez <a href='%s'>désactiver l'une d'elles</a> avant de continuer."
 
-#: classes/class-uabb-admin-settings.php:179
+#: classes/class-uabb-admin-settings.php:185
 msgid "Something went wrong!"
 msgstr "Quelque chose a mal tourné !"
 
-#: classes/class-uabb-admin-settings.php:180
+#: classes/class-uabb-admin-settings.php:186
 msgid "Complete"
 msgstr "Complété"
 
-#: classes/class-uabb-admin-settings.php:181
+#: classes/class-uabb-admin-settings.php:187
 msgid "Refreshed!"
 msgstr "Rafraîchi !"
 
-#: classes/class-uabb-admin-settings.php:182
+#: classes/class-uabb-admin-settings.php:188
 msgid "Try Again!"
 msgstr "Réessayer !"
 
-#: classes/class-uabb-admin-settings.php:183
+#: classes/class-uabb-admin-settings.php:189
 msgid "Installed!"
 msgstr "Installé !"
 
-#: classes/class-uabb-admin-settings.php:184
+#: classes/class-uabb-admin-settings.php:190
 msgid "Remove"
 msgstr "Supprimer"
 
-#: classes/class-uabb-admin-settings.php:185
+#: classes/class-uabb-admin-settings.php:191
 msgid "Install"
 msgstr "Installer"
 
-#: classes/class-uabb-admin-settings.php:186
+#: classes/class-uabb-admin-settings.php:192
 msgid "Installed"
 msgstr "Installé"
 
-#: classes/class-uabb-admin-settings.php:187
+#: classes/class-uabb-admin-settings.php:193
 msgid "Removed!"
 msgstr "Supprimé !"
 
-#: classes/class-uabb-admin-settings.php:275
+#: classes/class-uabb-admin-settings.php:281
 msgid "Settings updated!"
 msgstr "Paramètres mis à jour !"
 
-#: classes/class-uabb-admin-settings.php:294
+#: classes/class-uabb-admin-settings.php:300
 msgid "Welcome"
 msgstr "Bienvenue"
 
-#: classes/class-uabb-admin-settings.php:301
+#: classes/class-uabb-admin-settings.php:307
+#: classes/class-uabb-admin-settings.php:335
 #: includes/admin-settings-general.php:11
 #: modules/info-list/info-list-bb-2-2-compatibility.php:347
 #: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:405
 msgid "General Settings"
 msgstr "Paramètres généraux"
 
-#: classes/class-uabb-admin-settings.php:308
+#: classes/class-uabb-admin-settings.php:314
 msgid "Modules"
 msgstr "Modules"
 
-#: classes/class-uabb-admin-settings.php:316
+#: classes/class-uabb-admin-settings.php:322
 #: includes/admin-settings-premium.php:25
 #: includes/admin-settings-template-cloud.php:11
 msgid "Template Cloud"
 msgstr "Template Cloud"
 
-#: classes/class-uabb-admin-settings.php:323
+#: classes/class-uabb-admin-settings.php:329
 msgid "Font Icon Manager"
 msgstr "Gestionnaire d'icônes de police"
 
-#: classes/class-uabb-admin-settings.php:329
+#: classes/class-uabb-admin-settings.php:341
 #: includes/admin-settings-premium.php:12
 msgid "Premium Features"
 msgstr "Fonctionnalités Premium"
@@ -161,16 +133,18 @@ msgstr "Fonctionnalités Premium"
 msgid "Image Link"
 msgstr "Lien d'image"
 
-#: classes/class-uabb-cloud-templates.php:263
+#: classes/class-uabb-cloud-templates.php:262
 #: classes/class-uabb-iconfonts.php:45
 msgid "You are not authorized to perform this action."
 msgstr "Vous n'êtes pas autorisé à effectuer cette action."
 
 #: classes/class-uabb-cloud-templates.php:320
+#, php-format
 msgid "Welcome to %s Template Cloud!"
 msgstr "Bienvenue dans %s Template Cloud !"
 
 #: classes/class-uabb-cloud-templates.php:321
+#, php-format
 msgid "%s Template Cloud would allow you to browse through our growing library of 150+ professionally designed templates and download the only ones that you need."
 msgstr "%s Template Cloud vous permet de parcourir notre bibliothèque croissante de plus de 150 modèles conçus professionnellement et de télécharger uniquement ceux dont vous avez besoin."
 
@@ -190,10 +164,6 @@ msgstr "Aperçu"
 msgid "Upgrade"
 msgstr "Mettre à niveau"
 
-#: classes/class-uabb-cloud-templates.php:456
-msgid "Templates are disabled from RestAPI."
-msgstr "Les modèles sont désactivés depuis RestAPI."
-
 #: classes/class-uabb-global-settings.php:35
 msgid "UABB - Global Settings"
 msgstr "UABB - Paramètres globaux"
@@ -208,35 +178,31 @@ msgstr "UABB - Contacter le support"
 
 #: classes/class-uabb-global-settings.php:40
 #: classes/uabb-global-settings-form.php:18
+#, php-format
 msgid "%s - Global Settings"
 msgstr "%s - Paramètres globaux"
 
 #: classes/class-uabb-global-settings.php:45
+#, php-format
 msgid "%s - Knowledge Base"
 msgstr "%s - Base de connaissances"
 
 #: classes/class-uabb-global-settings.php:50
+#, php-format
 msgid "%s - Contact Support"
 msgstr "%s - Contacter le support"
 
-#: classes/class-uabb-helper.php:42
-msgid "Basic"
-msgstr "De base"
-
-#: classes/class-uabb-helper.php:44
-msgid "UABB Modules"
-msgstr "Modules UABB"
-
-#: classes/class-uabb-helper.php:53
-#: includes/admin-settings-modules.php:16
+#. translators: %s is the plugin name/prefix.
+#: includes/admin-settings-modules.php:19
+#, php-format
 msgid "%s Modules"
 msgstr "%s Modules"
 
-#: classes/class-uabb-init.php:255
+#: classes/class-uabb-init.php:331
 msgid "plugin requires"
 msgstr "le plugin nécessite"
 
-#: classes/class-uabb-init.php:257
+#: classes/class-uabb-init.php:333
 msgid " plugin installed & activated."
 msgstr "le plugin installé et activé."
 
@@ -362,7 +328,7 @@ msgid "Presets"
 msgstr "Préréglages"
 
 #: classes/class-ui-panel.php:348
-#: includes/admin-settings-template-cloud.php:41
+#: includes/admin-settings-template-cloud.php:46
 msgid "Sections"
 msgstr "Sections"
 
@@ -819,24 +785,27 @@ msgstr "Activer l'aperçu en direct"
 msgid "Enable this setting to see live preview of a page without leaving the editor."
 msgstr "Activez ce paramètre pour voir un aperçu en direct d'une page sans quitter l'éditeur."
 
+#: includes/admin-settings-analytics.php:32
 #: includes/admin-settings-general.php:63
 msgid "Save Settings"
 msgstr "Enregistrer les paramètres"
 
 #: includes/admin-settings-icons.php:15
-#: includes/admin-settings-icons.php:28
+#: includes/admin-settings-icons.php:29
 msgid "Reload Icons"
 msgstr "Recharger les icônes"
 
-#: includes/admin-settings-icons.php:23
+#. translators: %1$s and %2$s are the plugin name/prefix.
+#: includes/admin-settings-icons.php:24
+#, php-format
 msgid "Clicking the button below will reinstall %1$s icons on your website. If you are facing issues to load %2$s icons then you are at right place to troubleshoot it."
 msgstr "Cliquer sur le bouton ci-dessous réinstallera les icônes %1$s sur votre site web. Si vous rencontrez des problèmes pour charger les icônes %2$s, vous êtes au bon endroit pour le dépannage."
 
-#: includes/admin-settings-modules.php:26
+#: includes/admin-settings-modules.php:32
 msgid "Upgrade to Premium version to get these modules"
 msgstr "Mettez à niveau vers la version Premium pour obtenir ces modules"
 
-#: includes/admin-settings-modules.php:26
+#: includes/admin-settings-modules.php:32
 msgid "Unlock All Modules"
 msgstr "Déverrouiller tous les modules"
 
@@ -916,19 +885,15 @@ msgstr "Au cours de ces nombreuses années, nous avons livré plusieurs produits
 msgid "Upgrade Today"
 msgstr "Mettez à niveau aujourd'hui"
 
-#: includes/admin-settings-template-cloud.php:13
-msgid "<a href=\""
-msgstr "<a href=\""
-
-#: includes/admin-settings-template-cloud.php:25
+#: includes/admin-settings-template-cloud.php:30
 msgid "Override network settings?"
 msgstr "Remplacer les paramètres du réseau ?"
 
-#: includes/admin-settings-template-cloud.php:40
+#: includes/admin-settings-template-cloud.php:45
 msgid "Page Templates"
 msgstr "Modèles de page"
 
-#: includes/admin-settings-template-cloud.php:46
+#: includes/admin-settings-template-cloud.php:51
 msgid "Refresh"
 msgstr "Rafraîchir"
 
@@ -940,27 +905,34 @@ msgstr "Bienvenue dans l'Ultimate Addon pour Beaver Builder !"
 msgid "Thank you for choosing the Ultimate Addons for Beaver Builder and welcome on board! We promise to take you through an ultimate journey of website building. You’ll find a few settings in the column on the left. Need some more time-saving and advanced modules to play with? You can avail all of them with 200+ page & section templates and dedicated support from our team."
 msgstr "Merci d'avoir choisi les Ultimate Addons pour Beaver Builder et bienvenue à bord ! Nous promettons de vous accompagner dans un voyage ultime de création de sites Web. Vous trouverez quelques paramètres dans la colonne de gauche. Besoin de modules plus avancés et économisant du temps à explorer ? Vous pouvez en bénéficier avec plus de 200 modèles de pages et de sections et un support dédié de notre équipe."
 
-#: includes/admin-settings-welcome.php:22
+#. translators: %s is the upgrade URL.
+#: includes/admin-settings-welcome.php:25
+#, php-format
 msgid "For more time-saving features and access to our expert support team, <a href=\"%s\" target=\"_blank\">upgrade now!</a> With regular updates, helpful tutorials, we promise to make website building an ultimate journey for you!"
 msgstr "Pour plus de fonctionnalités économisant du temps et l'accès à notre équipe de support expert, <a href=\"%s\" target=\"_blank\">mettez à niveau maintenant !</a> Avec des mises à jour régulières et des tutoriels utiles, nous promettons de rendre la création de sites Web un voyage ultime pour vous !"
 
-#: includes/admin-settings-welcome.php:27
+#: includes/admin-settings-welcome.php:30
 msgid "The Ultimate Addon for Beaver Builder comes with a number of custom modules to enhance your experience of website creation with Beaver Builder. Inheriting the drag & drop functionality and the performance oriented objective of Beaver Builder, the Ultimate Addons are now the best addons to be used with the page builder."
 msgstr "L'Ultimate Addon pour Beaver Builder est livré avec un certain nombre de modules personnalisés pour améliorer votre expérience de création de sites Web avec Beaver Builder. Héritant de la fonctionnalité de glisser-déposer et de l'objectif orienté performance de Beaver Builder, les Ultimate Addons sont désormais les meilleurs addons à utiliser avec le constructeur de pages."
 
-#: includes/admin-settings-welcome.php:31
+#. translators: %1$s is the blog URL, %2$s is the docs URL.
+#: includes/admin-settings-welcome.php:37
+#, php-format
 msgid "With <a href=\"%1$s\" target=\"_blank\">regular updates</a>, <a href=\"%2$s\" target=\"_blank\">helpful tutorials</a>, we promise to make website building an ultimate journey for you!"
 msgstr "Avec <a href=\"%1$s\" target=\"_blank\">des mises à jour régulières</a>, <a href=\"%2$s\" target=\"_blank\">des tutoriels utiles</a>, nous promettons de rendre la création de sites Web un voyage ultime pour vous !"
 
-#: includes/admin-settings-welcome.php:40
+#: includes/admin-settings-welcome.php:48
 msgid "Join our Community!"
 msgstr "Rejoignez notre communauté !"
 
-#: includes/admin-settings-welcome.php:41
+#. translators: %s is the Facebook community URL.
+#: includes/admin-settings-welcome.php:52
+#, php-format
 msgid "Want to connect with us to know more? Or have some suggestions we can take forward? <a href=\"%s\" target=\"_blank\">Join our Facebook community</a>, where a number of professional and newbie Beavers share their views and suggestions for the Ultimate Addons."
 msgstr "Vous souhaitez vous connecter avec nous pour en savoir plus ? Ou avez-vous des suggestions que nous pouvons prendre en compte ? <a href=\"%s\" target=\"_blank\">Rejoignez notre communauté Facebook</a>, où de nombreux professionnels et nouveaux Beavers partagent leurs avis et suggestions pour les Ultimate Addons."
 
 #: includes/ui-panel-presets.php:91
+#, php-format
 msgid "Note - You can enable, disable and manage %s presets here."
 msgstr "Remarque - Vous pouvez activer, désactiver et gérer les préréglages %s ici."
 
@@ -974,12 +946,9 @@ msgid "Search Section..."
 msgstr "Section de recherche..."
 
 #: includes/ui-panel-sections.php:94
+#, php-format
 msgid "Note - You can enable, disable and manage %s sections here."
 msgstr "Remarque - Vous pouvez activer, désactiver et gérer les sections %s ici."
-
-#: lib/astra-notices/class-astra-notices.php:119
-msgid "WordPress Nonce not validated."
-msgstr "Nonce WordPress non validé."
 
 #: modules/advanced-icon/advanced-icon.php:23
 msgid "Advanced Icons"
@@ -1591,6 +1560,7 @@ msgstr "Ajouter une icône"
 msgid "Image Type"
 msgstr "Type d'image"
 
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:105
 #: modules/advanced-icon/advanced-icon.php:324
 #: modules/advanced-icon/advanced-icon.php:339
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:14
@@ -3578,56 +3548,56 @@ msgstr "Mise en page"
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:23
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:22
 msgid "SPECIAL OFFER"
-msgstr ""
+msgstr "OFFRE SPÉCIALE"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:31
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:30
 msgid "Left Icon"
-msgstr ""
+msgstr "Icône de gauche"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:36
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:35
 msgid "Right Icon"
-msgstr ""
+msgstr "Icône de droite"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:41
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:40
 msgid "Hide Ribbon Wings"
-msgstr ""
+msgstr "Masquer les ailes du ruban"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:43
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:42
 msgid "To hide Ribbon Wings on Small or Medium device use this option."
-msgstr ""
+msgstr "Pour masquer les ailes du ruban sur un appareil petit ou moyen, utilisez cette option."
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:46
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:45
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:240
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:254
 msgid "Small Devices"
-msgstr ""
+msgstr "Petits appareils"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:47
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:46
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:241
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:255
 msgid "Medium & Small Devices"
-msgstr ""
+msgstr "Appareils moyens et petits"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:57
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:56
 msgid "Ribbon Width"
-msgstr ""
+msgstr "Largeur du ruban"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:60
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:59
 msgid "Auto"
-msgstr ""
+msgstr "Automatique"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:61
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:60
 msgid "Full"
-msgstr ""
+msgstr "Complet"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:75
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:74
@@ -3636,62 +3606,62 @@ msgstr ""
 #: objects/fl-nested-form-button.php:321
 #: objects/fl-nested-form-button.php:712
 msgid "Custom Width"
-msgstr ""
+msgstr "Largeur personnalisée"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:85
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:83
 msgid "To align Ribbon use this setting."
-msgstr ""
+msgstr "Pour aligner le ruban, utilisez ce paramètre."
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:94
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:92
 msgid "Stitching"
-msgstr ""
+msgstr "Couture"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:100
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:98
 msgid "To give Stitch effect on Ribbon"
-msgstr ""
+msgstr "Pour donner un effet de couture au ruban"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:104
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:102
 msgid "Ribbon Shadow"
-msgstr ""
+msgstr "Ombre du ruban"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:114
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:112
 msgid "Ribbon Colors"
-msgstr ""
+msgstr "Couleurs du ruban"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:118
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:116
 msgid "Ribbon Color Type"
-msgstr ""
+msgstr "Type de couleur du ruban"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:120
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:118
 msgid "You can select one of the two background types: Color: simple one color background or Gradient: two color background."
-msgstr ""
+msgstr "Vous pouvez sélectionner l'un des deux types d'arrière-plan : Couleur : arrière-plan d'une seule couleur ou Dégradé : arrière-plan de deux couleurs."
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:136
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:134
 msgid "Ribbon Color"
-msgstr ""
+msgstr "Couleur du ruban"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:162
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:156
 msgid "Ribbon Fold Color"
-msgstr ""
+msgstr "Couleur du pli du ruban"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:170
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:162
 msgid "Ribbon Wings Color"
-msgstr ""
+msgstr "Couleur des ailes du ruban"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:184
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:174
 msgid "Ribbon Text"
-msgstr ""
+msgstr "Texte du ruban"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:188
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:178
@@ -4300,54 +4270,54 @@ msgstr "Ceci est l'alignement général et s'appliquera à tous les éléments d
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:75
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:94
 msgid "The alignment will apply on Mobile"
-msgstr ""
+msgstr "L'alignement s'appliquera sur mobile"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:82
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:85
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:101
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:104
 msgid "Separator"
-msgstr ""
+msgstr "Séparateur"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:89
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:108
 msgid "Separator Style"
-msgstr ""
+msgstr "Style de séparateur"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:93
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:112
 msgid "Line"
-msgstr ""
+msgstr "Ligne"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:94
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:113
 msgid "Line With Icon"
-msgstr ""
+msgstr "Ligne avec icône"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:95
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:114
 msgid "Line With Image"
-msgstr ""
+msgstr "Ligne avec image"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:96
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:115
 msgid "Line With Text"
-msgstr ""
+msgstr "Ligne avec texte"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:119
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:138
 msgid "Separator Position"
-msgstr ""
+msgstr "Position du séparateur"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:122
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:141
 msgid "Between Heading & Description"
-msgstr ""
+msgstr "Entre le titre et la description"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:209
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:224
 msgid "Responsive Size"
-msgstr ""
+msgstr "Taille réactive"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:214
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:228
@@ -4480,12 +4450,167 @@ msgstr "Couleur non marquée"
 msgid "Justify"
 msgstr "Justifier"
 
-#: classes/class-uabb-admin-settings.php:251
+#: admin/bsf-analytics/class-bsf-analytics.php:273
+#, php-format
+msgid "<strong>Help shape the future of %1$s.</strong><br><br>Share how you use the plugin so we can build features that matter, fix issues faster, and make smarter decisions."
+msgstr "<strong>Aidez à façonner l'avenir de %1$s.</strong><br><br>Partagez comment vous utilisez le plugin afin que nous puissions construire des fonctionnalités qui comptent, résoudre les problèmes plus rapidement et prendre des décisions plus intelligentes."
+
+#. translators: %s usage doc link
+#: admin/bsf-analytics/class-bsf-analytics.php:303
+msgid "Learn more."
+msgstr "En savoir plus."
+
+#: admin/bsf-analytics/class-bsf-analytics.php:313
+msgid "Happy to help!"
+msgstr "Heureux de vous aider !"
+
+#: admin/bsf-analytics/class-bsf-analytics.php:324
+msgid "Skip"
+msgstr "Passer"
+
+#. translators: %s Product title
+#: admin/bsf-analytics/class-bsf-analytics.php:547
+#, php-format
+msgid "Help improve %s by sharing non-sensitive usage data — like PHP version and features used."
+msgstr "Aidez à améliorer %s en partageant des données d'utilisation non sensibles — comme la version PHP et les fonctionnalités utilisées."
+
+#: admin/bsf-analytics/classes/class-bsf-analytics-helper.php:28
+msgid "Oops! Something went wrong. Please refresh the page and try again."
+msgstr "Oups ! Quelque chose a mal tourné. Veuillez actualiser la page et réessayer."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:80
+msgid "Quick Feedback"
+msgstr "Retour rapide"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:83
+msgid "If you have a moment, please share why you are deactivating the plugin."
+msgstr "Si vous avez un moment, veuillez partager pourquoi vous désactivez le plugin."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:132
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:307
+msgid "Please tell us more details."
+msgstr "Veuillez nous donner plus de détails."
+
+#. translators: %1$s: link html start, %2$s: link html end
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:141
+#, php-format
+msgid "Need help from our experts? %1$sClick here to contact us.%2$s"
+msgstr "Besoin d'aide de nos experts ? %1$sCliquez ici pour nous contacter.%2$s"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:152
+msgid "Submit & Deactivate"
+msgstr "Soumettre et désactiver"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:153
+msgid "Skip & Deactivate"
+msgstr "Passer et désactiver"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:222
+msgid "Sorry, you are not allowed to do this operation."
+msgstr "Désolé, vous n'êtes pas autorisé à effectuer cette opération."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:235
+msgid "Nonce validation failed"
+msgstr "Échec de la validation du nonce"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:282
+msgid "This is a temporary deactivation for testing."
+msgstr "Ceci est une désactivation temporaire pour des tests."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:283
+msgid "How can we assist you?"
+msgstr "Comment pouvons-nous vous aider ?"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:288
+msgid "The plugin isn't working properly."
+msgstr "Le plugin ne fonctionne pas correctement."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:289
+msgid "Please tell us more about what went wrong?"
+msgstr "Veuillez nous dire ce qui s'est mal passé ?"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:294
+msgid "I found a better alternative plugin."
+msgstr "J'ai trouvé un meilleur plugin alternatif."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:295
+msgid "Could you please specify which plugin?"
+msgstr "Pourriez-vous préciser quel plugin ?"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:300
+msgid "It's missing a specific feature."
+msgstr "Il manque une fonctionnalité spécifique."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:301
+msgid "Please tell us more about the feature."
+msgstr "Veuillez nous en dire plus sur la fonctionnalité."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:306
+msgid "Other"
+msgstr "Autre"
+
+#: bb-ultimate-addon.php:61
+#, php-format
+msgid "Unfortunately, plugin could not be activated as the memory allocated by your host has almost exhausted. Plugin recommends that your site should have 15M PHP memory remaining. <br/><br/>Please check <a target=\"_blank\" href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">this</a> article for solution or contact <a target=\"_blank\" href=\"http://store.brainstormforce.com/support\">support</a>.<br/><br/><a class=\"button button-primary\" href=\"%s\">Return to Plugins Page</a>"
+msgstr "Malheureusement, le plugin n'a pas pu être activé car la mémoire allouée par votre hébergeur est presque épuisée. Le plugin recommande que votre site dispose de 15 Mo de mémoire PHP restante. <br/><br/>Veuillez consulter <a target=\"_blank\" href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">cet</a> article pour une solution ou contacter <a target=\"_blank\" href=\"http://store.brainstormforce.com/support\">le support</a>.<br/><br/><a class=\"button button-primary\" href=\"%s\">Retourner à la page des plugins</a>"
+
+#: classes/class-uabb-admin-settings.php:553
+msgid "Ultimate Addons for Beaver Builder Lite"
+msgstr "Ultimate Addons pour Beaver Builder Lite"
+
+#: classes/class-uabb-admin-settings.php:554
+msgid "How likely are you to recommend Ultimate Addons for Beaver Builder Lite to your friends or colleagues?"
+msgstr "Quelle est la probabilité que vous recommandiez Ultimate Addons pour Beaver Builder Lite à vos amis ou collègues ?"
+
+#: classes/class-uabb-admin-settings.php:557
+msgid "Thanks a lot for your feedback! 😍"
+msgstr "Merci beaucoup pour vos retours ! 😍"
+
+#: classes/class-uabb-admin-settings.php:558
+msgid "Thanks for using Ultimate Addons! Got feedback or suggestions to make it even better? We’d love to hear from you."
+msgstr "Merci d'utiliser Ultimate Addons ! Vous avez des retours ou des suggestions pour l'améliorer encore ? Nous aimerions avoir de vos nouvelles."
+
+#: classes/class-uabb-admin-settings.php:562
+msgid "Thank you for your feedback"
+msgstr "Merci pour vos retours"
+
+#: classes/class-uabb-admin-settings.php:563
+msgid "We value your input. How can we improve your experience?"
+msgstr "Nous apprécions votre avis. Comment pouvons-nous améliorer votre expérience ?"
+
+#: includes/admin-settings-analytics.php:11
+msgid "Help Us Improve Your Experience"
+msgstr "Aidez-nous à améliorer votre expérience"
+
+#: includes/admin-settings-analytics.php:25
+msgid "Help shape the future of Ultimate Addons for Beaver Builder. Share how you use the plugin so we can build features that matter, fix issues faster, and make smart desicions."
+msgstr "Aidez à façonner l'avenir d'Ultimate Addons pour Beaver Builder. Partagez comment vous utilisez le plugin afin que nous puissions créer des fonctionnalités qui comptent, résoudre les problèmes plus rapidement et prendre des décisions éclairées."
+
+#: includes/admin-settings-analytics.php:26
+msgid "Learn More"
+msgstr "En savoir plus"
+
+#. translators: %s is the upgrade URL.
+#: includes/admin-settings-template-cloud.php:16
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\">Go Premium</a> and get access to all Page Templates and Sections."
+msgstr "<a href=\"%s\" target=\"_blank\">Passez à la version Premium</a> et accédez à tous les modèles de page et sections."
+
+#: modules/advanced-icon/includes/frontend.php:32
+msgid "Go to"
+msgstr "Aller à"
+
+#: modules/uabb-heading/includes/frontend.php:54
+msgid "Go to "
+msgstr "Aller à "
+
+#: classes/class-uabb-admin-settings.php:257
+#, php-format
 msgctxt "%s stands for custom branded \"UABB\" name."
 msgid "%s Settings"
 msgstr "%s Paramètres"
 
-#: classes/class-uabb-init.php:67
+#: classes/class-uabb-init.php:58
 msgctxt "Plugin action link label."
 msgid "Upgrade"
 msgstr "Mettre à niveau"
