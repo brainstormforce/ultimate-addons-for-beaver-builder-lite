@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: gpt-po v1.2.0\n"
+"Last-Translator: gpt-po v1.2.3\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -36,123 +36,95 @@ msgstr "Brainstorm Force"
 msgid "http://www.brainstormforce.com"
 msgstr "http://www.brainstormforce.com"
 
-#. translators: %s product name
-#: admin/bsf-analytics/class-bsf-analytics.php:185
-msgid "Want to help make <strong>%1s</strong> even more awesome? Allow us to collect non-sensitive diagnostic data and usage information. "
-msgstr "¿Quieres ayudar a hacer que <strong>%1s</strong> sea aún más increíble? Permítenos recopilar datos de diagnóstico no sensibles e información de uso."
-
-#: admin/bsf-analytics/class-bsf-analytics.php:188
+#: admin/bsf-analytics/class-bsf-analytics.php:279
 msgid "This will be applicable for all sites from the network."
 msgstr "Esto será aplicable para todos los sitios de la red."
 
-#. translators: %s usage doc link
-#: admin/bsf-analytics/class-bsf-analytics.php:212
-msgid " Know More."
-msgstr "Saber más."
-
-#: admin/bsf-analytics/class-bsf-analytics.php:219
-msgid "Yes! Allow it"
-msgstr "¡Sí! Permitirlo"
-
-#: admin/bsf-analytics/class-bsf-analytics.php:227
-msgid "No Thanks"
-msgstr "No, gracias"
-
-#: admin/bsf-analytics/class-bsf-analytics.php:300
-msgid "Every two days"
-msgstr "Cada dos días"
-
-#: admin/bsf-analytics/class-bsf-analytics.php:358
+#: admin/bsf-analytics/class-bsf-analytics.php:502
 msgid "Usage Tracking"
 msgstr "Seguimiento de uso"
 
-#: admin/bsf-analytics/class-bsf-analytics.php:392
-msgid "Allow Brainstorm Force products to track non-sensitive usage tracking data."
-msgstr "Permitir que los productos de Brainstorm Force rastreen datos de seguimiento de uso no sensibles."
-
-#: admin/bsf-analytics/class-bsf-analytics.php:395
+#: admin/bsf-analytics/class-bsf-analytics.php:550
 msgid " This will be applicable for all sites from the network."
-msgstr " Esto será aplicable para todos los sitios de la red."
+msgstr "Esto será aplicable para todos los sitios de la red."
 
-#: admin/bsf-analytics/class-bsf-analytics.php:400
+#: admin/bsf-analytics/class-bsf-analytics.php:555
 msgid "Learn More."
 msgstr "Saber más."
 
-#: bb-ultimate-addon.php:60
-msgid "Unfortunately, plugin could not be activated as the memory allocated by your host has almost exhausted. UABB plugin recommends that your site should have 15M PHP memory remaining. <br/><br/>Please check <a target=\"_blank\" href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">this</a> article for solution or contact <a target=\"_blank\" href=\"http://store.brainstormforce.com/support\">support</a>.<br/><br/><a class=\"button button-primary\" href=\"%s\">Return to Plugins Page</a>"
-msgstr "Desafortunadamente, el complemento no pudo ser activado ya que la memoria asignada por tu proveedor de hosting está casi agotada. El complemento UABB recomienda que tu sitio tenga 15M de memoria PHP restante. <br/><br/>Por favor, revisa <a target=\"_blank\" href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">este</a> artículo para una solución o contacta <a target=\"_blank\" href=\"http://store.brainstormforce.com/support\">soporte</a>.<br/><br/><a class=\"button button-primary\" href=\"%s\">Regresar a la página de complementos</a>"
-
 #. Translators: %s is the URL to deactivate one of the Ultimate Addon for Beaver Builder versions.
-#: bb-ultimate-addon.php:138
+#: bb-ultimate-addon.php:164
+#, php-format
 msgid "You currently have two versions of <strong>Ultimate Addon for Beaver Builder</strong> active on this site. Please <a href='%s'>deactivate one</a> before continuing."
 msgstr "Actualmente tienes dos versiones de <strong>Ultimate Addon para Beaver Builder</strong> activas en este sitio. Por favor <a href='%s'>desactiva una</a> antes de continuar."
 
-#: classes/class-uabb-admin-settings.php:179
+#: classes/class-uabb-admin-settings.php:185
 msgid "Something went wrong!"
 msgstr "¡Algo salió mal!"
 
-#: classes/class-uabb-admin-settings.php:180
+#: classes/class-uabb-admin-settings.php:186
 msgid "Complete"
 msgstr "Completo"
 
-#: classes/class-uabb-admin-settings.php:181
+#: classes/class-uabb-admin-settings.php:187
 msgid "Refreshed!"
 msgstr "¡Refrescado!"
 
-#: classes/class-uabb-admin-settings.php:182
+#: classes/class-uabb-admin-settings.php:188
 msgid "Try Again!"
 msgstr "¡Inténtalo de nuevo!"
 
-#: classes/class-uabb-admin-settings.php:183
+#: classes/class-uabb-admin-settings.php:189
 msgid "Installed!"
 msgstr "¡Instalado!"
 
-#: classes/class-uabb-admin-settings.php:184
+#: classes/class-uabb-admin-settings.php:190
 msgid "Remove"
 msgstr "Eliminar"
 
-#: classes/class-uabb-admin-settings.php:185
+#: classes/class-uabb-admin-settings.php:191
 msgid "Install"
 msgstr "Instalar"
 
-#: classes/class-uabb-admin-settings.php:186
+#: classes/class-uabb-admin-settings.php:192
 msgid "Installed"
 msgstr "Instalado"
 
-#: classes/class-uabb-admin-settings.php:187
+#: classes/class-uabb-admin-settings.php:193
 msgid "Removed!"
 msgstr "¡Eliminado!"
 
-#: classes/class-uabb-admin-settings.php:275
+#: classes/class-uabb-admin-settings.php:281
 msgid "Settings updated!"
 msgstr "¡Configuraciones actualizadas!"
 
-#: classes/class-uabb-admin-settings.php:294
+#: classes/class-uabb-admin-settings.php:300
 msgid "Welcome"
 msgstr "Bienvenido"
 
-#: classes/class-uabb-admin-settings.php:301
+#: classes/class-uabb-admin-settings.php:307
+#: classes/class-uabb-admin-settings.php:335
 #: includes/admin-settings-general.php:11
 #: modules/info-list/info-list-bb-2-2-compatibility.php:347
 #: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:405
 msgid "General Settings"
 msgstr "Configuraciones generales"
 
-#: classes/class-uabb-admin-settings.php:308
+#: classes/class-uabb-admin-settings.php:314
 msgid "Modules"
 msgstr "Módulos"
 
-#: classes/class-uabb-admin-settings.php:316
+#: classes/class-uabb-admin-settings.php:322
 #: includes/admin-settings-premium.php:25
 #: includes/admin-settings-template-cloud.php:11
 msgid "Template Cloud"
 msgstr "Nube de plantillas"
 
-#: classes/class-uabb-admin-settings.php:323
+#: classes/class-uabb-admin-settings.php:329
 msgid "Font Icon Manager"
 msgstr "Administrador de iconos de fuente"
 
-#: classes/class-uabb-admin-settings.php:329
+#: classes/class-uabb-admin-settings.php:341
 #: includes/admin-settings-premium.php:12
 msgid "Premium Features"
 msgstr "Características premium"
@@ -161,16 +133,18 @@ msgstr "Características premium"
 msgid "Image Link"
 msgstr "Enlace de imagen"
 
-#: classes/class-uabb-cloud-templates.php:263
+#: classes/class-uabb-cloud-templates.php:262
 #: classes/class-uabb-iconfonts.php:45
 msgid "You are not authorized to perform this action."
 msgstr "No estás autorizado para realizar esta acción."
 
 #: classes/class-uabb-cloud-templates.php:320
+#, php-format
 msgid "Welcome to %s Template Cloud!"
 msgstr "¡Bienvenido a la Nube de Plantillas %s!"
 
 #: classes/class-uabb-cloud-templates.php:321
+#, php-format
 msgid "%s Template Cloud would allow you to browse through our growing library of 150+ professionally designed templates and download the only ones that you need."
 msgstr "%s Nube de Plantillas te permitirá explorar nuestra creciente biblioteca de más de 150 plantillas diseñadas profesionalmente y descargar solo las que necesites."
 
@@ -190,10 +164,6 @@ msgstr "Vista previa"
 msgid "Upgrade"
 msgstr "Actualizar"
 
-#: classes/class-uabb-cloud-templates.php:456
-msgid "Templates are disabled from RestAPI."
-msgstr "Las plantillas están deshabilitadas desde RestAPI."
-
 #: classes/class-uabb-global-settings.php:35
 msgid "UABB - Global Settings"
 msgstr "UABB - Configuraciones globales"
@@ -208,37 +178,33 @@ msgstr "UABB - Contactar soporte"
 
 #: classes/class-uabb-global-settings.php:40
 #: classes/uabb-global-settings-form.php:18
+#, php-format
 msgid "%s - Global Settings"
 msgstr "%s - Configuraciones globales"
 
 #: classes/class-uabb-global-settings.php:45
+#, php-format
 msgid "%s - Knowledge Base"
 msgstr "%s - Base de conocimientos"
 
 #: classes/class-uabb-global-settings.php:50
+#, php-format
 msgid "%s - Contact Support"
 msgstr "%s - Contactar soporte"
 
-#: classes/class-uabb-helper.php:42
-msgid "Basic"
-msgstr "Básico"
-
-#: classes/class-uabb-helper.php:44
-msgid "UABB Modules"
-msgstr "Módulos UABB"
-
-#: classes/class-uabb-helper.php:53
-#: includes/admin-settings-modules.php:16
+#. translators: %s is the plugin name/prefix.
+#: includes/admin-settings-modules.php:19
+#, php-format
 msgid "%s Modules"
 msgstr "%s Módulos"
 
-#: classes/class-uabb-init.php:255
+#: classes/class-uabb-init.php:331
 msgid "plugin requires"
 msgstr "el complemento requiere"
 
-#: classes/class-uabb-init.php:257
+#: classes/class-uabb-init.php:333
 msgid " plugin installed & activated."
-msgstr " complemento instalado y activado."
+msgstr "complemento instalado y activado."
 
 #: classes/class-uabb-wpml.php:56
 #: classes/uabb-global-settings-form.php:62
@@ -362,7 +328,7 @@ msgid "Presets"
 msgstr "Preajustes"
 
 #: classes/class-ui-panel.php:348
-#: includes/admin-settings-template-cloud.php:41
+#: includes/admin-settings-template-cloud.php:46
 msgid "Sections"
 msgstr "Secciones"
 
@@ -800,7 +766,7 @@ msgstr "Habilite esta configuración para aplicar efectos de interfaz de usuario
 
 #: includes/admin-settings-general.php:39
 msgid "Read "
-msgstr "Leer "
+msgstr "Leer"
 
 #: includes/admin-settings-general.php:41
 msgid "this article"
@@ -808,7 +774,7 @@ msgstr "este artículo"
 
 #: includes/admin-settings-general.php:43
 msgid " for more information."
-msgstr " para más información."
+msgstr "para más información."
 
 #: includes/admin-settings-general.php:54
 #: includes/admin-settings-general.php:57
@@ -819,24 +785,27 @@ msgstr "Habilitar vista previa en vivo"
 msgid "Enable this setting to see live preview of a page without leaving the editor."
 msgstr "Habilite esta configuración para ver una vista previa en vivo de una página sin salir del editor."
 
+#: includes/admin-settings-analytics.php:32
 #: includes/admin-settings-general.php:63
 msgid "Save Settings"
 msgstr "Guardar configuraciones"
 
 #: includes/admin-settings-icons.php:15
-#: includes/admin-settings-icons.php:28
+#: includes/admin-settings-icons.php:29
 msgid "Reload Icons"
 msgstr "Recargar íconos"
 
-#: includes/admin-settings-icons.php:23
+#. translators: %1$s and %2$s are the plugin name/prefix.
+#: includes/admin-settings-icons.php:24
+#, php-format
 msgid "Clicking the button below will reinstall %1$s icons on your website. If you are facing issues to load %2$s icons then you are at right place to troubleshoot it."
 msgstr "Hacer clic en el botón de abajo reinstalará los íconos %1$s en su sitio web. Si tiene problemas para cargar los íconos %2$s, entonces está en el lugar correcto para solucionarlo."
 
-#: includes/admin-settings-modules.php:26
+#: includes/admin-settings-modules.php:32
 msgid "Upgrade to Premium version to get these modules"
 msgstr "Actualice a la versión Premium para obtener estos módulos"
 
-#: includes/admin-settings-modules.php:26
+#: includes/admin-settings-modules.php:32
 msgid "Unlock All Modules"
 msgstr "Desbloquear todos los módulos"
 
@@ -916,19 +885,15 @@ msgstr "Durante muchos años, hemos entregado varios productos que son utilizado
 msgid "Upgrade Today"
 msgstr "¡Actualiza hoy!"
 
-#: includes/admin-settings-template-cloud.php:13
-msgid "<a href=\""
-msgstr "<a href=\""
-
-#: includes/admin-settings-template-cloud.php:25
+#: includes/admin-settings-template-cloud.php:30
 msgid "Override network settings?"
 msgstr "¿Sobrescribir la configuración de la red?"
 
-#: includes/admin-settings-template-cloud.php:40
+#: includes/admin-settings-template-cloud.php:45
 msgid "Page Templates"
 msgstr "Plantillas de Página"
 
-#: includes/admin-settings-template-cloud.php:46
+#: includes/admin-settings-template-cloud.php:51
 msgid "Refresh"
 msgstr "Actualizar"
 
@@ -940,27 +905,34 @@ msgstr "¡Bienvenido al Ultimate Addon para Beaver Builder!"
 msgid "Thank you for choosing the Ultimate Addons for Beaver Builder and welcome on board! We promise to take you through an ultimate journey of website building. You’ll find a few settings in the column on the left. Need some more time-saving and advanced modules to play with? You can avail all of them with 200+ page & section templates and dedicated support from our team."
 msgstr "¡Gracias por elegir los Ultimate Addons para Beaver Builder y bienvenido a bordo! Prometemos llevarte a través de un viaje definitivo de creación de sitios web. Encontrarás algunas configuraciones en la columna de la izquierda. ¿Necesitas algunos módulos avanzados y que ahorren tiempo para jugar? Puedes obtener todos ellos con más de 200 plantillas de página y sección y soporte dedicado de nuestro equipo."
 
-#: includes/admin-settings-welcome.php:22
+#. translators: %s is the upgrade URL.
+#: includes/admin-settings-welcome.php:25
+#, php-format
 msgid "For more time-saving features and access to our expert support team, <a href=\"%s\" target=\"_blank\">upgrade now!</a> With regular updates, helpful tutorials, we promise to make website building an ultimate journey for you!"
 msgstr "Para más características que ahorran tiempo y acceso a nuestro equipo de soporte experto, <a href=\"%s\" target=\"_blank\">¡actualiza ahora!</a> Con actualizaciones regulares y tutoriales útiles, prometemos hacer de la creación de sitios web un viaje definitivo para ti."
 
-#: includes/admin-settings-welcome.php:27
+#: includes/admin-settings-welcome.php:30
 msgid "The Ultimate Addon for Beaver Builder comes with a number of custom modules to enhance your experience of website creation with Beaver Builder. Inheriting the drag & drop functionality and the performance oriented objective of Beaver Builder, the Ultimate Addons are now the best addons to be used with the page builder."
 msgstr "El Ultimate Addon para Beaver Builder viene con varios módulos personalizados para mejorar tu experiencia de creación de sitios web con Beaver Builder. Heredando la funcionalidad de arrastrar y soltar y el objetivo orientado al rendimiento de Beaver Builder, los Ultimate Addons son ahora los mejores addons para usar con el constructor de páginas."
 
-#: includes/admin-settings-welcome.php:31
+#. translators: %1$s is the blog URL, %2$s is the docs URL.
+#: includes/admin-settings-welcome.php:37
+#, php-format
 msgid "With <a href=\"%1$s\" target=\"_blank\">regular updates</a>, <a href=\"%2$s\" target=\"_blank\">helpful tutorials</a>, we promise to make website building an ultimate journey for you!"
 msgstr "Con <a href=\"%1$s\" target=\"_blank\">actualizaciones regulares</a>, <a href=\"%2$s\" target=\"_blank\">tutoriales útiles</a>, prometemos hacer de la creación de sitios web un viaje definitivo para ti."
 
-#: includes/admin-settings-welcome.php:40
+#: includes/admin-settings-welcome.php:48
 msgid "Join our Community!"
 msgstr "¡Únete a nuestra Comunidad!"
 
-#: includes/admin-settings-welcome.php:41
+#. translators: %s is the Facebook community URL.
+#: includes/admin-settings-welcome.php:52
+#, php-format
 msgid "Want to connect with us to know more? Or have some suggestions we can take forward? <a href=\"%s\" target=\"_blank\">Join our Facebook community</a>, where a number of professional and newbie Beavers share their views and suggestions for the Ultimate Addons."
 msgstr "¿Quieres conectarte con nosotros para saber más? ¿O tienes algunas sugerencias que podamos llevar adelante? <a href=\"%s\" target=\"_blank\">Únete a nuestra comunidad de Facebook</a>, donde varios Beavers profesionales y novatos comparten sus opiniones y sugerencias para los Ultimate Addons."
 
 #: includes/ui-panel-presets.php:91
+#, php-format
 msgid "Note - You can enable, disable and manage %s presets here."
 msgstr "Nota - Puedes habilitar, deshabilitar y gestionar los presets de %s aquí."
 
@@ -974,12 +946,9 @@ msgid "Search Section..."
 msgstr "Sección de búsqueda..."
 
 #: includes/ui-panel-sections.php:94
+#, php-format
 msgid "Note - You can enable, disable and manage %s sections here."
 msgstr "Nota - Puedes habilitar, deshabilitar y gestionar las secciones de %s aquí."
-
-#: lib/astra-notices/class-astra-notices.php:119
-msgid "WordPress Nonce not validated."
-msgstr "Nonce de WordPress no validado."
 
 #: modules/advanced-icon/advanced-icon.php:23
 msgid "Advanced Icons"
@@ -1591,6 +1560,7 @@ msgstr "Agregar ícono"
 msgid "Image Type"
 msgstr "Tipo de imagen"
 
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:105
 #: modules/advanced-icon/advanced-icon.php:324
 #: modules/advanced-icon/advanced-icon.php:339
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:14
@@ -1661,7 +1631,7 @@ msgstr "Estas propiedades de color de fondo solo funcionarán cuando el estilo d
 
 #: modules/advanced-icon/advanced-icon.php:391
 msgid "Background Color "
-msgstr "Color de fondo "
+msgstr "Color de fondo"
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:20
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:19
@@ -1953,7 +1923,7 @@ msgstr "Configuraciones del botón"
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:478
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:559
 msgid "Flipbox Styles"
-msgstr ""
+msgstr "Estilos de Flipbox"
 
 #: modules/flip-box/flip-box-bb-2-2-compatibility.php:482
 #: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:563
@@ -3578,56 +3548,56 @@ msgstr "Diseño"
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:23
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:22
 msgid "SPECIAL OFFER"
-msgstr ""
+msgstr "OFERTA ESPECIAL"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:31
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:30
 msgid "Left Icon"
-msgstr ""
+msgstr "Ícono Izquierdo"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:36
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:35
 msgid "Right Icon"
-msgstr ""
+msgstr "Ícono Derecho"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:41
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:40
 msgid "Hide Ribbon Wings"
-msgstr ""
+msgstr "Ocultar Alas de Cinta"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:43
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:42
 msgid "To hide Ribbon Wings on Small or Medium device use this option."
-msgstr ""
+msgstr "Para ocultar las Alas de Cinta en dispositivos pequeños o medianos, utiliza esta opción."
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:46
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:45
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:240
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:254
 msgid "Small Devices"
-msgstr ""
+msgstr "Dispositivos Pequeños"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:47
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:46
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:241
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:255
 msgid "Medium & Small Devices"
-msgstr ""
+msgstr "Dispositivos Medianos y Pequeños"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:57
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:56
 msgid "Ribbon Width"
-msgstr ""
+msgstr "Ancho de Cinta"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:60
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:59
 msgid "Auto"
-msgstr ""
+msgstr "Automático"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:61
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:60
 msgid "Full"
-msgstr ""
+msgstr "Completo"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:75
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:74
@@ -3636,62 +3606,62 @@ msgstr ""
 #: objects/fl-nested-form-button.php:321
 #: objects/fl-nested-form-button.php:712
 msgid "Custom Width"
-msgstr ""
+msgstr "Ancho Personalizado"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:85
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:83
 msgid "To align Ribbon use this setting."
-msgstr ""
+msgstr "Para alinear la Cinta, utiliza esta configuración."
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:94
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:92
 msgid "Stitching"
-msgstr ""
+msgstr "Costura"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:100
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:98
 msgid "To give Stitch effect on Ribbon"
-msgstr ""
+msgstr "Para dar efecto de Costura en la Cinta"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:104
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:102
 msgid "Ribbon Shadow"
-msgstr ""
+msgstr "Sombra de Cinta"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:114
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:112
 msgid "Ribbon Colors"
-msgstr ""
+msgstr "Colores de Cinta"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:118
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:116
 msgid "Ribbon Color Type"
-msgstr ""
+msgstr "Tipo de Color de Cinta"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:120
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:118
 msgid "You can select one of the two background types: Color: simple one color background or Gradient: two color background."
-msgstr ""
+msgstr "Puedes seleccionar uno de los dos tipos de fondo: Color: fondo de un solo color simple o Degradado: fondo de dos colores."
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:136
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:134
 msgid "Ribbon Color"
-msgstr ""
+msgstr "Color de Cinta"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:162
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:156
 msgid "Ribbon Fold Color"
-msgstr ""
+msgstr "Color de Plegado de Cinta"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:170
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:162
 msgid "Ribbon Wings Color"
-msgstr ""
+msgstr "Color de Alas de Cinta"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:184
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:174
 msgid "Ribbon Text"
-msgstr ""
+msgstr "Texto de Cinta"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:188
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:178
@@ -3700,17 +3670,17 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:702
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:874
 msgid "Tag"
-msgstr ""
+msgstr "Etiqueta"
 
 #: modules/ribbon/ribbon-bb-2-2-compatibility.php:222
 #: modules/ribbon/ribbon-bb-less-than-2-2-compatibility.php:249
 msgid "Text Shadow Color"
-msgstr ""
+msgstr "Color de Sombra de Texto"
 
 #: modules/ribbon/ribbon.php:22
 #: modules/ribbon/ribbon.php:23
 msgid "Ribbon"
-msgstr ""
+msgstr "Cinta"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:15
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:18
@@ -3719,90 +3689,90 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:17
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:22
 msgid "Slide Box Front"
-msgstr ""
+msgstr "Frente de la Caja Deslizante"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:35
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:34
 msgid "Add description text here. Lorem Ipsum is a dummy content."
-msgstr ""
+msgstr "Agrega texto de descripción aquí. Lorem Ipsum es un contenido de ejemplo."
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:177
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:175
 msgid "Image / Icon Position"
-msgstr ""
+msgstr "Posición de Imagen / Ícono"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:181
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:179
 #: modules/uabb-star-rating/uabb-star-rating.php:131
 msgid "Position"
-msgstr ""
+msgstr "Posición"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:183
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:181
 msgid "Image / Icon position"
-msgstr ""
+msgstr "posición de Imagen / Ícono"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:185
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:183
 msgid "Above Heading"
-msgstr ""
+msgstr "Sobre el Encabezado"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:186
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:184
 msgid "Left of Heading"
-msgstr ""
+msgstr "Izquierda del Encabezado"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:187
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:185
 msgid "Right of Heading"
-msgstr ""
+msgstr "Derecha del Encabezado"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:188
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:186
 msgid "Left of Text and Heading"
-msgstr ""
+msgstr "Izquierda del Texto y el Encabezado"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:189
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:187
 msgid "Right of Text and Heading"
-msgstr ""
+msgstr "Derecha del Texto y el Encabezado"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:205
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:480
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:203
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:495
 msgid "Overall Alignment"
-msgstr ""
+msgstr "Alineación General"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:224
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:222
 msgid "Border between Icon and Text"
-msgstr ""
+msgstr "Borde entre Ícono y Texto"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:238
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:236
 msgid "Border Thickness"
-msgstr ""
+msgstr "Grosor del Borde"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:255
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:259
 msgid "Border Hover / Focus Color"
-msgstr ""
+msgstr "Color de Borde al Pasar el Ratón / Enfoque"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:272
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:282
 msgid "Stacking Order"
-msgstr ""
+msgstr "Orden de Apilamiento"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:275
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:285
 msgid "Reversed"
-msgstr ""
+msgstr "Invertido"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:278
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:288
 msgid "Use this option to show Icon / Image above title in small devices."
-msgstr ""
+msgstr "Utiliza esta opción para mostrar el Ícono / Imagen sobre el título en dispositivos pequeños."
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:285
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:288
@@ -3811,22 +3781,22 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:298
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:303
 msgid "Slide Box Back"
-msgstr ""
+msgstr "Parte Trasera de la Caja Deslizante"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:310
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:320
 msgid "<ul><li>Enter description text here.</li><li>Enter description text here.</li></ul>"
-msgstr ""
+msgstr "<ul><li>Ingresa texto de descripción aquí.</li><li>Ingresa texto de descripción aquí.</li></ul>"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:315
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:325
 msgid "Call to Action"
-msgstr ""
+msgstr "Llamada a la Acción"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:319
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:329
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:323
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:339
@@ -3843,207 +3813,207 @@ msgstr ""
 #: objects/fl-nested-form-button.php:24
 #: objects/fl-nested-form-button.php:446
 msgid "Text"
-msgstr ""
+msgstr "Texto"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:346
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:354
 msgid "The link applies to the entire module. If choosing a call to action type below, this link will also be used for the text or button."
-msgstr ""
+msgstr "El enlace se aplica a todo el módulo. Si eliges un tipo de llamada a la acción a continuación, este enlace también se utilizará para el texto o botón."
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:354
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:374
 msgid "Read More"
-msgstr ""
+msgstr "Leer Más"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:379
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:399
 msgid "Select Style"
-msgstr ""
+msgstr "Seleccionar Estilo"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:381
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:401
 msgid "Select Slide style for this slide box."
-msgstr ""
+msgstr "Selecciona el estilo de deslizamiento para esta caja deslizante."
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:383
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:403
 msgid "Style 1"
-msgstr ""
+msgstr "Estilo 1"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:384
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:404
 msgid "Style 2"
-msgstr ""
+msgstr "Estilo 2"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:385
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:405
 msgid "Style 3"
-msgstr ""
+msgstr "Estilo 3"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:404
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:424
 msgid "Slide Box Front Style"
-msgstr ""
+msgstr "Estilo de Frente de la Caja Deslizante"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:409
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:466
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:429
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:482
 msgid "Content Padding"
-msgstr ""
+msgstr "Relleno de Contenido"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:410
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:430
 msgid "To apply padding to Slide Box Front use this setting"
-msgstr ""
+msgstr "Para aplicar relleno al Frente de la Caja Deslizante, utiliza esta configuración"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:444
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:462
 msgid "Background Hover/Focus Color"
-msgstr ""
+msgstr "Color de Fondo al Pasar el Ratón/Enfoque"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:462
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:478
 msgid "Slide Box Back Style"
-msgstr ""
+msgstr "Estilo de Parte Trasera de la Caja Deslizante"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:467
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:483
 msgid "To apply padding to Slide Box Back use this setting"
-msgstr ""
+msgstr "Para aplicar relleno a la Parte Trasera de la Caja Deslizante, utiliza esta configuración"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:509
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:531
 msgid "Overlay"
-msgstr ""
+msgstr "Superposición"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:513
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:535
 msgid "Enable Overlay"
-msgstr ""
+msgstr "Habilitar Superposición"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:530
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:552
 msgid "Overlay Color"
-msgstr ""
+msgstr "Color de Superposición"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:553
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:600
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:580
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:620
 msgid "Icon Background Color"
-msgstr ""
+msgstr "Color de Fondo del Ícono"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:580
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:604
 msgid "Drop Down Icon"
-msgstr ""
+msgstr "Ícono de Desplegable"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:617
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:643
 msgid "Icon Alignment"
-msgstr ""
+msgstr "Alineación del Ícono"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:628
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:654
 msgid "Slide Box Min Height"
-msgstr ""
+msgstr "Altura Mínima de la Caja Deslizante"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:632
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:658
 msgid "Minimum Height"
-msgstr ""
+msgstr "Altura Mínima"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:649
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:675
 msgid "Enter Height"
-msgstr ""
+msgstr "Ingresa Altura"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:653
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:678
 msgid "Apply minimum height to complete SlideBox. It is useful when multiple SlideBox are in same row."
-msgstr ""
+msgstr "Aplica altura mínima a toda la Caja Deslizante. Es útil cuando múltiples Cajas Deslizantes están en la misma fila."
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:659
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:684
 msgid "If enabled, the Content would align vertically center"
-msgstr ""
+msgstr "Si está habilitado, el Contenido se alineará verticalmente al centro"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:712
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:758
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:773
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:851
 msgid "Hover/Focus Color"
-msgstr ""
+msgstr "Color al Pasar el Ratón/Enfoque"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:750
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:856
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:845
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1017
 msgid "Description Color"
-msgstr ""
+msgstr "Color de Descripción"
 
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:883
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:1040
 msgid "Link Text"
-msgstr ""
+msgstr "Texto del Enlace"
 
 #: modules/slide-box/slide-box.php:22
 #: modules/slide-box/slide-box.php:23
 msgid "Slide Box"
-msgstr ""
+msgstr "Caja Deslizante"
 
 #: modules/spacer-gap/spacer-gap-bb-2-2-compatibility.php:22
 #: modules/spacer-gap/spacer-gap-bb-less-than-2-2-compatibility.php:21
 msgid "Desktop"
-msgstr ""
+msgstr "Escritorio"
 
 #: modules/spacer-gap/spacer-gap-bb-2-2-compatibility.php:28
 #: modules/spacer-gap/spacer-gap-bb-less-than-2-2-compatibility.php:26
 msgid "This value will work for all devices."
-msgstr ""
+msgstr "Este valor funcionará para todos los dispositivos."
 
 #: modules/spacer-gap/spacer-gap-bb-2-2-compatibility.php:32
 #: modules/spacer-gap/spacer-gap-bb-less-than-2-2-compatibility.php:30
 msgid "Medium Device ( Tabs )"
-msgstr ""
+msgstr "Dispositivo Mediano (Pestañas)"
 
 #: modules/spacer-gap/spacer-gap-bb-2-2-compatibility.php:42
 #: modules/spacer-gap/spacer-gap-bb-less-than-2-2-compatibility.php:39
 msgid "Small Device ( Mobile )"
-msgstr ""
+msgstr "Dispositivo Pequeño (Móvil)"
 
 #: modules/spacer-gap/spacer-gap.php:22
 msgid "Spacer / Gap"
-msgstr ""
+msgstr "Espaciador / Hueco"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:23
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:22
 #: objects/fl-nested-form-button.php:25
 #: objects/fl-nested-form-button.php:447
 msgid "Click Here"
-msgstr ""
+msgstr "Haz Clic Aquí"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:65
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:74
 #: objects/fl-nested-form-button.php:68
 #: objects/fl-nested-form-button.php:483
 msgid "Flat"
-msgstr ""
+msgstr "Plano"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:67
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:76
 #: objects/fl-nested-form-button.php:70
 #: objects/fl-nested-form-button.php:485
 msgid "Transparent"
-msgstr ""
+msgstr "Transparente"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:68
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:77
 #: objects/fl-nested-form-button.php:71
 #: objects/fl-nested-form-button.php:486
 msgid "3D"
-msgstr ""
+msgstr "3D"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:87
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:103
@@ -4058,175 +4028,175 @@ msgstr ""
 #: objects/fl-nested-form-button.php:533
 #: objects/fl-nested-form-button.php:546
 msgid "Hover Styles"
-msgstr ""
+msgstr "Estilos al Pasar el Ratón"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:91
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:94
 #: objects/fl-nested-form-button.php:100
 #: objects/fl-nested-form-button.php:521
 msgid "Fade Background"
-msgstr ""
+msgstr "Desvanecer Fondo"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:92
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:95
 #: objects/fl-nested-form-button.php:101
 #: objects/fl-nested-form-button.php:522
 msgid "Fill Background From Top"
-msgstr ""
+msgstr "Rellenar Fondo Desde Arriba"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:93
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:96
 #: objects/fl-nested-form-button.php:102
 #: objects/fl-nested-form-button.php:523
 msgid "Fill Background From Bottom"
-msgstr ""
+msgstr "Rellenar Fondo Desde Abajo"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:94
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:97
 #: objects/fl-nested-form-button.php:103
 #: objects/fl-nested-form-button.php:524
 msgid "Fill Background From Left"
-msgstr ""
+msgstr "Rellenar Fondo Desde la Izquierda"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:95
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:98
 #: objects/fl-nested-form-button.php:104
 #: objects/fl-nested-form-button.php:525
 msgid "Fill Background From Right"
-msgstr ""
+msgstr "Rellenar Fondo Desde la Derecha"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:96
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:99
 #: objects/fl-nested-form-button.php:105
 #: objects/fl-nested-form-button.php:526
 msgid "Fill Background Vertical"
-msgstr ""
+msgstr "Rellenar fondo vertical"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:97
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:100
 #: objects/fl-nested-form-button.php:106
 #: objects/fl-nested-form-button.php:527
 msgid "Fill Background Diagonal"
-msgstr ""
+msgstr "Rellenar fondo diagonal"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:98
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:101
 #: objects/fl-nested-form-button.php:107
 #: objects/fl-nested-form-button.php:528
 msgid "Fill Background Horizontal"
-msgstr ""
+msgstr "Rellenar fondo horizontal"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:106
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:109
 #: objects/fl-nested-form-button.php:115
 #: objects/fl-nested-form-button.php:536
 msgid "Move Down"
-msgstr ""
+msgstr "Mover hacia abajo"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:107
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:110
 #: objects/fl-nested-form-button.php:116
 #: objects/fl-nested-form-button.php:537
 msgid "Move Up"
-msgstr ""
+msgstr "Mover hacia arriba"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:108
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:111
 #: objects/fl-nested-form-button.php:117
 #: objects/fl-nested-form-button.php:538
 msgid "Move Left"
-msgstr ""
+msgstr "Mover a la izquierda"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:109
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:112
 #: objects/fl-nested-form-button.php:118
 #: objects/fl-nested-form-button.php:539
 msgid "Move Right"
-msgstr ""
+msgstr "Mover a la derecha"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:110
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:113
 #: objects/fl-nested-form-button.php:119
 #: objects/fl-nested-form-button.php:540
 msgid "Animate Top"
-msgstr ""
+msgstr "Animar desde arriba"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:111
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:114
 #: objects/fl-nested-form-button.php:120
 #: objects/fl-nested-form-button.php:541
 msgid "Animate Bottom"
-msgstr ""
+msgstr "Animar desde abajo"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:120
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:123
 #: objects/fl-nested-form-button.php:129
 #: objects/fl-nested-form-button.php:550
 msgid "Appear Icon From Right"
-msgstr ""
+msgstr "Icono aparecer desde la derecha"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:121
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:124
 #: objects/fl-nested-form-button.php:130
 #: objects/fl-nested-form-button.php:551
 msgid "Appear Icon From Left"
-msgstr ""
+msgstr "Icono aparecer desde la izquierda"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:122
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:125
 #: objects/fl-nested-form-button.php:131
 #: objects/fl-nested-form-button.php:552
 msgid "Appear Icon From Top"
-msgstr ""
+msgstr "Icono aparecer desde arriba"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:123
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:126
 #: objects/fl-nested-form-button.php:132
 #: objects/fl-nested-form-button.php:553
 msgid "Appear Icon From Bottom"
-msgstr ""
+msgstr "Icono aparecer desde abajo"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:129
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:132
 #: objects/fl-nested-form-button.php:138
 #: objects/fl-nested-form-button.php:559
 msgid "Icons"
-msgstr ""
+msgstr "Iconos"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:138
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:141
 #: objects/fl-nested-form-button.php:147
 #: objects/fl-nested-form-button.php:568
 msgid "Icon Position"
-msgstr ""
+msgstr "Posición del icono"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:141
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:144
 #: objects/fl-nested-form-button.php:150
 #: objects/fl-nested-form-button.php:571
 msgid "Before Text"
-msgstr ""
+msgstr "Antes del texto"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:142
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:145
 #: objects/fl-nested-form-button.php:151
 #: objects/fl-nested-form-button.php:572
 msgid "After Text"
-msgstr ""
+msgstr "Después del texto"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:190
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:201
 #: objects/fl-nested-form-button.php:207
 #: objects/fl-nested-form-button.php:638
 msgid "Apply Hover Color To"
-msgstr ""
+msgstr "Aplicar color de hover a"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:194
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:205
 #: objects/fl-nested-form-button.php:211
 #: objects/fl-nested-form-button.php:642
 msgid "Background"
-msgstr ""
+msgstr "Fondo"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:206
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:217
@@ -4237,102 +4207,102 @@ msgstr ""
 #: objects/fl-nested-form-button.php:222
 #: objects/fl-nested-form-button.php:653
 msgid "Width"
-msgstr ""
+msgstr "Ancho"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:210
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:221
 #: objects/fl-nested-form-button.php:226
 #: objects/fl-nested-form-button.php:657
 msgid "Full Width"
-msgstr ""
+msgstr "Ancho completo"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:274
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:322
 #: objects/fl-nested-form-button.php:329
 #: objects/fl-nested-form-button.php:721
 msgid "Custom Height"
-msgstr ""
+msgstr "Altura personalizada"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:283
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:330
 #: objects/fl-nested-form-button.php:337
 #: objects/fl-nested-form-button.php:730
 msgid "Padding Top/Bottom"
-msgstr ""
+msgstr "Relleno superior/inferior"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:292
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:338
 #: objects/fl-nested-form-button.php:345
 #: objects/fl-nested-form-button.php:739
 msgid "Padding Left/Right"
-msgstr ""
+msgstr "Relleno izquierdo/derecho"
 
 #: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:301
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:346
 #: objects/fl-nested-form-button.php:353
 #: objects/fl-nested-form-button.php:747
 msgid "Round Corners"
-msgstr ""
+msgstr "Esquinas redondeadas"
 
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:251
 #: objects/fl-nested-form-button.php:257
 msgid "Bottom Border Type"
-msgstr ""
+msgstr "Tipo de borde inferior"
 
 #: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:308
 msgid "Border hover Color"
-msgstr ""
+msgstr "Color de borde al pasar el mouse"
 
 #: modules/uabb-button/uabb-button.php:24
 msgid "A simple call to action button."
-msgstr ""
+msgstr "Un simple botón de llamada a la acción."
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:23
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:22
 msgid "Design is a funny word"
-msgstr ""
+msgstr "El diseño es una palabra divertida"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:61
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:75
 msgid "This is the overall alignment and would apply to all Heading elements"
-msgstr ""
+msgstr "Esta es la alineación general y se aplicará a todos los elementos de encabezado"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:75
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:94
 msgid "The alignment will apply on Mobile"
-msgstr ""
+msgstr "La alineación se aplicará en móviles"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:82
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:85
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:101
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:104
 msgid "Separator"
-msgstr ""
+msgstr "Separador"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:89
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:108
 msgid "Separator Style"
-msgstr ""
+msgstr "Estilo de separador"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:93
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:112
 msgid "Line"
-msgstr ""
+msgstr "Línea"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:94
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:113
 msgid "Line With Icon"
-msgstr ""
+msgstr "Línea con icono"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:95
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:114
 msgid "Line With Image"
-msgstr ""
+msgstr "Línea con imagen"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:96
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:115
 msgid "Line With Text"
-msgstr ""
+msgstr "Línea con texto"
 
 #: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:119
 #: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:138
@@ -4480,12 +4450,167 @@ msgstr "Color sin marcar"
 msgid "Justify"
 msgstr "Justificar"
 
-#: classes/class-uabb-admin-settings.php:251
+#: admin/bsf-analytics/class-bsf-analytics.php:273
+#, php-format
+msgid "<strong>Help shape the future of %1$s.</strong><br><br>Share how you use the plugin so we can build features that matter, fix issues faster, and make smarter decisions."
+msgstr "<strong>Ayuda a dar forma al futuro de %1$s.</strong><br><br>Comparte cómo usas el plugin para que podamos construir características que importen, solucionar problemas más rápido y tomar decisiones más inteligentes."
+
+#. translators: %s usage doc link
+#: admin/bsf-analytics/class-bsf-analytics.php:303
+msgid "Learn more."
+msgstr "Aprende más."
+
+#: admin/bsf-analytics/class-bsf-analytics.php:313
+msgid "Happy to help!"
+msgstr "¡Feliz de ayudar!"
+
+#: admin/bsf-analytics/class-bsf-analytics.php:324
+msgid "Skip"
+msgstr "Saltar"
+
+#. translators: %s Product title
+#: admin/bsf-analytics/class-bsf-analytics.php:547
+#, php-format
+msgid "Help improve %s by sharing non-sensitive usage data — like PHP version and features used."
+msgstr "Ayuda a mejorar %s compartiendo datos de uso no sensibles, como la versión de PHP y las características utilizadas."
+
+#: admin/bsf-analytics/classes/class-bsf-analytics-helper.php:28
+msgid "Oops! Something went wrong. Please refresh the page and try again."
+msgstr "¡Ups! Algo salió mal. Por favor, actualiza la página e inténtalo de nuevo."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:80
+msgid "Quick Feedback"
+msgstr "Comentarios rápidos"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:83
+msgid "If you have a moment, please share why you are deactivating the plugin."
+msgstr "Si tienes un momento, por favor comparte por qué estás desactivando el plugin."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:132
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:307
+msgid "Please tell us more details."
+msgstr "Por favor, cuéntanos más detalles."
+
+#. translators: %1$s: link html start, %2$s: link html end
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:141
+#, php-format
+msgid "Need help from our experts? %1$sClick here to contact us.%2$s"
+msgstr "¿Necesitas ayuda de nuestros expertos? %1$sHaz clic aquí para contactarnos.%2$s"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:152
+msgid "Submit & Deactivate"
+msgstr "Enviar y desactivar"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:153
+msgid "Skip & Deactivate"
+msgstr "Saltar y desactivar"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:222
+msgid "Sorry, you are not allowed to do this operation."
+msgstr "Lo siento, no tienes permiso para realizar esta operación."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:235
+msgid "Nonce validation failed"
+msgstr "La validación de nonce falló"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:282
+msgid "This is a temporary deactivation for testing."
+msgstr "Esta es una desactivación temporal para pruebas."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:283
+msgid "How can we assist you?"
+msgstr "¿Cómo podemos ayudarte?"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:288
+msgid "The plugin isn't working properly."
+msgstr "El plugin no está funcionando correctamente."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:289
+msgid "Please tell us more about what went wrong?"
+msgstr "¿Por favor, cuéntanos más sobre lo que salió mal?"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:294
+msgid "I found a better alternative plugin."
+msgstr "Encontré un plugin alternativo mejor."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:295
+msgid "Could you please specify which plugin?"
+msgstr "¿Podrías especificar qué plugin?"
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:300
+msgid "It's missing a specific feature."
+msgstr "Falta una característica específica."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:301
+msgid "Please tell us more about the feature."
+msgstr "Por favor, cuéntanos más sobre la característica."
+
+#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:306
+msgid "Other"
+msgstr "Otro"
+
+#: bb-ultimate-addon.php:61
+#, php-format
+msgid "Unfortunately, plugin could not be activated as the memory allocated by your host has almost exhausted. Plugin recommends that your site should have 15M PHP memory remaining. <br/><br/>Please check <a target=\"_blank\" href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">this</a> article for solution or contact <a target=\"_blank\" href=\"http://store.brainstormforce.com/support\">support</a>.<br/><br/><a class=\"button button-primary\" href=\"%s\">Return to Plugins Page</a>"
+msgstr "Desafortunadamente, el plugin no pudo ser activado ya que la memoria asignada por tu host está casi agotada. El plugin recomienda que tu sitio tenga 15M de memoria PHP restante. <br/><br/>Por favor, consulta <a target=\"_blank\" href=\"https://www.ultimatebeaver.com/docs/increase-memory-limit-site/\">este</a> artículo para una solución o contacta <a target=\"_blank\" href=\"http://store.brainstormforce.com/support\">soporte</a>.<br/><br/><a class=\"button button-primary\" href=\"%s\">Regresar a la página de plugins</a>"
+
+#: classes/class-uabb-admin-settings.php:553
+msgid "Ultimate Addons for Beaver Builder Lite"
+msgstr "Complementos Definitivos para Beaver Builder Lite"
+
+#: classes/class-uabb-admin-settings.php:554
+msgid "How likely are you to recommend Ultimate Addons for Beaver Builder Lite to your friends or colleagues?"
+msgstr "¿Qué tan probable es que recomiendes Complementos Definitivos para Beaver Builder Lite a tus amigos o colegas?"
+
+#: classes/class-uabb-admin-settings.php:557
+msgid "Thanks a lot for your feedback! 😍"
+msgstr "¡Muchas gracias por tus comentarios! 😍"
+
+#: classes/class-uabb-admin-settings.php:558
+msgid "Thanks for using Ultimate Addons! Got feedback or suggestions to make it even better? We’d love to hear from you."
+msgstr "Gracias por usar Complementos Definitivos. ¿Tienes comentarios o sugerencias para mejorarlo aún más? Nos encantaría saber de ti."
+
+#: classes/class-uabb-admin-settings.php:562
+msgid "Thank you for your feedback"
+msgstr "Gracias por tus comentarios"
+
+#: classes/class-uabb-admin-settings.php:563
+msgid "We value your input. How can we improve your experience?"
+msgstr "Valoramos tu opinión. ¿Cómo podemos mejorar tu experiencia?"
+
+#: includes/admin-settings-analytics.php:11
+msgid "Help Us Improve Your Experience"
+msgstr "Ayúdanos a Mejorar Tu Experiencia"
+
+#: includes/admin-settings-analytics.php:25
+msgid "Help shape the future of Ultimate Addons for Beaver Builder. Share how you use the plugin so we can build features that matter, fix issues faster, and make smart desicions."
+msgstr "Ayuda a dar forma al futuro de los Complementos Definitivos para Beaver Builder. Comparte cómo usas el complemento para que podamos construir funciones que importen, resolver problemas más rápido y tomar decisiones inteligentes."
+
+#: includes/admin-settings-analytics.php:26
+msgid "Learn More"
+msgstr "Aprende Más"
+
+#. translators: %s is the upgrade URL.
+#: includes/admin-settings-template-cloud.php:16
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\">Go Premium</a> and get access to all Page Templates and Sections."
+msgstr "<a href=\"%s\" target=\"_blank\">Hazte Premium</a> y obtén acceso a todas las Plantillas de Página y Secciones."
+
+#: modules/advanced-icon/includes/frontend.php:32
+msgid "Go to"
+msgstr "Ir a"
+
+#: modules/uabb-heading/includes/frontend.php:54
+msgid "Go to "
+msgstr "Ir a "
+
+#: classes/class-uabb-admin-settings.php:257
+#, php-format
 msgctxt "%s stands for custom branded \"UABB\" name."
 msgid "%s Settings"
 msgstr "%s Configuraciones"
 
-#: classes/class-uabb-init.php:67
+#: classes/class-uabb-init.php:58
 msgctxt "Plugin action link label."
 msgid "Upgrade"
 msgstr "Actualizar"
