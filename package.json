@@ -32,7 +32,22 @@
     "i18n:gptpo:nl": "gpt-po translate --po languages/uabb-nl_NL.po --lang nl --verbose",
     "i18n:gptpo:fr": "gpt-po translate --po languages/uabb-fr_FR.po --lang fr --verbose",
     "i18n:gptpo:es": "gpt-po translate --po languages/uabb-es_ES.po --lang es --verbose",
-    "i18n:gptpo:de": "gpt-po translate --po languages/uabb-de_DE.po --lang de --verbose"
+    "i18n:gptpo:de": "gpt-po translate --po languages/uabb-de_DE.po --lang de --verbose",
+    "i18n:gptpo:id": "gpt-po translate --po languages/uabb-id_ID.po --lang id --verbose",
+    "i18n:gptpo:pt": "gpt-po translate --po languages/uabb-pt_BR.po --lang pt --verbose",
+    "i18n:gptpo:ru": "gpt-po translate --po languages/uabb-ru_RU.po --lang ru --verbose",
+    "i18n:gptpo:it": "gpt-po translate --po languages/uabb-it_IT.po --lang it --verbose",
+    "i18n:gptpo:tr": "gpt-po translate --po languages/uabb-tr_TR.po --lang tr --verbose",
+    "i18n:gptpo:ja": "gpt-po translate --po languages/uabb-ja.po --lang ja --verbose",
+    "i18n:gptpo:zh": "gpt-po translate --po languages/uabb-zh_CN.po --lang zh --verbose",
+    "i18n:gptpo:pl": "gpt-po translate --po languages/uabb-pl_PL.po --lang pl --verbose",
+    "i18n:gptpo:ar": "gpt-po translate --po languages/uabb-ar.po --lang ar --verbose",
+    "i18n:gptpo:sv": "gpt-po translate --po languages/uabb-sv_SE.po --lang sv --verbose",
+    "i18n:gptpo:vi": "gpt-po translate --po languages/uabb-vi.po --lang vi --verbose",
+    "i18n:gptpo:he": "gpt-po translate --po languages/uabb-he_IL.po --lang he --verbose",
+    "i18n:gptpo:th": "gpt-po translate --po languages/uabb-th.po --lang th --verbose",
+    "i18n:gptpo:el": "gpt-po translate --po languages/uabb-el.po --lang el --verbose",
+    "i18n:gptpo:cs": "gpt-po translate --po languages/uabb-cs_CZ.po --lang cs --verbose"
   },
   "dependencies": {
     "@wordpress/scripts": "^1.0.0"
