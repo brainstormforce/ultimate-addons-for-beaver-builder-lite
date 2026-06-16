@@ -50,6 +50,6 @@
     "i18n:gptpo:cs": "gpt-po translate --po languages/uabb-cs_CZ.po --lang cs --verbose"
   },
   "dependencies": {
-    "@wordpress/scripts": "^1.0.0"
+    "@wordpress/scripts": "^32.4.1"
   }
 }
