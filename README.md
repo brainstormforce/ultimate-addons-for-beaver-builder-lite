@@ -17,7 +17,7 @@ Extend Beaver Builder with powerful modules and ready-made templates to build st
 
 UABB is trusted by thousands of WordPress users to create beautiful sections and layouts visually. Everything works inside the familiar Beaver Builder editor, and no coding is needed.
 
-The free version includes a selection of useful modules like info boxes, call-to-action blocks, content toggles, and more. You also get access to pre-designed sections and page templates that make building websites faster and easier.
+The free version includes 13 useful modules like headings, buttons, info lists, info tables, flip boxes, and more. You also get access to pre-designed sections and page templates that make building websites faster and easier.
 
 When you're ready for more, [UABB Pro](https://www.ultimatebeaver.com/pricing/?utm_source=repo&utm_medium=wp&utm_campaign=wp-repo-CTA) offers a growing library of advanced modules, dynamic content support, WooCommerce widgets, and white-label options for agencies and power users.
 
@@ -31,7 +31,7 @@ Ultimate Addons is designed to help you work faster and design better—without 
 
 **Here’s why users choose UABB:**
 
-* **Build Cleaner Designs** – Flexible modules like info boxes, content toggles, separators, and more.
+* **Build Cleaner Designs** – Flexible modules like info lists, flip boxes, separators, and more.
 * **Save Time With Pre-Built Templates** – Insert professionally designed sections or full pages in seconds.
 * **No Coding Required** – Everything works visually inside the Beaver Builder interface.
 * **Works With Any Theme** – Tested with Astra, GeneratePress, and other leading themes.
@@ -44,18 +44,19 @@ No matter your experience level, UABB helps you design faster, avoid bloat, and 
 
 These are the core modules included in the free version of UABB. Each is designed to add real value to your layouts, without adding clutter.
 
-* **Info Box** – Heading, icon, and text in a flexible content block.
-* **Call to Action** – Highlight offers with buttons and styled text.
+* **Heading** – Stylish headings with separators, gradients, and typography controls.
+* **Button** – Call-to-action buttons with flexible styling and hover effects.
+* **Info List** – Lists with icons or images, connectors, and rich content per item.
+* **Info Table** – Structured info or pricing-style tables with headings, features, and buttons.
+* **Flip Box** – Two-sided content boxes that flip on hover to reveal more.
+* **Slide Box** – Boxes that slide on hover to reveal additional content.
+* **Image / Icon** – A single image or icon with styling and hover effects.
+* **Advanced Icons** – Display a group of icons or images together.
 * **Image Separator** – Add stylish image dividers between content sections.
-* **Content Toggle** – Switchable content (e.g., Pricing Monthly/Yearly).
-* **Dual Button** – Two buttons side-by-side for split CTAs.
-* **Creative Button** – Buttons with modern hover effects and gradients.
-* **Timeline** – Vertical timeline for steps or history.
-* **Team** – Showcase team members with images and roles.
-* **Testimonials** – Display client feedback elegantly.
-* **Social Share** – Add share buttons to boost content visibility.
-* **Advanced Heading** – Headings with subtext, lines, and styling.
-* **Price Box** – Clean layouts for pricing and service offers.
+* **Ribbon** – Ribbon-style banners to highlight key content.
+* **Star Rating** – Display star ratings for reviews and testimonials.
+* **Simple Separator** – A clean divider line to separate content.
+* **Spacer / Gap** – Add precise, responsive spacing between elements.
 
 **Note:** These modules are available right after activation. You can start designing with them inside the Beaver Builder editor.
 
