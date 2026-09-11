@@ -1,7 +1,7 @@
 === Ultimate Addons for Beaver Builder - Lite ===
 Contributors: brainstormforce
 Donate link: https://www.paypal.me/BrainstormForce
-Tags: beaver builder, beaver builder free, beaver builder lite, beaver builder addons, beaver builder extensions
+Tags: beaver builder, beaver builder addons, beaver builder extensions, beaver builder modules, beaver builder templates
 Requires at least: 4.6
 Requires PHP: 7.0
 Tested up to: 7.1
@@ -9,7 +9,7 @@ Stable tag: 1.6.11
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Extend Beaver Builder with powerful modules and ready-made templates to build stunning WordPress websites faster.
+Extend Beaver Builder with powerful modules, ready-made templates and sections. Design stunning WordPress websites — no coding required.
 
 == Description ==
 
@@ -19,7 +19,7 @@ UABB is trusted by thousands of WordPress users to create beautiful sections and
 
 The free version includes 13 useful modules like headings, buttons, info lists, info tables, flip boxes, and more. You also get access to pre-designed sections and page templates that make building websites faster and easier.
 
-When you're ready for more, [UABB Pro](https://www.ultimatebeaver.com/pricing/?utm_source=repo&utm_medium=wp&utm_campaign=wp-repo-CTA) offers a growing library of advanced modules, dynamic content support, WooCommerce widgets, and white-label options for agencies and power users.
+When you're ready for more, [UABB Pro](https://www.ultimatebeaver.com/pricing/?utm_source=repo&utm_medium=wp&utm_campaign=wp-repo-CTA) offers a growing library of advanced modules, dynamic content support, WooCommerce modules, and white-label options for agencies and power users.
 
 Whether you're just getting started with WordPress or building multiple sites for clients, UABB gives you control, performance, and reliability to design beautiful, high-converting websites efficiently.
 
@@ -40,7 +40,7 @@ Ultimate Addons is designed to help you work faster and design better—without 
 
 No matter your experience level, UABB helps you design faster, avoid bloat, and build sites that look and perform better.
 
-### **Free Widgets in Ultimate Addons for Beaver Builder**
+### **Free Modules in Ultimate Addons for Beaver Builder**
 
 These are the core modules included in the free version of UABB. Each is designed to add real value to your layouts, without adding clutter.
 
@@ -73,9 +73,25 @@ Upgrade to UABB Pro and unlock access to advanced modules, templates, and agency
 * **Premium Support** – Get fast, priority assistance from the UABB team when you need help.
 * **Risk-Free 100% Money-Back Guarantee** – Try UABB Pro with confidence thanks to a 100% money-back guarantee.
 
+**Popular modules available in UABB Pro:**
+
+* **Modal Popup (Pro)** – Open content, forms, or videos in customizable popups.
+* **Info Box (Pro)** – Combine icons, images, headings, and buttons into feature boxes.
+* **Advanced Tabs (Pro)** – Organize content into stylish, responsive tabs.
+* **Advanced Posts (Pro)** – Display blog posts in grids, carousels, and masonry layouts.
+* **Before After Slider (Pro)** – Compare two images with an interactive slider.
+* **Hotspot (Pro)** – Add interactive tooltips and markers over images.
+* **Countdown (Pro)** – Create urgency with countdown timers for offers and launches.
+* **Table of Contents (Pro)** – Auto-generate navigable page outlines for long content.
+* **Team (Pro)** – Showcase team members with photos and social links.
+* **Testimonials (Pro)** – Display customer reviews in sliders and grids.
+* **Video & Video Gallery (Pro)** – Embed videos with custom thumbnails and lightbox galleries.
+* **Woo Products, Woo Add to Cart & Woo Categories (Pro)** – Build WooCommerce shop layouts with drag and drop.
+* **Form Stylers (Pro)** – Style Contact Form 7, Gravity Forms, and WPForms visually.
+
 **Love what you see? [Get Pro Now](https://www.ultimatebeaver.com/pricing)**
 
-### **How These Beaver Builder Widgets Help**
+### **How These Beaver Builder Modules Help**
 
 * Build content sections, callouts, and pricing layouts visually in Beaver Builder  
 * Avoid relying on external plugins or custom CSS for design elements
@@ -83,7 +99,7 @@ Upgrade to UABB Pro and unlock access to advanced modules, templates, and agency
 * Improve overall site readability, usability, and visual appeal
 * Design faster with essential modules that support most website types
 
-The free UABB widgets provide a strong starting point for professional websites, and they work well with any Beaver Builder-compatible WordPress theme.
+The free UABB modules provide a strong starting point for professional websites, and they work well with any Beaver Builder-compatible WordPress theme.
 
 🚀 Ready to expand? [Upgrade to Ultimate Addons for Beaver Builder Pro](https://www.ultimatebeaver.com/pricing/?utm_source=repo&utm_medium=wp&utm_campaign=wp-repo-CTA) to access advanced modules, features, and templates.
 
@@ -135,16 +151,33 @@ Access [170+ tutorials](https://www.ultimatebeaver.com/docs) for guidance. Join 
 
 == Frequently Asked Questions ==
 
-= Who should use Ultimate Addons? =
-Anyone building professional websites with Beaver Builder
-= Do I need coding skills? =
-No, it’s entirely drag-and-drop.
+= Do I need Beaver Builder Pro to use Ultimate Addons? =
+No. UABB works with both the free Beaver Builder Lite plugin and any paid Beaver Builder plan. Install Beaver Builder first, then activate UABB to get the additional modules.
+
+= Can I build a complete website with the free version? =
+Yes. The free version includes 13 design modules plus ready-made page templates and sections, which is enough to build complete pages and websites. UABB Pro adds 60+ advanced modules and a larger template library.
+
+= Will Ultimate Addons slow down my website? =
+No. UABB is built for performance — it loads assets only for the modules used on a page and adds no bloat to pages that don't use them.
+
+= Does it work with WooCommerce? =
+Yes. UABB Pro includes dedicated WooCommerce modules — Woo Products, Woo Add to Cart, and Woo Categories — to build shop and product layouts with drag and drop.
+
+= Does it work with my theme? =
+Yes. UABB works with any theme that supports Beaver Builder, and is tested with popular themes like Astra and GeneratePress.
+
+= Is it suitable for beginners? Do I need coding skills? =
+Yes, it's beginner-friendly. Everything is drag and drop inside the Beaver Builder editor — no coding skills are needed.
+
+= What is the difference between the free version and UABB Pro? =
+The free version includes 13 modules and a starter set of templates. UABB Pro adds 60+ advanced modules (popups, tabs, posts, WooCommerce, form stylers, and more), 200+ row templates, 100+ page templates, white-label branding, and premium support.
+
 = Can I use it on client sites? =
-Yes, both free and pro versions support unlimited sites.
-= Will it affect website speed? =
-No, it’s optimized for performance.
+Yes, both the free and Pro versions can be used on unlimited websites, including client projects.
+
 = Is it translation ready? =
-Yes, with .po and .mo files and GlotPress support.
+Yes. UABB ships with translations for 19 languages and supports .po/.mo files and GlotPress, so you can translate it into any language.
+
 = How can I report a security bug? =
 We take plugin security extremely seriously. If you discover a security vulnerability, please report it in a safe and responsible manner.
 
@@ -155,10 +188,10 @@ You can report the issue through our [Bug Bounty Program](https://brainstormforc
 
 == Screenshots ==
 
-1. [Screenshot of modules](/assets/screenshots/1.png)
-2. [Screenshot of templates](/assets/screenshots/2.png)
-3. [Screenshot of customization](/assets/screenshots/3.png)
-4. [Screenshot of performance settings](/assets/screenshots/4.png)
+1. General Settings — enable UI design enhancements and live preview for the Beaver Builder editor.
+2. Modules — see all UABB modules available on your site at a glance.
+3. Template Cloud — browse and insert ready-made page templates and sections.
+4. Font Icon Manager — reload UABB icon fonts with one click.
 
 ---
 
