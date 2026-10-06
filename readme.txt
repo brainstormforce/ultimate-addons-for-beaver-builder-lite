@@ -1,4 +1,4 @@
-=== Ultimate Addons for Beaver Builder - Lite ===
+=== Ultimate Addons for Beaver Builder ===
 Contributors: brainstormforce
 Donate link: https://www.paypal.me/BrainstormForce
 Tags: beaver builder, beaver builder free, beaver builder lite, beaver builder addons, beaver builder extensions
