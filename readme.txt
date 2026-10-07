@@ -1,4 +1,4 @@
-=== Ultimate Addons for Beaver Builder - Lite ===
+=== Ultimate Addons for Beaver Builder – Modules & Templates ===
 Contributors: brainstormforce
 Donate link: https://www.paypal.me/BrainstormForce
 Tags: beaver builder, beaver builder addons, beaver builder extensions, beaver builder modules, beaver builder templates
