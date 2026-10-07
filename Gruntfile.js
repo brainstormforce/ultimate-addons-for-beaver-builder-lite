@@ -49,7 +49,10 @@ module.exports = function( grunt ) {
                     '!stubs-generator.php',
 	                '!phpcs.xml.dist',
 					'!wiki/**',
-					'!CLAUDE.md'
+					'!CLAUDE.md',
+					'!**/CLAUDE.md',
+					'!**/architecture.md',
+					'!.codedna/**'
 	            ],
 	            dest: 'ultimate-addons-for-beaver-builder-lite/'
 	        }
