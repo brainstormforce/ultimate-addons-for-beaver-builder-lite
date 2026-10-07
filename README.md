@@ -1,4 +1,4 @@
-# Ultimate Addons for Beaver Builder – Modules & Templates #
+# Ultimate Addons for Beaver Builder (UABB) #
 **Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce/)  
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Tags:** beaver builder, beaver builder addons, beaver builder extensions, beaver builder modules, beaver builder templates  
