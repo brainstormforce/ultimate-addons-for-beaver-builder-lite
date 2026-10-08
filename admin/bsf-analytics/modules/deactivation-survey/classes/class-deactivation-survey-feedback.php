@@ -207,6 +207,7 @@ if ( ! class_exists( 'Deactivation_Survey_Feedback' ) ) {
 
 			wp_enqueue_style( 'uds-feedback-style', $dir_path . 'assets/css/feedback' . $file_ext . '.css', array(), BSF_ANALYTICS_VERSION );
 			wp_style_add_data( 'uds-feedback-style', 'rtl', 'replace' );
+			wp_style_add_data( 'uds-feedback-style', 'suffix', $file_ext );
 		}
 
 		/**
