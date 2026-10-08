@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-08-26",
+  "modules": [
+    { "id": "core", "path": "classes", "claude": "classes/CLAUDE.md", "architecture": "classes/architecture.md", "language": "php", "confidence": "high", "reason": "manual-core" },
+    { "id": "advanced-icon", "path": "modules/advanced-icon", "claude": "modules/advanced-icon/CLAUDE.md", "architecture": "modules/advanced-icon/architecture.md", "language": "php", "confidence": "medium", "reason": "source-cluster" },
+    { "id": "flip-box", "path": "modules/flip-box", "claude": "modules/flip-box/CLAUDE.md", "architecture": "modules/flip-box/architecture.md", "language": "php", "confidence": "medium", "reason": "source-cluster" },
+    { "id": "image-icon", "path": "modules/image-icon", "claude": "modules/image-icon/CLAUDE.md", "architecture": "modules/image-icon/architecture.md", "language": "php", "confidence": "medium", "reason": "source-cluster" },
+    { "id": "image-separator", "path": "modules/image-separator", "claude": "modules/image-separator/CLAUDE.md", "architecture": "modules/image-separator/architecture.md", "language": "php", "confidence": "medium", "reason": "source-cluster" },
+    { "id": "info-list", "path": "modules/info-list", "claude": "modules/info-list/CLAUDE.md", "architecture": "modules/info-list/architecture.md", "language": "php", "confidence": "medium", "reason": "source-cluster" },
+    { "id": "info-table", "path": "modules/info-table", "claude": "modules/info-table/CLAUDE.md", "architecture": "modules/info-table/architecture.md", "language": "php", "confidence": "medium", "reason": "source-cluster" },
+    { "id": "ribbon", "path": "modules/ribbon", "claude": "modules/ribbon/CLAUDE.md", "architecture": "modules/ribbon/architecture.md", "language": "php", "confidence": "medium", "reason": "source-cluster" },
+    { "id": "slide-box", "path": "modules/slide-box", "claude": "modules/slide-box/CLAUDE.md", "architecture": "modules/slide-box/architecture.md", "language": "php", "confidence": "medium", "reason": "source-cluster" },
+    { "id": "spacer-gap", "path": "modules/spacer-gap", "claude": "modules/spacer-gap/CLAUDE.md", "architecture": "modules/spacer-gap/architecture.md", "language": "php", "confidence": "medium", "reason": "source-cluster" },
+    { "id": "uabb-button", "path": "modules/uabb-button", "claude": "modules/uabb-button/CLAUDE.md", "architecture": "modules/uabb-button/architecture.md", "language": "php", "confidence": "medium", "reason": "source-cluster" },
+    { "id": "uabb-heading", "path": "modules/uabb-heading", "claude": "modules/uabb-heading/CLAUDE.md", "architecture": "modules/uabb-heading/architecture.md", "language": "php", "confidence": "medium", "reason": "source-cluster" },
+    { "id": "uabb-separator", "path": "modules/uabb-separator", "claude": "modules/uabb-separator/CLAUDE.md", "architecture": "modules/uabb-separator/architecture.md", "language": "php", "confidence": "medium", "reason": "source-cluster" },
+    { "id": "uabb-star-rating", "path": "modules/uabb-star-rating", "claude": "modules/uabb-star-rating/CLAUDE.md", "architecture": "modules/uabb-star-rating/architecture.md", "language": "php", "confidence": "low", "reason": "thin-folder" }
+  ]
+}
