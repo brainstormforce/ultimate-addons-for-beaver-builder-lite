@@ -198,9 +198,6 @@ You can report the issue through our [Bug Bounty Program](https://brainstormforc
 == Changelog ==
 = 1.6.12 =
 * Improvement: Updated internal libraries to improve stability and compatibility.
-* Fix: Feedback survey popup could stay open if dismissing it failed.
-* Fix: Deactivation feedback form styles not loading on right-to-left (RTL) language sites.
-* Fix: Corrected the module count in the plugin description.
 
 = 1.6.11 =
 * New: UABB Lite now includes translations for 15 additional languages - Indonesian, Brazilian Portuguese, Russian, Italian, Turkish, Japanese, Simplified Chinese, Polish, Arabic, Swedish, Vietnamese, Hebrew, Thai, Greek, and Czech - alongside refreshed Dutch, French, Spanish, and German, expanding multilingual support.
