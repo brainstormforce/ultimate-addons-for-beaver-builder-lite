@@ -49,7 +49,10 @@ module.exports = function( grunt ) {
                     '!stubs-generator.php',
 	                '!phpcs.xml.dist',
 					'!wiki/**',
-					'!CLAUDE.md'
+					'!CLAUDE.md',
+					'!**/CLAUDE.md',
+					'!**/architecture.md',
+					'!.codedna/**'
 	            ],
 	            dest: 'ultimate-addons-for-beaver-builder-lite/'
 	        }
@@ -80,6 +83,7 @@ module.exports = function( grunt ) {
 	        target: {
 	            options: {
 	                domainPath: '/',
+	                exclude: [ 'node_modules/.*', 'vendor/.*', '\\.claude/.*' ],
 	                mainFile: 'bb-ultimate-addon.php',
 	                potFilename: 'languages/uabb.pot',
 	                potHeaders: {
@@ -98,7 +102,7 @@ module.exports = function( grunt ) {
 	        },
 	        target: {
 	            files: {
-	                src: ['*.php', '**/*.php', '!node_modules/**', '!php-tests/**', '!bin/**', '!admin/bsf-core/**']
+	                src: ['*.php', '**/*.php', '!node_modules/**', '!vendor/**', '!.claude/**', '!php-tests/**', '!bin/**', '!admin/bsf-core/**']
 	            }
 	        }
 	    }
