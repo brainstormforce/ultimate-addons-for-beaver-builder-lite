@@ -52,7 +52,8 @@ module.exports = function( grunt ) {
 					'!CLAUDE.md',
 					'!**/CLAUDE.md',
 					'!**/architecture.md',
-					'!.codedna/**'
+					'!.codedna/**',
+					'!.claude/**'
 	            ],
 	            dest: 'ultimate-addons-for-beaver-builder-lite/'
 	        }
