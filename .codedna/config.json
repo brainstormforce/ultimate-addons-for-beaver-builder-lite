@@ -1,0 +1,33 @@
+{
+  "mode": "auto",
+  "moduleRoots": [
+    "src",
+    "app",
+    "apps",
+    "packages",
+    "services",
+    "modules",
+    "internal",
+    "libs",
+    "backend",
+    "frontend",
+    "classes"
+  ],
+  "ignore": [
+    "node_modules",
+    ".git",
+    "dist",
+    "build",
+    "out",
+    "coverage",
+    "vendor",
+    ".next",
+    ".nuxt",
+    "target",
+    "__pycache__",
+    "generated",
+    ".venv",
+    "lib",
+    "admin/bsf-analytics"
+  ]
+}

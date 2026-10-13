@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Ultimate Addons for Beaver Builder - Lite plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.10\n"
+"Project-Id-Version: Ultimate Addons for Beaver Builder - Lite 1.6.12\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ultimate-addons-for-beaver-builder-lite\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-08T08:30:02+00:00\n"
+"POT-Creation-Date: 2026-10-08T13:24:08+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: uabb\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #. Description of the plugin
 #: bb-ultimate-addon.php
-msgid "Ultimate Addons is a free extension for Beaver Builder that adds 10 modules, and works on top of any Beaver Builder Package. (Free, Standard, Pro & Agency) You can use it with on any WordPress theme."
+msgid "Ultimate Addons is a free extension for Beaver Builder that adds 13 modules, and works on top of any Beaver Builder Package. (Free, Standard, Pro & Agency) You can use it with any WordPress theme."
 msgstr ""
 
 #. Author of the plugin
@@ -37,161 +37,6 @@ msgstr ""
 #. Author URI of the plugin
 #: bb-ultimate-addon.php
 msgid "http://www.brainstormforce.com"
-msgstr ""
-
-#: admin/bsf-analytics/class-bsf-analytics.php:273
-#, php-format
-msgid "<strong>Help shape the future of %1$s.</strong><br><br>Share how you use the plugin so we can build features that matter, fix issues faster, and make smarter decisions."
-msgstr ""
-
-#: admin/bsf-analytics/class-bsf-analytics.php:279
-msgid "This will be applicable for all sites from the network."
-msgstr ""
-
-#. translators: %s usage doc link
-#: admin/bsf-analytics/class-bsf-analytics.php:303
-msgid "Learn more."
-msgstr ""
-
-#: admin/bsf-analytics/class-bsf-analytics.php:313
-msgid "Happy to help!"
-msgstr ""
-
-#: admin/bsf-analytics/class-bsf-analytics.php:324
-msgid "Skip"
-msgstr ""
-
-#: admin/bsf-analytics/class-bsf-analytics.php:502
-msgid "Usage Tracking"
-msgstr ""
-
-#. translators: %s Product title
-#: admin/bsf-analytics/class-bsf-analytics.php:547
-#, php-format
-msgid "Help improve %s by sharing non-sensitive usage data — like PHP version and features used."
-msgstr ""
-
-#: admin/bsf-analytics/class-bsf-analytics.php:550
-msgid " This will be applicable for all sites from the network."
-msgstr ""
-
-#: admin/bsf-analytics/class-bsf-analytics.php:555
-msgid "Learn More."
-msgstr ""
-
-#: admin/bsf-analytics/classes/class-bsf-analytics-helper.php:28
-msgid "Oops! Something went wrong. Please refresh the page and try again."
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:80
-msgid "Quick Feedback"
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:83
-msgid "If you have a moment, please share why you are deactivating the plugin."
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:105
-#: modules/advanced-icon/advanced-icon.php:324
-#: modules/advanced-icon/advanced-icon.php:339
-#: modules/flip-box/flip-box-bb-2-2-compatibility.php:14
-#: modules/flip-box/flip-box-bb-2-2-compatibility.php:24
-#: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:13
-#: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:23
-#: modules/image-icon/image-icon-bb-2-2-compatibility.php:25
-#: modules/image-icon/image-icon-bb-2-2-compatibility.php:46
-#: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:24
-#: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:45
-#: modules/info-list/info-list-bb-2-2-compatibility.php:374
-#: modules/info-list/info-list-bb-2-2-compatibility.php:402
-#: modules/info-list/info-list-bb-2-2-compatibility.php:418
-#: modules/info-list/info-list-bb-2-2-compatibility.php:422
-#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:430
-#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:467
-#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:483
-#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:487
-#: modules/info-table/info-table-bb-2-2-compatibility.php:284
-#: modules/info-table/info-table-bb-2-2-compatibility.php:304
-#: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:280
-#: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:300
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:50
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:65
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:69
-#: modules/slide-box/slide-box-bb-2-2-compatibility.php:539
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:49
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:64
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:68
-#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:568
-#: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:133
-#: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:136
-#: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:134
-#: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:153
-#: objects/fl-nested-form-button.php:142
-#: objects/fl-nested-form-button.php:563
-msgid "Icon"
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:132
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:307
-msgid "Please tell us more details."
-msgstr ""
-
-#. translators: %1$s: link html start, %2$s: link html end
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:141
-#, php-format
-msgid "Need help from our experts? %1$sClick here to contact us.%2$s"
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:152
-msgid "Submit & Deactivate"
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:153
-msgid "Skip & Deactivate"
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:222
-msgid "Sorry, you are not allowed to do this operation."
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:235
-msgid "Nonce validation failed"
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:282
-msgid "This is a temporary deactivation for testing."
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:283
-msgid "How can we assist you?"
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:288
-msgid "The plugin isn't working properly."
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:289
-msgid "Please tell us more about what went wrong?"
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:294
-msgid "I found a better alternative plugin."
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:295
-msgid "Could you please specify which plugin?"
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:300
-msgid "It's missing a specific feature."
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:301
-msgid "Please tell us more about the feature."
-msgstr ""
-
-#: admin/bsf-analytics/modules/deactivation-survey/classes/class-deactivation-survey-feedback.php:306
-msgid "Other"
 msgstr ""
 
 #: bb-ultimate-addon.php:61
@@ -1758,6 +1603,45 @@ msgstr ""
 #: modules/slide-box/slide-box-bb-2-2-compatibility.php:45
 #: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:44
 msgid "Image Type"
+msgstr ""
+
+#: modules/advanced-icon/advanced-icon.php:324
+#: modules/advanced-icon/advanced-icon.php:339
+#: modules/flip-box/flip-box-bb-2-2-compatibility.php:14
+#: modules/flip-box/flip-box-bb-2-2-compatibility.php:24
+#: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:13
+#: modules/flip-box/flip-box-bb-less-than-2-2-compatibility.php:23
+#: modules/image-icon/image-icon-bb-2-2-compatibility.php:25
+#: modules/image-icon/image-icon-bb-2-2-compatibility.php:46
+#: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:24
+#: modules/image-icon/image-icon-bb-less-than-2-2-compatibility.php:45
+#: modules/info-list/info-list-bb-2-2-compatibility.php:374
+#: modules/info-list/info-list-bb-2-2-compatibility.php:402
+#: modules/info-list/info-list-bb-2-2-compatibility.php:418
+#: modules/info-list/info-list-bb-2-2-compatibility.php:422
+#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:430
+#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:467
+#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:483
+#: modules/info-list/info-list-bb-less-than-2-2-compatibility.php:487
+#: modules/info-table/info-table-bb-2-2-compatibility.php:284
+#: modules/info-table/info-table-bb-2-2-compatibility.php:304
+#: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:280
+#: modules/info-table/info-table-bb-less-than-2-2-compatibility.php:300
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:50
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:65
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:69
+#: modules/slide-box/slide-box-bb-2-2-compatibility.php:539
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:49
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:64
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:68
+#: modules/slide-box/slide-box-bb-less-than-2-2-compatibility.php:568
+#: modules/uabb-button/uabb-button-bb-2-2-compatibility.php:133
+#: modules/uabb-button/uabb-button-bb-less-than-2-2-compatibility.php:136
+#: modules/uabb-heading/uabb-heading-bb-2-2-compatibility.php:134
+#: modules/uabb-heading/uabb-heading-bb-less-than-2-2-compatibility.php:153
+#: objects/fl-nested-form-button.php:142
+#: objects/fl-nested-form-button.php:563
+msgid "Icon"
 msgstr ""
 
 #: modules/advanced-icon/advanced-icon.php:325

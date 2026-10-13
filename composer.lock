@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "brainstormforce/astra-notices",
-            "version": "1.2.1",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainstormforce/astra-notices.git",
-                "reference": "79430df6cc3bf97efeb287989c1c4a848dbd8039"
+                "reference": "ac1564a44cf39dbc2bf824bf8ecb6d4c7ff4650f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainstormforce/astra-notices/zipball/79430df6cc3bf97efeb287989c1c4a848dbd8039",
-                "reference": "79430df6cc3bf97efeb287989c1c4a848dbd8039",
+                "url": "https://api.github.com/repos/brainstormforce/astra-notices/zipball/ac1564a44cf39dbc2bf824bf8ecb6d4c7ff4650f",
+                "reference": "ac1564a44cf39dbc2bf824bf8ecb6d4c7ff4650f",
                 "shasum": ""
             },
             "require": {
@@ -47,22 +47,22 @@
             "description": "Easily create admin notices",
             "support": {
                 "issues": "https://github.com/brainstormforce/astra-notices/issues",
-                "source": "https://github.com/brainstormforce/astra-notices/tree/1.2.1"
+                "source": "https://github.com/brainstormforce/astra-notices/tree/1.2.3"
             },
-            "time": "2026-04-20T10:30:34+00:00"
+            "time": "2026-05-20T07:50:48+00:00"
         },
         {
             "name": "brainstormforce/bsf-analytics",
-            "version": "1.1.26",
+            "version": "1.1.29",
             "source": {
                 "type": "git",
                 "url": "git@github.com:brainstormforce/bsf-analytics.git",
-                "reference": "e9079f78d4cf7a3e85ea61e94f842e2f8e00ee68"
+                "reference": "d219f81987f6ab2703ac76b1443a67d3f5be8be2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainstormforce/bsf-analytics/zipball/e9079f78d4cf7a3e85ea61e94f842e2f8e00ee68",
-                "reference": "e9079f78d4cf7a3e85ea61e94f842e2f8e00ee68",
+                "url": "https://api.github.com/repos/brainstormforce/bsf-analytics/zipball/d219f81987f6ab2703ac76b1443a67d3f5be8be2",
+                "reference": "d219f81987f6ab2703ac76b1443a67d3f5be8be2",
                 "shasum": ""
             },
             "require-dev": {
@@ -100,24 +100,20 @@
                 ]
             },
             "description": "Library to gather non sensitive analytics data to enhance bsf products.",
-            "support": {
-                "source": "https://github.com/brainstormforce/bsf-analytics/tree/1.1.26",
-                "issues": "https://github.com/brainstormforce/bsf-analytics/issues"
-            },
-            "time": "2026-04-20T10:30:24+00:00"
+            "time": "2026-06-29T13:29:46+00:00"
         },
         {
             "name": "brainstormforce/nps-survey",
-            "version": "1.0.22",
+            "version": "1.0.25",
             "source": {
                 "type": "git",
                 "url": "git@github.com:brainstormforce/nps-survey.git",
-                "reference": "4c64e58b97612802017ecc5bd4e2950700d54fa0"
+                "reference": "c70ea29690a233faa65006afbe700d0a53edcf2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainstormforce/nps-survey/zipball/4c64e58b97612802017ecc5bd4e2950700d54fa0",
-                "reference": "4c64e58b97612802017ecc5bd4e2950700d54fa0",
+                "url": "https://api.github.com/repos/brainstormforce/nps-survey/zipball/c70ea29690a233faa65006afbe700d0a53edcf2c",
+                "reference": "c70ea29690a233faa65006afbe700d0a53edcf2c",
                 "shasum": ""
             },
             "require-dev": {
@@ -163,11 +159,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "NPS Survey Plugin",
-            "support": {
-                "source": "https://github.com/brainstormforce/nps-survey/tree/1.0.22",
-                "issues": "https://github.com/brainstormforce/nps-survey/issues"
-            },
-            "time": "2026-04-27T15:35:24+00:00"
+            "time": "2026-10-07T06:56:58+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -6081,5 +6073,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

@@ -37,3 +37,8 @@ auth.json
 .env
 .env.*
 credentials.json
+.claude
+.codedna
+CLAUDE.md
+architecture.md
+wiki

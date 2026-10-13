@@ -198,3 +198,38 @@ Every module extends `FLBuilderModule` and calls `FLBuilder::register_module()`.
 - [WordPress.org Plugin Page](https://wordpress.org/plugins/ultimate-addons-for-beaver-builder-lite/)
 - [Official Docs](https://www.ultimatebeaver.com/docs)
 - [Bug Bounty / Security](https://brainstormforce.com/bug-bounty-program/)
+
+---
+
+<!-- codedna:start — managed section. Edit freely; keep the markers so a
+     teammate running `setup` updates this block instead of duplicating it. -->
+## CodeDNA
+
+Engineering context lives next to the code. Most module folders under `modules/`
+and the core in `classes/` carry a `CLAUDE.md` (rules and gotchas, auto-loaded
+when you read files there) and an `architecture.md` (what it owns, and why).
+The generated map is `.codedna/modules.json`.
+
+Before changing a module, read its `architecture.md` (its `CLAUDE.md` has already
+loaded), then the code and any linked ADRs. Use only what the code and those
+sources show — do not invent. When knowledge shifts, update that module's docs
+in the same change: a rule or gotcha → `CLAUDE.md`; what it owns or why →
+`architecture.md`. Never write the same fact in both, and never add a timestamp.
+
+### Cross-cutting invariants (true across most modules)
+
+- **R1 — Dual BB-version settings files.** Most modules `require` one of
+  `{slug}-bb-2-2-compatibility.php` / `{slug}-bb-less-than-2-2-compatibility.php`
+  via `UABB_Lite_Compatibility::check_bb_version()`. A field added to only one
+  file silently disappears on the other BB version — edit both.
+- **R2 — Icon/image rendering is delegated to `image-icon`.** advanced-icon,
+  info-list, info-table, flip-box, slide-box and uabb-heading render icons/images
+  by calling `FLBuilder::render_module_html( 'image-icon', … )`. Icon markup,
+  escaping and `aria-hidden` live in `modules/image-icon/`, not in the caller —
+  and that markup is copied, not shared, so a fix there does not reach the copies.
+- **R3 — Configurable tags are whitelisted at render, with an `h3` fallback.**
+  User-selectable heading/tag settings are validated against an `allowed_tags`
+  array before being echoed (see uabb-heading, ribbon, info-table, info-list,
+  flip-box). Reuse this pattern; never echo a user-supplied tag name raw.
+<!-- codedna:end -->
+
