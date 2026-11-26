@@ -71,6 +71,29 @@ class UABBHeadingModule extends FLBuilderModule {
 			}
 		}
 	}
+
+	/**
+	 * Returns the separator text tag, checked against the field's own options.
+	 *
+	 * The value is printed as an element name in includes/frontend.php and as
+	 * part of CSS selectors in includes/frontend.css.php. Escaping cannot make
+	 * either position safe, and the field's esc_tags sanitizer runs only on
+	 * Beaver Builder's save_settings path, so both templates use this check.
+	 *
+	 * @since x.x.x
+	 * @param object $settings The module settings.
+	 * @return string One of h1-h6, div, p or span; h3 when the stored value is not allowed.
+	 */
+	public static function get_separator_text_tag( $settings ) {
+		$allowed_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
+
+		if ( is_object( $settings ) && isset( $settings->separator_text_tag_selection ) && in_array( $settings->separator_text_tag_selection, $allowed_tags, true ) ) {
+			return $settings->separator_text_tag_selection;
+		}
+
+		return 'h3';
+	}
+
 	/**
 	 * Ensure backwards compatibility with old settings.
 	 *
