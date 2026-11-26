@@ -17,6 +17,10 @@ if ( ! isset( $module ) ) {
 	$module = new stdClass(); // Create an empty object to avoid undefined errors.
 }
 
+// Whitelist the separator text tag; the value is printed as an element name.
+$separator_text_tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p', 'span' );
+$separator_text_tag  = ( isset( $settings->separator_text_tag_selection ) && in_array( $settings->separator_text_tag_selection, $separator_text_tags, true ) ) ? $settings->separator_text_tag_selection : 'h3';
+
 ?>
 <div class="uabb-module-content uabb-heading-wrapper uabb-heading-align-<?php echo esc_attr( $settings->alignment ); ?> <?php echo ( 'line_text' === $settings->separator_style ) ? esc_attr( $settings->responsive_compatibility ) : ''; ?>">
 	<?php if ( 'top' === $settings->separator_position ) { ?>
@@ -30,7 +34,7 @@ if ( ! isset( $module ) ) {
 						<?php $module->render_image(); ?>
 						<?php
 						if ( 'line_text' === $settings->separator_style ) {
-							echo '<' . esc_attr( $settings->separator_text_tag_selection ) . ' class="uabb-divider-text">' . esc_html( $settings->text_inline ) . '</' . esc_attr( $settings->separator_text_tag_selection ) . '>';
+							echo '<' . esc_attr( $separator_text_tag ) . ' class="uabb-divider-text">' . esc_html( $settings->text_inline ) . '</' . esc_attr( $separator_text_tag ) . '>';
 						}
 						?>
 					</div>			 		    
@@ -70,7 +74,7 @@ if ( ! isset( $module ) ) {
 						<?php $module->render_image(); ?>
 						<?php
 						if ( 'line_text' === $settings->separator_style ) {
-							echo '<' . esc_attr( $settings->separator_text_tag_selection ) . ' class="uabb-divider-text">' . esc_html( $settings->text_inline ) . '</' . esc_attr( $settings->separator_text_tag_selection ) . '>';
+							echo '<' . esc_attr( $separator_text_tag ) . ' class="uabb-divider-text">' . esc_html( $settings->text_inline ) . '</' . esc_attr( $separator_text_tag ) . '>';
 						}
 						?>
 					</div>					    
@@ -102,7 +106,7 @@ if ( ! isset( $module ) ) {
 						<?php $module->render_image(); ?>
 						<?php
 						if ( 'line_text' === $settings->separator_style ) {
-								echo '<' . esc_attr( $settings->separator_text_tag_selection ) . ' class="uabb-divider-text">' . esc_html( $settings->text_inline ) . '</' . esc_attr( $settings->separator_text_tag_selection ) . '>';
+								echo '<' . esc_attr( $separator_text_tag ) . ' class="uabb-divider-text">' . esc_html( $settings->text_inline ) . '</' . esc_attr( $separator_text_tag ) . '>';
 						}
 						?>
 					</div>
