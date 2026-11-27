@@ -57,6 +57,11 @@ class UABBButtonModule extends FLBuilderModule {
 	 * handlers, `style` and any other attribute are dropped, and every value
 	 * is escaped with esc_attr().
 	 *
+	 * The string is read as a sequence of whole attributes, as a browser would:
+	 * each attribute is matched together with its quoted value, and anything
+	 * malformed is skipped as one chunk with its quoted parts intact. So text
+	 * such as `data-x=1` inside another attribute's value is never picked up.
+	 *
 	 * @since x.x.x
 	 * @return string Safe attribute string, with a leading space, or an empty string.
 	 */
@@ -65,8 +70,10 @@ class UABBButtonModule extends FLBuilderModule {
 			return '';
 		}
 
+		// Alternative 1: a well-formed attribute (name, optional value), followed by whitespace or the end.
+		// Alternative 2: any other run of text up to the next whitespace, with quoted parts consumed whole.
 		preg_match_all(
-			'/(?:^|\s)(data-[a-z0-9_.:-]+)(?:\s*=\s*(?:"([^"]*)"|\'([^\']*)\'|([^\s"\'=<>`]+)))?(?=\s|$)/i',
+			'/(?:^|\s)(?:([^\s"\'>\/=]++)(?:\s*=\s*(?:"([^"]*+)"|\'([^\']*+)\'|([^\s"\'=<>`]++)))?(?=\s|$)|(?:"[^"]*+"?|\'[^\']*+\'?|[^\s"\'])++)/',
 			$this->settings->a_data,
 			$matches,
 			PREG_SET_ORDER
@@ -75,6 +82,11 @@ class UABBButtonModule extends FLBuilderModule {
 		$attributes = '';
 
 		foreach ( $matches as $match ) {
+			// Skip malformed chunks and every attribute whose name is not data-*.
+			if ( ! isset( $match[1] ) || ! preg_match( '/^data-[a-z0-9_.:-]+$/i', $match[1] ) ) {
+				continue;
+			}
+
 			$name  = strtolower( $match[1] );
 			$value = ( isset( $match[2] ) ? $match[2] : '' ) . ( isset( $match[3] ) ? $match[3] : '' ) . ( isset( $match[4] ) ? $match[4] : '' );
 
