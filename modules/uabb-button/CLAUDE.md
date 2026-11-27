@@ -8,6 +8,7 @@ Read `architecture.md` in this folder before changing this module.
 
 - Keep it an anchor (`includes/frontend.php:36`), never a `<button>`. Run the link through `esc_url()` and the target through `esc_attr()`.
 - Emit `rel` only through `UABB_Helper::get_link_rel()` (`includes/frontend.php:36`; helper at `classes/class-uabb-helper.php:677`) — the single source for `noopener`/`nofollow`.
+- Print the undeclared `a_data` setting only through `get_data_attributes()` (`uabb-button.php`), which keeps `data-*` names only and escapes each value. It sits in attribute-name position, where neither `esc_attr()` nor `wp_kses_data()` stops `name=value` from becoming a new attribute (for example an `on*` handler), and BB's `save_settings` stores undeclared keys unsanitized. The parser reads whole attributes (name plus quoted value) and only then filters by name; do not change it back to scanning for `data-*` words, or text inside another attribute's value (`title="… data-x=1 …"`) becomes a real attribute. Pro's unquoted `data-modal=<id> ` form must keep parsing.
 - Color output must pass the theme wrappers, then `FLBuilderColor::hex_or_rgb()` (`frontend.css.php:41`) — do not print `bg_color`/`text_color` directly.
 - New fields go in BOTH `uabb-button-bb-2-2-compatibility.php` and `-less-than-2-2-compatibility.php`, plus a migration branch in `filter_settings()` (`uabb-button.php:121`).
 

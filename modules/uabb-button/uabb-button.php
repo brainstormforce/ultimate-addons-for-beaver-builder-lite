@@ -50,6 +50,53 @@ class UABBButtonModule extends FLBuilderModule {
 	}
 
 	/**
+	 * Builds the extra link attributes from the undeclared `a_data` setting.
+	 *
+	 * The value is free-form text printed inside the `<a>` start tag, so it is
+	 * parsed into name/value pairs and only `data-*` names are kept. Event
+	 * handlers, `style` and any other attribute are dropped, and every value
+	 * is escaped with esc_attr().
+	 *
+	 * The string is read as a sequence of whole attributes, as a browser would:
+	 * each attribute is matched together with its quoted value, and anything
+	 * malformed is skipped as one chunk with its quoted parts intact. So text
+	 * such as `data-x=1` inside another attribute's value is never picked up.
+	 *
+	 * @since x.x.x
+	 * @return string Safe attribute string, with a leading space, or an empty string.
+	 */
+	public function get_data_attributes() {
+		if ( ! isset( $this->settings->a_data ) || ! is_string( $this->settings->a_data ) || '' === $this->settings->a_data ) {
+			return '';
+		}
+
+		// Alternative 1: a well-formed attribute (name, optional value), followed by whitespace or the end.
+		// Alternative 2: any other run of text up to the next whitespace, with quoted parts consumed whole.
+		preg_match_all(
+			'/(?:^|\s)(?:([^\s"\'>\/=]++)(?:\s*=\s*(?:"([^"]*+)"|\'([^\']*+)\'|([^\s"\'=<>`]++)))?(?=\s|$)|(?:"[^"]*+"?|\'[^\']*+\'?|[^\s"\'])++)/',
+			$this->settings->a_data,
+			$matches,
+			PREG_SET_ORDER
+		);
+
+		$attributes = '';
+
+		foreach ( $matches as $match ) {
+			// Skip malformed chunks and every attribute whose name is not data-*.
+			if ( ! isset( $match[1] ) || ! preg_match( '/^data-[a-z0-9_.:-]+$/i', $match[1] ) ) {
+				continue;
+			}
+
+			$name  = strtolower( $match[1] );
+			$value = ( isset( $match[2] ) ? $match[2] : '' ) . ( isset( $match[3] ) ? $match[3] : '' ) . ( isset( $match[4] ) ? $match[4] : '' );
+
+			$attributes .= ' ' . esc_attr( $name ) . '="' . esc_attr( $value ) . '"';
+		}
+
+		return $attributes;
+	}
+
+	/**
 	 * Function that gets the class names.
 	 *
 	 * @method get_classname

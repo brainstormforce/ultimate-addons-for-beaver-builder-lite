@@ -19,6 +19,9 @@ if ( ! isset( $id ) ) {
 	$id = '';
 }
 
+// Whitelisted separator text tag; the value is used in CSS selectors below.
+$separator_text_tag = UABBHeadingModule::get_separator_text_tag( $settings );
+
 // Ensure $global_settings is defined and initialized.
 if ( ! isset( $global_settings ) ) {
 	// Create an empty object to avoid undefined errors.
@@ -238,13 +241,13 @@ if ( '' !== $settings->separator_style ) {
 	<?php } ?>
 
 	<?php if ( 'line_text' === $settings->separator_style ) { ?>
-		.fl-node-<?php echo esc_attr( $id ); ?> <?php echo esc_attr( $settings->separator_text_tag_selection ); ?>.uabb-divider-text{
+		.fl-node-<?php echo esc_attr( $id ); ?> <?php echo esc_attr( $separator_text_tag ); ?>.uabb-divider-text{
 			white-space: nowrap;
 			margin: 0;
 			<?php echo ( ! empty( $settings->separator_text_color ) ) ? 'color: ' . esc_attr( $settings->separator_text_color ) . ';' : ''; ?>
 		}
 		<?php if ( ! $version_bb_check ) { ?>
-			.fl-node-<?php echo esc_attr( $id ); ?> <?php echo esc_attr( $settings->separator_text_tag_selection ); ?>.uabb-divider-text{
+			.fl-node-<?php echo esc_attr( $id ); ?> <?php echo esc_attr( $separator_text_tag ); ?>.uabb-divider-text{
 				<?php if ( 'Default' !== $settings->separator_text_font_family['family'] ) { ?>
 					<?php UABB_Helper::uabb_font_css( $settings->separator_text_font_family ); ?>
 					<?php } ?>
@@ -266,7 +269,7 @@ if ( '' !== $settings->separator_style ) {
 			<?php
 		} else {
 			if ( class_exists( 'FLBuilderCSS' ) ) {
-				$tag = $settings->separator_text_tag_selection;
+				$tag = $separator_text_tag;
 				FLBuilderCSS::typography_field_rule(
 					array(
 						'settings'     => $settings,
@@ -344,7 +347,7 @@ if ( 'line_text' === $settings->separator_style || 'line_image' === $settings->s
 		?>
 		@media ( max-width: <?php echo esc_attr( $global_settings->medium_breakpoint ); ?>px ) {
 			<?php if ( ! $version_bb_check ) { ?>
-				.fl-node-<?php echo esc_attr( $id ); ?> <?php echo esc_attr( $settings->separator_text_tag_selection ); ?>.uabb-divider-text {
+				.fl-node-<?php echo esc_attr( $id ); ?> <?php echo esc_attr( $separator_text_tag ); ?>.uabb-divider-text {
 					<?php if ( 'yes' === $converted || isset( $settings->separator_text_font_size_unit_medium ) && '' !== $settings->separator_text_font_size_unit_medium ) { ?>
 						font-size: <?php echo esc_attr( $settings->separator_text_font_size_unit_medium ); ?>px;
 					<?php } elseif ( isset( $settings->separator_text_font_size_unit_medium ) && '' === $settings->separator_text_font_size_unit_medium && isset( $settings->separator_text_font_size['medium'] ) && '' !== $settings->separator_text_font_size['medium'] ) { ?>
@@ -369,13 +372,13 @@ if ( 'line_text' === $settings->separator_style || 'line_image' === $settings->s
 			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-responsive-medsmall .uabb-side-right {
 				width: <?php echo esc_attr( 40 - ( $position * 40 / 100 ) ); ?>%;
 			}
-			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-responsive-medsmall .uabb-divider-content <?php echo esc_attr( $settings->separator_text_tag_selection ); ?> {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-responsive-medsmall .uabb-divider-content <?php echo esc_attr( $separator_text_tag ); ?> {
 				white-space: normal;
 			}
 		}
 		@media ( max-width: <?php echo esc_attr( $global_settings->responsive_breakpoint ); ?>px ) {
 			<?php if ( ! $version_bb_check ) { ?>
-				.fl-node-<?php echo esc_attr( $id ); ?> <?php echo esc_attr( $settings->separator_text_tag_selection ); ?>.uabb-divider-text {
+				.fl-node-<?php echo esc_attr( $id ); ?> <?php echo esc_attr( $separator_text_tag ); ?>.uabb-divider-text {
 
 					<?php if ( 'yes' === $converted || isset( $settings->separator_text_font_size_unit_responsive ) && '' !== $settings->separator_text_font_size_unit_responsive ) { ?>
 						font-size: <?php echo esc_attr( $settings->separator_text_font_size_unit_responsive ); ?>px;
@@ -408,7 +411,7 @@ if ( 'line_text' === $settings->separator_style || 'line_image' === $settings->s
 				width: <?php echo esc_attr( 20 - ( $position * 20 / 100 ) ); ?>%; 
 			}
 
-			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-responsive-mobile .uabb-divider-content <?php echo esc_attr( $settings->separator_text_tag_selection ); ?> {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-responsive-mobile .uabb-divider-content <?php echo esc_attr( $separator_text_tag ); ?> {
 				white-space: normal;
 			}
 		}
@@ -426,7 +429,7 @@ if ( 'line_text' === $settings->separator_style || 'line_image' === $settings->s
 				width: 20%;
 			}
 
-			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-responsive-medsmall .uabb-divider-content <?php echo esc_attr( $settings->separator_text_tag_selection ); ?> {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-responsive-medsmall .uabb-divider-content <?php echo esc_attr( $separator_text_tag ); ?> {
 				white-space: normal;
 			}
 			<?php if ( ! $version_bb_check ) { ?>
@@ -498,7 +501,7 @@ if ( 'line_text' === $settings->separator_style || 'line_image' === $settings->s
 				width: 10%;
 			}
 
-			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-responsive-mobile .uabb-divider-content <?php echo esc_attr( $settings->separator_text_tag_selection ); ?> {
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-responsive-mobile .uabb-divider-content <?php echo esc_attr( $separator_text_tag ); ?> {
 				white-space: normal;
 			}
 			<?php if ( ! $version_bb_check ) { ?>

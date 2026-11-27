@@ -196,6 +196,10 @@ You can report the issue through our [Bug Bounty Program](https://brainstormforc
 ---
 
 ## Changelog ##
+### 1.6.13 ###
+* Security: Hardened output escaping of link attributes in the Button module, including buttons inside Flip Box and Slide Box.
+* Security: Hardened output escaping of the separator text tag in the Heading module.
+
 ### 1.6.12 ###
 * Improvement: Updated internal libraries to improve stability and compatibility.
 
